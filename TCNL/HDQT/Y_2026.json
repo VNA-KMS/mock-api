@@ -1,36 +1,44 @@
 {
   "query": {
-    "period": "month",
-    "year": 2026,
-    "month": 1
+    "period": "year",
+    "year": 2026
   },
   "sections": {
     "summary": {
       "progress": {
-        "value": 100,
-        "status": true
+        "value": 75,
+        "status": false
       },
       "statistics": [
         {
           "label": "Chỉ tiêu",
-          "value": 2
+          "value": 4
         },
         {
           "label": "Đạt",
-          "value": 2
+          "value": 3
         },
         {
           "label": "Không đạt",
-          "value": 0
+          "value": 1
         }
       ]
     },
     "cards": [
       {
         "type": "list",
+        "variant": "danger",
+        "data": {
+          "title": "1 KPI KHÔNG ĐẠT MỤC TIÊU",
+          "description": "<Nội dung do AI đề xuất>",
+          "items": []
+        }
+      },
+      {
+        "type": "list",
         "variant": "success",
         "data": {
-          "title": "2 KPI ĐẠT / VƯỢT MỤC TIÊU",
+          "title": "3 KPI ĐẠT / VƯỢT MỤC TIÊU",
           "description": "<Nội dung do AI đề xuất>",
           "items": []
         }
@@ -63,6 +71,30 @@
       "periodChangeDirection": "up"
     },
     {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "unitCode": "PERCENT",
+      "actual": 80.8,
+      "plan": null,
+      "vsPlanPercent": 100,
+      "vsPlanStatus": "achieved",
+      "periodChangePercent": 3.9,
+      "periodChangeDirection": "up"
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "unitCode": "MILLION_VND_PER_PERSON_MONTH",
+      "actual": null,
+      "plan": 42,
+      "vsPlanPercent": 93,
+      "vsPlanStatus": "highRisk",
+      "periodChangePercent": -6.7,
+      "periodChangeDirection": "down"
+    },
+    {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
@@ -80,21 +112,54 @@
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
+      "seriesType": "actual",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
-      "compareYear": 2026,
-      "value": 210
+      "periodIndex": null,
+      "compareYear": null,
+      "value": 58
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": null,
+      "compareYear": null,
+      "value": 60
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "samePeriod",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": null,
+      "compareYear": null,
+      "value": 54
     },
     {
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
+      "periodIndex": 2021,
+      "compareYear": 2026,
+      "value": 208
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual2026",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
       "compareYear": 2026,
       "value": 218
     },
@@ -103,31 +168,20 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 3,
+      "periodIndex": 2023,
       "compareYear": 2026,
-      "value": 225
+      "value": 228
     },
     {
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": 2026,
-      "value": 232
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
+      "periodIndex": 2024,
       "compareYear": 2026,
       "value": 238
     },
@@ -136,20 +190,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": 2026,
-      "value": 242
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
+      "periodIndex": 2025,
       "compareYear": 2026,
       "value": 248
     },
@@ -158,53 +201,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": 2026,
-      "value": 252
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2026,
-      "value": 258
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2026,
-      "value": 262
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2026,
-      "value": 266
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2026,
       "value": 270
     },
@@ -213,20 +212,20 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
+      "periodIndex": 2021,
       "compareYear": 2026,
-      "value": 220
+      "value": 215
     },
     {
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
+      "periodIndex": 2022,
       "compareYear": 2026,
       "value": 225
     },
@@ -235,20 +234,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 3,
-      "compareYear": 2026,
-      "value": 230
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 4,
+      "periodIndex": 2023,
       "compareYear": 2026,
       "value": 235
     },
@@ -257,20 +245,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 5,
-      "compareYear": 2026,
-      "value": 240
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 6,
+      "periodIndex": 2024,
       "compareYear": 2026,
       "value": 245
     },
@@ -279,20 +256,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": 2026,
-      "value": 250
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
+      "periodIndex": 2025,
       "compareYear": 2026,
       "value": 255
     },
@@ -301,42 +267,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2026,
-      "value": 265
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2026,
-      "value": 272
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2026,
-      "value": 278
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2026,
       "value": 285
     },
@@ -345,9 +278,20 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
+      "periodIndex": 2021,
+      "compareYear": 2025,
+      "value": 155
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual2025",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
       "compareYear": 2025,
       "value": 170
     },
@@ -356,20 +300,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
-      "compareYear": 2025,
-      "value": 178
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 3,
+      "periodIndex": 2023,
       "compareYear": 2025,
       "value": 185
     },
@@ -378,20 +311,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": 2025,
-      "value": 192
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
+      "periodIndex": 2024,
       "compareYear": 2025,
       "value": 198
     },
@@ -400,20 +322,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": 2025,
-      "value": 205
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
+      "periodIndex": 2025,
       "compareYear": 2025,
       "value": 210
     },
@@ -422,53 +333,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": 2025,
-      "value": 215
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2025,
-      "value": 218
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2025,
-      "value": 222
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2025,
-      "value": 226
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2025,
       "value": 230
     },
@@ -477,295 +344,9 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "actual",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
-      "compareYear": null,
-      "value": 59
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 2,
-      "compareYear": null,
-      "value": 57
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 3,
-      "compareYear": null,
-      "value": 64
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": null,
-      "value": 60
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
-      "compareYear": null,
-      "value": null
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "actual",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": null,
-      "compareYear": null,
-      "value": 60
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 1,
-      "compareYear": null,
-      "value": 62
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 2,
-      "compareYear": null,
-      "value": 60
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 3,
-      "compareYear": null,
-      "value": 64
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": null,
-      "value": 59
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
-      "compareYear": null,
-      "value": 57
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": null,
-      "value": 60
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": null,
-      "value": 64
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": null,
-      "value": 61
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": null,
-      "value": 55
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": null,
-      "value": 58
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": null,
-      "value": 58
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
-      "compareYear": null,
-      "value": 58
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "plan",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": null,
-      "compareYear": null,
-      "value": 61
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 1,
+      "periodIndex": 2021,
       "compareYear": null,
       "value": 54
     },
@@ -773,10 +354,131 @@
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
+      "seriesType": "actual",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 55
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 56
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 58
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 59
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 60
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 57
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 58
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 59
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 60
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 61
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "plan",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 62
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "samePeriod",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
       "compareYear": null,
       "value": 51
     },
@@ -785,31 +487,20 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "samePeriod",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 3,
+      "periodIndex": 2022,
       "compareYear": null,
-      "value": 56
+      "value": 52
     },
     {
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "samePeriod",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": null,
-      "value": 54
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
+      "periodIndex": 2023,
       "compareYear": null,
       "value": 53
     },
@@ -818,218 +509,427 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "seriesType": "samePeriod",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": null,
-      "value": 56
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": null,
-      "value": 62
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": null,
-      "value": 59
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": null,
-      "value": 53
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": null,
-      "value": 58
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": null,
-      "value": 58
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
-      "compareYear": null,
-      "value": 61
-    },
-    {
-      "metricKey": "nsld",
-      "metricCode": "HRD_001",
-      "module": "laborProductivity",
-      "seriesType": "samePeriod",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": null,
+      "periodIndex": 2024,
       "compareYear": null,
       "value": 54
     },
     {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "samePeriod",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
-      "compareYear": 2026,
-      "value": 7450
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 55
+    },
+    {
+      "metricKey": "nsld",
+      "metricCode": "HRD_001",
+      "module": "laborProductivity",
+      "seriesType": "samePeriod",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 54
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 65
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 74
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 78
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 81
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 82
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "seriesType": "actual",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 83
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 25
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 30
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 35
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 38
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 42
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "pcvn",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 48
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 11
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 14
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 16
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 17
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 19
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "cabin",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 22
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 26
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 30
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 33
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 35
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 38
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "bdh",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 42
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2021,
+      "compareYear": null,
+      "value": 8.5
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": null,
+      "value": 10
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": null,
+      "value": 11
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": null,
+      "value": 12
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
+      "compareYear": null,
+      "value": 13
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "seriesType": "ground",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2026,
+      "compareYear": null,
+      "value": 15
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
+      "periodIndex": 2021,
       "compareYear": 2026,
-      "value": 7480
+      "value": 6200
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 3,
+      "periodIndex": 2022,
       "compareYear": 2026,
-      "value": 7500
+      "value": 6600
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 4,
+      "periodIndex": 2023,
       "compareYear": 2026,
-      "value": 7498
+      "value": 7000
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 5,
+      "periodIndex": 2024,
       "compareYear": 2026,
-      "value": 7520
+      "value": 7200
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 6,
+      "periodIndex": 2025,
       "compareYear": 2026,
-      "value": 7560
+      "value": 7340
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": 2026,
-      "value": 7600
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": 2026,
-      "value": 7650
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2026,
-      "value": 7700
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2026,
-      "value": 7780
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2026,
-      "value": 7850
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2026,
       "value": 7900
     },
@@ -1038,9 +938,53 @@
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
+      "periodIndex": 2021,
+      "compareYear": 2026,
+      "value": 6600
+    },
+    {
+      "metricKey": "ld",
+      "metricCode": "HRD_004",
+      "module": "labor",
+      "seriesType": "plan2026",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2022,
+      "compareYear": 2026,
+      "value": 7000
+    },
+    {
+      "metricKey": "ld",
+      "metricCode": "HRD_004",
+      "module": "labor",
+      "seriesType": "plan2026",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2023,
+      "compareYear": 2026,
+      "value": 7400
+    },
+    {
+      "metricKey": "ld",
+      "metricCode": "HRD_004",
+      "module": "labor",
+      "seriesType": "plan2026",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2024,
+      "compareYear": 2026,
+      "value": 7600
+    },
+    {
+      "metricKey": "ld",
+      "metricCode": "HRD_004",
+      "module": "labor",
+      "seriesType": "plan2026",
+      "granularity": "year",
+      "periodYear": 2026,
+      "periodIndex": 2025,
       "compareYear": 2026,
       "value": 7800
     },
@@ -1049,119 +993,9 @@
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "plan2026",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
-      "compareYear": 2026,
-      "value": 7850
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 3,
-      "compareYear": 2026,
-      "value": 7900
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": 2026,
-      "value": 7950
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
-      "compareYear": 2026,
-      "value": 8000
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 6,
-      "compareYear": 2026,
-      "value": 8050
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": 2026,
-      "value": 8100
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": 2026,
-      "value": 8150
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2026,
-      "value": 8200
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2026,
-      "value": 8250
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2026,
-      "value": 8280
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "plan2026",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2026,
       "value": 8280
     },
@@ -1170,53 +1004,42 @@
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 1,
+      "periodIndex": 2021,
       "compareYear": 2025,
-      "value": 7100
+      "value": 6200
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 2,
+      "periodIndex": 2022,
       "compareYear": 2025,
-      "value": 7130
+      "value": 6600
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 3,
+      "periodIndex": 2023,
       "compareYear": 2025,
-      "value": 7150
+      "value": 7000
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 4,
-      "compareYear": 2025,
-      "value": 7170
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 5,
+      "periodIndex": 2024,
       "compareYear": 2025,
       "value": 7200
     },
@@ -1225,75 +1048,20 @@
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 6,
+      "periodIndex": 2025,
       "compareYear": 2025,
-      "value": 7220
+      "value": 7340
     },
     {
       "metricKey": "ld",
       "metricCode": "HRD_004",
       "module": "labor",
       "seriesType": "actual2025",
-      "granularity": "month",
+      "granularity": "year",
       "periodYear": 2026,
-      "periodIndex": 7,
-      "compareYear": 2025,
-      "value": 7240
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 8,
-      "compareYear": 2025,
-      "value": 7260
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 9,
-      "compareYear": 2025,
-      "value": 7280
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 10,
-      "compareYear": 2025,
-      "value": 7300
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 11,
-      "compareYear": 2025,
-      "value": 7320
-    },
-    {
-      "metricKey": "ld",
-      "metricCode": "HRD_004",
-      "module": "labor",
-      "seriesType": "actual2025",
-      "granularity": "month",
-      "periodYear": 2026,
-      "periodIndex": 12,
+      "periodIndex": 2026,
       "compareYear": 2025,
       "value": 7340
     }
@@ -1307,7 +1075,7 @@
       "dimensionKey": "Khối TM",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 382
+      "value": 385
     },
     {
       "metricKey": "nsld",
@@ -1317,7 +1085,7 @@
       "dimensionKey": "Khối DV",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 348
+      "value": 350
     },
     {
       "metricKey": "nsld",
@@ -1327,7 +1095,7 @@
       "dimensionKey": "Khối KTB",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 286
+      "value": 288
     },
     {
       "metricKey": "nsld",
@@ -1337,7 +1105,7 @@
       "dimensionKey": "Khối KT",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 258
+      "value": 260
     },
     {
       "metricKey": "nsld",
@@ -1347,7 +1115,7 @@
       "dimensionKey": "Khối TM-TH",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 118
+      "value": 115
     },
     {
       "metricKey": "nsld",
@@ -1357,7 +1125,7 @@
       "dimensionKey": "Trực thuộc khác",
       "seriesType": "actual2026",
       "compareYear": 2026,
-      "value": 205
+      "value": 208
     },
     {
       "metricKey": "nsld",
@@ -1367,7 +1135,7 @@
       "dimensionKey": "Khối TM",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 360
+      "value": 362
     },
     {
       "metricKey": "nsld",
@@ -1377,7 +1145,7 @@
       "dimensionKey": "Khối DV",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 335
+      "value": 338
     },
     {
       "metricKey": "nsld",
@@ -1387,7 +1155,7 @@
       "dimensionKey": "Khối KTB",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 292
+      "value": 295
     },
     {
       "metricKey": "nsld",
@@ -1397,7 +1165,7 @@
       "dimensionKey": "Khối KT",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 268
+      "value": 270
     },
     {
       "metricKey": "nsld",
@@ -1407,7 +1175,7 @@
       "dimensionKey": "Khối TM-TH",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 152
+      "value": 155
     },
     {
       "metricKey": "nsld",
@@ -1417,7 +1185,7 @@
       "dimensionKey": "Trực thuộc khác",
       "seriesType": "plan2026",
       "compareYear": 2026,
-      "value": 212
+      "value": 215
     },
     {
       "metricKey": "nsld",
@@ -1427,7 +1195,7 @@
       "dimensionKey": "Khối TM",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 342
+      "value": 345
     },
     {
       "metricKey": "nsld",
@@ -1437,7 +1205,7 @@
       "dimensionKey": "Khối DV",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 318
+      "value": 320
     },
     {
       "metricKey": "nsld",
@@ -1447,7 +1215,7 @@
       "dimensionKey": "Khối KTB",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 272
+      "value": 275
     },
     {
       "metricKey": "nsld",
@@ -1457,7 +1225,7 @@
       "dimensionKey": "Khối KT",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 248
+      "value": 250
     },
     {
       "metricKey": "nsld",
@@ -1467,7 +1235,7 @@
       "dimensionKey": "Khối TM-TH",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 126
+      "value": 124
     },
     {
       "metricKey": "nsld",
@@ -1477,14 +1245,14 @@
       "dimensionKey": "Trực thuộc khác",
       "seriesType": "actual2025",
       "compareYear": 2025,
-      "value": 196
+      "value": 198
     },
     {
       "metricKey": "nsld",
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "dimensionGroup": "bullet",
-      "dimensionKey": "NSLĐ 4T/2026",
+      "dimensionKey": "NSLĐ 2026",
       "seriesType": "actual",
       "compareYear": null,
       "value": 240
@@ -1494,10 +1262,390 @@
       "metricCode": "HRD_001",
       "module": "laborProductivity",
       "dimensionGroup": "bullet",
-      "dimensionKey": "NSLĐ 4T/2026",
+      "dimensionKey": "NSLĐ 2026",
       "seriesType": "plan",
       "compareYear": null,
       "value": 245
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "workEnvironment",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 87
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "salary",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 72
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "training",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 79
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "leadership",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 76
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "colleagues",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 85
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "benefits",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 68
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "recognition",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 78
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "workEnvironment",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 81
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "salary",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 73
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "training",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 73
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "leadership",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 73
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "colleagues",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 73
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "benefits",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 71
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "esiDimension",
+      "dimensionKey": "recognition",
+      "seriesType": "actual2024",
+      "compareYear": 2024,
+      "value": 73
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "laborType",
+      "dimensionKey": "ground",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 78
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "laborType",
+      "dimensionKey": "pilot",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 86
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "laborType",
+      "dimensionKey": "cabin",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 84
+    },
+    {
+      "metricKey": "esi",
+      "metricCode": "HRD_002",
+      "module": "employeeSatisfaction",
+      "dimensionGroup": "laborType",
+      "dimensionKey": "company",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 82
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Phi công",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 42
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Tiếp viên",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 19
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "BĐH",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 38
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "LĐ mặt đất",
+      "seriesType": "actual2025",
+      "compareYear": 2025,
+      "value": 13
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Phi công",
+      "seriesType": "actual2026",
+      "compareYear": 2026,
+      "value": 48
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Tiếp viên",
+      "seriesType": "actual2026",
+      "compareYear": 2026,
+      "value": 22
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "BĐH",
+      "seriesType": "actual2026",
+      "compareYear": 2026,
+      "value": 42
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "LĐ mặt đất",
+      "seriesType": "actual2026",
+      "compareYear": 2026,
+      "value": 15
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Phi công",
+      "seriesType": "plan2026",
+      "compareYear": 2026,
+      "value": 46
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "Tiếp viên",
+      "seriesType": "plan2026",
+      "compareYear": 2026,
+      "value": 21
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "BĐH",
+      "seriesType": "plan2026",
+      "compareYear": 2026,
+      "value": 40
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryObject",
+      "dimensionKey": "LĐ mặt đất",
+      "seriesType": "plan2026",
+      "compareYear": 2026,
+      "value": 14.5
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "PCVN",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 48
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "TV VNA",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 22
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "TV ALS",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 18
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "LĐ mặt đất",
+      "seriesType": "actual",
+      "compareYear": null,
+      "value": 15
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "PCVN",
+      "seriesType": "plan",
+      "compareYear": null,
+      "value": 46
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "TV VNA",
+      "seriesType": "plan",
+      "compareYear": null,
+      "value": 21
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "TV ALS",
+      "seriesType": "plan",
+      "compareYear": null,
+      "value": 17
+    },
+    {
+      "metricKey": "tlBq",
+      "metricCode": "HRD_003",
+      "module": "salary",
+      "dimensionGroup": "salaryVsPlan",
+      "dimensionKey": "LĐ mặt đất",
+      "seriesType": "plan",
+      "compareYear": null,
+      "value": 14.5
     },
     {
       "metricKey": "ld",
@@ -1727,7 +1875,7 @@
       "dimensionKey": "Đầu kỳ",
       "seriesType": "actual",
       "compareYear": null,
-      "value": 7450
+      "value": 7340
     },
     {
       "metricKey": "ld",
@@ -1737,7 +1885,7 @@
       "dimensionKey": "+Tuyển mới",
       "seriesType": "actual",
       "compareYear": null,
-      "value": 28
+      "value": 120
     },
     {
       "metricKey": "ld",
@@ -1747,7 +1895,7 @@
       "dimensionKey": "-Xin thôi việc",
       "seriesType": "actual",
       "compareYear": null,
-      "value": -28
+      "value": -98
     },
     {
       "metricKey": "ld",
@@ -1757,7 +1905,7 @@
       "dimensionKey": "-Nghỉ khác",
       "seriesType": "actual",
       "compareYear": null,
-      "value": -14
+      "value": -26
     },
     {
       "metricKey": "ld",
