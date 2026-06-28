@@ -65,7 +65,7 @@ const MASTER = {
     higherIsBetter: false,
   },
   costRtk: {
-    th: [11800, 12100, 12350, 12550, 12850],
+    th: [11800, 12100, 12350, 12550, 40],
     kh: [12200, 12300, 12450, 12550, 12650],
     baseline: [11500, 11600, 11700, 11800, 11900],
     higherIsBetter: false,
