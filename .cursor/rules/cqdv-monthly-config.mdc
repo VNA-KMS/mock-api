@@ -1,0 +1,50 @@
+---
+description: Quy tắc sinh config TCNL theo tháng (M_1..M_12) từ template M_12
+globs: ApiV2/TCNL/**/M/**/*
+alwaysApply: false
+---
+
+# TCNL — config theo tháng (M_1 .. M_12)
+
+Áp dụng cho các org: **CQDV**, **BGD** (và org tương tự có `M/M_12/`).
+
+Template chuẩn mỗi org: `ApiV2/TCNL/{ORG}/M/M_12/`.
+
+## Sinh bộ tháng từ template
+
+```bash
+# Cả CQDV + BGD (mặc định)
+node scripts/generate-cqdv-months.js
+
+# Chỉ một org
+node scripts/generate-cqdv-months.js BGD
+```
+
+Script tạo/cập nhật `M_1` .. `M_12` (29 file/tháng) từ cấu trúc `M_12`.
+
+## Ngoại lệ: `overview/`
+
+**`overview/index.json` giữ nguyên 100%** — copy y hệt từ `M_12/overview` cho mọi tháng, **không** đổi label, số liệu hay URL.
+
+Tất cả path khác (`kpis/`, `board/`) được điều chỉnh theo tháng.
+
+## Điều chỉnh theo tháng (ngoài overview)
+
+| Nhóm | Nội dung điều chỉnh |
+|------|---------------------|
+| KPI | `actual`, `trend*`, `progress`, `variant`, `statusLabel` theo series tháng |
+| Biểu đồ giờ bay | Bar/heatmap scale theo PC/TV tháng; line 12 tháng giữ series đầy đủ |
+| NSLĐ / LĐ | Scale theo series `NSLD_M`, `LABOR_M`; label quý `{q}T/2026` |
+| Board index | URL trỏ đúng `M_{n}/board/{module}/chart/` (không dùng `board/chart/`) |
+| Nhãn tháng | `T{mm}/2026`, `Tháng {m}/2025`, `{m}T/2026` |
+
+## Cấu trúc thư mục
+
+```
+M_{n}/
+  overview/index.json          ← không đổi (copy M_12)
+  kpis/{all,fight-time,labor,labor-productivity}/
+  board/{all,fight-time,labor,labor-productivity}/
+    index.json
+    chart/index{0..7}.json
+```
