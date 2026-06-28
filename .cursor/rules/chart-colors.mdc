@@ -1,0 +1,81 @@
+---
+description: Quy ước mã màu biểu đồ ChartJS (TH, KH, cùng kỳ, mục tiêu...)
+globs: ApiV2/**/chart/**/*.json
+alwaysApply: false
+---
+
+# Quy ước mã màu biểu đồ (ChartJS)
+
+Tham chiếu design: [ChartJS – Figma](https://www.figma.com/design/hsFgInn6secHHacFifbA24/ChartJS?node-id=312-21548)
+
+Khi thêm/sửa `color` trong mock API biểu đồ, **luôn gán màu theo ý nghĩa nghiệp vụ**, không chọn màu ngẫu nhiên.
+
+## Màu theo loại dữ liệu (so sánh TH / KH / cùng kỳ)
+
+| Ý nghĩa | Viết tắt | Màu | Ghi chú style |
+|---------|----------|-----|---------------|
+| **Thực hiện** (kỳ hiện tại) | TH | `#2d6a9f` | Line: `fill: true` nếu là series chính |
+| **Kế hoạch** | KH | `#e74c3c` | Line: `borderDash: [6, 3]`, `fill: false` |
+| **Cùng kỳ** / TH năm trước | CK / TH 20xx | `#95a5a6` | Line: nét liền, `fill: false` |
+| **Mục tiêu** / Giờ mức | — | `#e74c3c` hoặc `#d5dbdb` | Line mục tiêu: `#e74c3c` + `borderDash: [6, 3]`; cột tham chiếu: `#d5dbdb` |
+
+### Line chart – xu hướng 12 tháng (TH vs KH vs cùng kỳ)
+
+```json
+{ "key": { "keyVi": "TH 2026", "keyEn": "Actual 2026" }, "color": ["#2d6a9f"], "fill": true, "borderDash": null }
+{ "key": { "keyVi": "KH 2026", "keyEn": "Plan 2026" },   "color": ["#e74c3c"], "fill": false, "borderDash": [6, 3] }
+{ "key": { "keyVi": "TH 2025", "keyEn": "Actual 2025" }, "color": ["#95a5a6"], "fill": false, "borderDash": null }
+```
+
+### Bar chart – so sánh nhóm (TH vs KH vs cùng kỳ)
+
+Dùng bộ màu riêng cho bar (khác line):
+
+| Ý nghĩa | Màu |
+|---------|-----|
+| TH (kỳ hiện tại) | `#2c5282` |
+| KH | `#b0b0b0` |
+| Cùng kỳ / TH năm trước | `#e67e22` |
+
+## Màu theo ngữ cảnh biểu đồ
+
+### Waterfall / biến động (1 series, nhiều cột)
+
+Gán màu theo thứ tự `labels`:
+
+| Loại cột | Màu |
+|----------|-----|
+| Đầu kỳ / trung tính | `#95a5a6` |
+| Tăng / tuyển mới (+) | `#27ae60` |
+| Giảm / thôi việc / nghỉ (-) | `#e74c3c` |
+| Cuối kỳ / kết quả | `#2d6a9f` |
+
+### Phân loại theo quốc tịch / đơn vị (giờ bay, bar grouped)
+
+| Nhóm | Màu |
+|------|-----|
+| VN / PCVN | `#2d6a9f` |
+| ALS | `#1abc9c` |
+| NN / PCNN | `#e67e22` |
+| Giờ mức / mục tiêu tham chiếu | `#d5dbdb` |
+
+### Doughnut / pie – palette cố định (theo thứ tự slice)
+
+```json
+["#2d6a9f", "#e74c3c", "#e67e22", "#27ae60", "#1abc9c", "#8e44ad", "#2c3e50", "#95a5a6"]
+```
+
+### Multi-series mở rộng (≥ 4 series cùng loại)
+
+Dùng lần lượt, không lặp sớm:
+
+```json
+["#2d6a9f", "#5b9bd5", "#e67e22", "#f0b27a", "#1abc9c", "#27ae60", "#8e44ad", "#1a3a5c"]
+```
+
+## Quy tắc chung
+
+- Viết hex **chữ thường**: `#2d6a9f` (tránh `#2D6BA4`, `#2962A0` — biến thể cũ).
+- Màu gắn **theo `key.keyVi` / nghiệp vụ**, không theo vị trí cột ngẫu nhiên.
+- `#e74c3c` = KH hoặc giảm/âm; `#27ae60` = tăng/dương; `#2d6a9f` = TH chính.
+- KH trên line chart **bắt buộc** nét đứt `[6, 3]`; mục tiêu/giờ mức tương tự khi là đường tham chiếu.
