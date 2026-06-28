@@ -205,7 +205,7 @@ const KPIS = {
     statusVi: 'ĐẠT',
     statusEn: 'ACHIEVED',
     trendDirection: 'up',
-    trendValue: 1.2,
+    trendValue: 2.1,
     target: 75,
     progress: 100,
   }),
@@ -411,6 +411,445 @@ const CHARTS = {
   }),
 };
 
+const INSIGHT = [
+  {
+    keyVi: '<Nội dung do AI tổng hợp và đề xuất>',
+    keyEn: '<AI-generated summary and recommendations>',
+  },
+];
+
+// --- Fight-time board charts (Figma node 21298:2989) ---
+const FIGHT_TIME_CHARTS = [
+  {
+    chartKey: 'line',
+    config: {
+      insightLayout: 'inline',
+      minValue: 62,
+      maxValue: 78,
+      height: 200,
+      slug: { keyVi: 'Giờ/người/tháng', keyEn: 'Hour/person/month' },
+    },
+    title: {
+      keyVi: 'Giờ bay PC: TH vs Giờ mức 12 tháng',
+      keyEn: 'Flight Time PC: TH vs Flight Time Target 12 months',
+    },
+    subTitle: {
+      keyVi: 'Theo dõi xu hướng giờ bay và mức độ đạt định mức theo thời gian',
+      keyEn: 'Track flight time trend and the degree of meeting the target over time',
+    },
+    direction: 'vertical',
+    labels: YEAR_LABELS,
+    data: [
+      {
+        key: { keyVi: 'PCVN TH', keyEn: 'PCVN TH' },
+        name: [64, 66, 69, 72, 74],
+        color: ['#2d6a9f'],
+        type: null,
+        tension: 0.35,
+        borderDash: null,
+        fill: false,
+      },
+      {
+        key: { keyVi: 'PCNN TH', keyEn: 'PCNN TH' },
+        name: [66, 68, 71, 74, 76],
+        color: ['#e67e22'],
+        type: null,
+        tension: 0.35,
+        borderDash: null,
+        fill: false,
+      },
+      {
+        key: { keyVi: 'Giờ mức', keyEn: 'Target' },
+        name: [70, 70, 70, 70, 70],
+        color: ['#95a5a6'],
+        type: null,
+        tension: null,
+        borderDash: [6, 3],
+        fill: false,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: { height: 200, minValue: 0, maxValue: 100, insightLayout: 'inline' },
+    title: { keyVi: 'Giờ bay PC theo đội bay', keyEn: 'Flight Time PC by Flight Team' },
+    subTitle: {
+      keyVi: 'So sánh giờ bay BQ giữa các đội bay (T04/2026)',
+      keyEn: 'Compare flight time BQ between flight teams (T04/2026)',
+    },
+    labels: ['B787 LC', 'B787 LP', 'A350 LC', 'A350 LP', 'A321 LC', 'A321 LP', 'ATR LC', 'ATR LP'],
+    data: [
+      {
+        key: { keyVi: 'PCVN T04/2026', keyEn: 'PCVN T04/2026' },
+        name: [74, 72, 77, 77, 60, 45, 54, 54],
+        color: ['#2d6a9f'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'PCNN T04/2026', keyEn: 'PCNN T04/2026' },
+        name: [71, 54, 74, 62, 56, 42, 50, null],
+        color: ['#e67e22'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'Giờ mức (Năm 2026)', keyEn: 'Target (Year 2026)' },
+        name: [73, 73, 73, 73, 60, 60, 48, 48],
+        color: ['#d5dbdb'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: { height: 200, minValue: 0, maxValue: 80, insightLayout: 'inline' },
+    title: { keyVi: 'VN vs NN theo chức danh', keyEn: 'VN vs NN by Position' },
+    subTitle: {
+      keyVi: 'So sánh giờ bay PC VN và NN ở từng chức danh',
+      keyEn: 'Compare flight time PC VN and NN by position',
+    },
+    labels: ['VN LC', 'VN LP', 'NN LC', 'NN LP'],
+    data: [
+      {
+        key: { keyVi: 'TH 4T/2026 (Năm 2026)', keyEn: 'TH 4T/2026 (Year 2026)' },
+        name: [65, 58, 66, 55],
+        color: ['#2d6a9f', '#5b9bd5', '#e67e22', '#f0b27a'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'Giờ mức (Năm 2026)', keyEn: 'Target (Year 2026)' },
+        name: [59, 59, 59, 59],
+        color: ['#d5dbdb'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: { height: 200, minValue: 0, maxValue: 100, insightLayout: 'inline' },
+    title: { keyVi: 'Heatmap: Đội bay × Tháng', keyEn: 'Heatmap: Flight Team × Month' },
+    subTitle: {
+      keyVi: 'Phát hiện tháng cao/thấp điểm của từng đội bay',
+      keyEn: 'Detect high/low points of each flight team by month',
+    },
+    labels: YEAR_LABELS,
+    data: [
+      {
+        key: { keyVi: 'B787', keyEn: 'B787' },
+        name: [62, 65, 68, 71, 74],
+        color: ['#2d6a9f'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'A350', keyEn: 'A350' },
+        name: [60, 63, 66, 69, 72],
+        color: ['#27ae60'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'A321', keyEn: 'A321' },
+        name: [45, 48, 52, 55, 58],
+        color: ['#e67e22'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'ATR', keyEn: 'ATR' },
+        name: [40, 42, 45, 48, 52],
+        color: ['#8e44ad'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'line',
+    config: {
+      insightLayout: 'inline',
+      minValue: 66,
+      maxValue: 82,
+      height: 200,
+      slug: { keyVi: 'Giờ/người/tháng', keyEn: 'Hour/person/month' },
+    },
+    title: {
+      keyVi: 'Giờ bay TV: TH vs Giờ mức 12 tháng',
+      keyEn: 'Flight Time TV: TH vs Flight Time Target 12 months',
+    },
+    subTitle: {
+      keyVi: 'Theo dõi xu hướng và mức đạt định mức giờ bay TV',
+      keyEn: 'Track flight time trend and the degree of meeting the target for TV flight time',
+    },
+    direction: 'vertical',
+    labels: YEAR_LABELS,
+    data: [
+      {
+        key: { keyVi: 'TV TH', keyEn: 'TV TH' },
+        name: [68, 70, 72, 74, 76.1],
+        color: ['#27ae60'],
+        type: null,
+        tension: 0.35,
+        borderDash: null,
+        fill: true,
+      },
+      {
+        key: { keyVi: 'Giờ mức', keyEn: 'Target' },
+        name: [75, 75, 75, 75, 75],
+        color: ['#e74c3c'],
+        type: null,
+        tension: null,
+        borderDash: [6, 3],
+        fill: false,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: {
+      height: 200,
+      minValue: 0,
+      maxValue: 100,
+      insightLayout: 'inline',
+      slug: { keyVi: 'Giờ', keyEn: 'Hour' },
+    },
+    title: { keyVi: 'Giờ bay TV theo chức danh', keyEn: 'Flight Time TV by Position' },
+    subTitle: {
+      keyVi: 'So sánh giờ bay BQ giữa các chức danh TV',
+      keyEn: 'Compare average flight time between TV positions',
+    },
+    labels: ['TVT-B2', 'TVT-B1', 'TVC', 'TVY'],
+    data: [
+      {
+        key: { keyVi: 'VN (Năm 2026)', keyEn: 'VN (Year 2026)' },
+        name: [68, 74, 79, 75],
+        color: ['#2d6a9f'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'ALS (Năm 2026)', keyEn: 'ALS (Year 2026)' },
+        name: [66, 73, 76, 75],
+        color: ['#1abc9c'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'NN (Năm 2026)', keyEn: 'NN (Year 2026)' },
+        name: [null, 68, 69, 62],
+        color: ['#e67e22'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'Giờ mức (Năm 2026)', keyEn: 'Target (Year 2026)' },
+        name: [75, 75, 75, 75],
+        color: ['#d5dbdb'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: { height: 200, minValue: 0, maxValue: 85, insightLayout: 'inline' },
+    title: { keyVi: 'VN vs ALS vs NN (4T/2026)', keyEn: 'VN vs ALS vs NN (4T/2026)' },
+    subTitle: {
+      keyVi: 'Phân tích cơ cấu giờ bay theo hình thức LĐ',
+      keyEn: 'Analyze flight time structure by labor form',
+    },
+    labels: ['VN', 'ALS', 'NN'],
+    data: [
+      {
+        key: { keyVi: 'TH 4T/2026', keyEn: 'TH 4T/2026' },
+        name: [72, 70, 65],
+        color: ['#2d6a9f', '#1abc9c', '#e67e22'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'Giờ mức', keyEn: 'Target' },
+        name: [75, 75, 75],
+        color: ['#d5dbdb'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+  {
+    chartKey: 'bar',
+    config: {
+      height: 200,
+      minValue: 0,
+      maxValue: 85,
+      insightLayout: 'inline',
+      slug: { keyVi: 'Giờ', keyEn: 'Hour' },
+    },
+    title: { keyVi: 'Heatmap: Chức danh × Tháng', keyEn: 'Heatmap: Position × Month' },
+    subTitle: {
+      keyVi: 'Phát hiện biến động giờ bay theo chức danh qua các tháng',
+      keyEn: 'Detect flight time changes by position over time',
+    },
+    labels: YEAR_LABELS,
+    data: [
+      {
+        key: { keyVi: 'TVT-B2', keyEn: 'TVT-B2' },
+        name: [55, 58, 62, 65, 68],
+        color: ['#5b9bd5'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'TVT-B1', keyEn: 'TVT-B1' },
+        name: [62, 65, 68, 71, 73],
+        color: ['#2d6a9f'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'TVC', keyEn: 'TVC' },
+        name: [66, 69, 72, 75, 77],
+        color: ['#1a3a5c'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+      {
+        key: { keyVi: 'TVY', keyEn: 'TVY' },
+        name: [64, 67, 70, 72, 73],
+        color: ['#1abc9c'],
+        type: null,
+        tension: null,
+        borderDash: null,
+        fill: null,
+      },
+    ],
+    insightLines: INSIGHT,
+  },
+];
+
+const FIGHT_TIME_BOARD_META = [
+  {
+    titleVi: 'Giờ bay PC: TH vs Giờ mức 12 tháng',
+    titleEn: 'Flight Time PC: TH vs Flight Time Target 12 months',
+    subVi: 'Theo dõi xu hướng giờ bay và mức độ đạt định mức theo thời gian',
+    subEn: 'Track flight time trend and the degree of meeting the target over time',
+  },
+  {
+    titleVi: 'Giờ bay PC theo đội bay',
+    titleEn: 'Flight Time PC by Flight Team',
+    subVi: 'So sánh giờ bay BQ giữa các đội bay (T04/2026)',
+    subEn: 'Compare flight time BQ between flight teams (T04/2026)',
+  },
+  {
+    titleVi: 'VN vs NN theo chức danh',
+    titleEn: 'VN vs NN by Position',
+    subVi: 'So sánh giờ bay PC VN và NN ở từng chức danh',
+    subEn: 'Compare flight time PC VN and NN by position',
+  },
+  {
+    titleVi: 'Heatmap: Đội bay × Tháng',
+    titleEn: 'Heatmap: Flight Team × Month',
+    subVi: 'Phát hiện tháng cao/thấp điểm của từng đội bay',
+    subEn: 'Detect high/low points of each flight team by month',
+  },
+  {
+    titleVi: 'Giờ bay TV: TH vs Giờ mức 12 tháng',
+    titleEn: 'Flight Time TV: TH vs Flight Time Target 12 months',
+    subVi: 'Theo dõi xu hướng và mức đạt định mức giờ bay TV',
+    subEn: 'Track flight time trend and the degree of meeting the target for TV flight time',
+  },
+  {
+    titleVi: 'Giờ bay TV theo chức danh',
+    titleEn: 'Flight Time TV by Position',
+    subVi: 'So sánh giờ bay BQ giữa các chức danh TV',
+    subEn: 'Compare average flight time between TV positions',
+  },
+  {
+    titleVi: 'VN vs ALS vs NN (4T/2026)',
+    titleEn: 'VN vs ALS vs NN (4T/2026)',
+    subVi: 'Phân tích cơ cấu giờ bay theo hình thức LĐ',
+    subEn: 'Analyze flight time structure by labor form',
+  },
+  {
+    titleVi: 'Heatmap: Chức danh × Tháng',
+    titleEn: 'Heatmap: Position × Month',
+    subVi: 'Phát hiện biến động giờ bay theo chức danh qua các tháng',
+    subEn: 'Detect flight time changes by position over time',
+  },
+];
+
+function fightTimeBoardIndex() {
+  const unitSub = {
+    keyVi: 'Đơn vị: Giờ/người/tháng · Nguồn: AVES · Đạt: ≥ Định mức (±10%)',
+    keyEn: 'Unit: Hour/person/month · Source: AVES · Reach: ≥ Target (±10%)',
+  };
+  const chartChild = (i) => ({
+    title: { keyVi: FIGHT_TIME_BOARD_META[i].titleVi, keyEn: FIGHT_TIME_BOARD_META[i].titleEn },
+    subTitle: { keyVi: FIGHT_TIME_BOARD_META[i].subVi, keyEn: FIGHT_TIME_BOARD_META[i].subEn },
+    child: chartUrl('fight-time', i),
+  });
+  return [
+    {
+      title: { keyVi: 'Giờ bay Phi công', keyEn: 'Flight Time PC' },
+      subTitle: unitSub,
+      grid: 2,
+      child: [0, 1, 2, 3].map(chartChild),
+    },
+    {
+      title: { keyVi: 'Giờ bay Tiếp viên', keyEn: 'Flight Time TV' },
+      subTitle: unitSub,
+      child: [4, 5, 6, 7].map(chartChild),
+    },
+  ];
+}
+
 const ALL_CHART_KEYS = [
   'nsld',
   'satisfaction',
@@ -521,7 +960,8 @@ writeJson('board/all/index.json', boardIndex('all', ALL_CHART_META));
 
 // module boards
 moduleBoard('labor-productivity', ALL_CHART_META.filter((m) => ['nsld', 'satisfaction'].includes(m.key)));
-moduleBoard('fight-time', ALL_CHART_META.filter((m) => ['pc', 'tv'].includes(m.key)));
+FIGHT_TIME_CHARTS.forEach((chart, i) => writeJson(`board/fight-time/chart/index${i}.json`, chart));
+writeJson('board/fight-time/index.json', fightTimeBoardIndex());
 moduleBoard('salary', ALL_CHART_META.filter((m) => m.key === 'salary'));
 moduleBoard('labor', ALL_CHART_META.filter((m) => m.key === 'labor'));
 moduleBoard('labor-cost', ALL_CHART_META.filter((m) => ['costLd', 'costRtk', 'costFlight', 'costBh'].includes(m.key)));
