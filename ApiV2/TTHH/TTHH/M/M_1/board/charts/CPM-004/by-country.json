@@ -2,20 +2,21 @@
     "code": "CPM-004",
     "key": "by-country",
     "metricCode": "CPM_004",
-    "chartKey": "bar",
+    "chartKey": "combo",
     "config": {
-        "height": 200,
+        "height": 220,
         "minValue": 0,
         "maxValue": 100,
-        "insightLayout": "inline"
+        "insightLayout": "inline",
+        "slug": "%"
     },
     "title": {
         "keyVi": "Hệ số sử dụng tải hàng theo Country",
         "keyEn": "Cargo load factor by country"
     },
     "subTitle": {
-        "keyVi": "So sánh giữa các thị trường quốc gia chính",
-        "keyEn": "Compare key country markets"
+        "keyVi": "TH/KH theo cột, cùng kỳ theo đường — các thị trường chính",
+        "keyEn": "Actual/plan as bars, same period as line — key country markets"
     },
     "labels": [
         "Việt Nam",
@@ -27,63 +28,66 @@
     "data": [
         {
             "key": {
-                "keyVi": "TH 2026 (Tháng 1/2026)",
-                "keyEn": "Actual 2026 (Month 1/2026)"
+                "keyVi": "TH 2026",
+                "keyEn": "Actual 2026"
             },
             "name": [
-                52,
-                51,
-                50,
-                49,
-                48
+                56,
+                47,
+                44,
+                40,
+                38
             ],
             "color": [
                 "#2962A0"
             ],
-            "type": null,
+            "type": "bar",
             "tension": null,
             "borderDash": null,
             "fill": null
         },
         {
             "key": {
-                "keyVi": "KH 2026 (Tháng 1/2026)",
-                "keyEn": "Plan 2026 (Month 1/2026)"
+                "keyVi": "KH 2026",
+                "keyEn": "Plan 2026"
             },
             "name": [
-                56.5,
-                55.4,
-                54.3,
-                53.3,
-                52.2
+                60.9,
+                51.1,
+                47.8,
+                43.5,
+                41.3
             ],
             "color": [
                 "#D0D1D3"
             ],
-            "type": null,
+            "type": "bar",
             "tension": null,
             "borderDash": null,
             "fill": null
         },
         {
             "key": {
-                "keyVi": "TH 2025 (Tháng 1/2025)",
-                "keyEn": "Actual 2025 (Month 1/2025)"
+                "keyVi": "Cùng kỳ 2025",
+                "keyEn": "Same period 2025"
             },
             "name": [
-                48.9,
-                47.9,
-                47,
-                46.1,
-                45.1
+                52.6,
+                44.2,
+                41.4,
+                37.6,
+                35.7
             ],
             "color": [
                 "#EC4899"
             ],
-            "type": null,
-            "tension": null,
-            "borderDash": null,
-            "fill": null
+            "type": "line",
+            "tension": 0.3,
+            "borderDash": [
+                6,
+                3
+            ],
+            "fill": false
         }
     ],
     "insightLines": [
