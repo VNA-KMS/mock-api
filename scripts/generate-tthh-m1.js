@@ -209,32 +209,101 @@ function seasonalShape(index) {
   return SEASONAL[index] / SEASONAL[0];
 }
 
-/** Chuỗi KH: T1 = target, các tháng theo mùa vụ */
-function planTrend(target, fn) {
+/** Chuỗi KH tuyệt đối (tấn, RFTK, doanh thu): T1 = target × mùa vụ */
+function planTrendAbsolute(target, fn) {
   return SEASONAL.map((_, i) => fn(target * seasonalShape(i)));
 }
 
+/** Chuỗi KH % (thị phần, load factor): biến động nhẹ quanh target, không nhân mùa vụ */
+function planTrendPercent(kpi) {
+  const amplitude = kpi.code === 'CPM-004' ? 2.5 : 4;
+  return MONTH_LABELS.map((_, i) => {
+    const wave = Math.sin((i / 11) * Math.PI * 1.1) * amplitude * 0.55;
+    const season = (SEASONAL[i] - SEASONAL[5]) * amplitude * 0.35;
+    return round1(kpi.target + wave + season);
+  });
+}
+
+function buildPercentTrendSeries(kpi) {
+  const kh = planTrendPercent(kpi);
+  const slopeSign = kpi.trendSlope >= 0 ? 1 : -1;
+  const yearDrift = slopeSign * (kpi.code === 'CPM-004' ? -2.8 : 3.8);
+  const endTh = round1(kpi.actual + yearDrift);
+  const endCk = round1(kpi.prior + yearDrift * 0.65);
+
+  const th = kh.map((_, i) => {
+    if (i === 0) return kpi.actual;
+    const base = kpi.actual + (endTh - kpi.actual) * (i / 11);
+    return round1(base + Math.sin(i * 1.1) * 0.6);
+  });
+
+  const ck = kh.map((_, i) => {
+    if (i === 0) return kpi.prior;
+    const base = kpi.prior + (endCk - kpi.prior) * (i / 11);
+    return round1(base + Math.sin(i * 0.9) * 0.45);
+  });
+
+  return { th, kh, ck };
+}
+
 function buildTrendSeries(kpi) {
-  const isPct = kpi.kind === 'percent';
-  const fn = isPct ? round1 : kpi.actual < 200 ? round1 : round0;
+  if (kpi.kind === 'percent') return buildPercentTrendSeries(kpi);
+
+  const fn = kpi.actual < 200 ? round1 : round0;
   const perf = kpi.actual / kpi.target;
   const slopeSign = kpi.trendSlope >= 0 ? 1 : -1;
 
-  const kh = planTrend(kpi.target, fn);
+  const kh = planTrendAbsolute(kpi.target, fn);
 
   const th = kh.map((p, i) => {
     if (i === 0) return kpi.actual;
-    const drift = 1 + i * 0.006 * slopeSign;
-    const noise = 1 + Math.sin(i * 1.15) * 0.018;
+    const drift = 1 + i * 0.004 * slopeSign;
+    const noise = 1 + Math.sin(i * 1.15) * 0.012;
     return fn(p * perf * drift * noise);
   });
 
-  const ck = planTrend(kpi.prior, fn).map((p, i) => {
-    const drift = 1 + i * 0.004 * slopeSign;
+  const ck = planTrendAbsolute(kpi.prior, fn).map((p, i) => {
+    const drift = 1 + i * 0.003 * slopeSign;
     return fn(p * drift);
   });
 
   return { th, kh, ck };
+}
+
+/** min/max trục Y — zoom vào vùng dữ liệu khi series không gần 0 (line RFTK, v.v.) */
+function resolveAxisRange(kpi, arrays) {
+  const values = arrays.flat().filter((v) => v != null && !Number.isNaN(v));
+  if (!values.length) {
+    return { minValue: kpi.minValue ?? 0, maxValue: kpi.maxValue ?? 100 };
+  }
+
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const span = max - min || max * 0.1;
+  const pad = span * 0.2;
+  const fn = max < 200 ? round1 : round0;
+
+  if (kpi.kind === 'percent') {
+    const padPct = Math.max(span * 0.22, 3);
+    return {
+      minValue: round1(min - padPct),
+      maxValue: round1(max + padPct),
+    };
+  }
+
+  // Sản lượng / RFTK / doanh thu: dữ liệu thường nằm giữa biểu đồ, không ép min = 0
+  const zoomToData = min > max * 0.12;
+  if (zoomToData) {
+    return {
+      minValue: fn(min - pad),
+      maxValue: fn(max + pad),
+    };
+  }
+
+  return {
+    minValue: 0,
+    maxValue: round0(max + pad),
+  };
 }
 
 // ─── KPI model (derived splits + status) ───────────────────────────────────
@@ -309,14 +378,14 @@ function trendInsight(kpi) {
 
   if (kpi.kind === 'percent') {
     return insight(
-      `Xu hướng ${kpi.trendDirection === 'up' ? 'tăng' : 'giảm'} ${kpi.trendValue} điểm % so với cùng kỳ. Dự báo T12/26 ở mức ${th[11]}%, ${sign} KH ${Math.abs(endGap)} điểm %.`,
-      `Trend is ${kpi.trendDirection} ${kpi.trendValue} pp vs same period. Dec 2026 forecast at ${th[11]}%, ${signEn} plan by ${Math.abs(endGap)} pp.`,
+      `${kpi.titleVi}: xu hướng ${kpi.trendDirection === 'up' ? 'tăng' : 'giảm'} ${kpi.trendValue} điểm % so với cùng kỳ. Dự báo T12/26 ở ${th[11]}%, ${sign} KH ${Math.abs(endGap)} điểm %.`,
+      `${kpi.titleEn}: trend ${kpi.trendDirection} ${kpi.trendValue} pp vs same period. Dec 2026 forecast ${th[11]}%, ${signEn} plan by ${Math.abs(endGap)} pp.`,
     );
   }
 
   return insight(
-    `Sản lượng/doanh thu tháng 1 đạt ${kpi.actual.toLocaleString('vi-VN')} ${kpi.unitVi} (${kpi.progress}% KH). Chuỗi 12 tháng cho thấy mùa cao điểm T11–T12; khoảng cách cuối năm so với KH: ${endGap >= 0 ? '+' : ''}${endGap.toLocaleString('vi-VN')} ${kpi.unitVi}.`,
-    `January closed at ${kpi.actual.toLocaleString('en-US')} ${kpi.unitEn} (${kpi.progress}% of plan). The 12-month curve peaks in Nov–Dec; year-end gap vs plan: ${endGap >= 0 ? '+' : ''}${endGap.toLocaleString('en-US')} ${kpi.unitEn}.`,
+    `${kpi.titleVi} tháng 1 đạt ${kpi.actual.toLocaleString('vi-VN')} ${kpi.unitVi} (${kpi.progress}% KH). Mùa cao điểm T11–T12; chênh lệch T12 so với KH: ${endGap >= 0 ? '+' : ''}${endGap.toLocaleString('vi-VN')} ${kpi.unitVi}.`,
+    `${kpi.titleEn} in January: ${kpi.actual.toLocaleString('en-US')} ${kpi.unitEn} (${kpi.progress}% of plan). Peak Nov–Dec; Dec gap vs plan: ${endGap >= 0 ? '+' : ''}${endGap.toLocaleString('en-US')} ${kpi.unitEn}.`,
   );
 }
 
@@ -370,17 +439,19 @@ function bulletInsight(kpi) {
 
 // ─── Chart builders ────────────────────────────────────────────────────────
 
-function chartConfig(kpi, extra = {}) {
-  const cfg = { height: extra.height ?? 220, minValue: kpi.minValue, maxValue: kpi.maxValue, insightLayout: 'inline' };
-  if (kpi.unitVi) cfg.slug = kpi.unitVi;
+function chartConfig(kpi, extra = {}, rangeValues = []) {
+  const axis = rangeValues.length ? resolveAxisRange(kpi, rangeValues) : { minValue: kpi.minValue, maxValue: kpi.maxValue };
+  const cfg = { height: extra.height ?? 220, ...axis, insightLayout: 'inline' };
+  if (kpi.unitVi && extra.slug !== false) cfg.slug = kpi.unitVi;
   return { ...cfg, ...extra };
 }
 
 function lineChart(kpi, meta) {
   const { th, kh, ck } = kpi.trend;
+  const range = [th, kh, ck];
   return {
     chartKey: 'line',
-    config: chartConfig(kpi, { height: 240 }),
+    config: chartConfig(kpi, { height: 240 }, range),
     title: { keyVi: meta.titleVi, keyEn: meta.titleEn },
     subTitle: { keyVi: meta.subVi, keyEn: meta.subEn },
     labels: MONTH_LABELS,
@@ -396,7 +467,7 @@ function lineChart(kpi, meta) {
 function barTwoSeries(kpi, meta, labels, actual, plan) {
   return {
     chartKey: 'bar',
-    config: chartConfig(kpi),
+    config: chartConfig(kpi, { height: 240 }, [actual, plan]),
     title: { keyVi: meta.titleVi, keyEn: meta.titleEn },
     subTitle: { keyVi: meta.subVi, keyEn: meta.subEn },
     labels,
@@ -411,7 +482,7 @@ function barTwoSeries(kpi, meta, labels, actual, plan) {
 function radarChart(kpi, meta, labels, actual, plan) {
   return {
     chartKey: 'radar',
-    config: chartConfig(kpi, { height: 260 }),
+    config: chartConfig(kpi, { height: 260 }, [actual, plan]),
     title: { keyVi: meta.titleVi, keyEn: meta.titleEn },
     subTitle: { keyVi: meta.subVi, keyEn: meta.subEn },
     labels,
@@ -423,10 +494,14 @@ function radarChart(kpi, meta, labels, actual, plan) {
   };
 }
 
+/** Combo chỉ dùng khi ≥3 nhãn (vd. Country) — tránh line nối 2 điểm gây lỗi UI */
 function comboChart(kpi, meta, labels, actual, plan, prior) {
+  if (labels.length < 3) {
+    return barTwoSeries(kpi, meta, labels, actual, plan);
+  }
   return {
     chartKey: 'combo',
-    config: chartConfig(kpi, { height: 250 }),
+    config: chartConfig(kpi, { height: 250 }, [actual, plan, prior]),
     title: { keyVi: meta.titleVi, keyEn: meta.titleEn },
     subTitle: { keyVi: meta.subVi, keyEn: meta.subEn },
     labels,
@@ -503,19 +578,18 @@ function buildOverviewChart(kpi) {
     case 'CPM-002':
       return {
         ...base,
-        ...comboChart(
+        ...barTwoSeries(
           kpi,
           {
             titleVi: kpi.titleVi,
             titleEn: kpi.titleEn,
-            subVi: `Phân bổ Network · ${PERIOD.vi}`,
-            subEn: `Network split · ${PERIOD.en}`,
+            subVi: `Phân bổ Network · ${PERIOD.vi} · TH vs KH`,
+            subEn: `Network split · ${PERIOD.en} · actual vs plan`,
             insight: networkInsight(kpi),
           },
           NETWORK_LABELS,
           s.network.th,
           s.network.kh,
-          s.prior.network,
         ),
       };
     case 'CPM-003':
