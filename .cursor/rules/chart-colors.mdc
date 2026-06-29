@@ -1,81 +1,123 @@
 ---
-description: Quy ước mã màu biểu đồ ChartJS (TH, KH, cùng kỳ, mục tiêu...)
-globs: ApiV2/**/chart/**/*.json
+description: Quy ước màu biểu đồ mock API — mapping theo nghiệp vụ khi gen/sửa chart JSON
+globs: ApiV2/**/chart/**/*.json, ApiV2/**/board/**/chart/*.json, TCNL/**/*.json
 alwaysApply: false
 ---
 
-# Quy ước mã màu biểu đồ (ChartJS)
+# Quy ước màu biểu đồ (ChartJS mock API)
 
-Tham chiếu design: [ChartJS – Figma](https://www.figma.com/design/hsFgInn6secHHacFifbA24/ChartJS?node-id=312-21548)
+Khi **thêm hoặc sửa** `color` trong file chart JSON (`chartKey`, `data[].color`), **bắt buộc** map màu theo ý nghĩa nghiệp vụ của series (`data[].key.keyVi` / `keyEn`). Không chọn màu ngẫu nhiên cho các khái niệm đã định nghĩa bên dưới.
 
-Khi thêm/sửa `color` trong mock API biểu đồ, **luôn gán màu theo ý nghĩa nghiệp vụ**, không chọn màu ngẫu nhiên.
+## Màu đặc trưng (bắt buộc)
 
-## Màu theo loại dữ liệu (so sánh TH / KH / cùng kỳ)
+| Ý nghĩa | Từ khóa nhận diện (`keyVi` / `keyEn`) | Màu |
+|---------|----------------------------------------|-----|
+| **Thực hiện** | `Thực hiện`, `TH`, `Actual`, `TH 20xx`, `TH {kỳ}` | `#2962A0` |
+| **Kế hoạch** | `Kế hoạch`, `KH`, `Plan`, `KH 20xx` | `#D0D1D3` |
+| **Mục tiêu** | `Mục tiêu`, `Target`, `Giờ mức` | `#0B9A03` |
+| **Cùng kỳ** | `Cùng kỳ`, `CK`, `Same period`, `TH năm trước`, `Cùng kỳ 20xx` | `#EC4899` |
+| **Tiếp viên** | `Tiếp viên`, `TV`, `Flight attendant`, `Giờ bay tiếp viên` | `#27B8F1` |
+| **BĐH** | `BĐH`, `Phi công` (khi ngữ cảnh giờ bay / đối tượng BĐH) | `#E5910B` |
 
-| Ý nghĩa | Viết tắt | Màu | Ghi chú style |
-|---------|----------|-----|---------------|
-| **Thực hiện** (kỳ hiện tại) | TH | `#2d6a9f` | Line: `fill: true` nếu là series chính |
-| **Kế hoạch** | KH | `#e74c3c` | Line: `borderDash: [6, 3]`, `fill: false` |
-| **Cùng kỳ** / TH năm trước | CK / TH 20xx | `#95a5a6` | Line: nét liền, `fill: false` |
-| **Mục tiêu** / Giờ mức | — | `#e74c3c` hoặc `#d5dbdb` | Line mục tiêu: `#e74c3c` + `borderDash: [6, 3]`; cột tham chiếu: `#d5dbdb` |
+**Quy tắc nhận diện:** So khớp **không phân biệt hoa thường**. Chuỗi chứa từ khóa (vd. `TH 5T/2026`, `KH 2026`) vẫn áp dụng màu tương ứng.
 
-### Line chart – xu hướng 12 tháng (TH vs KH vs cùng kỳ)
+**Viết hex:** dùng đúng mã trên; có thể viết thường `#2962a0` nếu file xung quanh đã dùng lowercase.
 
-```json
-{ "key": { "keyVi": "TH 2026", "keyEn": "Actual 2026" }, "color": ["#2d6a9f"], "fill": true, "borderDash": null }
-{ "key": { "keyVi": "KH 2026", "keyEn": "Plan 2026" },   "color": ["#e74c3c"], "fill": false, "borderDash": [6, 3] }
-{ "key": { "keyVi": "TH 2025", "keyEn": "Actual 2025" }, "color": ["#95a5a6"], "fill": false, "borderDash": null }
-```
+## Màu khác (không thuộc bảng trên)
 
-### Bar chart – so sánh nhóm (TH vs KH vs cùng kỳ)
-
-Dùng bộ màu riêng cho bar (khác line):
-
-| Ý nghĩa | Màu |
-|---------|-----|
-| TH (kỳ hiện tại) | `#2c5282` |
-| KH | `#b0b0b0` |
-| Cùng kỳ / TH năm trước | `#e67e22` |
-
-## Màu theo ngữ cảnh biểu đồ
-
-### Waterfall / biến động (1 series, nhiều cột)
-
-Gán màu theo thứ tự `labels`:
-
-| Loại cột | Màu |
-|----------|-----|
-| Đầu kỳ / trung tính | `#95a5a6` |
-| Tăng / tuyển mới (+) | `#27ae60` |
-| Giảm / thôi việc / nghỉ (-) | `#e74c3c` |
-| Cuối kỳ / kết quả | `#2d6a9f` |
-
-### Phân loại theo quốc tịch / đơn vị (giờ bay, bar grouped)
-
-| Nhóm | Màu |
-|------|-----|
-| VN / PCVN | `#2d6a9f` |
-| ALS | `#1abc9c` |
-| NN / PCNN | `#e67e22` |
-| Giờ mức / mục tiêu tham chiếu | `#d5dbdb` |
-
-### Doughnut / pie – palette cố định (theo thứ tự slice)
+Series **không** khớp 6 khái niệm trên (vd. `PCVN`, `ALS`, `LĐ mặt đất`, `VN`, `NN`, network, area…) — **được phép dùng màu tự do** từ palette gợi ý:
 
 ```json
-["#2d6a9f", "#e74c3c", "#e67e22", "#27ae60", "#1abc9c", "#8e44ad", "#2c3e50", "#95a5a6"]
+["#5b9bd5", "#8e44ad", "#1abc9c", "#27ae60", "#2c3e50", "#f0b27a", "#1a3a5c", "#95a5a6"]
 ```
 
-### Multi-series mở rộng (≥ 4 series cùng loại)
+Chọn ngẫu nhiên hoặc lần lượt; **không** trùng màu đặc trưng ở trên.
 
-Dùng lần lượt, không lặp sớm:
+---
+
+## Quy tắc chart type & style theo series
+
+### Cùng kỳ — **không bao giờ dùng bar**
+
+- **Cấm** gán `type: "bar"` hoặc đặt series Cùng kỳ trong `chartKey: "bar"` thuần.
+- **Bắt buộc** dùng **line**, kể cả trong `chartKey: "combo"` → `"type": "line"`.
+- **Bắt buộc** nét **đứt**, không nét liền:
 
 ```json
-["#2d6a9f", "#5b9bd5", "#e67e22", "#f0b27a", "#1abc9c", "#27ae60", "#8e44ad", "#1a3a5c"]
+{
+  "key": { "keyVi": "Cùng kỳ", "keyEn": "Same period" },
+  "color": ["#EC4899"],
+  "type": "line",
+  "borderDash": [6, 3],
+  "fill": false
+}
 ```
 
-## Quy tắc chung
+### Thực hiện
 
-- Viết hex **chữ thường**: `#2d6a9f` (tránh `#2D6BA4`, `#2962A0` — biến thể cũ).
-- Màu gắn **theo `key.keyVi` / nghiệp vụ**, không theo vị trí cột ngẫu nhiên.
-- `#e74c3c` = KH hoặc giảm/âm; `#27ae60` = tăng/dương; `#2d6a9f` = TH chính.
-- KH trên line chart **bắt buộc** nét đứt `[6, 3]`; mục tiêu/giờ mức tương tự khi là đường tham chiếu.
+| `chartKey` | Style gợi ý |
+|------------|-------------|
+| `line` | Nét liền `borderDash: null`; có thể `fill: true` nếu là series chính |
+| `bar` / `combo` | `"type": "bar"`, màu `#2962A0` |
+
+### Kế hoạch
+
+| `chartKey` | Style gợi ý |
+|------------|-------------|
+| `line` | Nét đứt `borderDash: [6, 3]`, `fill: false` |
+| `bar` / `combo` | `"type": "bar"`, màu `#D0D1D3` |
+
+### Mục tiêu
+
+- Luôn là đường tham chiếu: **line** + `borderDash: [6, 3]`, màu `#0B9A03`, `fill: false`.
+- Không dùng bar cho Mục tiêu.
+
+### Tiếp viên / BĐH
+
+- Bar hoặc line tùy chart; màu **cố định** theo bảng (`#27B8F1` / `#E5910B`).
+- Trong bar grouped nhiều cột, gán màu theo **nhãn cột** nếu label là Tiếp viên/BĐH.
+
+---
+
+## Mẫu JSON tham chiếu
+
+### Line — TH + KH + Cùng kỳ (12 tháng)
+
+```json
+{ "key": { "keyVi": "TH 2026", "keyEn": "Actual 2026" }, "color": ["#2962A0"], "borderDash": null, "fill": true }
+{ "key": { "keyVi": "KH 2026", "keyEn": "Plan 2026" },   "color": ["#D0D1D3"], "borderDash": [6, 3], "fill": false }
+{ "key": { "keyVi": "Cùng kỳ 2025", "keyEn": "Same period 2025" }, "color": ["#EC4899"], "borderDash": [6, 3], "fill": false }
+```
+
+### Combo — TH/KH bar + Cùng kỳ line
+
+```json
+{ "key": { "keyVi": "Thực hiện", "keyEn": "Actual" }, "color": ["#2962A0"], "type": "bar" }
+{ "key": { "keyVi": "Kế hoạch", "keyEn": "Plan" },     "color": ["#D0D1D3"], "type": "bar" }
+{ "key": { "keyVi": "Cùng kỳ", "keyEn": "Same period" }, "color": ["#EC4899"], "type": "line", "borderDash": [6, 3] }
+```
+
+### Bar grouped — Tiếp viên & BĐH
+
+```json
+"labels": ["BĐH", "Tiếp viên", "LĐ mặt đất"],
+"data": [{
+  "key": { "keyVi": "TH 5T/2026", "keyEn": "Actual May 2026" },
+  "name": [72, 68, 45],
+  "color": ["#E5910B", "#27B8F1", "#5b9bd5"]
+}]
+```
+
+(Màu cột BĐH/Tiếp viên **ưu tiên** màu đặc trưng; cột còn lại random từ palette.)
+
+---
+
+## Checklist trước khi commit chart
+
+- [ ] Thực hiện → `#2962A0`
+- [ ] Kế hoạch → `#D0D1D3`
+- [ ] Mục tiêu → `#0B9A03` (line, nét đứt)
+- [ ] Cùng kỳ → `#EC4899`, **line nét đứt**, **không bar**
+- [ ] Tiếp viên → `#27B8F1`
+- [ ] BĐH → `#E5910B`
+- [ ] Series khác → palette random, không trùng 6 màu đặc trưng
