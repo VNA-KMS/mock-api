@@ -161,7 +161,6 @@ function buildYearlySeries() {
       decimals: b.decimals,
       trendLabel: b.trendLabel,
     };
-    // Q1 dip story for 2022-2023 on load factor
     if (code === 'CPM_004') {
       out[code].TH = [44.5, 47.2, 49.8, 52.1, 52.8];
       out[code].KH = [48.0, 49.5, 51.0, 52.5, 53.5];
@@ -169,6 +168,93 @@ function buildYearlySeries() {
     }
   }
   return out;
+}
+
+const WEEKS_IN_YEAR = 52;
+const DAYS_IN_MONTH = 31;
+const WEEKS_PER_MONTH = 4.33;
+
+function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
+
+function interpolateMonthly(monthlyValues, periodIndex, totalPeriods, decimals) {
+  const floatIdx = ((periodIndex - 1) * 12) / totalPeriods;
+  const i0 = Math.min(11, Math.max(0, Math.floor(floatIdx)));
+  const i1 = Math.min(11, i0 + 1);
+  const t = floatIdx - i0;
+  return roundVal(lerp(monthlyValues[i0], monthlyValues[i1], t), decimals);
+}
+
+function buildInterpolatedSeries(totalPeriods, scaleForSum, dailyMonthIdx) {
+  const out = {};
+  for (const [code, src] of Object.entries(MONTHLY_SERIES)) {
+    const sumScale = src.agg === 'sum' ? scaleForSum : 1;
+    const buildTrack = (track) => {
+      if (dailyMonthIdx != null) {
+        const monthStart = src[track][Math.max(0, dailyMonthIdx - 1)] ?? src[track][dailyMonthIdx];
+        const monthEnd = src[track][dailyMonthIdx];
+        return Array.from({ length: totalPeriods }, (_, i) => {
+          const t = totalPeriods === 1 ? 1 : i / (totalPeriods - 1);
+          const wave = Math.sin((i / totalPeriods) * Math.PI) * (src.decimals === 0 ? 8 : 0.6);
+          return roundVal((lerp(monthStart, monthEnd, t) + wave) * sumScale, src.decimals);
+        });
+      }
+      return Array.from({ length: totalPeriods }, (_, i) =>
+        roundVal(interpolateMonthly(src[track], i + 1, totalPeriods, src.decimals) * sumScale, src.decimals),
+      );
+    };
+    out[code] = {
+      TH: buildTrack('TH'),
+      KH: buildTrack('KH'),
+      CK: buildTrack('CK'),
+      decimals: src.decimals,
+      trendLabel: src.trendLabel,
+    };
+  }
+  return out;
+}
+
+function buildWeeklySeries() {
+  return buildInterpolatedSeries(WEEKS_IN_YEAR, 1 / WEEKS_PER_MONTH, null);
+}
+
+function buildDailySeries(monthIdx = 11) {
+  return buildInterpolatedSeries(DAYS_IN_MONTH, 1 / DAYS_IN_MONTH, monthIdx);
+}
+
+function sliceTrend(series, idx, count, labelFn) {
+  const start = Math.max(0, idx - count + 1);
+  const labels = [];
+  const tracks = { TH: [], KH: [], CK: [] };
+  for (let i = start; i <= idx; i++) {
+    labels.push(labelFn(i));
+    tracks.TH.push(series.TH[i]);
+    tracks.KH.push(series.KH[i]);
+    tracks.CK.push(series.CK[i]);
+  }
+  while (labels.length < count) {
+    const pad = start - (count - labels.length);
+    const pi = Math.max(0, pad);
+    labels.unshift(labelFn(pi));
+    tracks.TH.unshift(series.TH[pi]);
+    tracks.KH.unshift(series.KH[pi]);
+    tracks.CK.unshift(series.CK[pi]);
+  }
+  return {
+    labels: labels.slice(-count),
+    TH: tracks.TH.slice(-count),
+    KH: tracks.KH.slice(-count),
+    CK: tracks.CK.slice(-count),
+  };
+}
+
+function weekEndDate(week) {
+  const d = new Date('2026-01-01');
+  d.setDate(d.getDate() + week * 7 - 1);
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  return `${dd}/${mm}/2026`;
 }
 
 function kpiMetrics(series, metricCode, idx) {
@@ -257,17 +343,35 @@ function buildTrendChart(template, series, metricCode, ctx) {
   const m = kpiMetrics(series, metricCode, ctx.idx);
   const chart = JSON.parse(JSON.stringify(template));
 
-  chart.title.keyVi = chart.title.keyVi.replace(/12 tháng/g, ctx.trendTitleVi);
-  chart.title.keyEn = chart.title.keyEn.replace(/12-month/g, ctx.trendTitleEn);
-  chart.labels = ctx.trendLabels;
+  chart.title.keyVi = chart.title.keyVi.replace(
+    /12 tháng|4 quý|5 năm|12 tuần|12 ngày/g,
+    ctx.trendTitleVi,
+  );
+  chart.title.keyEn = chart.title.keyEn.replace(
+    /12-month|4-quarter|5-year|12-week|12-day/g,
+    ctx.trendTitleEn,
+  );
 
-  chart.data = chart.data.map((row) => ({
-    ...row,
-    name: s[sourceLabel(row)].map((v) => roundVal(v, s.decimals)),
-  }));
+  const trend = ctx.trendWindow
+    ? sliceTrend(s, ctx.idx, ctx.trendWindow, ctx.trendLabelFn)
+    : {
+        labels: ctx.trendLabels,
+        TH: s.TH,
+        KH: s.KH,
+        CK: s.CK,
+      };
+  chart.labels = trend.labels;
 
-  const last = s.TH[s.TH.length - 1];
-  const lastKh = s.KH[s.KH.length - 1];
+  chart.data = chart.data.map((row) => {
+    const key = sourceLabel(row);
+    return {
+      ...row,
+      name: trend[key].map((v) => roundVal(v, s.decimals)),
+    };
+  });
+
+  const last = s.TH[ctx.idx];
+  const lastKh = s.KH[ctx.idx];
   const gap = roundVal(last - lastKh, s.decimals);
   chart.insightLines[0].keyVi = `${meta.titleVi} ${ctx.periodShortVi} đạt ${m.actual} ${meta.unitVi} (${m.progress}% KH). ${ctx.trendInsightVi}; chênh lệch cuối kỳ so với KH: ${gap >= 0 ? '+' : ''}${gap} ${meta.unitVi}.`;
   chart.insightLines[0].keyEn = `${meta.titleEn} ${ctx.periodShortEn}: ${m.actual} ${meta.unitEn} (${m.progress}% of plan). ${ctx.trendInsightEn}; end-period gap vs plan: ${gap >= 0 ? '+' : ''}${gap} ${meta.unitEn}.`;
@@ -407,11 +511,22 @@ function buildBoardTthhOverview(templatePath, series, ctx) {
 
     if (next.chartKey === 'line') {
       const s = series[code];
-      next.data = next.data.map((row) => ({
-        ...row,
-        name: s[sourceLabel(row)].map((v) => roundVal(v, s.decimals)),
-      }));
-      next.labels = ctx.trendLabels;
+      const trend = ctx.trendWindow
+        ? sliceTrend(s, ctx.idx, ctx.trendWindow, ctx.trendLabelFn)
+        : {
+            labels: ctx.trendLabels,
+            TH: s.TH,
+            KH: s.KH,
+            CK: s.CK,
+          };
+      next.labels = trend.labels;
+      next.data = next.data.map((row) => {
+        const key = sourceLabel(row);
+        return {
+          ...row,
+          name: trend[key].map((v) => roundVal(v, s.decimals)),
+        };
+      });
       updateConfigRange(next);
     }
 
@@ -495,8 +610,10 @@ function generatePeriod(ctx, series) {
   }
 
   const kpis = buildKpisTthh(kpisTemplate, series, ctx);
-  const summary = kpis.map((k) => `${k.metricCode}=${k.actual}/${k.target} ${k.trendDirection}`).join(' | ');
-  console.log(`${ctx.folder}: ${summary}`);
+  if (ctx.verbose !== false) {
+    const summary = kpis.map((k) => `${k.metricCode}=${k.actual}/${k.target} ${k.trendDirection}`).join(' | ');
+    console.log(`${ctx.folder}: ${summary}`);
+  }
 }
 
 function monthCtx(month, template, root, baseUrl) {
@@ -625,16 +742,115 @@ function yearCtx(year, template, root, baseUrl) {
   };
 }
 
+function weekCtx(week, template, root, baseUrl) {
+  const vi = `Tuần ${week}/2026`;
+  const en = `Week ${week}/2026`;
+  const endDate = weekEndDate(week);
+  const trendWindow = 12;
+  const trendLabelFn = (i) => `W${i + 1}/26`;
+
+  return {
+    idx: week - 1,
+    folder: `W_${week}`,
+    template,
+    root,
+    baseUrl,
+    apiPrefix: `ApiV2/CMDV/CQDV/TTHH/W/W_${week}`,
+    periodVi: vi,
+    periodEn: en,
+    periodShortVi: `tuần ${week}`,
+    periodShortEn: `Week ${week}`,
+    tagFull: `W${week}/2026`,
+    tagEn: `W${week} 2026`,
+    endDate,
+    summaryTitleVi: 'Tổng KPIs tuần',
+    summaryTitleEn: 'Weekly KPI summary',
+    trendTitleVi: '12 tuần',
+    trendTitleEn: '12-week',
+    trendWindow,
+    trendLabelFn,
+    trendLabels: [],
+    trendInsightVi: 'Xu hướng tăng dần về cuối năm, W50–W52 thường cao điểm',
+    trendInsightEn: 'Gradual rise toward year-end; W50–W52 often peak',
+    pathPattern: /W_\d+\/board\/tthh/g,
+    pathReplace: `W_${week}/board/tthh`,
+    replacements: [
+      [/Tháng \d+\/2026/g, vi],
+      [/Tuần \d+\/2026/g, vi],
+      [/Week \d+\/2026/g, en],
+      [/T\d+\/2026/g, `W${week}/2026`],
+      [/W\d+\/2026/g, `W${week}/2026`],
+      [/23\/04\/2026/g, endDate],
+      [/ApiV2\/CMDV\/CQDV\/TTHH\/W\/W_\d+/g, `ApiV2/CMDV/CQDV/TTHH/W/W_${week}`],
+      [/ApiV2\/CMDV\/CQDV\/TTHH\/M\/M_\d+/g, `ApiV2/CMDV/CQDV/TTHH/W/W_${week}`],
+    ],
+  };
+}
+
+function dayCtx(day, template, root, baseUrl) {
+  const pad = String(day).padStart(2, '0');
+  const vi = `Ngày ${day}/12/2026`;
+  const en = `Day ${day}/12/2026`;
+  const endDate = `${pad}/12/2026`;
+  const trendWindow = 12;
+  const trendLabelFn = (i) => `D${i + 1}/12`;
+
+  return {
+    idx: day - 1,
+    folder: `D_${day}`,
+    template,
+    root,
+    baseUrl,
+    apiPrefix: `ApiV2/CMDV/CQDV/TTHH/D/D_${day}`,
+    periodVi: vi,
+    periodEn: en,
+    periodShortVi: `ngày ${day}/12`,
+    periodShortEn: `Dec ${day}`,
+    tagFull: `D${day}/12/2026`,
+    tagEn: `Dec ${day}, 2026`,
+    endDate,
+    summaryTitleVi: 'Tổng KPIs ngày',
+    summaryTitleEn: 'Daily KPI summary',
+    trendTitleVi: '12 ngày',
+    trendTitleEn: '12-day',
+    trendWindow,
+    trendLabelFn,
+    trendLabels: [],
+    trendInsightVi: 'Cuối tháng 12 tăng nhẹ nhờ hàng Tết và peak holiday',
+    trendInsightEn: 'Late December uptick on Tet cargo and holiday peak',
+    pathPattern: /D_\d+\/board\/tthh/g,
+    pathReplace: `D_${day}/board/tthh`,
+    replacements: [
+      [/Tháng \d+\/2026/g, vi],
+      [/Ngày \d+\/12\/2026/g, vi],
+      [/Day \d+\/12\/2026/g, en],
+      [/T\d+\/2026/g, `D${day}/12/2026`],
+      [/D\d+\/12\/2026/g, `D${day}/12/2026`],
+      [/23\/04\/2026/g, endDate],
+      [/31\/12\/2026/g, endDate],
+      [/ApiV2\/CMDV\/CQDV\/TTHH\/D\/D_\d+/g, `ApiV2/CMDV/CQDV/TTHH/D/D_${day}`],
+      [/ApiV2\/CMDV\/CQDV\/TTHH\/M\/M_\d+/g, `ApiV2/CMDV/CQDV/TTHH/D/D_${day}`],
+    ],
+  };
+}
+
 module.exports = {
   MONTHLY_SERIES,
   KPI_FOLDERS,
   KPI_META,
+  WEEKS_IN_YEAR,
+  DAYS_IN_MONTH,
   readJson,
   writeJson,
   buildQuarterlySeries,
   buildYearlySeries,
+  buildWeeklySeries,
+  buildDailySeries,
   generatePeriod,
   monthCtx,
   quarterCtx,
   yearCtx,
+  weekCtx,
+  dayCtx,
+  kpiMetrics,
 };
