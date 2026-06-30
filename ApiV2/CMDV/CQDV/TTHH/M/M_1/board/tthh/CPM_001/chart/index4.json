@@ -1,42 +1,61 @@
 {
     "code": "CPM-001",
-    "key": "by-country",
+    "key": "cumulative-dom",
     "metricCode": "CPM_001",
     "chartKey": "combo",
     "config": {
-        "height": 250,
-        "minValue": 57.87,
-        "maxValue": 99.53,
+        "height": 240,
+        "minValue": 78.0,
+        "maxValue": 90.5,
         "insightLayout": "inline",
-        "slug": "%"
+        "slug": "%",
+        "displayDays": 14
     },
     "title": {
-        "keyVi": "Thị phần hàng hóa vận chuyển theo Country",
-        "keyEn": "Cargo market share by country"
+        "keyVi": "Thị phần hàng hóa vận chuyển lũy kế theo thời gian (Hiển thị 14 ngày)",
+        "keyEn": "MTD cumulative cargo market share (14-day view)"
     },
     "subTitle": {
-        "keyVi": "5 thị trường trọng điểm · cột TH/KH + đường cùng kỳ",
-        "keyEn": "Top 5 markets · TH/plan bars + same-period line"
+        "keyVi": "DOM · Cột: Thực tế · Line: Mục tiêu và Cùng kỳ · Hiển thị 14 ngày",
+        "keyEn": "DOM · Column: Actual · Line: Target and same period · 14-day view"
     },
     "labels": [
-        "Việt Nam",
-        "Nhật Bản",
-        "Hàn Quốc",
-        "Úc",
-        "Đức"
+        "01/01",
+        "02/01",
+        "03/01",
+        "04/01",
+        "05/01",
+        "06/01",
+        "07/01",
+        "08/01",
+        "09/01",
+        "10/01",
+        "11/01",
+        "12/01",
+        "13/01",
+        "14/01"
     ],
     "data": [
         {
             "key": {
-                "keyVi": "TH 2026",
-                "keyEn": "Actual 2026"
+                "keyVi": "Thực tế",
+                "keyEn": "Actual"
             },
             "name": [
-                95.5,
-                76.4,
-                76.3,
-                69.1,
-                68.2
+                84.0,
+                84.8,
+                85.5,
+                86.0,
+                86.5,
+                87.0,
+                87.4,
+                87.8,
+                88.0,
+                88.2,
+                88.3,
+                88.4,
+                88.5,
+                88.5
             ],
             "color": [
                 "#2962A0"
@@ -48,35 +67,56 @@
         },
         {
             "key": {
-                "keyVi": "KH 2026",
-                "keyEn": "Plan 2026"
+                "keyVi": "Mục tiêu",
+                "keyEn": "Target"
             },
             "name": [
-                86.6,
-                69.2,
-                69.2,
-                62.7,
-                61.9
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1,
+                80.1
             ],
             "color": [
-                "#D0D1D3"
+                "#0B9A03"
             ],
-            "type": "bar",
+            "type": "line",
             "tension": null,
-            "borderDash": null,
-            "fill": null
+            "borderDash": [
+                6,
+                3
+            ],
+            "fill": false
         },
         {
             "key": {
-                "keyVi": "Cùng kỳ 2025",
-                "keyEn": "Same period 2025"
+                "keyVi": "Cùng kỳ",
+                "keyEn": "Same period"
             },
             "name": [
-                93.8,
-                75,
-                75,
-                68,
-                67.1
+                82.5,
+                83.2,
+                83.8,
+                84.3,
+                84.8,
+                85.2,
+                85.5,
+                85.8,
+                86.0,
+                86.2,
+                86.3,
+                86.4,
+                86.5,
+                86.5
             ],
             "color": [
                 "#EC4899"
@@ -92,8 +132,8 @@
     ],
     "insightLines": [
         {
-            "keyVi": "Việt Nam và Nhật Bản chiếm 54% cơ cấu. Đường cùng kỳ 2025 thấp hơn TH 2026 tại Hàn Quốc và Úc — đà tăng tích cực.",
-            "keyEn": "Vietnam and Japan account for 54% of the mix. The 2025 same-period line trails 2026 actuals in Korea and Australia — positive momentum."
+            "keyVi": "Lũy kế nội địa 88.5% — vượt mục tiêu 80.1% và cùng kỳ 86.5%.",
+            "keyEn": "Domestic MTD cumulative at 88.5% — above target 80.1% and same period 86.5%."
         }
     ]
 }

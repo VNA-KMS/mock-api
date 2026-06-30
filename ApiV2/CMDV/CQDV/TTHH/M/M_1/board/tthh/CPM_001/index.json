@@ -1,58 +1,231 @@
 [
     {
+        "section": "overview",
         "title": {
-            "keyVi": "Thị phần hàng hóa vận chuyển",
-            "keyEn": "Cargo market share"
+            "keyVi": "Overview",
+            "keyEn": "Overview"
         },
         "subTitle": {
             "keyVi": "Đơn vị: % · Nguồn: BCTM · MIS (tổng thị trường) · Tháng 1/2026",
             "keyEn": "Unit: % · Source: BCTM · January 2026"
         },
+        "filters": [
+            {
+                "key": "network",
+                "title": {
+                    "keyVi": "Network",
+                    "keyEn": "Network"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
+            }
+        ],
+        "grid": 3,
+        "columns": [
+            {
+                "title": {
+                    "keyVi": "TỔNG (DOM + INT)",
+                    "keyEn": "TOTAL (DOM + INT)"
+                },
+                "child": [
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển theo thời gian",
+                            "keyEn": "Cargo market share over time"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index0.json"
+                    },
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển lũy kế từ đầu tháng theo thời gian",
+                            "keyEn": "MTD cumulative cargo market share over time"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Mục tiêu & Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Target & same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index3.json"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "keyVi": "DOM",
+                    "keyEn": "DOM"
+                },
+                "child": [
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển theo thời gian (Hiển thị 14 ngày)",
+                            "keyEn": "Cargo market share over time (14-day view)"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index1.json"
+                    },
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển lũy kế theo thời gian (Hiển thị 14 ngày)",
+                            "keyEn": "MTD cumulative cargo market share (14-day view)"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Mục tiêu và Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Target and same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index4.json"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "keyVi": "INT",
+                    "keyEn": "INT"
+                },
+                "child": [
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển theo thời gian (Hiển thị 14 ngày)",
+                            "keyEn": "Cargo market share over time (14-day view)"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index2.json"
+                    },
+                    {
+                        "title": {
+                            "keyVi": "Thị phần hàng hóa vận chuyển lũy kế theo thời gian (Hiển thị 14 ngày)",
+                            "keyEn": "MTD cumulative cargo market share (14-day view)"
+                        },
+                        "subTitle": {
+                            "keyVi": "Cột: Thực tế · Line: Mục tiêu và Cùng kỳ · Hiển thị 14 ngày",
+                            "keyEn": "Column: Actual · Line: Target and same period · 14-day view"
+                        },
+                        "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index5.json"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section": "middle",
+        "title": {
+            "keyVi": "Middle",
+            "keyEn": "Middle"
+        },
+        "filters": [
+            {
+                "key": "network",
+                "title": {
+                    "keyVi": "Network",
+                    "keyEn": "Network"
+                },
+                "defaultValue": "dom",
+                "options": [
+                    {
+                        "value": "dom",
+                        "label": {
+                            "keyVi": "DOM",
+                            "keyEn": "DOM"
+                        }
+                    },
+                    {
+                        "value": "int",
+                        "label": {
+                            "keyVi": "INT",
+                            "keyEn": "INT"
+                        }
+                    }
+                ]
+            },
+            {
+                "key": "area",
+                "title": {
+                    "keyVi": "Area",
+                    "keyEn": "Area"
+                },
+                "defaultValue": "dom",
+                "maxSelect": 3,
+                "hint": {
+                    "keyVi": "Click chọn 3 area để so sánh",
+                    "keyEn": "Select up to 3 areas to compare"
+                },
+                "options": [
+                    {
+                        "value": "asia-pacific",
+                        "label": {
+                            "keyVi": "Châu Á - Thái Bình Dương",
+                            "keyEn": "Asia-Pacific"
+                        }
+                    },
+                    {
+                        "value": "europe",
+                        "label": {
+                            "keyVi": "Châu Âu",
+                            "keyEn": "Europe"
+                        }
+                    },
+                    {
+                        "value": "americas",
+                        "label": {
+                            "keyVi": "Châu Mỹ",
+                            "keyEn": "Americas"
+                        }
+                    },
+                    {
+                        "value": "middle-east",
+                        "label": {
+                            "keyVi": "Trung Đông",
+                            "keyEn": "Middle East"
+                        }
+                    }
+                ]
+            },
+            {
+                "key": "country",
+                "title": {
+                    "keyVi": "Country",
+                    "keyEn": "Country"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
+            }
+        ],
         "grid": 2,
         "child": [
             {
                 "title": {
-                    "keyVi": "Bullet: TH so với KH",
-                    "keyEn": "Bullet: actual vs plan"
-                },
-                "subTitle": {
-                    "keyVi": "Tổng hợp Tháng 1/2026 · %",
-                    "keyEn": "Jan 2026uary 2026 2026 summary · %"
-                },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index0.json"
-            },
-            {
-                "title": {
-                    "keyVi": "Xu hướng Thị phần hàng hóa vận chuyển 12 tháng",
-                    "keyEn": "12-month Cargo market share trend"
-                },
-                "subTitle": {
-                    "keyVi": "TH / KH / cùng kỳ · Nguồn: BCTM · MIS (tổng thị trường)",
-                    "keyEn": "Actual / plan / same period · Source: BCTM · MIS (total market)"
-                },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index1.json"
-            },
-            {
-                "title": {
-                    "keyVi": "Thị phần hàng hóa vận chuyển theo Network",
-                    "keyEn": "Cargo market share by network"
-                },
-                "subTitle": {
-                    "keyVi": "So sánh Nội địa vs Quốc tế · TH và KH",
-                    "keyEn": "Domestic vs international · actual and plan"
-                },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index2.json"
-            },
-            {
-                "title": {
-                    "keyVi": "Thị phần hàng hóa vận chuyển theo Area",
+                    "keyVi": "Thị phần hàng hóa vận chuyển theo AREA",
                     "keyEn": "Cargo market share by area"
                 },
                 "subTitle": {
-                    "keyVi": "Radar TH vs KH theo 4 khu vực địa lý",
-                    "keyEn": "Radar actual vs plan across 4 geographic areas"
+                    "keyVi": "Cột: Thực hiện · Line: Cùng kỳ",
+                    "keyEn": "Column: Actual · Line: Same period"
                 },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index3.json"
+                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index6.json"
             },
             {
                 "title": {
@@ -60,21 +233,100 @@
                     "keyEn": "Cargo market share by country"
                 },
                 "subTitle": {
-                    "keyVi": "5 thị trường trọng điểm · cột TH/KH + đường cùng kỳ",
-                    "keyEn": "Top 5 markets · TH/plan bars + same-period line"
+                    "keyVi": "Cột: Thực hiện · Line: Cùng kỳ",
+                    "keyEn": "Column: Actual · Line: Same period"
                 },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index4.json"
+                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index7.json"
+            }
+        ]
+    },
+    {
+        "section": "detail",
+        "title": {
+            "keyVi": "Detail",
+            "keyEn": "Detail"
+        },
+        "filters": [
+            {
+                "key": "network",
+                "title": {
+                    "keyVi": "Network",
+                    "keyEn": "Network"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
             },
             {
+                "key": "area",
                 "title": {
-                    "keyVi": "Cơ cấu Thị phần hàng hóa vận chuyển theo Sector",
-                    "keyEn": "Cargo market share mix by sector"
+                    "keyVi": "Area",
+                    "keyEn": "Area"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
+            },
+            {
+                "key": "country",
+                "title": {
+                    "keyVi": "Country",
+                    "keyEn": "Country"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
+            },
+            {
+                "key": "router",
+                "title": {
+                    "keyVi": "Router",
+                    "keyEn": "Router"
+                },
+                "defaultValue": "all",
+                "options": [
+                    {
+                        "value": "all",
+                        "label": {
+                            "keyVi": "(All)",
+                            "keyEn": "(All)"
+                        }
+                    }
+                ]
+            }
+        ],
+        "child": [
+            {
+                "title": {
+                    "keyVi": "Chi tiết thị phần hàng hóa vận chuyển",
+                    "keyEn": "Cargo market share detail"
                 },
                 "subTitle": {
-                    "keyVi": "Tỷ trọng 4 nhóm hàng hóa chính",
-                    "keyEn": "Share across 4 main cargo groups"
+                    "keyVi": "Mặc định theo Network · Click + để xem chi tiết từng thành phần",
+                    "keyEn": "Default by network · Click + to expand each level"
                 },
-                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index5.json"
+                "child": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/ApiV2/CMDV/CQDV/TTHH/M/M_1/board/tthh/CPM_001/chart/index8.json"
             }
         ]
     }

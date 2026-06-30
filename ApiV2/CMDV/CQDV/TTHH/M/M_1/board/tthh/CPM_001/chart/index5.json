@@ -1,56 +1,139 @@
 {
     "code": "CPM-001",
-    "key": "by-sector",
+    "key": "cumulative-int",
     "metricCode": "CPM_001",
-    "chartKey": "doughnut",
+    "chartKey": "combo",
     "config": {
         "height": 240,
+        "minValue": 59.0,
+        "maxValue": 69.5,
         "insightLayout": "inline",
-        "minValue": 18.93,
-        "maxValue": 19.67
+        "slug": "%",
+        "displayDays": 14
     },
     "title": {
-        "keyVi": "Cơ cấu Thị phần hàng hóa vận chuyển theo Sector",
-        "keyEn": "Cargo market share mix by sector"
+        "keyVi": "Thị phần hàng hóa vận chuyển lũy kế theo thời gian (Hiển thị 14 ngày)",
+        "keyEn": "MTD cumulative cargo market share (14-day view)"
     },
     "subTitle": {
-        "keyVi": "Tỷ trọng 4 nhóm hàng hóa chính",
-        "keyEn": "Share across 4 main cargo groups"
+        "keyVi": "INT · Cột: Thực tế · Line: Mục tiêu và Cùng kỳ · Hiển thị 14 ngày",
+        "keyEn": "INT · Column: Actual · Line: Target and same period · 14-day view"
     },
     "labels": [
-        "Hàng tổng hợp",
-        "Hàng express",
-        "Hàng dễ hỏng",
-        "Hàng đặc biệt"
+        "01/01",
+        "02/01",
+        "03/01",
+        "04/01",
+        "05/01",
+        "06/01",
+        "07/01",
+        "08/01",
+        "09/01",
+        "10/01",
+        "11/01",
+        "12/01",
+        "13/01",
+        "14/01"
     ],
     "data": [
         {
             "key": {
-                "keyVi": "Cơ cấu Thị phần hàng hóa vận chuyển · T1/2026",
-                "keyEn": "Cargo market share mix · Jan 2026"
+                "keyVi": "Thực tế",
+                "keyEn": "Actual"
             },
             "name": [
-                19.6,
-                19,
-                19.2,
-                19.4
+                62.0,
+                62.8,
+                63.5,
+                64.0,
+                64.5,
+                65.0,
+                65.5,
+                66.0,
+                66.4,
+                66.7,
+                67.0,
+                67.1,
+                67.2,
+                67.3
             ],
             "color": [
-                "#5b9bd5",
-                "#8e44ad",
-                "#1abc9c",
-                "#27ae60"
+                "#2962A0"
             ],
-            "type": null,
+            "type": "bar",
             "tension": null,
             "borderDash": null,
             "fill": null
+        },
+        {
+            "key": {
+                "keyVi": "Mục tiêu",
+                "keyEn": "Target"
+            },
+            "name": [
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1,
+                61.1
+            ],
+            "color": [
+                "#0B9A03"
+            ],
+            "type": "line",
+            "tension": null,
+            "borderDash": [
+                6,
+                3
+            ],
+            "fill": false
+        },
+        {
+            "key": {
+                "keyVi": "Cùng kỳ",
+                "keyEn": "Same period"
+            },
+            "name": [
+                60.5,
+                61.2,
+                61.8,
+                62.3,
+                62.8,
+                63.2,
+                63.6,
+                64.0,
+                64.4,
+                64.8,
+                65.2,
+                65.5,
+                65.7,
+                65.9
+            ],
+            "color": [
+                "#EC4899"
+            ],
+            "type": "line",
+            "tension": 0.3,
+            "borderDash": [
+                6,
+                3
+            ],
+            "fill": false
         }
     ],
     "insightLines": [
         {
-            "keyVi": "Hàng đặc biệt chiếm tỷ trọng lớn nhất (79.1%). Hàng dễ hỏng tăng trưởng nhanh nhờ mở rộng cold-chain Tết.",
-            "keyEn": "Hàng đặc biệt has the largest share (79.1%). Perishables grew fastest on Tet cold-chain expansion."
+            "keyVi": "Lũy kế quốc tế 67.3% — vượt mục tiêu 61.1% và cùng kỳ 65.9%.",
+            "keyEn": "International MTD cumulative at 67.3% — above target 61.1% and same period 65.9%."
         }
     ]
 }

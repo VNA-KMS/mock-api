@@ -1,67 +1,107 @@
 {
     "code": "CPM-001",
-    "key": "by-network",
+    "key": "daily-int",
     "metricCode": "CPM_001",
-    "chartKey": "bar",
+    "chartKey": "combo",
     "config": {
         "height": 240,
-        "minValue": 57.81,
-        "maxValue": 91.79,
+        "minValue": 64.0,
+        "maxValue": 69.0,
         "insightLayout": "inline",
-        "slug": "%"
+        "slug": "%",
+        "displayDays": 14
     },
     "title": {
-        "keyVi": "Thị phần hàng hóa vận chuyển theo Network",
-        "keyEn": "Cargo market share by network"
+        "keyVi": "Thị phần hàng hóa vận chuyển theo thời gian (Hiển thị 14 ngày)",
+        "keyEn": "Cargo market share over time (14-day view)"
     },
     "subTitle": {
-        "keyVi": "So sánh Nội địa vs Quốc tế · TH và KH",
-        "keyEn": "Domestic vs international · actual and plan"
+        "keyVi": "INT · Cột: Thực tế · Line: Cùng kỳ · Hiển thị 14 ngày",
+        "keyEn": "INT · Column: Actual · Line: Same period · 14-day view"
     },
     "labels": [
-        "Nội địa",
-        "Quốc tế"
+        "01/01",
+        "02/01",
+        "03/01",
+        "04/01",
+        "05/01",
+        "06/01",
+        "07/01",
+        "08/01",
+        "09/01",
+        "10/01",
+        "11/01",
+        "12/01",
+        "13/01",
+        "14/01"
     ],
     "data": [
         {
             "key": {
-                "keyVi": "TH 2026",
-                "keyEn": "Actual 2026"
+                "keyVi": "Thực tế",
+                "keyEn": "Actual"
             },
             "name": [
-                88.5,
+                65.5,
+                65.8,
+                66.0,
+                66.2,
+                66.4,
+                66.6,
+                66.8,
+                66.9,
+                67.0,
+                67.1,
+                67.2,
+                67.2,
+                67.3,
                 67.3
             ],
             "color": [
                 "#2962A0"
             ],
-            "type": null,
+            "type": "bar",
             "tension": null,
             "borderDash": null,
             "fill": null
         },
         {
             "key": {
-                "keyVi": "KH 2026",
-                "keyEn": "Plan 2026"
+                "keyVi": "Cùng kỳ",
+                "keyEn": "Same period"
             },
             "name": [
-                80.1,
-                61.1
+                64.2,
+                64.5,
+                64.7,
+                64.8,
+                65.0,
+                65.1,
+                65.2,
+                65.3,
+                65.4,
+                65.5,
+                65.6,
+                65.7,
+                65.8,
+                65.9
             ],
             "color": [
-                "#D0D1D3"
+                "#EC4899"
             ],
-            "type": null,
-            "tension": null,
-            "borderDash": null,
-            "fill": null
+            "type": "line",
+            "tension": 0.3,
+            "borderDash": [
+                6,
+                3
+            ],
+            "fill": false
         }
     ],
     "insightLines": [
         {
-            "keyVi": "Nội địa duy trì thị phần mạnh (84.5% vs KH 76.6%), Quốc tế 67.8% — cần chú ý cạnh tranh trên các sector EU–US.",
-            "keyEn": "Domestic share remains strong (84.5% vs 76.6% plan); international at 67.8% — watch competition on EU–US sectors."
+            "keyVi": "Mạng quốc tế đạt 67.3% — cao hơn cùng kỳ 65.9% (+1.4 điểm %). Cần theo dõi cạnh tranh trên sector EU–US.",
+            "keyEn": "International network at 67.3% — above same period 65.9% (+1.4 pp). Watch competition on EU–US sectors."
         }
     ]
 }
