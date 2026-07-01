@@ -51,6 +51,60 @@ const MONTHLY_SERIES = {
 const KPI_FOLDERS = ['CPM_001', 'CPM_002', 'CPM_003', 'CPM_004', 'CPM_005'];
 const CHART_COUNT = 6;
 
+const DIVISION_FILTER_ORDER = ['all', 'khpt', 'tthh', 'ttbsp', 'bsv'];
+
+const DIVISION_FILTER_TITLES = {
+  all: { keyVi: 'Tất cả', keyEn: 'All' },
+  khpt: { keyVi: 'Ban KHPT', keyEn: 'Division KHPT' },
+  tthh: { keyVi: 'Ban TTHH', keyEn: 'Division TTHH' },
+  ttbsp: { keyVi: 'Ban TTBSP', keyEn: 'Division TTBSP' },
+  bsv: { keyVi: 'TT BSV', keyEn: 'TT BSV' },
+};
+
+const DIVISION_FILTER_COUNTS = {
+  all: 26,
+  khpt: 13,
+  tthh: 5,
+  ttbsp: 6,
+  bsv: 2,
+};
+
+function buildDivisionFilter(templateIndexPath) {
+  let divisions = null;
+  if (fs.existsSync(templateIndexPath)) {
+    const raw = readJson(templateIndexPath);
+    divisions = Array.isArray(raw) ? raw[0] : raw;
+  }
+
+  return DIVISION_FILTER_ORDER.map((key) => ({
+    title: [divisions?.[key]?.title ?? DIVISION_FILTER_TITLES[key]],
+    path: `/${key}`,
+    count: divisions?.[key]?.count ?? DIVISION_FILTER_COUNTS[key],
+  }));
+}
+
+function cloneKpisForDivision(kpis, fromBan, toBan) {
+  return kpis.map((item) => {
+    const next = { ...item };
+    if (typeof next.detail === 'string') {
+      next.detail = next.detail.replace(`/board/${fromBan}/`, `/board/${toBan}/`);
+    }
+    return next;
+  });
+}
+
+function buildOverviewAllFromTthh(overviewTthh) {
+  const overview = JSON.parse(JSON.stringify(overviewTthh));
+  const summaryBlock = overview.data?.find((block) => block.type === 'summary');
+  if (summaryBlock?.title) {
+    summaryBlock.title = {
+      keyVi: 'Tổng KPIs toàn CQDV',
+      keyEn: 'CQDV-wide KPI summary',
+    };
+  }
+  return overview;
+}
+
 const KPI_META = {
   CPM_001: {
     titleVi: 'Thị phần hàng hóa vận chuyển',
@@ -587,16 +641,26 @@ function generatePeriod(ctx, series) {
   const kpisTemplate = readJson(path.join(ctx.template, 'kpis/tthh/index.json'));
 
   writeJson(path.join(outDir, 'index.json'), readJson(path.join(ctx.template, 'index.json')));
-  writeJson(path.join(outDir, 'kpis/tthh/index.json'), buildKpisTthh(kpisTemplate, series, ctx));
-  writeJson(path.join(outDir, 'overview/tthh/index.json'), buildOverviewTthh(series, ctx));
-  writeJson(
-    path.join(outDir, 'overview/index.json'),
-    patchStrings(readJson(path.join(ctx.template, 'overview/index.json')), ctx),
+  const kpisTthh = buildKpisTthh(kpisTemplate, series, ctx);
+  const overviewTthh = buildOverviewTthh(series, ctx);
+  const boardTthh = buildBoardTthhOverview(
+    path.join(ctx.template, 'board/tthh/index.json'),
+    series,
+    ctx,
   );
-  writeJson(
-    path.join(outDir, 'board/tthh/index.json'),
-    buildBoardTthhOverview(path.join(ctx.template, 'board/tthh/index.json'), series, ctx),
-  );
+  const divisionFilter = buildDivisionFilter(path.join(ctx.template, 'index.json'));
+
+  writeJson(path.join(outDir, 'kpis/tthh/index.json'), kpisTthh);
+  writeJson(path.join(outDir, 'kpis/all/index.json'), JSON.parse(JSON.stringify(kpisTthh)));
+  writeJson(path.join(outDir, 'overview/tthh/index.json'), overviewTthh);
+  writeJson(path.join(outDir, 'overview/all/index.json'), buildOverviewAllFromTthh(overviewTthh));
+
+  const overviewRoot = patchStrings(readJson(path.join(ctx.template, 'overview/index.json')), ctx);
+  overviewRoot.filter = divisionFilter;
+  writeJson(path.join(outDir, 'overview/index.json'), overviewRoot);
+
+  writeJson(path.join(outDir, 'board/tthh/index.json'), boardTthh);
+  writeJson(path.join(outDir, 'board/all/index.json'), JSON.parse(JSON.stringify(boardTthh)));
 
   for (const folder of KPI_FOLDERS) {
     writeJson(
@@ -609,9 +673,8 @@ function generatePeriod(ctx, series) {
     }
   }
 
-  const kpis = buildKpisTthh(kpisTemplate, series, ctx);
   if (ctx.verbose !== false) {
-    const summary = kpis.map((k) => `${k.metricCode}=${k.actual}/${k.target} ${k.trendDirection}`).join(' | ');
+    const summary = kpisTthh.map((k) => `${k.metricCode}=${k.actual}/${k.target} ${k.trendDirection}`).join(' | ');
     console.log(`${ctx.folder}: ${summary}`);
   }
 }
@@ -840,8 +903,10 @@ module.exports = {
   KPI_META,
   WEEKS_IN_YEAR,
   DAYS_IN_MONTH,
+  DIVISION_FILTER_ORDER,
   readJson,
   writeJson,
+  buildDivisionFilter,
   buildQuarterlySeries,
   buildYearlySeries,
   buildWeeklySeries,
