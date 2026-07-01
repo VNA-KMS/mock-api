@@ -1,0 +1,76 @@
+{
+  "columns": [
+    { "field": "name", "headerName": "Đơn vị", "type": "text" },
+    { "field": "code", "headerName": "Mã", "type": "text", "width": 100 },
+    { "field": "headcount", "headerName": "Số lượng NV", "type": "number", "align": "right", "width": 140 },
+    { "field": "avgSalary", "headerName": "Lương TB (VNĐ)", "type": "currency", "align": "right", "width": 180 }
+  ],
+  "rows": [
+    {
+      "id": "khoi-khai-thac",
+      "name": "Khối Khai thác bay",
+      "code": "KTB",
+      "headcount": 420,
+      "avgSalary": 32000000,
+      "children": [
+        {
+          "id": "phong-phi-cong",
+          "name": "Phòng Phi công",
+          "code": "PC",
+          "headcount": 180,
+          "avgSalary": 65000000,
+          "children": [
+            { "id": "to-phi-cong-a320", "name": "Tổ A320", "code": "TPC-A320", "headcount": 90, "avgSalary": 62000000 },
+            { "id": "to-phi-cong-b787", "name": "Tổ B787", "code": "TPC-B787", "headcount": 90, "avgSalary": 68000000 }
+          ]
+        },
+        {
+          "id": "phong-tiep-vien",
+          "name": "Phòng Tiếp viên",
+          "code": "TV",
+          "headcount": 240,
+          "avgSalary": 18000000
+        }
+      ]
+    },
+    {
+      "id": "khoi-ky-thuat",
+      "name": "Khối Kỹ thuật",
+      "code": "KT",
+      "headcount": 310,
+      "avgSalary": 24000000,
+      "children": [
+        {
+          "id": "phong-bao-duong",
+          "name": "Phòng Bảo dưỡng",
+          "code": "BD",
+          "headcount": 210,
+          "avgSalary": 22000000,
+          "children": [
+            { "id": "to-bao-duong-noi-truong", "name": "Tổ bảo dưỡng nội trường", "code": "TBD-NT", "headcount": 130, "avgSalary": 21000000 },
+            { "id": "to-bao-duong-ngoai-truong", "name": "Tổ bảo dưỡng ngoại trường", "code": "TBD-NgT", "headcount": 80, "avgSalary": 23500000 }
+          ]
+        },
+        {
+          "id": "phong-vat-tu",
+          "name": "Phòng Vật tư kỹ thuật",
+          "code": "VT",
+          "headcount": 100,
+          "avgSalary": 27000000
+        }
+      ]
+    },
+    {
+      "id": "khoi-thuong-mai",
+      "name": "Khối Thương mại",
+      "code": "TM",
+      "headcount": 260,
+      "avgSalary": 20000000,
+      "children": [
+        { "id": "phong-ban-ve", "name": "Phòng Bán vé", "code": "BV", "headcount": 150, "avgSalary": 17000000 },
+        { "id": "phong-marketing", "name": "Phòng Marketing", "code": "MKT", "headcount": 60, "avgSalary": 23000000 },
+        { "id": "phong-cskh", "name": "Phòng Chăm sóc khách hàng", "code": "CSKH", "headcount": 50, "avgSalary": 19000000 }
+      ]
+    }
+  ]
+}

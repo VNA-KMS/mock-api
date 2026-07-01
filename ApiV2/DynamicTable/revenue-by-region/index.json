@@ -1,0 +1,62 @@
+{
+  "columns": [
+    { "field": "region", "headerName": "Khu vực", "type": "text" },
+    { "field": "revenue", "headerName": "Doanh thu (VNĐ)", "type": "currency", "align": "right", "width": 180 },
+    { "field": "target", "headerName": "Kế hoạch (VNĐ)", "type": "currency", "align": "right", "width": 180 },
+    { "field": "growthPercent", "headerName": "Tăng trưởng", "type": "percent", "align": "right", "width": 130 }
+  ],
+  "rows": [
+    {
+      "id": "mien-bac",
+      "region": "Miền Bắc",
+      "revenue": 1250000000000,
+      "target": 1200000000000,
+      "growthPercent": 12.5,
+      "children": [
+        {
+          "id": "ha-noi",
+          "region": "Hà Nội",
+          "revenue": 820000000000,
+          "target": 780000000000,
+          "growthPercent": 14.2,
+          "children": [
+            { "id": "hai-phong", "region": "Hải Phòng", "revenue": 260000000000, "target": 250000000000, "growthPercent": 9.8 },
+            { "id": "quang-ninh", "region": "Quảng Ninh", "revenue": 170000000000, "target": 170000000000, "growthPercent": 8.1 }
+          ]
+        },
+        { "id": "thanh-hoa", "region": "Thanh Hóa", "revenue": 430000000000, "target": 420000000000, "growthPercent": 9.1 }
+      ]
+    },
+    {
+      "id": "mien-trung",
+      "region": "Miền Trung",
+      "revenue": 640000000000,
+      "target": 600000000000,
+      "growthPercent": 10.4,
+      "children": [
+        { "id": "da-nang", "region": "Đà Nẵng", "revenue": 380000000000, "target": 350000000000, "growthPercent": 11.6 },
+        { "id": "khanh-hoa", "region": "Khánh Hòa", "revenue": 260000000000, "target": 250000000000, "growthPercent": 8.7 }
+      ]
+    },
+    {
+      "id": "mien-nam",
+      "region": "Miền Nam",
+      "revenue": 1480000000000,
+      "target": 1350000000000,
+      "growthPercent": 15.3,
+      "children": [
+        {
+          "id": "tp-hcm",
+          "region": "TP. Hồ Chí Minh",
+          "revenue": 1100000000000,
+          "target": 1000000000000,
+          "growthPercent": 16.8,
+          "children": [
+            { "id": "can-tho", "region": "Cần Thơ", "revenue": 200000000000, "target": 190000000000, "growthPercent": 10.2 },
+            { "id": "vung-tau", "region": "Vũng Tàu", "revenue": 180000000000, "target": 160000000000, "growthPercent": 14.5 }
+          ]
+        }
+      ]
+    }
+  ]
+}
