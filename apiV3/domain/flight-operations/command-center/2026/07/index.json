@@ -1,144 +1,66 @@
 {
+  "titleInfo": {
+    "title": "Command Center",
+    "statusLabel": "REAL TIME",
+    "description": "OCC, real-time disruption, weather, ATC",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
   "metricCards": {
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "flights-today",
+        "id": "kpi-1",
         "status": "compact",
-        "title": "Số chuyến bay hôm nay",
-        "value": "486",
-        "unit": "chuyến",
+        "title": "KPI #1",
+        "value": "1.234",
+        "unit": "\u0111\u01a1n v\u1ecb",
         "backgroundStatus": 1,
-        "trend": { "direction": "up", "label": "13% vs hôm qua", "tone": "positive" }
+        "trend": {
+          "direction": "up",
+          "label": "12% vs MT",
+          "tone": "positive"
+        }
       },
       {
-        "id": "otp",
+        "id": "kpi-2",
         "status": "compact",
-        "title": "OTP (On-Time Performance)",
-        "value": "78.1",
+        "title": "KPI #2",
+        "value": "78.5",
         "unit": "%",
         "backgroundStatus": 1,
-        "trend": { "direction": "down", "label": "5% vs MT", "tone": "negative" }
+        "trend": {
+          "direction": "down",
+          "label": "5% vs MT",
+          "tone": "negative"
+        }
       },
       {
-        "id": "pax-load",
+        "id": "kpi-3",
         "status": "compact",
-        "title": "Pax Load Factor",
-        "value": "82.4",
-        "unit": "%",
-        "backgroundStatus": 1,
-        "trend": { "direction": "up", "label": "3% vs MT", "tone": "positive" }
-      },
-      {
-        "id": "delays",
-        "status": "compact",
-        "title": "Chuyến bay delay > 15ph",
-        "value": "42",
-        "unit": "chuyến",
-        "backgroundStatus": 3,
-        "trend": { "direction": "up", "label": "8 vs hôm qua", "tone": "negative" }
-      },
-      {
-        "id": "cancellations",
-        "status": "compact",
-        "title": "Hủy chuyến",
-        "value": "3",
-        "unit": "chuyến",
-        "backgroundStatus": 2,
-        "trend": { "direction": "flat", "label": "Giữ nguyên", "tone": "neutral" }
-      },
-      {
-        "id": "fleet-util",
-        "status": "compact",
-        "title": "Fleet Utilization",
+        "title": "KPI #3",
         "value": "9.7",
-        "unit": "giờ/ngày",
+        "unit": "gi\u1edd",
         "backgroundStatus": 1,
-        "trend": { "direction": "up", "label": "+0.4h YoY", "tone": "positive" }
+        "trend": {
+          "direction": "up",
+          "label": "+0.4 YoY",
+          "tone": "positive"
+        }
       },
       {
-        "id": "crew-ready",
+        "id": "kpi-4",
         "status": "compact",
-        "title": "Phi công sẵn sàng",
+        "title": "KPI #4",
         "value": "98.5",
         "unit": "%",
         "backgroundStatus": 1,
-        "trend": { "direction": "up", "label": "1.2% vs MT", "tone": "positive" }
-      },
-      {
-        "id": "fuel-burn",
-        "status": "compact",
-        "title": "Fuel Burn",
-        "value": "243",
-        "unit": "Kg/h",
-        "backgroundStatus": 1,
-        "trend": { "direction": "down", "label": "3% vs MT", "tone": "negative" }
+        "trend": {
+          "direction": "up",
+          "label": "3% vs MT",
+          "tone": "positive"
+        }
       }
     ]
-  },
-  "chartBoard": [
-    {
-      "title": "OTP Trend",
-      "subTitle": "Theo tuần · Tháng 7/2026",
-      "columns": 2,
-      "items": [
-        {
-          "title": "OTP theo ngày",
-          "subTitle": "% chuyến bay đúng giờ",
-          "chartPath": "domain/flight-operations/command-center/2026/07/chart/otp-trend.json"
-        },
-        {
-          "title": "Nguyên nhân delay",
-          "subTitle": "Top 5 nguyên nhân",
-          "chartPath": "domain/flight-operations/command-center/2026/07/chart/delay-cause.json"
-        }
-      ]
-    },
-    {
-      "title": "",
-      "columns": 3,
-      "items": [
-        {
-          "title": "Giờ bay theo loại",
-          "chart": {
-            "chartKey": "bar",
-            "labels": ["A321", "B787-9", "B787-10", "A350"],
-            "data": [
-              {
-                "name": [3240, 1560, 1280, 960],
-                "color": ["#2962A0", "#4A90D9", "#7BB3E0", "#D0D1D3"]
-              }
-            ],
-            "config": { "height": 200 }
-          }
-        },
-        {
-          "title": "Tỷ lệ sử dụng",
-          "subTitle": "% thời gian khai thác",
-          "card": {
-            "title": "Fleet Utilization",
-            "value": "9.7 giờ/ngày",
-            "groups": [
-              { "label": "A321", "value": "10.2h" },
-              { "label": "B787", "value": "9.1h" },
-              { "label": "A350", "value": "8.8h" }
-            ]
-          }
-        },
-        {
-          "title": "Sự cố kỹ thuật",
-          "subTitle": "Số lần AOG, MEL",
-          "card": {
-            "title": "Technical Issues",
-            "value": "12 sự cố",
-            "groups": [
-              { "label": "AOG", "value": "2" },
-              { "label": "MEL", "value": "7" },
-              { "label": "CDL", "value": "3" }
-            ]
-          }
-        }
-      ]
-    }
-  ]
+  }
 }
