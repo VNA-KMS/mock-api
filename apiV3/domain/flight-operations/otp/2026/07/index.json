@@ -1,8 +1,8 @@
 {
   "titleInfo": {
-    "title": "OTP",
+    "title": "OTP Dashboard",
     "statusLabel": "REAL TIME",
-    "description": "On-Time Performance, OSP, root cause delay",
+    "description": "OTP, OSP, root cause delay",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,57 +10,98 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "fls",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "12% vs MT",
+          "label": "2.1% vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-2",
+        "id": "bh",
         "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
-        "unit": "%",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "down",
-          "label": "5% vs MT",
-          "tone": "negative"
-        }
-      },
-      {
-        "id": "kpi-3",
-        "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "+0.4 YoY",
+          "label": "1.5% vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-4",
+        "id": "bh-ngay",
         "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
+        "title": "BH/ngày",
+        "value": "229.7",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.8% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "otp-di",
+        "status": "compact",
+        "title": "OTP đi",
+        "value": "87.5",
         "unit": "%",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "3% vs MT",
+          "label": "0.6% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "osp-di",
+        "status": "compact",
+        "title": "OSP đi",
+        "value": "93.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.3% vs KH",
           "tone": "positive"
         }
       }
     ]
-  }
+  },
+  "chartBoard": [
+    {
+      "title": "OTP Dashboard",
+      "columns": 2,
+      "items": [
+        {
+          "title": "FLS theo thời gian",
+          "chartPath": "domain/flight-operations/otp/2026/07/chart/fls-trend.json"
+        },
+        {
+          "title": "BH theo thời gian",
+          "chartPath": "domain/flight-operations/otp/2026/07/chart/bh-trend.json"
+        },
+        {
+          "title": "BH theo đội tàu bay",
+          "chartPath": "domain/flight-operations/otp/2026/07/chart/bh-fleet.json"
+        },
+        {
+          "title": "OTP đi/đến theo thời gian",
+          "chartPath": "domain/flight-operations/otp/2026/07/chart/otp-trend.json"
+        },
+        {
+          "title": "Lý do Delay",
+          "chartPath": "domain/flight-operations/otp/2026/07/chart/delay-causes.json"
+        }
+      ]
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "titleInfo": {
-    "title": "Training",
+    "title": "Training Dashboard",
     "statusLabel": "REAL TIME",
-    "description": "FTC, simulator, recurrent, new-hire pipeline",
+    "description": "Huấn luyện, đào tạo PC, TV",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,57 +10,73 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "hoan-thanh",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
+        "title": "Tỷ lệ hoàn thành đào tạo",
+        "value": "94.2",
+        "unit": "%",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "12% vs MT",
+          "label": "2.2% vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-2",
+        "id": "khoa-dat",
         "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
-        "unit": "%",
+        "title": "Số khóa đạt",
+        "value": "186",
+        "unit": "khóa",
         "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "12 vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "khoa-chua-dat",
+        "status": "compact",
+        "title": "Số khóa chưa đạt",
+        "value": "12",
+        "unit": "khóa",
+        "backgroundStatus": 3,
         "trend": {
           "direction": "down",
-          "label": "5% vs MT",
-          "tone": "negative"
-        }
-      },
-      {
-        "id": "kpi-3",
-        "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "+0.4 YoY",
+          "label": "3 vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-4",
+        "id": "gio-sim",
         "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
-        "unit": "%",
+        "title": "Tổng giờ SIM",
+        "value": "1.245",
+        "unit": "h",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "3% vs MT",
+          "label": "3.2% vs KH",
           "tone": "positive"
         }
       }
     ]
-  }
+  },
+  "chartBoard": [
+    {
+      "title": "Training Dashboard",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Tỷ lệ hoàn thành theo nhóm",
+          "chartPath": "domain/flight-operations/training/2026/07/chart/completion-by-group.json"
+        },
+        {
+          "title": "Xu hướng tỷ lệ hoàn thành",
+          "chartPath": "domain/flight-operations/training/2026/07/chart/completion-trend.json"
+        }
+      ]
+    }
+  ]
 }

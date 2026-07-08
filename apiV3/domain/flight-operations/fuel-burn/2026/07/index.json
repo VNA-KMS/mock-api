@@ -1,8 +1,8 @@
 {
   "titleInfo": {
-    "title": "Ti\u1ebft ki\u1ec7m NL + Fuel Burn",
+    "title": "Tiết kiệm nhiên liệu + Fuel Burn",
     "statusLabel": "REAL TIME",
-    "description": "Gi\u1ea3i ph\u00e1p ti\u1ebft ki\u1ec7m nhi\u00ean li\u1ec7u, Fuel Burn",
+    "description": "Giải pháp tiết kiệm NL, Fuel Burn",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,57 +10,77 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "fls",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "12% vs MT",
+          "label": "2.1% vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-2",
+        "id": "bh",
         "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
-        "unit": "%",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "1.5% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fuel-burn-bh",
+        "status": "compact",
+        "title": "Fuel Burn/BH",
+        "value": "2.45",
+        "unit": "tấn/giờ",
         "backgroundStatus": 1,
         "trend": {
           "direction": "down",
-          "label": "5% vs MT",
-          "tone": "negative"
-        }
-      },
-      {
-        "id": "kpi-3",
-        "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "+0.4 YoY",
+          "label": "1.2% vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-4",
+        "id": "taxi-time",
         "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
-        "unit": "%",
+        "title": "Taxi Time TB",
+        "value": "18.4",
+        "unit": "phút",
         "backgroundStatus": 1,
         "trend": {
-          "direction": "up",
-          "label": "3% vs MT",
+          "direction": "down",
+          "label": "0.8ph vs KH",
           "tone": "positive"
         }
       }
     ]
-  }
+  },
+  "chartBoard": [
+    {
+      "title": "Tiết kiệm nhiên liệu + Fuel Burn",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Fuel Saving & CO₂ giảm phát thải",
+          "chartPath": "domain/flight-operations/fuel-burn/2026/07/chart/fuel-saving-trend.json"
+        },
+        {
+          "title": "Top 10 đường bay Fuel Burn/BH cao nhất",
+          "chartPath": "domain/flight-operations/fuel-burn/2026/07/chart/top-routes.json"
+        },
+        {
+          "title": "Giải pháp TK NL & lượng NL tiết kiệm",
+          "chartPath": "domain/flight-operations/fuel-burn/2026/07/chart/solutions.json"
+        }
+      ]
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "titleInfo": {
-    "title": "Crew",
+    "title": "Crew Dashboard",
     "statusLabel": "REAL TIME",
-    "description": "Phi c\u00f4ng, ti\u1ebfp vi\u00ean, FDP, FTL compliance",
+    "description": "Giờ bay khai thác PC, TV, mức độ sẵn sàng",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,57 +10,77 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "gio-bay-pc",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "12% vs MT",
-          "tone": "positive"
-        }
-      },
-      {
-        "id": "kpi-2",
-        "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
-        "unit": "%",
-        "backgroundStatus": 1,
+        "title": "Giờ bay TB PC/tháng",
+        "value": "72.4",
+        "unit": "h",
+        "backgroundStatus": 2,
         "trend": {
           "direction": "down",
-          "label": "5% vs MT",
+          "label": "1.2h vs KH",
           "tone": "negative"
         }
       },
       {
-        "id": "kpi-3",
+        "id": "gio-bay-tv",
         "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
-        "backgroundStatus": 1,
+        "title": "Giờ bay TB TV/tháng",
+        "value": "68.8",
+        "unit": "h",
+        "backgroundStatus": 2,
         "trend": {
-          "direction": "up",
-          "label": "+0.4 YoY",
-          "tone": "positive"
+          "direction": "down",
+          "label": "0.9h vs KH",
+          "tone": "negative"
         }
       },
       {
-        "id": "kpi-4",
+        "id": "pc-san-sang",
         "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
+        "title": "Hệ số PC sẵn sàng",
+        "value": "94.2",
         "unit": "%",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "3% vs MT",
+          "label": "0.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "tong-pc",
+        "status": "compact",
+        "title": "Tổng số PC",
+        "value": "1.248",
+        "unit": "người",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "24 vs KH",
           "tone": "positive"
         }
       }
     ]
-  }
+  },
+  "chartBoard": [
+    {
+      "title": "Crew Dashboard",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Giờ bay TB PC theo thời gian",
+          "chartPath": "domain/flight-operations/crew/2026/07/chart/pc-hour-trend.json"
+        },
+        {
+          "title": "Giờ bay TB PC theo đội bay",
+          "chartPath": "domain/flight-operations/crew/2026/07/chart/pc-fleet.json"
+        },
+        {
+          "title": "Hệ số PC sẵn sàng khai thác",
+          "chartPath": "domain/flight-operations/crew/2026/07/chart/readiness-trend.json"
+        }
+      ]
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "titleInfo": {
     "title": "Command Center",
     "statusLabel": "REAL TIME",
-    "description": "OCC, real-time disruption, weather, ATC",
+    "description": "Trung tâm điều hành khai thác",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,25 +10,25 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "flights-today",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
+        "title": "Số chuyến bay hôm nay",
+        "value": "486",
+        "unit": "chuyến",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "12% vs MT",
+          "label": "13% vs hôm qua",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-2",
+        "id": "otp",
         "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
+        "title": "OTP",
+        "value": "78.1",
         "unit": "%",
-        "backgroundStatus": 1,
+        "backgroundStatus": 2,
         "trend": {
           "direction": "down",
           "label": "5% vs MT",
@@ -36,23 +36,10 @@
         }
       },
       {
-        "id": "kpi-3",
+        "id": "pax-load",
         "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "+0.4 YoY",
-          "tone": "positive"
-        }
-      },
-      {
-        "id": "kpi-4",
-        "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
+        "title": "Pax Load Factor",
+        "value": "82.4",
         "unit": "%",
         "backgroundStatus": 1,
         "trend": {
@@ -60,7 +47,73 @@
           "label": "3% vs MT",
           "tone": "positive"
         }
+      },
+      {
+        "id": "delays",
+        "status": "compact",
+        "title": "Delay > 15ph",
+        "value": "42",
+        "unit": "chuyến",
+        "backgroundStatus": 3,
+        "trend": {
+          "direction": "up",
+          "label": "8 vs hôm qua",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "cancellations",
+        "status": "compact",
+        "title": "Hủy chuyến",
+        "value": "3",
+        "unit": "chuyến",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "flat",
+          "label": "Giữ nguyên",
+          "tone": "neutral"
+        }
+      },
+      {
+        "id": "fleet-util",
+        "status": "compact",
+        "title": "Fleet Utilization",
+        "value": "9.7",
+        "unit": "giờ/ngày",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "+0.4h YoY",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "crew-ready",
+        "status": "compact",
+        "title": "Phi công sẵn sàng",
+        "value": "98.5",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "1.2% vs MT",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fuel-burn",
+        "status": "compact",
+        "title": "Fuel Burn",
+        "value": "2.43",
+        "unit": "Kg/h",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "3% vs MT",
+          "tone": "positive"
+        }
       }
     ]
-  }
+  },
+  "chartBoard": []
 }

@@ -1,8 +1,8 @@
 {
   "titleInfo": {
-    "title": "Resource",
+    "title": "Nguồn lực",
     "statusLabel": "REAL TIME",
-    "description": "\u0110\u00e1nh gi\u00e1 ngu\u1ed3n l\u1ef1c PC \u0111\u1ea3m b\u1ea3o khai th\u00e1c",
+    "description": "Đánh giá nguồn lực PC đảm bảo khai thác",
     "chipStatus": 1,
     "chipTone": "success"
   },
@@ -10,57 +10,90 @@
     "accentClassName": "bg-governor-bay",
     "items": [
       {
-        "id": "kpi-1",
+        "id": "tong-pc",
         "status": "compact",
-        "title": "KPI #1",
-        "value": "1.234",
-        "unit": "\u0111\u01a1n v\u1ecb",
+        "title": "Tổng số PC",
+        "value": "1.248",
+        "unit": "người",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "12% vs MT",
+          "label": "24 vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-2",
+        "id": "lai-chinh",
         "status": "compact",
-        "title": "KPI #2",
-        "value": "78.5",
-        "unit": "%",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "down",
-          "label": "5% vs MT",
-          "tone": "negative"
-        }
-      },
-      {
-        "id": "kpi-3",
-        "status": "compact",
-        "title": "KPI #3",
-        "value": "9.7",
-        "unit": "gi\u1edd",
+        "title": "Lái chính",
+        "value": "672",
+        "unit": "người",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "+0.4 YoY",
+          "label": "12 vs KH",
           "tone": "positive"
         }
       },
       {
-        "id": "kpi-4",
+        "id": "lai-phu",
         "status": "compact",
-        "title": "KPI #4",
-        "value": "98.5",
-        "unit": "%",
+        "title": "Lái phụ",
+        "value": "576",
+        "unit": "người",
         "backgroundStatus": 1,
         "trend": {
           "direction": "up",
-          "label": "3% vs MT",
+          "label": "12 vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "pc-vn",
+        "status": "compact",
+        "title": "PC VN",
+        "value": "1.042",
+        "unit": "người",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "18 vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "pc-nn",
+        "status": "compact",
+        "title": "PC NN",
+        "value": "206",
+        "unit": "người",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "6 vs KH",
           "tone": "positive"
         }
       }
     ]
-  }
+  },
+  "chartBoard": [
+    {
+      "title": "Nguồn lực",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Cơ cấu Phi công theo đội bay",
+          "chartPath": "domain/flight-operations/resource/2026/07/chart/pilot-fleet.json"
+        },
+        {
+          "title": "Cơ cấu PC theo quốc tịch",
+          "chartPath": "domain/flight-operations/resource/2026/07/chart/pilot-nationality.json"
+        },
+        {
+          "title": "Xu hướng PC theo chức danh",
+          "chartPath": "domain/flight-operations/resource/2026/07/chart/pilot-role-trend.json"
+        }
+      ]
+    }
+  ]
 }
