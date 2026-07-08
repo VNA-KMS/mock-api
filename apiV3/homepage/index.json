@@ -6,9 +6,114 @@
     "chipStatus": 1,
     "chipTone": "success"
   },
-  "Segment": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/apiV3/homepage/segment/index.json",
-  "MetricCards": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/apiV3/homepage/welcome/metricCards/index.json",
-  "MetricProgressList": "https://raw.githubusercontent.com/VNA-KMS/mock-api/refs/heads/main/apiV3/homepage/metricProgressList/index.json",
+  "Segment": [
+    { "id": "welcome", "label": "Welcome" },
+    { "id": "market-demand", "label": "Market & Demand" },
+    { "id": "external-context", "label": "External Context" },
+    { "id": "vna-core-health", "label": "VNA Core Health" },
+    { "id": "network-market-mix", "label": "Network & Market Mix" }
+  ],
+  "MetricCards": {
+    "accentClassName": "bg-old-gold",
+    "items": [
+      {
+        "id": "revenue-vs-plan",
+        "status": "featured",
+        "title": "Revenue vs Annual Plan",
+        "value": "97%",
+        "description": "Mức hoàn thành kế hoạch doanh thu năm",
+        "trend": {
+          "direction": "flat",
+          "label": "Theo tiến độ mục tiêu",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "flights-departed",
+        "status": "compact",
+        "title": "Flights Departed Today",
+        "value": "486",
+        "unit": "chuyến",
+        "trend": {
+          "direction": "up",
+          "label": "13% vs hôm qua",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "pax-load-factor",
+        "status": "compact",
+        "title": "Pax Load Factor Today",
+        "value": "78.1",
+        "unit": "%",
+        "trend": {
+          "direction": "up",
+          "label": "13% vs hôm qua",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "passengers-ytd",
+        "status": "compact",
+        "title": "Passengers Carried YTD",
+        "value": "18.6M",
+        "trend": {
+          "direction": "up",
+          "label": "+8.4% YoY",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "cargo-tons-ytd",
+        "status": "compact",
+        "title": "Cargo Tons YTD",
+        "value": "241K",
+        "trend": {
+          "direction": "up",
+          "label": "13% YoY",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "aircraft-hours",
+        "status": "compact",
+        "title": "Average Aircraft Hours",
+        "value": "9.7",
+        "unit": "giờ",
+        "trend": {
+          "direction": "up",
+          "label": "+0.4h YoY",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "rpk-per-employee",
+        "status": "compact",
+        "title": "RPK per Employee",
+        "value": "1.28M",
+        "trend": {
+          "direction": "up",
+          "label": "+7.2% YoY",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "MetricProgressList": {
+    "title": "OTP VS TARGET",
+    "description": "So sánh OTP thực hiện với mục tiêu đề ra theo từng hub chính",
+    "chip": {
+      "message": "SGN cần chú ý trong giờ cao điểm",
+      "status": 2,
+      "tone": "warning"
+    },
+    "metrics": [
+      { "label": "HAN", "actual": 92, "target": 90, "nodeId": "22920:23028" },
+      { "label": "SGN", "actual": 88, "target": 90, "nodeId": "22920:23033" },
+      { "label": "DAD", "actual": 95, "target": 90, "nodeId": "22920:23038" },
+      { "label": "NET", "actual": 91, "target": 90, "nodeId": "22920:23043" }
+    ]
+  },
   "InfoCard": {
     "label": "THÔNG ĐIỆP ĐIỀU HÀNH",
     "description": "Khai thác trong ngày đang giữ ổn định, tuy nhiên cần tập trung cải thiện OTP tại SGN trong khung cao điểm. Toàn hệ thống tiếp tục giữ kỷ luật đúng giờ, tối ưu sử dụng tàu bay và nâng năng suất lao động để hoàn thành kế hoạch năm.",
