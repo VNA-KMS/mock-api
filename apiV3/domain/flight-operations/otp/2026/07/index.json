@@ -62,6 +62,20 @@
         }
       },
       {
+        "id": "otp-den",
+        "status": "compact",
+        "title": "OTP đến",
+        "value": "85.3",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "color": "#FDB813",
+        "trend": {
+          "direction": "up",
+          "label": "0.4% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
         "id": "osp-di",
         "status": "compact",
         "title": "OSP đi",
@@ -78,12 +92,17 @@
   },
   "chartBoard": [
     {
-      "columns": 2,
+      "columns": 1,
       "items": [
         {
           "title": "FLS theo thời gian",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/fls-trend.json"
-        },
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
         {
           "title": "BH theo thời gian",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/bh-trend.json"
@@ -92,14 +111,6 @@
           "title": "BH/ngày theo thời gian",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/bhngay-trend.json"
         },
-        {
-          "title": "OTP đi/đến theo thời gian",
-          "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/otp-trend.json"
-        }
-      ]
-    },
-    { "columns": 2,
-      "items": [
         {
           "title": "BH theo từng đội tàu bay",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/bh-fleet.json"
@@ -110,10 +121,14 @@
         }
       ]
     },
-    {
-      "columns": 1,
+    { "columns": 2,
       "items": [
+        
         {
+          "title": "OTP đi/đến theo thời gian",
+          "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/otp-trend.json"
+        },
+         {
           "title": "Lý do Delay",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/delay-causes.json"
         }
