@@ -16,11 +16,20 @@
         "value": "2.847",
         "unit": "chuyến",
         "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "2.1% vs KH",
-          "tone": "positive"
-        }
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
       },
       {
         "id": "bh",
@@ -29,11 +38,20 @@
         "value": "6.892",
         "unit": "giờ",
         "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "1.5% vs KH",
-          "tone": "positive"
-        }
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.5%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "1.5%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
       },
       {
         "id": "bh-ngay",
@@ -42,51 +60,64 @@
         "value": "229.7",
         "unit": "giờ",
         "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "0.8% vs KH",
-          "tone": "positive"
-        }
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
       },
       {
-        "id": "otp-di",
+        "id": "otp",
         "status": "compact",
-        "title": "OTP đi",
-        "value": "87.5",
+        "title": "OTP",
+        "value": "86",
         "unit": "%",
         "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "0.6% vs KH",
-          "tone": "positive"
-        }
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
       },
       {
-        "id": "otp-den",
+        "id": "osp",
         "status": "compact",
-        "title": "OTP đến",
-        "value": "85.3",
+        "title": "OSP",
+        "value": "90",
         "unit": "%",
         "backgroundStatus": 1,
-        "color": "#FDB813",
-        "trend": {
-          "direction": "up",
-          "label": "0.4% vs KH",
-          "tone": "positive"
-        }
-      },
-      {
-        "id": "osp-di",
-        "status": "compact",
-        "title": "OSP đi",
-        "value": "93.2",
-        "unit": "%",
-        "backgroundStatus": 1,
-        "trend": {
-          "direction": "up",
-          "label": "0.3% vs KH",
-          "tone": "positive"
-        }
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.3%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.3%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
       }
     ]
   },
@@ -121,16 +152,29 @@
         }
       ]
     },
-    { "columns": 2,
+    {
+      "columns": 2,
       "items": [
-        
         {
           "title": "OTP đi/đến theo thời gian",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/otp-trend.json"
         },
-         {
-          "title": "Lý do Delay",
+        {
+          "title": "OSP đi/đến theo thời gian",
+          "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/osp-trend.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "title": "Nguyên nhân giảm chỉ số OTP",
           "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/delay-causes.json"
+        },
+        {
+          "title": "Nguyên nhân dừng bay",
+          "chartPath": "apiV3/domain/flight-operations/otp/2026/07/chart/delay-causes-doughnut.json"
         }
       ]
     }
