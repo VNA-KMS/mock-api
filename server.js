@@ -4,15 +4,17 @@ const path = require("path");
 
 const app = express();
 
-app.use((_req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
+app.use((req, res, next) => {
+    const origin = req.headers.origin || "*";
+    res.header("Access-Control-Allow-Origin", origin);
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    if (_req.method === "OPTIONS") return res.sendStatus(204);
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, Channel, Platform");
+    res.header("Access-Control-Allow-Credentials", "true");
+    if (req.method === "OPTIONS") return res.sendStatus(204);
     next();
 });
 
-app.get("/*", (req, res) => {
+app.all("/*", (req, res) => {
     const requested = (req.params[0] || "").replace(/\.json$/, "");
     const file = path.join(__dirname, requested + ".json");
 
@@ -25,4 +27,4 @@ app.get("/*", (req, res) => {
     res.sendFile(file);
 });
 
-app.listen(8081);
+app.listen(8081, '0.0.0.0');

@@ -1,0 +1,132 @@
+{
+  "titleInfo": {
+    "title": "OSP Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "OSP, schedule adherence, root cause delay",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "total-flight-operations",
+        "status": "compact",
+        "title": "Hệ số sẵn sàng khai thác tàu bay (ARL)",
+        "value": "9.842",
+        "unit": "chuyến/tháng",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "up", "label": "+ 3.1%", "tone": "positive", "status": 0 },
+          { "direction": "up", "label": "99.4%", "tone": "positive", "status": 1 }
+        ]
+      },
+      {
+        "id": "total-operated-aircraft",
+        "status": "compact",
+        "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
+        "value": "92",
+        "unit": "tàu/tháng (TB)",
+        "backgroundStatus": 1,
+        "trend": [
+           { "direction": "up", "label": "+ 2.2%", "tone": "positive", "status": 0 },
+          { "direction": "up", "label": "97.9%", "tone": "positive", "status": 1 }
+        ]
+      },
+      {
+        "id": "osp-nb",
+        "status": "compact",
+        "title": "Tỷ lệ máy bay dừng bay — số lượng chuyến bay (AOG)",
+        "value": "11,6",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "up", "label": "- 0.9%", "tone": "negative", "status": 0 },
+          { "direction": "up", "label": "95,9%", "tone": "positive", "status": 1 }
+        ]
+      },
+      {
+        "id": "avg-flight-hours",
+        "status": "compact",
+        "title": "Tỷ lệ máy bay chậm chuyến — số lượng chuyến delay (AD)",
+        "value": "89.5",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "up", "label": "+ 0.7%", "tone": "positive", "status": 0 },
+          { "direction": "down", "label": "99.4%", "tone": "positive", "status": 1 }
+        ]
+      },
+      {
+        "id": "avg-delay",
+        "status": "compact",
+        "title": "Tỷ lệ máy bay chậm chuyến — thời gian delay (AD)",
+        "value": "78,2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "down", "label": "+ 0,9%", "tone": "positive", "status": 0 },
+          { "direction": "down", "label": "+ 2,9%", "tone": "positive", "status": 1 }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "FLS — Chi tiết theo loại hình khai thác",
+      "columns": 2,
+      "items": [
+        {
+          "title": "FLS theo hãng — VNA Group, VN, 0V, BL",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/fls-by-airline.json"
+        },
+        {
+          "title": "FLS thường lệ chở khách — Tổng, DOM, INT",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/fls-scheduled-passenger.json"
+        },
+        {
+          "title": "FLS theo loại hình chuyến bay (Flight Type) ",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/fls-by-flight-type.json",
+          "layout": {
+            "displayMode": "chart-with-items",
+            "showDivider": true
+          }
+        },
+        {
+          "title": "FLS theo thời gian",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/fls-trend.json"
+        }
+      ]
+    },
+    {
+      "title": "Đội tàu bay khai thác",
+      "columns": 3,
+      "items": [
+        {
+          "title": "Tổng số tàu khai thác / Tổng số tàu có ",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/aircraft-utilization.json",
+          "span": 1
+        },
+        {
+          "title": "Số tàu khai thác theo từng đội tàu / số tàu có",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/operating-aircraft-by-fleet.json",
+          "span": 2
+        }
+      ]
+    },
+    {
+      "title": "Đúng giờ chuyến bay đi (DEP)",
+      "columns": 2,
+      "items": [
+        {
+          "title": "OTP đi theo thời gian",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/osp-dep-trend.json"
+        },
+        {
+          "title": "OSP theo thời gian",
+          "chartPath": "apiV3/domain/ceo-command-center/osp/2026/07/chart/osp-arr-trend.json"
+        }
+      ]
+    }
+  ]
+}
