@@ -1,0 +1,259 @@
+{
+  "titleInfo": {
+    "title": "Executive Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "Bảng điều hành tổng quan KPIs khối khai thác",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "3.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "otp",
+        "status": "compact",
+        "title": "OTP",
+        "value": "87.5",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.6% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "osp",
+        "status": "compact",
+        "title": "OSP",
+        "value": "93.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.3% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "divert",
+        "status": "compact",
+        "title": "Divert (thời tiết)",
+        "value": "12",
+        "unit": "chuyến",
+        "backgroundStatus": 3,
+        "trend": {
+          "direction": "up",
+          "label": "+2 so KT",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "tknl",
+        "status": "compact",
+        "title": "Tiết kiệm NL",
+        "value": "342",
+        "unit": "tấn",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "5.7% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "hspcss",
+        "status": "compact",
+        "title": "HSPCSS",
+        "value": "98.1",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.3% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "gio-bay-pc",
+        "status": "compact",
+        "title": "Giờ bay TB PC",
+        "value": "72.4",
+        "unit": "h",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "down",
+          "label": "1.2h vs KH",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "fuel-burn",
+        "status": "compact",
+        "title": "Fuel Burn/BH",
+        "value": "2.45",
+        "unit": "tấn/h",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "1.2% vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Xu hướng FLS theo tháng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  106.9,
+                  90.7,
+                  96
+                ],
+                [
+                  "T2",
+                  101.5,
+                  108.9,
+                  93.9
+                ],
+                [
+                  "T3",
+                  110,
+                  90.5,
+                  97.4
+                ],
+                [
+                  "T4",
+                  107,
+                  93.1,
+                  104.9
+                ],
+                [
+                  "T5",
+                  93.4,
+                  106.3,
+                  96.5
+                ],
+                [
+                  "T6",
+                  108.9,
+                  108.5,
+                  107.4
+                ],
+                [
+                  "T7",
+                  105.2,
+                  95.7,
+                  109.5
+                ],
+                [
+                  "T8",
+                  93.6,
+                  101.9,
+                  98.5
+                ],
+                [
+                  "T9",
+                  109.7,
+                  104.7,
+                  104.4
+                ],
+                [
+                  "T10",
+                  109.2,
+                  102.6,
+                  99.5
+                ],
+                [
+                  "T11",
+                  90.2,
+                  104.9,
+                  90.2
+                ],
+                [
+                  "T12",
+                  103.2,
+                  93.5,
+                  107.1
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,763 @@
+{
+  "titleInfo": {
+    "title": "Crew Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "Giờ bay khai thác PC, TV, mức độ sẵn sàng",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "gio-bay-pc",
+        "status": "compact",
+        "title": "Giờ bay TB PC/tháng",
+        "value": "72.4",
+        "unit": "h",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "down",
+          "label": "1.2h vs KH",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "gio-bay-tv",
+        "status": "compact",
+        "title": "Giờ bay TB TV/tháng",
+        "value": "68.8",
+        "unit": "h",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "down",
+          "label": "0.9h vs KH",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "pc-san-sang",
+        "status": "compact",
+        "title": "Hệ số PC sẵn sàng",
+        "value": "94.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "tong-pc",
+        "status": "compact",
+        "title": "Tổng số PC",
+        "value": "1.248",
+        "unit": "người",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "24 vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Giờ bay TB PC theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  102.5,
+                  109.9,
+                  97.9
+                ],
+                [
+                  "T2",
+                  109.4,
+                  108.3,
+                  96.2
+                ],
+                [
+                  "T3",
+                  96.1,
+                  95,
+                  104.1
+                ],
+                [
+                  "T4",
+                  107.8,
+                  106.5,
+                  105.8
+                ],
+                [
+                  "T5",
+                  101.3,
+                  107.5,
+                  101
+                ],
+                [
+                  "T6",
+                  98.1,
+                  101.8,
+                  95.6
+                ],
+                [
+                  "T7",
+                  100.2,
+                  103.7,
+                  104.9
+                ],
+                [
+                  "T8",
+                  103.2,
+                  108.2,
+                  103.5
+                ],
+                [
+                  "T9",
+                  99.9,
+                  96.2,
+                  100.6
+                ],
+                [
+                  "T10",
+                  105.3,
+                  95.3,
+                  106.7
+                ],
+                [
+                  "T11",
+                  90.6,
+                  106.9,
+                  108.6
+                ],
+                [
+                  "T12",
+                  90.1,
+                  92.4,
+                  97.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-1",
+          "title": "Giờ bay TB TV theo thời gian",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  95,
+                  99.7,
+                  104.7
+                ],
+                [
+                  "T2",
+                  101.9,
+                  97.1,
+                  109.2
+                ],
+                [
+                  "T3",
+                  94.7,
+                  98,
+                  100.1
+                ],
+                [
+                  "T4",
+                  103.9,
+                  90.7,
+                  100.4
+                ],
+                [
+                  "T5",
+                  101.8,
+                  97.8,
+                  90
+                ],
+                [
+                  "T6",
+                  103.9,
+                  93.6,
+                  106.3
+                ],
+                [
+                  "T7",
+                  109.8,
+                  100.4,
+                  105.6
+                ],
+                [
+                  "T8",
+                  103.1,
+                  106.2,
+                  95.2
+                ],
+                [
+                  "T9",
+                  104.2,
+                  96,
+                  99.2
+                ],
+                [
+                  "T10",
+                  90.1,
+                  90.1,
+                  102
+                ],
+                [
+                  "T11",
+                  102.4,
+                  93.6,
+                  106
+                ],
+                [
+                  "T12",
+                  95.5,
+                  93.4,
+                  92
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "Giờ bay TB PC theo đội bay",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "thực_hiện",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "kế_hoạch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#c4b5fd"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  3436,
+                  1881
+                ],
+                [
+                  "A350",
+                  5635,
+                  6818
+                ],
+                [
+                  "B787",
+                  3926,
+                  3419
+                ],
+                [
+                  "ATR72",
+                  4972,
+                  5776
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "thực_hiện",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kế_hoạch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-1",
+          "title": "Giờ bay TB TV theo chức danh",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  109.3,
+                  93.8,
+                  95.1
+                ],
+                [
+                  "T2",
+                  105.7,
+                  104.4,
+                  106
+                ],
+                [
+                  "T3",
+                  91.9,
+                  91.6,
+                  104.2
+                ],
+                [
+                  "T4",
+                  107.6,
+                  107.6,
+                  101.1
+                ],
+                [
+                  "T5",
+                  107,
+                  103.1,
+                  92.8
+                ],
+                [
+                  "T6",
+                  106.3,
+                  109.4,
+                  102.1
+                ],
+                [
+                  "T7",
+                  100.8,
+                  107.5,
+                  99.1
+                ],
+                [
+                  "T8",
+                  92.6,
+                  101,
+                  99.2
+                ],
+                [
+                  "T9",
+                  93.6,
+                  110,
+                  95.4
+                ],
+                [
+                  "T10",
+                  96,
+                  91.3,
+                  96.1
+                ],
+                [
+                  "T11",
+                  102.1,
+                  106.5,
+                  102.3
+                ],
+                [
+                  "T12",
+                  96.9,
+                  108.1,
+                  106.9
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "columns": 1,
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "Hệ số PC sẵn sàng khai thác",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  103.6,
+                  99,
+                  94.6
+                ],
+                [
+                  "T2",
+                  92.4,
+                  108.9,
+                  91.9
+                ],
+                [
+                  "T3",
+                  99.8,
+                  103.3,
+                  109.3
+                ],
+                [
+                  "T4",
+                  90.4,
+                  92.3,
+                  106.7
+                ],
+                [
+                  "T5",
+                  102.4,
+                  103.2,
+                  92
+                ],
+                [
+                  "T6",
+                  92.5,
+                  109.4,
+                  103.2
+                ],
+                [
+                  "T7",
+                  105.4,
+                  97.6,
+                  99.7
+                ],
+                [
+                  "T8",
+                  109.5,
+                  107.7,
+                  97.4
+                ],
+                [
+                  "T9",
+                  94.4,
+                  96.4,
+                  93.3
+                ],
+                [
+                  "T10",
+                  105,
+                  94.4,
+                  100.9
+                ],
+                [
+                  "T11",
+                  94.1,
+                  103.3,
+                  107.6
+                ],
+                [
+                  "T12",
+                  98,
+                  99.7,
+                  98.4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-2-1",
+          "title": "PC sẵn sàng theo Fleet",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "thực_hiện",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "kế_hoạch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#c4b5fd"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  6116,
+                  917
+                ],
+                [
+                  "A350",
+                  323,
+                  6870
+                ],
+                [
+                  "B787",
+                  4102,
+                  7676
+                ],
+                [
+                  "ATR72",
+                  2505,
+                  1412
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "thực_hiện",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kế_hoạch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

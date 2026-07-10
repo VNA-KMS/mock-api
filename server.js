@@ -16,7 +16,20 @@ app.use((req, res, next) => {
 
 app.all("/*", (req, res) => {
     const requested = (req.params[0] || "").replace(/\.json$/, "");
-    const file = path.join(__dirname, requested + ".json");
+    const file = path.join(__dirname, "apiV4", requested + ".json");
+
+    if (!fs.existsSync(file)) {
+        return res.status(404).json({
+            message: "Not found"
+        });
+    }
+
+    res.sendFile(file);
+});
+
+app.get("/apiV3/*", (req, res) => {
+    const requested = (req.params[0] || "").replace(/\.json$/, "");
+    const file = path.join(__dirname, "apiV3", requested + ".json");
 
     if (!fs.existsSync(file)) {
         return res.status(404).json({

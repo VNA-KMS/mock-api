@@ -1,0 +1,1083 @@
+{
+  "titleInfo": {
+    "title": "Tiết kiệm nhiên liệu + Fuel Burn",
+    "statusLabel": "REAL TIME",
+    "description": "Giải pháp tiết kiệm NL, Fuel Burn",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "2.1% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "bh",
+        "status": "compact",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "1.5% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fh",
+        "status": "compact",
+        "title": "FH",
+        "value": "4.35",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "1.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fuel-burn-bh",
+        "status": "compact",
+        "title": "Fuel Burn/BH",
+        "value": "2.45",
+        "unit": "tấn/giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "1.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "taxi-time",
+        "status": "compact",
+        "title": "Taxi Time TB",
+        "value": "18.4",
+        "unit": "phút",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "0.8ph vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "columns": 3,
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Flight Time vs Fuel Burn/BH",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "area",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "X"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "Y"
+                },
+                {
+                  "id": "segment",
+                  "type": "string"
+                }
+              ],
+              "rows": [
+                [
+                  "DOM",
+                  1400,
+                  60,
+                  "Domestic"
+                ],
+                [
+                  "INT",
+                  300,
+                  40,
+                  "International"
+                ],
+                [
+                  "INT",
+                  500,
+                  70,
+                  "International"
+                ],
+                [
+                  "DOM",
+                  1850,
+                  40,
+                  "Domestic"
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "area",
+                "series": [
+                  {
+                    "field": "x",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "y",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-1",
+          "title": "Taxi Time vs Fuel Burn/BH",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "area",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "X"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "Y"
+                },
+                {
+                  "id": "segment",
+                  "type": "string"
+                }
+              ],
+              "rows": [
+                [
+                  "DOM",
+                  1400,
+                  60,
+                  "Domestic"
+                ],
+                [
+                  "INT",
+                  300,
+                  40,
+                  "International"
+                ],
+                [
+                  "INT",
+                  500,
+                  70,
+                  "International"
+                ],
+                [
+                  "DOM",
+                  1850,
+                  40,
+                  "Domestic"
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "area",
+                "series": [
+                  {
+                    "field": "x",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "y",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-2",
+          "title": "Flight Time × Taxi Time — Fuel Burn/BH",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  93.2,
+                  99.4,
+                  99.7
+                ],
+                [
+                  "T2",
+                  100.7,
+                  91.9,
+                  109.9
+                ],
+                [
+                  "T3",
+                  104.6,
+                  106.9,
+                  103.5
+                ],
+                [
+                  "T4",
+                  108.8,
+                  103.9,
+                  109.2
+                ],
+                [
+                  "T5",
+                  91.4,
+                  105.8,
+                  102.5
+                ],
+                [
+                  "T6",
+                  108.2,
+                  93.9,
+                  104.8
+                ],
+                [
+                  "T7",
+                  93.4,
+                  96.4,
+                  100.1
+                ],
+                [
+                  "T8",
+                  107.9,
+                  104.7,
+                  104.8
+                ],
+                [
+                  "T9",
+                  94,
+                  109.3,
+                  104
+                ],
+                [
+                  "T10",
+                  93.2,
+                  105.1,
+                  101.7
+                ],
+                [
+                  "T11",
+                  106.6,
+                  98.4,
+                  98.9
+                ],
+                [
+                  "T12",
+                  100.4,
+                  104.3,
+                  90.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "Top 10 đường bay FB/BH cao nhất",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  92.3,
+                  91.4,
+                  97
+                ],
+                [
+                  "T2",
+                  100.9,
+                  99.5,
+                  102.8
+                ],
+                [
+                  "T3",
+                  99.1,
+                  95.3,
+                  92.8
+                ],
+                [
+                  "T4",
+                  105.1,
+                  91.3,
+                  95.1
+                ],
+                [
+                  "T5",
+                  100.3,
+                  96.7,
+                  91.7
+                ],
+                [
+                  "T6",
+                  104.2,
+                  98.8,
+                  93.8
+                ],
+                [
+                  "T7",
+                  106.6,
+                  101.8,
+                  98.6
+                ],
+                [
+                  "T8",
+                  99.6,
+                  93.4,
+                  91.4
+                ],
+                [
+                  "T9",
+                  103.5,
+                  91.6,
+                  109.4
+                ],
+                [
+                  "T10",
+                  93.8,
+                  105.2,
+                  109.5
+                ],
+                [
+                  "T11",
+                  96.4,
+                  96.6,
+                  97.9
+                ],
+                [
+                  "T12",
+                  104.6,
+                  95.4,
+                  90.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-1",
+          "title": "Top tàu bay tiêu hao FB/BH nhiều nhất",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  101.8,
+                  92.8,
+                  96.2
+                ],
+                [
+                  "T2",
+                  97.1,
+                  93.6,
+                  97.6
+                ],
+                [
+                  "T3",
+                  101.4,
+                  98.8,
+                  90.9
+                ],
+                [
+                  "T4",
+                  93.3,
+                  108.6,
+                  92.2
+                ],
+                [
+                  "T5",
+                  90.2,
+                  106.8,
+                  103.2
+                ],
+                [
+                  "T6",
+                  97.1,
+                  94.1,
+                  94.3
+                ],
+                [
+                  "T7",
+                  99.3,
+                  93.9,
+                  101.9
+                ],
+                [
+                  "T8",
+                  107.7,
+                  92.5,
+                  96.4
+                ],
+                [
+                  "T9",
+                  99,
+                  103.7,
+                  95.8
+                ],
+                [
+                  "T10",
+                  103.9,
+                  106.6,
+                  91.5
+                ],
+                [
+                  "T11",
+                  93,
+                  103.2,
+                  90.1
+                ],
+                [
+                  "T12",
+                  104.6,
+                  103.5,
+                  98.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "Taxi Time vs FB/BH (theo khoảng taxi)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "area",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "X"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "Y"
+                },
+                {
+                  "id": "segment",
+                  "type": "string"
+                }
+              ],
+              "rows": [
+                [
+                  "DOM",
+                  1400,
+                  60,
+                  "Domestic"
+                ],
+                [
+                  "INT",
+                  300,
+                  40,
+                  "International"
+                ],
+                [
+                  "INT",
+                  500,
+                  70,
+                  "International"
+                ],
+                [
+                  "DOM",
+                  1850,
+                  40,
+                  "Domestic"
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "area",
+                "series": [
+                  {
+                    "field": "x",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "y",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-2-1",
+          "title": "Flight Time vs FB/BH (theo khoảng bay)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "area",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "X"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "Y"
+                },
+                {
+                  "id": "segment",
+                  "type": "string"
+                }
+              ],
+              "rows": [
+                [
+                  "DOM",
+                  1400,
+                  60,
+                  "Domestic"
+                ],
+                [
+                  "INT",
+                  300,
+                  40,
+                  "International"
+                ],
+                [
+                  "INT",
+                  500,
+                  70,
+                  "International"
+                ],
+                [
+                  "DOM",
+                  1850,
+                  40,
+                  "Domestic"
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "area",
+                "series": [
+                  {
+                    "field": "x",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "y",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-3-0",
+          "title": "Fuel Saving & Chi phí & CO₂ giảm phát thải",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  95.6,
+                  100.5,
+                  95.2
+                ],
+                [
+                  "T2",
+                  90.3,
+                  109.1,
+                  107
+                ],
+                [
+                  "T3",
+                  108.6,
+                  92.3,
+                  98.4
+                ],
+                [
+                  "T4",
+                  106.4,
+                  90.5,
+                  93
+                ],
+                [
+                  "T5",
+                  101.5,
+                  103.4,
+                  92.5
+                ],
+                [
+                  "T6",
+                  109.5,
+                  97.4,
+                  101.8
+                ],
+                [
+                  "T7",
+                  94.2,
+                  90.3,
+                  104.5
+                ],
+                [
+                  "T8",
+                  103.4,
+                  96.8,
+                  90.9
+                ],
+                [
+                  "T9",
+                  97.8,
+                  93.5,
+                  99.6
+                ],
+                [
+                  "T10",
+                  96.4,
+                  97.7,
+                  109.3
+                ],
+                [
+                  "T11",
+                  108.4,
+                  105.9,
+                  109.9
+                ],
+                [
+                  "T12",
+                  101.2,
+                  99,
+                  101.3
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-3-1",
+          "title": "Giải pháp TK NL & lượng NL tiết kiệm",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  93.8,
+                  100.4,
+                  99.1
+                ],
+                [
+                  "T2",
+                  99.9,
+                  103.3,
+                  102.5
+                ],
+                [
+                  "T3",
+                  107.4,
+                  94,
+                  96.7
+                ],
+                [
+                  "T4",
+                  90.9,
+                  97.7,
+                  94.7
+                ],
+                [
+                  "T5",
+                  92.1,
+                  107.1,
+                  107.2
+                ],
+                [
+                  "T6",
+                  109.6,
+                  106.3,
+                  92.5
+                ],
+                [
+                  "T7",
+                  97.9,
+                  107.4,
+                  105
+                ],
+                [
+                  "T8",
+                  108.2,
+                  107.8,
+                  95.9
+                ],
+                [
+                  "T9",
+                  108.4,
+                  108.9,
+                  99.5
+                ],
+                [
+                  "T10",
+                  107.6,
+                  94.3,
+                  103.7
+                ],
+                [
+                  "T11",
+                  90.1,
+                  93.4,
+                  103.4
+                ],
+                [
+                  "T12",
+                  93,
+                  93.6,
+                  103.7
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
