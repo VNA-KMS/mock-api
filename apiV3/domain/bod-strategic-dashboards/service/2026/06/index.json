@@ -1,0 +1,522 @@
+{
+  "contractVersion": "1.0",
+  "$comment": "VNA KMS — BoD (BẢN KHÁCH HDQT). P1.8 · Công tác dịch vụ",
+  "screen": {
+    "code": "P1.8",
+    "id": "cus-p8",
+    "title": "P1.8 — Service",
+    "tier": "Tier 1 · HĐQT (bản khách)",
+    "persona": "HĐQT",
+    "question": "Cảm nhận khách (NPS/CSI) toàn mạng & nội địa/quốc tế — điểm yếu ở đâu?",
+    "theme": {
+      "navy": "#004071",
+      "navyDark": "#00294a",
+      "gold": "#D3AC2B",
+      "goldSoft": "#f6edd2",
+      "good": "#16A34A",
+      "warn": "#D97706",
+      "crit": "#DC2626",
+      "muted": "#64748b",
+      "domain": {
+        "OPS": "#3B82F6",
+        "TEC": "#F97316",
+        "COM": "#06B6D4",
+        "SVC": "#9D174D",
+        "FIN": "#059669",
+        "HR": "#F43F5E",
+        "SAF": "#10B981",
+        "TDI": "#8B5CF6"
+      }
+    }
+  },
+  "context": {
+    "generatedAt": "2026-07-11T07:15:00+07:00",
+    "businessDate": "2026-07-11",
+    "baselines": [
+      "Kế hoạch",
+      "Cùng kỳ",
+      "Dự báo",
+      "Mục tiêu"
+    ],
+    "filters": [
+      {
+        "id": "time",
+        "label": "Thời gian",
+        "type": "select",
+        "options": [
+          "Tháng",
+          "Quý",
+          "Luỹ kế"
+        ],
+        "default": "Tháng",
+        "scope": "page"
+      }
+    ]
+  },
+  "layout": {
+    "type": "grid",
+    "columns": 12,
+    "gap": 14,
+    "zones": [
+      {
+        "id": "A",
+        "title": "P1.8 · Service — Hero KPI Zone",
+        "desc": "Công tác dịch vụ",
+        "blocks": [
+          "b_kpi"
+        ]
+      },
+      {
+        "id": "B",
+        "title": "Strategic Trend Zone",
+        "desc": "NPS/CSI overtime 2 năm",
+        "blocks": [
+          "b_nps",
+          "b_csi"
+        ]
+      },
+      {
+        "id": "C",
+        "title": "Enterprise Risk Zone",
+        "desc": "CSI thấp nhất",
+        "blocks": [
+          "b_ap",
+          "b_route",
+          "b_reason"
+        ]
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b_kpi",
+      "zone": "A",
+      "grid": {
+        "colSpan": 12
+      },
+      "component": "kpiStrip",
+      "title": "Hero KPI Zone",
+      "data": {
+        "tiles": [
+          {
+            "id": "t_nps",
+            "kpi": "PSD-001",
+            "domain": "SVC",
+            "label": "NPS Overall",
+            "value": 34,
+            "unit": "",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "tháng trước",
+                "value": 1,
+                "unit": "%"
+              },
+              {
+                "vs": "cùng kỳ",
+                "value": 2,
+                "unit": "%"
+              },
+              {
+                "vs": "mục tiêu",
+                "value": -1,
+                "unit": "%"
+              }
+            ],
+            "target": 35
+          },
+          {
+            "id": "t_npsd",
+            "kpi": "PSD-001",
+            "domain": "SVC",
+            "label": "NPS DOM",
+            "value": 36,
+            "unit": "",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "tháng trước",
+                "value": 1,
+                "unit": "%"
+              },
+              {
+                "vs": "mục tiêu",
+                "value": 1,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_npsi",
+            "kpi": "PSD-001",
+            "domain": "SVC",
+            "label": "NPS INT",
+            "value": 32,
+            "unit": "",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "mục tiêu",
+                "value": -3,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_csi",
+            "kpi": "PSD-002",
+            "domain": "SVC",
+            "label": "CSI Overall",
+            "value": 4.12,
+            "unit": "/5",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "tháng trước",
+                "value": 0.02,
+                "unit": "%"
+              },
+              {
+                "vs": "mục tiêu",
+                "value": -0.03,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_csid",
+            "kpi": "PSD-002",
+            "domain": "SVC",
+            "label": "CSI DOM",
+            "value": 4.18,
+            "unit": "/5",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "mục tiêu",
+                "value": 0.03,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_csii",
+            "kpi": "PSD-002",
+            "domain": "SVC",
+            "label": "CSI INT",
+            "value": 4.05,
+            "unit": "/5",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "mục tiêu",
+                "value": -0.1,
+                "unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "source": "VDP Hợp nhất",
+        "refreshed": "EOD 10/07",
+        "dq": 98,
+        "owner": "HĐQT"
+      }
+    },
+    {
+      "id": "b_nps",
+      "zone": "B",
+      "grid": {
+        "colSpan": 6,
+        "minHeight": 280
+      },
+      "component": "chart",
+      "title": "NPS Overtime (12 tháng, 2 năm)",
+      "kpi": "PSD-001",
+      "viz": {
+        "type": "line",
+        "unit": ""
+      },
+      "data": {
+        "categories": [
+          "T8",
+          "T9",
+          "T10",
+          "T11",
+          "T12",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "series": [
+          {
+            "name": "Năm nay",
+            "values": [
+              31,
+              32,
+              33,
+              32,
+              33,
+              33,
+              33,
+              34,
+              33,
+              34,
+              34,
+              34
+            ]
+          },
+          {
+            "name": "Năm trước",
+            "values": [
+              29,
+              30,
+              31,
+              30,
+              31,
+              31,
+              31,
+              32,
+              31,
+              32,
+              32,
+              32
+            ],
+            "style": "dashed",
+            "color": "#94a3b8"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Khảo sát",
+        "refreshed": "EOD 10/07",
+        "dq": 95,
+        "owner": "Ban DVKH"
+      }
+    },
+    {
+      "id": "b_csi",
+      "zone": "B",
+      "grid": {
+        "colSpan": 6,
+        "minHeight": 280
+      },
+      "component": "chart",
+      "title": "CSI Overtime (12 tháng, 2 năm)",
+      "kpi": "PSD-002",
+      "viz": {
+        "type": "line",
+        "unit": "/5"
+      },
+      "data": {
+        "categories": [
+          "T8",
+          "T9",
+          "T10",
+          "T11",
+          "T12",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "series": [
+          {
+            "name": "Năm nay",
+            "values": [
+              4.0,
+              4.05,
+              4.08,
+              4.06,
+              4.1,
+              4.11,
+              4.11,
+              4.12,
+              4.11,
+              4.12,
+              4.12,
+              4.12
+            ]
+          },
+          {
+            "name": "Năm trước",
+            "values": [
+              3.9,
+              3.95,
+              3.98,
+              3.96,
+              4.0,
+              4.01,
+              4.01,
+              4.02,
+              4.01,
+              4.02,
+              4.02,
+              4.02
+            ],
+            "style": "dashed",
+            "color": "#94a3b8"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Khảo sát",
+        "refreshed": "EOD 10/07",
+        "dq": 95,
+        "owner": "Ban DVKH"
+      }
+    },
+    {
+      "id": "b_ap",
+      "zone": "C",
+      "grid": {
+        "colSpan": 4,
+        "minHeight": 220
+      },
+      "component": "table",
+      "title": "Sân bay có CSI thấp nhất",
+      "data": {
+        "columns": [
+          {
+            "key": "ap",
+            "label": "Sân bay",
+            "width": "40%"
+          },
+          {
+            "key": "csi",
+            "label": "CSI",
+            "width": "30%"
+          },
+          {
+            "key": "trend",
+            "label": "Xu hướng",
+            "width": "30%"
+          }
+        ],
+        "rows": [
+          {
+            "ap": "VII",
+            "csi": 3.72,
+            "trend": "▼"
+          },
+          {
+            "ap": "CXR",
+            "csi": 3.85,
+            "trend": "▼"
+          },
+          {
+            "ap": "HPH",
+            "csi": 3.9,
+            "trend": "—"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Khảo sát",
+        "refreshed": "EOD 10/07",
+        "dq": null,
+        "owner": "Ban DVKH"
+      }
+    },
+    {
+      "id": "b_route",
+      "zone": "C",
+      "grid": {
+        "colSpan": 4,
+        "minHeight": 220
+      },
+      "component": "table",
+      "title": "Đường bay có CSI thấp nhất",
+      "data": {
+        "columns": [
+          {
+            "key": "route",
+            "label": "Đường bay",
+            "width": "40%"
+          },
+          {
+            "key": "csi",
+            "label": "CSI",
+            "width": "30%"
+          },
+          {
+            "key": "trend",
+            "label": "Xu hướng",
+            "width": "30%"
+          }
+        ],
+        "rows": [
+          {
+            "route": "SGN–VII",
+            "csi": 3.7,
+            "trend": "▼"
+          },
+          {
+            "route": "HAN–CXR",
+            "csi": 3.82,
+            "trend": "▼"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Khảo sát",
+        "refreshed": "EOD 10/07",
+        "dq": null,
+        "owner": "Ban DVKH"
+      }
+    },
+    {
+      "id": "b_reason",
+      "zone": "C",
+      "grid": {
+        "colSpan": 4,
+        "minHeight": 220
+      },
+      "component": "table",
+      "title": "Lý do CSI thấp",
+      "data": {
+        "columns": [
+          {
+            "key": "reason",
+            "label": "Lý do",
+            "width": "60%"
+          },
+          {
+            "key": "pct",
+            "label": "Tỷ trọng",
+            "width": "40%"
+          }
+        ],
+        "rows": [
+          {
+            "reason": "Chậm chuyến / nối chuyến",
+            "pct": "38%"
+          },
+          {
+            "reason": "Hành lý",
+            "pct": "24%"
+          },
+          {
+            "reason": "Suất ăn",
+            "pct": "18%"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Khảo sát",
+        "refreshed": "EOD 10/07",
+        "dq": null,
+        "owner": "Ban DVKH"
+      }
+    }
+  ],
+  "drilldowns": {}
+}

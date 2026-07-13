@@ -1,0 +1,603 @@
+{
+  "contractVersion": "1.0",
+  "$comment": "VNA KMS — BoD (BẢN KHÁCH HDQT). P1.4 · Báo cáo hoạt động SXKD vận chuyển",
+  "screen": {
+    "code": "P1.4",
+    "id": "cus-p4",
+    "title": "P1.4 — Commerce",
+    "tier": "Tier 1 · HĐQT (bản khách)",
+    "persona": "HĐQT",
+    "question": "Kết quả SXKD vận chuyển hành khách & hàng hóa theo khu vực?",
+    "theme": {
+      "navy": "#004071",
+      "navyDark": "#00294a",
+      "gold": "#D3AC2B",
+      "goldSoft": "#f6edd2",
+      "good": "#16A34A",
+      "warn": "#D97706",
+      "crit": "#DC2626",
+      "muted": "#64748b",
+      "domain": {
+        "OPS": "#3B82F6",
+        "TEC": "#F97316",
+        "COM": "#06B6D4",
+        "SVC": "#9D174D",
+        "FIN": "#059669",
+        "HR": "#F43F5E",
+        "SAF": "#10B981",
+        "TDI": "#8B5CF6"
+      }
+    }
+  },
+  "context": {
+    "generatedAt": "2026-07-11T07:15:00+07:00",
+    "businessDate": "2026-07-11",
+    "baselines": [
+      "Kế hoạch",
+      "Cùng kỳ",
+      "Dự báo",
+      "Mục tiêu"
+    ],
+    "filters": [
+      {
+        "id": "carrier",
+        "label": "Hãng vận chuyển",
+        "type": "select",
+        "options": [
+          "VN+0V",
+          "VN"
+        ],
+        "default": "VN+0V",
+        "scope": "page"
+      },
+      {
+        "id": "net",
+        "label": "Network",
+        "type": "select",
+        "options": [
+          "Total",
+          "DOM",
+          "INT"
+        ],
+        "default": "Total",
+        "scope": "page"
+      },
+      {
+        "id": "time",
+        "label": "Thời gian",
+        "type": "select",
+        "options": [
+          "Tháng",
+          "Quý",
+          "Luỹ kế"
+        ],
+        "default": "Tháng",
+        "scope": "page"
+      }
+    ]
+  },
+  "layout": {
+    "type": "grid",
+    "columns": 12,
+    "gap": 14,
+    "zones": [
+      {
+        "id": "A",
+        "title": "P1.4 · Commerce — Tab Hành khách",
+        "desc": "Pax · RASK · CASK · LF · P/L",
+        "blocks": [
+          "b_pax",
+          "b_paxtrend"
+        ]
+      },
+      {
+        "id": "B",
+        "title": "Tab Hàng hóa",
+        "desc": "Cargo · luân chuyển · doanh thu · FF · tải cung ứng",
+        "blocks": [
+          "b_cargo",
+          "b_cgotrend"
+        ]
+      },
+      {
+        "id": "C",
+        "title": "Enterprise Risk Zone + AI insight",
+        "desc": "",
+        "blocks": [
+          "b_risk",
+          "b_ai"
+        ]
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "id": "b_pax",
+      "zone": "A",
+      "grid": {
+        "colSpan": 12
+      },
+      "component": "kpiStrip",
+      "title": "Hero KPI Zone — Tab Hành khách",
+      "data": {
+        "tiles": [
+          {
+            "id": "t_pax",
+            "kpi": "CPD-006",
+            "domain": "COM",
+            "label": "Pax",
+            "value": 1095,
+            "unit": "nghìn",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": -0.8,
+                "unit": "%"
+              },
+              {
+                "vs": "CK",
+                "value": 4,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_rask",
+            "kpi": "CPD-014",
+            "domain": "COM",
+            "label": "RASK",
+            "value": 1585,
+            "unit": "đ",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": -2.1,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_cask",
+            "kpi": "CPD-015",
+            "domain": "COM",
+            "label": "CASK",
+            "value": 1520,
+            "unit": "đ",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 1.5,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_lf",
+            "kpi": "CPD-005",
+            "domain": "COM",
+            "label": "LF",
+            "value": 82,
+            "unit": "%",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 0.5,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_pl",
+            "kpi": "FAD-002",
+            "domain": "FIN",
+            "label": "P/L",
+            "value": 640,
+            "unit": "tỷ",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": -4,
+                "unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "source": "DDS+RAS",
+        "refreshed": "EOD 10/07",
+        "dq": 96,
+        "owner": "Ban TTBSP"
+      }
+    },
+    {
+      "id": "b_paxtrend",
+      "zone": "A",
+      "grid": {
+        "colSpan": 12,
+        "minHeight": 260
+      },
+      "component": "chart",
+      "title": "Hành khách theo khu vực (12 tháng)",
+      "kpi": "CPD-006",
+      "viz": {
+        "type": "line",
+        "dualAxis": true,
+        "yLeft": "QT (nghìn)",
+        "yRight": "NĐ (nghìn)"
+      },
+      "data": {
+        "categories": [
+          "T8",
+          "T9",
+          "T10",
+          "T11",
+          "T12",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "series": [
+          {
+            "name": "EU",
+            "values": [
+              70,
+              72,
+              74,
+              76,
+              78,
+              77,
+              79,
+              81,
+              83,
+              84,
+              86,
+              88
+            ]
+          },
+          {
+            "name": "NEA",
+            "values": [
+              90,
+              92,
+              94,
+              95,
+              96,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102
+            ],
+            "color": "#F97316"
+          },
+          {
+            "name": "Nội địa",
+            "values": [
+              600,
+              605,
+              610,
+              615,
+              620,
+              618,
+              622,
+              626,
+              630,
+              633,
+              637,
+              641
+            ],
+            "axis": "right",
+            "color": "#0e7490"
+          }
+        ]
+      },
+      "meta": {
+        "source": "DDS",
+        "refreshed": "EOD 10/07",
+        "dq": 96,
+        "owner": "Ban TTBSP"
+      }
+    },
+    {
+      "id": "b_cargo",
+      "zone": "B",
+      "grid": {
+        "colSpan": 12
+      },
+      "component": "kpiStrip",
+      "title": "Hero KPI Zone — Tab Hàng hóa",
+      "data": {
+        "tiles": [
+          {
+            "id": "c_cgo",
+            "kpi": "CPM-002",
+            "domain": "COM",
+            "label": "Cargo vận chuyển",
+            "value": 8900,
+            "unit": "tấn",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 1.2,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "c_rftk",
+            "kpi": "CPM-003",
+            "domain": "COM",
+            "label": "Cargo luân chuyển",
+            "value": 240,
+            "unit": "tr.RFTK",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 2,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "c_rev",
+            "kpi": "CPM-005",
+            "domain": "COM",
+            "label": "Doanh thu hàng hóa",
+            "value": 1250,
+            "unit": "tỷ",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 0.8,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "c_ff",
+            "kpi": "CPM-004",
+            "domain": "COM",
+            "label": "FF (Freight Factor)",
+            "value": 68,
+            "unit": "%",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": -1.5,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "c_cap",
+            "kpi": "CPD-008",
+            "domain": "COM",
+            "label": "Tải cung ứng",
+            "value": 290,
+            "unit": "tr.AFTK",
+            "rag": "good",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 1,
+                "unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      "meta": {
+        "source": "Cargo IS",
+        "refreshed": "EOD 10/07",
+        "dq": 94,
+        "owner": "Ban Cargo"
+      }
+    },
+    {
+      "id": "b_cgotrend",
+      "zone": "B",
+      "grid": {
+        "colSpan": 12,
+        "minHeight": 260
+      },
+      "component": "chart",
+      "title": "Sản lượng & doanh thu hàng hóa (12 tháng, luỹ kế)",
+      "kpi": "CPM-002",
+      "viz": {
+        "type": "line",
+        "dualAxis": true,
+        "yLeft": "Tấn",
+        "yRight": "Tỷ"
+      },
+      "data": {
+        "categories": [
+          "T8",
+          "T9",
+          "T10",
+          "T11",
+          "T12",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "series": [
+          {
+            "name": "Cargo vận chuyển (tấn)",
+            "values": [
+              7200,
+              7400,
+              7600,
+              7800,
+              8000,
+              8100,
+              8300,
+              8500,
+              8600,
+              8700,
+              8800,
+              8900
+            ]
+          },
+          {
+            "name": "Doanh thu (tỷ)",
+            "values": [
+              980,
+              1000,
+              1030,
+              1060,
+              1090,
+              1110,
+              1140,
+              1170,
+              1190,
+              1210,
+              1230,
+              1250
+            ],
+            "axis": "right",
+            "color": "#DC2626"
+          }
+        ]
+      },
+      "meta": {
+        "source": "Cargo IS",
+        "refreshed": "EOD 10/07",
+        "dq": 94,
+        "owner": "Ban Cargo"
+      }
+    },
+    {
+      "id": "b_risk",
+      "zone": "C",
+      "grid": {
+        "colSpan": 8,
+        "minHeight": 280
+      },
+      "component": "chart",
+      "title": "Enterprise Risk — cảnh báo thị trường khách giảm đột ngột",
+      "kpi": "CPD-006",
+      "viz": {
+        "type": "heatmap",
+        "hint": "theo DOM/INT được chọn"
+      },
+      "data": {
+        "xCategories": [
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "yCategories": [
+          "EU",
+          "AU & US",
+          "NEA (ĐBA)",
+          "SEA & CLMV (ĐNA)",
+          "Nội địa"
+        ],
+        "values": [
+          [
+            0,
+            1,
+            2,
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            1,
+            2,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            0,
+            1
+          ]
+        ],
+        "levels": [
+          "Ổn",
+          "Giảm nhẹ",
+          "Giảm",
+          "Giảm mạnh"
+        ]
+      },
+      "meta": {
+        "source": "DDS",
+        "refreshed": "EOD 10/07",
+        "dq": 94,
+        "owner": "Ban TTBSP"
+      }
+    },
+    {
+      "id": "b_ai",
+      "zone": "C",
+      "grid": {
+        "colSpan": 4
+      },
+      "component": "briefing",
+      "title": "AI insight",
+      "data": {
+        "items": [
+          {
+            "severity": "warn",
+            "text": "Nhận định số liệu tăng/giảm so kế hoạch; kiểm tra tần suất sử dụng so kế hoạch.",
+            "refBlock": "b_paxtrend",
+            "sourceKpi": "CPD-014"
+          }
+        ],
+        "disclaimer": "AI insight — nhận định số liệu tăng/giảm so với kế hoạch, kiểm tra tần suất khai thác."
+      },
+      "meta": {
+        "source": "KMS AI Layer",
+        "refreshed": "EOD 10/07",
+        "dq": null,
+        "owner": "HĐQT"
+      }
+    }
+  ],
+  "drilldowns": {}
+}

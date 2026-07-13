@@ -1,13 +1,13 @@
 {
   "contractVersion": "1.0",
-  "$comment": "VNA KMS — BoD (BẢN KHÁCH HDQT). P1.6 · Doanh thu, lợi nhuận, dòng tiền",
+  "$comment": "VNA KMS — BoD (BẢN KHÁCH HDQT). P1.3 · Oil, FX",
   "screen": {
-    "code": "P1.6",
-    "id": "cus-p6",
-    "title": "P1.6 — Finance",
+    "code": "P1.3",
+    "id": "cus-p3",
+    "title": "P1.3 — Exchange Rate & Fuel",
     "tier": "Tier 1 · HĐQT (bản khách)",
     "persona": "HĐQT",
-    "question": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?",
+    "question": "Giá nhiên liệu & tỷ giá biến động thế nào và ảnh hưởng dòng tiền ra sao?",
     "theme": {
       "navy": "#004071",
       "navyDark": "#00294a",
@@ -40,14 +40,14 @@
     ],
     "filters": [
       {
-        "id": "scope",
-        "label": "Phạm vi",
+        "id": "per",
+        "label": "Kỳ",
         "type": "select",
         "options": [
-          "TCT",
-          "Hợp nhất"
+          "Tháng",
+          "Quý"
         ],
-        "default": "Hợp nhất",
+        "default": "Tháng",
         "scope": "page"
       },
       {
@@ -71,8 +71,8 @@
     "zones": [
       {
         "id": "A",
-        "title": "P1.6 · Finance — Hero KPI Zone",
-        "desc": "Doanh thu, lợi nhuận, dòng tiền",
+        "title": "P1.3 · Exchange Rate & Fuel — Hero KPI Zone",
+        "desc": "Oil, FX",
         "blocks": [
           "b_kpi"
         ]
@@ -82,9 +82,9 @@
         "title": "Strategic Trend Zone",
         "desc": "",
         "blocks": [
-          "b_rev",
-          "b_lntt",
-          "b_cash"
+          "b_jet",
+          "b_fuel",
+          "b_fx"
         ]
       },
       {
@@ -109,13 +109,55 @@
       "data": {
         "tiles": [
           {
-            "id": "t_tri",
-            "kpi": "FAD-001",
+            "id": "t_jet",
+            "kpi": "FAD-021",
             "domain": "FIN",
-            "label": "Tổng doanh thu & thu nhập",
-            "value": 21500,
+            "label": "Jet A1",
+            "value": 95.9,
+            "unit": "USD/bbl",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 3.1,
+                "unit": "%"
+              },
+              {
+                "vs": "CK",
+                "value": 4,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_fuel",
+            "kpi": "FAD-021",
+            "domain": "FIN",
+            "label": "Fuel Cost",
+            "value": 6800,
             "unit": "tỷ",
-            "rag": "good",
+            "rag": "warn",
+            "deltas": [
+              {
+                "vs": "KH",
+                "value": 2.6,
+                "unit": "%"
+              },
+              {
+                "vs": "CK",
+                "value": 8,
+                "unit": "%"
+              }
+            ]
+          },
+          {
+            "id": "t_fx",
+            "kpi": "FAD-019",
+            "domain": "FIN",
+            "label": "VND/USD FX",
+            "value": 25400,
+            "unit": "đ",
+            "rag": "warn",
             "deltas": [
               {
                 "vs": "KH",
@@ -124,44 +166,7 @@
               },
               {
                 "vs": "CK",
-                "value": 9,
-                "unit": "%"
-              }
-            ]
-          },
-          {
-            "id": "t_rev",
-            "kpi": "FAD-002",
-            "domain": "FIN",
-            "label": "Doanh thu HĐKD",
-            "value": 20100,
-            "unit": "tỷ",
-            "rag": "good",
-            "deltas": [
-              {
-                "vs": "KH",
-                "value": 0.8,
-                "unit": "%"
-              }
-            ]
-          },
-          {
-            "id": "t_lntt",
-            "kpi": "FAD-002",
-            "domain": "FIN",
-            "label": "Lợi nhuận trước thuế",
-            "value": 1820,
-            "unit": "tỷ",
-            "rag": "warn",
-            "deltas": [
-              {
-                "vs": "KH",
-                "value": -4,
-                "unit": "%"
-              },
-              {
-                "vs": "CK",
-                "value": 7,
+                "value": 3,
                 "unit": "%"
               }
             ]
@@ -192,15 +197,90 @@
       }
     },
     {
-      "id": "b_rev",
+      "id": "b_jet",
       "zone": "B",
       "grid": {
-        "colSpan": 4,
-        "minHeight": 280
+        "colSpan": 6,
+        "minHeight": 290
       },
       "component": "chart",
-      "title": "Tổng doanh thu & thu nhập (12 tháng)",
-      "kpi": "FAD-001",
+      "title": "Jet A1 theo tháng (+ trung bình luỹ kế)",
+      "kpi": "FAD-021",
+      "viz": {
+        "type": "line",
+        "unit": "USD/bbl"
+      },
+      "data": {
+        "categories": [
+          "T8",
+          "T9",
+          "T10",
+          "T11",
+          "T12",
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "series": [
+          {
+            "name": "Jet A1",
+            "values": [
+              92,
+              93,
+              95,
+              94,
+              96,
+              95,
+              96,
+              94,
+              95,
+              96,
+              95,
+              96
+            ]
+          },
+          {
+            "name": "TB luỹ kế",
+            "values": [
+              92,
+              92.5,
+              93.3,
+              93.5,
+              94,
+              94.2,
+              94.5,
+              94.4,
+              94.5,
+              94.6,
+              94.6,
+              94.7
+            ],
+            "style": "dashed",
+            "color": "#D3AC2B"
+          }
+        ]
+      },
+      "meta": {
+        "source": "PLATT",
+        "refreshed": "EOD 10/07",
+        "dq": 95,
+        "owner": "Ban TCKT"
+      }
+    },
+    {
+      "id": "b_fuel",
+      "zone": "B",
+      "grid": {
+        "colSpan": 6,
+        "minHeight": 290
+      },
+      "component": "chart",
+      "title": "Fuel Cost theo tháng",
+      "kpi": "FAD-021",
       "viz": {
         "type": "line",
         "unit": "tỷ"
@@ -222,37 +302,37 @@
         ],
         "series": [
           {
-            "name": "TRI",
+            "name": "Fuel Cost",
             "values": [
-              1700,
-              1800,
-              1750,
-              1820,
-              1900,
-              1850,
-              1880,
-              1920,
-              1950,
-              1980,
-              2000,
-              2050
+              560,
+              570,
+              600,
+              590,
+              620,
+              600,
+              610,
+              590,
+              600,
+              620,
+              610,
+              620
             ]
           },
           {
             "name": "Kế hoạch",
             "values": [
-              1750,
-              1780,
-              1790,
-              1800,
-              1850,
-              1860,
-              1880,
-              1900,
-              1930,
-              1960,
-              1990,
-              2020
+              580,
+              585,
+              590,
+              595,
+              600,
+              600,
+              605,
+              610,
+              615,
+              620,
+              620,
+              625
             ],
             "style": "dashed",
             "color": "#D3AC2B"
@@ -262,23 +342,23 @@
       "meta": {
         "source": "FMIS",
         "refreshed": "EOD 10/07",
-        "dq": 97,
+        "dq": 95,
         "owner": "Ban TCKT"
       }
     },
     {
-      "id": "b_lntt",
+      "id": "b_fx",
       "zone": "B",
       "grid": {
-        "colSpan": 4,
-        "minHeight": 280
+        "colSpan": 12,
+        "minHeight": 260
       },
       "component": "chart",
-      "title": "Lợi nhuận trước thuế (12 tháng)",
-      "kpi": "FAD-002",
+      "title": "Biến động tỷ giá 6 đồng tiền chính",
+      "kpi": "FAD-019",
       "viz": {
         "type": "line",
-        "unit": "tỷ"
+        "unit": "index"
       },
       "data": {
         "categories": [
@@ -297,104 +377,120 @@
         ],
         "series": [
           {
-            "name": "LNTT",
+            "name": "USD/VND",
             "values": [
-              110,
-              140,
-              90,
-              150,
-              180,
-              130,
-              150,
-              170,
-              160,
-              180,
-              175,
-              190
+              100,
+              100.3,
+              100.6,
+              100.9,
+              101.2,
+              101.2,
+              101.5,
+              101.7,
+              101.9,
+              102.1,
+              102.2,
+              102.3
             ]
           },
           {
-            "name": "Kế hoạch",
+            "name": "USD/CNY",
             "values": [
-              130,
-              140,
-              145,
-              150,
-              160,
-              160,
-              165,
-              170,
-              175,
-              180,
-              185,
-              190
+              100,
+              100.1,
+              100.2,
+              100.1,
+              100.3,
+              100.2,
+              100.4,
+              100.5,
+              100.4,
+              100.6,
+              100.5,
+              100.7
             ],
-            "style": "dashed",
-            "color": "#D3AC2B"
-          }
-        ]
-      },
-      "meta": {
-        "source": "FMIS",
-        "refreshed": "EOD 10/07",
-        "dq": 97,
-        "owner": "Ban TCKT"
-      }
-    },
-    {
-      "id": "b_cash",
-      "zone": "B",
-      "grid": {
-        "colSpan": 4,
-        "minHeight": 280
-      },
-      "component": "chart",
-      "title": "Dòng tiền (12 tháng)",
-      "kpi": "FAD-018",
-      "viz": {
-        "type": "line",
-        "unit": "tỷ"
-      },
-      "data": {
-        "categories": [
-          "T8",
-          "T9",
-          "T10",
-          "T11",
-          "T12",
-          "T1",
-          "T2",
-          "T3",
-          "T4",
-          "T5",
-          "T6",
-          "T7"
-        ],
-        "series": [
+            "color": "#0e7490"
+          },
           {
-            "name": "Dòng tiền",
+            "name": "USD/EUR",
             "values": [
-              3900,
-              3950,
-              4020,
-              4080,
-              4150,
-              4110,
-              4160,
-              4190,
-              4210,
-              4230,
-              4240,
-              4250
-            ]
+              100,
+              99.8,
+              99.6,
+              99.7,
+              99.5,
+              99.6,
+              99.4,
+              99.3,
+              99.5,
+              99.4,
+              99.3,
+              99.2
+            ],
+            "color": "#F97316"
+          },
+          {
+            "name": "USD/JPY",
+            "values": [
+              100,
+              100.5,
+              101,
+              101.5,
+              102,
+              102.5,
+              103,
+              103.2,
+              103.5,
+              103.8,
+              104,
+              104.2
+            ],
+            "color": "#DC2626"
+          },
+          {
+            "name": "USD/AUD",
+            "values": [
+              100,
+              100.2,
+              100.1,
+              100.3,
+              100.2,
+              100.4,
+              100.3,
+              100.5,
+              100.4,
+              100.6,
+              100.5,
+              100.7
+            ],
+            "color": "#9D174D"
+          },
+          {
+            "name": "USD/KRW",
+            "values": [
+              100,
+              99.9,
+              100.1,
+              100,
+              100.2,
+              100.1,
+              100.3,
+              100.2,
+              100.4,
+              100.3,
+              100.5,
+              100.4
+            ],
+            "color": "#94a3b8"
           }
         ]
       },
       "meta": {
         "source": "Ngân quỹ",
         "refreshed": "EOD 10/07",
-        "dq": 98,
-        "owner": "Ban TCKT"
+        "dq": 95,
+        "owner": "Ban TCKT",
+        "footnote": "vs tỷ giá KH năm · vs tỷ giá KH tháng"
       }
     },
     {
@@ -409,9 +505,15 @@
         "items": [
           {
             "severity": "warn",
-            "text": "Đánh giá chung tháng hiện tại: tình hình SXKD của TCT so KH, dòng tiền có ổn định không.",
-            "refBlock": "b_lntt",
-            "sourceKpi": "FAD-002"
+            "text": "Nhận định các dòng tiền tăng/giảm so tháng trước; ảnh hưởng đến dòng tiền thu, dòng tiền chi (nhập).",
+            "refBlock": "b_fx",
+            "sourceKpi": "FAD-019"
+          },
+          {
+            "severity": "crit",
+            "text": "JPY +4% vs KH → chi thuê tàu & trạm Nhật phát sinh; đề xuất hedge bổ sung.",
+            "refBlock": "b_fx",
+            "sourceKpi": "FAD-019"
           }
         ],
         "disclaimer": "AI insight — nhận định số liệu tăng/giảm so với kế hoạch, kiểm tra tần suất khai thác."
