@@ -1,0 +1,260 @@
+{
+  "titleInfo": {
+    "title": "Technic",
+    "statusLabel": "REAL TIME",
+    "description": "Kỹ thuật giữ được sẵn sàng & tin cậy không, theo 12 tháng và theo đội tàu?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_arl",
+        "status": "compact",
+        "title": "ARL - độ sẵn sàng khai thác",
+        "value": "91.8",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.4% với Mục tiêu",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "1% với CK",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_ocr",
+        "status": "compact",
+        "title": "OCR - tỷ lệ định kỳ quá hạn",
+        "value": "1.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.3% với Mục tiêu",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_dr",
+        "status": "compact",
+        "title": "DR - độ tin cậy cất cánh",
+        "value": "99.1",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.2% với Mục tiêu",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "0.1% với CK",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Strategic Trend Zone",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_trend",
+          "title": "Chỉ số kỹ thuật theo 12 tháng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "arl",
+                  "type": "number",
+                  "label": "ARL"
+                },
+                {
+                  "id": "dr",
+                  "type": "number",
+                  "label": "DR",
+                  "color": "#94a3b8"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  93,
+                  99.4
+                ],
+                [
+                  "T9",
+                  92.6,
+                  99.35
+                ],
+                [
+                  "T10",
+                  92.2,
+                  99.3
+                ],
+                [
+                  "T11",
+                  92,
+                  99.25
+                ],
+                [
+                  "T12",
+                  91.9,
+                  99.2
+                ],
+                [
+                  "T1",
+                  91.8,
+                  99.2
+                ],
+                [
+                  "T2",
+                  91.8,
+                  99.15
+                ],
+                [
+                  "T3",
+                  91.7,
+                  99.1
+                ],
+                [
+                  "T4",
+                  91.8,
+                  99.1
+                ],
+                [
+                  "T5",
+                  91.8,
+                  99.1
+                ],
+                [
+                  "T6",
+                  91.8,
+                  99.1
+                ],
+                [
+                  "T7",
+                  91.8,
+                  99.1
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "arl",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "dr",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fleet",
+          "title": "Phân loại theo đội tàu bay",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "arl",
+                  "type": "number",
+                  "label": "ARL",
+                  "color": "#004071"
+                },
+                {
+                  "id": "dr",
+                  "type": "number",
+                  "label": "DR",
+                  "color": "#F97316"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  94.2,
+                  99.4
+                ],
+                [
+                  "A350",
+                  93,
+                  99.2
+                ],
+                [
+                  "B787",
+                  88,
+                  98.6
+                ],
+                [
+                  "ATR72",
+                  92.4,
+                  99.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "arl",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "dr",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

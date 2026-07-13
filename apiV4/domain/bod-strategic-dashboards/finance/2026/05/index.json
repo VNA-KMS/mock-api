@@ -1,0 +1,403 @@
+{
+  "titleInfo": {
+    "title": "Finance",
+    "statusLabel": "REAL TIME",
+    "description": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_tri",
+        "status": "compact",
+        "title": "Tổng doanh thu & thu nhập",
+        "value": "21500",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "9% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_rev",
+        "status": "compact",
+        "title": "Doanh thu HĐKD",
+        "value": "20100",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8% với KH",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_lntt",
+        "status": "compact",
+        "title": "Lợi nhuận trước thuế",
+        "value": "1820",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "4% với KH",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "7% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4250",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% với KH",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Finance — Strategic Trend",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_rev",
+          "title": "Tổng doanh thu & thu nhập (12 tháng)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "tri",
+                  "type": "number",
+                  "label": "TRI"
+                },
+                {
+                  "id": "k__ho_ch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  1700,
+                  1750
+                ],
+                [
+                  "T9",
+                  1800,
+                  1780
+                ],
+                [
+                  "T10",
+                  1750,
+                  1790
+                ],
+                [
+                  "T11",
+                  1820,
+                  1800
+                ],
+                [
+                  "T12",
+                  1900,
+                  1850
+                ],
+                [
+                  "T1",
+                  1850,
+                  1860
+                ],
+                [
+                  "T2",
+                  1880,
+                  1880
+                ],
+                [
+                  "T3",
+                  1920,
+                  1900
+                ],
+                [
+                  "T4",
+                  1950,
+                  1930
+                ],
+                [
+                  "T5",
+                  1980,
+                  1960
+                ],
+                [
+                  "T6",
+                  2000,
+                  1990
+                ],
+                [
+                  "T7",
+                  2050,
+                  2020
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "tri",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "k__ho_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_lntt",
+          "title": "Lợi nhuận trước thuế (12 tháng)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "lntt",
+                  "type": "number",
+                  "label": "LNTT"
+                },
+                {
+                  "id": "k__ho_ch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  110,
+                  130
+                ],
+                [
+                  "T9",
+                  140,
+                  140
+                ],
+                [
+                  "T10",
+                  90,
+                  145
+                ],
+                [
+                  "T11",
+                  150,
+                  150
+                ],
+                [
+                  "T12",
+                  180,
+                  160
+                ],
+                [
+                  "T1",
+                  130,
+                  160
+                ],
+                [
+                  "T2",
+                  150,
+                  165
+                ],
+                [
+                  "T3",
+                  170,
+                  170
+                ],
+                [
+                  "T4",
+                  160,
+                  175
+                ],
+                [
+                  "T5",
+                  180,
+                  180
+                ],
+                [
+                  "T6",
+                  175,
+                  185
+                ],
+                [
+                  "T7",
+                  190,
+                  190
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "lntt",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "k__ho_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash",
+          "title": "Dòng tiền (12 tháng)",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "d_ng_ti_n",
+                  "type": "number",
+                  "label": "Dòng tiền"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  3900
+                ],
+                [
+                  "T9",
+                  3950
+                ],
+                [
+                  "T10",
+                  4020
+                ],
+                [
+                  "T11",
+                  4080
+                ],
+                [
+                  "T12",
+                  4150
+                ],
+                [
+                  "T1",
+                  4110
+                ],
+                [
+                  "T2",
+                  4160
+                ],
+                [
+                  "T3",
+                  4190
+                ],
+                [
+                  "T4",
+                  4210
+                ],
+                [
+                  "T5",
+                  4230
+                ],
+                [
+                  "T6",
+                  4240
+                ],
+                [
+                  "T7",
+                  4250
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "d_ng_ti_n",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

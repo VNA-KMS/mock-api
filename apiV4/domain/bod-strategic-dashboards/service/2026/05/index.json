@@ -1,0 +1,499 @@
+{
+  "titleInfo": {
+    "title": "Service",
+    "statusLabel": "REAL TIME",
+    "description": "Cảm nhận khách (NPS/CSI) toàn mạng & nội địa/quốc tế — điểm yếu ở đâu?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_nps",
+        "status": "compact",
+        "title": "NPS Overall",
+        "value": "34",
+        "unit": "",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1% với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "2% với cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "1% với mục tiêu",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_npsd",
+        "status": "compact",
+        "title": "NPS DOM",
+        "value": "36",
+        "unit": "",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1% với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "1% với mục tiêu",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_npsi",
+        "status": "compact",
+        "title": "NPS INT",
+        "value": "32",
+        "unit": "",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "3% với mục tiêu",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_csi",
+        "status": "compact",
+        "title": "CSI Overall",
+        "value": "4.12",
+        "unit": "/5",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.02% với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "0.03% với mục tiêu",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_csid",
+        "status": "compact",
+        "title": "CSI DOM",
+        "value": "4.18",
+        "unit": "/5",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.03% với mục tiêu",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_csii",
+        "status": "compact",
+        "title": "CSI INT",
+        "value": "4.05",
+        "unit": "/5",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.1% với mục tiêu",
+            "tone": "negative"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Strategic Trend Zone",
+      "columns": 2,
+      "items": [
+        {
+          "id": "b_nps",
+          "title": "NPS Overtime (12 tháng, 2 năm)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "n_m_nay",
+                  "type": "number",
+                  "label": "Năm nay"
+                },
+                {
+                  "id": "n_m_tr__c",
+                  "type": "number",
+                  "label": "Năm trước",
+                  "color": "#94a3b8"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  31,
+                  29
+                ],
+                [
+                  "T9",
+                  32,
+                  30
+                ],
+                [
+                  "T10",
+                  33,
+                  31
+                ],
+                [
+                  "T11",
+                  32,
+                  30
+                ],
+                [
+                  "T12",
+                  33,
+                  31
+                ],
+                [
+                  "T1",
+                  33,
+                  31
+                ],
+                [
+                  "T2",
+                  33,
+                  31
+                ],
+                [
+                  "T3",
+                  34,
+                  32
+                ],
+                [
+                  "T4",
+                  33,
+                  31
+                ],
+                [
+                  "T5",
+                  34,
+                  32
+                ],
+                [
+                  "T6",
+                  34,
+                  32
+                ],
+                [
+                  "T7",
+                  34,
+                  32
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "n_m_nay",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "n_m_tr__c",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_csi",
+          "title": "CSI Overtime (12 tháng, 2 năm)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "n_m_nay",
+                  "type": "number",
+                  "label": "Năm nay"
+                },
+                {
+                  "id": "n_m_tr__c",
+                  "type": "number",
+                  "label": "Năm trước",
+                  "color": "#94a3b8"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  4,
+                  3.9
+                ],
+                [
+                  "T9",
+                  4.05,
+                  3.95
+                ],
+                [
+                  "T10",
+                  4.08,
+                  3.98
+                ],
+                [
+                  "T11",
+                  4.06,
+                  3.96
+                ],
+                [
+                  "T12",
+                  4.1,
+                  4
+                ],
+                [
+                  "T1",
+                  4.11,
+                  4.01
+                ],
+                [
+                  "T2",
+                  4.11,
+                  4.01
+                ],
+                [
+                  "T3",
+                  4.12,
+                  4.02
+                ],
+                [
+                  "T4",
+                  4.11,
+                  4.01
+                ],
+                [
+                  "T5",
+                  4.12,
+                  4.02
+                ],
+                [
+                  "T6",
+                  4.12,
+                  4.02
+                ],
+                [
+                  "T7",
+                  4.12,
+                  4.02
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "n_m_nay",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "n_m_tr__c",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enterprise Risk Zone",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_ap",
+          "title": "Sân bay có CSI thấp nhất",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "table",
+            "position": "top",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "ap",
+                    "type": "string",
+                    "label": "Sân bay"
+                  },
+                  {
+                    "id": "csi",
+                    "type": "number",
+                    "label": "CSI"
+                  },
+                  {
+                    "id": "trend",
+                    "type": "string",
+                    "label": "Xu hướng"
+                  }
+                ],
+                "rows": [
+                  [
+                    "VII",
+                    3.72,
+                    "▼"
+                  ],
+                  [
+                    "CXR",
+                    3.85,
+                    "▼"
+                  ],
+                  [
+                    "HPH",
+                    3.9,
+                    "—"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "b_route",
+          "title": "Đường bay có CSI thấp nhất",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "table",
+            "position": "top",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "route",
+                    "type": "string",
+                    "label": "Đường bay"
+                  },
+                  {
+                    "id": "csi",
+                    "type": "number",
+                    "label": "CSI"
+                  },
+                  {
+                    "id": "trend",
+                    "type": "string",
+                    "label": "Xu hướng"
+                  }
+                ],
+                "rows": [
+                  [
+                    "SGN–VII",
+                    3.7,
+                    "▼"
+                  ],
+                  [
+                    "HAN–CXR",
+                    3.82,
+                    "▼"
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "b_reason",
+          "title": "Lý do CSI thấp",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "table",
+            "position": "top",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "reason",
+                    "type": "string",
+                    "label": "Lý do"
+                  },
+                  {
+                    "id": "pct",
+                    "type": "number",
+                    "label": "Tỷ trọng"
+                  }
+                ],
+                "rows": [
+                  [
+                    "Chậm chuyến / nối chuyến",
+                    "38%"
+                  ],
+                  [
+                    "Hành lý",
+                    "24%"
+                  ],
+                  [
+                    "Suất ăn",
+                    "18%"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

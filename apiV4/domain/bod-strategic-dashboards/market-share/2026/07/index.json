@@ -1,0 +1,742 @@
+{
+  "titleInfo": {
+    "title": "Market share",
+    "statusLabel": "REAL TIME",
+    "description": "Vị thế thị trường & thị phần theo khu vực đang biến động ra sao?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_tot",
+        "status": "compact",
+        "title": "Khách TTT Total",
+        "value": "1095",
+        "unit": "nghìn",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "4% với CK",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "1% với Dự báo",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_int",
+        "status": "compact",
+        "title": "Khách TTT - INT",
+        "value": "420",
+        "unit": "nghìn",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "6% với CK",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "2% với Dự báo",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_dom",
+        "status": "compact",
+        "title": "Khách TTT - DOM",
+        "value": "675",
+        "unit": "nghìn",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2% với CK",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "3% với Dự báo",
+            "tone": "negative"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Strategic Trend Zone",
+      "columns": 2,
+      "items": [
+        {
+          "id": "b_int",
+          "title": "Khách TTT theo khu vực INT (12 tháng)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "eu",
+                  "type": "number",
+                  "label": "EU"
+                },
+                {
+                  "id": "au___us",
+                  "type": "number",
+                  "label": "AU & US",
+                  "color": "#0e7490"
+                },
+                {
+                  "id": "nea",
+                  "type": "number",
+                  "label": "NEA",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "sea___clmv",
+                  "type": "number",
+                  "label": "SEA & CLMV",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  70,
+                  60,
+                  90,
+                  110
+                ],
+                [
+                  "T9",
+                  72,
+                  61,
+                  92,
+                  112
+                ],
+                [
+                  "T10",
+                  74,
+                  62,
+                  94,
+                  114
+                ],
+                [
+                  "T11",
+                  76,
+                  63,
+                  95,
+                  115
+                ],
+                [
+                  "T12",
+                  78,
+                  64,
+                  96,
+                  116
+                ],
+                [
+                  "T1",
+                  77,
+                  64,
+                  96,
+                  117
+                ],
+                [
+                  "T2",
+                  79,
+                  65,
+                  97,
+                  118
+                ],
+                [
+                  "T3",
+                  81,
+                  66,
+                  98,
+                  119
+                ],
+                [
+                  "T4",
+                  83,
+                  67,
+                  99,
+                  120
+                ],
+                [
+                  "T5",
+                  84,
+                  68,
+                  100,
+                  121
+                ],
+                [
+                  "T6",
+                  86,
+                  69,
+                  101,
+                  122
+                ],
+                [
+                  "T7",
+                  88,
+                  70,
+                  102,
+                  123
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "eu",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "au___us",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "nea",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "sea___clmv",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_dom",
+          "title": "Khách TTT theo nhóm DOM (12 tháng)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "hansgn",
+                  "type": "number",
+                  "label": "HANSGN"
+                },
+                {
+                  "id": "handad",
+                  "type": "number",
+                  "label": "HANDAD",
+                  "color": "#0e7490"
+                },
+                {
+                  "id": "sgndad",
+                  "type": "number",
+                  "label": "SGNDAD",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "du_l_ch",
+                  "type": "number",
+                  "label": "Du lịch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  180,
+                  90,
+                  70,
+                  60
+                ],
+                [
+                  "T9",
+                  182,
+                  91,
+                  71,
+                  62
+                ],
+                [
+                  "T10",
+                  184,
+                  92,
+                  72,
+                  64
+                ],
+                [
+                  "T11",
+                  186,
+                  93,
+                  73,
+                  66
+                ],
+                [
+                  "T12",
+                  188,
+                  94,
+                  74,
+                  68
+                ],
+                [
+                  "T1",
+                  187,
+                  94,
+                  74,
+                  67
+                ],
+                [
+                  "T2",
+                  189,
+                  95,
+                  75,
+                  69
+                ],
+                [
+                  "T3",
+                  191,
+                  96,
+                  76,
+                  71
+                ],
+                [
+                  "T4",
+                  193,
+                  97,
+                  77,
+                  73
+                ],
+                [
+                  "T5",
+                  194,
+                  98,
+                  78,
+                  74
+                ],
+                [
+                  "T6",
+                  196,
+                  99,
+                  79,
+                  76
+                ],
+                [
+                  "T7",
+                  198,
+                  100,
+                  80,
+                  78
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "hansgn",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "handad",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "sgndad",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "du_l_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_carrier",
+          "title": "Thị phần khách nội địa theo hãng bay (12 tháng)",
+          "col": 1,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "vna_group",
+                  "type": "number",
+                  "label": "VNA group"
+                },
+                {
+                  "id": "vj",
+                  "type": "number",
+                  "label": "VJ",
+                  "color": "#DC2626"
+                },
+                {
+                  "id": "ba___sun",
+                  "type": "number",
+                  "label": "BA + Sun",
+                  "color": "#94a3b8"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  54,
+                  38,
+                  8
+                ],
+                [
+                  "T9",
+                  54,
+                  38,
+                  8
+                ],
+                [
+                  "T10",
+                  53.5,
+                  38.5,
+                  8
+                ],
+                [
+                  "T11",
+                  53,
+                  39,
+                  8
+                ],
+                [
+                  "T12",
+                  53,
+                  39,
+                  8
+                ],
+                [
+                  "T1",
+                  52.8,
+                  39.2,
+                  8
+                ],
+                [
+                  "T2",
+                  52.5,
+                  39.5,
+                  8
+                ],
+                [
+                  "T3",
+                  52.4,
+                  39.6,
+                  8
+                ],
+                [
+                  "T4",
+                  52.3,
+                  39.7,
+                  8
+                ],
+                [
+                  "T5",
+                  52.2,
+                  39.8,
+                  8
+                ],
+                [
+                  "T6",
+                  52.1,
+                  39.9,
+                  8
+                ],
+                [
+                  "T7",
+                  52,
+                  40,
+                  8
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "vna_group",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "vj",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "ba___sun",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enterprise Risk Zone",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_risk",
+          "title": "Enterprise Risk — thị phần theo khu vực (cảnh báo giảm)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "heatmap",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "y",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "EU",
+                  "T2",
+                  0
+                ],
+                [
+                  "EU",
+                  "T3",
+                  1
+                ],
+                [
+                  "EU",
+                  "T4",
+                  2
+                ],
+                [
+                  "EU",
+                  "T5",
+                  3
+                ],
+                [
+                  "EU",
+                  "T6",
+                  0
+                ],
+                [
+                  "EU",
+                  "T7",
+                  1
+                ],
+                [
+                  "AU & US",
+                  "T2",
+                  3
+                ],
+                [
+                  "AU & US",
+                  "T3",
+                  0
+                ],
+                [
+                  "AU & US",
+                  "T4",
+                  1
+                ],
+                [
+                  "AU & US",
+                  "T5",
+                  2
+                ],
+                [
+                  "AU & US",
+                  "T6",
+                  3
+                ],
+                [
+                  "AU & US",
+                  "T7",
+                  0
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T2",
+                  2
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T3",
+                  3
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T4",
+                  0
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T5",
+                  1
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T6",
+                  2
+                ],
+                [
+                  "NEA (ĐBA)",
+                  "T7",
+                  3
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T2",
+                  1
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T3",
+                  2
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T4",
+                  3
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T5",
+                  0
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T6",
+                  1
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T7",
+                  2
+                ],
+                [
+                  "Nội địa",
+                  "T2",
+                  0
+                ],
+                [
+                  "Nội địa",
+                  "T3",
+                  1
+                ],
+                [
+                  "Nội địa",
+                  "T4",
+                  2
+                ],
+                [
+                  "Nội địa",
+                  "T5",
+                  3
+                ],
+                [
+                  "Nội địa",
+                  "T6",
+                  0
+                ],
+                [
+                  "Nội địa",
+                  "T7",
+                  1
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "heatmap",
+                "xField": "y",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "heatmap"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_ai_card",
+          "title": "AI Insight — Market Share Risk",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với CK, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với CK, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
+              "backgroundClassName": "",
+              "borderClassName": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

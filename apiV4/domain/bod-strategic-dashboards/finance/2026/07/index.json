@@ -1,0 +1,422 @@
+{
+  "titleInfo": {
+    "title": "Finance",
+    "statusLabel": "REAL TIME",
+    "description": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_tri",
+        "status": "compact",
+        "title": "Tổng doanh thu & thu nhập",
+        "value": "21500",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "9% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_rev",
+        "status": "compact",
+        "title": "Doanh thu HĐKD",
+        "value": "20100",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8% với KH",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_lntt",
+        "status": "compact",
+        "title": "Lợi nhuận trước thuế",
+        "value": "1820",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "4% với KH",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "7% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4250",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% với KH",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Finance — Strategic Trend",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_rev",
+          "title": "Tổng doanh thu & thu nhập (12 tháng)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "tri",
+                  "type": "number",
+                  "label": "TRI"
+                },
+                {
+                  "id": "k__ho_ch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  1700,
+                  1750
+                ],
+                [
+                  "T9",
+                  1800,
+                  1780
+                ],
+                [
+                  "T10",
+                  1750,
+                  1790
+                ],
+                [
+                  "T11",
+                  1820,
+                  1800
+                ],
+                [
+                  "T12",
+                  1900,
+                  1850
+                ],
+                [
+                  "T1",
+                  1850,
+                  1860
+                ],
+                [
+                  "T2",
+                  1880,
+                  1880
+                ],
+                [
+                  "T3",
+                  1920,
+                  1900
+                ],
+                [
+                  "T4",
+                  1950,
+                  1930
+                ],
+                [
+                  "T5",
+                  1980,
+                  1960
+                ],
+                [
+                  "T6",
+                  2000,
+                  1990
+                ],
+                [
+                  "T7",
+                  2050,
+                  2020
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "tri",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "k__ho_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_lntt",
+          "title": "Lợi nhuận trước thuế (12 tháng)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "lntt",
+                  "type": "number",
+                  "label": "LNTT"
+                },
+                {
+                  "id": "k__ho_ch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  110,
+                  130
+                ],
+                [
+                  "T9",
+                  140,
+                  140
+                ],
+                [
+                  "T10",
+                  90,
+                  145
+                ],
+                [
+                  "T11",
+                  150,
+                  150
+                ],
+                [
+                  "T12",
+                  180,
+                  160
+                ],
+                [
+                  "T1",
+                  130,
+                  160
+                ],
+                [
+                  "T2",
+                  150,
+                  165
+                ],
+                [
+                  "T3",
+                  170,
+                  170
+                ],
+                [
+                  "T4",
+                  160,
+                  175
+                ],
+                [
+                  "T5",
+                  180,
+                  180
+                ],
+                [
+                  "T6",
+                  175,
+                  185
+                ],
+                [
+                  "T7",
+                  190,
+                  190
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "lntt",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "k__ho_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash",
+          "title": "Dòng tiền (12 tháng)",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "d_ng_ti_n",
+                  "type": "number",
+                  "label": "Dòng tiền"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  3900
+                ],
+                [
+                  "T9",
+                  3950
+                ],
+                [
+                  "T10",
+                  4020
+                ],
+                [
+                  "T11",
+                  4080
+                ],
+                [
+                  "T12",
+                  4150
+                ],
+                [
+                  "T1",
+                  4110
+                ],
+                [
+                  "T2",
+                  4160
+                ],
+                [
+                  "T3",
+                  4190
+                ],
+                [
+                  "T4",
+                  4210
+                ],
+                [
+                  "T5",
+                  4230
+                ],
+                [
+                  "T6",
+                  4240
+                ],
+                [
+                  "T7",
+                  4250
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "d_ng_ti_n",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "AI Insight",
+      "columns": 1,
+      "items": [
+        {
+          "id": "b_ai_insight",
+          "title": "AI Insight — Tổng quan tài chính",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Finance</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Doanh thu:</b> TRI đạt 21.500 tỷ (+1.2% KH, +9% CK). Doanh thu HĐKD 20.100 tỷ (+0.8% KH) — tăng trưởng ổn định nhờ mảng hành khách quốc tế phục hồi</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Lợi nhuận:</b> LNTT 1.820 tỷ (-4% KH, +7% CK). Chênh lệch so KH chủ yếu do giá nhiên liệu tăng +3.1% và biến động tỷ giá JPY ảnh hưởng chi phí thuê tàu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Dòng tiền:</b> 4.250 tỷ (+2.1% KH). Dòng tiền hoạt động kinh doanh duy trì ổn định, đảm bảo khả năng thanh toán và đầu tư</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Đánh giá:</b> Tình hình SXKD TCT tháng này ổn định. TRI vượt KH, LNTT thấp hơn nhẹ do chi phí đầu vào. Cần theo dõi biến động giá nhiên liệu và tỷ giá quý sau</li></ul></div>"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

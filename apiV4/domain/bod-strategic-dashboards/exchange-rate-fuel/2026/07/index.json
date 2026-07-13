@@ -1,0 +1,540 @@
+{
+  "titleInfo": {
+    "title": "Exchange Rate & Fuel",
+    "statusLabel": "REAL TIME",
+    "description": "Giá nhiên liệu & tỷ giá biến động thế nào và ảnh hưởng dòng tiền ra sao?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_jet",
+        "status": "compact",
+        "title": "Jet A1",
+        "value": "95.9",
+        "unit": "USD/bbl",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "3.1% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "4% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_fuel",
+        "status": "compact",
+        "title": "Fuel Cost",
+        "value": "6800",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.6% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "8% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_fx",
+        "status": "compact",
+        "title": "VND/USD FX",
+        "value": "25400",
+        "unit": "đ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "3% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4250",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% với KH",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Exchange Rate & Fuel — Trend & Risk",
+      "columns": 2,
+      "items": [
+        {
+          "id": "b_jet",
+          "title": "Jet A1 theo tháng (+ trung bình luỹ kế)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "jet_a1",
+                  "type": "number",
+                  "label": "Jet A1"
+                },
+                {
+                  "id": "tb_lu__k_",
+                  "type": "number",
+                  "label": "TB luỹ kế",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  92,
+                  92
+                ],
+                [
+                  "T9",
+                  93,
+                  92.5
+                ],
+                [
+                  "T10",
+                  95,
+                  93.3
+                ],
+                [
+                  "T11",
+                  94,
+                  93.5
+                ],
+                [
+                  "T12",
+                  96,
+                  94
+                ],
+                [
+                  "T1",
+                  95,
+                  94.2
+                ],
+                [
+                  "T2",
+                  96,
+                  94.5
+                ],
+                [
+                  "T3",
+                  94,
+                  94.4
+                ],
+                [
+                  "T4",
+                  95,
+                  94.5
+                ],
+                [
+                  "T5",
+                  96,
+                  94.6
+                ],
+                [
+                  "T6",
+                  95,
+                  94.6
+                ],
+                [
+                  "T7",
+                  96,
+                  94.7
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "jet_a1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "tb_lu__k_",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fuel",
+          "title": "Fuel Cost theo tháng",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "fuel_cost",
+                  "type": "number",
+                  "label": "Fuel Cost"
+                },
+                {
+                  "id": "k__ho_ch",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  560,
+                  580
+                ],
+                [
+                  "T9",
+                  570,
+                  585
+                ],
+                [
+                  "T10",
+                  600,
+                  590
+                ],
+                [
+                  "T11",
+                  590,
+                  595
+                ],
+                [
+                  "T12",
+                  620,
+                  600
+                ],
+                [
+                  "T1",
+                  600,
+                  600
+                ],
+                [
+                  "T2",
+                  610,
+                  605
+                ],
+                [
+                  "T3",
+                  590,
+                  610
+                ],
+                [
+                  "T4",
+                  600,
+                  615
+                ],
+                [
+                  "T5",
+                  620,
+                  620
+                ],
+                [
+                  "T6",
+                  610,
+                  620
+                ],
+                [
+                  "T7",
+                  620,
+                  625
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "fuel_cost",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "k__ho_ch",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx",
+          "title": "Biến động tỷ giá 6 đồng tiền chính",
+          "col": 1,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "usd_vnd",
+                  "type": "number",
+                  "label": "USD/VND"
+                },
+                {
+                  "id": "usd_cny",
+                  "type": "number",
+                  "label": "USD/CNY",
+                  "color": "#0e7490"
+                },
+                {
+                  "id": "usd_eur",
+                  "type": "number",
+                  "label": "USD/EUR",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "usd_jpy",
+                  "type": "number",
+                  "label": "USD/JPY",
+                  "color": "#DC2626"
+                },
+                {
+                  "id": "usd_aud",
+                  "type": "number",
+                  "label": "USD/AUD",
+                  "color": "#9D174D"
+                },
+                {
+                  "id": "usd_krw",
+                  "type": "number",
+                  "label": "USD/KRW",
+                  "color": "#94a3b8"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  100,
+                  100,
+                  100,
+                  100,
+                  100
+                ],
+                [
+                  "T9",
+                  100.3,
+                  100.1,
+                  99.8,
+                  100.5,
+                  100.2,
+                  99.9
+                ],
+                [
+                  "T10",
+                  100.6,
+                  100.2,
+                  99.6,
+                  101,
+                  100.1,
+                  100.1
+                ],
+                [
+                  "T11",
+                  100.9,
+                  100.1,
+                  99.7,
+                  101.5,
+                  100.3,
+                  100
+                ],
+                [
+                  "T12",
+                  101.2,
+                  100.3,
+                  99.5,
+                  102,
+                  100.2,
+                  100.2
+                ],
+                [
+                  "T1",
+                  101.2,
+                  100.2,
+                  99.6,
+                  102.5,
+                  100.4,
+                  100.1
+                ],
+                [
+                  "T2",
+                  101.5,
+                  100.4,
+                  99.4,
+                  103,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T3",
+                  101.7,
+                  100.5,
+                  99.3,
+                  103.2,
+                  100.5,
+                  100.2
+                ],
+                [
+                  "T4",
+                  101.9,
+                  100.4,
+                  99.5,
+                  103.5,
+                  100.4,
+                  100.4
+                ],
+                [
+                  "T5",
+                  102.1,
+                  100.6,
+                  99.4,
+                  103.8,
+                  100.6,
+                  100.3
+                ],
+                [
+                  "T6",
+                  102.2,
+                  100.5,
+                  99.3,
+                  104,
+                  100.5,
+                  100.5
+                ],
+                [
+                  "T7",
+                  102.3,
+                  100.7,
+                  99.2,
+                  104.2,
+                  100.7,
+                  100.4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "usd_vnd",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "usd_cny",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "usd_eur",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "usd_jpy",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "usd_aud",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "usd_krw",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "AI Insight",
+      "columns": 1,
+      "items": [
+        {
+          "id": "b_ai_insight",
+          "title": "AI Insight — Tác động tỷ giá & nhiên liệu",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Exchange Rate & Fuel</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nhiên liệu:</b> Jet A1 duy trì 95–96 USD/bbl, cao hơn KH 3.1% — ước tính phát sinh chi phí thêm 204 tỷ so với kế hoạch tháng này</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Tỷ giá:</b> JPY +4% vs KH → chi thuê tàu & trạm Nhật phát sinh ~87 tỷ. USD/VND +1.2% vs KH, ảnh hưởng dòng tiền chi nhập nhiên liệu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Dòng tiền:</b> Dòng tiền thuần ước đạt 4.250 tỷ (+2.1% KH). Rủi ro từ biến động JPY và Jet A1 cần được hedge bổ sung quý sau</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khuyến nghị:</b> Xem xét hedge tỷ giá JPY kỳ hạn 6 tháng; theo dõi giá Jet A1 vượt 100 USD/bbl để kích hoạt kịch bản ứng phó</li></ul></div>",
+              "backgroundClassName": "",
+              "borderClassName": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

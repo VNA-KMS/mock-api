@@ -1,0 +1,1189 @@
+{
+  "titleInfo": {
+    "title": "OTP Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "OTP, OSP, root cause delay",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "bh",
+        "status": "compact",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.5%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "1.5%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "bh-ngay",
+        "status": "compact",
+        "title": "BH/ngày",
+        "value": "229.7",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "otp",
+        "status": "compact",
+        "title": "OTP",
+        "value": "86",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "osp",
+        "status": "compact",
+        "title": "OSP",
+        "value": "90",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.3%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.3%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "FLS theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "FLS 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "KH 2026",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "CK 2025",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  2800,
+                  2750,
+                  2710
+                ],
+                [
+                  "T2",
+                  2750,
+                  2780,
+                  2680
+                ],
+                [
+                  "T3",
+                  2900,
+                  2800,
+                  2820
+                ],
+                [
+                  "T4",
+                  2820,
+                  2780,
+                  2750
+                ],
+                [
+                  "T5",
+                  2850,
+                  2820,
+                  2760
+                ],
+                [
+                  "T6",
+                  2847,
+                  2800,
+                  2720
+                ],
+                [
+                  "T7",
+                  2920,
+                  2850,
+                  2840
+                ],
+                [
+                  "T8",
+                  2880,
+                  2820,
+                  2790
+                ],
+                [
+                  "T9",
+                  2780,
+                  2760,
+                  2700
+                ],
+                [
+                  "T10",
+                  2700,
+                  2720,
+                  2630
+                ],
+                [
+                  "T11",
+                  2650,
+                  2680,
+                  2580
+                ],
+                [
+                  "T12",
+                  2720,
+                  2700,
+                  2650
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "BH theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "BH 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "KH 2026",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "CK 2025",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  6500,
+                  6350,
+                  6200
+                ],
+                [
+                  "T2",
+                  6400,
+                  6450,
+                  6100
+                ],
+                [
+                  "T3",
+                  6700,
+                  6600,
+                  6400
+                ],
+                [
+                  "T4",
+                  6600,
+                  6550,
+                  6300
+                ],
+                [
+                  "T5",
+                  6800,
+                  6700,
+                  6500
+                ],
+                [
+                  "T6",
+                  6892,
+                  6800,
+                  6600
+                ],
+                [
+                  "T7",
+                  7000,
+                  6850,
+                  6700
+                ],
+                [
+                  "T8",
+                  6900,
+                  6800,
+                  6600
+                ],
+                [
+                  "T9",
+                  6600,
+                  6550,
+                  6300
+                ],
+                [
+                  "T10",
+                  6400,
+                  6350,
+                  6100
+                ],
+                [
+                  "T11",
+                  6200,
+                  6150,
+                  5900
+                ],
+                [
+                  "T12",
+                  6350,
+                  6250,
+                  6050
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-1",
+          "title": "BH/ngày theo thời gian",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "BH/ngày 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "KH 2026",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "CK 2025",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  210,
+                  205,
+                  198
+                ],
+                [
+                  "T2",
+                  207,
+                  210,
+                  195
+                ],
+                [
+                  "T3",
+                  216,
+                  215,
+                  205
+                ],
+                [
+                  "T4",
+                  220,
+                  218,
+                  208
+                ],
+                [
+                  "T5",
+                  227,
+                  222,
+                  215
+                ],
+                [
+                  "T6",
+                  229.7,
+                  225,
+                  218
+                ],
+                [
+                  "T7",
+                  233,
+                  228,
+                  222
+                ],
+                [
+                  "T8",
+                  230,
+                  226,
+                  220
+                ],
+                [
+                  "T9",
+                  220,
+                  218,
+                  210
+                ],
+                [
+                  "T10",
+                  213,
+                  212,
+                  203
+                ],
+                [
+                  "T11",
+                  207,
+                  206,
+                  197
+                ],
+                [
+                  "T12",
+                  210,
+                  208,
+                  200
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-2",
+          "title": "BH theo từng đội tàu bay",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "thực_hiện",
+                  "type": "number",
+                  "label": "BH 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kế_hoạch",
+                  "type": "number",
+                  "label": "KH 2026",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  2100,
+                  2050
+                ],
+                [
+                  "A320",
+                  850,
+                  820
+                ],
+                [
+                  "A350",
+                  1350,
+                  1300
+                ],
+                [
+                  "B787-9",
+                  1100,
+                  1080
+                ],
+                [
+                  "B787-10",
+                  950,
+                  920
+                ],
+                [
+                  "ATR",
+                  542,
+                  520
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "thực_hiện",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "kế_hoạch",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-3",
+          "title": "BH/ngày theo từng đội tàu bay",
+          "col": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "thực_hiện",
+                  "type": "number",
+                  "label": "BH/ngày 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kế_hoạch",
+                  "type": "number",
+                  "label": "KH 2026",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  9.2,
+                  8.8
+                ],
+                [
+                  "A320",
+                  6.8,
+                  6.5
+                ],
+                [
+                  "A350",
+                  8.5,
+                  8.2
+                ],
+                [
+                  "B787-9",
+                  7.3,
+                  7.0
+                ],
+                [
+                  "B787-10",
+                  6.9,
+                  6.6
+                ],
+                [
+                  "ATR",
+                  4.2,
+                  4.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "thực_hiện",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "kế_hoạch",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "OTP đi/đến theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "OTP đi 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "OTP đến 2026",
+                  "color": "#FDB813"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "CK OTP đi",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  83.5,
+                  82.0,
+                  81.0
+                ],
+                [
+                  "T2",
+                  83.5,
+                  82.5,
+                  81.0
+                ],
+                [
+                  "T3",
+                  83.5,
+                  83.0,
+                  81.0
+                ],
+                [
+                  "T4",
+                  83.5,
+                  82.8,
+                  81.0
+                ],
+                [
+                  "T5",
+                  83.5,
+                  83.2,
+                  81.0
+                ],
+                [
+                  "T6",
+                  83.5,
+                  83.0,
+                  81.0
+                ],
+                [
+                  "T7",
+                  83.5,
+                  83.5,
+                  81.0
+                ],
+                [
+                  "T8",
+                  83.5,
+                  83.2,
+                  81.0
+                ],
+                [
+                  "T9",
+                  83.5,
+                  82.5,
+                  81.0
+                ],
+                [
+                  "T10",
+                  83.5,
+                  82.0,
+                  81.0
+                ],
+                [
+                  "T11",
+                  83.5,
+                  81.5,
+                  81.0
+                ],
+                [
+                  "T12",
+                  83.5,
+                  82.0,
+                  81.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-2-1",
+          "title": "OSP đi/đến theo thời gian",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "OSP đi 2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "OSP đến 2026",
+                  "color": "#FDB813"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "CK OSP đi",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T2",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T3",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T4",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T5",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T6",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T7",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T8",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T9",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T10",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T11",
+                  84.0,
+                  83.0,
+                  82.0
+                ],
+                [
+                  "T12",
+                  84.0,
+                  83.0,
+                  82.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-3-0",
+          "title": "Nguyên nhân giảm chỉ số OTP",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "Thời tiết",
+                  "type": "number",
+                  "label": "Trực tiếp",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "Không lưu",
+                  "type": "number",
+                  "label": "Dây truyền",
+                  "color": "#FDB813"
+                },
+                {
+                  "id": "Kỹ thuật",
+                  "type": "number",
+                  "label": "Kỹ thuật",
+                  "color": "#e67e22"
+                },
+                {
+                  "id": "CS hạ tầng",
+                  "type": "number",
+                  "label": "CS hạ tầng",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "Tổ bay",
+                  "type": "number",
+                  "label": "Tổ bay",
+                  "color": "#4CAF50"
+                },
+                {
+                  "id": "Chậm nối",
+                  "type": "number",
+                  "label": "Chậm nối",
+                  "color": "#9C27B0"
+                },
+                {
+                  "id": "Khác",
+                  "type": "number",
+                  "label": "Khác",
+                  "color": "#95a5a6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ],
+                [
+                  "T2",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ],
+                [
+                  "T3",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ],
+                [
+                  "T4",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ],
+                [
+                  "T5",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ],
+                [
+                  "T6",
+                  3.5,
+                  2.8,
+                  2.2,
+                  1.5,
+                  1.2,
+                  0.9,
+                  0.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "Thời tiết",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "Không lưu",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "Kỹ thuật",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "CS hạ tầng",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "Tổ bay",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "Chậm nối",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "Khác",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-3-1",
+          "title": "Nguyên nhân dừng bay",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "label",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number",
+                  "color": [
+                    "#2d6a9f",
+                    "#e67e22",
+                    "#22c55e",
+                    "#f59e0b"
+                  ],
+                  "label": "Tỷ trọng"
+                }
+              ],
+              "rows": [
+                [
+                  "Kỹ thuật",
+                  65
+                ],
+                [
+                  "Phi kỹ thuật",
+                  35
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "label",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "pie"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

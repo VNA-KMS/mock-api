@@ -1,0 +1,405 @@
+{
+  "titleInfo": {
+    "title": "Operation",
+    "statusLabel": "REAL TIME",
+    "description": "Khai thác toàn mạng thế nào — OTP giảm do đâu, ở sân bay nào?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_flt",
+        "status": "compact",
+        "title": "Chuyến bay",
+        "value": "12400",
+        "unit": "chuyến",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.8% với KH",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_bh",
+        "status": "compact",
+        "title": "Giờ bay",
+        "value": "42800",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.5% với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "3% với CK",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_otpd",
+        "status": "compact",
+        "title": "OTP đi",
+        "value": "85.1",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "2% với KH",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "1% với CK",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_otpa",
+        "status": "compact",
+        "title": "OTP đến",
+        "value": "86.2",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.8% với KH",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "1% với CK",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Strategic Trend Zone",
+      "columns": 3,
+      "items": [
+        {
+          "id": "b_trend",
+          "title": "Giờ bay, chuyến bay, OTP (12 tháng)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "chuy_n_bay__ngh_n_",
+                  "type": "number",
+                  "label": "Chuyến bay (nghìn)"
+                },
+                {
+                  "id": "otp__",
+                  "type": "number",
+                  "label": "OTP %",
+                  "color": "#DC2626"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  1,
+                  89
+                ],
+                [
+                  "T9",
+                  1.02,
+                  88
+                ],
+                [
+                  "T10",
+                  1.03,
+                  87
+                ],
+                [
+                  "T11",
+                  1.02,
+                  86
+                ],
+                [
+                  "T12",
+                  1.04,
+                  88
+                ],
+                [
+                  "T1",
+                  1.02,
+                  87
+                ],
+                [
+                  "T2",
+                  1.03,
+                  86
+                ],
+                [
+                  "T3",
+                  1.05,
+                  85
+                ],
+                [
+                  "T4",
+                  1.06,
+                  86
+                ],
+                [
+                  "T5",
+                  1.05,
+                  86
+                ],
+                [
+                  "T6",
+                  1.07,
+                  85
+                ],
+                [
+                  "T7",
+                  1.08,
+                  86
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "chuy_n_bay__ngh_n_",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "otp__",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fleet",
+          "title": "Giờ bay theo đội bay",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "gi__bay__ngh_n_",
+                  "type": "number",
+                  "label": "Giờ bay (nghìn)",
+                  "color": "#004071"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  22
+                ],
+                [
+                  "A350",
+                  8.5
+                ],
+                [
+                  "B787",
+                  7.8
+                ],
+                [
+                  "ATR72",
+                  4.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "gi__bay__ngh_n_",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Enterprise Risk Zone",
+      "columns": 2,
+      "items": [
+        {
+          "id": "b_top",
+          "title": "Enterprise Risk — Top5/Bottom5 sân bay theo OTP",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar-h",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "otp__",
+                  "type": "number",
+                  "label": "OTP %"
+                }
+              ],
+              "rows": [
+                [
+                  "DAD",
+                  91
+                ],
+                [
+                  "CXR",
+                  88.5
+                ],
+                [
+                  "HPH",
+                  87.2
+                ],
+                [
+                  "HAN",
+                  86.2
+                ],
+                [
+                  "VII",
+                  84
+                ],
+                [
+                  "SGN",
+                  79.4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar-h",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "otp__",
+                    "chartType": "bar-h"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cause",
+          "title": "Nguyên nhân giảm OTP (sắp xếp tăng dần)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar-h",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "category",
+                  "type": "string"
+                },
+                {
+                  "id": "s__ph_t_ch_m__ngh_n_",
+                  "type": "number",
+                  "label": "Số phút chậm (nghìn)"
+                }
+              ],
+              "rows": [
+                [
+                  "Khác",
+                  6
+                ],
+                [
+                  "Khai thác",
+                  12
+                ],
+                [
+                  "Thời tiết",
+                  18
+                ],
+                [
+                  "Kỹ thuật",
+                  26
+                ],
+                [
+                  "Dây chuyền",
+                  64
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar-h",
+                "xField": "category",
+                "series": [
+                  {
+                    "field": "s__ph_t_ch_m__ngh_n_",
+                    "chartType": "bar-h"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
