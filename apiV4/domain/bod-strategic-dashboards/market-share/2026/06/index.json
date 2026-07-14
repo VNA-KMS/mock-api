@@ -4570,7 +4570,7 @@
                 "title": "EU (12 tháng)",
                 "subTitle": "CK (cùng kỳ) · DB (dự báo) · KH (kế hoạch)",
                 "col": 1,
-                "colSpan": 30,
+                "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -4703,8 +4703,8 @@
                 "id": "b_int_au_us",
                 "title": "AU & US (12 tháng)",
                 "subTitle": "CK (cùng kỳ) · DB (dự báo) · KH (kế hoạch)",
-                "col": 31,
-                "colSpan": 30,
+                "col": 16,
+                "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -4834,11 +4834,539 @@
                 }
               },
               {
+                "id": "b_int_clmv",
+                "title": "CLMV (12 tháng)",
+                "col": 31,
+                "colSpan": 15,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "CK",
+                        "color": "#94a3b8"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "DB",
+                        "color": "#D3AC2B"
+                      },
+                      {
+                        "id": "kh",
+                        "type": "number",
+                        "label": "KH",
+                        "color": "#2563eb"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T8",
+                        58,
+                        58,
+                        55
+                      ],
+                      [
+                        "T9",
+                        56,
+                        60,
+                        52
+                      ],
+                      [
+                        "T10",
+                        56,
+                        66,
+                        52
+                      ],
+                      [
+                        "T11",
+                        59,
+                        67,
+                        56
+                      ],
+                      [
+                        "T12",
+                        57,
+                        67,
+                        54
+                      ],
+                      [
+                        "T1",
+                        57,
+                        75,
+                        54
+                      ],
+                      [
+                        "T2",
+                        62,
+                        76,
+                        59
+                      ],
+                      [
+                        "T3",
+                        67,
+                        77,
+                        64
+                      ],
+                      [
+                        "T4",
+                        65,
+                        78,
+                        61
+                      ],
+                      [
+                        "T5",
+                        61,
+                        73,
+                        57
+                      ],
+                      [
+                        "T6",
+                        63,
+                        81,
+                        59
+                      ],
+                      [
+                        "T7",
+                        62,
+                        77,
+                        59
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "kh",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "row": 1,
+                "height": 150
+              },
+              {
+                "id": "b_int_sea",
+                "title": "SEA (ĐNA) (12 tháng)",
+                "col": 46,
+                "colSpan": 15,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "CK",
+                        "color": "#94a3b8"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "DB",
+                        "color": "#D3AC2B"
+                      },
+                      {
+                        "id": "kh",
+                        "type": "number",
+                        "label": "KH",
+                        "color": "#2563eb"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T8",
+                        11,
+                        11,
+                        10
+                      ],
+                      [
+                        "T9",
+                        10,
+                        11,
+                        10
+                      ],
+                      [
+                        "T10",
+                        10,
+                        12,
+                        10
+                      ],
+                      [
+                        "T11",
+                        11,
+                        13,
+                        10
+                      ],
+                      [
+                        "T12",
+                        11,
+                        12,
+                        10
+                      ],
+                      [
+                        "T1",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T2",
+                        12,
+                        14,
+                        11
+                      ],
+                      [
+                        "T3",
+                        13,
+                        14,
+                        12
+                      ],
+                      [
+                        "T4",
+                        12,
+                        15,
+                        11
+                      ],
+                      [
+                        "T5",
+                        11,
+                        14,
+                        11
+                      ],
+                      [
+                        "T6",
+                        12,
+                        15,
+                        11
+                      ],
+                      [
+                        "T7",
+                        12,
+                        15,
+                        11
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "kh",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "row": 1,
+                "height": 150
+              },
+              {
+                "id": "b_int_mid",
+                "title": "MID (Trung Đông) (12 tháng)",
+                "col": 1,
+                "colSpan": 15,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "CK",
+                        "color": "#94a3b8"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "DB",
+                        "color": "#D3AC2B"
+                      },
+                      {
+                        "id": "kh",
+                        "type": "number",
+                        "label": "KH",
+                        "color": "#2563eb"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T8",
+                        12,
+                        12,
+                        12
+                      ],
+                      [
+                        "T9",
+                        12,
+                        13,
+                        11
+                      ],
+                      [
+                        "T10",
+                        12,
+                        14,
+                        11
+                      ],
+                      [
+                        "T11",
+                        13,
+                        14,
+                        12
+                      ],
+                      [
+                        "T12",
+                        12,
+                        14,
+                        12
+                      ],
+                      [
+                        "T1",
+                        12,
+                        16,
+                        12
+                      ],
+                      [
+                        "T2",
+                        13,
+                        16,
+                        13
+                      ],
+                      [
+                        "T3",
+                        14,
+                        16,
+                        14
+                      ],
+                      [
+                        "T4",
+                        14,
+                        17,
+                        13
+                      ],
+                      [
+                        "T5",
+                        13,
+                        16,
+                        12
+                      ],
+                      [
+                        "T6",
+                        14,
+                        17,
+                        13
+                      ],
+                      [
+                        "T7",
+                        13,
+                        17,
+                        13
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "kh",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "row": 2,
+                "height": 150
+              },
+              {
+                "id": "b_int_noa",
+                "title": "NOA (Bắc Á) (12 tháng)",
+                "col": 16,
+                "colSpan": 15,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "CK",
+                        "color": "#94a3b8"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "DB",
+                        "color": "#D3AC2B"
+                      },
+                      {
+                        "id": "kh",
+                        "type": "number",
+                        "label": "KH",
+                        "color": "#2563eb"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T8",
+                        10,
+                        10,
+                        10
+                      ],
+                      [
+                        "T9",
+                        10,
+                        11,
+                        9
+                      ],
+                      [
+                        "T10",
+                        10,
+                        12,
+                        9
+                      ],
+                      [
+                        "T11",
+                        10,
+                        12,
+                        10
+                      ],
+                      [
+                        "T12",
+                        10,
+                        12,
+                        10
+                      ],
+                      [
+                        "T1",
+                        10,
+                        13,
+                        10
+                      ],
+                      [
+                        "T2",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T3",
+                        12,
+                        14,
+                        11
+                      ],
+                      [
+                        "T4",
+                        12,
+                        14,
+                        11
+                      ],
+                      [
+                        "T5",
+                        11,
+                        13,
+                        10
+                      ],
+                      [
+                        "T6",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T7",
+                        11,
+                        14,
+                        10
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "kh",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "row": 2,
+                "height": 150
+              },
+              {
                 "id": "b_int_nea",
                 "title": "NEA (ĐBA) (12 tháng)",
                 "subTitle": "CK (cùng kỳ) · DB (dự báo) · KH (kế hoạch)",
-                "col": 1,
-                "colSpan": 30,
+                "col": 31,
+                "colSpan": 15,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 150,
@@ -4968,14 +5496,10 @@
                 }
               },
               {
-                "id": "b_int_sea_clmv",
-                "title": "SEA & CLMV (ĐNA & CLMV) (12 tháng)",
-                "subTitle": "CK (cùng kỳ) · DB (dự báo) · KH (kế hoạch)",
-                "col": 31,
-                "colSpan": 30,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 150,
+                "id": "b_int_sas",
+                "title": "SAS (Nam Á) (12 tháng)",
+                "col": 46,
+                "colSpan": 15,
                 "autoChart": {
                   "chartType": "auto",
                   "dataset": {
@@ -5006,75 +5530,75 @@
                     "rows": [
                       [
                         "T8",
-                        69,
-                        69,
-                        65
+                        3,
+                        3,
+                        3
                       ],
                       [
                         "T9",
-                        66,
-                        71,
-                        62
+                        3,
+                        4,
+                        3
                       ],
                       [
                         "T10",
-                        66,
-                        78,
-                        62
+                        3,
+                        4,
+                        3
                       ],
                       [
                         "T11",
-                        70,
-                        80,
-                        66
+                        4,
+                        4,
+                        3
                       ],
                       [
                         "T12",
-                        68,
-                        79,
-                        64
+                        3,
+                        4,
+                        3
                       ],
                       [
                         "T1",
-                        68,
-                        89,
-                        64
+                        3,
+                        4,
+                        3
                       ],
                       [
                         "T2",
-                        74,
-                        90,
-                        70
+                        4,
+                        4,
+                        4
                       ],
                       [
                         "T3",
-                        80,
-                        91,
-                        76
+                        4,
+                        5,
+                        4
                       ],
                       [
                         "T4",
-                        77,
-                        93,
-                        72
+                        4,
+                        5,
+                        4
                       ],
                       [
                         "T5",
-                        72,
-                        87,
-                        68
+                        4,
+                        4,
+                        3
                       ],
                       [
                         "T6",
-                        75,
-                        96,
-                        70
+                        4,
+                        5,
+                        4
                       ],
                       [
                         "T7",
-                        74,
-                        92,
-                        70
+                        4,
+                        5,
+                        4
                       ]
                     ]
                   },
@@ -5099,7 +5623,9 @@
                       ]
                     }
                   ]
-                }
+                },
+                "row": 2,
+                "height": 150
               }
             ]
           },
