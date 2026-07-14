@@ -1,0 +1,449 @@
+{
+  "titleInfo": {
+    "title": "Finance",
+    "statusLabel": "REAL TIME",
+    "description": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "m_tri",
+        "status": "compact",
+        "title": "Tổng doanh thu và thu nhập",
+        "value": "21.500",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "9% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rev",
+        "status": "compact",
+        "title": "Doanh thu HĐKD",
+        "value": "20.100",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "8% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_lntt",
+        "status": "compact",
+        "title": "Lợi nhuận trước thuế",
+        "value": "1.820",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "4% so với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "7% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4.250",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "15% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Hiển thị tổng doanh thu và thu nhập của 12 tháng",
+      "items": [
+        {
+          "id": "b_rev",
+          "title": "Tổng doanh thu và thu nhập",
+          "height": 150,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "tt",
+                  "type": "number",
+                  "label": "Thực tế"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  1700,
+                  1750
+                ],
+                [
+                  "T9",
+                  1800,
+                  1780
+                ],
+                [
+                  "T10",
+                  1750,
+                  1800
+                ],
+                [
+                  "T11",
+                  1900,
+                  1850
+                ],
+                [
+                  "T12",
+                  2000,
+                  1900
+                ],
+                [
+                  "T1",
+                  1850,
+                  1950
+                ],
+                [
+                  "T2",
+                  2100,
+                  2000
+                ],
+                [
+                  "T3",
+                  1950,
+                  2050
+                ],
+                [
+                  "T4",
+                  2200,
+                  2100
+                ],
+                [
+                  "T5",
+                  2050,
+                  2150
+                ],
+                [
+                  "T6",
+                  2300,
+                  2200
+                ],
+                [
+                  "T7",
+                  2150,
+                  2250
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "tt",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_lntt",
+          "title": "LNTT",
+          "height": 150,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "tt",
+                  "type": "number",
+                  "label": "Thực tế"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  110,
+                  130
+                ],
+                [
+                  "T9",
+                  140,
+                  140
+                ],
+                [
+                  "T10",
+                  135,
+                  145
+                ],
+                [
+                  "T11",
+                  155,
+                  150
+                ],
+                [
+                  "T12",
+                  160,
+                  155
+                ],
+                [
+                  "T1",
+                  150,
+                  160
+                ],
+                [
+                  "T2",
+                  170,
+                  165
+                ],
+                [
+                  "T3",
+                  165,
+                  170
+                ],
+                [
+                  "T4",
+                  175,
+                  175
+                ],
+                [
+                  "T5",
+                  180,
+                  180
+                ],
+                [
+                  "T6",
+                  190,
+                  185
+                ],
+                [
+                  "T7",
+                  185,
+                  190
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "tt",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash",
+          "title": "Dòng tiền",
+          "height": 150,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "tt",
+                  "type": "number",
+                  "label": "Thực tế"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  3900,
+                  3800
+                ],
+                [
+                  "T9",
+                  3950,
+                  3850
+                ],
+                [
+                  "T10",
+                  4000,
+                  3900
+                ],
+                [
+                  "T11",
+                  4050,
+                  3950
+                ],
+                [
+                  "T12",
+                  4100,
+                  4000
+                ],
+                [
+                  "T1",
+                  4150,
+                  4050
+                ],
+                [
+                  "T2",
+                  4200,
+                  4100
+                ],
+                [
+                  "T3",
+                  4250,
+                  4150
+                ],
+                [
+                  "T4",
+                  4300,
+                  4200
+                ],
+                [
+                  "T5",
+                  4350,
+                  4250
+                ],
+                [
+                  "T6",
+                  4400,
+                  4300
+                ],
+                [
+                  "T7",
+                  4450,
+                  4350
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "tt",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Đánh giá chung",
+      "items": [
+        {
+          "id": "b_ai_insight",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá chung</div><p style=\"font-size:12.5px;color:#1e293b;line-height:1.6;margin:0\">Trong tháng hiện tại, tình hình SXKD của TCT duy trì ổn định. Tổng doanh thu và thu nhập đạt <b>21.500 tỉ</b>, vượt 1.2% so với KH và tăng 9% so với CK. Doanh thu HĐKD đạt <b>20.100 tỉ</b>, vượt 0.8% so với KH. Lợi nhuận trước thuế đạt <b>1.820 tỉ</b>, giảm 4% so với KH nhưng tăng 7% so với CK. Dòng tiền đạt <b>4.250 tỉ</b>, vượt 2.1% so với KH và tăng 15% so với CK, cho thấy dòng tiền ổn định và khả quan.</p></div>",
+              "backgroundClassName": "",
+              "borderClassName": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

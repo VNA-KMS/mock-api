@@ -1,0 +1,533 @@
+{
+  "titleInfo": {
+    "title": "Training Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "Huấn luyện, đào tạo PC, TV",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "hoan-thanh",
+        "status": "compact",
+        "title": "Tỷ lệ hoàn thành đào tạo",
+        "value": "94.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "2.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "khoa-dat",
+        "status": "compact",
+        "title": "Số khóa đạt",
+        "value": "186",
+        "unit": "khóa",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "12 vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "khoa-chua-dat",
+        "status": "compact",
+        "title": "Số khóa chưa đạt",
+        "value": "12",
+        "unit": "khóa",
+        "backgroundStatus": 3,
+        "trend": {
+          "direction": "down",
+          "label": "3 vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "gio-sim",
+        "status": "compact",
+        "title": "Tổng giờ SIM",
+        "value": "1.245",
+        "unit": "h",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "3.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "ty-le-su-dung-sim",
+        "status": "compact",
+        "title": "Tỷ lệ sử dụng SIM",
+        "value": "87.5",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "2.1% vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Tỷ lệ hoàn thành theo nhóm",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "PC Định kỳ ATKT",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "T06/2026",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "KH T06/2026",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "PC Định kỳ ATKT",
+                  96.5,
+                  95.0
+                ],
+                [
+                  "TV Định kỳ ATKT",
+                  93.2,
+                  92.0
+                ],
+                [
+                  "Chuyển loại TV",
+                  91.8,
+                  90.0
+                ],
+                [
+                  "Chuyển loại PCCB",
+                  89.5,
+                  88.0
+                ],
+                [
+                  "Chuyển loại PC KT",
+                  88.0,
+                  86.0
+                ],
+                [
+                  "NVĐHKT",
+                  95.5,
+                  94.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-1",
+          "title": "Xu hướng tỷ lệ hoàn thành",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "T1",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Tỷ lệ hoàn thành",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Cùng kỳ 2025",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  88.5,
+                  87.0,
+                  84.2
+                ],
+                [
+                  "T2",
+                  89.2,
+                  87.5,
+                  84.8
+                ],
+                [
+                  "T3",
+                  90.1,
+                  88.0,
+                  85.5
+                ],
+                [
+                  "T4",
+                  91.0,
+                  88.5,
+                  86.2
+                ],
+                [
+                  "T5",
+                  92.3,
+                  89.0,
+                  87.0
+                ],
+                [
+                  "T6",
+                  94.2,
+                  89.5,
+                  87.8
+                ],
+                [
+                  "T7",
+                  93.5,
+                  90.0,
+                  87.2
+                ],
+                [
+                  "T8",
+                  92.8,
+                  90.0,
+                  86.5
+                ],
+                [
+                  "T9",
+                  91.6,
+                  89.5,
+                  85.8
+                ],
+                [
+                  "T10",
+                  90.5,
+                  89.0,
+                  85.0
+                ],
+                [
+                  "T11",
+                  89.8,
+                  88.5,
+                  84.5
+                ],
+                [
+                  "T12",
+                  91.0,
+                  89.0,
+                  85.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "So sánh 6 chỉ số đào tạo",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "PC định kỳ ATKT",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Đạt",
+                  "color": "#22c55e"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Chưa đạt",
+                  "color": "#ef4444"
+                }
+              ],
+              "rows": [
+                [
+                  "PC định kỳ ATKT",
+                  182,
+                  12
+                ],
+                [
+                  "TV định kỳ ATKT",
+                  145,
+                  8
+                ],
+                [
+                  "Chuyển loại TV",
+                  86,
+                  6
+                ],
+                [
+                  "Chuyển loại PCCB",
+                  52,
+                  4
+                ],
+                [
+                  "Chuyển loại PC khai thác",
+                  38,
+                  3
+                ],
+                [
+                  "NVĐHKT",
+                  28,
+                  2
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "Xu hướng tỷ lệ hoàn thành đào tạo",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "Series 1",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "Series 2",
+                  "color": "#14b8a6"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "Series 3",
+                  "color": "#8b5cf6"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  101.9,
+                  99,
+                  100.1
+                ],
+                [
+                  "T2",
+                  108.1,
+                  101.3,
+                  90.5
+                ],
+                [
+                  "T3",
+                  100.4,
+                  101.2,
+                  90.6
+                ],
+                [
+                  "T4",
+                  95.1,
+                  93.3,
+                  92.2
+                ],
+                [
+                  "T5",
+                  96.4,
+                  90.3,
+                  102.4
+                ],
+                [
+                  "T6",
+                  96.6,
+                  92.7,
+                  97.6
+                ],
+                [
+                  "T7",
+                  102.8,
+                  109.4,
+                  109.6
+                ],
+                [
+                  "T8",
+                  108,
+                  102.4,
+                  92.6
+                ],
+                [
+                  "T9",
+                  98.2,
+                  100.4,
+                  92.3
+                ],
+                [
+                  "T10",
+                  92.9,
+                  103.7,
+                  91.5
+                ],
+                [
+                  "T11",
+                  107.8,
+                  97.4,
+                  95.9
+                ],
+                [
+                  "T12",
+                  101.3,
+                  108,
+                  108.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

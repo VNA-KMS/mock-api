@@ -1,0 +1,1364 @@
+{
+  "titleInfo": {
+    "title": "Tiết kiệm nhiên liệu + Fuel Burn",
+    "statusLabel": "REAL TIME",
+    "description": "Giải pháp tiết kiệm NL, Fuel Burn",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "2.1% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "bh",
+        "status": "compact",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "1.5% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fh",
+        "status": "compact",
+        "title": "FH",
+        "value": "4.35",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "1.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "fuel-burn-bh",
+        "status": "compact",
+        "title": "Fuel Burn/BH",
+        "value": "2.45",
+        "unit": "tấn/giờ",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "1.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "taxi-time",
+        "status": "compact",
+        "title": "Taxi Time TB",
+        "value": "18.4",
+        "unit": "phút",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "down",
+          "label": "0.8ph vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Flight Time vs Fuel Burn/BH",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "Flight Time (h)",
+                  "color": "rgba(96,165,250,0.7)"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "FB/BH (tan/gio)",
+                  "color": "rgba(100,116,139,0.4)"
+                }
+              ],
+              "rows": [
+                [
+                  9.5,
+                  2.855
+                ],
+                [
+                  6.9,
+                  2.662
+                ],
+                [
+                  10.2,
+                  3.33
+                ],
+                [
+                  11.2,
+                  3.096
+                ],
+                [
+                  8.0,
+                  2.678
+                ],
+                [
+                  6.5,
+                  2.783
+                ],
+                [
+                  5.2,
+                  2.443
+                ],
+                [
+                  9.5,
+                  3.167
+                ],
+                [
+                  6.5,
+                  2.834
+                ],
+                [
+                  10.7,
+                  2.988
+                ],
+                [
+                  10.6,
+                  3.391
+                ],
+                [
+                  7.4,
+                  2.681
+                ],
+                [
+                  11.7,
+                  3.306
+                ],
+                [
+                  5.6,
+                  2.43
+                ],
+                [
+                  10.9,
+                  3.37
+                ],
+                [
+                  10.6,
+                  3.41
+                ],
+                [
+                  8.8,
+                  3.34
+                ],
+                [
+                  7.6,
+                  2.943
+                ],
+                [
+                  10.8,
+                  3.367
+                ],
+                [
+                  11.0,
+                  3.366
+                ],
+                [
+                  9.9,
+                  2.915
+                ],
+                [
+                  6.6,
+                  2.666
+                ],
+                [
+                  5.6,
+                  2.512
+                ],
+                [
+                  5.7,
+                  2.551
+                ],
+                [
+                  9.4,
+                  3.047
+                ],
+                [
+                  7.6,
+                  2.738
+                ],
+                [
+                  6.9,
+                  3.09
+                ],
+                [
+                  9.5,
+                  3.205
+                ],
+                [
+                  6.2,
+                  2.881
+                ],
+                [
+                  6.1,
+                  2.66
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "x",
+                "series": [
+                  {
+                    "field": "y",
+                    "chartType": "scatter"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-1",
+          "title": "Taxi Time vs Fuel Burn/BH",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "x",
+                  "type": "number",
+                  "label": "Taxi Time (phut)",
+                  "color": "rgba(52,211,153,0.7)"
+                },
+                {
+                  "id": "y",
+                  "type": "number",
+                  "label": "FB/BH (tan/gio)",
+                  "color": "rgba(100,116,139,0.4)"
+                }
+              ],
+              "rows": [
+                [
+                  27.8,
+                  2.946
+                ],
+                [
+                  20.0,
+                  2.748
+                ],
+                [
+                  25.2,
+                  2.977
+                ],
+                [
+                  14.1,
+                  2.049
+                ],
+                [
+                  15.7,
+                  2.285
+                ],
+                [
+                  13.8,
+                  2.768
+                ],
+                [
+                  25.8,
+                  2.626
+                ],
+                [
+                  21.8,
+                  2.571
+                ],
+                [
+                  26.5,
+                  2.762
+                ],
+                [
+                  14.8,
+                  2.241
+                ],
+                [
+                  20.1,
+                  2.413
+                ],
+                [
+                  20.5,
+                  2.933
+                ],
+                [
+                  17.2,
+                  2.291
+                ],
+                [
+                  28.0,
+                  2.848
+                ],
+                [
+                  11.6,
+                  1.986
+                ],
+                [
+                  12.0,
+                  2.462
+                ],
+                [
+                  24.3,
+                  2.667
+                ],
+                [
+                  11.1,
+                  2.238
+                ],
+                [
+                  27.9,
+                  2.86
+                ],
+                [
+                  27.5,
+                  3.114
+                ],
+                [
+                  10.2,
+                  2.483
+                ],
+                [
+                  22.3,
+                  2.699
+                ],
+                [
+                  14.8,
+                  2.557
+                ],
+                [
+                  12.0,
+                  2.308
+                ],
+                [
+                  18.2,
+                  2.909
+                ],
+                [
+                  25.8,
+                  2.585
+                ],
+                [
+                  19.0,
+                  2.313
+                ],
+                [
+                  26.4,
+                  3.088
+                ],
+                [
+                  15.4,
+                  2.573
+                ],
+                [
+                  21.0,
+                  2.352
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "x",
+                "series": [
+                  {
+                    "field": "y",
+                    "chartType": "scatter"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-0-2",
+          "title": "Flight Time × Taxi Time — Fuel Burn/BH",
+          "col": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "flight_time",
+                  "type": "string"
+                },
+                {
+                  "id": "taxi_time",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "<6h",
+                  "<12ph",
+                  2.45
+                ],
+                [
+                  "<6h",
+                  "12-18ph",
+                  2.3
+                ],
+                [
+                  "<6h",
+                  "18-24ph",
+                  2.42
+                ],
+                [
+                  "<6h",
+                  ">24ph",
+                  2.11
+                ],
+                [
+                  "6-8h",
+                  "<12ph",
+                  2.68
+                ],
+                [
+                  "6-8h",
+                  "12-18ph",
+                  2.54
+                ],
+                [
+                  "6-8h",
+                  "18-24ph",
+                  2.33
+                ],
+                [
+                  "6-8h",
+                  ">24ph",
+                  2.43
+                ],
+                [
+                  "8-10h",
+                  "<12ph",
+                  2.63
+                ],
+                [
+                  "8-10h",
+                  "12-18ph",
+                  2.71
+                ],
+                [
+                  "8-10h",
+                  "18-24ph",
+                  2.49
+                ],
+                [
+                  "8-10h",
+                  ">24ph",
+                  2.42
+                ],
+                [
+                  "10-12h",
+                  "<12ph",
+                  2.94
+                ],
+                [
+                  "10-12h",
+                  "12-18ph",
+                  3.02
+                ],
+                [
+                  "10-12h",
+                  "18-24ph",
+                  2.66
+                ],
+                [
+                  "10-12h",
+                  ">24ph",
+                  2.62
+                ],
+                [
+                  ">12h",
+                  "<12ph",
+                  3.17
+                ],
+                [
+                  ">12h",
+                  "12-18ph",
+                  3.22
+                ],
+                [
+                  ">12h",
+                  "18-24ph",
+                  2.99
+                ],
+                [
+                  ">12h",
+                  ">24ph",
+                  2.84
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "flight_time",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "heatmap"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "Top 10 đường bay FB/BH cao nhất",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "route",
+                  "type": "string",
+                  "label": "Duong bay"
+                },
+                {
+                  "id": "value",
+                  "type": "number",
+                  "label": "FB/BH (tan/gio)"
+                }
+              ],
+              "rows": [
+                [
+                  "SGN-HAN",
+                  2.45
+                ],
+                [
+                  "SGN-DAD",
+                  2.38
+                ],
+                [
+                  "SGN-CXR",
+                  2.32
+                ],
+                [
+                  "HAN-SGN",
+                  2.28
+                ],
+                [
+                  "SGN-DIN",
+                  2.25
+                ],
+                [
+                  "DAD-SGN",
+                  2.21
+                ],
+                [
+                  "SGN-VCA",
+                  2.18
+                ],
+                [
+                  "HAN-DAD",
+                  2.15
+                ],
+                [
+                  "DIN-SGN",
+                  2.12
+                ],
+                [
+                  "SGN-BMY",
+                  2.08
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "route",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-1-1",
+          "title": "Top tàu bay tiêu hao FB/BH nhiều nhất",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "series_1",
+                  "type": "number",
+                  "label": "FB/BH",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "series_2",
+                  "type": "number",
+                  "label": "FH/ngay",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "series_3",
+                  "type": "number",
+                  "label": "BH/ngay",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  101.8,
+                  92.8,
+                  96.2
+                ],
+                [
+                  "T2",
+                  97.1,
+                  93.6,
+                  97.6
+                ],
+                [
+                  "T3",
+                  101.4,
+                  98.8,
+                  90.9
+                ],
+                [
+                  "T4",
+                  93.3,
+                  108.6,
+                  92.2
+                ],
+                [
+                  "T5",
+                  90.2,
+                  106.8,
+                  103.2
+                ],
+                [
+                  "T6",
+                  97.1,
+                  94.1,
+                  94.3
+                ],
+                [
+                  "T7",
+                  99.3,
+                  93.9,
+                  101.9
+                ],
+                [
+                  "T8",
+                  107.7,
+                  92.5,
+                  96.4
+                ],
+                [
+                  "T9",
+                  99,
+                  103.7,
+                  95.8
+                ],
+                [
+                  "T10",
+                  103.9,
+                  106.6,
+                  91.5
+                ],
+                [
+                  "T11",
+                  93,
+                  103.2,
+                  90.1
+                ],
+                [
+                  "T12",
+                  104.6,
+                  103.5,
+                  98.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "series_1",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "series_2",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "series_3",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "Taxi Time vs FB/BH (theo khoảng taxi)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "x1",
+                  "type": "number",
+                  "label": "<10p taxi",
+                  "color": "#34d399"
+                },
+                {
+                  "id": "y1",
+                  "type": "number",
+                  "label": "<10p taxi FB/BH",
+                  "color": "#34d399"
+                },
+                {
+                  "id": "x2",
+                  "type": "number",
+                  "label": "10-20p",
+                  "color": "#fbbf24"
+                },
+                {
+                  "id": "y2",
+                  "type": "number",
+                  "label": "10-20p FB/BH",
+                  "color": "#fbbf24"
+                },
+                {
+                  "id": "x3",
+                  "type": "number",
+                  "label": "20-30p",
+                  "color": "#fb923c"
+                },
+                {
+                  "id": "y3",
+                  "type": "number",
+                  "label": "20-30p FB/BH",
+                  "color": "#fb923c"
+                },
+                {
+                  "id": "x4",
+                  "type": "number",
+                  "label": ">30p",
+                  "color": "#f87171"
+                },
+                {
+                  "id": "y4",
+                  "type": "number",
+                  "label": ">30p FB/BH",
+                  "color": "#f87171"
+                }
+              ],
+              "rows": [
+                [
+                  8.8,
+                  2.02,
+                  16.6,
+                  2.54,
+                  29.5,
+                  3.27,
+                  41.2,
+                  2.94
+                ],
+                [
+                  8.2,
+                  2.16,
+                  15.2,
+                  2.38,
+                  29.0,
+                  3.14,
+                  41.2,
+                  2.95
+                ],
+                [
+                  7.6,
+                  2.07,
+                  17.1,
+                  2.44,
+                  30.4,
+                  3.16,
+                  42.8,
+                  2.98
+                ],
+                [
+                  9.5,
+                  2.18,
+                  14.5,
+                  2.36,
+                  30.5,
+                  3.15,
+                  42.0,
+                  2.93
+                ],
+                [
+                  8.2,
+                  2.19,
+                  16.7,
+                  2.52,
+                  30.0,
+                  2.99,
+                  41.7,
+                  3.15
+                ],
+                [
+                  7.9,
+                  2.12,
+                  15.8,
+                  2.47,
+                  28.8,
+                  3.08,
+                  43.5,
+                  3.02
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "x1",
+                "series": [
+                  {
+                    "field": "x1",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y1",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x2",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y2",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x3",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y3",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x4",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y4",
+                    "chartType": "scatter"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-2-1",
+          "title": "Flight Time vs FB/BH (theo khoảng bay)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "x1",
+                  "type": "number",
+                  "label": "1-2h bay",
+                  "color": "#34d399"
+                },
+                {
+                  "id": "y1",
+                  "type": "number",
+                  "label": "1-2h FB/BH",
+                  "color": "#34d399"
+                },
+                {
+                  "id": "x2",
+                  "type": "number",
+                  "label": "2-3h",
+                  "color": "#fbbf24"
+                },
+                {
+                  "id": "y2",
+                  "type": "number",
+                  "label": "2-3h FB/BH",
+                  "color": "#fbbf24"
+                },
+                {
+                  "id": "x3",
+                  "type": "number",
+                  "label": "3-4h",
+                  "color": "#fb923c"
+                },
+                {
+                  "id": "y3",
+                  "type": "number",
+                  "label": "3-4h FB/BH",
+                  "color": "#fb923c"
+                },
+                {
+                  "id": "x4",
+                  "type": "number",
+                  "label": ">4h",
+                  "color": "#f87171"
+                },
+                {
+                  "id": "y4",
+                  "type": "number",
+                  "label": ">4h FB/BH",
+                  "color": "#f87171"
+                }
+              ],
+              "rows": [
+                [
+                  1.72,
+                  2.52,
+                  2.87,
+                  2.63,
+                  4.04,
+                  3.0,
+                  4.97,
+                  3.6
+                ],
+                [
+                  1.42,
+                  2.3,
+                  2.55,
+                  2.56,
+                  4.05,
+                  3.17,
+                  5.31,
+                  3.54
+                ],
+                [
+                  1.46,
+                  2.37,
+                  2.7,
+                  2.57,
+                  4.39,
+                  3.11,
+                  5.1,
+                  3.57
+                ],
+                [
+                  1.41,
+                  2.58,
+                  2.71,
+                  2.76,
+                  4.02,
+                  3.1,
+                  5.02,
+                  3.51
+                ],
+                [
+                  1.74,
+                  2.39,
+                  2.61,
+                  2.56,
+                  4.49,
+                  3.14,
+                  5.2,
+                  3.67
+                ],
+                [
+                  1.38,
+                  2.45,
+                  2.48,
+                  2.52,
+                  4.28,
+                  3.08,
+                  5.45,
+                  3.62
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "x1",
+                "series": [
+                  {
+                    "field": "x1",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y1",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x2",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y2",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x3",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y3",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "x4",
+                    "chartType": "scatter"
+                  },
+                  {
+                    "field": "y4",
+                    "chartType": "scatter"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-3-0",
+          "title": "Fuel Saving & Chi phí & CO₂ giảm phát thải",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "fuel_saving",
+                  "type": "number",
+                  "label": "Fuel Saving (tấn)",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "chi_phi",
+                  "type": "number",
+                  "label": "Chi phí tiết kiệm (tỷ VND)",
+                  "color": "#4CAF50"
+                },
+                {
+                  "id": "co2",
+                  "type": "number",
+                  "label": "CO₂ giảm (tấn)",
+                  "color": "#009688"
+                },
+                {
+                  "id": "ck_2025",
+                  "type": "number",
+                  "label": "Cùng kỳ 2025 (tấn)",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH Fuel Saving (tấn)",
+                  "color": "#d0d1d3"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  280,
+                  5.6,
+                  890,
+                  245,
+                  270
+                ],
+                [
+                  "T2",
+                  295,
+                  5.9,
+                  938,
+                  258,
+                  280
+                ],
+                [
+                  "T3",
+                  310,
+                  6.2,
+                  985,
+                  270,
+                  295
+                ],
+                [
+                  "T4",
+                  325,
+                  6.5,
+                  1033,
+                  282,
+                  310
+                ],
+                [
+                  "T5",
+                  330,
+                  6.6,
+                  1049,
+                  290,
+                  315
+                ],
+                [
+                  "T6",
+                  345,
+                  6.9,
+                  1097,
+                  300,
+                  325
+                ],
+                [
+                  "T7",
+                  358,
+                  7.2,
+                  1138,
+                  310,
+                  338
+                ],
+                [
+                  "T8",
+                  365,
+                  7.3,
+                  1161,
+                  318,
+                  348
+                ],
+                [
+                  "T9",
+                  372,
+                  7.4,
+                  1183,
+                  325,
+                  355
+                ],
+                [
+                  "T10",
+                  380,
+                  7.5,
+                  1208,
+                  332,
+                  362
+                ],
+                [
+                  "T11",
+                  385,
+                  7.6,
+                  1224,
+                  338,
+                  368
+                ],
+                [
+                  "T12",
+                  390,
+                  7.7,
+                  1240,
+                  342,
+                  375
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "fuel_saving",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "chi_phi",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "co2",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "ck_2025",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "item-3-1",
+          "title": "Giải pháp TK NL & lượng NL tiết kiệm",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "solution",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number",
+                  "label": "Tiet kiem (tan NL)"
+                }
+              ],
+              "rows": [
+                [
+                  "Giam taxi time",
+                  95
+                ],
+                [
+                  "Toi uu duong bay",
+                  78
+                ],
+                [
+                  "Giam tai trong",
+                  62
+                ],
+                [
+                  "Toi uu Altitude",
+                  45
+                ],
+                [
+                  "Fuel Tankering",
+                  38
+                ],
+                [
+                  "Ve sinh dong co",
+                  30
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "solution",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
