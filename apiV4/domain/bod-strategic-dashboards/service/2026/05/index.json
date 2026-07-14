@@ -175,125 +175,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  68,
-                  72,
-                  70
-                ],
-                [
-                  "T9",
-                  69,
-                  73,
-                  71
-                ],
-                [
-                  "T10",
-                  70,
-                  74,
-                  72
-                ],
-                [
-                  "T11",
-                  69,
-                  73,
-                  71
-                ],
-                [
-                  "T12",
-                  71,
-                  75,
-                  73
-                ],
-                [
-                  "T1",
-                  72,
-                  76,
-                  74
-                ],
-                [
-                  "T2",
-                  72,
-                  76,
-                  74
-                ],
-                [
-                  "T3",
-                  73,
-                  77,
-                  75
-                ],
-                [
-                  "T4",
-                  74,
-                  78,
-                  76
-                ],
-                [
-                  "T5",
-                  74,
-                  78,
-                  76
-                ],
-                [
-                  "T6",
-                  75,
-                  80,
-                  77
-                ],
-                [
-                  "T7",
-                  68,
-                  72,
-                  70
-                ]
+                ["T1", 76, 72, 68],
+                ["T2", 76, 72, 68],
+                ["T3", 77, 73, 69],
+                ["T4", 78, 74, 70],
+                ["T5", 78, 74, 70],
+                ["T6", null, 75, 71],
+                ["T7", null, 68, 64],
+                ["T8", null, 69, 65],
+                ["T9", null, 70, 66],
+                ["T10", null, 71, 67],
+                ["T11", null, 70, 66],
+                ["T12", null, 72, 68]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         },
         {
@@ -308,125 +219,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  64,
-                  68,
-                  66
-                ],
-                [
-                  "T9",
-                  65,
-                  69,
-                  67
-                ],
-                [
-                  "T10",
-                  66,
-                  70,
-                  68
-                ],
-                [
-                  "T11",
-                  65,
-                  69,
-                  67
-                ],
-                [
-                  "T12",
-                  67,
-                  71,
-                  69
-                ],
-                [
-                  "T1",
-                  68,
-                  72,
-                  70
-                ],
-                [
-                  "T2",
-                  68,
-                  72,
-                  70
-                ],
-                [
-                  "T3",
-                  69,
-                  73,
-                  71
-                ],
-                [
-                  "T4",
-                  70,
-                  74,
-                  72
-                ],
-                [
-                  "T5",
-                  70,
-                  74,
-                  72
-                ],
-                [
-                  "T6",
-                  71,
-                  76,
-                  73
-                ],
-                [
-                  "T7",
-                  64,
-                  68,
-                  66
-                ]
+                ["T1", 72, 68, 64],
+                ["T2", 72, 68, 64],
+                ["T3", 73, 69, 65],
+                ["T4", 74, 70, 66],
+                ["T5", 74, 70, 66],
+                ["T6", null, 71, 67],
+                ["T7", null, 64, 60],
+                ["T8", null, 65, 61],
+                ["T9", null, 66, 62],
+                ["T10", null, 67, 63],
+                ["T11", null, 66, 62],
+                ["T12", null, 68, 64]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         },
         {
@@ -441,125 +263,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  72,
-                  76,
-                  74
-                ],
-                [
-                  "T9",
-                  73,
-                  77,
-                  75
-                ],
-                [
-                  "T10",
-                  74,
-                  78,
-                  76
-                ],
-                [
-                  "T11",
-                  73,
-                  77,
-                  75
-                ],
-                [
-                  "T12",
-                  75,
-                  79,
-                  77
-                ],
-                [
-                  "T1",
-                  76,
-                  80,
-                  78
-                ],
-                [
-                  "T2",
-                  76,
-                  80,
-                  78
-                ],
-                [
-                  "T3",
-                  77,
-                  81,
-                  79
-                ],
-                [
-                  "T4",
-                  78,
-                  82,
-                  80
-                ],
-                [
-                  "T5",
-                  78,
-                  82,
-                  80
-                ],
-                [
-                  "T6",
-                  79,
-                  84,
-                  81
-                ],
-                [
-                  "T7",
-                  72,
-                  76,
-                  74
-                ]
+                ["T1", 80, 76, 72],
+                ["T2", 80, 76, 72],
+                ["T3", 81, 77, 73],
+                ["T4", 82, 78, 74],
+                ["T5", 82, 78, 74],
+                ["T6", null, 79, 75],
+                ["T7", null, 72, 68],
+                ["T8", null, 73, 69],
+                ["T9", null, 74, 70],
+                ["T10", null, 75, 71],
+                ["T11", null, 74, 70],
+                ["T12", null, 76, 72]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         }
       ]
@@ -579,125 +312,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  4,
-                  4.12,
-                  4.06
-                ],
-                [
-                  "T9",
-                  4.03,
-                  4.15,
-                  4.09
-                ],
-                [
-                  "T10",
-                  4.06,
-                  4.18,
-                  4.12
-                ],
-                [
-                  "T11",
-                  4.04,
-                  4.16,
-                  4.1
-                ],
-                [
-                  "T12",
-                  4.08,
-                  4.2,
-                  4.14
-                ],
-                [
-                  "T1",
-                  4.1,
-                  4.22,
-                  4.16
-                ],
-                [
-                  "T2",
-                  4.1,
-                  4.22,
-                  4.16
-                ],
-                [
-                  "T3",
-                  4.13,
-                  4.25,
-                  4.19
-                ],
-                [
-                  "T4",
-                  4.16,
-                  4.28,
-                  4.22
-                ],
-                [
-                  "T5",
-                  4.16,
-                  4.28,
-                  4.22
-                ],
-                [
-                  "T6",
-                  4.18,
-                  4.3,
-                  4.24
-                ],
-                [
-                  "T7",
-                  4,
-                  4.12,
-                  4.06
-                ]
+                ["T1", 4.22, 4.10, 3.98],
+                ["T2", 4.22, 4.10, 3.98],
+                ["T3", 4.25, 4.13, 4.01],
+                ["T4", 4.28, 4.16, 4.04],
+                ["T5", 4.28, 4.16, 4.04],
+                ["T6", null, 4.18, 4.06],
+                ["T7", null, 4.00, 3.88],
+                ["T8", null, 4.03, 3.91],
+                ["T9", null, 4.06, 3.94],
+                ["T10", null, 4.08, 3.96],
+                ["T11", null, 4.06, 3.94],
+                ["T12", null, 4.10, 3.98]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         },
         {
@@ -712,125 +356,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  3.86,
-                  3.98,
-                  3.92
-                ],
-                [
-                  "T9",
-                  3.88,
-                  4,
-                  3.94
-                ],
-                [
-                  "T10",
-                  3.9,
-                  4.02,
-                  3.96
-                ],
-                [
-                  "T11",
-                  3.88,
-                  4,
-                  3.94
-                ],
-                [
-                  "T12",
-                  3.92,
-                  4.04,
-                  3.98
-                ],
-                [
-                  "T1",
-                  3.94,
-                  4.06,
-                  4
-                ],
-                [
-                  "T2",
-                  3.94,
-                  4.06,
-                  4
-                ],
-                [
-                  "T3",
-                  3.96,
-                  4.08,
-                  4.02
-                ],
-                [
-                  "T4",
-                  3.98,
-                  4.1,
-                  4.04
-                ],
-                [
-                  "T5",
-                  3.98,
-                  4.1,
-                  4.04
-                ],
-                [
-                  "T6",
-                  4,
-                  4.12,
-                  4.06
-                ],
-                [
-                  "T7",
-                  3.86,
-                  3.98,
-                  3.92
-                ]
+                ["T1", 4.06, 3.94, 3.82],
+                ["T2", 4.06, 3.94, 3.82],
+                ["T3", 4.08, 3.96, 3.84],
+                ["T4", 4.10, 3.98, 3.86],
+                ["T5", 4.10, 3.98, 3.86],
+                ["T6", null, 4.00, 3.88],
+                ["T7", null, 3.86, 3.74],
+                ["T8", null, 3.88, 3.76],
+                ["T9", null, 3.90, 3.78],
+                ["T10", null, 3.92, 3.80],
+                ["T11", null, 3.90, 3.78],
+                ["T12", null, 3.94, 3.82]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         },
         {
@@ -845,125 +400,36 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                {
-                  "id": "month",
-                  "type": "string"
-                },
-                {
-                  "id": "ck",
-                  "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "tt",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#2563eb"
-                },
-                {
-                  "id": "mt",
-                  "type": "number",
-                  "label": "Mục tiêu",
-                  "color": "#D3AC2B"
-                }
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
+                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
               ],
               "rows": [
-                [
-                  "T8",
-                  4.16,
-                  4.28,
-                  4.22
-                ],
-                [
-                  "T9",
-                  4.18,
-                  4.3,
-                  4.24
-                ],
-                [
-                  "T10",
-                  4.2,
-                  4.32,
-                  4.26
-                ],
-                [
-                  "T11",
-                  4.18,
-                  4.3,
-                  4.24
-                ],
-                [
-                  "T12",
-                  4.22,
-                  4.34,
-                  4.28
-                ],
-                [
-                  "T1",
-                  4.24,
-                  4.36,
-                  4.3
-                ],
-                [
-                  "T2",
-                  4.24,
-                  4.36,
-                  4.3
-                ],
-                [
-                  "T3",
-                  4.26,
-                  4.38,
-                  4.32
-                ],
-                [
-                  "T4",
-                  4.28,
-                  4.4,
-                  4.34
-                ],
-                [
-                  "T5",
-                  4.28,
-                  4.4,
-                  4.34
-                ],
-                [
-                  "T6",
-                  4.3,
-                  4.42,
-                  4.36
-                ],
-                [
-                  "T7",
-                  4.16,
-                  4.28,
-                  4.22
-                ]
+                ["T1", 4.36, 4.24, 4.12],
+                ["T2", 4.36, 4.24, 4.12],
+                ["T3", 4.38, 4.26, 4.14],
+                ["T4", 4.40, 4.28, 4.16],
+                ["T5", 4.40, 4.28, 4.16],
+                ["T6", null, 4.30, 4.18],
+                ["T7", null, 4.16, 4.04],
+                ["T8", null, 4.18, 4.06],
+                ["T9", null, 4.20, 4.08],
+                ["T10", null, 4.22, 4.10],
+                ["T11", null, 4.20, 4.08],
+                ["T12", null, 4.24, 4.12]
               ]
             },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                  {
-                    "field": "ck",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "tt",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "mt",
-                    "chartType": "line"
-                  }
-                ]
-              }
-            ]
+            "views": [{
+              "id": "main",
+              "chartType": "auto",
+              "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "yearAgo", "chartType": "line" },
+                { "field": "twoYearsAgo", "chartType": "line" }
+              ]
+            }]
           }
         }
       ]
