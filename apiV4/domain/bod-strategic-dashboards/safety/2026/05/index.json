@@ -8,85 +8,102 @@
     "accentClassName": "bg-regal-blue",
     "items": [
       {
-        "id": "t_cuc",
+        "id": "m_total",
         "status": "compact",
-        "title": "Số vụ việc bc Cục HK",
+        "title": "Số vụ việc b/c Cục HK",
         "value": "42",
-        "unit": "vụ",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "3 vụ với tháng trước",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "5 vụ với cùng kỳ",
-            "tone": "positive",
-            "status": 0
-          }
-        ]
-      },
-      {
-        "id": "t_human",
-        "status": "compact",
-        "title": "Sự cố yếu tố con người",
-        "value": "8",
-        "unit": "vụ",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "1 vụ với tháng trước",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "t_ktb",
-        "status": "compact",
-        "title": "Sự cố LV khai thác bay",
-        "value": "6",
-        "unit": "vụ",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "1 vụ với cùng kỳ",
-            "tone": "positive",
-            "status": 0
-          }
-        ]
-      },
-      {
-        "id": "t_kt",
-        "status": "compact",
-        "title": "Sự cố LV kỹ thuật",
-        "value": "5",
-        "unit": "vụ",
-        "backgroundStatus": 3,
+        "unit": "số vụ",
+        "backgroundStatus": 2,
         "trend": [
           {
             "direction": "down",
-            "label": "1 vụ với tháng trước",
+            "label": "2 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "5 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human",
+        "status": "compact",
+        "title": "Sự cố liên quan yếu tố con người",
+        "value": "8",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1 so với tháng trước",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2 so với cùng kỳ",
             "tone": "negative"
           }
         ]
       },
       {
-        "id": "t_ktmd",
+        "id": "m_flight",
         "status": "compact",
-        "title": "Sự cố LV KTMĐ",
-        "value": "4",
-        "unit": "vụ",
-        "backgroundStatus": 3,
+        "title": "Sự cố LV khai thác bay",
+        "value": "6",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
         "trend": [
           {
             "direction": "down",
-            "label": "2 vụ với cùng kỳ",
-            "tone": "negative",
-            "status": 0
+            "label": "1 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "2 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_tech",
+        "status": "compact",
+        "title": "Sự cố LV kỹ thuật",
+        "value": "5",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0 so với tháng trước",
+            "tone": "neutral"
+          },
+          {
+            "direction": "down",
+            "label": "1 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_wx",
+        "status": "compact",
+        "title": "Sự cố LV KTMĐ",
+        "value": "4",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "2 so với cùng kỳ",
+            "tone": "positive"
           }
         ]
       }
@@ -94,17 +111,14 @@
   },
   "chartBoard": [
     {
-      "title": "Strategic Trend Zone",
-      "columns": 2,
+      "title": "Bảng phân loại các sự cố theo A, B, C, D, E theo tháng lũy kế",
       "items": [
         {
           "id": "b_class",
-          "title": "Bảng phân loại sự cố A,B,C,D,E theo tháng (luỹ kế)",
           "col": 1,
+          "colSpan": 60,
           "row": 1,
-          "colSpan": 1,
           "rowSpan": 1,
-          "aspectRatio": 1.8,
           "extraComponent": {
             "type": "table",
             "position": "top",
@@ -134,73 +148,67 @@
                     "label": "T7"
                   },
                   {
-                    "id": "ytd",
+                    "id": "lky",
                     "type": "number",
-                    "label": "Luỹ kế"
-                  },
-                  {
-                    "id": "ck",
-                    "type": "number",
-                    "label": "Cùng kỳ"
+                    "label": "Lũy kế"
                   }
                 ],
                 "rows": [
                   [
-                    "A",
-                    0,
+                    "A (rất nặng)",
                     0,
                     0,
                     0,
                     0
                   ],
                   [
-                    "B",
+                    "B (nặng)",
                     0,
-                    1,
                     0,
-                    1,
+                    0,
                     0
                   ],
                   [
-                    "C",
-                    2,
+                    "C (trung bình)",
+                    1,
+                    1,
+                    0,
+                    2
+                  ],
+                  [
+                    "D (nhẹ)",
                     3,
                     2,
-                    14,
-                    11
+                    2,
+                    7
                   ],
                   [
-                    "D",
-                    5,
-                    6,
-                    5,
-                    38,
-                    34
-                  ],
-                  [
-                    "E",
+                    "E (khác)",
                     8,
-                    9,
-                    8,
-                    62,
-                    58
+                    10,
+                    11,
+                    33
                   ]
                 ]
               }
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "title": "Số lượng các sự cố theo tháng từ đầu năm",
+      "items": [
         {
           "id": "b_trend",
-          "title": "Số lượng sự cố theo tháng (từ đầu năm)",
-          "col": 2,
+          "col": 1,
+          "colSpan": 60,
           "row": 1,
-          "colSpan": 1,
           "rowSpan": 1,
-          "aspectRatio": 1.8,
+          "title": "Số lượng sự cố",
+          "height": 150,
           "autoChart": {
             "chartType": "auto",
-            "aspectRatio": 1.8,
             "dataset": {
               "columns": [
                 {
@@ -208,47 +216,95 @@
                   "type": "string"
                 },
                 {
-                  "id": "s__s__c_",
+                  "id": "cur",
                   "type": "number",
-                  "label": "Số sự cố"
+                  "label": "Tháng này"
                 },
                 {
-                  "id": "c_ng_k_",
+                  "id": "ck",
                   "type": "number",
                   "label": "Cùng kỳ",
                   "color": "#94a3b8"
+                },
+                {
+                  "id": "prev",
+                  "type": "number",
+                  "label": "Tháng trước",
+                  "color": "#D3AC2B"
                 }
               ],
               "rows": [
                 [
-                  "T2",
-                  36,
-                  34
+                  "T8",
+                  42,
+                  47,
+                  38
                 ],
                 [
-                  "T3",
-                  38,
+                  "T9",
+                  40,
+                  45,
                   36
                 ],
                 [
-                  "T4",
-                  35,
-                  33
+                  "T10",
+                  38,
+                  43,
+                  34
                 ],
                 [
-                  "T5",
-                  40,
+                  "T11",
+                  41,
+                  44,
                   37
                 ],
                 [
+                  "T12",
+                  39,
+                  42,
+                  35
+                ],
+                [
+                  "T1",
+                  37,
+                  40,
+                  33
+                ],
+                [
+                  "T2",
+                  36,
+                  39,
+                  32
+                ],
+                [
+                  "T3",
+                  35,
+                  38,
+                  31
+                ],
+                [
+                  "T4",
+                  34,
+                  37,
+                  30
+                ],
+                [
+                  "T5",
+                  33,
+                  36,
+                  29
+                ],
+                [
                   "T6",
-                  44,
-                  40
+                  32,
+                  35,
+                  28
                 ],
                 [
                   "T7",
                   42,
-                  39
+                  47,
+                  38
                 ]
               ]
             },
@@ -259,11 +315,15 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "s__s__c_",
+                    "field": "cur",
                     "chartType": "line"
                   },
                   {
-                    "field": "c_ng_k_",
+                    "field": "ck",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "prev",
                     "chartType": "line"
                   }
                 ]
@@ -274,17 +334,14 @@
       ]
     },
     {
-      "title": "Chi tiết sự cố",
-      "columns": 2,
+      "title": "Chi tiết các sự cố điển hình theo lĩnh vực được chọn",
       "items": [
         {
           "id": "b_detail",
-          "title": "Chi tiết các sự cố điển hình theo lĩnh vực",
           "col": 1,
+          "colSpan": 60,
           "row": 1,
-          "colSpan": 2,
           "rowSpan": 1,
-          "aspectRatio": 1.8,
           "extraComponent": {
             "type": "table",
             "position": "top",
@@ -309,30 +366,41 @@
                     "label": "Chặng bay"
                   },
                   {
-                    "id": "field",
-                    "type": "string",
-                    "label": "Lĩnh vực"
-                  },
-                  {
                     "id": "report",
                     "type": "string",
-                    "label": "ReportTitle"
+                    "label": "Report Title"
                   }
                 ],
                 "rows": [
                   [
-                    "Tiếp cận không ổn định",
-                    "05/07",
-                    "SGN–HAN",
-                    "Khai thác bay",
-                    "MOR-2026-0712"
+                    "Máy bay trệ đường băng khi hạ cánh",
+                    "12/06/2026",
+                    "HAN-SGN",
+                    "IN-2026-042"
                   ],
                   [
-                    "Hỏng thiết bị mặt đất",
-                    "08/07",
-                    "SGN",
-                    "KTMĐ",
-                    "GHSN-2026-0455"
+                    "Sự cố kỹ thuật động cơ trước chuyến bay",
+                    "28/05/2026",
+                    "SGN-DAD",
+                    "IN-2026-038"
+                  ],
+                  [
+                    "Cảnh báo va chạm trên không (TCAS)",
+                    "15/05/2026",
+                    "DAD-HAN",
+                    "IN-2026-035"
+                  ],
+                  [
+                    "Sự cố hệ thống thông tin liên lạc",
+                    "02/04/2026",
+                    "SGN-HAN",
+                    "IN-2026-029"
+                  ],
+                  [
+                    "Chuyển hướng khẩn cấp do thời tiết",
+                    "18/03/2026",
+                    "HAN-DAD",
+                    "IN-2026-021"
                   ]
                 ]
               }

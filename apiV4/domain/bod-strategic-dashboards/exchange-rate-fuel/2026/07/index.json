@@ -82,6 +82,12 @@
             "direction": "up",
             "label": "2.1% với KH",
             "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "5.5% với CK",
+            "tone": "positive",
+            "status": 0
           }
         ]
       }
@@ -90,14 +96,13 @@
   "chartBoard": [
     {
       "title": "Exchange Rate & Fuel — Trend & Risk",
-      "columns": 2,
       "items": [
         {
           "id": "b_jet",
           "title": "Jet A1 theo tháng (+ trung bình luỹ kế)",
           "col": 1,
           "row": 1,
-          "colSpan": 1,
+          "colSpan": 30,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -206,9 +211,9 @@
         {
           "id": "b_fuel",
           "title": "Fuel Cost theo tháng",
-          "col": 2,
+          "col": 31,
           "row": 1,
-          "colSpan": 1,
+          "colSpan": 30,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -313,13 +318,18 @@
               }
             ]
           }
-        },
+        }
+      ]
+    },
+    {
+      "title": "Biến động tỉ giá của một số đồng tiền chính",
+      "items": [
         {
-          "id": "b_fx",
-          "title": "Biến động tỷ giá 6 đồng tiền chính",
+          "id": "b_fx_usd_vnd",
+          "title": "USD/VND",
           "col": 1,
-          "row": 2,
-          "colSpan": 2,
+          "row": 1,
+          "colSpan": 20,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -332,149 +342,96 @@
                   "type": "string"
                 },
                 {
-                  "id": "usd_vnd",
+                  "id": "actual",
                   "type": "number",
-                  "label": "USD/VND"
+                  "label": "Thực tế",
+                  "color": "#2563eb"
                 },
                 {
-                  "id": "usd_cny",
+                  "id": "plan_month",
                   "type": "number",
-                  "label": "USD/CNY",
-                  "color": "#0e7490"
-                },
-                {
-                  "id": "usd_eur",
-                  "type": "number",
-                  "label": "USD/EUR",
+                  "label": "KH tháng",
                   "color": "#F97316"
                 },
                 {
-                  "id": "usd_jpy",
+                  "id": "plan_year",
                   "type": "number",
-                  "label": "USD/JPY",
-                  "color": "#DC2626"
-                },
-                {
-                  "id": "usd_aud",
-                  "type": "number",
-                  "label": "USD/AUD",
-                  "color": "#9D174D"
-                },
-                {
-                  "id": "usd_krw",
-                  "type": "number",
-                  "label": "USD/KRW",
-                  "color": "#94a3b8"
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
                 }
               ],
               "rows": [
                 [
                   "T8",
                   100,
-                  100,
-                  100,
-                  100,
-                  100,
-                  100
+                  100.2,
+                  101
                 ],
                 [
                   "T9",
                   100.3,
-                  100.1,
-                  99.8,
                   100.5,
-                  100.2,
-                  99.9
+                  101
                 ],
                 [
                   "T10",
                   100.6,
-                  100.2,
-                  99.6,
-                  101,
-                  100.1,
-                  100.1
+                  100.8,
+                  101
                 ],
                 [
                   "T11",
                   100.9,
-                  100.1,
-                  99.7,
-                  101.5,
-                  100.3,
-                  100
+                  101.0,
+                  101
                 ],
                 [
                   "T12",
                   101.2,
-                  100.3,
-                  99.5,
-                  102,
-                  100.2,
-                  100.2
+                  101.2,
+                  101
                 ],
                 [
                   "T1",
                   101.2,
-                  100.2,
-                  99.6,
-                  102.5,
-                  100.4,
-                  100.1
+                  101.3,
+                  101
                 ],
                 [
                   "T2",
                   101.5,
-                  100.4,
-                  99.4,
-                  103,
-                  100.3,
-                  100.3
+                  101.4,
+                  101
                 ],
                 [
                   "T3",
                   101.7,
-                  100.5,
-                  99.3,
-                  103.2,
-                  100.5,
-                  100.2
+                  101.5,
+                  101
                 ],
                 [
                   "T4",
                   101.9,
-                  100.4,
-                  99.5,
-                  103.5,
-                  100.4,
-                  100.4
+                  101.6,
+                  101
                 ],
                 [
                   "T5",
                   102.1,
-                  100.6,
-                  99.4,
-                  103.8,
-                  100.6,
-                  100.3
+                  101.7,
+                  101
                 ],
                 [
                   "T6",
                   102.2,
-                  100.5,
-                  99.3,
-                  104,
-                  100.5,
-                  100.5
+                  101.8,
+                  101
                 ],
                 [
                   "T7",
                   102.3,
-                  100.7,
-                  99.2,
-                  104.2,
-                  100.7,
-                  100.4
+                  101.9,
+                  101
                 ]
               ]
             },
@@ -485,27 +442,685 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "usd_vnd",
+                    "field": "actual",
                     "chartType": "line"
                   },
                   {
-                    "field": "usd_cny",
+                    "field": "plan_month",
                     "chartType": "line"
                   },
                   {
-                    "field": "usd_eur",
+                    "field": "plan_year",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx_usd_cny",
+          "title": "USD/CNY",
+          "col": 21,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực tế",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "plan_month",
+                  "type": "number",
+                  "label": "KH tháng",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "plan_year",
+                  "type": "number",
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  100,
+                  100.3
+                ],
+                [
+                  "T9",
+                  100.1,
+                  100.1,
+                  100.3
+                ],
+                [
+                  "T10",
+                  100.2,
+                  100.2,
+                  100.3
+                ],
+                [
+                  "T11",
+                  100.1,
+                  100.2,
+                  100.3
+                ],
+                [
+                  "T12",
+                  100.3,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T1",
+                  100.2,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T2",
+                  100.4,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T3",
+                  100.5,
+                  100.4,
+                  100.3
+                ],
+                [
+                  "T4",
+                  100.4,
+                  100.4,
+                  100.3
+                ],
+                [
+                  "T5",
+                  100.6,
+                  100.5,
+                  100.3
+                ],
+                [
+                  "T6",
+                  100.5,
+                  100.5,
+                  100.3
+                ],
+                [
+                  "T7",
+                  100.7,
+                  100.6,
+                  100.3
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
                     "chartType": "line"
                   },
                   {
-                    "field": "usd_jpy",
+                    "field": "plan_month",
                     "chartType": "line"
                   },
                   {
-                    "field": "usd_aud",
+                    "field": "plan_year",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx_usd_eur",
+          "title": "USD/EUR",
+          "col": 41,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực tế",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "plan_month",
+                  "type": "number",
+                  "label": "KH tháng",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "plan_year",
+                  "type": "number",
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  99.9,
+                  99.5
+                ],
+                [
+                  "T9",
+                  99.8,
+                  99.8,
+                  99.5
+                ],
+                [
+                  "T10",
+                  99.6,
+                  99.7,
+                  99.5
+                ],
+                [
+                  "T11",
+                  99.7,
+                  99.6,
+                  99.5
+                ],
+                [
+                  "T12",
+                  99.5,
+                  99.6,
+                  99.5
+                ],
+                [
+                  "T1",
+                  99.6,
+                  99.5,
+                  99.5
+                ],
+                [
+                  "T2",
+                  99.4,
+                  99.5,
+                  99.5
+                ],
+                [
+                  "T3",
+                  99.3,
+                  99.4,
+                  99.5
+                ],
+                [
+                  "T4",
+                  99.5,
+                  99.4,
+                  99.5
+                ],
+                [
+                  "T5",
+                  99.4,
+                  99.3,
+                  99.5
+                ],
+                [
+                  "T6",
+                  99.3,
+                  99.3,
+                  99.5
+                ],
+                [
+                  "T7",
+                  99.2,
+                  99.2,
+                  99.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
                     "chartType": "line"
                   },
                   {
-                    "field": "usd_krw",
+                    "field": "plan_month",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_year",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx_usd_jpy",
+          "title": "USD/JPY",
+          "col": 1,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực tế",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "plan_month",
+                  "type": "number",
+                  "label": "KH tháng",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "plan_year",
+                  "type": "number",
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  100.3,
+                  102
+                ],
+                [
+                  "T9",
+                  100.5,
+                  100.8,
+                  102
+                ],
+                [
+                  "T10",
+                  101,
+                  101.3,
+                  102
+                ],
+                [
+                  "T11",
+                  101.5,
+                  101.8,
+                  102
+                ],
+                [
+                  "T12",
+                  102,
+                  102.2,
+                  102
+                ],
+                [
+                  "T1",
+                  102.5,
+                  102.5,
+                  102
+                ],
+                [
+                  "T2",
+                  103,
+                  102.8,
+                  102
+                ],
+                [
+                  "T3",
+                  103.2,
+                  103,
+                  102
+                ],
+                [
+                  "T4",
+                  103.5,
+                  103.2,
+                  102
+                ],
+                [
+                  "T5",
+                  103.8,
+                  103.5,
+                  102
+                ],
+                [
+                  "T6",
+                  104,
+                  103.7,
+                  102
+                ],
+                [
+                  "T7",
+                  104.2,
+                  104,
+                  102
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_month",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_year",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx_usd_aud",
+          "title": "USD/AUD",
+          "col": 21,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực tế",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "plan_month",
+                  "type": "number",
+                  "label": "KH tháng",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "plan_year",
+                  "type": "number",
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  100,
+                  100.3
+                ],
+                [
+                  "T9",
+                  100.2,
+                  100.1,
+                  100.3
+                ],
+                [
+                  "T10",
+                  100.1,
+                  100.1,
+                  100.3
+                ],
+                [
+                  "T11",
+                  100.3,
+                  100.2,
+                  100.3
+                ],
+                [
+                  "T12",
+                  100.2,
+                  100.2,
+                  100.3
+                ],
+                [
+                  "T1",
+                  100.4,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T2",
+                  100.3,
+                  100.3,
+                  100.3
+                ],
+                [
+                  "T3",
+                  100.5,
+                  100.4,
+                  100.3
+                ],
+                [
+                  "T4",
+                  100.4,
+                  100.4,
+                  100.3
+                ],
+                [
+                  "T5",
+                  100.6,
+                  100.5,
+                  100.3
+                ],
+                [
+                  "T6",
+                  100.5,
+                  100.5,
+                  100.3
+                ],
+                [
+                  "T7",
+                  100.7,
+                  100.6,
+                  100.3
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_month",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_year",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_fx_usd_krw",
+          "title": "USD/KRW",
+          "col": 41,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực tế",
+                  "color": "#2563eb"
+                },
+                {
+                  "id": "plan_month",
+                  "type": "number",
+                  "label": "KH tháng",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "plan_year",
+                  "type": "number",
+                  "label": "KH năm",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T8",
+                  100,
+                  100,
+                  100.2
+                ],
+                [
+                  "T9",
+                  99.9,
+                  100,
+                  100.2
+                ],
+                [
+                  "T10",
+                  100.1,
+                  100.1,
+                  100.2
+                ],
+                [
+                  "T11",
+                  100,
+                  100.1,
+                  100.2
+                ],
+                [
+                  "T12",
+                  100.2,
+                  100.2,
+                  100.2
+                ],
+                [
+                  "T1",
+                  100.1,
+                  100.2,
+                  100.2
+                ],
+                [
+                  "T2",
+                  100.3,
+                  100.2,
+                  100.2
+                ],
+                [
+                  "T3",
+                  100.2,
+                  100.3,
+                  100.2
+                ],
+                [
+                  "T4",
+                  100.4,
+                  100.3,
+                  100.2
+                ],
+                [
+                  "T5",
+                  100.3,
+                  100.3,
+                  100.2
+                ],
+                [
+                  "T6",
+                  100.5,
+                  100.4,
+                  100.2
+                ],
+                [
+                  "T7",
+                  100.4,
+                  100.4,
+                  100.2
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_month",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan_year",
                     "chartType": "line"
                   }
                 ]
@@ -517,14 +1132,13 @@
     },
     {
       "title": "AI Insight",
-      "columns": 1,
       "items": [
         {
           "id": "b_ai_insight",
           "title": "AI Insight — Tác động tỷ giá & nhiên liệu",
           "col": 1,
           "row": 1,
-          "colSpan": 1,
+          "colSpan": 60,
           "extraComponent": {
             "type": "card-html",
             "config": {
