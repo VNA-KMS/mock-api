@@ -1,8 +1,23 @@
 {
+  "filters": [
+    {
+      "id": "total",
+      "label": "Total",
+      "default": true
+    },
+    {
+      "id": "dom",
+      "label": "DOM"
+    },
+    {
+      "id": "int",
+      "label": "INT"
+    }
+  ],
   "titleInfo": {
     "title": "Commerce",
     "statusLabel": "REAL TIME",
-    "description": "Kết quả SXKD vận chuyển hành khách & hàng hóa theo khu vực?"
+    "description": "Kết quả SXKD vận chuyển hành khách & hàng hóa theo khu vực"
   },
   "metricCards": {
     "accentClassName": "bg-regal-blue",
@@ -167,15 +182,14 @@
   },
   "chartBoard": [
     {
-      "title": "Tab Hành khách",
       "columns": 2,
       "items": [
         {
-          "id": "b_paxtrend",
-          "title": "Hành khách theo khu vực (12 tháng)",
+          "id": "c_pax_tot_dom",
+          "title": "DOM - Pax 12 tháng, vs KH, vs CK",
           "col": 1,
           "row": 1,
-          "colSpan": 2,
+          "colSpan": 1,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -188,95 +202,96 @@
                   "type": "string"
                 },
                 {
-                  "id": "eu",
+                  "id": "actual",
                   "type": "number",
-                  "label": "EU"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
-                  "id": "nea",
+                  "id": "kh",
                   "type": "number",
-                  "label": "NEA",
-                  "color": "#F97316"
+                  "label": "KH",
+                  "color": "#d0d1d3"
                 },
                 {
-                  "id": "n_i___a",
+                  "id": "ck",
                   "type": "number",
-                  "label": "Nội địa",
-                  "color": "#0e7490"
+                  "label": "CK",
+                  "color": "#ec4899"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  70,
-                  90,
-                  600
-                ],
-                [
-                  "T9",
-                  72,
-                  92,
-                  605
-                ],
-                [
-                  "T10",
-                  74,
-                  94,
-                  610
-                ],
-                [
-                  "T11",
-                  76,
-                  95,
-                  615
-                ],
-                [
-                  "T12",
-                  78,
-                  96,
-                  620
-                ],
-                [
                   "T1",
-                  77,
-                  96,
-                  618
+                  580,
+                  590,
+                  530
                 ],
                 [
                   "T2",
-                  79,
-                  97,
-                  622
+                  590,
+                  600,
+                  540
                 ],
                 [
                   "T3",
-                  81,
-                  98,
-                  626
+                  600,
+                  610,
+                  550
                 ],
                 [
                   "T4",
-                  83,
-                  99,
-                  630
+                  610,
+                  620,
+                  560
                 ],
                 [
                   "T5",
-                  84,
-                  100,
-                  633
+                  620,
+                  630,
+                  570
                 ],
                 [
                   "T6",
-                  86,
-                  101,
-                  637
+                  625,
+                  635,
+                  575
                 ],
                 [
                   "T7",
-                  88,
-                  102,
-                  641
+                  635,
+                  640,
+                  580
+                ],
+                [
+                  "T8",
+                  null,
+                  640.0,
+                  580.0
+                ],
+                [
+                  "T9",
+                  null,
+                  643.2,
+                  582.9
+                ],
+                [
+                  "T10",
+                  null,
+                  646.4,
+                  585.8
+                ],
+                [
+                  "T11",
+                  null,
+                  649.6,
+                  588.7
+                ],
+                [
+                  "T12",
+                  null,
+                  652.8,
+                  591.6
                 ]
               ]
             },
@@ -287,34 +302,35 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "eu",
-                    "chartType": "line"
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
-                    "field": "nea",
-                    "chartType": "line"
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
                   },
                   {
-                    "field": "n_i___a",
-                    "chartType": "line"
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
                   }
                 ]
               }
             ]
           }
-        }
-      ]
-    },
-    {
-      "title": "Tab Hàng hóa",
-      "columns": 2,
-      "items": [
+        },
         {
-          "id": "b_cgotrend",
-          "title": "Sản lượng & doanh thu hàng hóa (12 tháng, luỹ kế)",
-          "col": 1,
+          "id": "c_pax_tot_int",
+          "title": "INT - Pax 12 tháng, vs KH, vs CK",
+          "col": 2,
           "row": 1,
-          "colSpan": 2,
+          "colSpan": 1,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -327,77 +343,96 @@
                   "type": "string"
                 },
                 {
-                  "id": "cargo_v_n_chuy_n__t_n_",
+                  "id": "actual",
                   "type": "number",
-                  "label": "Cargo vận chuyển (tấn)"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
-                  "id": "doanh_thu__t__",
+                  "id": "kh",
                   "type": "number",
-                  "label": "Doanh thu (tỷ)",
-                  "color": "#DC2626"
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  7200,
-                  980
-                ],
-                [
-                  "T9",
-                  7400,
-                  1000
-                ],
-                [
-                  "T10",
-                  7600,
-                  1030
-                ],
-                [
-                  "T11",
-                  7800,
-                  1060
-                ],
-                [
-                  "T12",
-                  8000,
-                  1090
-                ],
-                [
                   "T1",
-                  8100,
-                  1110
+                  310,
+                  318,
+                  283
                 ],
                 [
                   "T2",
-                  8300,
-                  1140
+                  317,
+                  325,
+                  289
                 ],
                 [
                   "T3",
-                  8500,
-                  1170
+                  325,
+                  332,
+                  295
                 ],
                 [
                   "T4",
-                  8600,
-                  1190
+                  330,
+                  337,
+                  300
                 ],
                 [
                   "T5",
-                  8700,
-                  1210
+                  335,
+                  342,
+                  305
                 ],
                 [
                   "T6",
-                  8800,
-                  1230
+                  334,
+                  343,
+                  304
                 ],
                 [
                   "T7",
-                  8900,
-                  1250
+                  340,
+                  348,
+                  309
+                ],
+                [
+                  "T8",
+                  null,
+                  348.0,
+                  309.0
+                ],
+                [
+                  "T9",
+                  null,
+                  349.7,
+                  310.5
+                ],
+                [
+                  "T10",
+                  null,
+                  351.5,
+                  312.1
+                ],
+                [
+                  "T11",
+                  null,
+                  353.2,
+                  313.6
+                ],
+                [
+                  "T12",
+                  null,
+                  355.0,
+                  315.2
                 ]
               ]
             },
@@ -408,12 +443,728 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "cargo_v_n_chuy_n__t_n_",
-                    "chartType": "line"
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
-                    "field": "doanh_thu__t__",
-                    "chartType": "line"
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c_cargo_tot_slvc",
+          "title": "Sản lượng hàng hóa vận chuyển 12 tháng - Total; số luỹ kế - Line vs KH, vs CK",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  7200,
+                  7300,
+                  6600
+                ],
+                [
+                  "T2",
+                  7400,
+                  7500,
+                  6800
+                ],
+                [
+                  "T3",
+                  7600,
+                  7700,
+                  7000
+                ],
+                [
+                  "T4",
+                  7800,
+                  7900,
+                  7200
+                ],
+                [
+                  "T5",
+                  8000,
+                  8100,
+                  7400
+                ],
+                [
+                  "T6",
+                  8100,
+                  8200,
+                  7500
+                ],
+                [
+                  "T7",
+                  8300,
+                  8400,
+                  7650
+                ],
+                [
+                  "T8",
+                  null,
+                  8400.0,
+                  7650.0
+                ],
+                [
+                  "T9",
+                  null,
+                  8442.0,
+                  7688.2
+                ],
+                [
+                  "T10",
+                  null,
+                  8484.0,
+                  7726.5
+                ],
+                [
+                  "T11",
+                  null,
+                  8526.0,
+                  7764.7
+                ],
+                [
+                  "T12",
+                  null,
+                  8568.0,
+                  7803.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c_cargo_tot_sllc",
+          "title": "Sản lượng hàng hóa luân chuyển 12 tháng - Total; số luỹ kế - Line vs KH, vs CK",
+          "col": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  185,
+                  188,
+                  168
+                ],
+                [
+                  "T2",
+                  192,
+                  195,
+                  174
+                ],
+                [
+                  "T3",
+                  198,
+                  202,
+                  180
+                ],
+                [
+                  "T4",
+                  205,
+                  208,
+                  186
+                ],
+                [
+                  "T5",
+                  212,
+                  215,
+                  192
+                ],
+                [
+                  "T6",
+                  218,
+                  222,
+                  198
+                ],
+                [
+                  "T7",
+                  225,
+                  228,
+                  204
+                ],
+                [
+                  "T8",
+                  null,
+                  228.0,
+                  204.0
+                ],
+                [
+                  "T9",
+                  null,
+                  229.1,
+                  205.0
+                ],
+                [
+                  "T10",
+                  null,
+                  230.3,
+                  206.0
+                ],
+                [
+                  "T11",
+                  null,
+                  231.4,
+                  207.1
+                ],
+                [
+                  "T12",
+                  null,
+                  232.6,
+                  208.1
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c_cargo_tot_rev",
+          "title": "Doanh thu hàng hóa vận chuyển 12 tháng - Total; số luỹ kế - Line vs KH, vs CK",
+          "col": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  980,
+                  990,
+                  900
+                ],
+                [
+                  "T2",
+                  1000,
+                  1010,
+                  920
+                ],
+                [
+                  "T3",
+                  1030,
+                  1040,
+                  940
+                ],
+                [
+                  "T4",
+                  1060,
+                  1070,
+                  960
+                ],
+                [
+                  "T5",
+                  1090,
+                  1100,
+                  980
+                ],
+                [
+                  "T6",
+                  1110,
+                  1120,
+                  1000
+                ],
+                [
+                  "T7",
+                  1140,
+                  1150,
+                  1020
+                ],
+                [
+                  "T8",
+                  null,
+                  1150.0,
+                  1020.0
+                ],
+                [
+                  "T9",
+                  null,
+                  1155.7,
+                  1025.1
+                ],
+                [
+                  "T10",
+                  null,
+                  1161.5,
+                  1030.2
+                ],
+                [
+                  "T11",
+                  null,
+                  1167.2,
+                  1035.3
+                ],
+                [
+                  "T12",
+                  null,
+                  1173.0,
+                  1040.4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c_cargo_tot_ff",
+          "title": "FF hàng hóa vận chuyển 12 tháng - Total; số luỹ kế - Line vs KH, vs CK",
+          "col": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  62,
+                  63,
+                  58
+                ],
+                [
+                  "T2",
+                  63,
+                  64,
+                  59
+                ],
+                [
+                  "T3",
+                  64,
+                  65,
+                  60
+                ],
+                [
+                  "T4",
+                  65,
+                  66,
+                  61
+                ],
+                [
+                  "T5",
+                  66,
+                  67,
+                  62
+                ],
+                [
+                  "T6",
+                  66,
+                  67,
+                  62
+                ],
+                [
+                  "T7",
+                  67,
+                  68,
+                  63
+                ],
+                [
+                  "T8",
+                  null,
+                  68.0,
+                  63.0
+                ],
+                [
+                  "T9",
+                  null,
+                  68.3,
+                  63.3
+                ],
+                [
+                  "T10",
+                  null,
+                  68.7,
+                  63.6
+                ],
+                [
+                  "T11",
+                  null,
+                  69.0,
+                  63.9
+                ],
+                [
+                  "T12",
+                  null,
+                  69.4,
+                  64.3
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "c_cargo_tot_cap",
+          "title": "Tải cung ứng 12 tháng - Total; số luỹ kế - Line vs KH, vs CK",
+          "col": 1,
+          "row": 4,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "kh",
+                  "type": "number",
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  210,
+                  212,
+                  190
+                ],
+                [
+                  "T2",
+                  218,
+                  220,
+                  196
+                ],
+                [
+                  "T3",
+                  225,
+                  228,
+                  202
+                ],
+                [
+                  "T4",
+                  232,
+                  235,
+                  208
+                ],
+                [
+                  "T5",
+                  240,
+                  242,
+                  215
+                ],
+                [
+                  "T6",
+                  248,
+                  250,
+                  222
+                ],
+                [
+                  "T7",
+                  255,
+                  258,
+                  228
+                ],
+                [
+                  "T8",
+                  null,
+                  258.0,
+                  228.0
+                ],
+                [
+                  "T9",
+                  null,
+                  259.3,
+                  229.1
+                ],
+                [
+                  "T10",
+                  null,
+                  260.6,
+                  230.3
+                ],
+                [
+                  "T11",
+                  null,
+                  261.9,
+                  231.4
+                ],
+                [
+                  "T12",
+                  null,
+                  263.2,
+                  232.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "kh",
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
                   }
                 ]
               }
@@ -427,11 +1178,11 @@
       "columns": 3,
       "items": [
         {
-          "id": "b_risk",
+          "id": "b_risk_pax",
           "title": "Enterprise Risk — cảnh báo thị trường khách giảm đột ngột",
           "col": 1,
           "row": 1,
-          "colSpan": 2,
+          "colSpan": 1,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -486,32 +1237,32 @@
                 [
                   "AU & US",
                   "T2",
-                  3
-                ],
-                [
-                  "AU & US",
-                  "T3",
-                  0
-                ],
-                [
-                  "AU & US",
-                  "T4",
                   1
                 ],
                 [
                   "AU & US",
-                  "T5",
+                  "T3",
                   2
                 ],
                 [
                   "AU & US",
-                  "T6",
+                  "T4",
                   3
                 ],
                 [
                   "AU & US",
-                  "T7",
+                  "T5",
                   0
+                ],
+                [
+                  "AU & US",
+                  "T6",
+                  1
+                ],
+                [
+                  "AU & US",
+                  "T7",
+                  2
                 ],
                 [
                   "NEA (ĐBA)",
@@ -546,32 +1297,32 @@
                 [
                   "SEA & CLMV (ĐNA)",
                   "T2",
-                  1
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T3",
-                  2
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T4",
                   3
                 ],
                 [
                   "SEA & CLMV (ĐNA)",
-                  "T5",
+                  "T3",
                   0
                 ],
                 [
                   "SEA & CLMV (ĐNA)",
-                  "T6",
+                  "T4",
                   1
                 ],
                 [
                   "SEA & CLMV (ĐNA)",
-                  "T7",
+                  "T5",
                   2
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T6",
+                  3
+                ],
+                [
+                  "SEA & CLMV (ĐNA)",
+                  "T7",
+                  1
                 ],
                 [
                   "Nội địa",
@@ -596,12 +1347,206 @@
                 [
                   "Nội địa",
                   "T6",
-                  0
+                  1
                 ],
                 [
                   "Nội địa",
                   "T7",
+                  2
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "heatmap",
+                "xField": "y",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "heatmap"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_risk_cargo",
+          "title": "Enterprise Risk — cảnh báo thị trường hàng hóa giảm đột ngột",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "heatmap",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "y",
+                  "type": "string"
+                },
+                {
+                  "id": "x",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "Cargo EU",
+                  "T2",
                   1
+                ],
+                [
+                  "Cargo EU",
+                  "T3",
+                  2
+                ],
+                [
+                  "Cargo EU",
+                  "T4",
+                  0
+                ],
+                [
+                  "Cargo EU",
+                  "T5",
+                  3
+                ],
+                [
+                  "Cargo EU",
+                  "T6",
+                  1
+                ],
+                [
+                  "Cargo EU",
+                  "T7",
+                  0
+                ],
+                [
+                  "Cargo AU & US",
+                  "T2",
+                  2
+                ],
+                [
+                  "Cargo AU & US",
+                  "T3",
+                  0
+                ],
+                [
+                  "Cargo AU & US",
+                  "T4",
+                  3
+                ],
+                [
+                  "Cargo AU & US",
+                  "T5",
+                  1
+                ],
+                [
+                  "Cargo AU & US",
+                  "T6",
+                  0
+                ],
+                [
+                  "Cargo AU & US",
+                  "T7",
+                  2
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T2",
+                  0
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T3",
+                  3
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T4",
+                  1
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T5",
+                  0
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T6",
+                  2
+                ],
+                [
+                  "Cargo NEA (ĐBA)",
+                  "T7",
+                  1
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T2",
+                  3
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T3",
+                  1
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T4",
+                  0
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T5",
+                  2
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T6",
+                  1
+                ],
+                [
+                  "Cargo SEA & CLMV",
+                  "T7",
+                  3
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T2",
+                  1
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T3",
+                  0
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T4",
+                  2
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T5",
+                  1
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T6",
+                  3
+                ],
+                [
+                  "Cargo Nội địa",
+                  "T7",
+                  2
                 ]
               ]
             },
@@ -630,7 +1575,7 @@
           "extraComponent": {
             "type": "card-html",
             "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Commerce</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Pax</b> — đạt 1.095 nghìn (-0.8% KH), sụt giảm chủ yếu ở nhóm khách quốc tế EU & NEA</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>RASK</b> — 1.585 đ (-2.1% KH), giá vé bình quân giảm do áp lực cạnh tranh đường bay Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>P/L</b> — 640 tỷ (-4% KH), lỗ ròng mảng hành khách quốc tế ảnh hưởng bởi nhiên liệu & tỷ giá</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Cargo</b> — 8.900 tấn (+1.2% KH), doanh thu 1.250 tỷ (+0.8% KH), tín hiệu tích cực mảng hàng hóa</li></ul></div>",
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Commerce</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Pax</b> — đạt 1.095 nghìn (-0.8% KH), sụt giảm chủ yếu ở nhóm khách quốc tế EU & NEA do cạnh tranh giá vé từ các hãng Trung Quốc và Ả Rập</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>RASK</b> — 1.585 đ (-2.1% KH), giá vé bình quân giảm do áp lực cạnh tranh đường bay Trung Quốc, trong khi CASK tăng 1.5% do nhiên liệu & tỷ giá</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>P/L</b> — 640 tỷ (-4% KH), lỗ ròng mảng hành khách quốc tế ảnh hưởng bởi nhiên liệu & tỷ giá; nội địa vẫn có lãi 380 tỷ (+2% KH)</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Cargo</b> — 8.900 tấn (+1.2% KH), doanh thu 1.250 tỷ (+0.8% KH), FF đạt 68% (-1.5% KH); mảng hàng hóa nội địa tăng trưởng tốt hơn quốc tế</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khuyến nghị</b> — Tái cấu trúc đội tàu đường bay châu Âu, đẩy mạnh bán hàng hóa trên các chuyến bay chở khách (belly cargo), theo dõi biến động tỷ giá & nhiên liệu</li></ul></div>",
               "backgroundClassName": "",
               "borderClassName": ""
             }
@@ -638,5 +1583,3756 @@
         }
       ]
     }
-  ]
+  ],
+  "filteredData": {
+    "dom": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_pax_dom",
+            "status": "compact",
+            "title": "Pax nội địa",
+            "value": "675",
+            "unit": "nghìn",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.5% với KH",
+                "tone": "positive"
+              },
+              {
+                "direction": "up",
+                "label": "3% với CK",
+                "tone": "positive",
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": "t_rask_dom",
+            "status": "compact",
+            "title": "RASK nội địa",
+            "value": "1420",
+            "unit": "đ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.8% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_cask_dom",
+            "status": "compact",
+            "title": "CASK nội địa",
+            "value": "1380",
+            "unit": "đ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.3% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_lf_dom",
+            "status": "compact",
+            "title": "LF nội địa",
+            "value": "84",
+            "unit": "%",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_pl_dom",
+            "status": "compact",
+            "title": "P/L nội địa",
+            "value": "380",
+            "unit": "tỷ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "2% với KH",
+                "tone": "positive"
+              }
+            ]
+          }
+        ]
+      },
+      "cardHtml": {
+        "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Thị trường nội địa tăng trưởng ổn định, LF đạt 84% vượt KH nhờ nhu cầu du lịch hè</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>RASK & CASK duy trì tích cực, P/L đạt 380 tỷ (+2% KH)</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Cargo nội địa: vận chuyển 5.480 tấn, doanh thu 680 tỷ, FF 71%, tải cung ứng 162 tr.AFTK</li></ul></div>",
+        "backgroundClassName": "bg-polar",
+        "borderClassName": "border-regal-blue"
+      },
+      "chartBoard": [
+        {
+          "title": "HAN/SGN - Pax 12 tháng, vs KH, vs CK & HAN/DAD - Pax 12 tháng, vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_pax_dom_hansgn",
+              "title": "HAN/SGN - Pax 12 tháng, vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      200,
+                      205,
+                      185
+                    ],
+                    [
+                      "T2",
+                      205,
+                      210,
+                      190
+                    ],
+                    [
+                      "T3",
+                      210,
+                      215,
+                      195
+                    ],
+                    [
+                      "T4",
+                      215,
+                      220,
+                      200
+                    ],
+                    [
+                      "T5",
+                      220,
+                      225,
+                      205
+                    ],
+                    [
+                      "T6",
+                      222,
+                      228,
+                      207
+                    ],
+                    [
+                      "T7",
+                      228,
+                      232,
+                      210
+                    ],
+                    [
+                      "T8",
+                      null,
+                      232.0,
+                      210.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      233.2,
+                      211.0
+                    ],
+                    [
+                      "T10",
+                      null,
+                      234.3,
+                      212.1
+                    ],
+                    [
+                      "T11",
+                      null,
+                      235.5,
+                      213.1
+                    ],
+                    [
+                      "T12",
+                      null,
+                      236.6,
+                      214.2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_pax_dom_handad",
+              "title": "HAN/DAD - Pax 12 tháng, vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      100,
+                      102,
+                      90
+                    ],
+                    [
+                      "T2",
+                      102,
+                      105,
+                      92
+                    ],
+                    [
+                      "T3",
+                      105,
+                      108,
+                      94
+                    ],
+                    [
+                      "T4",
+                      108,
+                      110,
+                      96
+                    ],
+                    [
+                      "T5",
+                      110,
+                      112,
+                      98
+                    ],
+                    [
+                      "T6",
+                      112,
+                      114,
+                      100
+                    ],
+                    [
+                      "T7",
+                      115,
+                      116,
+                      102
+                    ],
+                    [
+                      "T8",
+                      null,
+                      116.0,
+                      102.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      116.6,
+                      102.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      117.2,
+                      103.0
+                    ],
+                    [
+                      "T11",
+                      null,
+                      117.7,
+                      103.5
+                    ],
+                    [
+                      "T12",
+                      null,
+                      118.3,
+                      104.0
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "SGN/DAD - Pax 12 tháng, vs KH, vs CK & Du lịch - Pax 12 tháng, vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_pax_dom_sgndad",
+              "title": "SGN/DAD - Pax 12 tháng, vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      80,
+                      82,
+                      72
+                    ],
+                    [
+                      "T2",
+                      82,
+                      84,
+                      74
+                    ],
+                    [
+                      "T3",
+                      84,
+                      86,
+                      76
+                    ],
+                    [
+                      "T4",
+                      86,
+                      88,
+                      78
+                    ],
+                    [
+                      "T5",
+                      88,
+                      90,
+                      80
+                    ],
+                    [
+                      "T6",
+                      90,
+                      92,
+                      82
+                    ],
+                    [
+                      "T7",
+                      92,
+                      94,
+                      84
+                    ],
+                    [
+                      "T8",
+                      null,
+                      94.0,
+                      84.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      94.5,
+                      84.4
+                    ],
+                    [
+                      "T10",
+                      null,
+                      94.9,
+                      84.8
+                    ],
+                    [
+                      "T11",
+                      null,
+                      95.4,
+                      85.3
+                    ],
+                    [
+                      "T12",
+                      null,
+                      95.9,
+                      85.7
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_pax_dom_dulich",
+              "title": "Du lịch - Pax 12 tháng, vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      60,
+                      62,
+                      52
+                    ],
+                    [
+                      "T2",
+                      62,
+                      64,
+                      54
+                    ],
+                    [
+                      "T3",
+                      65,
+                      66,
+                      56
+                    ],
+                    [
+                      "T4",
+                      68,
+                      68,
+                      58
+                    ],
+                    [
+                      "T5",
+                      70,
+                      70,
+                      60
+                    ],
+                    [
+                      "T6",
+                      72,
+                      72,
+                      62
+                    ],
+                    [
+                      "T7",
+                      75,
+                      74,
+                      64
+                    ],
+                    [
+                      "T8",
+                      null,
+                      74.0,
+                      64.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      74.4,
+                      64.3
+                    ],
+                    [
+                      "T10",
+                      null,
+                      74.7,
+                      64.6
+                    ],
+                    [
+                      "T11",
+                      null,
+                      75.1,
+                      65.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      75.5,
+                      65.3
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Trục lẻ - Pax 12 tháng, vs KH, vs CK & Sản lượng hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_pax_dom_trucle",
+              "title": "Trục lẻ - Pax 12 tháng, vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      140,
+                      142,
+                      128
+                    ],
+                    [
+                      "T2",
+                      142,
+                      144,
+                      130
+                    ],
+                    [
+                      "T3",
+                      144,
+                      146,
+                      132
+                    ],
+                    [
+                      "T4",
+                      146,
+                      148,
+                      134
+                    ],
+                    [
+                      "T5",
+                      148,
+                      150,
+                      136
+                    ],
+                    [
+                      "T6",
+                      150,
+                      152,
+                      138
+                    ],
+                    [
+                      "T7",
+                      152,
+                      154,
+                      140
+                    ],
+                    [
+                      "T8",
+                      null,
+                      154.0,
+                      140.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      154.8,
+                      140.7
+                    ],
+                    [
+                      "T10",
+                      null,
+                      155.5,
+                      141.4
+                    ],
+                    [
+                      "T11",
+                      null,
+                      156.3,
+                      142.1
+                    ],
+                    [
+                      "T12",
+                      null,
+                      157.1,
+                      142.8
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_cargo_dom_slvc",
+              "title": "Sản lượng hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      4200,
+                      4300,
+                      3900
+                    ],
+                    [
+                      "T2",
+                      4350,
+                      4450,
+                      4000
+                    ],
+                    [
+                      "T3",
+                      4500,
+                      4600,
+                      4150
+                    ],
+                    [
+                      "T4",
+                      4650,
+                      4750,
+                      4280
+                    ],
+                    [
+                      "T5",
+                      4780,
+                      4880,
+                      4400
+                    ],
+                    [
+                      "T6",
+                      4850,
+                      4950,
+                      4480
+                    ],
+                    [
+                      "T7",
+                      5000,
+                      5080,
+                      4600
+                    ],
+                    [
+                      "T8",
+                      null,
+                      5080.0,
+                      4600.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      5105.4,
+                      4623.0
+                    ],
+                    [
+                      "T10",
+                      null,
+                      5130.8,
+                      4646.0
+                    ],
+                    [
+                      "T11",
+                      null,
+                      5156.2,
+                      4669.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      5181.6,
+                      4692.0
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Sản lượng hàng hóa luân chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK & Doanh thu hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_cargo_dom_sllc",
+              "title": "Sản lượng hàng hóa luân chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      95,
+                      97,
+                      86
+                    ],
+                    [
+                      "T2",
+                      98,
+                      100,
+                      89
+                    ],
+                    [
+                      "T3",
+                      102,
+                      104,
+                      92
+                    ],
+                    [
+                      "T4",
+                      106,
+                      108,
+                      95
+                    ],
+                    [
+                      "T5",
+                      110,
+                      112,
+                      98
+                    ],
+                    [
+                      "T6",
+                      114,
+                      116,
+                      102
+                    ],
+                    [
+                      "T7",
+                      118,
+                      120,
+                      105
+                    ],
+                    [
+                      "T8",
+                      null,
+                      120.0,
+                      105.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      120.6,
+                      105.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      121.2,
+                      106.0
+                    ],
+                    [
+                      "T11",
+                      null,
+                      121.8,
+                      106.6
+                    ],
+                    [
+                      "T12",
+                      null,
+                      122.4,
+                      107.1
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_cargo_dom_rev",
+              "title": "Doanh thu hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      540,
+                      545,
+                      490
+                    ],
+                    [
+                      "T2",
+                      550,
+                      555,
+                      500
+                    ],
+                    [
+                      "T3",
+                      560,
+                      565,
+                      510
+                    ],
+                    [
+                      "T4",
+                      575,
+                      580,
+                      520
+                    ],
+                    [
+                      "T5",
+                      590,
+                      595,
+                      530
+                    ],
+                    [
+                      "T6",
+                      600,
+                      605,
+                      540
+                    ],
+                    [
+                      "T7",
+                      620,
+                      625,
+                      550
+                    ],
+                    [
+                      "T8",
+                      null,
+                      625.0,
+                      550.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      628.1,
+                      552.7
+                    ],
+                    [
+                      "T10",
+                      null,
+                      631.2,
+                      555.5
+                    ],
+                    [
+                      "T11",
+                      null,
+                      634.4,
+                      558.2
+                    ],
+                    [
+                      "T12",
+                      null,
+                      637.5,
+                      561.0
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "FF hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK & Tải cung ứng 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_cargo_dom_ff",
+              "title": "FF hàng hóa vận chuyển 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      65,
+                      66,
+                      60
+                    ],
+                    [
+                      "T2",
+                      66,
+                      67,
+                      61
+                    ],
+                    [
+                      "T3",
+                      67,
+                      68,
+                      62
+                    ],
+                    [
+                      "T4",
+                      68,
+                      69,
+                      63
+                    ],
+                    [
+                      "T5",
+                      69,
+                      70,
+                      64
+                    ],
+                    [
+                      "T6",
+                      69,
+                      70,
+                      64
+                    ],
+                    [
+                      "T7",
+                      70,
+                      71,
+                      65
+                    ],
+                    [
+                      "T8",
+                      null,
+                      71.0,
+                      65.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      71.4,
+                      65.3
+                    ],
+                    [
+                      "T10",
+                      null,
+                      71.7,
+                      65.7
+                    ],
+                    [
+                      "T11",
+                      null,
+                      72.1,
+                      66.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      72.4,
+                      66.3
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_cargo_dom_cap",
+              "title": "Tải cung ứng 12 tháng - DOM; số luỹ kế - Line vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      120,
+                      122,
+                      108
+                    ],
+                    [
+                      "T2",
+                      125,
+                      127,
+                      112
+                    ],
+                    [
+                      "T3",
+                      130,
+                      132,
+                      116
+                    ],
+                    [
+                      "T4",
+                      135,
+                      137,
+                      120
+                    ],
+                    [
+                      "T5",
+                      140,
+                      142,
+                      124
+                    ],
+                    [
+                      "T6",
+                      145,
+                      147,
+                      128
+                    ],
+                    [
+                      "T7",
+                      148,
+                      150,
+                      132
+                    ],
+                    [
+                      "T8",
+                      null,
+                      150.0,
+                      132.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      150.7,
+                      132.7
+                    ],
+                    [
+                      "T10",
+                      null,
+                      151.5,
+                      133.3
+                    ],
+                    [
+                      "T11",
+                      null,
+                      152.2,
+                      134.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      153.0,
+                      134.6
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Enterprise Risk Zone",
+          "columns": 3,
+          "items": [
+            {
+              "id": "b_risk_pax",
+              "title": "Enterprise Risk — cảnh báo thị trường khách giảm đột ngột",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "heatmap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "y",
+                      "type": "string"
+                    },
+                    {
+                      "id": "x",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "EU",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "EU",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "EU",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "EU",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "EU",
+                      "T6",
+                      0
+                    ],
+                    [
+                      "EU",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T3",
+                      2
+                    ],
+                    [
+                      "AU & US",
+                      "T4",
+                      3
+                    ],
+                    [
+                      "AU & US",
+                      "T5",
+                      0
+                    ],
+                    [
+                      "AU & US",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T7",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T2",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T3",
+                      3
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T6",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T7",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T2",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T4",
+                      1
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T5",
+                      2
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T6",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "Nội địa",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "Nội địa",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "Nội địa",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T7",
+                      2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "heatmap",
+                    "xField": "y",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "heatmap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_risk_cargo",
+              "title": "Enterprise Risk — cảnh báo thị trường hàng hóa giảm đột ngột",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "heatmap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "y",
+                      "type": "string"
+                    },
+                    {
+                      "id": "x",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Cargo EU",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "Cargo EU",
+                      "T3",
+                      2
+                    ],
+                    [
+                      "Cargo EU",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "Cargo EU",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "Cargo EU",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Cargo EU",
+                      "T7",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T2",
+                      2
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T4",
+                      3
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T6",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T7",
+                      2
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T3",
+                      3
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T4",
+                      1
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T5",
+                      0
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T6",
+                      2
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T2",
+                      3
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T5",
+                      2
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T7",
+                      3
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T6",
+                      3
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T7",
+                      2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "heatmap",
+                    "xField": "y",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "heatmap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_ai_card",
+              "title": "AI Insight — Commerce Risk",
+              "col": 3,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "extraComponent": {
+                "type": "card-html",
+                "config": {
+                  "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Commerce</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Pax</b> — đạt 1.095 nghìn (-0.8% KH), sụt giảm chủ yếu ở nhóm khách quốc tế EU & NEA do cạnh tranh giá vé từ các hãng Trung Quốc và Ả Rập</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>RASK</b> — 1.585 đ (-2.1% KH), giá vé bình quân giảm do áp lực cạnh tranh đường bay Trung Quốc, trong khi CASK tăng 1.5% do nhiên liệu & tỷ giá</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>P/L</b> — 640 tỷ (-4% KH), lỗ ròng mảng hành khách quốc tế ảnh hưởng bởi nhiên liệu & tỷ giá; nội địa vẫn có lãi 380 tỷ (+2% KH)</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Cargo</b> — 8.900 tấn (+1.2% KH), doanh thu 1.250 tỷ (+0.8% KH), FF đạt 68% (-1.5% KH); mảng hàng hóa nội địa tăng trưởng tốt hơn quốc tế</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khuyến nghị</b> — Tái cấu trúc đội tàu đường bay châu Âu, đẩy mạnh bán hàng hóa trên các chuyến bay chở khách (belly cargo), theo dõi biến động tỷ giá & nhiên liệu</li></ul></div>",
+                  "backgroundClassName": "",
+                  "borderClassName": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "int": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_pax_int",
+            "status": "compact",
+            "title": "Pax quốc tế",
+            "value": "420",
+            "unit": "nghìn",
+            "backgroundStatus": 2,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "2.1% với KH",
+                "tone": "negative"
+              },
+              {
+                "direction": "up",
+                "label": "4% với CK",
+                "tone": "positive",
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": "t_rask_int",
+            "status": "compact",
+            "title": "RASK quốc tế",
+            "value": "1820",
+            "unit": "đ",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "3.5% với KH",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_cask_int",
+            "status": "compact",
+            "title": "CASK quốc tế",
+            "value": "1750",
+            "unit": "đ",
+            "backgroundStatus": 2,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "2% với KH",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_lf_int",
+            "status": "compact",
+            "title": "LF quốc tế",
+            "value": "78",
+            "unit": "%",
+            "backgroundStatus": 2,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "1.5% với KH",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_pl_int",
+            "status": "compact",
+            "title": "P/L quốc tế",
+            "value": "260",
+            "unit": "tỷ",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "8% với KH",
+                "tone": "negative"
+              }
+            ]
+          }
+        ]
+      },
+      "cardHtml": {
+        "html": "<div style=\"padding:16px;border-radius:12px;background:#fff0f0;border:1px solid #fecaca\"><div style=\"font-weight:700;font-size:14px;color:#dc2626;margin-bottom:8px\">Cảnh báo thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#dc2626\"></span>Thị trường quốc tế giảm mạnh, đặc biệt EU & NEA do cạnh tranh giá vé</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#dc2626\"></span>P/L quốc tế chỉ đạt 260 tỷ (-8% KH), cần rà soát cấu trúc chi phí đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#dc2626\"></span>Cargo quốc tế: vận chuyển 3.420 tấn, doanh thu 570 tỷ, FF 64%, tải cung ứng 128 tr.AFTK</li></ul></div>",
+        "backgroundClassName": "",
+        "borderClassName": ""
+      },
+      "chartBoard": [
+        {
+          "title": "EU - Pax 12 tháng, vs KH, vs CK & AU & US - Pax 12 tháng, vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_pax_int_eu",
+              "title": "EU - Pax 12 tháng, vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      70,
+                      72,
+                      65
+                    ],
+                    [
+                      "T2",
+                      72,
+                      74,
+                      67
+                    ],
+                    [
+                      "T3",
+                      74,
+                      76,
+                      69
+                    ],
+                    [
+                      "T4",
+                      76,
+                      78,
+                      70
+                    ],
+                    [
+                      "T5",
+                      78,
+                      80,
+                      72
+                    ],
+                    [
+                      "T6",
+                      77,
+                      80,
+                      71
+                    ],
+                    [
+                      "T7",
+                      79,
+                      82,
+                      73
+                    ],
+                    [
+                      "T8",
+                      null,
+                      82.0,
+                      73.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      82.4,
+                      73.4
+                    ],
+                    [
+                      "T10",
+                      null,
+                      82.8,
+                      73.7
+                    ],
+                    [
+                      "T11",
+                      null,
+                      83.2,
+                      74.1
+                    ],
+                    [
+                      "T12",
+                      null,
+                      83.6,
+                      74.5
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_pax_int_au",
+              "title": "AU & US - Pax 12 tháng, vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      40,
+                      42,
+                      36
+                    ],
+                    [
+                      "T2",
+                      41,
+                      43,
+                      37
+                    ],
+                    [
+                      "T3",
+                      43,
+                      44,
+                      38
+                    ],
+                    [
+                      "T4",
+                      44,
+                      45,
+                      39
+                    ],
+                    [
+                      "T5",
+                      45,
+                      46,
+                      40
+                    ],
+                    [
+                      "T6",
+                      44,
+                      46,
+                      39
+                    ],
+                    [
+                      "T7",
+                      46,
+                      47,
+                      40
+                    ],
+                    [
+                      "T8",
+                      null,
+                      47.0,
+                      40.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      47.2,
+                      40.2
+                    ],
+                    [
+                      "T10",
+                      null,
+                      47.5,
+                      40.4
+                    ],
+                    [
+                      "T11",
+                      null,
+                      47.7,
+                      40.6
+                    ],
+                    [
+                      "T12",
+                      null,
+                      47.9,
+                      40.8
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "NEA (ĐBA) - Pax 12 tháng, vs KH, vs CK & SEA & CLMV (ĐNA & CLMV) - Pax 12 tháng, vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_pax_int_nea",
+              "title": "NEA (ĐBA) - Pax 12 tháng, vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      90,
+                      92,
+                      82
+                    ],
+                    [
+                      "T2",
+                      92,
+                      94,
+                      84
+                    ],
+                    [
+                      "T3",
+                      94,
+                      96,
+                      86
+                    ],
+                    [
+                      "T4",
+                      95,
+                      97,
+                      87
+                    ],
+                    [
+                      "T5",
+                      96,
+                      98,
+                      88
+                    ],
+                    [
+                      "T6",
+                      96,
+                      98,
+                      88
+                    ],
+                    [
+                      "T7",
+                      97,
+                      99,
+                      89
+                    ],
+                    [
+                      "T8",
+                      null,
+                      99.0,
+                      89.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      99.5,
+                      89.4
+                    ],
+                    [
+                      "T10",
+                      null,
+                      100.0,
+                      89.9
+                    ],
+                    [
+                      "T11",
+                      null,
+                      100.5,
+                      90.3
+                    ],
+                    [
+                      "T12",
+                      null,
+                      101.0,
+                      90.8
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_pax_int_sea",
+              "title": "SEA & CLMV (ĐNA & CLMV) - Pax 12 tháng, vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      110,
+                      112,
+                      100
+                    ],
+                    [
+                      "T2",
+                      112,
+                      114,
+                      102
+                    ],
+                    [
+                      "T3",
+                      114,
+                      116,
+                      104
+                    ],
+                    [
+                      "T4",
+                      115,
+                      117,
+                      105
+                    ],
+                    [
+                      "T5",
+                      116,
+                      118,
+                      106
+                    ],
+                    [
+                      "T6",
+                      117,
+                      119,
+                      107
+                    ],
+                    [
+                      "T7",
+                      118,
+                      120,
+                      108
+                    ],
+                    [
+                      "T8",
+                      null,
+                      120.0,
+                      108.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      120.6,
+                      108.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      121.2,
+                      109.1
+                    ],
+                    [
+                      "T11",
+                      null,
+                      121.8,
+                      109.6
+                    ],
+                    [
+                      "T12",
+                      null,
+                      122.4,
+                      110.2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Sản lượng hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK & Sản lượng hàng hóa luân chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_cargo_int_slvc",
+              "title": "Sản lượng hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      3000,
+                      3000,
+                      2700
+                    ],
+                    [
+                      "T2",
+                      3050,
+                      3050,
+                      2800
+                    ],
+                    [
+                      "T3",
+                      3100,
+                      3100,
+                      2850
+                    ],
+                    [
+                      "T4",
+                      3150,
+                      3150,
+                      2920
+                    ],
+                    [
+                      "T5",
+                      3220,
+                      3220,
+                      3000
+                    ],
+                    [
+                      "T6",
+                      3250,
+                      3250,
+                      3020
+                    ],
+                    [
+                      "T7",
+                      3300,
+                      3320,
+                      3050
+                    ],
+                    [
+                      "T8",
+                      null,
+                      3320.0,
+                      3050.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      3336.6,
+                      3065.2
+                    ],
+                    [
+                      "T10",
+                      null,
+                      3353.2,
+                      3080.5
+                    ],
+                    [
+                      "T11",
+                      null,
+                      3369.8,
+                      3095.7
+                    ],
+                    [
+                      "T12",
+                      null,
+                      3386.4,
+                      3111.0
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_cargo_int_sllc",
+              "title": "Sản lượng hàng hóa luân chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      90,
+                      91,
+                      82
+                    ],
+                    [
+                      "T2",
+                      94,
+                      95,
+                      85
+                    ],
+                    [
+                      "T3",
+                      96,
+                      98,
+                      88
+                    ],
+                    [
+                      "T4",
+                      99,
+                      100,
+                      91
+                    ],
+                    [
+                      "T5",
+                      102,
+                      103,
+                      94
+                    ],
+                    [
+                      "T6",
+                      104,
+                      106,
+                      96
+                    ],
+                    [
+                      "T7",
+                      107,
+                      108,
+                      99
+                    ],
+                    [
+                      "T8",
+                      null,
+                      108.0,
+                      99.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      108.5,
+                      99.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      109.1,
+                      100.0
+                    ],
+                    [
+                      "T11",
+                      null,
+                      109.6,
+                      100.5
+                    ],
+                    [
+                      "T12",
+                      null,
+                      110.2,
+                      101.0
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Doanh thu hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK & FF hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+          "columns": 2,
+          "items": [
+            {
+              "id": "c_cargo_int_rev",
+              "title": "Doanh thu hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      440,
+                      445,
+                      410
+                    ],
+                    [
+                      "T2",
+                      450,
+                      455,
+                      420
+                    ],
+                    [
+                      "T3",
+                      470,
+                      475,
+                      430
+                    ],
+                    [
+                      "T4",
+                      485,
+                      490,
+                      440
+                    ],
+                    [
+                      "T5",
+                      500,
+                      505,
+                      450
+                    ],
+                    [
+                      "T6",
+                      510,
+                      515,
+                      460
+                    ],
+                    [
+                      "T7",
+                      520,
+                      525,
+                      470
+                    ],
+                    [
+                      "T8",
+                      null,
+                      525.0,
+                      470.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      527.6,
+                      472.3
+                    ],
+                    [
+                      "T10",
+                      null,
+                      530.2,
+                      474.7
+                    ],
+                    [
+                      "T11",
+                      null,
+                      532.9,
+                      477.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      535.5,
+                      479.4
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c_cargo_int_ff",
+              "title": "FF hàng hóa vận chuyển 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      58,
+                      59,
+                      54
+                    ],
+                    [
+                      "T2",
+                      59,
+                      60,
+                      55
+                    ],
+                    [
+                      "T3",
+                      60,
+                      61,
+                      56
+                    ],
+                    [
+                      "T4",
+                      61,
+                      62,
+                      57
+                    ],
+                    [
+                      "T5",
+                      62,
+                      63,
+                      58
+                    ],
+                    [
+                      "T6",
+                      62,
+                      63,
+                      58
+                    ],
+                    [
+                      "T7",
+                      63,
+                      64,
+                      59
+                    ],
+                    [
+                      "T8",
+                      null,
+                      64.0,
+                      59.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      64.3,
+                      59.3
+                    ],
+                    [
+                      "T10",
+                      null,
+                      64.6,
+                      59.6
+                    ],
+                    [
+                      "T11",
+                      null,
+                      65.0,
+                      59.9
+                    ],
+                    [
+                      "T12",
+                      null,
+                      65.3,
+                      60.2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Tải cung ứng 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+          "columns": 1,
+          "items": [
+            {
+              "id": "c_cargo_int_cap",
+              "title": "Tải cung ứng 12 tháng - INT; số luỹ kế - Line vs KH, vs CK",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH",
+                      "color": "#d0d1d3"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      90,
+                      90,
+                      82
+                    ],
+                    [
+                      "T2",
+                      93,
+                      93,
+                      84
+                    ],
+                    [
+                      "T3",
+                      95,
+                      96,
+                      86
+                    ],
+                    [
+                      "T4",
+                      97,
+                      98,
+                      88
+                    ],
+                    [
+                      "T5",
+                      100,
+                      100,
+                      90
+                    ],
+                    [
+                      "T6",
+                      103,
+                      103,
+                      94
+                    ],
+                    [
+                      "T7",
+                      107,
+                      108,
+                      96
+                    ],
+                    [
+                      "T8",
+                      null,
+                      108.0,
+                      96.0
+                    ],
+                    [
+                      "T9",
+                      null,
+                      108.5,
+                      96.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      109.1,
+                      97.0
+                    ],
+                    [
+                      "T11",
+                      null,
+                      109.6,
+                      97.4
+                    ],
+                    [
+                      "T12",
+                      null,
+                      110.2,
+                      97.9
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "line",
+                        "color": "#d0d1d3",
+                        "dash": [
+                          6,
+                          3
+                        ]
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Enterprise Risk Zone",
+          "columns": 3,
+          "items": [
+            {
+              "id": "b_risk_pax",
+              "title": "Enterprise Risk — cảnh báo thị trường khách giảm đột ngột",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "heatmap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "y",
+                      "type": "string"
+                    },
+                    {
+                      "id": "x",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "EU",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "EU",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "EU",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "EU",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "EU",
+                      "T6",
+                      0
+                    ],
+                    [
+                      "EU",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T3",
+                      2
+                    ],
+                    [
+                      "AU & US",
+                      "T4",
+                      3
+                    ],
+                    [
+                      "AU & US",
+                      "T5",
+                      0
+                    ],
+                    [
+                      "AU & US",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "AU & US",
+                      "T7",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T2",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T3",
+                      3
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T6",
+                      2
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      "T7",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T2",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T4",
+                      1
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T5",
+                      2
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T6",
+                      3
+                    ],
+                    [
+                      "SEA & CLMV (ĐNA)",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "Nội địa",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "Nội địa",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "Nội địa",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Nội địa",
+                      "T7",
+                      2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "heatmap",
+                    "xField": "y",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "heatmap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_risk_cargo",
+              "title": "Enterprise Risk — cảnh báo thị trường hàng hóa giảm đột ngột",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "heatmap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "y",
+                      "type": "string"
+                    },
+                    {
+                      "id": "x",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Cargo EU",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "Cargo EU",
+                      "T3",
+                      2
+                    ],
+                    [
+                      "Cargo EU",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "Cargo EU",
+                      "T5",
+                      3
+                    ],
+                    [
+                      "Cargo EU",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Cargo EU",
+                      "T7",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T2",
+                      2
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T4",
+                      3
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T6",
+                      0
+                    ],
+                    [
+                      "Cargo AU & US",
+                      "T7",
+                      2
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T2",
+                      0
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T3",
+                      3
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T4",
+                      1
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T5",
+                      0
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T6",
+                      2
+                    ],
+                    [
+                      "Cargo NEA (ĐBA)",
+                      "T7",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T2",
+                      3
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T3",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T4",
+                      0
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T5",
+                      2
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T6",
+                      1
+                    ],
+                    [
+                      "Cargo SEA & CLMV",
+                      "T7",
+                      3
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T2",
+                      1
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T3",
+                      0
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T4",
+                      2
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T5",
+                      1
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T6",
+                      3
+                    ],
+                    [
+                      "Cargo Nội địa",
+                      "T7",
+                      2
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "heatmap",
+                    "xField": "y",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "heatmap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_ai_card",
+              "title": "AI Insight — Commerce Risk",
+              "col": 3,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "extraComponent": {
+                "type": "card-html",
+                "config": {
+                  "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Commerce</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Pax</b> — đạt 1.095 nghìn (-0.8% KH), sụt giảm chủ yếu ở nhóm khách quốc tế EU & NEA do cạnh tranh giá vé từ các hãng Trung Quốc và Ả Rập</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>RASK</b> — 1.585 đ (-2.1% KH), giá vé bình quân giảm do áp lực cạnh tranh đường bay Trung Quốc, trong khi CASK tăng 1.5% do nhiên liệu & tỷ giá</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>P/L</b> — 640 tỷ (-4% KH), lỗ ròng mảng hành khách quốc tế ảnh hưởng bởi nhiên liệu & tỷ giá; nội địa vẫn có lãi 380 tỷ (+2% KH)</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Cargo</b> — 8.900 tấn (+1.2% KH), doanh thu 1.250 tỷ (+0.8% KH), FF đạt 68% (-1.5% KH); mảng hàng hóa nội địa tăng trưởng tốt hơn quốc tế</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khuyến nghị</b> — Tái cấu trúc đội tàu đường bay châu Âu, đẩy mạnh bán hàng hóa trên các chuyến bay chở khách (belly cargo), theo dõi biến động tỷ giá & nhiên liệu</li></ul></div>",
+                  "backgroundClassName": "",
+                  "borderClassName": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

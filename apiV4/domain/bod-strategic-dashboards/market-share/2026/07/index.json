@@ -1,4 +1,19 @@
 {
+  "filters": [
+    {
+      "id": "total",
+      "label": "Total",
+      "default": true
+    },
+    {
+      "id": "dom",
+      "label": "DOM"
+    },
+    {
+      "id": "int",
+      "label": "INT"
+    }
+  ],
   "titleInfo": {
     "title": "Market share",
     "statusLabel": "REAL TIME",
@@ -74,12 +89,11 @@
   },
   "chartBoard": [
     {
-      "title": "Strategic Trend Zone",
       "columns": 2,
       "items": [
         {
-          "id": "b_int",
-          "title": "Khách TTT theo khu vực INT (12 tháng)",
+          "id": "b_eu",
+          "title": "EU (12 tháng, vs CK, vs Dự báo)",
           "col": 1,
           "row": 1,
           "colSpan": 1,
@@ -95,113 +109,96 @@
                   "type": "string"
                 },
                 {
-                  "id": "eu",
+                  "id": "actual",
                   "type": "number",
-                  "label": "EU"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
-                  "id": "au___us",
+                  "id": "ck",
                   "type": "number",
-                  "label": "AU & US",
-                  "color": "#0e7490"
+                  "label": "CK",
+                  "color": "#ec4899"
                 },
                 {
-                  "id": "nea",
+                  "id": "db",
                   "type": "number",
-                  "label": "NEA",
-                  "color": "#F97316"
-                },
-                {
-                  "id": "sea___clmv",
-                  "type": "number",
-                  "label": "SEA & CLMV",
-                  "color": "#D3AC2B"
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  70,
-                  60,
-                  90,
-                  110
-                ],
-                [
-                  "T9",
-                  72,
-                  61,
-                  92,
-                  112
-                ],
-                [
-                  "T10",
-                  74,
-                  62,
-                  94,
-                  114
-                ],
-                [
-                  "T11",
-                  76,
-                  63,
-                  95,
-                  115
-                ],
-                [
-                  "T12",
-                  78,
-                  64,
-                  96,
-                  116
-                ],
-                [
                   "T1",
-                  77,
-                  64,
-                  96,
-                  117
+                  72.2,
+                  66.4,
+                  73.6
                 ],
                 [
                   "T2",
-                  79,
-                  65,
-                  97,
-                  118
+                  73.7,
+                  67.8,
+                  75.2
                 ],
                 [
                   "T3",
-                  81,
-                  66,
-                  98,
-                  119
+                  73.0,
+                  67.2,
+                  74.5
                 ],
                 [
                   "T4",
-                  83,
-                  67,
-                  99,
-                  120
+                  74.5,
+                  68.5,
+                  76.0
                 ],
                 [
                   "T5",
-                  84,
-                  68,
-                  100,
-                  121
+                  76.0,
+                  69.9,
+                  77.5
                 ],
                 [
                   "T6",
-                  86,
-                  69,
-                  101,
-                  122
+                  75.2,
+                  69.2,
+                  76.7
                 ],
                 [
                   "T7",
-                  88,
-                  70,
-                  102,
-                  123
+                  76.8,
+                  70.7,
+                  78.3
+                ],
+                [
+                  "T8",
+                  null,
+                  70.7,
+                  78.3
+                ],
+                [
+                  "T9",
+                  null,
+                  71.1,
+                  78.7
+                ],
+                [
+                  "T10",
+                  null,
+                  71.4,
+                  79.1
+                ],
+                [
+                  "T11",
+                  null,
+                  71.8,
+                  79.5
+                ],
+                [
+                  "T12",
+                  null,
+                  72.1,
+                  79.9
                 ]
               ]
             },
@@ -212,20 +209,19 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "eu",
-                    "chartType": "line"
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
-                    "field": "au___us",
-                    "chartType": "line"
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
                   },
                   {
-                    "field": "nea",
-                    "chartType": "line"
-                  },
-                  {
-                    "field": "sea___clmv",
-                    "chartType": "line"
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -233,8 +229,8 @@
           }
         },
         {
-          "id": "b_dom",
-          "title": "Khách TTT theo nhóm DOM (12 tháng)",
+          "id": "b_au_us",
+          "title": "AU & US (12 tháng, vs CK, vs Dự báo)",
           "col": 2,
           "row": 1,
           "colSpan": 1,
@@ -250,113 +246,96 @@
                   "type": "string"
                 },
                 {
-                  "id": "hansgn",
+                  "id": "actual",
                   "type": "number",
-                  "label": "HANSGN"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
-                  "id": "handad",
+                  "id": "ck",
                   "type": "number",
-                  "label": "HANDAD",
-                  "color": "#0e7490"
+                  "label": "CK",
+                  "color": "#ec4899"
                 },
                 {
-                  "id": "sgndad",
+                  "id": "db",
                   "type": "number",
-                  "label": "SGNDAD",
-                  "color": "#F97316"
-                },
-                {
-                  "id": "du_l_ch",
-                  "type": "number",
-                  "label": "Du lịch",
-                  "color": "#D3AC2B"
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  180,
-                  90,
-                  70,
-                  60
-                ],
-                [
-                  "T9",
-                  182,
-                  91,
-                  71,
-                  62
-                ],
-                [
-                  "T10",
-                  184,
-                  92,
-                  72,
-                  64
-                ],
-                [
-                  "T11",
-                  186,
-                  93,
-                  73,
-                  66
-                ],
-                [
-                  "T12",
-                  188,
-                  94,
-                  74,
-                  68
-                ],
-                [
                   "T1",
-                  187,
-                  94,
-                  74,
-                  67
+                  59.5,
+                  55.3,
+                  60.1
                 ],
                 [
                   "T2",
-                  189,
-                  95,
-                  75,
-                  69
+                  60.6,
+                  56.4,
+                  61.2
                 ],
                 [
                   "T3",
-                  191,
-                  96,
-                  76,
-                  71
+                  59.9,
+                  55.7,
+                  60.5
                 ],
                 [
                   "T4",
-                  193,
-                  97,
-                  77,
-                  73
+                  61.0,
+                  56.7,
+                  61.6
                 ],
                 [
                   "T5",
-                  194,
-                  98,
-                  78,
-                  74
+                  62.1,
+                  57.8,
+                  62.7
                 ],
                 [
                   "T6",
-                  196,
-                  99,
-                  79,
-                  76
+                  61.4,
+                  57.1,
+                  62.0
                 ],
                 [
                   "T7",
-                  198,
-                  100,
-                  80,
-                  78
+                  62.5,
+                  58.1,
+                  63.1
+                ],
+                [
+                  "T8",
+                  null,
+                  58.1,
+                  63.1
+                ],
+                [
+                  "T9",
+                  null,
+                  58.4,
+                  63.4
+                ],
+                [
+                  "T10",
+                  null,
+                  58.7,
+                  63.7
+                ],
+                [
+                  "T11",
+                  null,
+                  59.0,
+                  64.0
+                ],
+                [
+                  "T12",
+                  null,
+                  59.3,
+                  64.4
                 ]
               ]
             },
@@ -367,20 +346,978 @@
                 "xField": "month",
                 "series": [
                   {
-                    "field": "hansgn",
-                    "chartType": "line"
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
-                    "field": "handad",
-                    "chartType": "line"
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
                   },
                   {
-                    "field": "sgndad",
-                    "chartType": "line"
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_nea",
+          "title": "NEA (ĐBA) (12 tháng, vs CK, vs Dự báo)",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  90.5,
+                  82.4,
+                  93.2
+                ],
+                [
+                  "T2",
+                  92.3,
+                  84.0,
+                  95.1
+                ],
+                [
+                  "T3",
+                  91.4,
+                  83.2,
+                  94.1
+                ],
+                [
+                  "T4",
+                  93.2,
+                  84.8,
+                  96.0
+                ],
+                [
+                  "T5",
+                  95.0,
+                  86.5,
+                  97.9
+                ],
+                [
+                  "T6",
+                  94.0,
+                  85.5,
+                  96.8
+                ],
+                [
+                  "T7",
+                  95.9,
+                  87.3,
+                  98.8
+                ],
+                [
+                  "T8",
+                  null,
+                  87.3,
+                  98.8
+                ],
+                [
+                  "T9",
+                  null,
+                  87.7,
+                  99.3
+                ],
+                [
+                  "T10",
+                  null,
+                  88.2,
+                  99.8
+                ],
+                [
+                  "T11",
+                  null,
+                  88.6,
+                  100.3
+                ],
+                [
+                  "T12",
+                  null,
+                  89.0,
+                  100.8
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
-                    "field": "du_l_ch",
-                    "chartType": "line"
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_sea_clmv",
+          "title": "SEA & CLMV (ĐNA & CLMV) (12 tháng, vs CK, vs Dự báo)",
+          "col": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  110.0,
+                  99.0,
+                  112.2
+                ],
+                [
+                  "T2",
+                  112.1,
+                  100.9,
+                  114.3
+                ],
+                [
+                  "T3",
+                  110.9,
+                  99.8,
+                  113.1
+                ],
+                [
+                  "T4",
+                  113.0,
+                  101.7,
+                  115.3
+                ],
+                [
+                  "T5",
+                  115.1,
+                  103.6,
+                  117.4
+                ],
+                [
+                  "T6",
+                  113.8,
+                  102.4,
+                  116.1
+                ],
+                [
+                  "T7",
+                  116.0,
+                  104.4,
+                  118.3
+                ],
+                [
+                  "T8",
+                  null,
+                  104.4,
+                  118.3
+                ],
+                [
+                  "T9",
+                  null,
+                  104.9,
+                  118.9
+                ],
+                [
+                  "T10",
+                  null,
+                  105.4,
+                  119.5
+                ],
+                [
+                  "T11",
+                  null,
+                  106.0,
+                  120.1
+                ],
+                [
+                  "T12",
+                  null,
+                  106.5,
+                  120.7
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_hansgn",
+          "title": "HAN/SGN (12 tháng, vs CK, vs Dự báo)",
+          "col": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  178.8,
+                  157.3,
+                  184.2
+                ],
+                [
+                  "T2",
+                  181.8,
+                  160.0,
+                  187.3
+                ],
+                [
+                  "T3",
+                  179.4,
+                  157.9,
+                  184.8
+                ],
+                [
+                  "T4",
+                  182.5,
+                  160.6,
+                  188.0
+                ],
+                [
+                  "T5",
+                  185.6,
+                  163.3,
+                  191.2
+                ],
+                [
+                  "T6",
+                  183.2,
+                  161.2,
+                  188.7
+                ],
+                [
+                  "T7",
+                  186.2,
+                  163.9,
+                  191.8
+                ],
+                [
+                  "T8",
+                  null,
+                  163.9,
+                  191.8
+                ],
+                [
+                  "T9",
+                  null,
+                  164.7,
+                  192.8
+                ],
+                [
+                  "T10",
+                  null,
+                  165.5,
+                  193.7
+                ],
+                [
+                  "T11",
+                  null,
+                  166.4,
+                  194.7
+                ],
+                [
+                  "T12",
+                  null,
+                  167.2,
+                  195.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_handad",
+          "title": "HAN/DAD (12 tháng, vs CK, vs Dự báo)",
+          "col": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  90.0,
+                  81.9,
+                  91.8
+                ],
+                [
+                  "T2",
+                  91.5,
+                  83.3,
+                  93.3
+                ],
+                [
+                  "T3",
+                  90.3,
+                  82.2,
+                  92.1
+                ],
+                [
+                  "T4",
+                  91.8,
+                  83.5,
+                  93.6
+                ],
+                [
+                  "T5",
+                  93.3,
+                  84.9,
+                  95.2
+                ],
+                [
+                  "T6",
+                  92.1,
+                  83.8,
+                  93.9
+                ],
+                [
+                  "T7",
+                  93.6,
+                  85.2,
+                  95.5
+                ],
+                [
+                  "T8",
+                  null,
+                  85.2,
+                  95.5
+                ],
+                [
+                  "T9",
+                  null,
+                  85.6,
+                  96.0
+                ],
+                [
+                  "T10",
+                  null,
+                  86.1,
+                  96.5
+                ],
+                [
+                  "T11",
+                  null,
+                  86.5,
+                  96.9
+                ],
+                [
+                  "T12",
+                  null,
+                  86.9,
+                  97.4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_sgndad",
+          "title": "SGN/DAD (12 tháng, vs CK, vs Dự báo)",
+          "col": 1,
+          "row": 4,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  69.5,
+                  63.9,
+                  70.2
+                ],
+                [
+                  "T2",
+                  70.7,
+                  65.0,
+                  71.4
+                ],
+                [
+                  "T3",
+                  69.8,
+                  64.2,
+                  70.5
+                ],
+                [
+                  "T4",
+                  71.0,
+                  65.3,
+                  71.7
+                ],
+                [
+                  "T5",
+                  72.2,
+                  66.4,
+                  72.9
+                ],
+                [
+                  "T6",
+                  71.3,
+                  65.6,
+                  72.0
+                ],
+                [
+                  "T7",
+                  72.5,
+                  66.7,
+                  73.2
+                ],
+                [
+                  "T8",
+                  null,
+                  66.7,
+                  73.2
+                ],
+                [
+                  "T9",
+                  null,
+                  67.0,
+                  73.6
+                ],
+                [
+                  "T10",
+                  null,
+                  67.4,
+                  73.9
+                ],
+                [
+                  "T11",
+                  null,
+                  67.7,
+                  74.3
+                ],
+                [
+                  "T12",
+                  null,
+                  68.0,
+                  74.7
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_dulich",
+          "title": "Du lịch (12 tháng, vs CK, vs Dự báo)",
+          "col": 2,
+          "row": 4,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  61.5,
+                  57.2,
+                  62.7
+                ],
+                [
+                  "T2",
+                  63.0,
+                  58.6,
+                  64.3
+                ],
+                [
+                  "T3",
+                  62.7,
+                  58.3,
+                  64.0
+                ],
+                [
+                  "T4",
+                  64.2,
+                  59.7,
+                  65.5
+                ],
+                [
+                  "T5",
+                  65.8,
+                  61.2,
+                  67.1
+                ],
+                [
+                  "T6",
+                  65.3,
+                  60.7,
+                  66.6
+                ],
+                [
+                  "T7",
+                  66.9,
+                  62.2,
+                  68.2
+                ],
+                [
+                  "T8",
+                  null,
+                  62.2,
+                  68.2
+                ],
+                [
+                  "T9",
+                  null,
+                  62.5,
+                  68.5
+                ],
+                [
+                  "T10",
+                  null,
+                  62.8,
+                  68.9
+                ],
+                [
+                  "T11",
+                  null,
+                  63.1,
+                  69.2
+                ],
+                [
+                  "T12",
+                  null,
+                  63.4,
+                  69.6
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_trucle",
+          "title": "Trục lẻ (12 tháng, vs CK, vs Dự báo)",
+          "col": 1,
+          "row": 5,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  18.8,
+                  17.7,
+                  19.0
+                ],
+                [
+                  "T2",
+                  19.2,
+                  18.0,
+                  19.4
+                ],
+                [
+                  "T3",
+                  19.1,
+                  18.0,
+                  19.3
+                ],
+                [
+                  "T4",
+                  19.5,
+                  18.3,
+                  19.7
+                ],
+                [
+                  "T5",
+                  19.9,
+                  18.7,
+                  20.1
+                ],
+                [
+                  "T6",
+                  19.8,
+                  18.6,
+                  20.0
+                ],
+                [
+                  "T7",
+                  20.2,
+                  19.0,
+                  20.4
+                ],
+                [
+                  "T8",
+                  null,
+                  19.0,
+                  20.4
+                ],
+                [
+                  "T9",
+                  null,
+                  19.1,
+                  20.5
+                ],
+                [
+                  "T10",
+                  null,
+                  19.2,
+                  20.6
+                ],
+                [
+                  "T11",
+                  null,
+                  19.3,
+                  20.7
+                ],
+                [
+                  "T12",
+                  null,
+                  19.4,
+                  20.8
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -390,8 +1327,8 @@
         {
           "id": "b_carrier",
           "title": "Thị phần khách nội địa theo hãng bay (12 tháng)",
-          "col": 1,
-          "row": 2,
+          "col": 2,
+          "row": 5,
           "colSpan": 2,
           "rowSpan": 1,
           "aspectRatio": 1.8,
@@ -405,95 +1342,168 @@
                   "type": "string"
                 },
                 {
+                  "id": "vna",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "pa",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
                   "id": "vna_group",
                   "type": "number",
-                  "label": "VNA group"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "vj",
                   "type": "number",
-                  "label": "VJ",
-                  "color": "#DC2626"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "ba___sun",
                   "type": "number",
-                  "label": "BA + Sun",
-                  "color": "#94a3b8"
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  54,
-                  38,
-                  8
-                ],
-                [
-                  "T9",
-                  54,
-                  38,
-                  8
-                ],
-                [
-                  "T10",
-                  53.5,
-                  38.5,
-                  8
-                ],
-                [
-                  "T11",
-                  53,
-                  39,
-                  8
-                ],
-                [
-                  "T12",
-                  53,
-                  39,
-                  8
-                ],
-                [
                   "T1",
+                  30.8,
+                  22,
                   52.8,
                   39.2,
-                  8
+                  8,
+                  27.7,
+                  31.4
                 ],
                 [
                   "T2",
+                  30.5,
+                  22,
                   52.5,
                   39.5,
-                  8
+                  8,
+                  28.7,
+                  29.3
                 ],
                 [
                   "T3",
+                  30.4,
+                  22,
                   52.4,
                   39.6,
-                  8
+                  8,
+                  27.1,
+                  29.8
                 ],
                 [
                   "T4",
+                  30.3,
+                  22,
                   52.3,
                   39.7,
-                  8
+                  8,
+                  28.5,
+                  29.7
                 ],
                 [
                   "T5",
+                  30.2,
+                  22,
                   52.2,
                   39.8,
-                  8
+                  8,
+                  28.4,
+                  31.4
                 ],
                 [
                   "T6",
+                  30.1,
+                  22,
                   52.1,
                   39.9,
-                  8
+                  8,
+                  28.3,
+                  27.7
                 ],
                 [
                   "T7",
+                  30,
+                  22,
                   52,
                   40,
-                  8
+                  8,
+                  27.3,
+                  30.6
+                ],
+                [
+                  "T8",
+                  null,
+                  22.0,
+                  52.0,
+                  40.0,
+                  8.0,
+                  27.3,
+                  30.6
+                ],
+                [
+                  "T9",
+                  null,
+                  22.1,
+                  52.3,
+                  40.2,
+                  8.0,
+                  27.4,
+                  30.8
+                ],
+                [
+                  "T10",
+                  null,
+                  22.2,
+                  52.5,
+                  40.4,
+                  8.1,
+                  27.6,
+                  30.9
+                ],
+                [
+                  "T11",
+                  null,
+                  22.3,
+                  52.8,
+                  40.6,
+                  8.1,
+                  27.7,
+                  31.1
+                ],
+                [
+                  "T12",
+                  null,
+                  22.4,
+                  53.0,
+                  40.8,
+                  8.2,
+                  27.8,
+                  31.2
                 ]
               ]
             },
@@ -504,16 +1514,39 @@
                 "xField": "month",
                 "series": [
                   {
+                    "field": "vna",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "pa",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
                     "field": "vna_group",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "vj",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "ba___sun",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -528,192 +1561,99 @@
       "items": [
         {
           "id": "b_risk",
-          "title": "Enterprise Risk — thị phần theo khu vực (cảnh báo giảm)",
+          "title": "Thị phần theo khu vực (INT & DOM)",
           "col": 1,
           "row": 1,
           "colSpan": 2,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
-            "chartType": "heatmap",
+            "chartType": "treemap",
             "aspectRatio": 1.8,
             "dataset": {
               "columns": [
                 {
-                  "id": "y",
+                  "id": "name",
                   "type": "string"
                 },
                 {
-                  "id": "x",
+                  "id": "parent",
                   "type": "string"
                 },
                 {
                   "id": "value",
-                  "type": "number"
+                  "type": "number",
+                  "label": "Hành khách (nghìn)",
+                  "color": "#2962a0"
                 }
               ],
               "rows": [
                 [
-                  "EU",
-                  "T2",
-                  0
+                  "Quốc tế (INT)",
+                  null,
+                  420
                 ],
                 [
                   "EU",
-                  "T3",
-                  1
-                ],
-                [
-                  "EU",
-                  "T4",
-                  2
-                ],
-                [
-                  "EU",
-                  "T5",
-                  3
-                ],
-                [
-                  "EU",
-                  "T6",
-                  0
-                ],
-                [
-                  "EU",
-                  "T7",
-                  1
+                  "Quốc tế (INT)",
+                  76
                 ],
                 [
                   "AU & US",
-                  "T2",
-                  3
-                ],
-                [
-                  "AU & US",
-                  "T3",
-                  0
-                ],
-                [
-                  "AU & US",
-                  "T4",
-                  1
-                ],
-                [
-                  "AU & US",
-                  "T5",
-                  2
-                ],
-                [
-                  "AU & US",
-                  "T6",
-                  3
-                ],
-                [
-                  "AU & US",
-                  "T7",
-                  0
+                  "Quốc tế (INT)",
+                  62
                 ],
                 [
                   "NEA (ĐBA)",
-                  "T2",
-                  2
+                  "Quốc tế (INT)",
+                  95
                 ],
                 [
-                  "NEA (ĐBA)",
-                  "T3",
-                  3
+                  "SEA & CLMV",
+                  "Quốc tế (INT)",
+                  115
                 ],
                 [
-                  "NEA (ĐBA)",
-                  "T4",
-                  0
+                  "Nội địa (DOM)",
+                  null,
+                  675
                 ],
                 [
-                  "NEA (ĐBA)",
-                  "T5",
-                  1
+                  "HAN/SGN",
+                  "Nội địa (DOM)",
+                  180
                 ],
                 [
-                  "NEA (ĐBA)",
-                  "T6",
-                  2
+                  "HAN/DAD",
+                  "Nội địa (DOM)",
+                  93
                 ],
                 [
-                  "NEA (ĐBA)",
-                  "T7",
-                  3
+                  "SGN/DAD",
+                  "Nội địa (DOM)",
+                  72
                 ],
                 [
-                  "SEA & CLMV (ĐNA)",
-                  "T2",
-                  1
+                  "Du lịch",
+                  "Nội địa (DOM)",
+                  66
                 ],
                 [
-                  "SEA & CLMV (ĐNA)",
-                  "T3",
-                  2
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T4",
-                  3
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T5",
-                  0
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T6",
-                  1
-                ],
-                [
-                  "SEA & CLMV (ĐNA)",
-                  "T7",
-                  2
-                ],
-                [
-                  "Nội địa",
-                  "T2",
-                  0
-                ],
-                [
-                  "Nội địa",
-                  "T3",
-                  1
-                ],
-                [
-                  "Nội địa",
-                  "T4",
-                  2
-                ],
-                [
-                  "Nội địa",
-                  "T5",
-                  3
-                ],
-                [
-                  "Nội địa",
-                  "T6",
-                  0
-                ],
-                [
-                  "Nội địa",
-                  "T7",
-                  1
+                  "Trục lẻ",
+                  "Nội địa (DOM)",
+                  20
                 ]
               ]
             },
             "views": [
               {
                 "id": "main",
-                "chartType": "heatmap",
-                "xField": "y",
+                "chartType": "treemap",
+                "xField": "name",
                 "series": [
                   {
                     "field": "value",
-                    "chartType": "heatmap"
+                    "chartType": "treemap"
                   }
                 ]
               }
@@ -738,5 +1678,1424 @@
         }
       ]
     }
-  ]
+  ],
+  "filteredData": {
+    "dom": {
+      "chartBoard": [
+        {
+          "title": "HAN/SGN (12 tháng, vs CK, vs Dự báo) & HAN/DAD (12 tháng, vs CK, vs Dự báo)",
+          "columns": 2,
+          "items": [
+            {
+              "id": "b_hansgn",
+              "title": "HAN/SGN (12 tháng, vs CK, vs Dự báo)",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      178.8,
+                      157.3,
+                      184.2
+                    ],
+                    [
+                      "T2",
+                      181.8,
+                      160.0,
+                      187.3
+                    ],
+                    [
+                      "T3",
+                      179.4,
+                      157.9,
+                      184.8
+                    ],
+                    [
+                      "T4",
+                      182.5,
+                      160.6,
+                      188.0
+                    ],
+                    [
+                      "T5",
+                      185.6,
+                      163.3,
+                      191.2
+                    ],
+                    [
+                      "T6",
+                      183.2,
+                      161.2,
+                      188.7
+                    ],
+                    [
+                      "T7",
+                      186.2,
+                      163.9,
+                      191.8
+                    ],
+                    [
+                      "T8",
+                      null,
+                      163.9,
+                      191.8
+                    ],
+                    [
+                      "T9",
+                      null,
+                      164.7,
+                      192.8
+                    ],
+                    [
+                      "T10",
+                      null,
+                      165.5,
+                      193.7
+                    ],
+                    [
+                      "T11",
+                      null,
+                      166.4,
+                      194.7
+                    ],
+                    [
+                      "T12",
+                      null,
+                      167.2,
+                      195.6
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_handad",
+              "title": "HAN/DAD (12 tháng, vs CK, vs Dự báo)",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      90.0,
+                      81.9,
+                      91.8
+                    ],
+                    [
+                      "T2",
+                      91.5,
+                      83.3,
+                      93.3
+                    ],
+                    [
+                      "T3",
+                      90.3,
+                      82.2,
+                      92.1
+                    ],
+                    [
+                      "T4",
+                      91.8,
+                      83.5,
+                      93.6
+                    ],
+                    [
+                      "T5",
+                      93.3,
+                      84.9,
+                      95.2
+                    ],
+                    [
+                      "T6",
+                      92.1,
+                      83.8,
+                      93.9
+                    ],
+                    [
+                      "T7",
+                      93.6,
+                      85.2,
+                      95.5
+                    ],
+                    [
+                      "T8",
+                      null,
+                      85.2,
+                      95.5
+                    ],
+                    [
+                      "T9",
+                      null,
+                      85.6,
+                      96.0
+                    ],
+                    [
+                      "T10",
+                      null,
+                      86.1,
+                      96.5
+                    ],
+                    [
+                      "T11",
+                      null,
+                      86.5,
+                      96.9
+                    ],
+                    [
+                      "T12",
+                      null,
+                      86.9,
+                      97.4
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_sgndad",
+              "title": "SGN/DAD (12 tháng, vs CK, vs Dự báo)",
+              "col": 1,
+              "row": 2,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      69.5,
+                      63.9,
+                      70.2
+                    ],
+                    [
+                      "T2",
+                      70.7,
+                      65.0,
+                      71.4
+                    ],
+                    [
+                      "T3",
+                      69.8,
+                      64.2,
+                      70.5
+                    ],
+                    [
+                      "T4",
+                      71.0,
+                      65.3,
+                      71.7
+                    ],
+                    [
+                      "T5",
+                      72.2,
+                      66.4,
+                      72.9
+                    ],
+                    [
+                      "T6",
+                      71.3,
+                      65.6,
+                      72.0
+                    ],
+                    [
+                      "T7",
+                      72.5,
+                      66.7,
+                      73.2
+                    ],
+                    [
+                      "T8",
+                      null,
+                      66.7,
+                      73.2
+                    ],
+                    [
+                      "T9",
+                      null,
+                      67.0,
+                      73.6
+                    ],
+                    [
+                      "T10",
+                      null,
+                      67.4,
+                      73.9
+                    ],
+                    [
+                      "T11",
+                      null,
+                      67.7,
+                      74.3
+                    ],
+                    [
+                      "T12",
+                      null,
+                      68.0,
+                      74.7
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_dulich",
+              "title": "Du lịch (12 tháng, vs CK, vs Dự báo)",
+              "col": 2,
+              "row": 2,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      61.5,
+                      57.2,
+                      62.7
+                    ],
+                    [
+                      "T2",
+                      63.0,
+                      58.6,
+                      64.3
+                    ],
+                    [
+                      "T3",
+                      62.7,
+                      58.3,
+                      64.0
+                    ],
+                    [
+                      "T4",
+                      64.2,
+                      59.7,
+                      65.5
+                    ],
+                    [
+                      "T5",
+                      65.8,
+                      61.2,
+                      67.1
+                    ],
+                    [
+                      "T6",
+                      65.3,
+                      60.7,
+                      66.6
+                    ],
+                    [
+                      "T7",
+                      66.9,
+                      62.2,
+                      68.2
+                    ],
+                    [
+                      "T8",
+                      null,
+                      62.2,
+                      68.2
+                    ],
+                    [
+                      "T9",
+                      null,
+                      62.5,
+                      68.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      62.8,
+                      68.9
+                    ],
+                    [
+                      "T11",
+                      null,
+                      63.1,
+                      69.2
+                    ],
+                    [
+                      "T12",
+                      null,
+                      63.4,
+                      69.6
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_trucle",
+              "title": "Trục lẻ (12 tháng, vs CK, vs Dự báo)",
+              "col": 1,
+              "row": 3,
+              "colSpan": 2,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      18.8,
+                      17.7,
+                      19.0
+                    ],
+                    [
+                      "T2",
+                      19.2,
+                      18.0,
+                      19.4
+                    ],
+                    [
+                      "T3",
+                      19.1,
+                      18.0,
+                      19.3
+                    ],
+                    [
+                      "T4",
+                      19.5,
+                      18.3,
+                      19.7
+                    ],
+                    [
+                      "T5",
+                      19.9,
+                      18.7,
+                      20.1
+                    ],
+                    [
+                      "T6",
+                      19.8,
+                      18.6,
+                      20.0
+                    ],
+                    [
+                      "T7",
+                      20.2,
+                      19.0,
+                      20.4
+                    ],
+                    [
+                      "T8",
+                      null,
+                      19.0,
+                      20.4
+                    ],
+                    [
+                      "T9",
+                      null,
+                      19.1,
+                      20.5
+                    ],
+                    [
+                      "T10",
+                      null,
+                      19.2,
+                      20.6
+                    ],
+                    [
+                      "T11",
+                      null,
+                      19.3,
+                      20.7
+                    ],
+                    [
+                      "T12",
+                      null,
+                      19.4,
+                      20.8
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Enterprise Risk Zone",
+          "columns": 3,
+          "items": [
+            {
+              "id": "b_risk",
+              "title": "Thị phần đường bay DOM (T7)",
+              "col": 1,
+              "row": 1,
+              "colSpan": 2,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "treemap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "name",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "Hành khách (nghìn)",
+                      "color": "#2962a0"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "HAN/SGN",
+                      180
+                    ],
+                    [
+                      "HAN/DAD",
+                      93
+                    ],
+                    [
+                      "SGN/DAD",
+                      72
+                    ],
+                    [
+                      "Du lịch",
+                      66
+                    ],
+                    [
+                      "Trục lẻ",
+                      20
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "treemap",
+                    "xField": "name",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "treemap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_ai_card",
+              "title": "AI Insight — Market Share Risk",
+              "col": 3,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "extraComponent": {
+                "type": "card-html",
+                "config": {
+                  "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với CK, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với CK, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
+                  "backgroundClassName": "",
+                  "borderClassName": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "int": {
+      "chartBoard": [
+        {
+          "title": "EU (12 tháng, vs CK, vs Dự báo) & AU & US (12 tháng, vs CK, vs Dự báo)",
+          "columns": 2,
+          "items": [
+            {
+              "id": "b_eu",
+              "title": "EU (12 tháng, vs CK, vs Dự báo)",
+              "col": 1,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      72.2,
+                      66.4,
+                      73.6
+                    ],
+                    [
+                      "T2",
+                      73.7,
+                      67.8,
+                      75.2
+                    ],
+                    [
+                      "T3",
+                      73.0,
+                      67.2,
+                      74.5
+                    ],
+                    [
+                      "T4",
+                      74.5,
+                      68.5,
+                      76.0
+                    ],
+                    [
+                      "T5",
+                      76.0,
+                      69.9,
+                      77.5
+                    ],
+                    [
+                      "T6",
+                      75.2,
+                      69.2,
+                      76.7
+                    ],
+                    [
+                      "T7",
+                      76.8,
+                      70.7,
+                      78.3
+                    ],
+                    [
+                      "T8",
+                      null,
+                      70.7,
+                      78.3
+                    ],
+                    [
+                      "T9",
+                      null,
+                      71.1,
+                      78.7
+                    ],
+                    [
+                      "T10",
+                      null,
+                      71.4,
+                      79.1
+                    ],
+                    [
+                      "T11",
+                      null,
+                      71.8,
+                      79.5
+                    ],
+                    [
+                      "T12",
+                      null,
+                      72.1,
+                      79.9
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_au_us",
+              "title": "AU & US (12 tháng, vs CK, vs Dự báo)",
+              "col": 2,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      59.5,
+                      55.3,
+                      60.1
+                    ],
+                    [
+                      "T2",
+                      60.6,
+                      56.4,
+                      61.2
+                    ],
+                    [
+                      "T3",
+                      59.9,
+                      55.7,
+                      60.5
+                    ],
+                    [
+                      "T4",
+                      61.0,
+                      56.7,
+                      61.6
+                    ],
+                    [
+                      "T5",
+                      62.1,
+                      57.8,
+                      62.7
+                    ],
+                    [
+                      "T6",
+                      61.4,
+                      57.1,
+                      62.0
+                    ],
+                    [
+                      "T7",
+                      62.5,
+                      58.1,
+                      63.1
+                    ],
+                    [
+                      "T8",
+                      null,
+                      58.1,
+                      63.1
+                    ],
+                    [
+                      "T9",
+                      null,
+                      58.4,
+                      63.4
+                    ],
+                    [
+                      "T10",
+                      null,
+                      58.7,
+                      63.7
+                    ],
+                    [
+                      "T11",
+                      null,
+                      59.0,
+                      64.0
+                    ],
+                    [
+                      "T12",
+                      null,
+                      59.3,
+                      64.4
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_nea",
+              "title": "NEA (ĐBA) (12 tháng, vs CK, vs Dự báo)",
+              "col": 1,
+              "row": 2,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      90.5,
+                      82.4,
+                      93.2
+                    ],
+                    [
+                      "T2",
+                      92.3,
+                      84.0,
+                      95.1
+                    ],
+                    [
+                      "T3",
+                      91.4,
+                      83.2,
+                      94.1
+                    ],
+                    [
+                      "T4",
+                      93.2,
+                      84.8,
+                      96.0
+                    ],
+                    [
+                      "T5",
+                      95.0,
+                      86.5,
+                      97.9
+                    ],
+                    [
+                      "T6",
+                      94.0,
+                      85.5,
+                      96.8
+                    ],
+                    [
+                      "T7",
+                      95.9,
+                      87.3,
+                      98.8
+                    ],
+                    [
+                      "T8",
+                      null,
+                      87.3,
+                      98.8
+                    ],
+                    [
+                      "T9",
+                      null,
+                      87.7,
+                      99.3
+                    ],
+                    [
+                      "T10",
+                      null,
+                      88.2,
+                      99.8
+                    ],
+                    [
+                      "T11",
+                      null,
+                      88.6,
+                      100.3
+                    ],
+                    [
+                      "T12",
+                      null,
+                      89.0,
+                      100.8
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_sea_clmv",
+              "title": "SEA & CLMV (ĐNA & CLMV) (12 tháng, vs CK, vs Dự báo)",
+              "col": 2,
+              "row": 2,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "auto",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "actual",
+                      "type": "number",
+                      "label": "TH",
+                      "color": "#2962a0"
+                    },
+                    {
+                      "id": "ck",
+                      "type": "number",
+                      "label": "CK",
+                      "color": "#ec4899"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "DB",
+                      "color": "#0b9a03"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      110.0,
+                      99.0,
+                      112.2
+                    ],
+                    [
+                      "T2",
+                      112.1,
+                      100.9,
+                      114.3
+                    ],
+                    [
+                      "T3",
+                      110.9,
+                      99.8,
+                      113.1
+                    ],
+                    [
+                      "T4",
+                      113.0,
+                      101.7,
+                      115.3
+                    ],
+                    [
+                      "T5",
+                      115.1,
+                      103.6,
+                      117.4
+                    ],
+                    [
+                      "T6",
+                      113.8,
+                      102.4,
+                      116.1
+                    ],
+                    [
+                      "T7",
+                      116.0,
+                      104.4,
+                      118.3
+                    ],
+                    [
+                      "T8",
+                      null,
+                      104.4,
+                      118.3
+                    ],
+                    [
+                      "T9",
+                      null,
+                      104.9,
+                      118.9
+                    ],
+                    [
+                      "T10",
+                      null,
+                      105.4,
+                      119.5
+                    ],
+                    [
+                      "T11",
+                      null,
+                      106.0,
+                      120.1
+                    ],
+                    [
+                      "T12",
+                      null,
+                      106.5,
+                      120.7
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "actual",
+                        "chartType": "line",
+                        "color": "#2962a0"
+                      },
+                      {
+                        "field": "ck",
+                        "chartType": "line",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "line",
+                        "color": "#0b9a03"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "Enterprise Risk Zone",
+          "columns": 3,
+          "items": [
+            {
+              "id": "b_risk",
+              "title": "Thị phần khu vực INT (T7)",
+              "col": 1,
+              "row": 1,
+              "colSpan": 2,
+              "rowSpan": 1,
+              "aspectRatio": 1.8,
+              "autoChart": {
+                "chartType": "treemap",
+                "aspectRatio": 1.8,
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "name",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "Hành khách (nghìn)",
+                      "color": "#2962a0"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "EU",
+                      76
+                    ],
+                    [
+                      "AU & US",
+                      62
+                    ],
+                    [
+                      "NEA (ĐBA)",
+                      95
+                    ],
+                    [
+                      "SEA & CLMV",
+                      115
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "treemap",
+                    "xField": "name",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "treemap"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "b_ai_card",
+              "title": "AI Insight — Market Share Risk",
+              "col": 3,
+              "row": 1,
+              "colSpan": 1,
+              "rowSpan": 1,
+              "extraComponent": {
+                "type": "card-html",
+                "config": {
+                  "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với CK, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với CK, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
+                  "backgroundClassName": "",
+                  "borderClassName": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

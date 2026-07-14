@@ -1,4 +1,19 @@
 {
+  "filters": [
+    {
+      "id": "overview",
+      "label": "Tổng quan",
+      "default": true
+    },
+    {
+      "id": "flight",
+      "label": "Khai thác bay"
+    },
+    {
+      "id": "ground",
+      "label": "Mặt đất"
+    }
+  ],
   "titleInfo": {
     "title": "Safety",
     "statusLabel": "REAL TIME",
@@ -94,7 +109,7 @@
   },
   "chartBoard": [
     {
-      "title": "Strategic Trend Zone",
+      "title": "Bảng phân loại sự cố A,B,C,D,E theo tháng (luỹ kế) & Số lượng sự cố theo tháng (từ đầu năm)",
       "columns": 2,
       "items": [
         {
@@ -210,45 +225,94 @@
                 {
                   "id": "s__s__c_",
                   "type": "number",
-                  "label": "Số sự cố"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "c_ng_k_",
                   "type": "number",
-                  "label": "Cùng kỳ",
-                  "color": "#94a3b8"
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
+                  "T1",
+                  0,
+                  0,
+                  0
+                ],
+                [
                   "T2",
                   36,
-                  34
+                  34,
+                  34.6
                 ],
                 [
                   "T3",
                   38,
-                  36
+                  36,
+                  37.2
                 ],
                 [
                   "T4",
                   35,
-                  33
+                  33,
+                  34.3
                 ],
                 [
                   "T5",
                   40,
-                  37
+                  37,
+                  41.6
                 ],
                 [
                   "T6",
                   44,
-                  40
+                  40,
+                  40.5
                 ],
                 [
                   "T7",
                   42,
-                  39
+                  39,
+                  42.8
+                ],
+                [
+                  "T8",
+                  null,
+                  39.0,
+                  42.8
+                ],
+                [
+                  "T9",
+                  null,
+                  39.2,
+                  43.0
+                ],
+                [
+                  "T10",
+                  null,
+                  39.4,
+                  43.2
+                ],
+                [
+                  "T11",
+                  null,
+                  39.6,
+                  43.4
+                ],
+                [
+                  "T12",
+                  null,
+                  39.8,
+                  43.7
                 ]
               ]
             },
@@ -260,11 +324,18 @@
                 "series": [
                   {
                     "field": "s__s__c_",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "c_ng_k_",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -274,8 +345,8 @@
       ]
     },
     {
-      "title": "Chi tiết sự cố",
-      "columns": 2,
+      "title": "Chi tiết các sự cố điển hình theo lĩnh vực",
+      "columns": 1,
       "items": [
         {
           "id": "b_detail",
@@ -341,5 +412,81 @@
         }
       ]
     }
-  ]
+  ],
+  "filteredData": {
+    "flight": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_flight_desc",
+            "status": "compact",
+            "title": "Sự cố khai thác bay",
+            "value": "6",
+            "unit": "vụ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1 vụ với CK",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_flight_human",
+            "status": "compact",
+            "title": "Yếu tố con người",
+            "value": "8",
+            "unit": "vụ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1 vụ với tháng trước",
+                "tone": "positive"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ground": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_ground_kt",
+            "status": "compact",
+            "title": "Sự cố kỹ thuật mặt đất",
+            "value": "5",
+            "unit": "vụ",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "1 vụ với tháng trước",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_ground_ktmd",
+            "status": "compact",
+            "title": "Sự cố KTMĐ",
+            "value": "4",
+            "unit": "vụ",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "2 vụ với CK",
+                "tone": "negative"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }

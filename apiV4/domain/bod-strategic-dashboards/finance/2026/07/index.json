@@ -1,4 +1,19 @@
 {
+  "filters": [
+    {
+      "id": "overview",
+      "label": "Tổng quan",
+      "default": true
+    },
+    {
+      "id": "revenue",
+      "label": "Doanh thu"
+    },
+    {
+      "id": "profit",
+      "label": "Lợi nhuận"
+    }
+  ],
   "titleInfo": {
     "title": "Finance",
     "statusLabel": "REAL TIME",
@@ -83,8 +98,8 @@
   },
   "chartBoard": [
     {
-      "title": "Finance — Strategic Trend",
-      "columns": 3,
+      "title": "Tổng doanh thu & thu nhập (12 tháng) & Lợi nhuận trước thuế (12 tháng)",
+      "columns": 2,
       "items": [
         {
           "id": "b_rev",
@@ -106,75 +121,112 @@
                 {
                   "id": "tri",
                   "type": "number",
-                  "label": "TRI"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "k__ho_ch",
                   "type": "number",
-                  "label": "Kế hoạch",
-                  "color": "#D3AC2B"
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  1700,
-                  1750
-                ],
-                [
-                  "T9",
-                  1800,
-                  1780
-                ],
-                [
-                  "T10",
-                  1750,
-                  1790
-                ],
-                [
-                  "T11",
-                  1820,
-                  1800
-                ],
-                [
-                  "T12",
-                  1900,
-                  1850
-                ],
-                [
                   "T1",
-                  1850,
-                  1860
+                  1700,
+                  1750,
+                  1615.0,
+                  1700.0
                 ],
                 [
                   "T2",
-                  1880,
-                  1880
+                  1800,
+                  1780,
+                  1602.0,
+                  1620.0
                 ],
                 [
                   "T3",
-                  1920,
-                  1900
+                  1750,
+                  1790,
+                  1540.0,
+                  1785.0
                 ],
                 [
                   "T4",
-                  1950,
-                  1930
+                  1820,
+                  1800,
+                  1619.8,
+                  1820.0
                 ],
                 [
                   "T5",
-                  1980,
-                  1960
+                  1900,
+                  1850,
+                  1634.0,
+                  1786.0
                 ],
                 [
                   "T6",
-                  2000,
-                  1990
+                  1850,
+                  1860,
+                  1665.0,
+                  1887.0
                 ],
                 [
                   "T7",
-                  2050,
-                  2020
+                  1880,
+                  1880,
+                  1767.2,
+                  1804.8
+                ],
+                [
+                  "T8",
+                  null,
+                  1880.0,
+                  1767.2,
+                  1804.8
+                ],
+                [
+                  "T9",
+                  null,
+                  1889.4,
+                  1776.0,
+                  1813.8
+                ],
+                [
+                  "T10",
+                  null,
+                  1898.8,
+                  1784.9,
+                  1822.8
+                ],
+                [
+                  "T11",
+                  null,
+                  1908.2,
+                  1793.7,
+                  1831.9
+                ],
+                [
+                  "T12",
+                  null,
+                  1917.6,
+                  1802.5,
+                  1840.9
                 ]
               ]
             },
@@ -186,11 +238,27 @@
                 "series": [
                   {
                     "field": "tri",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "k__ho_ch",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -217,75 +285,112 @@
                 {
                   "id": "lntt",
                   "type": "number",
-                  "label": "LNTT"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "k__ho_ch",
                   "type": "number",
-                  "label": "Kế hoạch",
-                  "color": "#D3AC2B"
+                  "label": "KH",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  110,
-                  130
-                ],
-                [
-                  "T9",
-                  140,
-                  140
-                ],
-                [
-                  "T10",
-                  90,
-                  145
-                ],
-                [
-                  "T11",
-                  150,
-                  150
-                ],
-                [
-                  "T12",
-                  180,
-                  160
-                ],
-                [
                   "T1",
+                  110,
                   130,
-                  160
+                  104.5,
+                  110.0
                 ],
                 [
                   "T2",
-                  150,
-                  165
+                  140,
+                  140,
+                  124.6,
+                  126.0
                 ],
                 [
                   "T3",
-                  170,
-                  170
+                  90,
+                  145,
+                  79.2,
+                  91.8
                 ],
                 [
                   "T4",
-                  160,
-                  175
+                  150,
+                  150,
+                  133.5,
+                  150.0
                 ],
                 [
                   "T5",
                   180,
-                  180
+                  160,
+                  154.8,
+                  169.2
                 ],
                 [
                   "T6",
-                  175,
-                  185
+                  130,
+                  160,
+                  117.0,
+                  132.6
                 ],
                 [
                   "T7",
-                  190,
-                  190
+                  150,
+                  165,
+                  141.0,
+                  144.0
+                ],
+                [
+                  "T8",
+                  null,
+                  165.0,
+                  141.0,
+                  144.0
+                ],
+                [
+                  "T9",
+                  null,
+                  165.8,
+                  141.7,
+                  144.7
+                ],
+                [
+                  "T10",
+                  null,
+                  166.7,
+                  142.4,
+                  145.4
+                ],
+                [
+                  "T11",
+                  null,
+                  167.5,
+                  143.1,
+                  146.2
+                ],
+                [
+                  "T12",
+                  null,
+                  168.3,
+                  143.8,
+                  146.9
                 ]
               ]
             },
@@ -297,17 +402,39 @@
                 "series": [
                   {
                     "field": "lntt",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "k__ho_ch",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#d0d1d3",
+                    "dash": [
+                      6,
+                      3
+                    ]
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
             ]
           }
-        },
+        }
+      ]
+    },
+    {
+      "title": "Dòng tiền (12 tháng)",
+      "columns": 1,
+      "items": [
         {
           "id": "b_cash",
           "title": "Dòng tiền (12 tháng)",
@@ -328,57 +455,94 @@
                 {
                   "id": "d_ng_ti_n",
                   "type": "number",
-                  "label": "Dòng tiền"
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  3900
-                ],
-                [
-                  "T9",
-                  3950
-                ],
-                [
-                  "T10",
-                  4020
-                ],
-                [
-                  "T11",
-                  4080
-                ],
-                [
-                  "T12",
-                  4150
-                ],
-                [
                   "T1",
-                  4110
+                  3900,
+                  3705.0,
+                  3900.0
                 ],
                 [
                   "T2",
-                  4160
+                  3950,
+                  3515.5,
+                  3555.0
                 ],
                 [
                   "T3",
-                  4190
+                  4020,
+                  3537.6,
+                  4100.4
                 ],
                 [
                   "T4",
-                  4210
+                  4080,
+                  3631.2,
+                  4080.0
                 ],
                 [
                   "T5",
-                  4230
+                  4150,
+                  3569.0,
+                  3901.0
                 ],
                 [
                   "T6",
-                  4240
+                  4110,
+                  3699.0,
+                  4192.2
                 ],
                 [
                   "T7",
-                  4250
+                  4160,
+                  3910.4,
+                  3993.6
+                ],
+                [
+                  "T8",
+                  null,
+                  3910.4,
+                  3993.6
+                ],
+                [
+                  "T9",
+                  null,
+                  3930.0,
+                  4013.6
+                ],
+                [
+                  "T10",
+                  null,
+                  3949.5,
+                  4033.5
+                ],
+                [
+                  "T11",
+                  null,
+                  3969.1,
+                  4053.5
+                ],
+                [
+                  "T12",
+                  null,
+                  3988.6,
+                  4073.5
                 ]
               ]
             },
@@ -390,7 +554,18 @@
                 "series": [
                   {
                     "field": "d_ng_ti_n",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -418,5 +593,96 @@
         }
       ]
     }
-  ]
+  ],
+  "filteredData": {
+    "revenue": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_rev_detail",
+            "status": "compact",
+            "title": "Doanh thu HĐKD (chi tiết)",
+            "value": "20100",
+            "unit": "tỷ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.8% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_rev_int",
+            "status": "compact",
+            "title": "Doanh thu quốc tế",
+            "value": "11800",
+            "unit": "tỷ",
+            "backgroundStatus": 2,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.3% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_rev_dom",
+            "status": "compact",
+            "title": "Doanh thu nội địa",
+            "value": "8300",
+            "unit": "tỷ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1.5% với KH",
+                "tone": "positive"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "profit": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_lntt_detail",
+            "status": "compact",
+            "title": "LN trước thuế (chi tiết)",
+            "value": "1820",
+            "unit": "tỷ",
+            "backgroundStatus": 2,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "4% với KH",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_ebit",
+            "status": "compact",
+            "title": "EBITDA",
+            "value": "3200",
+            "unit": "tỷ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1% với KH",
+                "tone": "positive"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }

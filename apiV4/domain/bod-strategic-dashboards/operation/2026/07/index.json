@@ -1,4 +1,15 @@
 {
+  "filters": [
+    {
+      "id": "tct",
+      "label": "TCT",
+      "default": true
+    },
+    {
+      "id": "hopnhat",
+      "label": "Hợp nhất"
+    }
+  ],
   "titleInfo": {
     "title": "Operation",
     "statusLabel": "REAL TIME",
@@ -95,8 +106,8 @@
   },
   "chartBoard": [
     {
-      "title": "Strategic Trend Zone",
-      "columns": 3,
+      "title": "Giờ bay, chuyến bay, OTP (12 tháng) & Giờ bay theo đội bay",
+      "columns": 2,
       "items": [
         {
           "id": "b_trend",
@@ -116,77 +127,132 @@
                   "type": "string"
                 },
                 {
+                  "id": "gi__bay__ngh_n_",
+                  "type": "number",
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
                   "id": "chuy_n_bay__ngh_n_",
                   "type": "number",
-                  "label": "Chuyến bay (nghìn)"
+                  "label": "TH",
+                  "color": "#2962a0"
                 },
                 {
                   "id": "otp__",
                   "type": "number",
-                  "label": "OTP %",
-                  "color": "#DC2626"
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
-                  "T8",
-                  1,
-                  89
-                ],
-                [
-                  "T9",
-                  1.02,
-                  88
-                ],
-                [
-                  "T10",
-                  1.03,
-                  87
-                ],
-                [
-                  "T11",
-                  1.02,
-                  86
-                ],
-                [
-                  "T12",
-                  1.04,
-                  88
-                ],
-                [
                   "T1",
-                  1.02,
-                  87
+                  42.6,
+                  1,
+                  89,
+                  40.5,
+                  42.6
                 ],
                 [
                   "T2",
-                  1.03,
-                  86
+                  42.8,
+                  1.02,
+                  88,
+                  38.1,
+                  38.5
                 ],
                 [
                   "T3",
-                  1.05,
-                  85
+                  43.1,
+                  1.03,
+                  87,
+                  37.9,
+                  44.0
                 ],
                 [
                   "T4",
-                  1.06,
-                  86
+                  42.9,
+                  1.02,
+                  86,
+                  38.2,
+                  42.9
                 ],
                 [
                   "T5",
-                  1.05,
-                  86
+                  43.3,
+                  1.04,
+                  88,
+                  37.2,
+                  40.7
                 ],
                 [
                   "T6",
-                  1.07,
-                  85
+                  43.0,
+                  1.02,
+                  87,
+                  38.7,
+                  43.9
                 ],
                 [
                   "T7",
-                  1.08,
-                  86
+                  43.2,
+                  1.03,
+                  86,
+                  40.6,
+                  41.5
+                ],
+                [
+                  "T8",
+                  null,
+                  1.0,
+                  86.0,
+                  40.6,
+                  41.5
+                ],
+                [
+                  "T9",
+                  null,
+                  1.0,
+                  86.4,
+                  40.8,
+                  41.7
+                ],
+                [
+                  "T10",
+                  null,
+                  1.0,
+                  86.9,
+                  41.0,
+                  41.9
+                ],
+                [
+                  "T11",
+                  null,
+                  1.0,
+                  87.3,
+                  41.2,
+                  42.1
+                ],
+                [
+                  "T12",
+                  null,
+                  1.1,
+                  87.7,
+                  41.4,
+                  42.3
                 ]
               ]
             },
@@ -197,12 +263,29 @@
                 "xField": "category",
                 "series": [
                   {
+                    "field": "gi__bay__ngh_n_",
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
                     "field": "chuy_n_bay__ngh_n_",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
                   },
                   {
                     "field": "otp__",
-                    "chartType": "line"
+                    "chartType": "line",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -229,26 +312,46 @@
                 {
                   "id": "gi__bay__ngh_n_",
                   "type": "number",
-                  "label": "Giờ bay (nghìn)",
-                  "color": "#004071"
+                  "label": "TH",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "CK",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "DB",
+                  "color": "#0b9a03"
                 }
               ],
               "rows": [
                 [
                   "A321",
-                  22
+                  22,
+                  19.4,
+                  22.4
                 ],
                 [
                   "A350",
+                  8.5,
+                  8.1,
                   8.5
                 ],
                 [
                   "B787",
-                  7.8
+                  7.8,
+                  7.2,
+                  7.6
                 ],
                 [
                   "ATR72",
-                  4.5
+                  4.5,
+                  4.0,
+                  4.8
                 ]
               ]
             },
@@ -260,7 +363,18 @@
                 "series": [
                   {
                     "field": "gi__bay__ngh_n_",
-                    "chartType": "bar"
+                    "chartType": "bar",
+                    "color": "#2962a0"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line",
+                    "color": "#ec4899"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line",
+                    "color": "#0b9a03"
                   }
                 ]
               }
@@ -293,7 +407,8 @@
                 {
                   "id": "otp__",
                   "type": "number",
-                  "label": "OTP %"
+                  "label": "TH",
+                  "color": "#2962a0"
                 }
               ],
               "rows": [
@@ -331,7 +446,8 @@
                 "series": [
                   {
                     "field": "otp__",
-                    "chartType": "bar-h"
+                    "chartType": "bar-h",
+                    "color": "#2962a0"
                   }
                 ]
               }
@@ -401,5 +517,81 @@
         }
       ]
     }
-  ]
+  ],
+  "filteredData": {
+    "otp": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_otpd_detail",
+            "status": "compact",
+            "title": "OTP đi (chi tiết)",
+            "value": "85.1",
+            "unit": "%",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "2% với KH",
+                "tone": "negative"
+              }
+            ]
+          },
+          {
+            "id": "t_otpa_detail",
+            "status": "compact",
+            "title": "OTP đến (chi tiết)",
+            "value": "86.2",
+            "unit": "%",
+            "backgroundStatus": 3,
+            "trend": [
+              {
+                "direction": "down",
+                "label": "1.8% với KH",
+                "tone": "negative"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "fleet": {
+      "metricCards": {
+        "accentClassName": "bg-regal-blue",
+        "items": [
+          {
+            "id": "t_flt_fleet",
+            "status": "compact",
+            "title": "Giờ bay A321",
+            "value": "22",
+            "unit": "nghìn giờ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "1% với KH",
+                "tone": "positive"
+              }
+            ]
+          },
+          {
+            "id": "t_flt_wide",
+            "status": "compact",
+            "title": "Giờ bay thân rộng",
+            "value": "16.3",
+            "unit": "nghìn giờ",
+            "backgroundStatus": 1,
+            "trend": [
+              {
+                "direction": "up",
+                "label": "0.5% với KH",
+                "tone": "positive"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
