@@ -1,0 +1,733 @@
+{
+  "titleInfo": {
+    "title": "Month Report",
+    "statusLabel": "REAL TIME",
+    "description": "Báo cáo tổng hợp tháng — tổng quan tài chính, vận hành, an toàn, dịch vụ, kỹ thuật, thị trường"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "m_lntt",
+        "status": "compact",
+        "title": "LNTT (Hợp nhất)",
+        "value": "1.820",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          { "direction": "down", "label": "4% vs KH", "tone": "negative" },
+          { "direction": "up", "label": "7% vs CK", "tone": "positive" }
+        ]
+      },
+      {
+        "id": "m_tri",
+        "status": "compact",
+        "title": "Tổng doanh thu HN",
+        "value": "21.500",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "up", "label": "1,2% vs KH", "tone": "positive" },
+          { "direction": "up", "label": "9% vs CK", "tone": "positive" }
+        ]
+      },
+      {
+        "id": "m_otp",
+        "status": "compact",
+        "title": "OTP đi/đến",
+        "value": "84,9/85,8",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          { "direction": "down", "label": "2% vs KH", "tone": "negative" }
+        ]
+      },
+      {
+        "id": "m_nps",
+        "status": "compact",
+        "title": "NPS",
+        "value": "72",
+        "unit": "điểm",
+        "backgroundStatus": 1,
+        "trend": [
+          { "direction": "up", "label": "2 vs mục tiêu", "tone": "positive" },
+          { "direction": "up", "label": "3,5 vs CK", "tone": "positive" }
+        ]
+      },
+      {
+        "id": "m_arl",
+        "status": "compact",
+        "title": "ARL",
+        "value": "91,8",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          { "direction": "down", "label": "1,4% vs KH", "tone": "negative" }
+        ]
+      },
+      {
+        "id": "m_safety",
+        "status": "compact",
+        "title": "Sự cố /10k chuyến",
+        "value": "7,93",
+        "unit": "/10kcb",
+        "backgroundStatus": 2,
+        "trend": [
+          { "direction": "down", "label": "97,7% MT (8,12)", "tone": "positive" }
+        ]
+      }
+    ]
+  },
+  "cardHtml": {
+    "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá chung tháng 7/2026</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Tài chính: Doanh thu 21.500 tỉ (+1,2% KH), LNTT 1.820 tỉ (-4% KH). Dòng tiền 4.250 tỉ (+15% CK) — ổn định.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Vận hành: 12.400 chuyến (-0,8% KH), OTP đến 85,8% dưới mục tiêu 88%. Nguyên nhân chính: tắc nghẽn HK & sân bay.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>An toàn: 42 vụ b/c Cục HK, giảm so với tháng trước & CK. ARL 91,8% dưới KH 93,2% — cần theo dõi.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Dịch vụ: NPS 72, CSI 4,12 — đều đạt và vượt mục tiêu. Thị trường: 1.095 nghìn khách, INT +6% CK.</li></ul></div>",
+    "backgroundClassName": "bg-polar",
+    "borderClassName": "border-regal-blue"
+  },
+  "chartBoard": [
+    {
+      "title": "ZONE I — Tài chính (12 tháng)",
+      "subTitle": "doanh thu · lợi nhuận · dòng tiền",
+      "items": [
+        {
+          "id": "b_revenue",
+          "title": "Tổng doanh thu & thu nhập (tỷ)",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 150,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "tt", "type": "number", "label": "Thực tế" },
+                { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
+                { "id": "kh", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" }
+              ],
+              "rows": [
+                ["T8", 1700, 1560, 1750],
+                ["T9", 1800, 1650, 1780],
+                ["T10", 1750, 1610, 1800],
+                ["T11", 1900, 1740, 1850],
+                ["T12", 2000, 1840, 1900],
+                ["T1", 1850, 1700, 1950],
+                ["T2", 2100, 1930, 2000],
+                ["T3", 1950, 1800, 2050],
+                ["T4", 2200, 2020, 2100],
+                ["T5", 2050, 1890, 2150],
+                ["T6", 2300, 2110, 2200],
+                ["T7", 2150, 1970, 2250]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "tt", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "kh", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_lntt",
+          "title": "LNTT (tỷ)",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 150,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "tt", "type": "number", "label": "Thực tế" },
+                { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
+                { "id": "kh", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" }
+              ],
+              "rows": [
+                ["T8", 110, 100, 130],
+                ["T9", 140, 128, 140],
+                ["T10", 135, 124, 145],
+                ["T11", 155, 142, 150],
+                ["T12", 160, 147, 155],
+                ["T1", 150, 138, 160],
+                ["T2", 170, 156, 165],
+                ["T3", 165, 152, 170],
+                ["T4", 175, 162, 175],
+                ["T5", 180, 166, 180],
+                ["T6", 190, 175, 185],
+                ["T7", 185, 170, 190]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "tt", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "kh", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash",
+          "title": "Dòng tiền (tỷ)",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 150,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "tt", "type": "number", "label": "Thực tế" },
+                { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
+                { "id": "kh", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" }
+              ],
+              "rows": [
+                ["T8", 3900, 3400, 3800],
+                ["T9", 3950, 3450, 3850],
+                ["T10", 4000, 3500, 3900],
+                ["T11", 4050, 3550, 3950],
+                ["T12", 4100, 3600, 4000],
+                ["T1", 4150, 3650, 4050],
+                ["T2", 4200, 3700, 4100],
+                ["T3", 4250, 3750, 4150],
+                ["T4", 4300, 3800, 4200],
+                ["T5", 4350, 3850, 4250],
+                ["T6", 4400, 3900, 4300],
+                ["T7", 4450, 3950, 4350]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "tt", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "kh", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "ZONE II — Vận hành & Khai thác",
+      "subTitle": "chuyến bay · OTP · nguyên nhân chậm · giờ bay đội tàu",
+      "items": [
+        {
+          "id": "b_flight",
+          "title": "Chuyến bay theo tháng",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "cur", "type": "number", "label": "Thực hiện", "color": "#2962A0" },
+                { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
+                { "id": "kh", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" }
+              ],
+              "rows": [
+                ["T1", 11800, 11500, 12000],
+                ["T2", 11900, 11600, 12100],
+                ["T3", 12100, 11700, 12200],
+                ["T4", 12200, 11800, 12300],
+                ["T5", 12300, 11900, 12400],
+                ["T6", 12400, 12000, 12500],
+                ["T7", 12400, 12100, 12500]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "cur", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "kh", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_otp",
+          "title": "OTP đi, đến (%)",
+          "col": 21,
+          "colSpan": 19,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "otp_di", "type": "number", "label": "OTP đi", "color": "#2962A0" },
+                { "id": "otp_den", "type": "number", "label": "OTP đến", "color": "#F97316" },
+                { "id": "otp_mt", "type": "number", "label": "Mục tiêu", "color": "#0B9A03" }
+              ],
+              "rows": [
+                ["T1", 84.2, 85.1, 88],
+                ["T2", 84.5, 85.3, 88],
+                ["T3", 83.8, 84.9, 88],
+                ["T4", 84.0, 85.0, 88],
+                ["T5", 84.7, 85.6, 88],
+                ["T6", 85.1, 86.2, 88],
+                ["T7", 84.9, 85.8, 88]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "otp_di", "chartType": "line" },
+                  { "field": "otp_den", "chartType": "line" },
+                  { "field": "otp_mt", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_otp_reasons",
+          "title": "Nguyên nhân giảm OTP",
+          "col": 40,
+          "colSpan": 21,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar-h",
+            "dataset": {
+              "columns": [
+                { "id": "reason", "type": "string" },
+                { "id": "truc_tiep", "type": "number", "label": "Trực tiếp", "color": "#2962A0" },
+                { "id": "day_chuyen", "type": "number", "label": "Dây chuyền", "color": "#D3AC2B" }
+              ],
+              "rows": [
+                ["Từ chối khách", 0.8, 0.4],
+                ["Thiết bị mặt đất", 1.2, 0.6],
+                ["Khai thác", 1.6, 0.8],
+                ["Phục vụ HK, HL", 2.0, 1.0],
+                ["Phi hành đoàn", 2.4, 1.3],
+                ["Tắc nghẽn HK", 3.0, 1.8],
+                ["Đường bay", 3.8, 2.0],
+                ["Sân bay", 4.2, 3.1]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar-h",
+                "xField": "reason",
+                "series": [
+                  { "field": "truc_tiep", "chartType": "bar" },
+                  { "field": "day_chuyen", "chartType": "bar" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "ZONE III — An toàn & Dịch vụ",
+      "subTitle": "sự cố · phân loại · NPS · CSI",
+      "items": [
+        {
+          "id": "b_safety_trend",
+          "title": "Số vụ sự cố theo tháng",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "cur", "type": "number", "label": "Thực hiện", "color": "#2962A0" },
+                { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" }
+              ],
+              "rows": [
+                ["T1", 37, 40],
+                ["T2", 36, 39],
+                ["T3", 35, 38],
+                ["T4", 34, 37],
+                ["T5", 33, 36],
+                ["T6", 32, 35],
+                ["T7", 42, 47]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "cur", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_safety_class",
+          "title": "Phân loại sự cố",
+          "col": 21,
+          "colSpan": 19,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "pie-simple",
+            "dataset": {
+              "columns": [
+                { "id": "field", "type": "string" },
+                { "id": "ratio", "type": "number", "label": "Tỷ lệ", "color": ["#10B981", "#F97316", "#3B82F6", "#EAB308", "#EC4899"] }
+              ],
+              "rows": [
+                ["Khai thác bay", 60],
+                ["Kỹ thuật", 30],
+                ["Khai thác mặt đất", 10]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "pie-simple",
+                "xField": "field",
+                "series": [{ "field": "ratio", "chartType": "pie" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_nps_services",
+          "title": "NPS & CSI vs Mục tiêu",
+          "col": 40,
+          "colSpan": 21,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                { "id": "cat", "type": "string" },
+                { "id": "th", "type": "number", "label": "Thực hiện", "color": "#004071" },
+                { "id": "mt", "type": "number", "label": "Mục tiêu", "color": "#94a3b8" }
+              ],
+              "rows": [
+                ["NPS NĐ", 68, 67],
+                ["NPS QT", 76, 73],
+                ["CSI NĐ×10", 39.8, 39.9],
+                ["CSI QT×10", 42.8, 42.7]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "cat",
+                "series": [
+                  { "field": "th", "chartType": "bar" },
+                  { "field": "mt", "chartType": "bar" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "ZONE IV — Kỹ thuật (12 tháng)",
+      "subTitle": "ARL · OCR · DR · phân loại đội tàu",
+      "items": [
+        {
+          "id": "b_arl",
+          "title": "ARL — Độ sẵn sàng (%)",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#94a3b8" }
+              ],
+              "rows": [
+                ["T1", 93.5, 93.2, 93.0],
+                ["T2", 93.2, 93.2, 92.8],
+                ["T3", 92.8, 93.2, 92.5],
+                ["T4", 92.5, 93.2, 92.2],
+                ["T5", 92.0, 93.2, 91.8],
+                ["T6", 91.8, 93.2, 91.8],
+                ["T7", 91.8, 93.2, 92.8]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "actual", "chartType": "line" },
+                  { "field": "plan", "chartType": "line", "lineType": "dashed" },
+                  { "field": "samePeriod", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_ocr",
+          "title": "OCR — Tỷ lệ quá hạn (%)",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#94a3b8" }
+              ],
+              "rows": [
+                ["T1", 1.0, 1.0, 1.0],
+                ["T2", 1.05, 1.0, 1.05],
+                ["T3", 1.1, 1.0, 1.1],
+                ["T4", 1.15, 1.0, 1.12],
+                ["T5", 1.18, 1.0, 1.1],
+                ["T6", 1.2, 1.0, 1.1],
+                ["T7", 1.2, 1.0, 1.1]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "actual", "chartType": "line" },
+                  { "field": "plan", "chartType": "line", "lineType": "dashed" },
+                  { "field": "samePeriod", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_dr",
+          "title": "DR — Độ tin cậy (%)",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D3AC2B" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#94a3b8" }
+              ],
+              "rows": [
+                ["T1", 99.6, 99.5, 99.4],
+                ["T2", 99.5, 99.5, 99.35],
+                ["T3", 99.4, 99.5, 99.3],
+                ["T4", 99.3, 99.5, 99.25],
+                ["T5", 99.2, 99.5, 99.2],
+                ["T6", 99.15, 99.5, 99.2],
+                ["T7", 99.1, 99.5, 99.2]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "actual", "chartType": "line" },
+                  { "field": "plan", "chartType": "line", "lineType": "dashed" },
+                  { "field": "samePeriod", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "ZONE V — Thị trường, Giá dầu & Tỷ giá",
+      "subTitle": "khách toàn thị trường · Jet A1 · tỷ giá USD",
+      "items": [
+        {
+          "id": "b_market_int",
+          "title": "Khách QT toàn thị trường (nghìn)",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "th", "type": "number", "label": "TH", "color": "#2962a0" },
+                { "id": "ck", "type": "number", "label": "CK", "color": "#ec4899" },
+                { "id": "db", "type": "number", "label": "DB", "color": "#d0d1d3" }
+              ],
+              "rows": [
+                ["T1", 354, 340, 352],
+                ["T2", 359, 345, 357],
+                ["T3", 364, 350, 362],
+                ["T4", 369, 355, 368],
+                ["T5", 373, 360, 374],
+                ["T6", 378, 365, 380],
+                ["T7", 383, 370, 385]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "th", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "db", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_market_dom",
+          "title": "Khách NĐ toàn thị trường (nghìn)",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "th", "type": "number", "label": "TH", "color": "#2962a0" },
+                { "id": "ck", "type": "number", "label": "CK", "color": "#ec4899" },
+                { "id": "db", "type": "number", "label": "DB", "color": "#d0d1d3" }
+              ],
+              "rows": [
+                ["T1", 422, 410, 420],
+                ["T2", 428, 415, 426],
+                ["T3", 434, 420, 432],
+                ["T4", 440, 425, 438],
+                ["T5", 445, 430, 445],
+                ["T6", 450, 435, 452],
+                ["T7", 455, 440, 458]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "th", "chartType": "line" },
+                  { "field": "ck", "chartType": "line" },
+                  { "field": "db", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_jet_fx",
+          "title": "Jet A1 theo tháng (USD/bbl)",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "jet_a1", "type": "number", "label": "Jet A1", "color": "#004071" },
+                { "id": "kh", "type": "number", "label": "KH", "color": "#D3AC2B" }
+              ],
+              "rows": [
+                ["T8", 92, 93],
+                ["T9", 93, 93],
+                ["T10", 95, 94],
+                ["T11", 94, 94],
+                ["T12", 96, 95],
+                ["T1", 95, 95],
+                ["T2", 96, 95],
+                ["T3", 94, 96],
+                ["T4", 95, 96],
+                ["T5", 96, 96],
+                ["T6", 95, 97],
+                ["T7", 95.9, 97]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  { "field": "jet_a1", "chartType": "line" },
+                  { "field": "kh", "chartType": "line", "lineType": "dashed" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
