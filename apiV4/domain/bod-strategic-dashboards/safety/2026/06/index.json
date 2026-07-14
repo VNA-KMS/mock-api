@@ -28,6 +28,22 @@
         ]
       },
       {
+        "id": "m_rate",
+        "status": "compact",
+        "title": "Sự cố, vụ việc / 10.000 chuyến bay",
+        "period": "Tháng 03/2026",
+        "value": "7,93",
+        "unit": "/10.000cb",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "đạt 97,7% mục tiêu (8,12)",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
         "id": "m_human",
         "status": "compact",
         "title": "Sự cố liên quan yếu tố con người",
@@ -111,98 +127,12 @@
   },
   "chartBoard": [
     {
-      "title": "Bảng phân loại các sự cố theo A, B, C, D, E theo tháng lũy kế",
-      "items": [
-        {
-          "id": "b_class",
-          "col": 1,
-          "colSpan": 60,
-          "row": 1,
-          "rowSpan": 1,
-          "extraComponent": {
-            "type": "table",
-            "position": "top",
-            "chartSpan": 0,
-            "extraSpan": 12,
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "cat",
-                    "type": "string",
-                    "label": "Mức"
-                  },
-                  {
-                    "id": "t5",
-                    "type": "number",
-                    "label": "T5"
-                  },
-                  {
-                    "id": "t6",
-                    "type": "number",
-                    "label": "T6"
-                  },
-                  {
-                    "id": "t7",
-                    "type": "number",
-                    "label": "T7"
-                  },
-                  {
-                    "id": "lky",
-                    "type": "number",
-                    "label": "Lũy kế"
-                  }
-                ],
-                "rows": [
-                  [
-                    "A (rất nặng)",
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  [
-                    "B (nặng)",
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  [
-                    "C (trung bình)",
-                    1,
-                    1,
-                    0,
-                    2
-                  ],
-                  [
-                    "D (nhẹ)",
-                    3,
-                    2,
-                    2,
-                    7
-                  ],
-                  [
-                    "E (khác)",
-                    8,
-                    10,
-                    11,
-                    33
-                  ]
-                ]
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "title": "Số lượng các sự cố theo tháng từ đầu năm",
+      "title": "",
       "items": [
         {
           "id": "b_trend",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
           "title": "Số lượng sự cố",
@@ -218,94 +148,28 @@
                 {
                   "id": "cur",
                   "type": "number",
-                  "label": "Tháng này"
+                  "label": "Thực hiện"
                 },
                 {
                   "id": "ck",
                   "type": "number",
                   "label": "Cùng kỳ",
-                  "color": "#94a3b8"
-                },
-                {
-                  "id": "prev",
-                  "type": "number",
-                  "label": "Tháng trước",
-                  "color": "#D3AC2B"
+                  "color": "#EC4899"
                 }
               ],
               "rows": [
-                [
-                  "T8",
-                  42,
-                  47,
-                  38
-                ],
-                [
-                  "T9",
-                  40,
-                  45,
-                  36
-                ],
-                [
-                  "T10",
-                  38,
-                  43,
-                  34
-                ],
-                [
-                  "T11",
-                  41,
-                  44,
-                  37
-                ],
-                [
-                  "T12",
-                  39,
-                  42,
-                  35
-                ],
-                [
-                  "T1",
-                  37,
-                  40,
-                  33
-                ],
-                [
-                  "T2",
-                  36,
-                  39,
-                  32
-                ],
-                [
-                  "T3",
-                  35,
-                  38,
-                  31
-                ],
-                [
-                  "T4",
-                  34,
-                  37,
-                  30
-                ],
-                [
-                  "T5",
-                  33,
-                  36,
-                  29
-                ],
-                [
-                  "T6",
-                  32,
-                  35,
-                  28
-                ],
-                [
-                  "T7",
-                  42,
-                  47,
-                  38
-                ]
+                ["T1", 37, 40],
+                ["T2", 36, 39],
+                ["T3", 35, 38],
+                ["T4", 34, 37],
+                ["T5", 33, 36],
+                ["T6", 32, 35],
+                ["T7", null, 47],
+                ["T8", null, 42],
+                ["T9", null, 40],
+                ["T10", null, 38],
+                ["T11", null, 41],
+                ["T12", null, 39]
               ]
             },
             "views": [
@@ -321,14 +185,71 @@
                   {
                     "field": "ck",
                     "chartType": "line"
-                  },
-                  {
-                    "field": "prev",
-                    "chartType": "line"
                   }
                 ]
               }
             ]
+          }
+        },
+        {
+          "id": "b_class",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "title": "Bảng phân loại sự cố",
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "cat",
+                    "type": "string",
+                    "label": "Phân loại sự cố"
+                  },
+                  {
+                    "id": "thang_nay",
+                    "type": "number",
+                    "label": "Tháng này"
+                  },
+                  {
+                    "id": "thang_truoc",
+                    "type": "number",
+                    "label": "Tháng trước"
+                  },
+                  {
+                    "id": "cung_ky",
+                    "type": "number",
+                    "label": "Cùng kỳ"
+                  },
+                  {
+                    "id": "luy_ke",
+                    "type": "number",
+                    "label": "Lũy kế từ đầu năm"
+                  },
+                  {
+                    "id": "cung_ky_luy_ke",
+                    "type": "number",
+                    "label": "Cùng kỳ lũy kế"
+                  }
+                ],
+                "rows": [
+                  ["A (rất nặng)", 0, 0, 0, 0, 0],
+                  ["B (nặng)", 0, 1, 0, 1, 0],
+                  ["C (trung bình)", 0, 1, 1, 2, 1],
+                  ["D (nhẹ)", 2, 2, 3, 7, 6],
+                  ["E (khác)", 11, 10, 9, 33, 28]
+                ]
+              },
+              "rowColors": {
+                "A (rất nặng)": "#DC2626",
+                "B (nặng)": "#F97316",
+                "C (trung bình)": "#EAB308",
+                "D (nhẹ)": "#22C55E",
+                "E (khác)": "#3B82F6"
+              }
+            }
           }
         }
       ]
