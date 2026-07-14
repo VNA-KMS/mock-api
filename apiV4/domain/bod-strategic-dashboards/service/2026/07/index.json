@@ -10,7 +10,7 @@
       {
         "id": "m_nps_ov",
         "status": "compact",
-        "title": "NPS Overall",
+        "title": "NPS",
         "value": "72",
         "unit": "điểm",
         "backgroundStatus": 1,
@@ -30,7 +30,11 @@
             "label": "2 so với mục tiêu",
             "tone": "positive"
           }
-        ]
+        ],
+        "position": {
+          "col": 1,
+          "row": 1
+        }
       },
       {
         "id": "m_nps_dom",
@@ -55,7 +59,11 @@
             "label": "1 so với mục tiêu",
             "tone": "positive"
           }
-        ]
+        ],
+        "position": {
+          "col": 2,
+          "row": 1
+        }
       },
       {
         "id": "m_nps_int",
@@ -80,12 +88,16 @@
             "label": "3 so với mục tiêu",
             "tone": "positive"
           }
-        ]
+        ],
+        "position": {
+          "col": 3,
+          "row": 1
+        }
       },
       {
         "id": "m_csi_ov",
         "status": "compact",
-        "title": "CSI Overall",
+        "title": "CSI",
         "value": "4.12",
         "unit": "điểm",
         "backgroundStatus": 1,
@@ -105,7 +117,11 @@
             "label": "0.02 so với mục tiêu",
             "tone": "positive"
           }
-        ]
+        ],
+        "position": {
+          "col": 1,
+          "row": 2
+        }
       },
       {
         "id": "m_csi_dom",
@@ -130,7 +146,11 @@
             "label": "0.01 so với mục tiêu",
             "tone": "negative"
           }
-        ]
+        ],
+        "position": {
+          "col": 2,
+          "row": 2
+        }
       },
       {
         "id": "m_csi_int",
@@ -155,17 +175,24 @@
             "label": "0.05 so với mục tiêu",
             "tone": "positive"
           }
-        ]
+        ],
+        "position": {
+          "col": 3,
+          "row": 2
+        }
       }
-    ]
+    ],
+    "layout": {
+      "columns": 3
+    }
   },
   "chartBoard": [
     {
-      "title": "NPS (12 tháng)",
+      "title": "NPS",
       "items": [
         {
           "id": "b_nps_ov",
-          "title": "NPS Overall",
+          "title": "NPS",
           "height": 150,
           "col": 1,
           "colSpan": 20,
@@ -175,36 +202,125 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 76, 72, 68],
-                ["T2", 76, 72, 68],
-                ["T3", 77, 73, 69],
-                ["T4", 78, 74, 70],
-                ["T5", 78, 74, 70],
-                ["T6", 80, 75, 71],
-                ["T7", 72, 68, 64],
-                ["T8", null, 69, 65],
-                ["T9", null, 70, 66],
-                ["T10", null, 71, 67],
-                ["T11", null, 70, 66],
-                ["T12", null, 72, 68]
+                [
+                  "T1",
+                  68,
+                  70,
+                  72
+                ],
+                [
+                  "T2",
+                  68,
+                  71,
+                  72
+                ],
+                [
+                  "T3",
+                  69,
+                  71,
+                  73
+                ],
+                [
+                  "T4",
+                  70,
+                  72,
+                  74
+                ],
+                [
+                  "T5",
+                  70,
+                  73,
+                  74
+                ],
+                [
+                  "T6",
+                  71,
+                  73,
+                  75
+                ],
+                [
+                  "T7",
+                  64,
+                  66,
+                  68
+                ],
+                [
+                  "T8",
+                  65,
+                  67,
+                  null
+                ],
+                [
+                  "T9",
+                  66,
+                  68,
+                  null
+                ],
+                [
+                  "T10",
+                  67,
+                  69,
+                  null
+                ],
+                [
+                  "T11",
+                  68,
+                  70,
+                  null
+                ],
+                [
+                  "T12",
+                  68,
+                  71,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -219,36 +335,125 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 72, 68, 64],
-                ["T2", 72, 68, 64],
-                ["T3", 73, 69, 65],
-                ["T4", 74, 70, 66],
-                ["T5", 74, 70, 66],
-                ["T6", 76, 71, 67],
-                ["T7", 68, 64, 60],
-                ["T8", null, 65, 61],
-                ["T9", null, 66, 62],
-                ["T10", null, 67, 63],
-                ["T11", null, 66, 62],
-                ["T12", null, 68, 64]
+                [
+                  "T1",
+                  64,
+                  66,
+                  68
+                ],
+                [
+                  "T2",
+                  65,
+                  67,
+                  68
+                ],
+                [
+                  "T3",
+                  65,
+                  67,
+                  69
+                ],
+                [
+                  "T4",
+                  66,
+                  68,
+                  70
+                ],
+                [
+                  "T5",
+                  66,
+                  69,
+                  70
+                ],
+                [
+                  "T6",
+                  67,
+                  69,
+                  71
+                ],
+                [
+                  "T7",
+                  60,
+                  62,
+                  64
+                ],
+                [
+                  "T8",
+                  61,
+                  63,
+                  null
+                ],
+                [
+                  "T9",
+                  62,
+                  64,
+                  null
+                ],
+                [
+                  "T10",
+                  63,
+                  65,
+                  null
+                ],
+                [
+                  "T11",
+                  63,
+                  66,
+                  null
+                ],
+                [
+                  "T12",
+                  64,
+                  67,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -263,46 +468,135 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 80, 76, 72],
-                ["T2", 80, 76, 72],
-                ["T3", 81, 77, 73],
-                ["T4", 82, 78, 74],
-                ["T5", 82, 78, 74],
-                ["T6", 84, 79, 75],
-                ["T7", 76, 72, 68],
-                ["T8", null, 73, 69],
-                ["T9", null, 74, 70],
-                ["T10", null, 75, 71],
-                ["T11", null, 74, 70],
-                ["T12", null, 76, 72]
+                [
+                  "T1",
+                  72,
+                  74,
+                  76
+                ],
+                [
+                  "T2",
+                  73,
+                  75,
+                  76
+                ],
+                [
+                  "T3",
+                  73,
+                  75,
+                  77
+                ],
+                [
+                  "T4",
+                  74,
+                  76,
+                  78
+                ],
+                [
+                  "T5",
+                  74,
+                  77,
+                  78
+                ],
+                [
+                  "T6",
+                  75,
+                  77,
+                  79
+                ],
+                [
+                  "T7",
+                  68,
+                  70,
+                  72
+                ],
+                [
+                  "T8",
+                  69,
+                  71,
+                  null
+                ],
+                [
+                  "T9",
+                  70,
+                  72,
+                  null
+                ],
+                [
+                  "T10",
+                  70,
+                  73,
+                  null
+                ],
+                [
+                  "T11",
+                  71,
+                  74,
+                  null
+                ],
+                [
+                  "T12",
+                  72,
+                  75,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
     },
     {
-      "title": "CSI (12 tháng)",
+      "title": "CSI",
       "items": [
         {
           "id": "b_csi_ov",
-          "title": "CSI Overall",
+          "title": "CSI",
           "height": 150,
           "col": 1,
           "colSpan": 20,
@@ -312,36 +606,125 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 4.22, 4.10, 3.98],
-                ["T2", 4.22, 4.10, 3.98],
-                ["T3", 4.25, 4.13, 4.01],
-                ["T4", 4.28, 4.16, 4.04],
-                ["T5", 4.28, 4.16, 4.04],
-                ["T6", 4.30, 4.18, 4.06],
-                ["T7", 4.12, 4.00, 3.88],
-                ["T8", null, 4.03, 3.91],
-                ["T9", null, 4.06, 3.94],
-                ["T10", null, 4.08, 3.96],
-                ["T11", null, 4.06, 3.94],
-                ["T12", null, 4.10, 3.98]
+                [
+                  "T1",
+                  3.9,
+                  4,
+                  4.1
+                ],
+                [
+                  "T2",
+                  3.92,
+                  4.02,
+                  4.1
+                ],
+                [
+                  "T3",
+                  3.93,
+                  4.03,
+                  4.13
+                ],
+                [
+                  "T4",
+                  3.96,
+                  4.06,
+                  4.16
+                ],
+                [
+                  "T5",
+                  3.96,
+                  4.08,
+                  4.16
+                ],
+                [
+                  "T6",
+                  4,
+                  4.1,
+                  4.18
+                ],
+                [
+                  "T7",
+                  3.8,
+                  3.86,
+                  4
+                ],
+                [
+                  "T8",
+                  3.82,
+                  3.88,
+                  null
+                ],
+                [
+                  "T9",
+                  3.85,
+                  3.92,
+                  null
+                ],
+                [
+                  "T10",
+                  3.88,
+                  3.95,
+                  null
+                ],
+                [
+                  "T11",
+                  3.88,
+                  3.98,
+                  null
+                ],
+                [
+                  "T12",
+                  3.9,
+                  4,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -356,36 +739,125 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 4.06, 3.94, 3.82],
-                ["T2", 4.06, 3.94, 3.82],
-                ["T3", 4.08, 3.96, 3.84],
-                ["T4", 4.10, 3.98, 3.86],
-                ["T5", 4.10, 3.98, 3.86],
-                ["T6", 4.12, 4.00, 3.88],
-                ["T7", 3.98, 3.86, 3.74],
-                ["T8", null, 3.88, 3.76],
-                ["T9", null, 3.90, 3.78],
-                ["T10", null, 3.92, 3.80],
-                ["T11", null, 3.90, 3.78],
-                ["T12", null, 3.94, 3.82]
+                [
+                  "T1",
+                  3.8,
+                  3.88,
+                  3.94
+                ],
+                [
+                  "T2",
+                  3.82,
+                  3.9,
+                  3.94
+                ],
+                [
+                  "T3",
+                  3.84,
+                  3.92,
+                  3.96
+                ],
+                [
+                  "T4",
+                  3.86,
+                  3.94,
+                  3.98
+                ],
+                [
+                  "T5",
+                  3.86,
+                  3.94,
+                  3.98
+                ],
+                [
+                  "T6",
+                  3.88,
+                  3.96,
+                  4
+                ],
+                [
+                  "T7",
+                  3.7,
+                  3.74,
+                  3.86
+                ],
+                [
+                  "T8",
+                  3.72,
+                  3.76,
+                  null
+                ],
+                [
+                  "T9",
+                  3.74,
+                  3.78,
+                  null
+                ],
+                [
+                  "T10",
+                  3.76,
+                  3.82,
+                  null
+                ],
+                [
+                  "T11",
+                  3.78,
+                  3.84,
+                  null
+                ],
+                [
+                  "T12",
+                  3.78,
+                  3.86,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -400,36 +872,125 @@
             "chartType": "auto",
             "dataset": {
               "columns": [
-                { "id": "month", "type": "string" },
-                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2563eb" },
-                { "id": "yearAgo", "type": "number", "label": "Cùng kỳ năm trước", "color": "#94a3b8" },
-                { "id": "twoYearsAgo", "type": "number", "label": "2 năm trước", "color": "#D3AC2B" }
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "y2024",
+                  "type": "number",
+                  "label": "2024"
+                },
+                {
+                  "id": "y2025",
+                  "type": "number",
+                  "label": "2025"
+                },
+                {
+                  "id": "y2026",
+                  "type": "number",
+                  "label": "2026"
+                }
               ],
               "rows": [
-                ["T1", 4.36, 4.24, 4.12],
-                ["T2", 4.36, 4.24, 4.12],
-                ["T3", 4.38, 4.26, 4.14],
-                ["T4", 4.40, 4.28, 4.16],
-                ["T5", 4.40, 4.28, 4.16],
-                ["T6", 4.42, 4.30, 4.18],
-                ["T7", 4.28, 4.16, 4.04],
-                ["T8", null, 4.18, 4.06],
-                ["T9", null, 4.20, 4.08],
-                ["T10", null, 4.22, 4.10],
-                ["T11", null, 4.20, 4.08],
-                ["T12", null, 4.24, 4.12]
+                [
+                  "T1",
+                  4.1,
+                  4.18,
+                  4.24
+                ],
+                [
+                  "T2",
+                  4.12,
+                  4.2,
+                  4.24
+                ],
+                [
+                  "T3",
+                  4.14,
+                  4.22,
+                  4.26
+                ],
+                [
+                  "T4",
+                  4.16,
+                  4.24,
+                  4.28
+                ],
+                [
+                  "T5",
+                  4.16,
+                  4.24,
+                  4.28
+                ],
+                [
+                  "T6",
+                  4.18,
+                  4.26,
+                  4.3
+                ],
+                [
+                  "T7",
+                  4,
+                  4.04,
+                  4.16
+                ],
+                [
+                  "T8",
+                  4.02,
+                  4.06,
+                  null
+                ],
+                [
+                  "T9",
+                  4.04,
+                  4.08,
+                  null
+                ],
+                [
+                  "T10",
+                  4.06,
+                  4.12,
+                  null
+                ],
+                [
+                  "T11",
+                  4.08,
+                  4.14,
+                  null
+                ],
+                [
+                  "T12",
+                  4.08,
+                  4.16,
+                  null
+                ]
               ]
             },
-            "views": [{
-              "id": "main",
-              "chartType": "auto",
-              "xField": "month",
-              "series": [
-                { "field": "actual", "chartType": "line" },
-                { "field": "yearAgo", "chartType": "line" },
-                { "field": "twoYearsAgo", "chartType": "line" }
-              ]
-            }]
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "y2024",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2025",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "y2026",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
@@ -441,7 +1002,7 @@
           "id": "b_ap",
           "title": "Sân bay có CSI thấp nhất",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
           "extraComponent": {
@@ -500,8 +1061,8 @@
         {
           "id": "b_route",
           "title": "Đường bay có CSI thấp nhất",
-          "col": 21,
-          "colSpan": 20,
+          "col": 31,
+          "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
           "extraComponent": {
@@ -556,62 +1117,3186 @@
               }
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "title": "Các yếu tố ảnh hưởng",
+      "items": [
         {
-          "id": "b_reason",
-          "title": "Lý do CSI thấp",
-          "col": 41,
-          "colSpan": 20,
+          "id": "b_dom_nps",
+          "title": "Các yếu tố ảnh hưởng NPS Nội địa",
+          "height": 200,
+          "col": 1,
+          "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
-          "extraComponent": {
-            "type": "table",
-            "position": "top",
-            "config": {
-              "dataset": {
-                "columns": [
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "reason",
+                  "type": "string"
+                },
+                {
+                  "id": "bar_current",
+                  "type": "number",
+                  "label": "Tháng này"
+                },
+                {
+                  "id": "bar_prev",
+                  "type": "number",
+                  "label": "Tháng trước"
+                },
+                {
+                  "id": "line_target",
+                  "type": "number",
+                  "label": "Mục tiêu"
+                }
+              ],
+              "rows": [
+                [
+                  "Thoi gian cho",
+                  62,
+                  58,
+                  65
+                ],
+                [
+                  "Thai do phuc vu",
+                  58,
+                  55,
+                  62
+                ],
+                [
+                  "Dich vu an uong",
+                  55,
+                  52,
+                  60
+                ],
+                [
+                  "Tien nghi san bay",
+                  50,
+                  48,
+                  55
+                ],
+                [
+                  "Thong tin bay",
+                  45,
+                  42,
+                  50
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "reason",
+                "series": [
                   {
-                    "id": "reason",
-                    "type": "string",
-                    "label": "Lý do"
+                    "field": "bar_current",
+                    "chartType": "bar"
                   },
                   {
-                    "id": "pct",
-                    "type": "number",
-                    "label": "Tỷ trọng"
+                    "field": "bar_prev",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "line_target",
+                    "chartType": "line",
+                    "lineType": "solid"
                   }
-                ],
-                "rows": [
-                  [
-                    "Thoi gian cho",
-                    28
-                  ],
-                  [
-                    "Thai do phuc vu",
-                    22
-                  ],
-                  [
-                    "Dich vu an uong",
-                    18
-                  ],
-                  [
-                    "Tien nghi san bay",
-                    16
-                  ],
-                  [
-                    "Thong tin bay",
-                    10
-                  ],
-                  [
-                    "Khac",
-                    6
-                  ]
                 ]
               }
-            }
+            ]
+          }
+        },
+        {
+          "id": "b_dom_csi",
+          "title": "Các yếu tố ảnh hưởng CSI Nội địa",
+          "height": 200,
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "reason",
+                  "type": "string"
+                },
+                {
+                  "id": "bar_current",
+                  "type": "number",
+                  "label": "Tháng này"
+                },
+                {
+                  "id": "bar_prev",
+                  "type": "number",
+                  "label": "Tháng trước"
+                },
+                {
+                  "id": "line_target",
+                  "type": "number",
+                  "label": "Mục tiêu"
+                }
+              ],
+              "rows": [
+                [
+                  "Thoi gian cho",
+                  3.5,
+                  3.2,
+                  3.8
+                ],
+                [
+                  "Thai do phuc vu",
+                  3.2,
+                  3,
+                  3.5
+                ],
+                [
+                  "Dich vu an uong",
+                  3,
+                  2.8,
+                  3.3
+                ],
+                [
+                  "Tien nghi san bay",
+                  2.8,
+                  2.6,
+                  3
+                ],
+                [
+                  "Thong tin bay",
+                  2.5,
+                  2.3,
+                  2.8
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "reason",
+                "series": [
+                  {
+                    "field": "bar_current",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "bar_prev",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "line_target",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_int_nps",
+          "title": "Các yếu tố ảnh hưởng NPS Quốc tế",
+          "height": 200,
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "reason",
+                  "type": "string"
+                },
+                {
+                  "id": "bar_current",
+                  "type": "number",
+                  "label": "Tháng này"
+                },
+                {
+                  "id": "bar_prev",
+                  "type": "number",
+                  "label": "Tháng trước"
+                },
+                {
+                  "id": "line_target",
+                  "type": "number",
+                  "label": "Mục tiêu"
+                }
+              ],
+              "rows": [
+                [
+                  "Thu tuc",
+                  72,
+                  68,
+                  75
+                ],
+                [
+                  "Tien nghi",
+                  68,
+                  65,
+                  72
+                ],
+                [
+                  "Dich vu",
+                  65,
+                  62,
+                  70
+                ],
+                [
+                  "An toan",
+                  60,
+                  58,
+                  65
+                ],
+                [
+                  "Thong tin",
+                  55,
+                  52,
+                  60
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "reason",
+                "series": [
+                  {
+                    "field": "bar_current",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "bar_prev",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "line_target",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_int_csi",
+          "title": "Các yếu tố ảnh hưởng CSI Quốc tế",
+          "height": 200,
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "autoChart": {
+            "chartType": "auto",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "reason",
+                  "type": "string"
+                },
+                {
+                  "id": "bar_current",
+                  "type": "number",
+                  "label": "Tháng này"
+                },
+                {
+                  "id": "bar_prev",
+                  "type": "number",
+                  "label": "Tháng trước"
+                },
+                {
+                  "id": "line_target",
+                  "type": "number",
+                  "label": "Mục tiêu"
+                }
+              ],
+              "rows": [
+                [
+                  "Thu tuc",
+                  4.2,
+                  3.9,
+                  4.4
+                ],
+                [
+                  "Tien nghi",
+                  3.9,
+                  3.7,
+                  4.2
+                ],
+                [
+                  "Dich vu",
+                  3.7,
+                  3.5,
+                  4
+                ],
+                [
+                  "An toan",
+                  3.5,
+                  3.3,
+                  3.8
+                ],
+                [
+                  "Thong tin",
+                  3.2,
+                  3,
+                  3.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "reason",
+                "series": [
+                  {
+                    "field": "bar_current",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "bar_prev",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "line_target",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
     }
-  ]
+  ],
+  "filters": [
+    {
+      "key": "network",
+      "col": 1,
+      "colSpan": 60,
+      "label": "Phạm vi mạng bay",
+      "showInfo": true,
+      "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
+      "size": "sm",
+      "options": [
+        {
+          "value": "total",
+          "label": "Tổng quan"
+        },
+        {
+          "value": "dom",
+          "label": "Nội địa"
+        },
+        {
+          "value": "int",
+          "label": "Quốc tế"
+        }
+      ]
+    }
+  ],
+  "contentFilter": {
+    "network": {
+      "total": {
+        "chartBoard": [
+          {
+            "title": "NPS",
+            "items": [
+              {
+                "id": "b_nps_ov",
+                "title": "NPS",
+                "height": 150,
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        68,
+                        70,
+                        72
+                      ],
+                      [
+                        "T2",
+                        68,
+                        71,
+                        72
+                      ],
+                      [
+                        "T3",
+                        69,
+                        71,
+                        73
+                      ],
+                      [
+                        "T4",
+                        70,
+                        72,
+                        74
+                      ],
+                      [
+                        "T5",
+                        70,
+                        73,
+                        74
+                      ],
+                      [
+                        "T6",
+                        71,
+                        73,
+                        75
+                      ],
+                      [
+                        "T7",
+                        64,
+                        66,
+                        68
+                      ],
+                      [
+                        "T8",
+                        65,
+                        67,
+                        null
+                      ],
+                      [
+                        "T9",
+                        66,
+                        68,
+                        null
+                      ],
+                      [
+                        "T10",
+                        67,
+                        69,
+                        null
+                      ],
+                      [
+                        "T11",
+                        68,
+                        70,
+                        null
+                      ],
+                      [
+                        "T12",
+                        68,
+                        71,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_nps_dom",
+                "title": "NPS DOM",
+                "height": 150,
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        64,
+                        66,
+                        68
+                      ],
+                      [
+                        "T2",
+                        65,
+                        67,
+                        68
+                      ],
+                      [
+                        "T3",
+                        65,
+                        67,
+                        69
+                      ],
+                      [
+                        "T4",
+                        66,
+                        68,
+                        70
+                      ],
+                      [
+                        "T5",
+                        66,
+                        69,
+                        70
+                      ],
+                      [
+                        "T6",
+                        67,
+                        69,
+                        71
+                      ],
+                      [
+                        "T7",
+                        60,
+                        62,
+                        64
+                      ],
+                      [
+                        "T8",
+                        61,
+                        63,
+                        null
+                      ],
+                      [
+                        "T9",
+                        62,
+                        64,
+                        null
+                      ],
+                      [
+                        "T10",
+                        63,
+                        65,
+                        null
+                      ],
+                      [
+                        "T11",
+                        63,
+                        66,
+                        null
+                      ],
+                      [
+                        "T12",
+                        64,
+                        67,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_nps_int",
+                "title": "NPS INT",
+                "height": 150,
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        72,
+                        74,
+                        76
+                      ],
+                      [
+                        "T2",
+                        73,
+                        75,
+                        76
+                      ],
+                      [
+                        "T3",
+                        73,
+                        75,
+                        77
+                      ],
+                      [
+                        "T4",
+                        74,
+                        76,
+                        78
+                      ],
+                      [
+                        "T5",
+                        74,
+                        77,
+                        78
+                      ],
+                      [
+                        "T6",
+                        75,
+                        77,
+                        79
+                      ],
+                      [
+                        "T7",
+                        68,
+                        70,
+                        72
+                      ],
+                      [
+                        "T8",
+                        69,
+                        71,
+                        null
+                      ],
+                      [
+                        "T9",
+                        70,
+                        72,
+                        null
+                      ],
+                      [
+                        "T10",
+                        70,
+                        73,
+                        null
+                      ],
+                      [
+                        "T11",
+                        71,
+                        74,
+                        null
+                      ],
+                      [
+                        "T12",
+                        72,
+                        75,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "CSI",
+            "items": [
+              {
+                "id": "b_csi_ov",
+                "title": "CSI",
+                "height": 150,
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        3.9,
+                        4,
+                        4.1
+                      ],
+                      [
+                        "T2",
+                        3.92,
+                        4.02,
+                        4.1
+                      ],
+                      [
+                        "T3",
+                        3.93,
+                        4.03,
+                        4.13
+                      ],
+                      [
+                        "T4",
+                        3.96,
+                        4.06,
+                        4.16
+                      ],
+                      [
+                        "T5",
+                        3.96,
+                        4.08,
+                        4.16
+                      ],
+                      [
+                        "T6",
+                        4,
+                        4.1,
+                        4.18
+                      ],
+                      [
+                        "T7",
+                        3.8,
+                        3.86,
+                        4
+                      ],
+                      [
+                        "T8",
+                        3.82,
+                        3.88,
+                        null
+                      ],
+                      [
+                        "T9",
+                        3.85,
+                        3.92,
+                        null
+                      ],
+                      [
+                        "T10",
+                        3.88,
+                        3.95,
+                        null
+                      ],
+                      [
+                        "T11",
+                        3.88,
+                        3.98,
+                        null
+                      ],
+                      [
+                        "T12",
+                        3.9,
+                        4,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_csi_dom",
+                "title": "CSI DOM",
+                "height": 150,
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        3.8,
+                        3.88,
+                        3.94
+                      ],
+                      [
+                        "T2",
+                        3.82,
+                        3.9,
+                        3.94
+                      ],
+                      [
+                        "T3",
+                        3.84,
+                        3.92,
+                        3.96
+                      ],
+                      [
+                        "T4",
+                        3.86,
+                        3.94,
+                        3.98
+                      ],
+                      [
+                        "T5",
+                        3.86,
+                        3.94,
+                        3.98
+                      ],
+                      [
+                        "T6",
+                        3.88,
+                        3.96,
+                        4
+                      ],
+                      [
+                        "T7",
+                        3.7,
+                        3.74,
+                        3.86
+                      ],
+                      [
+                        "T8",
+                        3.72,
+                        3.76,
+                        null
+                      ],
+                      [
+                        "T9",
+                        3.74,
+                        3.78,
+                        null
+                      ],
+                      [
+                        "T10",
+                        3.76,
+                        3.82,
+                        null
+                      ],
+                      [
+                        "T11",
+                        3.78,
+                        3.84,
+                        null
+                      ],
+                      [
+                        "T12",
+                        3.78,
+                        3.86,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_csi_int",
+                "title": "CSI INT",
+                "height": 150,
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        4.1,
+                        4.18,
+                        4.24
+                      ],
+                      [
+                        "T2",
+                        4.12,
+                        4.2,
+                        4.24
+                      ],
+                      [
+                        "T3",
+                        4.14,
+                        4.22,
+                        4.26
+                      ],
+                      [
+                        "T4",
+                        4.16,
+                        4.24,
+                        4.28
+                      ],
+                      [
+                        "T5",
+                        4.16,
+                        4.24,
+                        4.28
+                      ],
+                      [
+                        "T6",
+                        4.18,
+                        4.26,
+                        4.3
+                      ],
+                      [
+                        "T7",
+                        4,
+                        4.04,
+                        4.16
+                      ],
+                      [
+                        "T8",
+                        4.02,
+                        4.06,
+                        null
+                      ],
+                      [
+                        "T9",
+                        4.04,
+                        4.08,
+                        null
+                      ],
+                      [
+                        "T10",
+                        4.06,
+                        4.12,
+                        null
+                      ],
+                      [
+                        "T11",
+                        4.08,
+                        4.14,
+                        null
+                      ],
+                      [
+                        "T12",
+                        4.08,
+                        4.16,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "Enterprise Risk Zone",
+            "items": [
+              {
+                "id": "b_ap",
+                "title": "Sân bay có CSI thấp nhất",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "ap",
+                          "type": "string",
+                          "label": "Sân bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "Vinh",
+                          3.65,
+                          "-0.12"
+                        ],
+                        [
+                          "Cat Bi",
+                          3.72,
+                          "-0.08"
+                        ],
+                        [
+                          "Can Tho",
+                          3.78,
+                          "-0.05"
+                        ],
+                        [
+                          "Phu Quoc",
+                          3.82,
+                          "-0.03"
+                        ],
+                        [
+                          "Da Lat",
+                          3.88,
+                          "-0.01"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "id": "b_route",
+                "title": "Đường bay có CSI thấp nhất",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "route",
+                          "type": "string",
+                          "label": "Đường bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "HAN-VVI",
+                          3.52,
+                          "-0.15"
+                        ],
+                        [
+                          "SGN-VCS",
+                          3.58,
+                          "-0.10"
+                        ],
+                        [
+                          "HAN-DIN",
+                          3.65,
+                          "-0.08"
+                        ],
+                        [
+                          "DAD-CXR",
+                          3.72,
+                          "-0.05"
+                        ],
+                        [
+                          "SGN-PQC",
+                          3.78,
+                          "-0.03"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Các yếu tố ảnh hưởng",
+            "items": [
+              {
+                "id": "b_dom_nps",
+                "title": "Các yếu tố ảnh hưởng NPS Nội địa",
+                "height": 200,
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thoi gian cho",
+                        62,
+                        58,
+                        65
+                      ],
+                      [
+                        "Thai do phuc vu",
+                        58,
+                        55,
+                        62
+                      ],
+                      [
+                        "Dich vu an uong",
+                        55,
+                        52,
+                        60
+                      ],
+                      [
+                        "Tien nghi san bay",
+                        50,
+                        48,
+                        55
+                      ],
+                      [
+                        "Thong tin bay",
+                        45,
+                        42,
+                        50
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_dom_csi",
+                "title": "Các yếu tố ảnh hưởng CSI Nội địa",
+                "height": 200,
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thoi gian cho",
+                        3.5,
+                        3.2,
+                        3.8
+                      ],
+                      [
+                        "Thai do phuc vu",
+                        3.2,
+                        3,
+                        3.5
+                      ],
+                      [
+                        "Dich vu an uong",
+                        3,
+                        2.8,
+                        3.3
+                      ],
+                      [
+                        "Tien nghi san bay",
+                        2.8,
+                        2.6,
+                        3
+                      ],
+                      [
+                        "Thong tin bay",
+                        2.5,
+                        2.3,
+                        2.8
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_int_nps",
+                "title": "Các yếu tố ảnh hưởng NPS Quốc tế",
+                "height": 200,
+                "col": 1,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thu tuc",
+                        72,
+                        68,
+                        75
+                      ],
+                      [
+                        "Tien nghi",
+                        68,
+                        65,
+                        72
+                      ],
+                      [
+                        "Dich vu",
+                        65,
+                        62,
+                        70
+                      ],
+                      [
+                        "An toan",
+                        60,
+                        58,
+                        65
+                      ],
+                      [
+                        "Thong tin",
+                        55,
+                        52,
+                        60
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_int_csi",
+                "title": "Các yếu tố ảnh hưởng CSI Quốc tế",
+                "height": 200,
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thu tuc",
+                        4.2,
+                        3.9,
+                        4.4
+                      ],
+                      [
+                        "Tien nghi",
+                        3.9,
+                        3.7,
+                        4.2
+                      ],
+                      [
+                        "Dich vu",
+                        3.7,
+                        3.5,
+                        4
+                      ],
+                      [
+                        "An toan",
+                        3.5,
+                        3.3,
+                        3.8
+                      ],
+                      [
+                        "Thong tin",
+                        3.2,
+                        3,
+                        3.5
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 3
+          },
+          "items": [
+            {
+              "id": "m_nps_ov",
+              "status": "compact",
+              "title": "NPS",
+              "value": "72",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "1.2 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "3.5 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "2 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 1,
+                "row": 1
+              }
+            },
+            {
+              "id": "m_nps_dom",
+              "status": "compact",
+              "title": "NPS DOM",
+              "value": "68",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "0.5 so với tháng trước",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "2.1 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "1 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 2,
+                "row": 1
+              }
+            },
+            {
+              "id": "m_nps_int",
+              "status": "compact",
+              "title": "NPS INT",
+              "value": "76",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "2.0 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "4.8 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "3 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 3,
+                "row": 1
+              }
+            },
+            {
+              "id": "m_csi_ov",
+              "status": "compact",
+              "title": "CSI",
+              "value": "4.12",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "0.05 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.12 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.02 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 1,
+                "row": 2
+              }
+            },
+            {
+              "id": "m_csi_dom",
+              "status": "compact",
+              "title": "CSI DOM",
+              "value": "3.98",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "0.03 so với tháng trước",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.08 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.01 so với mục tiêu",
+                  "tone": "negative"
+                }
+              ],
+              "position": {
+                "col": 2,
+                "row": 2
+              }
+            },
+            {
+              "id": "m_csi_int",
+              "status": "compact",
+              "title": "CSI INT",
+              "value": "4.28",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "0.08 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.15 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.05 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 3,
+                "row": 2
+              }
+            }
+          ]
+        }
+      },
+      "dom": {
+        "chartBoard": [
+          {
+            "title": "NPS",
+            "items": [
+              {
+                "id": "b_nps_dom",
+                "title": "NPS DOM",
+                "height": 150,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        64,
+                        66,
+                        68
+                      ],
+                      [
+                        "T2",
+                        65,
+                        67,
+                        68
+                      ],
+                      [
+                        "T3",
+                        65,
+                        67,
+                        69
+                      ],
+                      [
+                        "T4",
+                        66,
+                        68,
+                        70
+                      ],
+                      [
+                        "T5",
+                        66,
+                        69,
+                        70
+                      ],
+                      [
+                        "T6",
+                        67,
+                        69,
+                        71
+                      ],
+                      [
+                        "T7",
+                        60,
+                        62,
+                        64
+                      ],
+                      [
+                        "T8",
+                        61,
+                        63,
+                        null
+                      ],
+                      [
+                        "T9",
+                        62,
+                        64,
+                        null
+                      ],
+                      [
+                        "T10",
+                        63,
+                        65,
+                        null
+                      ],
+                      [
+                        "T11",
+                        63,
+                        66,
+                        null
+                      ],
+                      [
+                        "T12",
+                        64,
+                        67,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "CSI",
+            "items": [
+              {
+                "id": "b_csi_dom",
+                "title": "CSI DOM",
+                "height": 150,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        3.8,
+                        3.88,
+                        3.94
+                      ],
+                      [
+                        "T2",
+                        3.82,
+                        3.9,
+                        3.94
+                      ],
+                      [
+                        "T3",
+                        3.84,
+                        3.92,
+                        3.96
+                      ],
+                      [
+                        "T4",
+                        3.86,
+                        3.94,
+                        3.98
+                      ],
+                      [
+                        "T5",
+                        3.86,
+                        3.94,
+                        3.98
+                      ],
+                      [
+                        "T6",
+                        3.88,
+                        3.96,
+                        4
+                      ],
+                      [
+                        "T7",
+                        3.7,
+                        3.74,
+                        3.86
+                      ],
+                      [
+                        "T8",
+                        3.72,
+                        3.76,
+                        null
+                      ],
+                      [
+                        "T9",
+                        3.74,
+                        3.78,
+                        null
+                      ],
+                      [
+                        "T10",
+                        3.76,
+                        3.82,
+                        null
+                      ],
+                      [
+                        "T11",
+                        3.78,
+                        3.84,
+                        null
+                      ],
+                      [
+                        "T12",
+                        3.78,
+                        3.86,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "Enterprise Risk Zone",
+            "items": [
+              {
+                "id": "b_ap",
+                "title": "Sân bay có CSI thấp nhất",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "ap",
+                          "type": "string",
+                          "label": "Sân bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "Vinh",
+                          3.65,
+                          "-0.12"
+                        ],
+                        [
+                          "Cat Bi",
+                          3.72,
+                          "-0.08"
+                        ],
+                        [
+                          "Can Tho",
+                          3.78,
+                          "-0.05"
+                        ],
+                        [
+                          "Phu Quoc",
+                          3.82,
+                          "-0.03"
+                        ],
+                        [
+                          "Da Lat",
+                          3.88,
+                          "-0.01"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "id": "b_route",
+                "title": "Đường bay có CSI thấp nhất",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "route",
+                          "type": "string",
+                          "label": "Đường bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "HAN-VVI",
+                          3.52,
+                          "-0.15"
+                        ],
+                        [
+                          "SGN-VCS",
+                          3.58,
+                          "-0.10"
+                        ],
+                        [
+                          "HAN-DIN",
+                          3.65,
+                          "-0.08"
+                        ],
+                        [
+                          "DAD-CXR",
+                          3.72,
+                          "-0.05"
+                        ],
+                        [
+                          "SGN-PQC",
+                          3.78,
+                          "-0.03"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Các yếu tố ảnh hưởng",
+            "items": [
+              {
+                "id": "b_dom_nps",
+                "title": "Các yếu tố ảnh hưởng NPS Nội địa",
+                "height": 200,
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thoi gian cho",
+                        62,
+                        58,
+                        65
+                      ],
+                      [
+                        "Thai do phuc vu",
+                        58,
+                        55,
+                        62
+                      ],
+                      [
+                        "Dich vu an uong",
+                        55,
+                        52,
+                        60
+                      ],
+                      [
+                        "Tien nghi san bay",
+                        50,
+                        48,
+                        55
+                      ],
+                      [
+                        "Thong tin bay",
+                        45,
+                        42,
+                        50
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_dom_csi",
+                "title": "Các yếu tố ảnh hưởng CSI Nội địa",
+                "height": 200,
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thoi gian cho",
+                        3.5,
+                        3.2,
+                        3.8
+                      ],
+                      [
+                        "Thai do phuc vu",
+                        3.2,
+                        3,
+                        3.5
+                      ],
+                      [
+                        "Dich vu an uong",
+                        3,
+                        2.8,
+                        3.3
+                      ],
+                      [
+                        "Tien nghi san bay",
+                        2.8,
+                        2.6,
+                        3
+                      ],
+                      [
+                        "Thong tin bay",
+                        2.5,
+                        2.3,
+                        2.8
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 3
+          },
+          "items": [
+            {
+              "id": "m_nps_dom",
+              "status": "compact",
+              "title": "NPS DOM",
+              "value": "68",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "0.5 so với tháng trước",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "2.1 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "1 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 1,
+                "row": 1
+              }
+            },
+            {
+              "id": "m_csi_dom",
+              "status": "compact",
+              "title": "CSI DOM",
+              "value": "3.98",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "0.03 so với tháng trước",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.08 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.01 so với mục tiêu",
+                  "tone": "negative"
+                }
+              ],
+              "position": {
+                "col": 2,
+                "row": 1
+              }
+            }
+          ]
+        }
+      },
+      "int": {
+        "chartBoard": [
+          {
+            "title": "NPS",
+            "items": [
+              {
+                "id": "b_nps_int",
+                "title": "NPS INT",
+                "height": 150,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        72,
+                        74,
+                        76
+                      ],
+                      [
+                        "T2",
+                        73,
+                        75,
+                        76
+                      ],
+                      [
+                        "T3",
+                        73,
+                        75,
+                        77
+                      ],
+                      [
+                        "T4",
+                        74,
+                        76,
+                        78
+                      ],
+                      [
+                        "T5",
+                        74,
+                        77,
+                        78
+                      ],
+                      [
+                        "T6",
+                        75,
+                        77,
+                        79
+                      ],
+                      [
+                        "T7",
+                        68,
+                        70,
+                        72
+                      ],
+                      [
+                        "T8",
+                        69,
+                        71,
+                        null
+                      ],
+                      [
+                        "T9",
+                        70,
+                        72,
+                        null
+                      ],
+                      [
+                        "T10",
+                        70,
+                        73,
+                        null
+                      ],
+                      [
+                        "T11",
+                        71,
+                        74,
+                        null
+                      ],
+                      [
+                        "T12",
+                        72,
+                        75,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "CSI",
+            "items": [
+              {
+                "id": "b_csi_int",
+                "title": "CSI INT",
+                "height": 150,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "y2024",
+                        "type": "number",
+                        "label": "2024"
+                      },
+                      {
+                        "id": "y2025",
+                        "type": "number",
+                        "label": "2025"
+                      },
+                      {
+                        "id": "y2026",
+                        "type": "number",
+                        "label": "2026"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        4.1,
+                        4.18,
+                        4.24
+                      ],
+                      [
+                        "T2",
+                        4.12,
+                        4.2,
+                        4.24
+                      ],
+                      [
+                        "T3",
+                        4.14,
+                        4.22,
+                        4.26
+                      ],
+                      [
+                        "T4",
+                        4.16,
+                        4.24,
+                        4.28
+                      ],
+                      [
+                        "T5",
+                        4.16,
+                        4.24,
+                        4.28
+                      ],
+                      [
+                        "T6",
+                        4.18,
+                        4.26,
+                        4.3
+                      ],
+                      [
+                        "T7",
+                        4,
+                        4.04,
+                        4.16
+                      ],
+                      [
+                        "T8",
+                        4.02,
+                        4.06,
+                        null
+                      ],
+                      [
+                        "T9",
+                        4.04,
+                        4.08,
+                        null
+                      ],
+                      [
+                        "T10",
+                        4.06,
+                        4.12,
+                        null
+                      ],
+                      [
+                        "T11",
+                        4.08,
+                        4.14,
+                        null
+                      ],
+                      [
+                        "T12",
+                        4.08,
+                        4.16,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "y2024",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2025",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        },
+                        {
+                          "field": "y2026",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "Enterprise Risk Zone",
+            "items": [
+              {
+                "id": "b_ap",
+                "title": "Sân bay có CSI thấp nhất",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "ap",
+                          "type": "string",
+                          "label": "Sân bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "Vinh",
+                          3.65,
+                          "-0.12"
+                        ],
+                        [
+                          "Cat Bi",
+                          3.72,
+                          "-0.08"
+                        ],
+                        [
+                          "Can Tho",
+                          3.78,
+                          "-0.05"
+                        ],
+                        [
+                          "Phu Quoc",
+                          3.82,
+                          "-0.03"
+                        ],
+                        [
+                          "Da Lat",
+                          3.88,
+                          "-0.01"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              },
+              {
+                "id": "b_route",
+                "title": "Đường bay có CSI thấp nhất",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "table",
+                  "position": "top",
+                  "config": {
+                    "dataset": {
+                      "columns": [
+                        {
+                          "id": "route",
+                          "type": "string",
+                          "label": "Đường bay"
+                        },
+                        {
+                          "id": "csi",
+                          "type": "number",
+                          "label": "CSI"
+                        },
+                        {
+                          "id": "chg",
+                          "type": "string",
+                          "label": "Thay đổi"
+                        }
+                      ],
+                      "rows": [
+                        [
+                          "HAN-VVI",
+                          3.52,
+                          "-0.15"
+                        ],
+                        [
+                          "SGN-VCS",
+                          3.58,
+                          "-0.10"
+                        ],
+                        [
+                          "HAN-DIN",
+                          3.65,
+                          "-0.08"
+                        ],
+                        [
+                          "DAD-CXR",
+                          3.72,
+                          "-0.05"
+                        ],
+                        [
+                          "SGN-PQC",
+                          3.78,
+                          "-0.03"
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Các yếu tố ảnh hưởng",
+            "items": [
+              {
+                "id": "b_int_nps",
+                "title": "Các yếu tố ảnh hưởng NPS Quốc tế",
+                "height": 200,
+                "col": 1,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thu tuc",
+                        72,
+                        68,
+                        75
+                      ],
+                      [
+                        "Tien nghi",
+                        68,
+                        65,
+                        72
+                      ],
+                      [
+                        "Dich vu",
+                        65,
+                        62,
+                        70
+                      ],
+                      [
+                        "An toan",
+                        60,
+                        58,
+                        65
+                      ],
+                      [
+                        "Thong tin",
+                        55,
+                        52,
+                        60
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_int_csi",
+                "title": "Các yếu tố ảnh hưởng CSI Quốc tế",
+                "height": 200,
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "reason",
+                        "type": "string"
+                      },
+                      {
+                        "id": "bar_current",
+                        "type": "number",
+                        "label": "Tháng này"
+                      },
+                      {
+                        "id": "bar_prev",
+                        "type": "number",
+                        "label": "Tháng trước"
+                      },
+                      {
+                        "id": "line_target",
+                        "type": "number",
+                        "label": "Mục tiêu"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Thu tuc",
+                        4.2,
+                        3.9,
+                        4.4
+                      ],
+                      [
+                        "Tien nghi",
+                        3.9,
+                        3.7,
+                        4.2
+                      ],
+                      [
+                        "Dich vu",
+                        3.7,
+                        3.5,
+                        4
+                      ],
+                      [
+                        "An toan",
+                        3.5,
+                        3.3,
+                        3.8
+                      ],
+                      [
+                        "Thong tin",
+                        3.2,
+                        3,
+                        3.5
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "reason",
+                      "series": [
+                        {
+                          "field": "bar_current",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "bar_prev",
+                          "chartType": "bar"
+                        },
+                        {
+                          "field": "line_target",
+                          "chartType": "line",
+                          "lineType": "solid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 3
+          },
+          "items": [
+            {
+              "id": "m_nps_int",
+              "status": "compact",
+              "title": "NPS INT",
+              "value": "76",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "2.0 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "4.8 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "3 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 1,
+                "row": 1
+              }
+            },
+            {
+              "id": "m_csi_int",
+              "status": "compact",
+              "title": "CSI INT",
+              "value": "4.28",
+              "unit": "điểm",
+              "backgroundStatus": 1,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "0.08 so với tháng trước",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.15 so với cùng kỳ",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "0.05 so với mục tiêu",
+                  "tone": "positive"
+                }
+              ],
+              "position": {
+                "col": 2,
+                "row": 1
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
 }
