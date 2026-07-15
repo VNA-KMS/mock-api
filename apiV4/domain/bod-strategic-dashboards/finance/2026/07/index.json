@@ -426,6 +426,260 @@
       ]
     },
     {
+      "title": "Cơ cấu nợ & dòng tiền chi tiết",
+      "items": [
+        {
+          "id": "b_cash_balance",
+          "title": "Số dư tiền (tỷ)",
+          "height": 150,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dư tiền cuối kỳ tăng đều từ 12.692 tỷ (T1) đạt đỉnh 16.327 tỷ (T3), sau đó giảm dần về 5.881 tỷ (T12) do trả nợ và chi đầu tư. Dư nợ vay NH = 0 quanh năm — sức khỏe thanh khoản rất tốt.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "du_tien_ck",
+                  "type": "number",
+                  "label": "Dư tiền cuối kỳ",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "du_no_vay_nh_ck",
+                  "type": "number",
+                  "label": "Dư nợ vay NH cuối kỳ",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  12692,
+                  0
+                ],
+                [
+                  "T2",
+                  13141,
+                  0
+                ],
+                [
+                  "T3",
+                  16327,
+                  0
+                ],
+                [
+                  "T4",
+                  16320,
+                  0
+                ],
+                [
+                  "T5",
+                  13668,
+                  0
+                ],
+                [
+                  "T6",
+                  9297,
+                  0
+                ],
+                [
+                  "T7",
+                  9254,
+                  0
+                ],
+                [
+                  "T8",
+                  9751,
+                  0
+                ],
+                [
+                  "T9",
+                  9922,
+                  0
+                ],
+                [
+                  "T10",
+                  9005,
+                  0
+                ],
+                [
+                  "T11",
+                  8285,
+                  0
+                ],
+                [
+                  "T12",
+                  5881,
+                  0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "du_tien_ck",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "du_no_vay_nh_ck",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Cấu trúc doanh thu chi phí lợi nhuận",
+      "items": [
+        {
+          "id": "b_profit_bridge_uth",
+          "title": "Cấu trúc doanh thu chi phí lợi nhuận (tỷ)",
+          "height": 320,
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "aspectRatio": 2.4,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "LNTT UTH 4T đạt 3.488 tỷ (+382 tỷ so KH). Doanh thu HĐKD vượt KH (+2.466 tỷ) nhờ yield tăng 13,9%. Nhiên liệu tăng 2.405 tỷ so KH do giá Platts tăng 35,4%. Các chi phí khác tiết kiệm ~932 tỷ so KH.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "step",
+                  "type": "string"
+                },
+                {
+                  "id": "helper",
+                  "type": "number",
+                  "label": "",
+                  "color": "transparent"
+                },
+                {
+                  "id": "income",
+                  "type": "number",
+                  "label": "Tăng",
+                  "color": "#00a65a"
+                },
+                {
+                  "id": "expense",
+                  "type": "number",
+                  "label": "Giảm",
+                  "color": "#f56954"
+                }
+              ],
+              "rows": [
+                [
+                  "DT HĐKD",
+                  0,
+                  38800,
+                  null
+                ],
+                [
+                  "CP NL",
+                  26895,
+                  null,
+                  11905
+                ],
+                [
+                  "CP BD",
+                  25340,
+                  null,
+                  1555
+                ],
+                [
+                  "CP NC",
+                  19792,
+                  null,
+                  5548
+                ],
+                [
+                  "CP thuê MB",
+                  15823,
+                  null,
+                  3969
+                ],
+                [
+                  "CP PV bay",
+                  12507,
+                  null,
+                  3316
+                ],
+                [
+                  "CP PV HK",
+                  10093,
+                  null,
+                  2414
+                ],
+                [
+                  "CP bán & QL",
+                  6536,
+                  null,
+                  3557
+                ],
+                [
+                  "CP khấu hao",
+                  3536,
+                  null,
+                  3000
+                ],
+                [
+                  "LN HĐTC",
+                  3488,
+                  null,
+                  48
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "step",
+                "stack": "Total",
+                "series": [
+                  {
+                    "field": "helper",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "income",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "expense",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "title": "Đánh giá chung",
       "items": [
         {

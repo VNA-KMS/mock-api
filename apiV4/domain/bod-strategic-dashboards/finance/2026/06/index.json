@@ -426,6 +426,536 @@
       ]
     },
     {
+      "title": "Cơ cấu nợ & dòng tiền chi tiết",
+      "items": [
+        {
+          "id": "b_loan_balance",
+          "title": "Dư nợ vay theo tháng (tỷ VND)",
+          "height": 150,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dư nợ vay giảm mạnh từ 8.411 tỷ (đầu năm) xuống 1.971 tỷ (cuối năm) — giảm 6.440 tỷ (-77%). Kế hoạch trả nợ tập trung vào T4-T7 (giảm 4.408 tỷ) nhờ dòng tiền HĐKD mạnh và phát hành CP tăng vốn.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "balance",
+                  "type": "number",
+                  "label": "Dư nợ vay",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "no_tcv",
+                  "type": "number",
+                  "label": "Nợ TCV",
+                  "color": "#D3AC2B"
+                },
+                {
+                  "id": "no_qua_han_ncc",
+                  "type": "number",
+                  "label": "Nợ quá hạn NCC",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  8411,
+                  3971,
+                  4440
+                ],
+                [
+                  "T2",
+                  8314,
+                  3971,
+                  4343
+                ],
+                [
+                  "T3",
+                  7462,
+                  3971,
+                  3490
+                ],
+                [
+                  "T4",
+                  7987,
+                  3971,
+                  4016
+                ],
+                [
+                  "T5",
+                  6837,
+                  3491,
+                  3345
+                ],
+                [
+                  "T6",
+                  5284,
+                  2491,
+                  2793
+                ],
+                [
+                  "T7",
+                  4609,
+                  1971,
+                  2638
+                ],
+                [
+                  "T8",
+                  4454,
+                  1971,
+                  2483
+                ],
+                [
+                  "T9",
+                  4298,
+                  1971,
+                  2327
+                ],
+                [
+                  "T10",
+                  4180,
+                  1971,
+                  2208
+                ],
+                [
+                  "T11",
+                  3639,
+                  1971,
+                  1668
+                ],
+                [
+                  "T12",
+                  1971,
+                  1971,
+                  0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "balance",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "no_tcv",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "no_qua_han_ncc",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cashflow_3comp",
+          "title": "Cơ cấu doanh thu",
+          "height": 150,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dòng tiền HĐKD lũy kế 4 tháng đạt 5.071 tỷ (bù đắp chi đầu tư 1.985 tỷ). T5-T6 dòng tiền HĐKD âm do cao điểm Hè, được bù bằng phát hành CP tăng vốn. Dư tiền cuối kỳ vẫn duy trì 5.881 tỷ — sức khỏe tài chính ổn định.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "hd_sxkd",
+                  "type": "number",
+                  "label": "HĐ SXKD",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "dau_tu",
+                  "type": "number",
+                  "label": "Đầu tư",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "tai_chinh",
+                  "type": "number",
+                  "label": "Tài chính",
+                  "color": "#D3AC2B"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  1029,
+                  -1970,
+                  -196
+                ],
+                [
+                  "T2",
+                  730,
+                  -33,
+                  -247
+                ],
+                [
+                  "T3",
+                  3136,
+                  86,
+                  -36
+                ],
+                [
+                  "T4",
+                  176,
+                  -69,
+                  -115
+                ],
+                [
+                  "T5",
+                  -483,
+                  -1401,
+                  -769
+                ],
+                [
+                  "T6",
+                  -670,
+                  -2729,
+                  -972
+                ],
+                [
+                  "T7",
+                  599,
+                  87,
+                  -730
+                ],
+                [
+                  "T8",
+                  856,
+                  -455,
+                  97
+                ],
+                [
+                  "T9",
+                  247,
+                  -29,
+                  -47
+                ],
+                [
+                  "T10",
+                  -534,
+                  0,
+                  -383
+                ],
+                [
+                  "T11",
+                  -256,
+                  -87,
+                  -377
+                ],
+                [
+                  "T12",
+                  -1574,
+                  -2039,
+                  1209
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "hd_sxkd",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "dau_tu",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "tai_chinh",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash_balance",
+          "title": "Số dư tiền (tỷ)",
+          "height": 150,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dư tiền cuối kỳ tăng đều từ 12.692 tỷ (T1) đạt đỉnh 16.327 tỷ (T3), sau đó giảm dần về 5.881 tỷ (T12) do trả nợ và chi đầu tư. Dư nợ vay NH = 0 quanh năm — sức khỏe thanh khoản rất tốt.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "du_tien_ck",
+                  "type": "number",
+                  "label": "Dư tiền cuối kỳ",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "du_no_vay_nh_ck",
+                  "type": "number",
+                  "label": "Dư nợ vay NH cuối kỳ",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  12692,
+                  0
+                ],
+                [
+                  "T2",
+                  13141,
+                  0
+                ],
+                [
+                  "T3",
+                  16327,
+                  0
+                ],
+                [
+                  "T4",
+                  16320,
+                  0
+                ],
+                [
+                  "T5",
+                  13668,
+                  0
+                ],
+                [
+                  "T6",
+                  9297,
+                  0
+                ],
+                [
+                  "T7",
+                  9254,
+                  0
+                ],
+                [
+                  "T8",
+                  9751,
+                  0
+                ],
+                [
+                  "T9",
+                  9922,
+                  0
+                ],
+                [
+                  "T10",
+                  9005,
+                  0
+                ],
+                [
+                  "T11",
+                  8285,
+                  0
+                ],
+                [
+                  "T12",
+                  5881,
+                  0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "du_tien_ck",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "du_no_vay_nh_ck",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Cấu trúc doanh thu chi phí lợi nhuận",
+      "items": [
+        {
+          "id": "b_profit_bridge_uth",
+          "title": "Cấu trúc doanh thu chi phí lợi nhuận (tỷ)",
+          "height": 320,
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "aspectRatio": 2.4,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "LNTT UTH 4T đạt 3.488 tỷ (+382 tỷ so KH). Doanh thu HĐKD vượt KH (+2.466 tỷ) nhờ yield tăng 13,9%. Nhiên liệu tăng 2.405 tỷ so KH do giá Platts tăng 35,4%. Các chi phí khác tiết kiệm ~932 tỷ so KH.",
+            "severity": "good"
+          },
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "step",
+                  "type": "string"
+                },
+                {
+                  "id": "helper",
+                  "type": "number",
+                  "label": "",
+                  "color": "transparent"
+                },
+                {
+                  "id": "income",
+                  "type": "number",
+                  "label": "Tăng",
+                  "color": "#00a65a"
+                },
+                {
+                  "id": "expense",
+                  "type": "number",
+                  "label": "Giảm",
+                  "color": "#f56954"
+                }
+              ],
+              "rows": [
+                [
+                  "DT HĐKD",
+                  0,
+                  38800,
+                  null
+                ],
+                [
+                  "CP NL",
+                  26895,
+                  null,
+                  11905
+                ],
+                [
+                  "CP BD",
+                  25340,
+                  null,
+                  1555
+                ],
+                [
+                  "CP NC",
+                  19792,
+                  null,
+                  5548
+                ],
+                [
+                  "CP thuê MB",
+                  15823,
+                  null,
+                  3969
+                ],
+                [
+                  "CP PV bay",
+                  12507,
+                  null,
+                  3316
+                ],
+                [
+                  "CP PV HK",
+                  10093,
+                  null,
+                  2414
+                ],
+                [
+                  "CP bán & QL",
+                  6536,
+                  null,
+                  3557
+                ],
+                [
+                  "CP khấu hao",
+                  3536,
+                  null,
+                  3000
+                ],
+                [
+                  "LN HĐTC",
+                  3488,
+                  null,
+                  48
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "step",
+                "stack": "Total",
+                "series": [
+                  {
+                    "field": "helper",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "income",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "expense",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "title": "Đánh giá chung",
       "items": [
         {
