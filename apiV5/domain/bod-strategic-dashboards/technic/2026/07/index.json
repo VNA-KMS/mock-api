@@ -1,0 +1,183 @@
+{
+  "titleInfo": {
+    "title": "Technic",
+    "statusLabel": "REAL TIME",
+    "description": "Kỹ thuật giữ được sẵn sàng & tin cậy không, theo 12 tháng và theo đội tàu?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_arl",
+        "status": "compact",
+        "title": "ARL - Hệ số sẵn sàng khai thác tàu bay",
+        "value": "91.8",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.4% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "1% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_dr",
+        "status": "compact",
+        "title": "DR - Chỉ số độ tin cậy cất cánh kỹ thuật",
+        "value": "99.1",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.4% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "0.1% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_mc_ask",
+        "status": "compact",
+        "title": "MC/ASK - Chi phí bảo dưỡng theo ASK",
+        "period": "Tháng 03/2026",
+        "value": "215",
+        "unit": "VNĐ/ASK",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "3.4% so với Cùng kỳ",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2.4% so với Kế hoạch",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_ocr",
+        "status": "compact",
+        "title": "OCR - Tỷ lệ định kỳ quá hạn",
+        "value": "1.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.2% với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "0.1% với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Chỉ số kỹ thuật theo 12 tháng",
+      "items": [
+        {
+          "id": "chart_arl",
+          "title": "ARL - Hệ số sẵn sàng khai thác tàu bay",
+          "col": 1,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "ARL tháng này đạt 91,8%, thấp hơn kế hoạch 1,4% và giảm nhẹ so với cùng kỳ. Nguyên nhân chính do đội B787 bảo dưỡng định kỳ kéo dài ảnh hưởng đến độ sẵn sàng khai thác.",
+            "severity": "warn"
+          },
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_arl.json"
+        },
+        {
+          "id": "chart_dr",
+          "title": "DR - Chỉ số độ tin cậy cất cánh kỹ thuật",
+          "col": 31,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "DR tháng này đạt 99,1%, thấp hơn mục tiêu 0,4%. Đội B787 ghi nhận độ tin cậy thấp nhất ở mức 98,6%, cần theo dõi sát.",
+            "severity": "warn"
+          },
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_dr.json"
+        },
+        {
+          "id": "chart_ocr",
+          "title": "OCR - Tỷ lệ định kỳ quá hạn",
+          "col": 1,
+          "row": 2,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "OCR tháng này ở mức 1,2%, tăng nhẹ so với kế hoạch. Được kiểm soát tốt, đặc biệt đội A321 và ATR72 duy trì dưới 1,1%.",
+            "severity": "good"
+          },
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_ocr.json"
+        },
+        {
+          "id": "chart_mc_ask",
+          "title": "MC/ASK - Chi phí bảo dưỡng theo ASK",
+          "col": 31,
+          "row": 2,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "MC/ASK tháng này đạt 215 VNĐ/ASK, tăng 3,4% so với cùng kỳ và cao hơn kế hoạch 2,4%. Cần rà soát chi phí bảo dưỡng định kỳ.",
+            "severity": "warn"
+          },
+          "unit": "VNĐ/ASK",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_mc_ask.json"
+        }
+      ]
+    },
+    {
+      "title": "Phân loại theo đội tàu bay",
+      "items": [
+        {
+          "id": "chart_fleet",
+          "title": "Phân loại theo đội tàu bay",
+          "col": 1,
+          "row": 1,
+          "colSpan": 60,
+          "rowSpan": 1,
+          "aspectRatio": 2,
+          "aiInsight": {
+            "text": "Đội A321 dẫn đầu về ARL (94,2%) và DR (99,4%). B787 cần cải thiện ARL (88%) do ảnh hưởng lịch bảo dưỡng định kỳ và thay thế phụ tùng.",
+            "severity": "warn"
+          },
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_fleet.json"
+        }
+      ]
+    }
+  ]
+}

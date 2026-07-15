@@ -1,0 +1,65 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Lái chính",
+          "color": "#2962a0"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Lái phụ",
+          "color": "#d0d1d3"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          420,
+          395
+        ],
+        [
+          "A350",
+          280,
+          260
+        ],
+        [
+          "B787",
+          198,
+          185
+        ],
+        [
+          "ATR72",
+          144,
+          130
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "plan",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

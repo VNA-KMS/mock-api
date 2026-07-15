@@ -1,0 +1,220 @@
+{
+  "titleInfo": {
+    "title": "Finance",
+    "statusLabel": "REAL TIME",
+    "description": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "m_tri",
+        "status": "compact",
+        "title": "Tổng doanh thu và thu nhập",
+        "value": "21.500",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "9% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rev",
+        "status": "compact",
+        "title": "Doanh thu HĐKD",
+        "value": "20.100",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "8% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_lntt",
+        "status": "compact",
+        "title": "Lợi nhuận trước thuế",
+        "value": "1.820",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "4% so với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "7% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4.250",
+        "unit": "tỷ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% so với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "15% so với Cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Hiển thị tổng doanh thu và thu nhập của 12 tháng",
+      "items": [
+        {
+          "id": "b_rev",
+          "title": "Tổng doanh thu và thu nhập",
+          "height": 150,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_rev.json"
+        },
+        {
+          "id": "b_lntt",
+          "title": "LNTT",
+          "height": 150,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_lntt.json"
+        },
+        {
+          "id": "b_cash",
+          "title": "Dòng tiền",
+          "height": 150,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_cash.json"
+        }
+      ]
+    },
+    {
+      "title": "Cơ cấu nợ & dòng tiền chi tiết",
+      "items": [
+        {
+          "id": "b_loan_balance",
+          "title": "Dư nợ vay theo tháng (tỷ VND)",
+          "height": 150,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dư nợ vay giảm mạnh từ 8.411 tỷ (đầu năm) xuống 1.971 tỷ (cuối năm) — giảm 6.440 tỷ (-77%). Kế hoạch trả nợ tập trung vào T4-T7 (giảm 4.408 tỷ) nhờ dòng tiền HĐKD mạnh và phát hành CP tăng vốn.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_loan_balance.json"
+        },
+        {
+          "id": "b_cashflow_3comp",
+          "title": "Cơ cấu doanh thu",
+          "height": 150,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dòng tiền HĐKD lũy kế 4 tháng đạt 5.071 tỷ (bù đắp chi đầu tư 1.985 tỷ). T5-T6 dòng tiền HĐKD âm do cao điểm Hè, được bù bằng phát hành CP tăng vốn. Dư tiền cuối kỳ vẫn duy trì 5.881 tỷ — sức khỏe tài chính ổn định.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_cashflow_3comp.json"
+        },
+        {
+          "id": "b_cash_balance",
+          "title": "Số dư tiền (tỷ)",
+          "height": 150,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "Dư tiền cuối kỳ tăng đều từ 12.692 tỷ (T1) đạt đỉnh 16.327 tỷ (T3), sau đó giảm dần về 5.881 tỷ (T12) do trả nợ và chi đầu tư. Dư nợ vay NH = 0 quanh năm — sức khỏe thanh khoản rất tốt.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_cash_balance.json"
+        }
+      ]
+    },
+    {
+      "title": "Cấu trúc doanh thu chi phí lợi nhuận",
+      "items": [
+        {
+          "id": "b_profit_bridge_uth",
+          "title": "Cấu trúc doanh thu chi phí lợi nhuận (tỷ)",
+          "height": 320,
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "aspectRatio": 2.4,
+          "unit": "tỷ",
+          "aiInsight": {
+            "text": "LNTT UTH 4T đạt 3.488 tỷ (+382 tỷ so KH). Doanh thu HĐKD vượt KH (+2.466 tỷ) nhờ yield tăng 13,9%. Nhiên liệu tăng 2.405 tỷ so KH do giá Platts tăng 35,4%. Các chi phí khác tiết kiệm ~932 tỷ so KH.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/06/chart/b_profit_bridge_uth.json"
+        }
+      ]
+    },
+    {
+      "title": "Đánh giá chung",
+      "items": [
+        {
+          "id": "b_ai_insight",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá chung</div><p style=\"font-size:12.5px;color:#1e293b;line-height:1.6;margin:0\">Trong tháng hiện tại, tình hình SXKD của TCT duy trì ổn định. Tổng doanh thu và thu nhập đạt <b>21.500 tỉ</b>, vượt 1.2% so với Kế hoạch và tăng 9% so với Cùng kỳ. Doanh thu HĐKD đạt <b>20.100 tỉ</b>, vượt 0.8% so với Kế hoạch. Lợi nhuận trước thuế đạt <b>1.820 tỉ</b>, giảm 4% so với Kế hoạch nhưng tăng 7% so với Cùng kỳ. Dòng tiền đạt <b>4.250 tỉ</b>, vượt 2.1% so với Kế hoạch và tăng 15% so với Cùng kỳ, cho thấy dòng tiền ổn định và khả quan.</p></div>",
+              "backgroundClassName": "",
+              "borderClassName": ""
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

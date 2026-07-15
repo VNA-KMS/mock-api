@@ -1,0 +1,75 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "category",
+          "type": "string"
+        },
+        {
+          "id": "thực_hiện",
+          "type": "number",
+          "label": "BH/ngày 2026",
+          "color": "#2962a0"
+        },
+        {
+          "id": "kế_hoạch",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#d0d1d3"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          9.2,
+          8.8
+        ],
+        [
+          "A320",
+          6.8,
+          6.5
+        ],
+        [
+          "A350",
+          8.5,
+          8.2
+        ],
+        [
+          "B787-9",
+          7.3,
+          7.0
+        ],
+        [
+          "B787-10",
+          6.9,
+          6.6
+        ],
+        [
+          "ATR",
+          4.2,
+          4.0
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "category",
+        "series": [
+          {
+            "field": "thực_hiện",
+            "chartType": "bar"
+          },
+          {
+            "field": "kế_hoạch",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

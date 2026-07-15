@@ -1,0 +1,71 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "area",
+          "type": "string"
+        },
+        {
+          "id": "x",
+          "type": "number",
+          "label": "X"
+        },
+        {
+          "id": "y",
+          "type": "number",
+          "label": "Y"
+        },
+        {
+          "id": "segment",
+          "type": "string"
+        }
+      ],
+      "rows": [
+        [
+          "DOM",
+          1400,
+          60,
+          "Domestic"
+        ],
+        [
+          "INT",
+          300,
+          40,
+          "International"
+        ],
+        [
+          "INT",
+          500,
+          70,
+          "International"
+        ],
+        [
+          "DOM",
+          1850,
+          40,
+          "Domestic"
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "area",
+        "series": [
+          {
+            "field": "x",
+            "chartType": "line"
+          },
+          {
+            "field": "y",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

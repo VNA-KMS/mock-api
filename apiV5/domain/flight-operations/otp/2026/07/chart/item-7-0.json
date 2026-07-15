@@ -1,0 +1,72 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.3,
+    "dataset": {
+      "columns": [
+        {
+          "id": "source",
+          "type": "string"
+        },
+        {
+          "id": "target",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number"
+        }
+      ],
+      "rows": [
+        [
+          "Kỹ thuật",
+          "Dừng bay",
+          65
+        ],
+        [
+          "Phi kỹ thuật",
+          "Dừng bay",
+          35
+        ],
+        [
+          "Dừng bay",
+          "Delay <15p",
+          40
+        ],
+        [
+          "Dừng bay",
+          "Delay >15p",
+          60
+        ],
+        [
+          "Delay <15p",
+          "OTP giảm",
+          30
+        ],
+        [
+          "Delay >15p",
+          "OTP giảm",
+          45
+        ],
+        [
+          "Phi kỹ thuật",
+          "OTP trực tiếp",
+          25
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "source",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "sankey"
+          }
+        ]
+      }
+    ]
+  }
+}

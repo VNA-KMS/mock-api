@@ -1,0 +1,79 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "PC định kỳ ATKT",
+          "type": "string"
+        },
+        {
+          "id": "series_1",
+          "type": "number",
+          "label": "Đạt",
+          "color": "#22c55e"
+        },
+        {
+          "id": "series_2",
+          "type": "number",
+          "label": "Chưa đạt",
+          "color": "#ef4444"
+        }
+      ],
+      "rows": [
+        [
+          "PC định kỳ ATKT",
+          182,
+          12
+        ],
+        [
+          "TV định kỳ ATKT",
+          145,
+          8
+        ],
+        [
+          "Chuyển loại TV",
+          86,
+          6
+        ],
+        [
+          "Chuyển loại PCCB",
+          52,
+          4
+        ],
+        [
+          "Chuyển loại PC khai thác",
+          38,
+          3
+        ],
+        [
+          "NVĐHKT",
+          28,
+          2
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "series_1",
+            "chartType": "line"
+          },
+          {
+            "field": "series_2",
+            "chartType": "line"
+          },
+          {
+            "field": "series_3",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

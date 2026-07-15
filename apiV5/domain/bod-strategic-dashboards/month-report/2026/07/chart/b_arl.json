@@ -1,0 +1,98 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2563eb"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#94a3b8"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          93.5,
+          93.2,
+          93.0
+        ],
+        [
+          "T2",
+          93.2,
+          93.2,
+          92.8
+        ],
+        [
+          "T3",
+          92.8,
+          93.2,
+          92.5
+        ],
+        [
+          "T4",
+          92.5,
+          93.2,
+          92.2
+        ],
+        [
+          "T5",
+          92.0,
+          93.2,
+          91.8
+        ],
+        [
+          "T6",
+          91.8,
+          93.2,
+          91.8
+        ],
+        [
+          "T7",
+          91.8,
+          93.2,
+          92.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

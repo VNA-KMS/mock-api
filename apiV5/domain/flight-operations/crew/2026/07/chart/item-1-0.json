@@ -1,0 +1,65 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "category",
+          "type": "string"
+        },
+        {
+          "id": "thực_hiện",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2563eb"
+        },
+        {
+          "id": "kế_hoạch",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#c4b5fd"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          3436,
+          1881
+        ],
+        [
+          "A350",
+          5635,
+          6818
+        ],
+        [
+          "B787",
+          3926,
+          3419
+        ],
+        [
+          "ATR72",
+          4972,
+          5776
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "category",
+        "series": [
+          {
+            "field": "thực_hiện",
+            "chartType": "line"
+          },
+          {
+            "field": "kế_hoạch",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

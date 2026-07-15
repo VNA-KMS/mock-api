@@ -1,0 +1,604 @@
+{
+  "titleInfo": {
+    "title": "OTP Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "OTP, OSP, root cause delay",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "FLS",
+        "value": "2.847",
+        "unit": "chuyến",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "2.1%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "bh",
+        "status": "compact",
+        "title": "BH",
+        "value": "6.892",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.5%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "1.5%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "bh-ngay",
+        "status": "compact",
+        "title": "BH/ngày",
+        "value": "229.7",
+        "unit": "giờ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "0.8%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "otp",
+        "status": "compact",
+        "title": "OTP",
+        "value": "86",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.6%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "osp",
+        "status": "compact",
+        "title": "OSP",
+        "value": "90",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.3%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "0.3%",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "columns": 1,
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "FLS theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "filter",
+            "position": "top",
+            "config": {
+              "filters": [
+                {
+                  "id": "chart",
+                  "label": "Biểu đồ line"
+                },
+                {
+                  "id": "table",
+                  "label": "Bảng dữ liệu"
+                }
+              ]
+            }
+          },
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-0-0.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "BH theo thời gian (combo)",
+          "subTitle": "series_1 là bar, series_2+3 là line",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-1-0.json"
+        },
+        {
+          "id": "item-1-1",
+          "title": "BH/ngày theo thời gian (area)",
+          "subTitle": "line có fill",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-1-1.json"
+        },
+        {
+          "id": "item-1-2",
+          "title": "BH theo từng đội tàu bay (bar)",
+          "subTitle": "",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-1-2.json"
+        },
+        {
+          "id": "item-1-3",
+          "title": "BH/ngày theo từng đội tàu bay (combo)",
+          "subTitle": "bar + line",
+          "col": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-1-3.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "OTP đi/đến theo thời gian (scatter)",
+          "subTitle": "",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-2-0.json"
+        },
+        {
+          "id": "item-2-1",
+          "title": "OSP đi/đến theo thời gian (line)",
+          "subTitle": "",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-2-1.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-3-0",
+          "title": "Nguyên nhân giảm chỉ số OTP (heatmap)",
+          "subTitle": "tháng × nguyên nhân",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-3-0.json"
+        },
+        {
+          "id": "item-3-1",
+          "title": "Nguyên nhân dừng bay (pie)",
+          "subTitle": "",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-3-1.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "items": [
+        {
+          "id": "item-4-0",
+          "title": "Chỉ số tổng hợp (radar)",
+          "subTitle": "so sánh các chỉ số",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-4-0.json"
+        },
+        {
+          "id": "item-4-1",
+          "title": "Biến động OTP (gauge)",
+          "subTitle": "",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-4-1.json"
+        }
+      ]
+    },
+    {
+      "columns": 1,
+      "items": [
+        {
+          "id": "item-5-0",
+          "title": "Phân phối nguyên nhân (parallel)",
+          "subTitle": "các chiều dữ liệu song song",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 2.4,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-5-0.json"
+        }
+      ]
+    },
+    {
+      "columns": 1,
+      "items": [
+        {
+          "id": "item-6-0",
+          "title": "Tổng hợp chi phí (waterfall)",
+          "subTitle": "dòng tiền các tháng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-6-0.json"
+        }
+      ]
+    },
+    {
+      "columns": 1,
+      "items": [
+        {
+          "id": "item-7-0",
+          "title": "Luồng nguyên nhân (sankey)",
+          "subTitle": "source → target",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-7-0.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "title": "Biến thể Pie",
+      "items": [
+        {
+          "id": "item-pie-simple",
+          "title": "Pie đặc (pie-simple)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-pie-simple.json"
+        },
+        {
+          "id": "item-half-donut",
+          "title": "Donut nửa vòng (half-donut)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-half-donut.json"
+        },
+        {
+          "id": "item-center-donut",
+          "title": "Donut có text giữa (center-donut)",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-center-donut.json"
+        },
+        {
+          "id": "item-nested-pie",
+          "title": "Pie lồng (nested-pie)",
+          "col": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.3,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-nested-pie.json"
+        }
+      ]
+    },
+    {
+      "columns": 2,
+      "title": "Biến thể khác",
+      "items": [
+        {
+          "id": "item-scatter-bar",
+          "title": "Scatter + Bar (scatter-bar)",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-scatter-bar.json"
+        },
+        {
+          "id": "item-multi-y",
+          "title": "3 trục Y (multi-y)",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-multi-y.json"
+        }
+      ]
+    },
+    {
+      "columns": 1,
+      "title": "Line nửa liền nửa đứt",
+      "items": [
+        {
+          "id": "item-half-dashed",
+          "title": "Biến động OTP (line — nửa liền nửa đứt)",
+          "subTitle": "null data để split line thành 2 đoạn",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/item-half-dashed.json"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "demo-switchable",
+          "title": "FLS theo thời gian (có filter chart/table)",
+          "subTitle": "Filter bar trên chart, chuyển đổi biểu đồ/bảng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "filter",
+            "position": "top",
+            "config": {
+              "filters": [
+                {
+                  "id": "chart",
+                  "label": "Biểu đồ"
+                },
+                {
+                  "id": "table",
+                  "label": "Biểu đồ"
+                }
+              ]
+            }
+          },
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/demo-switchable.json"
+        },
+        {
+          "id": "demo-table-only",
+          "title": "Bang du lieu don thuan",
+          "subTitle": "renderType=table, khong co chart",
+          "col": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "renderType": "table",
+          "extraComponent": {
+            "type": "filter",
+            "position": "top",
+            "config": {
+              "filters": [
+                {
+                  "id": "table",
+                  "label": "Bảng số liệu"
+                }
+              ]
+            }
+          },
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/demo-table-only.json"
+        }
+      ]
+    },
+    {
+      "title": "Chart + Table side by side",
+      "subTitle": "Chart trái 50% - Table phải 50% (extraComponent type=table)",
+      "items": [
+        {
+          "id": "demo-chart-table",
+          "title": "FLS & BH — Chart & Table",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "extraComponent": {
+            "type": "table",
+            "position": "right",
+            "chartSpan": 6,
+            "extraSpan": 6,
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "month",
+                    "type": "string",
+                    "label": "Thang",
+                    "width": 60
+                  },
+                  {
+                    "id": "fls",
+                    "type": "number",
+                    "label": "FLS (chuyen)",
+                    "width": 100
+                  },
+                  {
+                    "id": "bh",
+                    "type": "number",
+                    "label": "BH (gio)",
+                    "width": 80
+                  },
+                  {
+                    "id": "otp",
+                    "type": "number",
+                    "label": "OTP (%)",
+                    "width": 70
+                  }
+                ],
+                "rows": [
+                  [
+                    "T1",
+                    2805,
+                    6530,
+                    86.3
+                  ],
+                  [
+                    "T2",
+                    2810,
+                    6560,
+                    86.6
+                  ],
+                  [
+                    "T3",
+                    2815,
+                    6590,
+                    86.9
+                  ],
+                  [
+                    "T4",
+                    2820,
+                    6620,
+                    87.2
+                  ],
+                  [
+                    "T5",
+                    2825,
+                    6650,
+                    87.5
+                  ],
+                  [
+                    "T6",
+                    2830,
+                    6680,
+                    87.8
+                  ],
+                  [
+                    "T7",
+                    2835,
+                    6710,
+                    88.1
+                  ],
+                  [
+                    "T8",
+                    2840,
+                    6740,
+                    88.4
+                  ],
+                  [
+                    "T9",
+                    2845,
+                    6770,
+                    88.7
+                  ],
+                  [
+                    "T10",
+                    2850,
+                    6800,
+                    89.0
+                  ],
+                  [
+                    "T11",
+                    2855,
+                    6830,
+                    89.3
+                  ],
+                  [
+                    "T12",
+                    2860,
+                    6860,
+                    89.6
+                  ]
+                ]
+              }
+            }
+          },
+          "chartPath": "apiV5/domain/flight-operations/otp/2026/07/chart/demo-chart-table.json"
+        }
+      ]
+    }
+  ]
+}

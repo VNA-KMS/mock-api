@@ -1,0 +1,70 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.3,
+    "dataset": {
+      "columns": [
+        {
+          "id": "indicator",
+          "type": "string"
+        },
+        {
+          "id": "thực_tế",
+          "type": "number",
+          "label": "Thực tế",
+          "color": "#2563eb"
+        },
+        {
+          "id": "kế_hoạch",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#14b8a6"
+        }
+      ],
+      "rows": [
+        [
+          "OTP",
+          86,
+          90
+        ],
+        [
+          "OSP",
+          90,
+          92
+        ],
+        [
+          "FLS",
+          82,
+          88
+        ],
+        [
+          "Đúng giờ",
+          78,
+          85
+        ],
+        [
+          "An toàn",
+          95,
+          97
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "indicator",
+        "series": [
+          {
+            "field": "thực_tế",
+            "chartType": "radar"
+          },
+          {
+            "field": "kế_hoạch",
+            "chartType": "radar"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "category",
+          "type": "string"
+        },
+        {
+          "id": "short_haul",
+          "type": "number",
+          "label": "Short Haul",
+          "color": "#1a4a80"
+        },
+        {
+          "id": "medium_haul",
+          "type": "number",
+          "label": "Medium Haul",
+          "color": "#4a82c0"
+        }
+      ],
+      "rows": [
+        [
+          "Nhiên liệu",
+          1.25,
+          0.8
+        ],
+        [
+          "Cảng HK",
+          0.32,
+          0.16
+        ],
+        [
+          "DV chuyến bay",
+          0.22,
+          0.1
+        ],
+        [
+          "Bảo dưỡng",
+          0.12,
+          0.06
+        ],
+        [
+          "Điều hành",
+          0.08,
+          0.04
+        ],
+        [
+          "Khác",
+          0.15,
+          0.1
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "category",
+        "series": [
+          {
+            "field": "short_haul",
+            "chartType": "bar"
+          },
+          {
+            "field": "medium_haul",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

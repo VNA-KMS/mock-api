@@ -1,0 +1,140 @@
+{
+  "titleInfo": {
+    "title": "Crew Dashboard",
+    "statusLabel": "REAL TIME",
+    "description": "Giờ bay khai thác PC, TV, mức độ sẵn sàng",
+    "chipStatus": 1,
+    "chipTone": "success"
+  },
+  "metricCards": {
+    "accentClassName": "bg-governor-bay",
+    "items": [
+      {
+        "id": "gio-bay-pc",
+        "status": "compact",
+        "title": "Giờ bay TB PC/tháng",
+        "value": "72.4",
+        "unit": "h",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "down",
+          "label": "1.2h vs KH",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "gio-bay-tv",
+        "status": "compact",
+        "title": "Giờ bay TB TV/tháng",
+        "value": "68.8",
+        "unit": "h",
+        "backgroundStatus": 2,
+        "trend": {
+          "direction": "down",
+          "label": "0.9h vs KH",
+          "tone": "negative"
+        }
+      },
+      {
+        "id": "pc-san-sang",
+        "status": "compact",
+        "title": "Hệ số PC sẵn sàng",
+        "value": "94.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "0.2% vs KH",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "tong-pc",
+        "status": "compact",
+        "title": "Tổng số PC",
+        "value": "1.248",
+        "unit": "người",
+        "backgroundStatus": 1,
+        "trend": {
+          "direction": "up",
+          "label": "24 vs KH",
+          "tone": "positive"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "items": [
+        {
+          "id": "item-0-0",
+          "title": "Giờ bay TB PC theo thời gian",
+          "col": 1,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-0-0.json"
+        },
+        {
+          "id": "item-0-1",
+          "title": "Giờ bay TB TV theo thời gian",
+          "col": 31,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-0-1.json"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-1-0",
+          "title": "Giờ bay TB PC theo đội bay",
+          "col": 1,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-1-0.json"
+        },
+        {
+          "id": "item-1-1",
+          "title": "Giờ bay TB TV theo chức danh",
+          "col": 31,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-1-1.json"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "item-2-0",
+          "title": "Hệ số PC sẵn sàng khai thác",
+          "col": 1,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-2-0.json"
+        },
+        {
+          "id": "item-2-1",
+          "title": "PC sẵn sàng theo Fleet",
+          "col": 31,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/flight-operations/crew/2026/07/chart/item-2-1.json"
+        }
+      ]
+    }
+  ]
+}

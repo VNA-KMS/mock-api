@@ -1,0 +1,82 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "reason",
+          "type": "string"
+        },
+        {
+          "id": "bar_current",
+          "type": "number",
+          "label": "Tháng này"
+        },
+        {
+          "id": "bar_prev",
+          "type": "number",
+          "label": "Tháng trước"
+        },
+        {
+          "id": "line_target",
+          "type": "number",
+          "label": "Mục tiêu"
+        }
+      ],
+      "rows": [
+        [
+          "Thoi gian cho",
+          3.5,
+          3.2,
+          3.8
+        ],
+        [
+          "Thai do phuc vu",
+          3.2,
+          3,
+          3.5
+        ],
+        [
+          "Dich vu an uong",
+          3,
+          2.8,
+          3.3
+        ],
+        [
+          "Tien nghi san bay",
+          2.8,
+          2.6,
+          3
+        ],
+        [
+          "Thong tin bay",
+          2.5,
+          2.3,
+          2.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "reason",
+        "series": [
+          {
+            "field": "bar_current",
+            "chartType": "bar"
+          },
+          {
+            "field": "bar_prev",
+            "chartType": "bar"
+          },
+          {
+            "field": "line_target",
+            "chartType": "line",
+            "lineType": "solid"
+          }
+        ]
+      }
+    ]
+  }
+}
