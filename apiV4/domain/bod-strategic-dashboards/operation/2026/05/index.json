@@ -65,7 +65,8 @@
             "label": "1% so với Cùng kỳ",
             "tone": "negative"
           }
-        ]
+        ],
+        "subTitle": "Đơn vị: %"
       },
       {
         "id": "m_otpa",
@@ -85,7 +86,8 @@
             "label": "1% so với Cùng kỳ",
             "tone": "negative"
           }
-        ]
+        ],
+        "subTitle": "Đơn vị: %"
       }
     ]
   },
@@ -226,7 +228,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: số chuyến"
         },
         {
           "id": "b_hours",
@@ -361,7 +364,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: số giờ"
         }
       ]
     },
@@ -429,7 +433,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: Giờ/tháng"
         },
         {
           "id": "b_otp",
@@ -564,7 +569,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -602,42 +608,42 @@
                 [
                   "DOM",
                   "< 5 phút",
-                  620
+                  5580
                 ],
                 [
                   "DOM",
                   "5 - 10 phút",
-                  310
+                  2790
                 ],
                 [
                   "DOM",
                   "10 - 20 phút",
-                  145
+                  1305
                 ],
                 [
                   "DOM",
                   "> 20 phút",
-                  58
+                  522
                 ],
                 [
                   "INT",
                   "< 5 phút",
-                  280
+                  2520
                 ],
                 [
                   "INT",
                   "5 - 10 phút",
-                  165
+                  1485
                 ],
                 [
                   "INT",
                   "10 - 20 phút",
-                  92
+                  828
                 ],
                 [
                   "INT",
                   "> 20 phút",
-                  41
+                  369
                 ]
               ]
             },
@@ -654,7 +660,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: %"
         },
         {
           "id": "b_top_otp",
@@ -701,50 +708,7 @@
                 [
                   "VII",
                   87
-                ]
-              ]
-            },
-            "views": [
-              {
-                "id": "main",
-                "chartType": "bar",
-                "xField": "airport",
-                "series": [
-                  {
-                    "field": "otp",
-                    "chartType": "bar"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": "b_bottom_otp",
-          "title": "Bottom 5 sân bay OTP",
-          "col": 51,
-          "colSpan": 10,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "VDO (63%) là sân bay có OTP thấp nhất toàn mạng, cần cải thiện ngay. PQC (70%), HPH (72%) và VCA (74%) cũng ở mức thấp. UIH (79%) là sân bay khả quan nhất trong nhóm Bottom 5.",
-            "severity": "crit"
-          },
-          "autoChart": {
-            "chartType": "bar",
-            "dataset": {
-              "columns": [
-                {
-                  "id": "airport",
-                  "type": "string"
-                },
-                {
-                  "id": "otp",
-                  "type": "number",
-                  "label": "OTP (%)",
-                  "color": "#2962A0"
-                }
-              ],
-              "rows": [
+                ],
                 [
                   "UIH",
                   76
@@ -780,7 +744,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -820,34 +785,9 @@
               ],
               "rows": [
                 [
-                  "Các lỗi do từ chối khách",
-                  0.8,
-                  0.4
-                ],
-                [
-                  "Thiết bị mặt đất",
-                  1.2,
-                  0.6
-                ],
-                [
-                  "Khai thác",
-                  1.6,
-                  0.8
-                ],
-                [
-                  "Phục vụ HK, HL",
-                  2.0,
-                  1.0
-                ],
-                [
-                  "Phi hành đoàn",
-                  2.4,
-                  1.3
-                ],
-                [
-                  "Tắc nghẽn hàng không",
-                  3.0,
-                  1.8
+                  "Nguyên nhân tại sân bay",
+                  4.2,
+                  3.1
                 ],
                 [
                   "Nguyên nhân trên đường bay",
@@ -855,9 +795,34 @@
                   2.0
                 ],
                 [
-                  "Nguyên nhân tại sân bay",
-                  4.2,
-                  3.1
+                  "Tắc nghẽn hàng không",
+                  3.0,
+                  1.8
+                ],
+                [
+                  "Phi hành đoàn",
+                  2.4,
+                  1.3
+                ],
+                [
+                  "Phục vụ HK, HL",
+                  2.0,
+                  1.0
+                ],
+                [
+                  "Khai thác",
+                  1.6,
+                  0.8
+                ],
+                [
+                  "Thiết bị mặt đất",
+                  1.2,
+                  0.6
+                ],
+                [
+                  "Các lỗi do từ chối khách",
+                  0.8,
+                  0.4
                 ]
               ]
             },
@@ -879,7 +844,8 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     }
