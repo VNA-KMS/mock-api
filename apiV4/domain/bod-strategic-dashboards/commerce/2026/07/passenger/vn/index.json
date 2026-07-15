@@ -186,13 +186,13 @@
           {
             "direction": "down",
             "label": "1.2% với Kế hoạch",
-            "tone": "negative",
+            "tone": "positive",
             "status": 0
           },
           {
             "direction": "up",
             "label": "3.1% với Cùng kỳ",
-            "tone": "positive"
+            "tone": "negative"
           }
         ],
         "drillDownPath": "apiV4/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/cask/index.json"
@@ -226,7 +226,7 @@
       "items": [
         {
           "id": "b_int",
-          "title": "Khách tổng thị trường theo khu vực Quốc tế (12 tháng)",
+          "title": "PAX – INT theo khu vực",
           "col": 1,
           "colSpan": 30,
           "aspectRatio": 1.8,
@@ -359,7 +359,7 @@
         },
         {
           "id": "b_dom",
-          "title": "Khách tổng thị trường theo nhóm Nội địa (12 tháng)",
+          "title": "PAX – DOM theo nhóm",
           "col": 31,
           "colSpan": 30,
           "aspectRatio": 1.8,
@@ -872,12 +872,12 @@
           "label": "Tổng quan"
         },
         {
-          "value": "dom",
-          "label": "Nội địa"
-        },
-        {
           "value": "int",
           "label": "Quốc tế"
+        },
+        {
+          "value": "dom",
+          "label": "Nội địa"
         }
       ],
       "row": 2
@@ -897,7 +897,7 @@
         },
         {
           "value": "vn-ov",
-          "label": "VN & OV"
+          "label": "VN & 0V"
         }
       ],
       "row": 2
@@ -908,280 +908,13 @@
       "total": {
         "chartBoard": [
           {
-            "title": "Khách tổng thị trường",
+            "title": "PAX",
             "items": [
               {
-                "id": "b_pax_int",
-                "title": "PaxTT – INT", "subTitle": "Nghìn khách",
-                "col": 1,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        387,
-                        455,
-                        411
-                      ],
-                      [
-                        "T2",
-                        361,
-                        427,
-                        385
-                      ],
-                      [
-                        "T3",
-                        335,
-                        349,
-                        306
-                      ],
-                      [
-                        "T4",
-                        303,
-                        308,
-                        270
-                      ],
-                      [
-                        "T5",
-                        316,
-                        334,
-                        299
-                      ],
-                      [
-                        "T6",
-                        350,
-                        394,
-                        349
-                      ],
-                      [
-                        "T7",
-                        385,
-                        461,
-                        424
-                      ],
-                      [
-                        "T8",
-                        365,
-                        429,
-                        null
-                      ],
-                      [
-                        "T9",
-                        299,
-                        315,
-                        null
-                      ],
-                      [
-                        "T10",
-                        297,
-                        287,
-                        null
-                      ],
-                      [
-                        "T11",
-                        304,
-                        321,
-                        null
-                      ],
-                      [
-                        "T12",
-                        345,
-                        394,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line",
-                          "lineStyle": "dashed"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "id": "b_pax_dom",
-                "title": "PaxTT – DOM", "subTitle": "Nghìn khách",
-                "col": 21,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        657,
-                        753,
-                        786
-                      ],
-                      [
-                        "T2",
-                        616,
-                        681,
-                        701
-                      ],
-                      [
-                        "T3",
-                        552,
-                        569,
-                        539
-                      ],
-                      [
-                        "T4",
-                        539,
-                        512,
-                        492
-                      ],
-                      [
-                        "T5",
-                        544,
-                        540,
-                        518
-                      ],
-                      [
-                        "T6",
-                        569,
-                        607,
-                        600
-                      ],
-                      [
-                        "T7",
-                        627,
-                        724,
-                        683
-                      ],
-                      [
-                        "T8",
-                        594,
-                        684,
-                        null
-                      ],
-                      [
-                        "T9",
-                        525,
-                        511,
-                        null
-                      ],
-                      [
-                        "T10",
-                        494,
-                        468,
-                        null
-                      ],
-                      [
-                        "T11",
-                        516,
-                        500,
-                        null
-                      ],
-                      [
-                        "T12",
-                        599,
-                        640,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line",
-                          "lineStyle": "dashed"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
                 "id": "b_pax_total",
-                "title": "PaxTT – INT + DOM", "subTitle": "Nghìn khách",
-                "col": 41,
+                "title": "PAX – INT + DOM",
+                "subTitle": "Nghìn khách",
+                "col": 1,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
@@ -1301,7 +1034,277 @@
                         {
                           "field": "db",
                           "chartType": "line",
-                          "lineStyle": "dashed"
+                          "lineType": "dashed"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_pax_int",
+                "title": "PAX – INT",
+                "subTitle": "Nghìn khách",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 150,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        387,
+                        455,
+                        411
+                      ],
+                      [
+                        "T2",
+                        361,
+                        427,
+                        385
+                      ],
+                      [
+                        "T3",
+                        335,
+                        349,
+                        306
+                      ],
+                      [
+                        "T4",
+                        303,
+                        308,
+                        270
+                      ],
+                      [
+                        "T5",
+                        316,
+                        334,
+                        299
+                      ],
+                      [
+                        "T6",
+                        350,
+                        394,
+                        349
+                      ],
+                      [
+                        "T7",
+                        385,
+                        461,
+                        424
+                      ],
+                      [
+                        "T8",
+                        365,
+                        429,
+                        null
+                      ],
+                      [
+                        "T9",
+                        299,
+                        315,
+                        null
+                      ],
+                      [
+                        "T10",
+                        297,
+                        287,
+                        null
+                      ],
+                      [
+                        "T11",
+                        304,
+                        321,
+                        null
+                      ],
+                      [
+                        "T12",
+                        345,
+                        394,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line",
+                          "lineType": "dashed"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "b_pax_dom",
+                "title": "PAX – DOM",
+                "subTitle": "Nghìn khách",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 150,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        657,
+                        753,
+                        786
+                      ],
+                      [
+                        "T2",
+                        616,
+                        681,
+                        701
+                      ],
+                      [
+                        "T3",
+                        552,
+                        569,
+                        539
+                      ],
+                      [
+                        "T4",
+                        539,
+                        512,
+                        492
+                      ],
+                      [
+                        "T5",
+                        544,
+                        540,
+                        518
+                      ],
+                      [
+                        "T6",
+                        569,
+                        607,
+                        600
+                      ],
+                      [
+                        "T7",
+                        627,
+                        724,
+                        683
+                      ],
+                      [
+                        "T8",
+                        594,
+                        684,
+                        null
+                      ],
+                      [
+                        "T9",
+                        525,
+                        511,
+                        null
+                      ],
+                      [
+                        "T10",
+                        494,
+                        468,
+                        null
+                      ],
+                      [
+                        "T11",
+                        516,
+                        500,
+                        null
+                      ],
+                      [
+                        "T12",
+                        599,
+                        640,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line",
+                          "lineType": "dashed"
                         },
                         {
                           "field": "th",
@@ -1497,16 +1500,678 @@
           }
         ]
       },
+      "int": {
+        "chartBoard": [
+          {
+            "title": "PAX",
+            "items": [
+              {
+                "id": "b_int_eu",
+                "title": "EU",
+                "col": 1,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 150,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        91,
+                        97,
+                        86
+                      ],
+                      [
+                        "T2",
+                        90,
+                        90,
+                        86
+                      ],
+                      [
+                        "T3",
+                        83,
+                        97,
+                        79
+                      ],
+                      [
+                        "T4",
+                        84,
+                        104,
+                        81
+                      ],
+                      [
+                        "T5",
+                        89,
+                        106,
+                        86
+                      ],
+                      [
+                        "T6",
+                        96,
+                        100,
+                        92
+                      ],
+                      [
+                        "T7",
+                        86,
+                        113,
+                        83
+                      ],
+                      [
+                        "T8",
+                        80,
+                        88,
+                        null
+                      ],
+                      [
+                        "T9",
+                        79,
+                        88,
+                        null
+                      ],
+                      [
+                        "T10",
+                        85,
+                        92,
+                        null
+                      ],
+                      [
+                        "T11",
+                        86,
+                        91,
+                        null
+                      ],
+                      [
+                        "T12",
+                        84,
+                        95,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "subTitle": "Nghìn khách"
+              },
+              {
+                "id": "b_int_au_us",
+                "title": "AU & US",
+                "col": 16,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 150,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        62,
+                        77,
+                        59
+                      ],
+                      [
+                        "T2",
+                        65,
+                        82,
+                        61
+                      ],
+                      [
+                        "T3",
+                        67,
+                        79,
+                        63
+                      ],
+                      [
+                        "T4",
+                        62,
+                        80,
+                        58
+                      ],
+                      [
+                        "T5",
+                        63,
+                        89,
+                        59
+                      ],
+                      [
+                        "T6",
+                        69,
+                        77,
+                        65
+                      ],
+                      [
+                        "T7",
+                        68,
+                        77,
+                        65
+                      ],
+                      [
+                        "T8",
+                        67,
+                        65,
+                        null
+                      ],
+                      [
+                        "T9",
+                        65,
+                        67,
+                        null
+                      ],
+                      [
+                        "T10",
+                        59,
+                        68,
+                        null
+                      ],
+                      [
+                        "T11",
+                        60,
+                        75,
+                        null
+                      ],
+                      [
+                        "T12",
+                        62,
+                        74,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "subTitle": "Nghìn khách"
+              },
+              {
+                "id": "b_int_nea",
+                "title": "NEA (ĐBA)",
+                "col": 31,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 150,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        82,
+                        94,
+                        77
+                      ],
+                      [
+                        "T2",
+                        82,
+                        86,
+                        77
+                      ],
+                      [
+                        "T3",
+                        78,
+                        94,
+                        74
+                      ],
+                      [
+                        "T4",
+                        83,
+                        101,
+                        79
+                      ],
+                      [
+                        "T5",
+                        80,
+                        91,
+                        76
+                      ],
+                      [
+                        "T6",
+                        86,
+                        97,
+                        83
+                      ],
+                      [
+                        "T7",
+                        91,
+                        93,
+                        86
+                      ],
+                      [
+                        "T8",
+                        75,
+                        82,
+                        null
+                      ],
+                      [
+                        "T9",
+                        75,
+                        83,
+                        null
+                      ],
+                      [
+                        "T10",
+                        79,
+                        88,
+                        null
+                      ],
+                      [
+                        "T11",
+                        80,
+                        85,
+                        null
+                      ],
+                      [
+                        "T12",
+                        84,
+                        82,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "subTitle": "Nghìn khách"
+              },
+              {
+                "id": "b_int_sea_clmv",
+                "title": "SEA & CLMV (ĐNA & CLMV)",
+                "col": 46,
+                "colSpan": 15,
+                "autoChart": {
+                  "chartType": "auto",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "month",
+                        "type": "string"
+                      },
+                      {
+                        "id": "ck",
+                        "type": "number",
+                        "label": "Cùng kỳ",
+                        "color": "#ec4899"
+                      },
+                      {
+                        "id": "db",
+                        "type": "number",
+                        "label": "Dự báo",
+                        "color": "#d0d1d3"
+                      },
+                      {
+                        "id": "th",
+                        "type": "number",
+                        "label": "Thực hiện",
+                        "color": "#2962a0"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "T1",
+                        10,
+                        13,
+                        9
+                      ],
+                      [
+                        "T2",
+                        11,
+                        13,
+                        10
+                      ],
+                      [
+                        "T3",
+                        12,
+                        13,
+                        11
+                      ],
+                      [
+                        "T4",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T5",
+                        10,
+                        13,
+                        10
+                      ],
+                      [
+                        "T6",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T7",
+                        11,
+                        14,
+                        10
+                      ],
+                      [
+                        "T8",
+                        10,
+                        10,
+                        null
+                      ],
+                      [
+                        "T9",
+                        9,
+                        10,
+                        null
+                      ],
+                      [
+                        "T10",
+                        9,
+                        11,
+                        null
+                      ],
+                      [
+                        "T11",
+                        10,
+                        12,
+                        null
+                      ],
+                      [
+                        "T12",
+                        10,
+                        11,
+                        null
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "auto",
+                      "xField": "month",
+                      "series": [
+                        {
+                          "field": "ck",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "db",
+                          "chartType": "line"
+                        },
+                        {
+                          "field": "th",
+                          "chartType": "line"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "row": 1,
+                "height": 150,
+                "subTitle": "Nghìn khách"
+              }
+            ]
+          },
+          {
+            "title": "Cơ cấu thị trường hành khách quốc tế",
+            "items": [
+              {
+                "id": "b_int_treemap",
+                "title": "Cơ cấu thị trường hành khách quốc tế",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "autoChart": {
+                  "chartType": "treemap",
+                  "dataset": {
+                    "columns": [
+                      {
+                        "id": "name",
+                        "type": "string"
+                      },
+                      {
+                        "id": "value",
+                        "type": "number"
+                      },
+                      {
+                        "id": "parent",
+                        "type": "string"
+                      },
+                      {
+                        "id": "color",
+                        "type": "string"
+                      }
+                    ],
+                    "rows": [
+                      [
+                        "Quốc tế",
+                        90,
+                        "",
+                        "#2563eb"
+                      ],
+                      [
+                        "SWP",
+                        18630,
+                        "Quốc tế",
+                        "#1e3a8a"
+                      ],
+                      [
+                        "CLMV",
+                        12960,
+                        "Quốc tế",
+                        "#1e40af"
+                      ],
+                      [
+                        "NEA",
+                        4770,
+                        "Quốc tế",
+                        "#1d4ed8"
+                      ],
+                      [
+                        "MID",
+                        2520,
+                        "Quốc tế",
+                        "#ff0505"
+                      ],
+                      [
+                        "SEA",
+                        2430,
+                        "Quốc tế",
+                        "#ff0000"
+                      ],
+                      [
+                        "NOA",
+                        2250,
+                        "Quốc tế",
+                        "#eb0000"
+                      ],
+                      [
+                        "EUR",
+                        1080,
+                        "Quốc tế",
+                        "#750000"
+                      ],
+                      [
+                        "SAS",
+                        360,
+                        "Quốc tế",
+                        "#2e0000"
+                      ]
+                    ]
+                  },
+                  "views": [
+                    {
+                      "id": "main",
+                      "chartType": "treemap"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "title": "Đánh giá thị trường",
+            "items": [
+              {
+                "id": "b_int_ai_insight",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "extraComponent": {
+                  "type": "card-html",
+                  "config": {
+                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#2563eb\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
+                    "backgroundClassName": "",
+                    "borderClassName": ""
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
       "dom": {
         "chartBoard": [
           {
-            "title": "Khách tổng thị trường nội địa",
+            "title": "PAX – DOM",
             "items": [
               {
                 "id": "b_dom_hansgn",
                 "title": "HANSGN",
                 "col": 1,
-                "colSpan": 20,
+                "colSpan": 12,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -1634,13 +2299,14 @@
                       ]
                     }
                   ]
-                }
+                },
+                "subTitle": "Nghìn khách"
               },
               {
                 "id": "b_dom_handad",
                 "title": "HANDAD",
-                "col": 21,
-                "colSpan": 20,
+                "col": 13,
+                "colSpan": 12,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -1768,13 +2434,14 @@
                       ]
                     }
                   ]
-                }
+                },
+                "subTitle": "Nghìn khách"
               },
               {
                 "id": "b_dom_sgndad",
                 "title": "SGNDAD",
-                "col": 41,
-                "colSpan": 20,
+                "col": 25,
+                "colSpan": 12,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -1902,14 +2569,15 @@
                       ]
                     }
                   ]
-                }
+                },
+                "subTitle": "Nghìn khách"
               },
               {
                 "id": "b_dom_dulich",
                 "title": "Du lịch",
-                "col": 1,
-                "colSpan": 20,
-                "row": 2,
+                "col": 37,
+                "colSpan": 12,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 150,
                 "autoChart": {
@@ -2036,14 +2704,15 @@
                       ]
                     }
                   ]
-                }
+                },
+                "subTitle": "Nghìn khách"
               },
               {
                 "id": "b_dom_trucle",
                 "title": "Trục lẻ",
-                "col": 21,
-                "colSpan": 20,
-                "row": 2,
+                "col": 49,
+                "colSpan": 12,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 150,
                 "autoChart": {
@@ -2170,141 +2839,8 @@
                       ]
                     }
                   ]
-                }
-              },
-              {
-                "id": "b_dom_diaphuong",
-                "title": "Địa phương",
-                "col": 41,
-                "colSpan": 20,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        59,
-                        65,
-                        57
-                      ],
-                      [
-                        "T2",
-                        58,
-                        63,
-                        55
-                      ],
-                      [
-                        "T3",
-                        56,
-                        67,
-                        53
-                      ],
-                      [
-                        "T4",
-                        59,
-                        68,
-                        57
-                      ],
-                      [
-                        "T5",
-                        61,
-                        70,
-                        58
-                      ],
-                      [
-                        "T6",
-                        63,
-                        72,
-                        60
-                      ],
-                      [
-                        "T7",
-                        65,
-                        74,
-                        61
-                      ],
-                      [
-                        "T8",
-                        52,
-                        58,
-                        null
-                      ],
-                      [
-                        "T9",
-                        50,
-                        59,
-                        null
-                      ],
-                      [
-                        "T10",
-                        54,
-                        61,
-                        null
-                      ],
-                      [
-                        "T11",
-                        56,
-                        59,
-                        null
-                      ],
-                      [
-                        "T12",
-                        58,
-                        63,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line",
-                          "lineStyle": "dashed"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
+                },
+                "subTitle": "Nghìn khách"
               }
             ]
           },
@@ -3216,1192 +3752,6 @@
                   "type": "card-html",
                   "config": {
                     "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khách tổng thị trường T7</b> — đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#2563eb\"></span><b>Lũy kế T1–T7</b> — đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "int": {
-        "chartBoard": [
-          {
-            "title": "Khách tổng thị trường",
-            "items": [
-              {
-                "id": "b_int_eu",
-                "title": "EU",
-                "col": 1,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        91,
-                        97,
-                        86
-                      ],
-                      [
-                        "T2",
-                        90,
-                        90,
-                        86
-                      ],
-                      [
-                        "T3",
-                        83,
-                        97,
-                        79
-                      ],
-                      [
-                        "T4",
-                        84,
-                        104,
-                        81
-                      ],
-                      [
-                        "T5",
-                        89,
-                        106,
-                        86
-                      ],
-                      [
-                        "T6",
-                        96,
-                        100,
-                        92
-                      ],
-                      [
-                        "T7",
-                        86,
-                        113,
-                        83
-                      ],
-                      [
-                        "T8",
-                        80,
-                        88,
-                        null
-                      ],
-                      [
-                        "T9",
-                        79,
-                        88,
-                        null
-                      ],
-                      [
-                        "T10",
-                        85,
-                        92,
-                        null
-                      ],
-                      [
-                        "T11",
-                        86,
-                        91,
-                        null
-                      ],
-                      [
-                        "T12",
-                        84,
-                        95,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "id": "b_int_au_us",
-                "title": "AU & US",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        62,
-                        77,
-                        59
-                      ],
-                      [
-                        "T2",
-                        65,
-                        82,
-                        61
-                      ],
-                      [
-                        "T3",
-                        67,
-                        79,
-                        63
-                      ],
-                      [
-                        "T4",
-                        62,
-                        80,
-                        58
-                      ],
-                      [
-                        "T5",
-                        63,
-                        89,
-                        59
-                      ],
-                      [
-                        "T6",
-                        69,
-                        77,
-                        65
-                      ],
-                      [
-                        "T7",
-                        68,
-                        77,
-                        65
-                      ],
-                      [
-                        "T8",
-                        67,
-                        65,
-                        null
-                      ],
-                      [
-                        "T9",
-                        65,
-                        67,
-                        null
-                      ],
-                      [
-                        "T10",
-                        59,
-                        68,
-                        null
-                      ],
-                      [
-                        "T11",
-                        60,
-                        75,
-                        null
-                      ],
-                      [
-                        "T12",
-                        62,
-                        74,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "id": "b_int_clmv",
-                "title": "CLMV",
-                "col": 31,
-                "colSpan": 15,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        51,
-                        68,
-                        49
-                      ],
-                      [
-                        "T2",
-                        56,
-                        68,
-                        53
-                      ],
-                      [
-                        "T3",
-                        60,
-                        69,
-                        58
-                      ],
-                      [
-                        "T4",
-                        58,
-                        70,
-                        55
-                      ],
-                      [
-                        "T5",
-                        55,
-                        66,
-                        51
-                      ],
-                      [
-                        "T6",
-                        57,
-                        73,
-                        53
-                      ],
-                      [
-                        "T7",
-                        56,
-                        69,
-                        53
-                      ],
-                      [
-                        "T8",
-                        52,
-                        52,
-                        null
-                      ],
-                      [
-                        "T9",
-                        50,
-                        54,
-                        null
-                      ],
-                      [
-                        "T10",
-                        50,
-                        59,
-                        null
-                      ],
-                      [
-                        "T11",
-                        53,
-                        60,
-                        null
-                      ],
-                      [
-                        "T12",
-                        51,
-                        60,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "row": 1,
-                "height": 150
-              },
-              {
-                "id": "b_int_sea",
-                "title": "SEA (ĐNA)",
-                "col": 46,
-                "colSpan": 15,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        10,
-                        13,
-                        9
-                      ],
-                      [
-                        "T2",
-                        11,
-                        13,
-                        10
-                      ],
-                      [
-                        "T3",
-                        12,
-                        13,
-                        11
-                      ],
-                      [
-                        "T4",
-                        11,
-                        14,
-                        10
-                      ],
-                      [
-                        "T5",
-                        10,
-                        13,
-                        10
-                      ],
-                      [
-                        "T6",
-                        11,
-                        14,
-                        10
-                      ],
-                      [
-                        "T7",
-                        11,
-                        14,
-                        10
-                      ],
-                      [
-                        "T8",
-                        10,
-                        10,
-                        null
-                      ],
-                      [
-                        "T9",
-                        9,
-                        10,
-                        null
-                      ],
-                      [
-                        "T10",
-                        9,
-                        11,
-                        null
-                      ],
-                      [
-                        "T11",
-                        10,
-                        12,
-                        null
-                      ],
-                      [
-                        "T12",
-                        10,
-                        11,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "row": 1,
-                "height": 150
-              },
-              {
-                "id": "b_int_mid",
-                "title": "MID (Trung Đông)",
-                "col": 1,
-                "colSpan": 15,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        11,
-                        14,
-                        11
-                      ],
-                      [
-                        "T2",
-                        12,
-                        14,
-                        12
-                      ],
-                      [
-                        "T3",
-                        13,
-                        14,
-                        13
-                      ],
-                      [
-                        "T4",
-                        13,
-                        15,
-                        12
-                      ],
-                      [
-                        "T5",
-                        12,
-                        14,
-                        11
-                      ],
-                      [
-                        "T6",
-                        13,
-                        15,
-                        12
-                      ],
-                      [
-                        "T7",
-                        12,
-                        15,
-                        12
-                      ],
-                      [
-                        "T8",
-                        11,
-                        11,
-                        null
-                      ],
-                      [
-                        "T9",
-                        11,
-                        12,
-                        null
-                      ],
-                      [
-                        "T10",
-                        11,
-                        13,
-                        null
-                      ],
-                      [
-                        "T11",
-                        12,
-                        13,
-                        null
-                      ],
-                      [
-                        "T12",
-                        11,
-                        13,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "row": 2,
-                "height": 150
-              },
-              {
-                "id": "b_int_noa",
-                "title": "NOA (Bắc Á)",
-                "col": 16,
-                "colSpan": 15,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        9,
-                        12,
-                        9
-                      ],
-                      [
-                        "T2",
-                        10,
-                        13,
-                        9
-                      ],
-                      [
-                        "T3",
-                        11,
-                        13,
-                        10
-                      ],
-                      [
-                        "T4",
-                        11,
-                        13,
-                        10
-                      ],
-                      [
-                        "T5",
-                        10,
-                        12,
-                        9
-                      ],
-                      [
-                        "T6",
-                        10,
-                        13,
-                        9
-                      ],
-                      [
-                        "T7",
-                        10,
-                        13,
-                        9
-                      ],
-                      [
-                        "T8",
-                        9,
-                        9,
-                        null
-                      ],
-                      [
-                        "T9",
-                        9,
-                        10,
-                        null
-                      ],
-                      [
-                        "T10",
-                        9,
-                        11,
-                        null
-                      ],
-                      [
-                        "T11",
-                        9,
-                        11,
-                        null
-                      ],
-                      [
-                        "T12",
-                        9,
-                        11,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "row": 2,
-                "height": 150
-              },
-              {
-                "id": "b_int_nea",
-                "title": "NEA (ĐBA)",
-                "col": 31,
-                "colSpan": 15,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 150,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        82,
-                        94,
-                        77
-                      ],
-                      [
-                        "T2",
-                        82,
-                        86,
-                        77
-                      ],
-                      [
-                        "T3",
-                        78,
-                        94,
-                        74
-                      ],
-                      [
-                        "T4",
-                        83,
-                        101,
-                        79
-                      ],
-                      [
-                        "T5",
-                        80,
-                        91,
-                        76
-                      ],
-                      [
-                        "T6",
-                        86,
-                        97,
-                        83
-                      ],
-                      [
-                        "T7",
-                        91,
-                        93,
-                        86
-                      ],
-                      [
-                        "T8",
-                        75,
-                        82,
-                        null
-                      ],
-                      [
-                        "T9",
-                        75,
-                        83,
-                        null
-                      ],
-                      [
-                        "T10",
-                        79,
-                        88,
-                        null
-                      ],
-                      [
-                        "T11",
-                        80,
-                        85,
-                        null
-                      ],
-                      [
-                        "T12",
-                        84,
-                        82,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-              {
-                "id": "b_int_sas",
-                "title": "SAS (Nam Á)",
-                "col": 46,
-                "colSpan": 15,
-                "autoChart": {
-                  "chartType": "auto",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "month",
-                        "type": "string"
-                      },
-                      {
-                        "id": "ck",
-                        "type": "number",
-                        "label": "Cùng kỳ",
-                        "color": "#ec4899"
-                      },
-                      {
-                        "id": "db",
-                        "type": "number",
-                        "label": "Dự báo",
-                        "color": "#d0d1d3"
-                      },
-                      {
-                        "id": "th",
-                        "type": "number",
-                        "label": "Thực hiện",
-                        "color": "#2962a0"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "T1",
-                        3,
-                        4,
-                        3
-                      ],
-                      [
-                        "T2",
-                        4,
-                        4,
-                        4
-                      ],
-                      [
-                        "T3",
-                        4,
-                        4,
-                        4
-                      ],
-                      [
-                        "T4",
-                        4,
-                        4,
-                        4
-                      ],
-                      [
-                        "T5",
-                        4,
-                        4,
-                        3
-                      ],
-                      [
-                        "T6",
-                        4,
-                        4,
-                        4
-                      ],
-                      [
-                        "T7",
-                        4,
-                        4,
-                        4
-                      ],
-                      [
-                        "T8",
-                        3,
-                        3,
-                        null
-                      ],
-                      [
-                        "T9",
-                        3,
-                        4,
-                        null
-                      ],
-                      [
-                        "T10",
-                        3,
-                        4,
-                        null
-                      ],
-                      [
-                        "T11",
-                        4,
-                        4,
-                        null
-                      ],
-                      [
-                        "T12",
-                        3,
-                        4,
-                        null
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "auto",
-                      "xField": "month",
-                      "series": [
-                        {
-                          "field": "ck",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "db",
-                          "chartType": "line"
-                        },
-                        {
-                          "field": "th",
-                          "chartType": "line"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                "row": 2,
-                "height": 150
-              }
-            ]
-          },
-          {
-            "title": "Cơ cấu thị trường hành khách quốc tế",
-            "items": [
-              {
-                "id": "b_int_treemap",
-                "title": "Cơ cấu thị trường hành khách quốc tế",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "height": 350,
-                "autoChart": {
-                  "chartType": "treemap",
-                  "dataset": {
-                    "columns": [
-                      {
-                        "id": "name",
-                        "type": "string"
-                      },
-                      {
-                        "id": "value",
-                        "type": "number"
-                      },
-                      {
-                        "id": "parent",
-                        "type": "string"
-                      },
-                      {
-                        "id": "color",
-                        "type": "string"
-                      }
-                    ],
-                    "rows": [
-                      [
-                        "Quốc tế",
-                        90,
-                        "",
-                        "#2563eb"
-                      ],
-                      [
-                        "SWP",
-                        18630,
-                        "Quốc tế",
-                        "#1e3a8a"
-                      ],
-                      [
-                        "CLMV",
-                        12960,
-                        "Quốc tế",
-                        "#1e40af"
-                      ],
-                      [
-                        "NEA",
-                        4770,
-                        "Quốc tế",
-                        "#1d4ed8"
-                      ],
-                      [
-                        "MID",
-                        2520,
-                        "Quốc tế",
-                        "#ff0505"
-                      ],
-                      [
-                        "SEA",
-                        2430,
-                        "Quốc tế",
-                        "#ff0000"
-                      ],
-                      [
-                        "NOA",
-                        2250,
-                        "Quốc tế",
-                        "#eb0000"
-                      ],
-                      [
-                        "EUR",
-                        1080,
-                        "Quốc tế",
-                        "#750000"
-                      ],
-                      [
-                        "SAS",
-                        360,
-                        "Quốc tế",
-                        "#2e0000"
-                      ]
-                    ]
-                  },
-                  "views": [
-                    {
-                      "id": "main",
-                      "chartType": "treemap"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#2563eb\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
                     "backgroundClassName": "",
                     "borderClassName": ""
                   }
