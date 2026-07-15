@@ -95,14 +95,14 @@
   },
   "chartBoard": [
     {
-      "title": "Exchange Rate & Fuel — Trend & Risk",
+      "title": "Tỷ giá & Chi phí nhiên liệu - Xu hướng & rủi ro",
       "items": [
         {
           "id": "b_jet",
           "title": "Jet A1 theo tháng",
           "col": 1,
           "row": 1,
-          "colSpan": 30,
+          "colSpan": 15,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -123,7 +123,7 @@
                 {
                   "id": "db",
                   "type": "number",
-                  "label": "Dự báo",
+                  "label": "Kế hoạch",
                   "color": "#d0d1d3"
                 },
                 {
@@ -229,14 +229,15 @@
                 ]
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: USD/bbl"
         },
         {
           "id": "b_fuel",
           "title": "Fuel Cost theo tháng",
-          "col": 31,
+          "col": 16,
           "row": 1,
-          "colSpan": 30,
+          "colSpan": 15,
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "autoChart": {
@@ -258,68 +259,86 @@
                   "type": "number",
                   "label": "Kế hoạch",
                   "color": "#D3AC2B"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
                 }
               ],
               "rows": [
                 [
                   "T1",
                   600,
-                  600
+                  600,
+                  560
                 ],
                 [
                   "T2",
                   610,
-                  605
+                  605,
+                  568
                 ],
                 [
                   "T3",
                   590,
-                  610
+                  610,
+                  550
                 ],
                 [
                   "T4",
                   600,
-                  615
+                  615,
+                  558
                 ],
                 [
                   "T5",
                   620,
-                  620
+                  620,
+                  572
                 ],
                 [
                   "T6",
                   610,
-                  620
+                  620,
+                  565
                 ],
                 [
                   "T7",
                   620,
-                  625
+                  625,
+                  575
                 ],
                 [
                   "T8",
                   560,
-                  580
+                  580,
+                  532
                 ],
                 [
                   "T9",
                   570,
-                  585
+                  585,
+                  540
                 ],
                 [
                   "T10",
                   600,
-                  590
+                  590,
+                  565
                 ],
                 [
                   "T11",
                   590,
-                  595
+                  595,
+                  555
                 ],
                 [
                   "T12",
                   620,
-                  600
+                  600,
+                  580
                 ]
               ]
             },
@@ -335,6 +354,281 @@
                   },
                   {
                     "field": "k__ho_ch",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "ck",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          },
+          "subTitle": "Đơn vị: Tỷ VND"
+        },
+        {
+          "id": "b_fx_rate",
+          "title": "VND/USD FX",
+          "subTitle": "Đơn vị: VND/USD",
+          "col": 31,
+          "row": 1,
+          "colSpan": 15,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "th",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2962a0"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  24900,
+                  25400,
+                  25200
+                ],
+                [
+                  "T2",
+                  24950,
+                  25400,
+                  25250
+                ],
+                [
+                  "T3",
+                  25000,
+                  25400,
+                  25300
+                ],
+                [
+                  "T4",
+                  25050,
+                  25400,
+                  25300
+                ],
+                [
+                  "T5",
+                  25100,
+                  25450,
+                  25350
+                ],
+                [
+                  "T6",
+                  25150,
+                  25450,
+                  25400
+                ],
+                [
+                  "T7",
+                  25200,
+                  25450,
+                  25450
+                ],
+                [
+                  "T8",
+                  25250,
+                  25450,
+                  null
+                ],
+                [
+                  "T9",
+                  25300,
+                  25500,
+                  null
+                ],
+                [
+                  "T10",
+                  25350,
+                  25500,
+                  null
+                ],
+                [
+                  "T11",
+                  25400,
+                  25500,
+                  null
+                ],
+                [
+                  "T12",
+                  25450,
+                  25500,
+                  null
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "ck",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "th",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_cash_flow",
+          "title": "Dòng tiền",
+          "subTitle": "Đơn vị: tỷ VND",
+          "col": 46,
+          "row": 1,
+          "colSpan": 15,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "autoChart": {
+            "chartType": "auto",
+            "aspectRatio": 1.8,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "ck",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
+                },
+                {
+                  "id": "db",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#d0d1d3"
+                },
+                {
+                  "id": "th",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2962a0"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  3800,
+                  4200,
+                  4100
+                ],
+                [
+                  "T2",
+                  3850,
+                  4200,
+                  4150
+                ],
+                [
+                  "T3",
+                  3900,
+                  4200,
+                  4180
+                ],
+                [
+                  "T4",
+                  3950,
+                  4250,
+                  4200
+                ],
+                [
+                  "T5",
+                  4000,
+                  4250,
+                  4220
+                ],
+                [
+                  "T6",
+                  4050,
+                  4250,
+                  4240
+                ],
+                [
+                  "T7",
+                  4100,
+                  4250,
+                  4250
+                ],
+                [
+                  "T8",
+                  4150,
+                  4250,
+                  null
+                ],
+                [
+                  "T9",
+                  4200,
+                  4300,
+                  null
+                ],
+                [
+                  "T10",
+                  4250,
+                  4300,
+                  null
+                ],
+                [
+                  "T11",
+                  4300,
+                  4300,
+                  null
+                ],
+                [
+                  "T12",
+                  4350,
+                  4300,
+                  null
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "auto",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "ck",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "db",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "th",
                     "chartType": "line"
                   }
                 ]
@@ -1446,14 +1740,13 @@
       "items": [
         {
           "id": "b_ai_insight",
-          "title": "AI Insight — Tác động tỷ giá & nhiên liệu",
           "col": 1,
           "row": 1,
           "colSpan": 60,
           "extraComponent": {
             "type": "card-html",
             "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight — Exchange Rate & Fuel</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nhiên liệu:</b> Jet A1 duy trì 95–96 USD/bbl, cao hơn KH 3.1% — ước tính phát sinh chi phí thêm 204 tỷ so với kế hoạch tháng này</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Tỷ giá:</b> JPY +4% vs KH → chi thuê tàu & trạm Nhật phát sinh ~87 tỷ. USD/VND +1.2% vs KH, ảnh hưởng dòng tiền chi nhập nhiên liệu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Dòng tiền:</b> Dòng tiền thuần ước đạt 4.250 tỷ (+2.1% KH). Rủi ro từ biến động JPY và Jet A1 cần được hedge bổ sung quý sau</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khuyến nghị:</b> Xem xét hedge tỷ giá JPY kỳ hạn 6 tháng; theo dõi giá Jet A1 vượt 100 USD/bbl để kích hoạt kịch bản ứng phó</li></ul></div>",
+              "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\">\n  <div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:8px\">📊 AI Insight —Tỷ giá & Chi phí nhiên liệu - Xu hướng & rủi ro</div>\n  <div style=\"font-size:12px;color:#1e293b;margin-bottom:8px;padding:6px 10px;background:#e8edf5;border-radius:6px;\">\n    So với <b>TGKH T3/2026</b>, các đồng tiền chính đều tăng giá so với USD, trừ JPY.\n  </div>\n  <div style=\"display:flex;gap:8px;\">\n    <ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b;flex:1;\">\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>VND</b> +2,00% — ảnh hưởng <b style=\"color:#c0392b;\">-45 tỷ VND</b> dòng tiền chi</li>\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>EURO</b> +0,91% — ảnh hưởng <b style=\"color:#2B87A8;\">+12 tỷ VND</b> dòng tiền thu</li>\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>JPY</b> -0,69% — ảnh hưởng <b style=\"color:#2B87A8;\">+4 tỷ VND</b> dòng tiền thu</li>\n    </ul>\n    <ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b;flex:1;\">\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>CNY</b> +3,77% — ảnh hưởng <b style=\"color:#2B87A8;\">+4 tỷ VND</b> dòng tiền thu</li>\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>AUD</b> +7,12% — ảnh hưởng <b style=\"color:#2B87A8;\">+48 tỷ VND</b> dòng tiền thu</li>\n      <li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#D79A1F\"></span><b>KRW</b> +1,16% — ảnh hưởng <b style=\"color:#2B87A8;\">+7 tỷ VND</b> dòng tiền thu</li>\n    </ul>\n  </div>\n</div>",
               "backgroundClassName": "",
               "borderClassName": ""
             }
