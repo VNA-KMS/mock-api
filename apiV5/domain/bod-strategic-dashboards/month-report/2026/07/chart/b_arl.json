@@ -24,6 +24,24 @@
           "type": "number",
           "label": "Cùng kỳ",
           "color": "#94a3b8"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)",
+          "color": "#2563eb"
+        },
+        {
+          "id": "plan_cum",
+          "type": "number",
+          "label": "Kế hoạch (LT)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "samePeriod_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#94a3b8"
         }
       ],
       "rows": [
@@ -31,43 +49,64 @@
           "T1",
           93.5,
           93.2,
-          93.0
+          93.0,
+          93.5,
+          98,
+          88
         ],
         [
           "T2",
           93.2,
           93.2,
-          92.8
+          92.8,
+          186.7,
+          192,
+          172
         ],
         [
           "T3",
           92.8,
           93.2,
-          92.5
+          92.5,
+          279.5,
+          285,
+          255
         ],
         [
           "T4",
           92.5,
           93.2,
-          92.2
+          92.2,
+          372.0,
+          384,
+          346
         ],
         [
           "T5",
           92.0,
           93.2,
-          91.8
+          91.8,
+          464.0,
+          480,
+          431
         ],
         [
           "T6",
           91.8,
           93.2,
-          91.8
+          91.8,
+          555.8,
+          578,
+          520
         ],
         [
           "T7",
           91.8,
           93.2,
-          92.8
+          92.8,
+          647.6,
+          672,
+          607
         ]
       ]
     },
@@ -92,7 +131,32 @@
             "lineType": "dashed"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "plan_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "samePeriod_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true,
+      "label": "Lũy kế thực hiện"
+    }
   }
 }

@@ -1,6 +1,5 @@
 {
   "autoChart": {
-    "chartType": "line",
     "dataset": {
       "columns": [
         {
@@ -24,11 +23,32 @@
           "type": "number",
           "label": "Dự báo",
           "color": "#d0d1d3"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)",
+          "color": "#2962a0"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Dự báo (LT)",
+          "color": "#d0d1d3"
         }
       ],
       "rows": [
         [
           "T1",
+          776,
+          750,
+          772,
           776,
           750,
           772
@@ -37,37 +57,55 @@
           "T2",
           787,
           760,
-          783
+          783,
+          1563,
+          1510,
+          1555
         ],
         [
           "T3",
           798,
           770,
-          794
+          794,
+          2361,
+          2280,
+          2349
         ],
         [
           "T4",
           809,
           780,
-          806
+          806,
+          3170,
+          3060,
+          3155
         ],
         [
           "T5",
           818,
           790,
-          819
+          819,
+          3988,
+          3850,
+          3974
         ],
         [
           "T6",
           828,
           800,
-          832
+          832,
+          4816,
+          4650,
+          4806
         ],
         [
           "T7",
           838,
           810,
-          843
+          843,
+          5654,
+          5460,
+          5649
         ]
       ]
     },
@@ -91,7 +129,30 @@
             "lineType": "dashed"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }

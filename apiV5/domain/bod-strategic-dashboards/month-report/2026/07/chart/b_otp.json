@@ -1,6 +1,5 @@
 {
   "autoChart": {
-    "chartType": "line",
     "dataset": {
       "columns": [
         {
@@ -24,11 +23,32 @@
           "type": "number",
           "label": "Mục tiêu",
           "color": "#0B9A03"
+        },
+        {
+          "id": "otp_di_cum",
+          "type": "number",
+          "label": "OTP đi (LT)",
+          "color": "#2962A0"
+        },
+        {
+          "id": "otp_den_cum",
+          "type": "number",
+          "label": "OTP đến (LT)",
+          "color": "#F97316"
+        },
+        {
+          "id": "otp_mt_cum",
+          "type": "number",
+          "label": "Mục tiêu (LT)",
+          "color": "#0B9A03"
         }
       ],
       "rows": [
         [
           "T1",
+          84.2,
+          85.1,
+          88,
           84.2,
           85.1,
           88
@@ -37,37 +57,55 @@
           "T2",
           84.5,
           85.3,
-          88
+          88,
+          168.7,
+          170.4,
+          176
         ],
         [
           "T3",
           83.8,
           84.9,
-          88
+          88,
+          252.5,
+          255.3,
+          264
         ],
         [
           "T4",
-          84.0,
-          85.0,
-          88
+          84,
+          85,
+          88,
+          336.5,
+          340.3,
+          352
         ],
         [
           "T5",
           84.7,
           85.6,
-          88
+          88,
+          421.2,
+          425.9,
+          440
         ],
         [
           "T6",
           85.1,
           86.2,
-          88
+          88,
+          506.3,
+          512.1,
+          528
         ],
         [
           "T7",
           84.9,
           85.8,
-          88
+          88,
+          591.2,
+          597.9,
+          616
         ]
       ]
     },
@@ -91,7 +129,30 @@
             "lineType": "dashed"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "otp_di_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "otp_den_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "otp_mt_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }
