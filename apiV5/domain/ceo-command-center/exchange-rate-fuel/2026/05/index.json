@@ -1,0 +1,134 @@
+{
+  "titleInfo": {
+    "title": "Exchange Rate & Fuel",
+    "statusLabel": "REAL TIME",
+    "description": "Giá nhiên liệu & tỷ giá biến động thế nào và ảnh hưởng dòng tiền ra sao?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_jet",
+        "status": "compact",
+        "title": "Jet A1",
+        "value": "95.9",
+        "unit": "USD/bbl",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "3.1% với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "6.6% với TB năm ngoái",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_fuel",
+        "status": "compact",
+        "title": "Fuel Cost",
+        "value": "6800",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.6% với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "8% với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_fx",
+        "status": "compact",
+        "title": "VND/USD FX",
+        "value": "25400",
+        "unit": "đ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.2% với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "3% với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_cash",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4250",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "2.1% với Kế hoạch",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Tỷ giá & Chi phí nhiên liệu - Xu hướng & rủi ro",
+      "columns": 2,
+      "items": [
+        {
+          "id": "b_jet",
+          "title": "Jet A1 theo tháng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/exchange-rate-fuel/2026/05/chart/b_jet.json"
+        },
+        {
+          "id": "b_fuel",
+          "title": "Fuel Cost theo tháng",
+          "col": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/exchange-rate-fuel/2026/05/chart/b_fuel.json"
+        },
+        {
+          "id": "b_fx",
+          "title": "Biến động tỷ giá 6 đồng tiền chính",
+          "col": 1,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/exchange-rate-fuel/2026/05/chart/b_fx.json"
+        }
+      ]
+    }
+  ],
+  "timeFrameHiddenModes": [
+    "day",
+    "week",
+    "quarter",
+    "custom"
+  ]
+}

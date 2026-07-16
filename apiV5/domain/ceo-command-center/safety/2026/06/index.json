@@ -1,0 +1,362 @@
+{
+  "titleInfo": {
+    "title": "Safety",
+    "statusLabel": "REAL TIME",
+    "description": "Tình hình an toàn tháng — số vụ việc, phân loại mức độ, sự cố điển hình?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "m_total",
+        "status": "compact",
+        "title": "Số vụ việc b/c Cục HK",
+        "value": "42",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "2 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "5 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rate",
+        "status": "compact",
+        "title": "Sự cố, vụ việc / 10.000 chuyến bay",
+        "period": "Tháng 03/2026",
+        "value": "7,93",
+        "unit": "/10.000cb",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "đạt 97,7% mục tiêu (8,12)",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human",
+        "status": "compact",
+        "title": "Sự cố liên quan yếu tố con người",
+        "value": "8",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1 so với tháng trước",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2 so với cùng kỳ",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "m_flight",
+        "status": "compact",
+        "title": "Sự cố LV khai thác bay",
+        "value": "6",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "2 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_tech",
+        "status": "compact",
+        "title": "Sự cố LV kỹ thuật",
+        "value": "5",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0 so với tháng trước",
+            "tone": "neutral"
+          },
+          {
+            "direction": "down",
+            "label": "1 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_wx",
+        "status": "compact",
+        "title": "Sự cố LV KTMĐ",
+        "value": "4",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1 so với tháng trước",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "2 so với cùng kỳ",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "b_trend",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "title": "Số lượng sự cố",
+          "height": 150,
+          "aiInsight": {
+            "text": "Tổng số vụ việc tháng 7 là 42 vụ, giảm 2 vụ so với tháng trước và 5 vụ so với cùng kỳ. Xu hướng 6 tháng đầu năm cải thiện rõ rệt (từ 37 xuống 32), tuy nhiên T7 tăng đột biến theo mùa, thấp hơn đáng kể so với mức 47 vụ cùng kỳ 2025.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/06/chart/b_trend.json"
+        },
+        {
+          "id": "b_class",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "title": "Bảng phân loại sự cố",
+          "aiInsight": {
+            "text": "Tháng này không ghi nhận sự cố mức A (rất nặng) và B (nặng). Chủ yếu là mức D (nhẹ, 2 vụ) và E (khác, 11 vụ). Lũy kế 7 tháng: 1 vụ B, 2 vụ C, 7 vụ D, 33 vụ E — tình hình an toàn được kiểm soát tốt.",
+            "severity": "good"
+          },
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "cat",
+                    "type": "string",
+                    "label": "Phân loại sự cố"
+                  },
+                  {
+                    "id": "thang_nay",
+                    "type": "number",
+                    "label": "Tháng này"
+                  },
+                  {
+                    "id": "thang_truoc",
+                    "type": "number",
+                    "label": "Tháng trước"
+                  },
+                  {
+                    "id": "cung_ky",
+                    "type": "number",
+                    "label": "Cùng kỳ"
+                  },
+                  {
+                    "id": "luy_ke",
+                    "type": "number",
+                    "label": "Lũy kế từ đầu năm"
+                  },
+                  {
+                    "id": "cung_ky_luy_ke",
+                    "type": "number",
+                    "label": "Cùng kỳ lũy kế"
+                  }
+                ],
+                "rows": [
+                  [
+                    "A (rất nặng)",
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    "B (nặng)",
+                    0,
+                    1,
+                    0,
+                    1,
+                    0
+                  ],
+                  [
+                    "C (trung bình)",
+                    0,
+                    1,
+                    1,
+                    2,
+                    1
+                  ],
+                  [
+                    "D (nhẹ)",
+                    2,
+                    2,
+                    3,
+                    7,
+                    6
+                  ],
+                  [
+                    "E (khác)",
+                    11,
+                    10,
+                    9,
+                    33,
+                    28
+                  ],
+                  [
+                    "Tổng cộng",
+                    13,
+                    14,
+                    13,
+                    43,
+                    35
+                  ]
+                ]
+              },
+              "rowStyle": {
+                "A (rất nặng)": {
+                  "backgroundColor": "#DC2626",
+                  "textColor": "#000000"
+                },
+                "B (nặng)": {
+                  "backgroundColor": "#F97316",
+                  "textColor": "#000000"
+                },
+                "C (trung bình)": {
+                  "backgroundColor": "#EAB308",
+                  "textColor": "#000000"
+                },
+                "D (nhẹ)": {
+                  "backgroundColor": "#22C55E",
+                  "textColor": "#000000"
+                },
+                "E (khác)": {
+                  "backgroundColor": "#3B82F6",
+                  "textColor": "#000000"
+                },
+                "Tổng cộng": {
+                  "textColor": "#000000",
+                  "fontWeight": "bold"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Chi tiết các sự cố điển hình theo lĩnh vực được chọn",
+      "items": [
+        {
+          "id": "b_detail",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "aiInsight": {
+            "text": "Sự cố điển hình: máy bay trệ đường băng khi hạ cánh tại HAN-SGN (12/06), cảnh báo TCAS DAD-HAN (15/05), sự cố động cơ SGN-DAD (28/05). Các sự cố đều đã được xử lý và có báo cáo gửi Cục HK.",
+            "severity": "warn"
+          },
+          "extraComponent": {
+            "type": "table",
+            "position": "top",
+            "chartSpan": 0,
+            "extraSpan": 12,
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "name",
+                    "type": "string",
+                    "label": "Tên sự cố"
+                  },
+                  {
+                    "id": "date",
+                    "type": "string",
+                    "label": "Ngày xảy ra"
+                  },
+                  {
+                    "id": "route",
+                    "type": "string",
+                    "label": "Chặng bay"
+                  },
+                  {
+                    "id": "report",
+                    "type": "string",
+                    "label": "Report Title"
+                  }
+                ],
+                "rows": [
+                  [
+                    "Máy bay trệ đường băng khi hạ cánh",
+                    "12/06/2026",
+                    "HAN-SGN",
+                    "IN-2026-042"
+                  ],
+                  [
+                    "Sự cố kỹ thuật động cơ trước chuyến bay",
+                    "28/05/2026",
+                    "SGN-DAD",
+                    "IN-2026-038"
+                  ],
+                  [
+                    "Cảnh báo va chạm trên không (TCAS)",
+                    "15/05/2026",
+                    "DAD-HAN",
+                    "IN-2026-035"
+                  ],
+                  [
+                    "Sự cố hệ thống thông tin liên lạc",
+                    "02/04/2026",
+                    "SGN-HAN",
+                    "IN-2026-029"
+                  ],
+                  [
+                    "Chuyển hướng khẩn cấp do thời tiết",
+                    "18/03/2026",
+                    "HAN-DAD",
+                    "IN-2026-021"
+                  ]
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "timeFrameHiddenModes": [
+    "day",
+    "week",
+    "quarter",
+    "custom"
+  ]
+}

@@ -1,0 +1,865 @@
+{
+  "titleInfo": {
+    "title": "Technic",
+    "statusLabel": "REAL TIME",
+    "description": "Kỹ thuật giữ được sẵn sàng & tin cậy không, theo 12 tháng và theo đội tàu?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "t_arl",
+        "status": "compact",
+        "title": "ARL - Hệ số sẵn sàng khai thác tàu bay",
+        "value": "91.8",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1.4% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "1% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_dr",
+        "status": "compact",
+        "title": "DR - Chỉ số độ tin cậy cất cánh kỹ thuật",
+        "value": "99.1",
+        "unit": "%",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.4% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "0.1% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "t_mc_ask",
+        "status": "compact",
+        "title": "MC/ASK - Chi phí bảo dưỡng theo ASK",
+        "period": "Tháng 03/2026",
+        "value": "215",
+        "unit": "VNĐ/ASK",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "3.4% so với Cùng kỳ",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2.4% so với Kế hoạch",
+            "tone": "negative"
+          }
+        ]
+      },
+      {
+        "id": "t_ocr",
+        "status": "compact",
+        "title": "OCR - Tỷ lệ định kỳ quá hạn",
+        "value": "1.2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "0.2% với Kế hoạch",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "0.1% với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Chỉ số kỹ thuật theo 12 tháng",
+      "items": [
+        {
+          "id": "chart_arl",
+          "title": "ARL - Hệ số sẵn sàng khai thác tàu bay",
+          "col": 1, "row": 1, "colSpan": 30, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "ARL tháng này đạt 91,8%, thấp hơn kế hoạch 1,4% và giảm nhẹ so với cùng kỳ.", "severity": "warn" },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "target", "type": "number", "label": "Mục tiêu năm", "color": "#0B9A03", "lineDash": [5, 5] }
+              ],
+              "rows": [
+                ["T1", 93.5, 93.0, 93.2, 93.2], ["T2", 93.2, 92.8, 93.2, 93.2], ["T3", 92.8, 92.5, 93.2, 93.2],
+                ["T4", 92.5, 92.2, 93.2, 93.2], ["T5", 92.0, 91.8, 93.2, 93.2], ["T6", 91.8, 91.8, 93.2, 93.2],
+                ["T7", null, 92.8, 93.2, 93.2], ["T8", null, 93.2, 93.2, 93.2], ["T9", null, 93.5, 93.2, 93.2],
+                ["T10", null, 93.8, 93.2, 93.2], ["T11", null, 93.5, 93.2, 93.2], ["T12", null, 93.2, 93.2, 93.2]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "target", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_dr",
+          "title": "DR - Chỉ số độ tin cậy cất cánh kỹ thuật",
+          "col": 31, "row": 1, "colSpan": 30, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "DR tháng này đạt 99,1%, thấp hơn mục tiêu 0,4%. Đội B787 ghi nhận độ tin cậy thấp nhất ở mức 98,6%.", "severity": "warn" },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "target", "type": "number", "label": "Mục tiêu năm", "color": "#0B9A03", "lineDash": [5, 5] }
+              ],
+              "rows": [
+                ["T1", 99.6, 99.4, 99.5, 99.5], ["T2", 99.5, 99.35, 99.5, 99.5], ["T3", 99.4, 99.3, 99.5, 99.5],
+                ["T4", 99.3, 99.25, 99.5, 99.5], ["T5", 99.2, 99.2, 99.5, 99.5], ["T6", 99.1, 99.2, 99.5, 99.5],
+                ["T7", null, 99.2, 99.5, 99.5], ["T8", null, 99.3, 99.5, 99.5], ["T9", null, 99.35, 99.5, 99.5],
+                ["T10", null, 99.4, 99.5, 99.5], ["T11", null, 99.45, 99.5, 99.5], ["T12", null, 99.5, 99.5, 99.5]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "target", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_ocr",
+          "title": "OCR - Tỷ lệ định kỳ quá hạn",
+          "col": 1, "row": 2, "colSpan": 30, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "OCR tháng này ở mức 1,2%, tăng nhẹ so với kế hoạch.", "severity": "good" },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" }
+              ],
+              "rows": [
+                ["T1", 1.0, 1.0, 1.0], ["T2", 1.05, 1.0, 1.05], ["T3", 1.1, 1.0, 1.1],
+                ["T4", 1.15, 1.0, 1.12], ["T5", 1.18, 1.0, 1.1], ["T6", 1.2, 1.0, 1.1],
+                ["T7", null, 1.0, 1.1], ["T8", null, 1.0, 1.05], ["T9", null, 1.0, 1.0],
+                ["T10", null, 1.0, 0.95], ["T11", null, 1.0, 0.9], ["T12", null, 1.0, 0.85]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_mc_ask",
+          "title": "MC/ASK - Chi phí bảo dưỡng theo ASK",
+          "col": 31, "row": 2, "colSpan": 30, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "MC/ASK tháng này đạt 215 VNĐ/ASK, tăng 3,4% so với cùng kỳ.", "severity": "warn" },
+          "unit": "VNĐ/ASK",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" }
+              ],
+              "rows": [
+                ["T1", 208, 210, 205], ["T2", 210, 210, 206], ["T3", 212, 210, 207],
+                ["T4", 213, 210, 208], ["T5", 214, 210, 209], ["T6", 215, 210, 210],
+                ["T7", null, 210, 210], ["T8", null, 210, 211], ["T9", null, 210, 212],
+                ["T10", null, 210, 213], ["T11", null, 210, 214], ["T12", null, 210, 215]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        }
+      ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_dr",
+          "title": "DR - Chỉ số độ tin cậy cất cánh kỹ thuật",
+          "col": 16, "row": 1, "colSpan": 15, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "DR tháng này đạt 99,1%, thấp hơn mục tiêu 0,4%. Đội B787 ghi nhận độ tin cậy thấp nhất ở mức 98,6%, cần theo dõi sát.", "severity": "warn" },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" }
+              ],
+              "rows": [
+                ["T1", 99.6, 99.5, 99.4], ["T2", 99.5, 99.5, 99.35], ["T3", 99.4, 99.5, 99.3],
+                ["T4", 99.3, 99.5, 99.25], ["T5", 99.2, 99.5, 99.2], ["T6", 99.1, 99.5, 99.2],
+                ["T7", null, 99.5, 99.2], ["T8", null, 99.5, 99.3], ["T9", null, 99.5, 99.35],
+                ["T10", null, 99.5, 99.4], ["T11", null, 99.5, 99.45], ["T12", null, 99.5, 99.5]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_mc_ask",
+          "title": "MC/ASK - Chi phí bảo dưỡng theo ASK",
+          "col": 31, "row": 1, "colSpan": 15, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "MC/ASK tháng này đạt 215 VNĐ/ASK, tăng 3,4% so với cùng kỳ và cao hơn kế hoạch 2,4%. Cần rà soát chi phí bảo dưỡng định kỳ.", "severity": "warn" },
+          "unit": "VNĐ/ASK",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" }
+              ],
+              "rows": [
+                ["T1", 208, 210, 205], ["T2", 210, 210, 206], ["T3", 212, 210, 207],
+                ["T4", 213, 210, 208], ["T5", 214, 210, 209], ["T6", 215, 210, 210],
+                ["T7", null, 210, 210], ["T8", null, 210, 211], ["T9", null, 210, 212],
+                ["T10", null, 210, 213], ["T11", null, 210, 214], ["T12", null, 210, 215]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        },
+        {
+          "id": "chart_ocr",
+          "title": "OCR - Tỷ lệ định kỳ quá hạn",
+          "col": 46, "row": 1, "colSpan": 15, "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": { "text": "OCR tháng này ở mức 1,2%, tăng nhẹ so với kế hoạch. Được kiểm soát tốt, đặc biệt đội A321 và ATR72 duy trì dưới 1,1%.", "severity": "good" },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                { "id": "month", "type": "string" },
+                { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962a0" },
+                { "id": "plan", "type": "number", "label": "Kế hoạch", "color": "#D0D1D3" },
+                { "id": "samePeriod", "type": "number", "label": "Cùng kỳ", "color": "#ec4899" }
+              ],
+              "rows": [
+                ["T1", 1.0, 1.0, 1.0], ["T2", 1.05, 1.0, 1.05], ["T3", 1.1, 1.0, 1.1],
+                ["T4", 1.15, 1.0, 1.12], ["T5", 1.18, 1.0, 1.1], ["T6", 1.2, 1.0, 1.1],
+                ["T7", null, 1.0, 1.1], ["T8", null, 1.0, 1.05], ["T9", null, 1.0, 1.0],
+                ["T10", null, 1.0, 0.95], ["T11", null, 1.0, 0.9], ["T12", null, 1.0, 0.85]
+              ]
+            },
+            "views": [{
+              "id": "main", "chartType": "line", "xField": "month",
+              "series": [
+                { "field": "actual", "chartType": "line" },
+                { "field": "plan", "chartType": "line" },
+                { "field": "samePeriod", "chartType": "line" }
+              ]
+            }]
+          }
+        }
+      ]
+    },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "aspectRatio": 1.6,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "plan",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B",
+                  "lineDash": [
+                    5,
+                    5
+                  ]
+                },
+                {
+                  "id": "samePeriod",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  93.5,
+                  93.2,
+                  93.0
+                ],
+                [
+                  "T2",
+                  93.2,
+                  93.2,
+                  92.8
+                ],
+                [
+                  "T3",
+                  92.8,
+                  93.2,
+                  92.5
+                ],
+                [
+                  "T4",
+                  92.5,
+                  93.2,
+                  92.2
+                ],
+                [
+                  "T5",
+                  92.0,
+                  93.2,
+                  91.8
+                ],
+                [
+                  "T6",
+                  null,
+                  93.2,
+                  91.8
+                ],
+                [
+                  "T7",
+                  null,
+                  93.2,
+                  92.8
+                ],
+                [
+                  "T8",
+                  null,
+                  93.2,
+                  93.2
+                ],
+                [
+                  "T9",
+                  null,
+                  93.2,
+                  93.5
+                ],
+                [
+                  "T10",
+                  null,
+                  93.2,
+                  93.8
+                ],
+                [
+                  "T11",
+                  null,
+                  93.2,
+                  93.5
+                ],
+                [
+                  "T12",
+                  null,
+                  93.2,
+                  93.2
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "samePeriod",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "chart_ocr",
+          "title": "OCR - Tỷ lệ quá hạn định kỳ",
+          "col": 21,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "OCR tháng này ở mức 1,2%, tăng nhẹ so với kế hoạch. Tỷ lệ định kỳ quá hạn được kiểm soát tốt, đặc biệt đội A321 và ATR72 duy trì dưới 1,1%.",
+            "severity": "good"
+          },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "aspectRatio": 1.6,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "plan",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B",
+                  "lineDash": [
+                    5,
+                    5
+                  ]
+                },
+                {
+                  "id": "samePeriod",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                [
+                  "T2",
+                  1.05,
+                  1.0,
+                  1.05
+                ],
+                [
+                  "T3",
+                  1.1,
+                  1.0,
+                  1.1
+                ],
+                [
+                  "T4",
+                  1.15,
+                  1.0,
+                  1.12
+                ],
+                [
+                  "T5",
+                  1.18,
+                  1.0,
+                  1.1
+                ],
+                [
+                  "T6",
+                  null,
+                  1.0,
+                  1.1
+                ],
+                [
+                  "T7",
+                  null,
+                  1.0,
+                  1.1
+                ],
+                [
+                  "T8",
+                  null,
+                  1.0,
+                  1.05
+                ],
+                [
+                  "T9",
+                  null,
+                  1.0,
+                  1.0
+                ],
+                [
+                  "T10",
+                  null,
+                  1.0,
+                  0.95
+                ],
+                [
+                  "T11",
+                  null,
+                  1.0,
+                  0.9
+                ],
+                [
+                  "T12",
+                  null,
+                  1.0,
+                  0.85
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "samePeriod",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "chart_dr",
+          "title": "DR - Độ tin cậy cất cánh",
+          "col": 41,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.6,
+          "aiInsight": {
+            "text": "DR tháng này đạt 99,1%, thấp hơn mục tiêu 0,4%. Đội B787 ghi nhận độ tin cậy thấp nhất ở mức 98,6%, cần theo dõi sát.",
+            "severity": "warn"
+          },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "line",
+            "aspectRatio": 1.6,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "actual",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "color": "#2962a0"
+                },
+                {
+                  "id": "plan",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "color": "#D3AC2B",
+                  "lineDash": [
+                    5,
+                    5
+                  ]
+                },
+                {
+                  "id": "samePeriod",
+                  "type": "number",
+                  "label": "Cùng kỳ",
+                  "color": "#ec4899"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  99.6,
+                  99.5,
+                  99.4
+                ],
+                [
+                  "T2",
+                  99.5,
+                  99.5,
+                  99.35
+                ],
+                [
+                  "T3",
+                  99.4,
+                  99.5,
+                  99.3
+                ],
+                [
+                  "T4",
+                  99.3,
+                  99.5,
+                  99.25
+                ],
+                [
+                  "T5",
+                  99.2,
+                  99.5,
+                  99.2
+                ],
+                [
+                  "T6",
+                  null,
+                  99.5,
+                  99.2
+                ],
+                [
+                  "T7",
+                  null,
+                  99.5,
+                  99.2
+                ],
+                [
+                  "T8",
+                  null,
+                  99.5,
+                  99.3
+                ],
+                [
+                  "T9",
+                  null,
+                  99.5,
+                  99.35
+                ],
+                [
+                  "T10",
+                  null,
+                  99.5,
+                  99.4
+                ],
+                [
+                  "T11",
+                  null,
+                  99.5,
+                  99.45
+                ],
+                [
+                  "T12",
+                  null,
+                  99.5,
+                  99.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "series": [
+                  {
+                    "field": "actual",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "plan",
+                    "chartType": "line"
+                  },
+                  {
+                    "field": "samePeriod",
+                    "chartType": "line"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Phân loại theo đội tàu bay",
+      "items": [
+        {
+          "id": "chart_fleet",
+          "title": "Phân loại theo đội tàu bay",
+          "col": 1,
+          "row": 1,
+          "colSpan": 60,
+          "rowSpan": 1,
+          "aspectRatio": 2,
+          "aiInsight": {
+            "text": "Đội A321 dẫn đầu về ARL (94,2%) và DR (99,4%). B787 cần cải thiện ARL (88%) do ảnh hưởng lịch bảo dưỡng định kỳ và thay thế phụ tùng.",
+            "severity": "warn"
+          },
+          "unit": "%",
+          "autoChart": {
+            "chartType": "bar",
+            "aspectRatio": 2,
+            "dataset": {
+              "columns": [
+                {
+                  "id": "fleet",
+                  "type": "string"
+                },
+                {
+                  "id": "arl",
+                  "type": "number",
+                  "label": "ARL (%)",
+                  "color": "#004071"
+                },
+                {
+                  "id": "ocr",
+                  "type": "number",
+                  "label": "OCR (%)",
+                  "color": "#F97316"
+                },
+                {
+                  "id": "dr",
+                  "type": "number",
+                  "label": "DR (%)",
+                  "color": "#22c55e"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  94.2,
+                  1.1,
+                  99.4
+                ],
+                [
+                  "A350",
+                  93.0,
+                  1.3,
+                  99.2
+                ],
+                [
+                  "B787",
+                  88.0,
+                  1.8,
+                  98.6
+                ],
+                [
+                  "ATR72",
+                  92.4,
+                  0.9,
+                  99.5
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "fleet",
+                "series": [
+                  {
+                    "field": "arl",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "ocr",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "dr",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

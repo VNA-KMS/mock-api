@@ -1,0 +1,97 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2962a0"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#d0d1d3"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          422,
+          410,
+          420
+        ],
+        [
+          "T2",
+          428,
+          415,
+          426
+        ],
+        [
+          "T3",
+          434,
+          420,
+          432
+        ],
+        [
+          "T4",
+          440,
+          425,
+          438
+        ],
+        [
+          "T5",
+          445,
+          430,
+          445
+        ],
+        [
+          "T6",
+          450,
+          435,
+          452
+        ],
+        [
+          "T7",
+          455,
+          440,
+          458
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}
