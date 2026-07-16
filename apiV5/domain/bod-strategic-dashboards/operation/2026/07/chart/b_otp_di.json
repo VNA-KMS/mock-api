@@ -1,104 +1,27 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "line",
     "dataset": {
       "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "otp_di",
-          "type": "number",
-          "label": "OTP đi",
-          "color": "#2962a0"
-        },
-        {
-          "id": "otp_mt",
-          "type": "number",
-          "label": "Mục tiêu",
-          "color": "#e67e22"
-        }
+        { "id": "month", "type": "string" },
+        { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962A0" },
+        { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
+        { "id": "mt", "type": "number", "label": "Mục tiêu", "color": "#0B9A03" }
       ],
       "rows": [
-        [
-          "T1",
-          84.2,
-          88
-        ],
-        [
-          "T2",
-          84.5,
-          88
-        ],
-        [
-          "T3",
-          83.8,
-          88
-        ],
-        [
-          "T4",
-          84.0,
-          88
-        ],
-        [
-          "T5",
-          84.7,
-          88
-        ],
-        [
-          "T6",
-          85.1,
-          88
-        ],
-        [
-          "T7",
-          84.9,
-          88
-        ],
-        [
-          "T8",
-          null,
-          88
-        ],
-        [
-          "T9",
-          null,
-          88
-        ],
-        [
-          "T10",
-          null,
-          88
-        ],
-        [
-          "T11",
-          null,
-          88
-        ],
-        [
-          "T12",
-          null,
-          88
-        ]
+        ["T1", 78, 76, 82], ["T2", 80, 78, 82.5], ["T3", 82, 80, 83],
+        ["T4", 85, 82, 83.5], ["T5", 88, 85, 84], ["T6", 90, 88, 84.5],
+        ["T7", 92, 90, 85], ["T8", null, 88, 84.5], ["T9", null, 86, 84],
+        ["T10", null, 84, 83.5], ["T11", null, 82, 83], ["T12", null, 80, 82.5]
       ]
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "otp_di",
-            "chartType": "line"
-          },
-          {
-            "field": "otp_mt",
-            "chartType": "line"
-          }
-        ]
-      }
-    ]
+    "views": [{
+      "id": "main", "chartType": "line", "xField": "month",
+      "series": [
+        { "field": "actual", "chartType": "line" },
+        { "field": "ck", "chartType": "line" },
+        { "field": "mt", "chartType": "line" }
+      ]
+    }]
   }
 }
