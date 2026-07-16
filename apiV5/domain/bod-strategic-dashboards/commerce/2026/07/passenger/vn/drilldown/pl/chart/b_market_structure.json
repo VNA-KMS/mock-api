@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -8,127 +8,106 @@
           "type": "string"
         },
         {
-          "id": "value",
-          "type": "number"
+          "id": "quoc_te",
+          "type": "number",
+          "label": "Quốc tế",
+          "color": "#2563eb"
         },
         {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
+          "id": "noi_dia",
+          "type": "number",
+          "label": "Nội địa",
+          "color": "#EAB308"
         }
       ],
       "rows": [
         [
-          "Tổng thị trường",
-          90,
-          "",
-          ""
-        ],
-        [
-          "Nội địa",
-          45000,
-          "Tổng thị trường",
-          "#EAB308"
-        ],
-        [
-          "Trục lẻ",
-          12600,
-          "Nội địa",
-          ""
-        ],
-        [
-          "HANDAD",
-          10350,
-          "Nội địa",
-          ""
-        ],
-        [
-          "Du lịch",
-          7560,
-          "Nội địa",
-          ""
-        ],
-        [
-          "HANSGN",
-          5220,
-          "Nội địa",
-          ""
-        ],
-        [
-          "SGNDAD",
-          4770,
-          "Nội địa",
-          ""
-        ],
-        [
-          "Địa phương",
-          4500,
-          "Nội địa",
-          ""
-        ],
-        [
-          "Quốc tế",
-          45000,
-          "Tổng thị trường",
-          "#2563eb"
-        ],
-        [
           "SWP",
           18630,
-          "Quốc tế",
-          ""
+          0
         ],
         [
           "CLMV",
           12960,
-          "Quốc tế",
-          ""
+          0
         ],
         [
           "NEA",
           4770,
-          "Quốc tế",
-          ""
+          0
         ],
         [
           "MID",
           2520,
-          "Quốc tế",
-          "#EF4444"
+          0
         ],
         [
           "SEA",
           2430,
-          "Quốc tế",
-          "#EF4444"
+          0
         ],
         [
           "NOA",
           2250,
-          "Quốc tế",
-          "#EF4444"
+          0
         ],
         [
           "EUR",
           1080,
-          "Quốc tế",
-          "#EF4444"
+          0
         ],
         [
           "SAS",
           360,
-          "Quốc tế",
-          "#EF4444"
+          0
+        ],
+        [
+          "Trục lẻ",
+          0,
+          12600
+        ],
+        [
+          "HANDAD",
+          0,
+          10350
+        ],
+        [
+          "Du lịch",
+          0,
+          7560
+        ],
+        [
+          "HANSGN",
+          0,
+          5220
+        ],
+        [
+          "SGNDAD",
+          0,
+          4770
+        ],
+        [
+          "Địa phương",
+          0,
+          4500
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "treemap"
+        "chartType": "bar",
+        "xField": "name",
+        "series": [
+          {
+            "field": "quoc_te",
+            "chartType": "bar"
+          },
+          {
+            "field": "noi_dia",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
