@@ -1,82 +1,67 @@
-{
-  "autoChart": {
-    "chartType": "auto",
-    "dataset": {
-      "columns": [
-        {
-          "id": "reason",
-          "type": "string"
-        },
-        {
-          "id": "bar_current",
-          "type": "number",
-          "label": "Tháng này"
-        },
-        {
-          "id": "bar_prev",
-          "type": "number",
-          "label": "Tháng trước"
-        },
-        {
-          "id": "line_target",
-          "type": "number",
-          "label": "Mục tiêu"
-        }
-      ],
-      "rows": [
-        [
-          "Thu tuc",
-          4.2,
-          3.9,
-          3.78
-        ],
-        [
-          "Tien nghi",
-          3.9,
-          3.7,
-          4.55
-        ],
-        [
-          "Dich vu",
-          3.7,
-          3.5,
-          3.74
-        ],
-        [
-          "An toan",
-          3.5,
-          3.3,
-          3.67
-        ],
-        [
-          "Thong tin",
-          3.2,
-          3,
-          2.95
-        ]
-      ]
-    },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "auto",
-        "xField": "reason",
-        "series": [
-          {
-            "field": "bar_current",
-            "chartType": "bar"
-          },
-          {
-            "field": "bar_prev",
-            "chartType": "bar"
-          },
-          {
-            "field": "line_target",
-            "chartType": "line",
-            "lineType": "solid"
-          }
-        ]
-      }
-    ]
-  }
+﻿{
+    "autoChart":  {
+                      "chartType":  "radar",
+                      "dataset":  {
+                                      "columns":  [
+                                                      {
+                                                          "id":  "reason",
+                                                          "type":  "string"
+                                                      },
+                                                      {
+                                                          "label":  "Kế hoạch",
+                                                          "id":  "ke_hoach",
+                                                          "type":  "number"
+                                                      },
+                                                      {
+                                                          "label":  "Thực hiện",
+                                                          "id":  "thuc_hien",
+                                                          "type":  "number"
+                                                      }
+                                                  ],
+                                      "rows":  [
+                                                   [
+                                                       "Thu tuc",
+                                                       4.4,
+                                                       4.07
+                                                   ],
+                                                   [
+                                                       "Tien nghi",
+                                                       4.2,
+                                                       3.78
+                                                   ],
+                                                   [
+                                                       "Dich vu",
+                                                       4,
+                                                       3.59
+                                                   ],
+                                                   [
+                                                       "An toan",
+                                                       3.8,
+                                                       3.4
+                                                   ],
+                                                   [
+                                                       "Thong tin",
+                                                       3.5,
+                                                       3.1
+                                                   ]
+                                               ]
+                                  },
+                      "views":  [
+                                    {
+                                        "xField":  "reason",
+                                        "series":  [
+                                                       {
+                                                           "chartType":  "line",
+                                                           "field":  "ke_hoach"
+                                                       },
+                                                       {
+                                                           "chartType":  "line",
+                                                           "field":  "thuc_hien"
+                                                       }
+                                                   ],
+                                        "id":  "main",
+                                        "chartType":  "radar"
+                                    }
+                                ]
+                  }
 }

@@ -1,82 +1,67 @@
-{
-  "autoChart": {
-    "chartType": "auto",
-    "dataset": {
-      "columns": [
-        {
-          "id": "reason",
-          "type": "string"
-        },
-        {
-          "id": "bar_current",
-          "type": "number",
-          "label": "Tháng này"
-        },
-        {
-          "id": "bar_prev",
-          "type": "number",
-          "label": "Tháng trước"
-        },
-        {
-          "id": "line_target",
-          "type": "number",
-          "label": "Mục tiêu"
-        }
-      ],
-      "rows": [
-        [
-          "Thoi gian cho",
-          62,
-          58,
-          65.21
-        ],
-        [
-          "Thai do phuc vu",
-          58,
-          55,
-          61.3
-        ],
-        [
-          "Dich vu an uong",
-          55,
-          52,
-          59.18
-        ],
-        [
-          "Tien nghi san bay",
-          50,
-          48,
-          54.35
-        ],
-        [
-          "Thong tin bay",
-          45,
-          42,
-          49.59
-        ]
-      ]
-    },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "auto",
-        "xField": "reason",
-        "series": [
-          {
-            "field": "bar_current",
-            "chartType": "bar"
-          },
-          {
-            "field": "bar_prev",
-            "chartType": "bar"
-          },
-          {
-            "field": "line_target",
-            "chartType": "line",
-            "lineType": "solid"
-          }
-        ]
-      }
-    ]
-  }
+﻿{
+    "autoChart":  {
+                      "chartType":  "radar",
+                      "dataset":  {
+                                      "columns":  [
+                                                      {
+                                                          "id":  "reason",
+                                                          "type":  "string"
+                                                      },
+                                                      {
+                                                          "label":  "Kế hoạch",
+                                                          "id":  "ke_hoach",
+                                                          "type":  "number"
+                                                      },
+                                                      {
+                                                          "label":  "Thực hiện",
+                                                          "id":  "thuc_hien",
+                                                          "type":  "number"
+                                                      }
+                                                  ],
+                                      "rows":  [
+                                                   [
+                                                       "Thoi gian cho",
+                                                       65,
+                                                       60.14
+                                                   ],
+                                                   [
+                                                       "Thai do phuc vu",
+                                                       62,
+                                                       56.26
+                                                   ],
+                                                   [
+                                                       "Dich vu an uong",
+                                                       60,
+                                                       53.35
+                                                   ],
+                                                   [
+                                                       "Tien nghi san bay",
+                                                       55,
+                                                       48.5
+                                                   ],
+                                                   [
+                                                       "Thong tin bay",
+                                                       50,
+                                                       43.65
+                                                   ]
+                                               ]
+                                  },
+                      "views":  [
+                                    {
+                                        "xField":  "reason",
+                                        "series":  [
+                                                       {
+                                                           "chartType":  "line",
+                                                           "field":  "ke_hoach"
+                                                       },
+                                                       {
+                                                           "chartType":  "line",
+                                                           "field":  "thuc_hien"
+                                                       }
+                                                   ],
+                                        "id":  "main",
+                                        "chartType":  "radar"
+                                    }
+                                ]
+                  }
 }
