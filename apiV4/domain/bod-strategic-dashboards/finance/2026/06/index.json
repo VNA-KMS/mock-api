@@ -4,91 +4,144 @@
     "statusLabel": "REAL TIME",
     "description": "Kết quả tài chính tháng — doanh thu, lợi nhuận, dòng tiền so kế hoạch?"
   },
-  "metricCards": {
-    "accentClassName": "bg-regal-blue",
-    "items": [
-      {
-        "id": "m_tri",
-        "status": "compact",
-        "title": "Tổng doanh thu và thu nhập",
-        "value": "21.500",
-        "unit": "tỷ",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "1.2% so với Kế hoạch",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "9% so với Cùng kỳ",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "m_rev",
-        "status": "compact",
-        "title": "Doanh thu HĐKD",
-        "value": "20.100",
-        "unit": "tỷ",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "0.8% so với Kế hoạch",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "8% so với Cùng kỳ",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "m_lntt",
-        "status": "compact",
-        "title": "Lợi nhuận trước thuế",
-        "value": "1.820",
-        "unit": "tỷ",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "down",
-            "label": "4% so với Kế hoạch",
-            "tone": "negative"
-          },
-          {
-            "direction": "up",
-            "label": "7% so với Cùng kỳ",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "m_cash",
-        "status": "compact",
-        "title": "Dòng tiền",
-        "value": "4.250",
-        "unit": "tỷ",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "2.1% so với Kế hoạch",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "15% so với Cùng kỳ",
-            "tone": "positive"
-          }
-        ]
-      }
-    ]
-  },
+  "groups": [
+    {
+      "label": "Công ty mẹ",
+      "accentClassName": "bg-green-haze",
+      "accentColor": "#059669",
+      "layout": { "columns": 3 },
+      "items": [
+        {
+          "id": "fin_me_dt",
+          "status": "compact",
+          "title": "Tổng doanh thu",
+          "value": "57.916",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            { "direction": "down", "label": "0,7% so với Kế hoạch", "tone": "negative" },
+            { "direction": "up", "label": "2% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_me_lntt",
+          "status": "compact",
+          "title": "LNTT",
+          "value": "2.727",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            { "direction": "up", "label": "4,6% so với Kế hoạch", "tone": "positive" },
+            { "direction": "up", "label": "6% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_me_hqvthk",
+          "status": "compact",
+          "title": "HQVTHK",
+          "value": "384",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            { "direction": "up", "label": "52 tỷ so với Kế hoạch", "tone": "positive" },
+            { "direction": "down", "label": "2% so với Cùng kỳ", "tone": "negative" }
+          ]
+        },
+        {
+          "id": "fin_me_ts",
+          "status": "compact",
+          "title": "Tổng tài sản",
+          "value": "66.377",
+          "unit": "tỷ",
+          "backgroundStatus": 1,
+          "trend": [
+            { "direction": "up", "label": "2% so với Kế hoạch", "tone": "positive" },
+            { "direction": "up", "label": "7,6% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_me_vcsh",
+          "status": "compact",
+          "title": "Vốn chủ sở hữu",
+          "value": "11.523",
+          "unit": "tỷ",
+          "backgroundStatus": 1,
+          "trend": [
+            { "direction": "up", "label": "5% so với Kế hoạch", "tone": "positive" },
+            { "direction": "up", "label": "31,0% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_me_llk",
+          "status": "compact",
+          "title": "Lỗ lũy kế",
+          "value": "-21.592",
+          "unit": "tỷ",
+          "backgroundStatus": 3,
+          "trend": [
+            { "direction": "down", "label": "3% so với Kế hoạch", "tone": "positive" },
+            { "direction": "down", "label": "11,2% so với Cùng kỳ", "tone": "positive" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Hợp nhất",
+      "accentClassName": "bg-regal-blue",
+      "accentColor": "#004071",
+      "layout": { "columns": 4 },
+      "items": [
+        {
+          "id": "fin_hn_dt",
+          "status": "compact",
+          "title": "Tổng doanh thu",
+          "value": "75.872",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            { "direction": "up", "label": "7,0% so với Kế hoạch", "tone": "positive" },
+            { "direction": "up", "label": "5% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_hn_lntt",
+          "status": "compact",
+          "title": "LNTT",
+          "value": "3.700",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            { "direction": "down", "label": "6,1% so với Kế hoạch", "tone": "negative" },
+            { "direction": "up", "label": "3% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_hn_vcsh",
+          "status": "compact",
+          "title": "Vốn chủ sở hữu",
+          "value": "9.787",
+          "unit": "tỷ",
+          "backgroundStatus": 1,
+          "trend": [
+            { "direction": "up", "label": "3% so với Kế hoạch", "tone": "positive" },
+            { "direction": "up", "label": "45,5% so với Cùng kỳ", "tone": "positive" }
+          ]
+        },
+        {
+          "id": "fin_hn_llk",
+          "status": "compact",
+          "title": "Lỗ lũy kế",
+          "value": "-23.562",
+          "unit": "tỷ",
+          "backgroundStatus": 3,
+          "trend": [
+            { "direction": "down", "label": "2% so với Kế hoạch", "tone": "positive" },
+            { "direction": "down", "label": "11,7% so với Cùng kỳ", "tone": "positive" }
+          ]
+        }
+      ]
+    }
+  ],
   "chartBoard": [
     {
       "title": "Hiển thị tổng doanh thu và thu nhập của 12 tháng",

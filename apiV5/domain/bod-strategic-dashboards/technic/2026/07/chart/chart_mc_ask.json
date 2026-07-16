@@ -24,11 +24,32 @@
           "type": "number",
           "label": "Cùng kỳ",
           "color": "#ec4899"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)",
+          "color": "#2962a0"
+        },
+        {
+          "id": "plan_cum",
+          "type": "number",
+          "label": "Kế hoạch (LT)",
+          "color": "#D0D1D3"
+        },
+        {
+          "id": "samePeriod_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#ec4899"
         }
       ],
       "rows": [
         [
           "T1",
+          208,
+          210,
+          205,
           208,
           210,
           205
@@ -37,67 +58,100 @@
           "T2",
           210,
           210,
-          206
+          206,
+          418,
+          420,
+          411
         ],
         [
           "T3",
           212,
           210,
-          207
+          207,
+          630,
+          630,
+          618
         ],
         [
           "T4",
           213,
           210,
-          208
+          208,
+          843,
+          840,
+          826
         ],
         [
           "T5",
           214,
           210,
-          209
+          209,
+          1057,
+          1050,
+          1035
         ],
         [
           "T6",
           215,
           210,
-          210
+          210,
+          1272,
+          1260,
+          1245
         ],
         [
           "T7",
           215,
           210,
-          210
+          210,
+          1487,
+          1470,
+          1455
         ],
         [
           "T8",
           null,
           210,
-          211
+          211,
+          1487,
+          1680,
+          1666
         ],
         [
           "T9",
           null,
           210,
-          212
+          212,
+          1487,
+          1890,
+          1878
         ],
         [
           "T10",
           null,
           210,
-          213
+          213,
+          1487,
+          2100,
+          2091
         ],
         [
           "T11",
           null,
           210,
-          214
+          214,
+          1487,
+          2310,
+          2305
         ],
         [
           "T12",
           null,
           210,
-          215
+          215,
+          1487,
+          2520,
+          2520
         ]
       ]
     },
@@ -120,7 +174,29 @@
             "chartType": "line"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "plan_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "samePeriod_cum",
+            "chartType": "line"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }
