@@ -1,0 +1,205 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2962a0"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Kế hoạch (LT)",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)",
+          "color": "#2962a0"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          54,
+          53,
+          52.8,
+          54,
+          53,
+          52.8
+        ],
+        [
+          "T2",
+          54,
+          52.8,
+          52.5,
+          108,
+          105.8,
+          105.3
+        ],
+        [
+          "T3",
+          53.8,
+          52.5,
+          52.4,
+          161.8,
+          158.3,
+          157.7
+        ],
+        [
+          "T4",
+          53.5,
+          52.3,
+          52.3,
+          215.3,
+          210.6,
+          210
+        ],
+        [
+          "T5",
+          53.2,
+          52.2,
+          52.2,
+          268.5,
+          262.8,
+          262.2
+        ],
+        [
+          "T6",
+          53,
+          52,
+          52.1,
+          321.5,
+          314.8,
+          314.3
+        ],
+        [
+          "T7",
+          52.8,
+          51.8,
+          52,
+          374.3,
+          366.6,
+          366.3
+        ],
+        [
+          "T8",
+          55,
+          51.5,
+          null,
+          429.3,
+          418.1,
+          366.3
+        ],
+        [
+          "T9",
+          54.5,
+          51.2,
+          null,
+          483.8,
+          469.3,
+          366.3
+        ],
+        [
+          "T10",
+          54,
+          51,
+          null,
+          537.8,
+          520.3,
+          366.3
+        ],
+        [
+          "T11",
+          53.5,
+          50.8,
+          null,
+          591.3,
+          571.1,
+          366.3
+        ],
+        [
+          "T12",
+          53,
+          50.5,
+          null,
+          644.3,
+          621.6,
+          366.3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          }
+        ]
+      }
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
+  }
+}
