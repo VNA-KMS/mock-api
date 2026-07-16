@@ -1,6 +1,5 @@
 {
   "autoChart": {
-    "chartType": "line",
     "dataset": {
       "columns": [
         {
@@ -18,68 +17,104 @@
           "type": "number",
           "label": "KH",
           "color": "#D3AC2B"
+        },
+        {
+          "id": "jet_a1_cum",
+          "type": "number",
+          "label": "Jet A1 (LT)",
+          "color": "#004071"
+        },
+        {
+          "id": "kh_cum",
+          "type": "number",
+          "label": "KH (LT)",
+          "color": "#D3AC2B"
         }
       ],
       "rows": [
         [
           "T8",
           92,
+          93,
+          92,
           93
         ],
         [
           "T9",
           93,
-          93
+          93,
+          185,
+          186
         ],
         [
           "T10",
           95,
-          94
+          94,
+          280,
+          280
         ],
         [
           "T11",
           94,
-          94
+          94,
+          374,
+          374
         ],
         [
           "T12",
           96,
-          95
+          95,
+          470,
+          469
         ],
         [
           "T1",
           95,
-          95
+          95,
+          565,
+          564
         ],
         [
           "T2",
           96,
-          95
+          95,
+          661,
+          659
         ],
         [
           "T3",
           94,
-          96
+          96,
+          755,
+          755
         ],
         [
           "T4",
           95,
-          96
+          96,
+          850,
+          851
         ],
         [
           "T5",
           96,
-          96
+          96,
+          946,
+          947
         ],
         [
           "T6",
           95,
-          97
+          97,
+          1041,
+          1044
         ],
         [
           "T7",
           95.9,
-          97
+          97,
+          1136.9,
+          1141
         ]
       ]
     },
@@ -99,7 +134,26 @@
             "lineType": "dashed"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "jet_a1_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "kh_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }
