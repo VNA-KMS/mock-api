@@ -3,38 +3,16 @@
     "chartType": "bar",
     "dataset": {
       "columns": [
-        {
-          "id": "fleet",
-          "type": "string"
-        },
-        {
-          "id": "hours",
-          "type": "number",
-          "label": "Giờ bay",
-          "color": "#2962A0"
-        }
+        { "id": "fleet", "type": "string" },
+        { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962A0" },
+        { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" }
       ],
       "rows": [
-        [
-          "B787",
-          12000
-        ],
-        [
-          "A350",
-          10000
-        ],
-        [
-          "A321",
-          15000
-        ],
-        [
-          "ATR72",
-          3000
-        ],
-        [
-          "A320",
-          2800
-        ]
+        ["B787", 12000, 11500],
+        ["A350", 10000, 9500],
+        ["A321", 15000, 14200],
+        ["ATR72", 3000, 2800],
+        ["A320", 2800, 2600]
       ]
     },
     "views": [
@@ -43,10 +21,8 @@
         "chartType": "bar",
         "xField": "fleet",
         "series": [
-          {
-            "field": "hours",
-            "chartType": "bar"
-          }
+          { "field": "actual", "chartType": "bar" },
+          { "field": "ck", "chartType": "bar" }
         ]
       }
     ]
