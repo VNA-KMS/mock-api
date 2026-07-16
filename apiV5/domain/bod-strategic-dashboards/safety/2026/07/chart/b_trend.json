@@ -17,68 +17,103 @@
           "type": "number",
           "label": "Cùng kỳ",
           "color": "#EC4899"
+        },
+        {
+          "id": "cur_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#EC4899"
         }
       ],
       "rows": [
         [
           "T1",
           37,
+          40,
+          37,
           40
         ],
         [
           "T2",
           36,
-          39
+          39,
+          73,
+          79
         ],
         [
           "T3",
           35,
-          38
+          38,
+          108,
+          117
         ],
         [
           "T4",
           34,
-          37
+          37,
+          142,
+          154
         ],
         [
           "T5",
           33,
-          36
+          36,
+          175,
+          190
         ],
         [
           "T6",
           32,
-          35
+          35,
+          207,
+          225
         ],
         [
           "T7",
           42,
-          47
+          47,
+          249,
+          272
         ],
         [
           "T8",
           null,
-          42
+          42,
+          249,
+          314
         ],
         [
           "T9",
           null,
-          40
+          40,
+          249,
+          354
         ],
         [
           "T10",
           null,
-          38
+          38,
+          249,
+          392
         ],
         [
           "T11",
           null,
-          41
+          41,
+          249,
+          433
         ],
         [
           "T12",
           null,
-          39
+          39,
+          249,
+          472
         ]
       ]
     },
@@ -97,7 +132,25 @@
             "chartType": "line"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "cur_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }

@@ -3,25 +3,200 @@
     "chartType": "line",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string" },
-        { "id": "actual", "type": "number", "label": "Thực hiện", "color": "#2962A0" },
-        { "id": "ck", "type": "number", "label": "Cùng kỳ", "color": "#EC4899" },
-        { "id": "mt", "type": "number", "label": "Mục tiêu", "color": "#0B9A03" }
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2962A0"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#EC4899"
+        },
+        {
+          "id": "mt",
+          "type": "number",
+          "label": "Mục tiêu",
+          "color": "#0B9A03"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LT)",
+          "color": "#2962A0"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LT)",
+          "color": "#EC4899"
+        },
+        {
+          "id": "mt_cum",
+          "type": "number",
+          "label": "Mục tiêu (LT)",
+          "color": "#0B9A03"
+        }
       ],
       "rows": [
-        ["T1", 46, 37, 50.5], ["T2", 50, 42, 51], ["T3", 48, 40, 50],
-        ["T4", 55, 45, 52], ["T5", 52, 43, 51.5], ["T6", 60, 48, 52.5],
-        ["T7", 66, 48, 52], ["T8", null, 45, 51], ["T9", null, 42, 53],
-        ["T10", null, 40, 52], ["T11", null, 38, 51.5], ["T12", null, 37, 50]
+        [
+          "T1",
+          46,
+          37,
+          50.5,
+          46,
+          37,
+          50.5
+        ],
+        [
+          "T2",
+          50,
+          42,
+          51,
+          96,
+          79,
+          101.5
+        ],
+        [
+          "T3",
+          48,
+          40,
+          50,
+          144,
+          119,
+          151.5
+        ],
+        [
+          "T4",
+          55,
+          45,
+          52,
+          199,
+          164,
+          203.5
+        ],
+        [
+          "T5",
+          52,
+          43,
+          51.5,
+          251,
+          207,
+          255
+        ],
+        [
+          "T6",
+          60,
+          48,
+          52.5,
+          311,
+          255,
+          307.5
+        ],
+        [
+          "T7",
+          66,
+          48,
+          52,
+          377,
+          303,
+          359.5
+        ],
+        [
+          "T8",
+          null,
+          45,
+          51,
+          377,
+          348,
+          410.5
+        ],
+        [
+          "T9",
+          null,
+          42,
+          53,
+          377,
+          390,
+          463.5
+        ],
+        [
+          "T10",
+          null,
+          40,
+          52,
+          377,
+          430,
+          515.5
+        ],
+        [
+          "T11",
+          null,
+          38,
+          51.5,
+          377,
+          468,
+          567
+        ],
+        [
+          "T12",
+          null,
+          37,
+          50,
+          377,
+          505,
+          617
+        ]
       ]
     },
-    "views": [{
-      "id": "main", "chartType": "line", "xField": "month",
-      "series": [
-        { "field": "actual", "chartType": "line" },
-        { "field": "ck", "chartType": "line" },
-        { "field": "mt", "chartType": "line" }
-      ]
-    }]
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "mt",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "mt_cum",
+            "chartType": "line"
+          }
+        ]
+      }
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }

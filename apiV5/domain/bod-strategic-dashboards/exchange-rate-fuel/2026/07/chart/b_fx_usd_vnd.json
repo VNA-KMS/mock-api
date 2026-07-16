@@ -37,6 +37,36 @@
           "type": "number",
           "label": "ảnh hưởng",
           "color": "#e74c3c"
+        },
+        {
+          "id": "actual_solid_cum",
+          "type": "number",
+          "label": "TGTT và dự tính (LT)",
+          "color": "#2563eb"
+        },
+        {
+          "id": "actual_dashed_cum",
+          "type": "number",
+          "label": "TGTT và dự tính (LT)",
+          "color": "#2563eb"
+        },
+        {
+          "id": "plan_month_cum",
+          "type": "number",
+          "label": "TGKH tháng (LT)",
+          "color": "#F97316"
+        },
+        {
+          "id": "plan_year_cum",
+          "type": "number",
+          "label": "TGKH năm (LT)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "impact_cum",
+          "type": "number",
+          "label": "ảnh hưởng (LT)",
+          "color": "#e74c3c"
         }
       ],
       "rows": [
@@ -44,25 +74,40 @@
           "T1",
           8.8,
           null,
-          10.0,
+          10,
           8.5,
-          1.0
+          1,
+          8.8,
+          0,
+          10,
+          8.5,
+          1
         ],
         [
           "T2",
-          11.0,
+          11,
           null,
           8.8,
           8.8,
-          6.0
+          6,
+          19.8,
+          0,
+          18.8,
+          17.3,
+          7
         ],
         [
           "T3",
           7.8,
           null,
           11.5,
-          9.0,
-          1.5
+          9,
+          1.5,
+          27.6,
+          0,
+          30.3,
+          26.3,
+          8.5
         ],
         [
           "T4",
@@ -70,7 +115,12 @@
           null,
           9.3,
           9.2,
-          8.0
+          8,
+          39.4,
+          0,
+          39.6,
+          35.5,
+          16.5
         ],
         [
           "T5",
@@ -78,7 +128,12 @@
           null,
           10.8,
           9.4,
-          2.0
+          2,
+          47.6,
+          0,
+          50.4,
+          44.9,
+          18.5
         ],
         [
           "T6",
@@ -86,7 +141,12 @@
           null,
           8.6,
           9.5,
-          9.5
+          9.5,
+          59.8,
+          0,
+          59,
+          54.4,
+          28
         ],
         [
           "T7",
@@ -94,7 +154,12 @@
           8.5,
           11.2,
           9.7,
-          2.5
+          2.5,
+          68.3,
+          8.5,
+          70.2,
+          64.1,
+          30.5
         ],
         [
           "T8",
@@ -102,7 +167,12 @@
           7.8,
           12.8,
           10.4,
-          null
+          null,
+          68.3,
+          16.3,
+          83,
+          74.5,
+          30.5
         ],
         [
           "T9",
@@ -110,31 +180,51 @@
           11.5,
           8.2,
           10.3,
-          null
+          null,
+          68.3,
+          27.8,
+          91.2,
+          84.8,
+          30.5
         ],
         [
           "T10",
           null,
           8.5,
-          13.0,
+          13,
           10.2,
-          null
+          null,
+          68.3,
+          36.3,
+          104.2,
+          95,
+          30.5
         ],
         [
           "T11",
           null,
-          12.0,
+          12,
           8.5,
-          10.0,
-          null
+          10,
+          null,
+          68.3,
+          48.3,
+          112.7,
+          105,
+          30.5
         ],
         [
           "T12",
           null,
-          9.0,
-          12.0,
+          9,
+          12,
           9.8,
-          null
+          null,
+          68.3,
+          57.3,
+          124.7,
+          114.8,
+          30.5
         ]
       ]
     },
@@ -169,7 +259,41 @@
             "chartType": "bar"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_solid_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "actual_dashed_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "plan_month_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "plan_year_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "impact_cum",
+            "chartType": "bar"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }

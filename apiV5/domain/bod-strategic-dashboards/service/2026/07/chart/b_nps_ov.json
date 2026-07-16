@@ -24,11 +24,32 @@
           "type": "number",
           "label": "2026",
           "color": "#2962a0"
+        },
+        {
+          "id": "y2024_cum",
+          "type": "number",
+          "label": "2024 (LT)",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "y2025_cum",
+          "type": "number",
+          "label": "2025 (LT)",
+          "color": "#ec4899"
+        },
+        {
+          "id": "y2026_cum",
+          "type": "number",
+          "label": "2026 (LT)",
+          "color": "#2962a0"
         }
       ],
       "rows": [
         [
           "T1",
+          68,
+          70,
+          72,
           68,
           70,
           72
@@ -37,67 +58,100 @@
           "T2",
           68,
           71,
-          72
+          72,
+          136,
+          141,
+          144
         ],
         [
           "T3",
           69,
           71,
-          73
+          73,
+          205,
+          212,
+          217
         ],
         [
           "T4",
           70,
           72,
-          74
+          74,
+          275,
+          284,
+          291
         ],
         [
           "T5",
           70,
           73,
-          74
+          74,
+          345,
+          357,
+          365
         ],
         [
           "T6",
           71,
           73,
-          75
+          75,
+          416,
+          430,
+          440
         ],
         [
           "T7",
           64,
           66,
-          68
+          68,
+          480,
+          496,
+          508
         ],
         [
           "T8",
           65,
           67,
-          null
+          null,
+          545,
+          563,
+          508
         ],
         [
           "T9",
           66,
           68,
-          null
+          null,
+          611,
+          631,
+          508
         ],
         [
           "T10",
           67,
           69,
-          null
+          null,
+          678,
+          700,
+          508
         ],
         [
           "T11",
           68,
           70,
-          null
+          null,
+          746,
+          770,
+          508
         ],
         [
           "T12",
           68,
           71,
-          null
+          null,
+          814,
+          841,
+          508
         ]
       ]
     },
@@ -123,7 +177,32 @@
             "lineType": "solid"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "y2024_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "y2025_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "y2026_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   }
 }
