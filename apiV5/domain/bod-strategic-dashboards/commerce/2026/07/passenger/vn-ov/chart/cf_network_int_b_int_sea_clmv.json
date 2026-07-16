@@ -24,80 +24,134 @@
           "type": "number",
           "label": "Thực hiện",
           "color": "#2962a0"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#2962a0"
         }
       ],
       "rows": [
         [
           "T1",
-          10.0,
+          10,
+          13.1,
+          8.8,
+          10,
           13.1,
           8.8
         ],
         [
           "T2",
           10.7,
-          13.0,
-          10.0
+          13,
+          10,
+          20.7,
+          26.1,
+          18.8
         ],
         [
           "T3",
           12.2,
           12.8,
-          10.3
+          10.3,
+          32.9,
+          38.9,
+          29.1
         ],
         [
           "T4",
           10.5,
           13.9,
-          10.3
+          10.3,
+          43.4,
+          52.8,
+          39.4
         ],
         [
           "T5",
-          10.0,
-          13.0,
-          10.5
+          10,
+          13,
+          10.5,
+          53.4,
+          65.8,
+          49.9
         ],
         [
           "T6",
           10.7,
           13.9,
-          9.7
+          9.7,
+          64.1,
+          79.7,
+          59.6
         ],
         [
           "T7",
           11.4,
           14.2,
-          9.4
+          9.4,
+          75.5,
+          93.9,
+          69
         ],
         [
           "T8",
           10.3,
           9.9,
-          null
+          null,
+          85.8,
+          103.8,
+          69
         ],
         [
           "T9",
           9.3,
           10.3,
-          null
+          null,
+          95.1,
+          114.1,
+          69
         ],
         [
           "T10",
           8.5,
           10.8,
-          null
+          null,
+          103.6,
+          124.9,
+          69
         ],
         [
           "T11",
           9.6,
           11.7,
-          null
+          null,
+          113.2,
+          136.6,
+          69
         ],
         [
           "T12",
           10.1,
           11.1,
-          null
+          null,
+          123.3,
+          147.7,
+          69
         ]
       ]
     },
@@ -120,8 +174,30 @@
             "chartType": "line"
           }
         ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          }
+        ]
       }
-    ]
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
   },
   "metadata": {
     "chartType": "line",

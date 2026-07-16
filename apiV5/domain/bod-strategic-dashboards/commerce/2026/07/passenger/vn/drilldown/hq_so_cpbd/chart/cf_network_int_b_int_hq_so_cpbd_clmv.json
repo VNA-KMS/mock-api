@@ -1,129 +1,206 @@
 {
   "autoChart": {
-        "chartType": "auto",
-        "dataset": {
-            "columns": [
-                {
-                    "id": "month",
-                    "type": "string"
-                },
-                {
-                    "id": "ck",
-                    "type": "number",
-                    "label": "Cùng kỳ",
-                    "color": "#ec4899"
-                },
-                {
-                    "id": "db",
-                    "type": "number",
-                    "label": "Dự báo",
-                    "color": "#d0d1d3"
-                },
-                {
-                    "id": "th",
-                    "type": "number",
-                    "label": "Thực hiện",
-                    "color": "#2962a0"
-                }
-            ],
-            "rows": [
-                [
-                    "T1",
-                    1055.5,
-                    1210.1,
-                    1288.3
-                ],
-                [
-                    "T2",
-                    1037,
-                    1112.6,
-                    1084.3
-                ],
-                [
-                    "T3",
-                    864.7,
-                    880,
-                    802.3
-                ],
-                [
-                    "T4",
-                    846.9,
-                    915.1,
-                    793.6
-                ],
-                [
-                    "T5",
-                    920.3,
-                    914.3,
-                    934.9
-                ],
-                [
-                    "T6",
-                    961,
-                    1038.4,
-                    977.2
-                ],
-                [
-                    "T7",
-                    993.8,
-                    1203.2,
-                    1193.9
-                ],
-                [
-                    "T8",
-                    984.1,
-                    1140.8,
-                    null
-                ],
-                [
-                    "T9",
-                    831.3,
-                    812.9,
-                    null
-                ],
-                [
-                    "T10",
-                    817.1,
-                    753.6,
-                    null
-                ],
-                [
-                    "T11",
-                    820.6,
-                    807.8,
-                    null
-                ],
-                [
-                    "T12",
-                    925.7,
-                    1040.1,
-                    null
-                ]
-            ]
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
         },
-        "views": [
-            {
-                "id": "main",
-                "chartType": "auto",
-                "xField": "month",
-                "series": [
-                    {
-                        "field": "ck",
-                        "chartType": "line"
-                    },
-                    {
-                        "field": "db",
-                        "chartType": "line",
-                        "lineType": "dashed"
-                    },
-                    {
-                        "field": "th",
-                        "chartType": "line"
-                    }
-                ]
-            }
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#2962a0"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#ec4899"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Dự báo (LK)",
+          "color": "#d0d1d3"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#2962a0"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          1055.5,
+          1210.1,
+          1288.3,
+          1055.5,
+          1210.1,
+          1288.3
+        ],
+        [
+          "T2",
+          1037,
+          1112.6,
+          1084.3,
+          2092.5,
+          2322.7,
+          2372.6
+        ],
+        [
+          "T3",
+          864.7,
+          880,
+          802.3,
+          2957.2,
+          3202.7,
+          3174.9
+        ],
+        [
+          "T4",
+          846.9,
+          915.1,
+          793.6,
+          3804.1,
+          4117.8,
+          3968.5
+        ],
+        [
+          "T5",
+          920.3,
+          914.3,
+          934.9,
+          4724.4,
+          5032.1,
+          4903.4
+        ],
+        [
+          "T6",
+          961,
+          1038.4,
+          977.2,
+          5685.4,
+          6070.5,
+          5880.6
+        ],
+        [
+          "T7",
+          993.8,
+          1203.2,
+          1193.9,
+          6679.2,
+          7273.7,
+          7074.5
+        ],
+        [
+          "T8",
+          984.1,
+          1140.8,
+          null,
+          7663.3,
+          8414.5,
+          7074.5
+        ],
+        [
+          "T9",
+          831.3,
+          812.9,
+          null,
+          8494.6,
+          9227.4,
+          7074.5
+        ],
+        [
+          "T10",
+          817.1,
+          753.6,
+          null,
+          9311.7,
+          9981,
+          7074.5
+        ],
+        [
+          "T11",
+          820.6,
+          807.8,
+          null,
+          10132.3,
+          10788.8,
+          7074.5
+        ],
+        [
+          "T12",
+          925.7,
+          1040.1,
+          null,
+          11058,
+          11828.9,
+          7074.5
         ]
+      ]
     },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          }
+        ]
+      }
+    ],
+    "viewSwitch": {
+      "enabled": true
+    }
+  },
   "metadata": {
     "chartType": "line",
     "pattern": "upWave",
