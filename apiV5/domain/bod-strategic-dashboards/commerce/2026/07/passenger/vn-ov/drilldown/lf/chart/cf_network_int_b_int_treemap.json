@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -9,78 +9,57 @@
         },
         {
           "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
+          "type": "number",
+          "color": "#2563eb",
+          "label": "Quốc tế"
         }
       ],
       "rows": [
         [
-          "Quốc tế",
-          89.2,
-          "",
-          "#2563eb"
-        ],
-        [
           "SWP",
-          18629.2,
-          "Quốc tế",
-          "#1e3a8a"
+          18629.2
         ],
         [
           "CLMV",
-          12960.9,
-          "Quốc tế",
-          "#1e40af"
+          12960.9
         ],
         [
           "NEA",
-          4771.8,
-          "Quốc tế",
-          "#1d4ed8"
+          4771.8
         ],
         [
           "MID",
-          2519.1,
-          "Quốc tế",
-          "#ff0505"
+          2519.1
         ],
         [
           "SEA",
-          2431.0,
-          "Quốc tế",
-          "#ff0000"
+          2431
         ],
         [
           "NOA",
-          2248.9,
-          "Quốc tế",
-          "#eb0000"
+          2248.9
         ],
         [
           "EUR",
-          1082.2,
-          "Quốc tế",
-          "#750000"
+          1082.2
         ],
         [
           "SAS",
-          361.6,
-          "Quốc tế",
-          "#2e0000"
+          361.6
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "treemap"
+        "chartType": "bar",
+        "xField": "name",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
@@ -88,6 +67,6 @@
     "chartType": "line",
     "pattern": "stable",
     "unit": "%",
-    "description": "LF - Hệ số tải hành khách - quốc tế"
+    "description": "LF - Hệ số tải Hành khách - quốc tế"
   }
 }

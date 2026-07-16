@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -9,72 +9,49 @@
         },
         {
           "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
+          "type": "number",
+          "color": "#EAB308",
+          "label": "Nội địa"
         }
       ],
       "rows": [
         [
-          "Nội địa",
-          89.3,
-          "",
-          ""
-        ],
-        [
-          "Nhóm ngành",
-          45001.3,
-          "Nội địa",
-          "#EAB308"
-        ],
-        [
           "Trục lẻ",
-          12601.8,
-          "Nhóm ngành",
-          null
+          12601.8
         ],
         [
           "HANDAD",
-          10352.3,
-          "Nhóm ngành",
-          null
+          10352.3
         ],
         [
           "Du lịch",
-          7559.6,
-          "Nhóm ngành",
-          null
+          7559.6
         ],
         [
           "HANSGN",
-          5221.2,
-          "Nhóm ngành",
-          null
+          5221.2
         ],
         [
           "SGNDAD",
-          4770.2,
-          "Nhóm ngành",
-          null
+          4770.2
         ],
         [
           "Địa phương",
-          4500.5,
-          "Nhóm ngành",
-          null
+          4500.5
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "treemap"
+        "chartType": "bar",
+        "xField": "name",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
@@ -82,6 +59,6 @@
     "chartType": "line",
     "pattern": "stable",
     "unit": "%",
-    "description": "LF - Hệ số tải hành khách - nội địa"
+    "description": "LF - Hệ số tải Hành khách - nội địa"
   }
 }
