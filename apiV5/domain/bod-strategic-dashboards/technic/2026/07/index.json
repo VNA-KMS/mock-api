@@ -79,6 +79,18 @@
           { "direction": "up", "label": "9,1% so với Cùng kỳ", "tone": "negative" },
           { "direction": "up", "label": "18% so với Kế hoạch", "tone": "negative" }
         ]
+      },
+      {
+        "id": "t_aog",
+        "status": "compact",
+        "title": "Tỷ lệ máy bay dừng bay (AOG)",
+        "value": "1,36",
+        "unit": "vụ/10000 chuyến bay",
+        "backgroundStatus": 2,
+        "trend": [
+          { "direction": "down", "label": "4% so với Cùng kỳ", "tone": "positive" },
+          { "direction": "down", "label": "1% so với Kế hoạch", "tone": "positive" }
+        ]
       }
     ]
   },
@@ -205,6 +217,27 @@
               "format3dec": true
             }
           }
+        }
+      ]
+    },
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "chart_aog_fleet",
+          "title": "Số chuyến bay dừng bay theo từng loại tàu bay",
+          "col": 1, "row": 1, "colSpan": 30,
+          "aspectRatio": 1.8,
+          "unit": "vụ",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_fleet.json"
+        },
+        {
+          "id": "chart_aog_cause",
+          "title": "Phân tích theo nguyên nhân dừng bay",
+          "col": 31, "row": 1, "colSpan": 30,
+          "aspectRatio": 1.8,
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_cause.json"
         }
       ]
     }
