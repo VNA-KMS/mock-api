@@ -4,319 +4,73 @@
     "statusLabel": "REAL TIME",
     "description": "Toàn cảnh sức khoẻ doanh nghiệp — 5 KPIs tiêu biểu mỗi nhóm"
   },
-  
   "groups": [
     {
-      "label": "Finance",
-      "accentClassName": "bg-green-haze",
-      "accentColor": "#059669",
+      "label": "Market Share",
+      "accentClassName": "bg-red-dark",
+      "accentColor": "#DC2626",
       "items": [
         {
-          "id": "so_fin_tri",
+          "id": "so_mkt_tot",
           "status": "compact",
-          "title": "Tổng doanh thu và thu nhập",
-          "value": "21.500",
-          "unit": "tỷ",
+          "title": "Khách tổng thị trường",
+          "value": "1095",
+          "unit": "nghìn",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "up", "label": "1.2% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "9% so với Cùng kỳ", "tone": "positive" }
+            {
+              "direction": "up",
+              "label": "4% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            },
+            {
+              "direction": "down",
+              "label": "1% với Kế hoạch",
+              "tone": "negative"
+            }
           ]
         },
         {
-          "id": "so_fin_rev",
+          "id": "so_mkt_int",
           "status": "compact",
-          "title": "Doanh thu HĐKD",
-          "value": "20.100",
-          "unit": "tỷ",
+          "title": "Khách QT",
+          "value": "420",
+          "unit": "nghìn",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "up", "label": "0.8% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "8% so với Cùng kỳ", "tone": "positive" }
+            {
+              "direction": "up",
+              "label": "6% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            },
+            {
+              "direction": "down",
+              "label": "2% với Kế hoạch",
+              "tone": "negative"
+            }
           ]
         },
         {
-          "id": "so_fin_lntt",
+          "id": "so_mkt_dom",
           "status": "compact",
-          "title": "Lợi nhuận trước thuế",
-          "value": "1.820",
-          "unit": "tỷ",
+          "title": "Khách Nội địa",
+          "value": "675",
+          "unit": "nghìn",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "down", "label": "4% so với Kế hoạch", "tone": "negative" },
-            { "direction": "up", "label": "7% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_fin_cash",
-          "status": "compact",
-          "title": "Dòng tiền",
-          "value": "4.250",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "2.1% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "15% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_fin_me",
-          "status": "compact",
-          "title": "Công ty mẹ",
-          "value": "18.200",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "Tổng doanh thu +3.2% KH", "tone": "positive" },
-            { "direction": "up", "label": "LNTT +5.1% CK", "tone": "positive" },
-            { "direction": "down", "label": "Lỗ lũy kế -2.1% CK", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_fin_consolidated",
-          "status": "compact",
-          "title": "Hợp nhất",
-          "value": "21.500",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "Tổng doanh thu +2.8% KH", "tone": "positive" },
-            { "direction": "up", "label": "LNTT +4.2% CK", "tone": "positive" },
-            { "direction": "down", "label": "VCSH +1.5% CK", "tone": "positive" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Operation",
-      "accentColor": "#3B82F6",
-      "items": [
-        {
-          "id": "so_ops_flt",
-          "status": "compact",
-          "title": "Chuyến bay",
-          "value": "12.400",
-          "unit": "chuyến",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "0.8% so với Kế hoạch", "tone": "negative" },
-            { "direction": "up", "label": "2% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_ops_bh",
-          "status": "compact",
-          "title": "Giờ bay",
-          "value": "42.800",
-          "unit": "giờ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "0.5% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "3% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_ops_otpd",
-          "status": "compact",
-          "title": "OTP đi",
-          "value": "85.1",
-          "unit": "%",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "2% so với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% so với Cùng kỳ", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_ops_otpa",
-          "status": "compact",
-          "title": "OTP đến",
-          "value": "86.2",
-          "unit": "%",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "1.8% so với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% so với Cùng kỳ", "tone": "negative" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Technic",
-      "accentClassName": "bg-ecstasy",
-      "accentColor": "#F97316",
-      "items": [
-        {
-          "id": "so_tec_arl",
-          "status": "compact",
-          "title": "ARL - Độ sẵn sàng khai thác",
-          "value": "91.8",
-          "unit": "%",
-          "backgroundStatus": 3,
-          "trend": [
-            { "direction": "down", "label": "1.4% với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% với Cùng kỳ", "tone": "negative", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_tec_ocr",
-          "status": "compact",
-          "title": "OCR - Tỷ lệ quá hạn định kỳ",
-          "value": "1.2",
-          "unit": "%",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "0.2% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "0.1% với Cùng kỳ", "tone": "positive", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_tec_dr",
-          "status": "compact",
-          "title": "DR - Độ tin cậy cất cánh",
-          "value": "99.1",
-          "unit": "%",
-          "backgroundStatus": 3,
-          "trend": [
-            { "direction": "down", "label": "0.4% với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "0.1% với Cùng kỳ", "tone": "negative", "status": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Safety",
-      "accentClassName": "bg-watercourse",
-      "accentColor": "#10B981",
-      "items": [
-        {
-          "id": "so_saf_total",
-          "status": "compact",
-          "title": "Số vụ việc b/c Cục HK",
-          "value": "42",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "2 so với tháng trước", "tone": "positive" },
-            { "direction": "down", "label": "5 so với cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_rate",
-          "status": "compact",
-          "title": "Sự cố / 10.000 chuyến bay",
-          "value": "7,93",
-          "unit": "/10.000cb",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "đạt 97,7% mục tiêu (8,12)", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_human",
-          "status": "compact",
-          "title": "Sự cố yếu tố con người",
-          "value": "8",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "1 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "2 so với cùng kỳ", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_saf_flight",
-          "status": "compact",
-          "title": "Sự cố LV khai thác bay",
-          "value": "6",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "1 so với tháng trước", "tone": "positive" },
-            { "direction": "down", "label": "2 so với cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_tech",
-          "status": "compact",
-          "title": "Sự cố LV kỹ thuật",
-          "value": "5",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "0 so với tháng trước", "tone": "neutral" },
-            { "direction": "down", "label": "1 so với cùng kỳ", "tone": "positive" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Service",
-      "accentColor": "#9D174D",
-      "items": [
-        {
-          "id": "so_svc_nps",
-          "status": "compact",
-          "title": "NPS",
-          "value": "72",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "1.2 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "3.5 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "2 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_nps_dom",
-          "status": "compact",
-          "title": "NPS DOM",
-          "value": "68",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "down", "label": "0.5 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "2.1 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "1 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_nps_int",
-          "status": "compact",
-          "title": "NPS INT",
-          "value": "76",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "2.0 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "4.8 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "3 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_csi",
-          "status": "compact",
-          "title": "CSI",
-          "value": "4.12",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "0.05 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "0.12 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "0.02 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_csi_dom",
-          "status": "compact",
-          "title": "CSI DOM",
-          "value": "3.98",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "down", "label": "0.03 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "0.08 so với cùng kỳ", "tone": "positive" },
-            { "direction": "down", "label": "0.01 so với mục tiêu", "tone": "negative" }
+            {
+              "direction": "up",
+              "label": "2% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            },
+            {
+              "direction": "down",
+              "label": "3% với Kế hoạch",
+              "tone": "negative"
+            }
           ]
         }
       ]
@@ -334,8 +88,17 @@
           "unit": "USD/bbl",
           "backgroundStatus": 1,
           "trend": [
-            { "direction": "up", "label": "3.1% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "6.6% với TB năm ngoái", "tone": "positive", "status": 0 }
+            {
+              "direction": "up",
+              "label": "3.1% với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "6.6% với TB năm ngoái",
+              "tone": "positive",
+              "status": 0
+            }
           ]
         },
         {
@@ -346,8 +109,17 @@
           "unit": "tỷ",
           "backgroundStatus": 1,
           "trend": [
-            { "direction": "up", "label": "2.6% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "8% với Cùng kỳ", "tone": "positive", "status": 0 }
+            {
+              "direction": "up",
+              "label": "2.6% với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "8% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            }
           ]
         },
         {
@@ -358,8 +130,17 @@
           "unit": "đ",
           "backgroundStatus": 1,
           "trend": [
-            { "direction": "up", "label": "1.2% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "3% với Cùng kỳ", "tone": "positive", "status": 0 }
+            {
+              "direction": "up",
+              "label": "1.2% với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "3% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            }
           ]
         },
         {
@@ -370,51 +151,543 @@
           "unit": "tỷ",
           "backgroundStatus": 1,
           "trend": [
-            { "direction": "up", "label": "2.1% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "5.5% với Cùng kỳ", "tone": "positive", "status": 0 }
+            {
+              "direction": "up",
+              "label": "2.1% với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "5.5% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            }
           ]
         }
       ]
     },
     {
-      "label": "Market Share",
-      "accentClassName": "bg-red-dark",
-      "accentColor": "#DC2626",
+      "label": "Safety",
+      "accentClassName": "bg-watercourse",
+      "accentColor": "#10B981",
       "items": [
         {
-          "id": "so_mkt_tot",
+          "id": "so_saf_total",
           "status": "compact",
-          "title": "Khách tổng thị trường",
-          "value": "1095",
-          "unit": "nghìn",
+          "title": "Số vụ việc b/c Cục HK",
+          "value": "42",
+          "unit": "số vụ",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "up", "label": "4% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "1% với Kế hoạch", "tone": "negative" }
+            {
+              "direction": "down",
+              "label": "2 so với tháng trước",
+              "tone": "positive"
+            },
+            {
+              "direction": "down",
+              "label": "5 so với cùng kỳ",
+              "tone": "positive"
+            }
           ]
         },
         {
-          "id": "so_mkt_int",
+          "id": "so_saf_rate",
           "status": "compact",
-          "title": "Khách QT",
-          "value": "420",
-          "unit": "nghìn",
+          "title": "Sự cố / 10.000 chuyến bay",
+          "value": "7,93",
+          "unit": "/10.000cb",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "up", "label": "6% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "2% với Kế hoạch", "tone": "negative" }
+            {
+              "direction": "down",
+              "label": "đạt 97,7% mục tiêu (8,12)",
+              "tone": "positive"
+            }
           ]
         },
         {
-          "id": "so_mkt_dom",
+          "id": "so_saf_human",
           "status": "compact",
-          "title": "Khách Nội địa",
-          "value": "675",
-          "unit": "nghìn",
+          "title": "Sự cố yếu tố con người",
+          "value": "8",
+          "unit": "số vụ",
           "backgroundStatus": 2,
           "trend": [
-            { "direction": "up", "label": "2% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "3% với Kế hoạch", "tone": "negative" }
+            {
+              "direction": "up",
+              "label": "1 so với tháng trước",
+              "tone": "negative"
+            },
+            {
+              "direction": "up",
+              "label": "2 so với cùng kỳ",
+              "tone": "negative"
+            }
+          ]
+        },
+        {
+          "id": "so_saf_flight",
+          "status": "compact",
+          "title": "Sự cố LV khai thác bay",
+          "value": "6",
+          "unit": "số vụ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "1 so với tháng trước",
+              "tone": "positive"
+            },
+            {
+              "direction": "down",
+              "label": "2 so với cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_saf_tech",
+          "status": "compact",
+          "title": "Sự cố LV kỹ thuật",
+          "value": "5",
+          "unit": "số vụ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "0 so với tháng trước",
+              "tone": "neutral"
+            },
+            {
+              "direction": "down",
+              "label": "1 so với cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Technic",
+      "accentClassName": "bg-ecstasy",
+      "accentColor": "#F97316",
+      "items": [
+        {
+          "id": "so_tec_arl",
+          "status": "compact",
+          "title": "ARL - Độ sẵn sàng khai thác",
+          "value": "91.8",
+          "unit": "%",
+          "backgroundStatus": 3,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "1.4% với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "down",
+              "label": "1% với Cùng kỳ",
+              "tone": "negative",
+              "status": 0
+            }
+          ]
+        },
+        {
+          "id": "so_tec_ocr",
+          "status": "compact",
+          "title": "OCR - Tỷ lệ quá hạn định kỳ",
+          "value": "1.2",
+          "unit": "%",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "0.2% với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "0.1% với Cùng kỳ",
+              "tone": "positive",
+              "status": 0
+            }
+          ]
+        },
+        {
+          "id": "so_tec_dr",
+          "status": "compact",
+          "title": "DR - Độ tin cậy cất cánh",
+          "value": "99.1",
+          "unit": "%",
+          "backgroundStatus": 3,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "0.4% với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "down",
+              "label": "0.1% với Cùng kỳ",
+              "tone": "negative",
+              "status": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Operation",
+      "accentColor": "#3B82F6",
+      "items": [
+        {
+          "id": "so_ops_flt",
+          "status": "compact",
+          "title": "Chuyến bay",
+          "value": "12.400",
+          "unit": "chuyến",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "0.8% so với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "up",
+              "label": "2% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_ops_bh",
+          "status": "compact",
+          "title": "Giờ bay",
+          "value": "42.800",
+          "unit": "giờ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "0.5% so với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "3% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_ops_otpd",
+          "status": "compact",
+          "title": "OTP đi",
+          "value": "85.1",
+          "unit": "%",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "2% so với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "down",
+              "label": "1% so với Cùng kỳ",
+              "tone": "negative"
+            }
+          ]
+        },
+        {
+          "id": "so_ops_otpa",
+          "status": "compact",
+          "title": "OTP đến",
+          "value": "86.2",
+          "unit": "%",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "1.8% so với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "down",
+              "label": "1% so với Cùng kỳ",
+              "tone": "negative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Finance",
+      "accentClassName": "bg-green-haze",
+      "accentColor": "#059669",
+      "items": [
+        {
+          "id": "so_fin_tri",
+          "status": "compact",
+          "title": "Tổng doanh thu và thu nhập",
+          "value": "21.500",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "1.2% so với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "9% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_fin_rev",
+          "status": "compact",
+          "title": "Doanh thu HĐKD",
+          "value": "20.100",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "0.8% so với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "8% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_fin_lntt",
+          "status": "compact",
+          "title": "Lợi nhuận trước thuế",
+          "value": "1.820",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "4% so với Kế hoạch",
+              "tone": "negative"
+            },
+            {
+              "direction": "up",
+              "label": "7% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_fin_cash",
+          "status": "compact",
+          "title": "Dòng tiền",
+          "value": "4.250",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "2.1% so với Kế hoạch",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "15% so với Cùng kỳ",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_fin_me",
+          "status": "compact",
+          "title": "Công ty mẹ",
+          "value": "18.200",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "Tổng doanh thu +3.2% KH",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "LNTT +5.1% CK",
+              "tone": "positive"
+            },
+            {
+              "direction": "down",
+              "label": "Lỗ lũy kế -2.1% CK",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_fin_consolidated",
+          "status": "compact",
+          "title": "Hợp nhất",
+          "value": "21.500",
+          "unit": "tỷ",
+          "backgroundStatus": 2,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "Tổng doanh thu +2.8% KH",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "LNTT +4.2% CK",
+              "tone": "positive"
+            },
+            {
+              "direction": "down",
+              "label": "VCSH +1.5% CK",
+              "tone": "positive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Service",
+      "accentColor": "#9D174D",
+      "items": [
+        {
+          "id": "so_svc_nps",
+          "status": "compact",
+          "title": "NPS",
+          "value": "72",
+          "unit": "điểm",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "1.2 so với tháng trước",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "3.5 so với cùng kỳ",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "2 so với mục tiêu",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_svc_nps_dom",
+          "status": "compact",
+          "title": "NPS DOM",
+          "value": "68",
+          "unit": "điểm",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "0.5 so với tháng trước",
+              "tone": "negative"
+            },
+            {
+              "direction": "up",
+              "label": "2.1 so với cùng kỳ",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "1 so với mục tiêu",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_svc_nps_int",
+          "status": "compact",
+          "title": "NPS INT",
+          "value": "76",
+          "unit": "điểm",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "2.0 so với tháng trước",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "4.8 so với cùng kỳ",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "3 so với mục tiêu",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_svc_csi",
+          "status": "compact",
+          "title": "CSI",
+          "value": "4.12",
+          "unit": "điểm",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "up",
+              "label": "0.05 so với tháng trước",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "0.12 so với cùng kỳ",
+              "tone": "positive"
+            },
+            {
+              "direction": "up",
+              "label": "0.02 so với mục tiêu",
+              "tone": "positive"
+            }
+          ]
+        },
+        {
+          "id": "so_svc_csi_dom",
+          "status": "compact",
+          "title": "CSI DOM",
+          "value": "3.98",
+          "unit": "điểm",
+          "backgroundStatus": 1,
+          "trend": [
+            {
+              "direction": "down",
+              "label": "0.03 so với tháng trước",
+              "tone": "negative"
+            },
+            {
+              "direction": "up",
+              "label": "0.08 so với cùng kỳ",
+              "tone": "positive"
+            },
+            {
+              "direction": "down",
+              "label": "0.01 so với mục tiêu",
+              "tone": "negative"
+            }
           ]
         }
       ]
