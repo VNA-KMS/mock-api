@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -9,72 +9,49 @@
         },
         {
           "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
+          "type": "number",
+          "color": "#EAB308",
+          "label": "Nội địa"
         }
       ],
       "rows": [
         [
-          "Nội địa",
-          90,
-          "",
-          ""
-        ],
-        [
-          "Nhóm ngành",
-          45000,
-          "Nội địa",
-          "#EAB308"
-        ],
-        [
           "Trục lẻ",
-          12600,
-          "Nhóm ngành",
-          ""
+          12600
         ],
         [
           "HANDAD",
-          10350,
-          "Nhóm ngành",
-          ""
+          10350
         ],
         [
           "Du lịch",
-          7560,
-          "Nhóm ngành",
-          ""
+          7560
         ],
         [
           "HANSGN",
-          5220,
-          "Nhóm ngành",
-          ""
+          5220
         ],
         [
           "SGNDAD",
-          4770,
-          "Nhóm ngành",
-          ""
+          4770
         ],
         [
           "Địa phương",
-          4500,
-          "Nhóm ngành",
-          ""
+          4500
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "treemap"
+        "chartType": "bar",
+        "xField": "name",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },

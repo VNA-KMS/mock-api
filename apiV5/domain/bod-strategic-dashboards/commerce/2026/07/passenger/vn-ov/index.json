@@ -72,27 +72,6 @@
         "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/lf/index.json"
       },
       {
-        "id": "raskpax",
-        "status": "compact",
-        "title": "RASKpax",
-        "value": "2,850",
-        "unit": "VND/ghế.km",
-        "trend": [
-          {
-            "direction": "up",
-            "label": "1.8% với Kế hoạch",
-            "tone": "positive",
-            "status": 0
-          },
-          {
-            "direction": "up",
-            "label": "4.2% với Cùng kỳ",
-            "tone": "positive"
-          }
-        ],
-        "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json"
-      },
-      {
         "id": "rtk",
         "status": "compact",
         "title": "RTK",
@@ -175,6 +154,27 @@
           }
         ],
         "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_vthk/index.json"
+      },
+      {
+        "id": "raskpax",
+        "status": "compact",
+        "title": "RASKpax",
+        "value": "2,850",
+        "unit": "VND/ghế.km",
+        "trend": [
+          {
+            "direction": "up",
+            "label": "1.8% với Kế hoạch",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "4.2% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json"
       },
       {
         "id": "cask",
@@ -290,7 +290,7 @@
       "options": [
         {
           "value": "passenger",
-          "label": "Hành khách"
+          "label": "Tổng quan"
         },
         {
           "value": "cargo",
@@ -387,11 +387,10 @@
             ]
           },
           {
-            "title": "Cơ cấu thị trường hành khách",
             "items": [
               {
                 "id": "b_market_structure",
-                "title": "Cơ cấu thị trường hành khách",
+                "title": "Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -444,7 +443,7 @@
             "items": [
               {
                 "id": "b_int_clmv",
-                "title": "CLMV",
+                "title": "PAX – CLMV",
                 "col": 1,
                 "colSpan": 15,
                 "row": 1,
@@ -455,7 +454,7 @@
               },
               {
                 "id": "b_int_nea",
-                "title": "NEA",
+                "title": "PAX – NEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 1,
@@ -466,7 +465,7 @@
               },
               {
                 "id": "b_int_mid",
-                "title": "MID",
+                "title": "PAX – MID",
                 "col": 31,
                 "colSpan": 15,
                 "row": 1,
@@ -477,7 +476,7 @@
               },
               {
                 "id": "b_int_noa",
-                "title": "NOA",
+                "title": "PAX – NOA",
                 "col": 46,
                 "colSpan": 15,
                 "row": 1,
@@ -488,7 +487,7 @@
               },
               {
                 "id": "b_int_au_us",
-                "title": "SWP",
+                "title": "PAX – SWP",
                 "col": 1,
                 "colSpan": 15,
                 "row": 2,
@@ -499,7 +498,7 @@
               },
               {
                 "id": "b_int_sea",
-                "title": "SEA",
+                "title": "PAX – SEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 2,
@@ -510,7 +509,7 @@
               },
               {
                 "id": "b_int_eu",
-                "title": "EUR",
+                "title": "PAX – EUR",
                 "col": 31,
                 "colSpan": 15,
                 "row": 2,
@@ -521,7 +520,7 @@
               },
               {
                 "id": "b_int_sas",
-                "title": "SAS",
+                "title": "PAX – SAS",
                 "col": 46,
                 "colSpan": 15,
                 "row": 2,
@@ -533,11 +532,10 @@
             ]
           },
           {
-            "title": "Cơ cấu thị trường hành khách quốc tế",
             "items": [
               {
                 "id": "b_int_treemap",
-                "title": "Cơ cấu thị trường hành khách quốc tế",
+                "title": "Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -566,7 +564,184 @@
               }
             ]
           }
-        ]
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "Pax",
+              "value": "985",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "2.1% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "5.4% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "drillDownPath": null
+            },
+            {
+              "id": "ask",
+              "status": "compact",
+              "title": "ASK",
+              "value": "2,150",
+              "unit": "tỷ ghế.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "3.2% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "6.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/ask/index.json"
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "LF",
+              "value": "82.5",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "1.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/lf/index.json"
+            },
+            {
+              "id": "rtk",
+              "status": "compact",
+              "title": "RTK",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "4.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rtk/index.json"
+            },
+            {
+              "id": "dt_vthk",
+              "status": "compact",
+              "title": "DT VTHK",
+              "value": "+4,850",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "6.2% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "12.5% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/dt_vthk/index.json"
+            },
+            {
+              "id": "hq_so_cpbd",
+              "status": "compact",
+              "title": "HQ SO CPBD",
+              "value": "+320",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "8.1% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "15.3% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_so_cpbd/index.json"
+            },
+            {
+              "id": "hq_vthk",
+              "status": "compact",
+              "title": "HQ VTHK (*)",
+              "value": "+185",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "12.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "25.0% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_vthk/index.json"
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "RASKpax",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "1.8% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json"
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
       },
       "dom": {
         "chartBoard": [
@@ -575,9 +750,9 @@
             "items": [
               {
                 "id": "b_dom_hansgn",
-                "title": "HANSGN",
+                "title": "PAX – HANSGN",
                 "col": 1,
-                "colSpan": 12,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -586,9 +761,9 @@
               },
               {
                 "id": "b_dom_handad",
-                "title": "HANDAD",
-                "col": 13,
-                "colSpan": 12,
+                "title": "PAX – HANDAD",
+                "col": 21,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -597,9 +772,9 @@
               },
               {
                 "id": "b_dom_sgndad",
-                "title": "SGNDAD",
-                "col": 25,
-                "colSpan": 12,
+                "title": "PAX – SGNDAD",
+                "col": 41,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -608,10 +783,10 @@
               },
               {
                 "id": "b_dom_dulich",
-                "title": "Du lịch",
-                "col": 37,
-                "colSpan": 12,
-                "row": 1,
+                "title": "PAX – Du lịch",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
                 "rowSpan": 1,
                 "height": 150,
                 "subTitle": "Đơn vị: Nghìn khách",
@@ -619,25 +794,36 @@
               },
               {
                 "id": "b_dom_trucle",
-                "title": "Trục lẻ",
-                "col": 49,
-                "colSpan": 12,
-                "row": 1,
+                "title": "PAX – Trục lẻ",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
                 "rowSpan": 1,
                 "height": 150,
                 "subTitle": "Đơn vị: Nghìn khách",
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_trucle.json"
+              },
+              {
+                "id": "b_dom_diaphuong",
+                "title": "PAX – Địa phương",
+                "col": 41,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 150,
+                "subTitle": "Đơn vị: Nghìn khách",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_diaphuong.json"
               }
             ]
           },
           {
-            "title": "Thị phần khách nội địa theo hãng bay",
+            "title": "Thị phần hàng hoá nội địa theo hãng bay",
             "items": [
               {
                 "id": "b_dom_vna",
                 "title": "VNA",
                 "col": 1,
-                "colSpan": 20,
+                "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -647,8 +833,8 @@
               {
                 "id": "b_dom_pa",
                 "title": "QH",
-                "col": 21,
-                "colSpan": 20,
+                "col": 16,
+                "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -658,8 +844,8 @@
               {
                 "id": "b_dom_vna_group",
                 "title": "VNA Group",
-                "col": 41,
-                "colSpan": 20,
+                "col": 31,
+                "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 150,
@@ -669,9 +855,9 @@
               {
                 "id": "b_dom_vj",
                 "title": "VJ",
-                "col": 1,
-                "colSpan": 20,
-                "row": 2,
+                "col": 46,
+                "colSpan": 15,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 150,
                 "subTitle": "Đơn vị: %",
@@ -680,7 +866,7 @@
               {
                 "id": "b_dom_ba",
                 "title": "BA",
-                "col": 21,
+                "col": 1,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
@@ -691,7 +877,7 @@
               {
                 "id": "b_dom_sun",
                 "title": "9G",
-                "col": 41,
+                "col": 21,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
@@ -702,9 +888,9 @@
               {
                 "id": "b_dom_vu",
                 "title": "VU",
-                "col": 1,
+                "col": 41,
                 "colSpan": 20,
-                "row": 3,
+                "row": 2,
                 "rowSpan": 1,
                 "height": 150,
                 "subTitle": "Đơn vị: %",
@@ -713,11 +899,10 @@
             ]
           },
           {
-            "title": "Cơ cấu thị trường hành khách nội địa",
             "items": [
               {
                 "id": "b_dom_treemap",
-                "title": "Cơ cấu thị trường hành khách nội địa",
+                "title": "Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -747,7 +932,184 @@
               }
             ]
           }
-        ]
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "Pax",
+              "value": "985",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "2.1% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "5.4% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "drillDownPath": null
+            },
+            {
+              "id": "ask",
+              "status": "compact",
+              "title": "ASK",
+              "value": "2,150",
+              "unit": "tỷ ghế.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "3.2% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "6.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/ask/index.json"
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "LF",
+              "value": "82.5",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "1.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/lf/index.json"
+            },
+            {
+              "id": "rtk",
+              "status": "compact",
+              "title": "RTK",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "4.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rtk/index.json"
+            },
+            {
+              "id": "dt_vthk",
+              "status": "compact",
+              "title": "DT VTHK",
+              "value": "+4,850",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "6.2% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "12.5% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/dt_vthk/index.json"
+            },
+            {
+              "id": "hq_so_cpbd",
+              "status": "compact",
+              "title": "HQ SO CPBD",
+              "value": "+320",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "8.1% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "15.3% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_so_cpbd/index.json"
+            },
+            {
+              "id": "hq_vthk",
+              "status": "compact",
+              "title": "HQ VTHK (*)",
+              "value": "+185",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "12.5% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "25.0% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_vthk/index.json"
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "RASKpax",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "1.8% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json"
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
       }
     }
   },
