@@ -83,12 +83,7 @@
           "trend": [
             {
               "direction": "up",
-              "label": "2% so với Kế hoạch",
-              "tone": "positive"
-            },
-            {
-              "direction": "up",
-              "label": "7,6% so với Cùng kỳ",
+              "label": "7,6% so với đầu năm (1/1/2026)",
               "tone": "positive"
             }
           ]
@@ -103,12 +98,7 @@
           "trend": [
             {
               "direction": "up",
-              "label": "5% so với Kế hoạch",
-              "tone": "positive"
-            },
-            {
-              "direction": "up",
-              "label": "31,0% so với Cùng kỳ",
+              "label": "31,0% so với đầu năm (1/1/2026)",
               "tone": "positive"
             }
           ]
@@ -123,12 +113,7 @@
           "trend": [
             {
               "direction": "down",
-              "label": "3% so với Kế hoạch",
-              "tone": "positive"
-            },
-            {
-              "direction": "down",
-              "label": "11,2% so với Cùng kỳ",
+              "label": "11,2% so với đầu năm (1/1/2026)",
               "tone": "positive"
             }
           ]
@@ -193,12 +178,7 @@
           "trend": [
             {
               "direction": "up",
-              "label": "3% so với Kế hoạch",
-              "tone": "positive"
-            },
-            {
-              "direction": "up",
-              "label": "45,5% so với Cùng kỳ",
+              "label": "45,5% so với đầu năm (1/1/2026)",
               "tone": "positive"
             }
           ]
@@ -213,12 +193,7 @@
           "trend": [
             {
               "direction": "down",
-              "label": "2% so với Kế hoạch",
-              "tone": "positive"
-            },
-            {
-              "direction": "down",
-              "label": "11,7% so với Cùng kỳ",
+              "label": "11,7% so với đầu năm (1/1/2026)",
               "tone": "positive"
             }
           ]
@@ -228,52 +203,14 @@
   ],
   "chartBoard": [
     {
-      "title": "Hiển thị tổng doanh thu và thu nhập của 12 tháng",
-      "items": [
-        {
-          "id": "b_rev",
-          "title": "Tổng doanh thu và thu nhập",
-          "height": 150,
-          "col": 1,
-          "colSpan": 20,
-          "row": 1,
-          "rowSpan": 1,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_rev.json",
-          "rightTitle": "tỷ"
-        },
-        {
-          "id": "b_lntt",
-          "title": "LNTT",
-          "height": 150,
-          "col": 21,
-          "colSpan": 20,
-          "row": 1,
-          "rowSpan": 1,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_lntt.json",
-          "rightTitle": "tỷ"
-        },
-        {
-          "id": "b_cash",
-          "title": "Dòng tiền",
-          "height": 150,
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "rowSpan": 1,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_cash.json",
-          "rightTitle": "tỷ"
-        }
-      ]
-    },
-    {
-      "title": "Cơ cấu nợ & dòng tiền chi tiết",
+      "title": "Tổng quan dòng tiền theo năm",
       "items": [
         {
           "id": "b_cash_balance",
-          "title": "Số dư tiền (tỷ)",
-          "height": 150,
+          "title": "Tổng quan dòng tiền theo năm",
+          "height": 280,
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 60,
           "row": 1,
           "rowSpan": 1,
           "unit": "tỷ",
@@ -281,25 +218,72 @@
             "text": "Dư tiền cuối kỳ tăng đều từ 12.692 tỷ (T1) đạt đỉnh 16.327 tỷ (T3), sau đó giảm dần về 5.881 tỷ (T12) do trả nợ và chi đầu tư. Dư nợ vay NH = 0 quanh năm — sức khỏe thanh khoản rất tốt.",
             "severity": "good"
           },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_cash_balance.json",
-          "rightTitle": "tỷ"
-        },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_cash_balance.json"
+        }
+      ]
+    },
+    {
+      "title": "Cơ cấu dòng tiền thu chi SXKD",
+      "items": [
         {
           "id": "b_profit_bridge_uth",
-          "title": "Cấu trúc doanh thu chi phí lợi nhuận (tỷ)",
+          "title": "Thu chi của hoạt động sản xuất kinh doanh",
           "height": 320,
-          "col": 21,
-          "colSpan": 40,
+          "col": 1,
           "row": 1,
-          "rowSpan": 1,
+          "colSpan": 30,
           "aspectRatio": 2.4,
           "unit": "tỷ",
           "aiInsight": {
-            "text": "LNTT UTH 4T đạt 3.488 tỷ (+382 tỷ so KH). Doanh thu HĐKD vượt KH (+2.466 tỷ) nhờ yield tăng 13,9%. Nhiên liệu tăng 2.405 tỷ so KH do giá Platts tăng 35,4%. Các chi phí khác tiết kiệm ~932 tỷ so KH.",
+            "text": "Tổng thu đạt 38.800 tỷ. Sau khi trừ chi phí NL, thuê MB, SCBD và SXKD khác, lợi nhuận đạt 15.823 tỷ.",
             "severity": "good"
           },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_profit_bridge_uth.json",
-          "rightTitle": "tỷ"
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_profit_bridge_uth.json"
+        },
+        {
+          "id": "b_cashflow_currency_in",
+          "title": "Cơ cấu dòng tiền thu SXKD",
+          "height": 280,
+          "col": 31,
+          "row": 1,
+          "colSpan": 15,
+          "aspectRatio": 1.3,
+          "unit": "%",
+          "aiInsight": {
+            "text": "Thu SXKD tập trung VND (58%) và USD (14,27%). Các loại tiền khác chiếm ~27,7% — đa dạng hóa nguồn thu ngoại tệ.",
+            "severity": "good"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_cashflow_currency_in.json"
+        },
+        {
+          "id": "b_cashflow_currency_out",
+          "title": "Cơ cấu dòng tiền chi SXKD",
+          "height": 280,
+          "col": 46,
+          "row": 1,
+          "colSpan": 15,
+          "aspectRatio": 1.3,
+          "unit": "%",
+          "aiInsight": {
+            "text": "Chi SXKD chủ yếu bằng VND (50%) và USD (47,54%). Chi bằng các loại tiền khác chiếm <3% — rủi ro tỷ giá tập trung USD.",
+            "severity": "warning"
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_cashflow_currency_out.json"
+        }
+      ]
+    },
+    {
+      "title": "Kết quả sxkd các doanh nghiệp vốn góp",
+      "items": [
+        {
+          "id": "b_subsidiary",
+          "title": "Kết quả sxkd các doanh nghiệp vốn góp",
+          "height": 320,
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_subsidiary.json"
         }
       ]
     },

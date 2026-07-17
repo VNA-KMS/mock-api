@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -8,151 +8,71 @@
           "type": "string"
         },
         {
+          "id": "net_hd_sxkd",
+          "type": "number",
+          "label": "Net HĐ SXKD",
+          "color": "#5B9BD5"
+        },
+        {
+          "id": "net_hd_tai_chinh",
+          "type": "number",
+          "label": "Net HĐ tài chính (bao gồm vay NH)",
+          "color": "#C0504D"
+        },
+        {
+          "id": "net_hd_dau_tu",
+          "type": "number",
+          "label": "Net HĐ đầu tư",
+          "color": "#FFC000"
+        },
+        {
+          "id": "chenh_lech_trong_ky",
+          "type": "number",
+          "label": "Chênh lệch trong kỳ",
+          "color": "#7030A0"
+        },
+        {
           "id": "du_tien_ck",
           "type": "number",
-          "label": "Dư tiền cuối kỳ",
-          "color": "#004071"
+          "label": "Dư tiền CK",
+          "color": "#92D050"
         },
         {
           "id": "du_no_vay_nh_ck",
           "type": "number",
-          "label": "Dư nợ vay NH cuối kỳ",
-          "color": "#94A3B8"
-        },
-        {
-          "id": "du_tien_ck_cum",
-          "type": "number",
-          "label": "Dư tiền cuối kỳ (LK)",
-          "color": "#004071"
-        },
-        {
-          "id": "du_no_vay_nh_ck_cum",
-          "type": "number",
-          "label": "Dư nợ vay NH cuối kỳ (LK)",
-          "color": "#94A3B8"
+          "label": "Dư nợ vay ngắn hạn CK",
+          "color": "#C00000"
         }
       ],
       "rows": [
-        [
-          "T1",
-          12692,
-          0,
-          12692,
-          0
-        ],
-        [
-          "T2",
-          13141,
-          0,
-          25833,
-          0
-        ],
-        [
-          "T3",
-          16327,
-          0,
-          42160,
-          0
-        ],
-        [
-          "T4",
-          16320,
-          0,
-          58480,
-          0
-        ],
-        [
-          "T5",
-          13668,
-          0,
-          72148,
-          0
-        ],
-        [
-          "T6",
-          9297,
-          0,
-          81445,
-          0
-        ],
-        [
-          "T7",
-          9254,
-          0,
-          90699,
-          0
-        ],
-        [
-          "T8",
-          9751,
-          0,
-          100450,
-          0
-        ],
-        [
-          "T9",
-          9922,
-          0,
-          110372,
-          0
-        ],
-        [
-          "T10",
-          9005,
-          0,
-          119377,
-          0
-        ],
-        [
-          "T11",
-          8285,
-          0,
-          127662,
-          0
-        ],
-        [
-          "T12",
-          5881,
-          0,
-          133543,
-          0
-        ]
+        ["T1", 650, -180, -250, 220, 12692, -1850],
+        ["T2", 480, -120, -200, 160, 13142, -1820],
+        ["T3", 3050, 150, 120, 3320, 16328, -1780],
+        ["T4", 320, -90, -110, 120, 16456, -1800],
+        ["T5", -1450, -420, -780, -2650, 13419, -1900],
+        ["T6", 720, 780, -250, 1250, 14670, -1750],
+        ["T7", 260, -150, -240, -130, 14527, -1720],
+        ["T8", 430, 120, 90, 640, 14828, -1680],
+        ["T9", 210, -110, -220, -120, 14347, -1650],
+        ["T10", -1420, -380, -420, -2220, 12742, -1600],
+        ["T11", -280, -160, -340, -780, 11959, -1550],
+        ["T12", -820, -180, -290, -1290, 10662, -1500]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "combo",
         "xField": "month",
         "series": [
-          {
-            "field": "du_tien_ck",
-            "chartType": "line"
-          },
-          {
-            "field": "du_no_vay_nh_ck",
-            "chartType": "line"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "du_tien_ck_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "du_no_vay_nh_ck_cum",
-            "chartType": "line"
-          }
+          { "field": "net_hd_sxkd", "chartType": "bar" },
+          { "field": "net_hd_tai_chinh", "chartType": "bar" },
+          { "field": "net_hd_dau_tu", "chartType": "bar" },
+          { "field": "chenh_lech_trong_ky", "chartType": "line", "lineType": "solid" },
+          { "field": "du_tien_ck", "chartType": "line", "lineType": "solid", "yAxis": "right" },
+          { "field": "du_no_vay_nh_ck", "chartType": "line", "lineType": "solid" }
         ]
       }
-    ],
-    "viewSwitch": {
-      "enabled": true
-    }
+    ]
   }
 }
