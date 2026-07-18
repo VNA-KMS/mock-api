@@ -1,160 +1,159 @@
 {
-  "autoChart": {
-    "dataset": {
-      "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "actual",
-          "type": "number",
-          "label": "Thực hiện",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "plan",
-          "type": "number",
-          "label": "Kế hoạch",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "samePeriod",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "actual_cum",
-          "type": "number",
-          "label": "Thực hiện (LK)",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "plan_cum",
-          "type": "number",
-          "label": "Kế hoạch (LK)",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "samePeriod_cum",
-          "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "colorToken": "series.previous"
-        }
-      ],
-      "rows": [
-        [
-          "T1",
-          99.6,
-          99.5,
-          99.4,
-          99.6,
-          99.5,
-          99.4
-        ],
-        [
-          "T2",
-          99.5,
-          99.5,
-          99.35,
-          199.1,
-          199,
-          198.75
-        ],
-        [
-          "T3",
-          99.4,
-          99.5,
-          99.3,
-          298.5,
-          298.5,
-          298.05
-        ],
-        [
-          "T4",
-          99.3,
-          99.5,
-          99.25,
-          397.8,
-          398,
-          397.3
-        ],
-        [
-          "T5",
-          99.2,
-          99.5,
-          99.2,
-          497,
-          497.5,
-          496.5
-        ],
-        [
-          "T6",
-          99.15,
-          99.5,
-          99.2,
-          596.15,
-          597,
-          595.7
-        ],
-        [
-          "T7",
-          99.1,
-          99.5,
-          99.2,
-          695.25,
-          696.5,
-          694.9
-        ]
-      ]
+ "autoChart": {
+  "dataset": {
+   "columns": [
+    {
+     "id": "month",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual",
-            "chartType": "line"
-          },
-          {
-            "field": "plan",
-            "chartType": "line",
-            "lineType": "dashed"
-          },
-          {
-            "field": "samePeriod",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "plan_cum",
-            "chartType": "line",
-            "lineType": "dashed"
-          },
-          {
-            "field": "samePeriod_cum",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
-      }
-    ],
-    "viewSwitch": {
-      "enabled": true
+    {
+     "id": "actual",
+     "type": "number",
+     "label": "Thực hiện",
+     "colorToken": "series.actual"
+    },
+    {
+     "id": "plan",
+     "type": "number",
+     "label": "Kế hoạch",
+     "colorToken": "series.target"
+    },
+    {
+     "id": "samePeriod",
+     "type": "number",
+     "label": "Cùng kỳ",
+     "colorToken": "series.previous"
+    },
+    {
+     "id": "actual_cum",
+     "type": "number",
+     "label": "Thực hiện (LK)",
+     "colorToken": "series.actual"
+    },
+    {
+     "id": "plan_cum",
+     "type": "number",
+     "label": "Kế hoạch (LK)",
+     "colorToken": "series.target"
+    },
+    {
+     "id": "samePeriod_cum",
+     "type": "number",
+     "label": "Cùng kỳ (LK)",
+     "colorToken": "series.previous"
     }
-  }
+   ],
+   "rows": [
+    [
+     "T1",
+     99.6,
+     99.5,
+     99.4,
+     99.6,
+     99.5,
+     99.4
+    ],
+    [
+     "T2",
+     99.5,
+     99.5,
+     99.35,
+     199.1,
+     199,
+     198.75
+    ],
+    [
+     "T3",
+     99.4,
+     99.5,
+     99.3,
+     298.5,
+     298.5,
+     298.05
+    ],
+    [
+     "T4",
+     99.3,
+     99.5,
+     99.25,
+     397.8,
+     398,
+     397.3
+    ],
+    [
+     "T5",
+     99.2,
+     99.5,
+     99.2,
+     497,
+     497.5,
+     496.5
+    ],
+    [
+     "T6",
+     99.15,
+     99.5,
+     99.2,
+     596.15,
+     597,
+     595.7
+    ],
+    [
+     "T7",
+     99.1,
+     99.5,
+     99.2,
+     695.25,
+     696.5,
+     694.9
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "line",
+    "xField": "month",
+    "series": [
+     {
+      "field": "actual",
+      "chartType": "line"
+     },
+     {
+      "field": "plan",
+      "chartType": "line",
+      "lineType": "dashed"
+     },
+     {
+      "field": "samePeriod",
+      "chartType": "line",
+      "lineType": "dashed"
+     }
+    ],
+    "label": "Theo T7"
+   },
+   {
+    "id": "main_cum",
+    "chartType": "line",
+    "xField": "month",
+    "series": [
+     {
+      "field": "actual_cum",
+      "chartType": "line"
+     },
+     {
+      "field": "plan_cum",
+      "chartType": "line",
+      "lineType": "dashed"
+     },
+     {
+      "field": "samePeriod_cum",
+      "chartType": "line",
+      "lineType": "dashed"
+     }
+    ],
+    "label": "LK: 695,2"
+   }
+  ]
+ }
 }
