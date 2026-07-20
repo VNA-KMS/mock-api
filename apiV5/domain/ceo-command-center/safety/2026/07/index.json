@@ -2,108 +2,32 @@
  "titleInfo": {
   "title": "Safety",
   "statusLabel": "REAL TIME",
-  "description": "Tình hình an toàn tháng — số vụ việc, phân loại mức độ, sự cố điển hình?"
+  "description": "An toàn khai thác — số lượng sự cố, vụ việc tháng 7/2026"
  },
  "metricCards": {
-  "accentClassName": "bg-regal-blue",
+  "accentClassName": "bg-watercourse",
+  "layout": {
+   "columns": "261.5px"
+  },
   "items": [
    {
     "id": "m_total",
     "status": "compact",
-    "title": "Số vụ việc b/c Cục HK",
-    "value": "42",
-    "unit": "số vụ",
-    "backgroundStatus": 2,
+    "title": "Tổng số vụ việc, sự cố an toàn",
+    "value": "9",
+    "unit": "vụ",
+    "backgroundStatus": 1,
     "trend": [
      {
       "direction": "down",
-      "label": "2 so với tháng trước",
+      "label": "Cùng kỳ: ↓ -31%",
       "tone": "positive"
      },
      {
       "direction": "down",
-      "label": "5 so với cùng kỳ",
-      "tone": "positive"
-     }
-    ]
-   },
-   {
-    "id": "m_human",
-    "status": "compact",
-    "title": "Sự cố liên quan yếu tố con người",
-    "value": "8",
-    "unit": "số vụ",
-    "backgroundStatus": 2,
-    "trend": [
-     {
-      "direction": "up",
-      "label": "1 so với tháng trước",
-      "tone": "negative"
-     },
-     {
-      "direction": "up",
-      "label": "2 so với cùng kỳ",
-      "tone": "negative"
-     }
-    ]
-   },
-   {
-    "id": "m_flight",
-    "status": "compact",
-    "title": "Sự cố LV khai thác bay",
-    "value": "6",
-    "unit": "số vụ",
-    "backgroundStatus": 2,
-    "trend": [
-     {
-      "direction": "down",
-      "label": "1 so với tháng trước",
-      "tone": "positive"
-     },
-     {
-      "direction": "down",
-      "label": "2 so với cùng kỳ",
-      "tone": "positive"
-     }
-    ]
-   },
-   {
-    "id": "m_tech",
-    "status": "compact",
-    "title": "Sự cố LV kỹ thuật",
-    "value": "5",
-    "unit": "số vụ",
-    "backgroundStatus": 2,
-    "trend": [
-     {
-      "direction": "up",
-      "label": "0 so với tháng trước",
-      "tone": "neutral"
-     },
-     {
-      "direction": "down",
-      "label": "1 so với cùng kỳ",
-      "tone": "positive"
-     }
-    ]
-   },
-   {
-    "id": "m_wx",
-    "status": "compact",
-    "title": "Sự cố LV KTMĐ",
-    "value": "4",
-    "unit": "số vụ",
-    "backgroundStatus": 2,
-    "trend": [
-     {
-      "direction": "down",
-      "label": "1 so với tháng trước",
-      "tone": "positive"
-     },
-     {
-      "direction": "down",
-      "label": "2 so với cùng kỳ",
-      "tone": "positive"
+      "label": "Ngưỡng: 90% (≤10)",
+      "tone": "positive",
+      "status": 1
      }
     ]
    }
@@ -111,33 +35,70 @@
  },
  "chartBoard": [
   {
-   "title": "",
+   "title": "An toàn khai thác",
    "items": [
     {
      "id": "b_trend",
      "col": 1,
-     "colSpan": 30,
+     "colSpan": 20,
      "row": 1,
      "rowSpan": 1,
-     "title": "Số lượng sự cố",
-     "height": 150,
+     "title": "Tổng số sự cố theo tháng",
+     "height": 190,
      "aiInsight": {
-      "text": "Tổng số vụ việc tháng 7 là 42 vụ, giảm 2 vụ so với tháng trước và 5 vụ so với cùng kỳ. Xu hướng 6 tháng đầu năm cải thiện rõ rệt (từ 37 xuống 32), tuy nhiên T7 tăng đột biến theo mùa, thấp hơn đáng kể so với mức 47 vụ cùng kỳ 2025.",
+      "text": "Tổng số vụ việc tháng 7/2026 là 9 vụ, bằng tháng 6 và giảm 31% so với cùng kỳ (13 vụ). Xu hướng 12 tháng duy trì quanh 9–14 vụ/tháng.",
       "severity": "good",
       "status": 1
      },
-     "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_trend.json"
+     "chartPath": "apiV5/domain/ceo-command-center/safety/2026/07/chart/b_trend.json",
+     "rightTitle": "vụ"
     },
     {
-     "id": "b_class",
-     "col": 31,
-     "colSpan": 30,
+     "id": "b_human",
+     "col": 21,
+     "colSpan": 20,
      "row": 1,
      "rowSpan": 1,
-     "title": "Bảng phân loại sự cố",
+     "title": "Phân loại theo yếu tố con người",
+     "height": 190,
      "aiInsight": {
-      "text": "Tháng này không ghi nhận sự cố mức A (rất nặng) và B (nặng). Chủ yếu là mức D (nhẹ, 2 vụ) và E (khác, 11 vụ). Lũy kế 7 tháng: 1 vụ B, 2 vụ C, 7 vụ D, 33 vụ E — tình hình an toàn được kiểm soát tốt.",
-      "severity": "good",
+      "text": "Trên tổng 9 vụ việc tháng 7/2026: 6 vụ không liên quan con người, 3 vụ liên quan yếu tố con người.",
+      "viewpoint": "neutral",
+      "status": 1
+     },
+     "chartPath": "apiV5/domain/ceo-command-center/safety/2026/07/chart/b_human.json"
+    },
+    {
+     "id": "b_domain",
+     "col": 41,
+     "colSpan": 20,
+     "row": 1,
+     "rowSpan": 1,
+     "title": "Phân loại theo lĩnh vực",
+     "height": 190,
+     "aiInsight": {
+      "text": "Khối phát sinh sự cố T7/2026: Khai thác bay 4 vụ, Kỹ thuật 3 vụ, Dịch vụ mặt đất 2 vụ.",
+      "viewpoint": "neutral",
+      "status": 1
+     },
+     "chartPath": "apiV5/domain/ceo-command-center/safety/2026/07/chart/b_domain.json",
+     "rightTitle": "vụ"
+    }
+   ]
+  },
+  {
+   "title": "",
+   "items": [
+    {
+     "id": "b_class",
+     "col": 1,
+     "colSpan": 60,
+     "row": 1,
+     "rowSpan": 1,
+     "title": "Phân loại sự cố theo mức độ nghiêm trọng",
+     "aiInsight": {
+      "text": "Tháng 7/2026 không ghi nhận sự cố mức A/B/C. Có 1 vụ mức D và 8 vụ mức E — tổng 9 vụ, đạt ngưỡng ≤10.",
+      "viewpoint": "good",
       "status": 1
      },
      "extraComponent": {
@@ -148,37 +109,37 @@
          {
           "id": "cat",
           "type": "string",
-          "label": "Phân loại sự cố"
+          "label": "Phân loại"
          },
          {
-          "id": "thang_nay",
+          "id": "t6",
           "type": "number",
-          "label": "Tháng này"
+          "label": "Tháng 6/2026"
          },
          {
-          "id": "thang_truoc",
+          "id": "t7",
           "type": "number",
-          "label": "Tháng trước"
+          "label": "Tháng 7/2026"
          },
          {
-          "id": "cung_ky",
+          "id": "ck_t7",
           "type": "number",
-          "label": "Cùng kỳ"
+          "label": "Cùng kỳ T7/2025"
          },
          {
-          "id": "luy_ke",
+          "id": "q2",
           "type": "number",
-          "label": "Lũy kế từ đầu năm"
+          "label": "Quý 2/2026"
          },
          {
-          "id": "cung_ky_luy_ke",
+          "id": "ck_q2",
           "type": "number",
-          "label": "Cùng kỳ lũy kế"
+          "label": "Cùng kỳ Quý 2/2025"
          }
         ],
         "rows": [
          [
-          "A (rất nặng)",
+          "A",
           0,
           0,
           0,
@@ -186,67 +147,67 @@
           0
          ],
          [
-          "B (nặng)",
+          "B",
           0,
-          1,
           0,
-          1,
+          0,
+          0,
           0
          ],
          [
-          "C (trung bình)",
+          "C",
+          0,
           0,
           1,
-          1,
-          2,
+          0,
           1
          ],
          [
-          "D (nhẹ)",
+          "D",
           2,
+          1,
           2,
-          3,
-          7,
-          6
+          5,
+          5
          ],
          [
-          "E (khác)",
-          11,
+          "E",
+          7,
+          8,
           10,
-          9,
-          33,
-          28
+          24,
+          30
          ],
          [
           "Tổng cộng",
+          9,
+          9,
           13,
-          14,
-          13,
-          43,
-          35
+          29,
+          36
          ]
         ]
        },
        "rowStyle": {
-        "A (rất nặng)": {
-         "backgroundColor": "#DC2626",
-         "textColor": "#000000"
+        "A": {
+         "backgroundColor": "#FEE2E2",
+         "textColor": "#B91C1C"
         },
-        "B (nặng)": {
-         "backgroundColor": "#F97316",
-         "textColor": "#000000"
+        "B": {
+         "backgroundColor": "#FEF3C7",
+         "textColor": "#B45309"
         },
-        "C (trung bình)": {
-         "backgroundColor": "#EAB308",
-         "textColor": "#000000"
+        "C": {
+         "backgroundColor": "#FEF3C7",
+         "textColor": "#B45309"
         },
-        "D (nhẹ)": {
-         "backgroundColor": "#22C55E",
-         "textColor": "#000000"
+        "D": {
+         "backgroundColor": "#DCFCE7",
+         "textColor": "#15803D"
         },
-        "E (khác)": {
-         "backgroundColor": "#00558F",
-         "textColor": "#000000"
+        "E": {
+         "backgroundColor": "#D1FAE5",
+         "textColor": "#047857"
         },
         "Tổng cộng": {
          "textColor": "#000000",
@@ -255,118 +216,6 @@
        }
       }
      }
-    }
-   ]
-  },
-  {
-   "title": "Chi tiết các sự cố điển hình theo lĩnh vực được chọn",
-   "items": [
-    {
-     "id": "b_ratio",
-     "col": 1,
-     "colSpan": 16,
-     "row": 1,
-     "rowSpan": 1,
-     "title": "Tỷ lệ sự cố theo lĩnh vực",
-     "aiInsight": {
-      "text": "Khai thác bay chiếm 60% tổng số sự cố, chủ yếu liên quan đến approach hạ cánh và cảnh báo TCAS. Kỹ thuật chiếm 30% với các sự cố động cơ và hệ thống. Cần tập trung giảng bình approach và bảo dưỡng phòng ngừa.",
-      "severity": "warn",
-      "status": 1
-     },
-     "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_ratio.json"
-    },
-    {
-     "id": "b_detail",
-     "col": 17,
-     "colSpan": 44,
-     "row": 1,
-     "rowSpan": 1,
-     "aiInsight": {
-      "text": "Sự cố điển hình: máy bay trệ đường băng khi hạ cánh tại HAN-SGN (12/06), cảnh báo TCAS DAD-HAN (15/05), sự cố động cơ SGN-DAD (28/05). Các sự cố đều đã được xử lý và có báo cáo gửi Cục HK.",
-      "severity": "warn",
-      "status": 1
-     },
-     "extraComponent": {
-      "type": "table",
-      "config": {
-       "dataset": {
-        "columns": [
-         {
-          "id": "field",
-          "type": "string",
-          "label": "Lĩnh vực"
-         },
-         {
-          "id": "name",
-          "type": "string",
-          "label": "Tên sự cố"
-         },
-         {
-          "id": "date",
-          "type": "string",
-          "label": "Ngày xảy ra"
-         },
-         {
-          "id": "route",
-          "type": "string",
-          "label": "Chặng bay"
-         }
-        ],
-        "rows": [
-         [
-          "Khai thác bay",
-          "Máy bay trệ đường băng khi hạ cánh",
-          "12/06/2026",
-          "HAN-SGN"
-         ],
-         [
-          "Khai thác bay",
-          "Cảnh báo va chạm trên không (TCAS)",
-          "15/05/2026",
-          "DAD-HAN"
-         ],
-         [
-          "Kỹ thuật",
-          "Sự cố kỹ thuật động cơ trước chuyến bay",
-          "28/05/2026",
-          "SGN-DAD"
-         ],
-         [
-          "Kỹ thuật",
-          "Sự cố hệ thống thông tin liên lạc",
-          "02/04/2026",
-          "SGN-HAN"
-         ],
-         [
-          "Khai thác mặt đất",
-          "Chuyển hướng khẩn cấp do thời tiết",
-          "18/03/2026",
-          "HAN-DAD"
-         ]
-        ]
-       }
-      }
-     }
-    }
-   ]
-  },
-  {
-   "items": [
-    {
-     "id": "b_fleet_risk",
-     "title": "Risk Index 4 đội bay — Unstable Approach",
-     "col": 1,
-     "colSpan": 60,
-     "row": 1,
-     "rowSpan": 1,
-     "height": 260,
-     "aiInsight": {
-      "text": "B787 T6 tăng lên 3E, T7 duy trì 3E — bounce landing NRT, GPWS HND. A321 Tăng từ 3E (T4) lên 4E (T6-T7) — 3 sự cố LV3 tại BKK. ATR72 dừng khai thác từ T6. A350 ổn định ở 2E-3E.",
-      "severity": "warn",
-      "recommendation": "A321 cần giảng bình chuyên đề approach BKK. B787 tăng cường briefing GPWS & flare technique trước khai thác sân bay Nhật/Hàn.",
-      "status": 1
-     },
-     "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_fleet_risk.json"
     }
    ]
   }

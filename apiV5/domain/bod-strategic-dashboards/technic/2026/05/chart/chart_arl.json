@@ -1,250 +1,39 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "combo",
     "dataset": {
       "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "actual",
-          "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
-        },
-        {
-          "id": "samePeriod",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
-        },
-        {
-          "id": "plan",
-          "type": "number",
-          "label": "Kế hoạch",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "target",
-          "type": "number",
-          "label": "Mục tiêu năm",
-          "color": "#D3AC2B",
-          "lineDash": [
-            5,
-            5
-          ]
-        },
-        {
-          "id": "actual_cum",
-          "type": "number",
-          "label": "Thực hiện (LK)",
-          "color": "#004071"
-        },
-        {
-          "id": "samePeriod_cum",
-          "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "color": "#94A3B8"
-        },
-        {
-          "id": "plan_cum",
-          "type": "number",
-          "label": "Kế hoạch (LK)",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "target_cum",
-          "type": "number",
-          "label": "Mục tiêu năm (LK)",
-          "color": "#D3AC2B"
-        }
+        { "id": "month", "type": "string" },
+        { "id": "actual", "type": "number", "label": "Thực tế", "color": "#F97316" },
+        { "id": "plan", "type": "number", "label": "Kế hoạch 12 tháng", "color": "#1E3A8A" },
+        { "id": "samePeriod", "type": "number", "label": "Cùng kỳ 12 tháng", "color": "#94A3B8" },
+        { "id": "target", "type": "number", "label": "Mục tiêu", "color": "#D3AC2B", "lineDash": [6, 4] }
       ],
       "rows": [
-        [
-          "T1",
-          93.5,
-          93,
-          93.2,
-          93.2,
-          93.5,
-          93,
-          93.2,
-          93.2
-        ],
-        [
-          "T2",
-          93.2,
-          92.8,
-          93.2,
-          93.2,
-          186.7,
-          185.8,
-          186.4,
-          186.4
-        ],
-        [
-          "T3",
-          92.8,
-          92.5,
-          93.2,
-          93.2,
-          279.5,
-          278.3,
-          279.6,
-          279.6
-        ],
-        [
-          "T4",
-          92.5,
-          92.2,
-          93.2,
-          93.2,
-          372,
-          370.5,
-          372.8,
-          372.8
-        ],
-        [
-          "T5",
-          92,
-          91.8,
-          93.2,
-          93.2,
-          464,
-          462.3,
-          466,
-          466
-        ],
-        [
-          "T6",
-          91.8,
-          91.8,
-          93.2,
-          93.2,
-          555.8,
-          554.1,
-          559.2,
-          559.2
-        ],
-        [
-          "T7",
-          91.8,
-          92.8,
-          93.2,
-          93.2,
-          647.6,
-          646.9,
-          652.4,
-          652.4
-        ],
-        [
-          "T8",
-          null,
-          93.2,
-          93.2,
-          93.2,
-          647.6,
-          740.1,
-          745.6,
-          745.6
-        ],
-        [
-          "T9",
-          null,
-          93.5,
-          93.2,
-          93.2,
-          647.6,
-          833.6,
-          838.8,
-          838.8
-        ],
-        [
-          "T10",
-          null,
-          93.8,
-          93.2,
-          93.2,
-          647.6,
-          927.4,
-          932,
-          932
-        ],
-        [
-          "T11",
-          null,
-          93.5,
-          93.2,
-          93.2,
-          647.6,
-          1020.9,
-          1025.2,
-          1025.2
-        ],
-        [
-          "T12",
-          null,
-          93.2,
-          93.2,
-          93.2,
-          647.6,
-          1114.1,
-          1118.4,
-          1118.4
-        ]
+        ["T1", 94.9, 94.8, 94.3, 95.5],
+        ["T2", 95.3, 95.0, 94.8, 95.5],
+        ["T3", 95.6, 95.3, 95.0, 95.5],
+        ["T4", 95.9, 95.6, 95.3, 95.5],
+        ["T5", 95.4, 95.8, 94.8, 95.5],
+        ["T6", 95.1, 96.0, 94.5, 95.5],
+        ["T7", 94.87, 96.2, 94.2, 95.5],
+        ["T8", null, 96.0, 94.6, 95.5],
+        ["T9", null, 95.7, 94.3, 95.5],
+        ["T10", null, 95.4, 95.0, 95.5],
+        ["T11", null, 95.0, 95.6, 95.5],
+        ["T12", null, 94.7, 95.2, 95.5]
       ]
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual",
-            "chartType": "line"
-          },
-          {
-            "field": "samePeriod",
-            "chartType": "line"
-          },
-          {
-            "field": "plan",
-            "chartType": "line"
-          },
-          {
-            "field": "target",
-            "chartType": "line"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "samePeriod_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "plan_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "target_cum",
-            "chartType": "line"
-          }
-        ]
-      }
-    ],
-    "viewSwitch": {
-      "enabled": true
-    }
+    "views": [{
+      "id": "main",
+      "chartType": "combo",
+      "xField": "month",
+      "series": [
+        { "field": "actual", "chartType": "bar" },
+        { "field": "plan", "chartType": "line" },
+        { "field": "samePeriod", "chartType": "line" },
+        { "field": "target", "chartType": "line" }
+      ]
+    }]
   }
 }

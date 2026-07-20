@@ -1,0 +1,101 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực tế",
+          "color": "#F97316"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "Mục tiêu",
+          "color": "#CBD5E1"
+        },
+        {
+          "id": "actual_ytd",
+          "type": "number",
+          "label": "Thực tế (LK)",
+          "color": "#F97316"
+        },
+        {
+          "id": "target_ytd",
+          "type": "number",
+          "label": "Mục tiêu (LK)",
+          "color": "#CBD5E1"
+        }
+      ],
+      "rows": [
+        [
+          "B787",
+          1,
+          1,
+          7,
+          7
+        ],
+        [
+          "A350",
+          0,
+          1,
+          0,
+          7
+        ],
+        [
+          "A321",
+          2,
+          1,
+          14,
+          7
+        ],
+        [
+          "ATR72",
+          0,
+          1,
+          0,
+          7
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "fleet",
+        "label": "Theo tháng",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "target",
+            "chartType": "bar"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "bar",
+        "xField": "fleet",
+        "label": "LK: 21",
+        "series": [
+          {
+            "field": "actual_ytd",
+            "chartType": "bar"
+          },
+          {
+            "field": "target_ytd",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

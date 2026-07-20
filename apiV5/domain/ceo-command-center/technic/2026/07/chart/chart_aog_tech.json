@@ -1,0 +1,157 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "tech",
+          "type": "number",
+          "label": "AOG kỹ thuật",
+          "color": "#F97316"
+        },
+        {
+          "id": "nonTech",
+          "type": "number",
+          "label": "AOG phi kỹ thuật",
+          "color": "#94A3B8"
+        },
+        {
+          "id": "tech_cum",
+          "type": "number",
+          "label": "AOG kỹ thuật (LK)",
+          "color": "#F97316"
+        },
+        {
+          "id": "nonTech_cum",
+          "type": "number",
+          "label": "AOG phi kỹ thuật (LK)",
+          "color": "#94A3B8"
+        }
+      ],
+      "rows": [
+        [
+          "T8",
+          1.6,
+          0.8,
+          1.6,
+          0.8
+        ],
+        [
+          "T9",
+          1.5,
+          0.75,
+          1.55,
+          0.78
+        ],
+        [
+          "T10",
+          1.4,
+          0.7,
+          1.5,
+          0.75
+        ],
+        [
+          "T11",
+          1.3,
+          0.65,
+          1.45,
+          0.72
+        ],
+        [
+          "T12",
+          1.2,
+          0.6,
+          1.4,
+          0.7
+        ],
+        [
+          "T1",
+          1.1,
+          0.55,
+          1.35,
+          0.67
+        ],
+        [
+          "T2",
+          1.0,
+          0.5,
+          1.3,
+          0.65
+        ],
+        [
+          "T3",
+          0.9,
+          0.48,
+          1.25,
+          0.63
+        ],
+        [
+          "T4",
+          1.0,
+          0.5,
+          1.22,
+          0.61
+        ],
+        [
+          "T5",
+          1.1,
+          0.52,
+          1.21,
+          0.6
+        ],
+        [
+          "T6",
+          0.95,
+          0.5,
+          1.19,
+          0.6
+        ],
+        [
+          "T7",
+          0.88,
+          0.48,
+          1.16,
+          0.59
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "label": "Theo T12",
+        "series": [
+          {
+            "field": "tech",
+            "chartType": "line"
+          },
+          {
+            "field": "nonTech",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "label": "LK: 1,16",
+        "series": [
+          {
+            "field": "tech_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "nonTech_cum",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}
