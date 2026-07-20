@@ -1,0 +1,24 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        { "id": "cause", "type": "string" },
+        { "id": "pct", "type": "number", "label": "% tổng phút chậm" }
+      ],
+      "rows": [
+        ["Mã 71-77 · Tàu bay đến muộn", 34],
+        ["Mã 41-48 · Lỗi kỹ thuật tàu bay", 26],
+        ["Mã 91-96 · ATC/Không lưu", 21],
+        ["Mã 61-69 · Phục vụ mặt đất", 12],
+        ["Mã 11-18 · Thời tiết", 7]
+      ]
+    },
+    "views": [{
+      "id": "main", "chartType": "bar", "xField": "cause",
+      "series": [
+        { "field": "pct", "chartType": "bar" }
+      ]
+    }]
+  }
+}
