@@ -1,29 +1,26 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "sunburst",
     "dataset": {
       "columns": [
         { "id": "name", "type": "string" },
         { "id": "parent", "type": "string" },
-        { "id": "value", "type": "number", "label": "% số vụ" },
-        { "id": "color", "type": "string" }
+        { "id": "value", "type": "number" }
       ],
       "rows": [
-        ["Kỹ thuật", "", 65, "#EA580C"],
-        ["Phi kỹ thuật", "", 35, "#94A3B8"],
-        ["Động cơ (Engine)", "Kỹ thuật", 25, "#7F1D1D"],
-        ["Càng đáp (Landing gear)", "Kỹ thuật", 15, "#9A3412"],
-        ["Hệ thống điện/Avionics", "Kỹ thuật", 13, "#C2410C"],
-        ["Khung sườn/Kết cấu", "Kỹ thuật", 12, "#D9A066"]
+        ["Kỹ thuật", "", 65],
+        ["Phi kỹ thuật", "", 35],
+        ["Động cơ", "Kỹ thuật", 25],
+        ["Càng đáp", "Kỹ thuật", 15],
+        ["Hệ thống điện", "Kỹ thuật", 13],
+        ["Khung sườn", "Kỹ thuật", 12]
       ]
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap",
-        "xField": "name",
-        "series": [{ "field": "value", "chartType": "treemap" }]
-      }
-    ]
+    "views": [{
+      "id": "main",
+      "chartType": "sunburst",
+      "xField": "name",
+      "series": [{ "field": "value", "chartType": "sunburst" }]
+    }]
   }
 }

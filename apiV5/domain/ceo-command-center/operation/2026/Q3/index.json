@@ -1,0 +1,1550 @@
+{
+  "titleInfo": {
+    "title": "Khai thác",
+    "statusLabel": "REAL TIME",
+    "description": "Level 2 · Tổng Giám đốc · Sản lượng chuyến bay, đội tàu bay khai thác, đúng giờ chuyến đi (OTP/OSP)"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "fls",
+        "status": "compact",
+        "title": "Tổng số chuyến bay khai thác",
+        "value": "9.842",
+        "unit": "chuyến/tháng",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "Kế hoạch: -0,6%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Kỳ trước: +2,5%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Cùng kỳ: +3,1%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "tbkt",
+        "status": "compact",
+        "title": "Tổng số tàu bay khai thác",
+        "value": "92",
+        "unit": "tàu/tháng (TB)",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "Kế hoạch: +1,1%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Kỳ trước: +2,2%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Cùng kỳ: +4,5%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "bh_tb",
+        "status": "compact",
+        "title": "Giờ bay trung bình tàu bay/ngày",
+        "value": "11,6",
+        "unit": "giờ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "Kế hoạch: -1,7%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "Kỳ trước: -0,9%",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Cùng kỳ: 0,0%",
+            "tone": "neutral",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "otp_dep",
+        "status": "compact",
+        "title": "Chỉ số đúng giờ chuyến đi (OTP DEP)",
+        "value": "89,5",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "Kế hoạch: +0,5%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Kỳ trước: +0,7%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Cùng kỳ: +2,2%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "osp_dep",
+        "status": "compact",
+        "title": "Chỉ số đúng giờ tuyệt đối (OSP DEP)",
+        "value": "78,2",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "Kế hoạch: +0,3%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Kỳ trước: +0,9%",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "Cùng kỳ: +2,9%",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "FLS — Chi tiết theo loại hình khai thác",
+      "items": [
+        {
+          "id": "b_fls_group",
+          "col": 1,
+          "colSpan": 30,
+          "height": 300,
+          "title": "FLS theo hãng",
+          "subTitle": "Số chuyến bay",
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "hang",
+                  "type": "string"
+                },
+                {
+                  "id": "thuc_hien",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "thuc_hien_cum",
+                  "type": "number",
+                  "label": "Thực hiện lũy kế",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "ke_hoach",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "colorToken": "series.target"
+                },
+                {
+                  "id": "ke_hoach_cum",
+                  "type": "number",
+                  "label": "Kế hoạch lũy kế",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "VNA Group",
+                  9842,
+                  64842,
+                  9900,
+                  65224
+                ],
+                [
+                  "VN",
+                  7850,
+                  51720,
+                  7900,
+                  52048
+                ],
+                [
+                  "0V (VASCO)",
+                  1200,
+                  7905,
+                  1200,
+                  7905
+                ],
+                [
+                  "BL (Pacific Airlines)",
+                  792,
+                  5217,
+                  800,
+                  5271
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "hang",
+                "series": [
+                  {
+                    "field": "thuc_hien",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "ke_hoach",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "Theo tháng"
+              },
+              {
+                "id": "main_cum",
+                "chartType": "bar",
+                "xField": "hang",
+                "series": [
+                  {
+                    "field": "thuc_hien_cum",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "ke_hoach_cum",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "LK T1–T7: 64.842"
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "VNA Group đạt 9.842 chuyến trong tháng, đạt 99,4% kế hoạch. VN chiếm 79,8% tổng sản lượng, 0V và BL duy trì ổn định với lần lượt 1.200 và 792 chuyến.",
+            "severity": "good"
+          }
+        },
+        {
+          "id": "b_fls_scheduled",
+          "col": 31,
+          "colSpan": 30,
+          "height": 300,
+          "title": "FLS thường lệ chở khách",
+          "subTitle": "Số chuyến bay",
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "kv",
+                  "type": "string"
+                },
+                {
+                  "id": "thuc_hien",
+                  "type": "number",
+                  "label": "Thực hiện",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "thuc_hien_cum",
+                  "type": "number",
+                  "label": "Thực hiện lũy kế",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "ke_hoach",
+                  "type": "number",
+                  "label": "Kế hoạch",
+                  "colorToken": "series.target"
+                },
+                {
+                  "id": "ke_hoach_cum",
+                  "type": "number",
+                  "label": "Kế hoạch lũy kế",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "Tổng",
+                  9742,
+                  64182,
+                  9800,
+                  64565
+                ],
+                [
+                  "DOM",
+                  6297,
+                  41487,
+                  6300,
+                  41505
+                ],
+                [
+                  "INT",
+                  3445,
+                  22695,
+                  3500,
+                  23060
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "kv",
+                "series": [
+                  {
+                    "field": "thuc_hien",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "ke_hoach",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "Theo tháng"
+              },
+              {
+                "id": "main_cum",
+                "chartType": "bar",
+                "xField": "kv",
+                "series": [
+                  {
+                    "field": "thuc_hien_cum",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "ke_hoach_cum",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "LK T1–T7: 64.182"
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "FLS thường lệ chở khách đạt 9.742 chuyến, đạt 99,4% kế hoạch. Nội địa (6.297 chuyến) và quốc tế (3.445 chuyến) đều xấp xỉ mục tiêu, cho thấy hoạt động khai thác ổn định.",
+            "severity": "good"
+          }
+        },
+        {
+          "id": "b_fls_pie",
+          "col": 1,
+          "colSpan": 30,
+          "height": 280,
+          "title": "FLS theo loại hình chuyến bay",
+          "subTitle": "Số chuyến bay",
+          "autoChart": {
+            "chartType": "pie",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "label",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "PXR (Thường lệ)",
+                  9500
+                ],
+                [
+                  "PXC (Thuê chuyến)",
+                  242
+                ],
+                [
+                  "Cargo",
+                  62
+                ],
+                [
+                  "Ferry",
+                  28
+                ],
+                [
+                  "VIP",
+                  10
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "pie",
+                "xField": "label",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "pie"
+                  }
+                ]
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "Chuyến bay thường lệ (PXR) chiếm 96,5% tổng số, phản ánh đúng định vị hãng hàng không truyền thống. Thuê chuyến (PXC) 2,5%, các loại hình khác chiếm tỷ trọng không đáng kể.",
+            "severity": "good"
+          }
+        },
+        {
+          "id": "b_fls_table",
+          "col": 31,
+          "colSpan": 30,
+          "title": "Chi tiết theo loại hình",
+          "subTitle": "Mã loại hình chuyến bay",
+          "table": {
+            "columns": [
+              {
+                "id": "code",
+                "label": "Mã",
+                "type": "text"
+              },
+              {
+                "id": "name",
+                "label": "Loại hình",
+                "type": "text"
+              },
+              {
+                "id": "count",
+                "label": "Số chuyến",
+                "type": "number",
+                "align": "right"
+              },
+              {
+                "id": "pct",
+                "label": "Tỷ trọng",
+                "type": "number",
+                "align": "right"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "code": "PXR",
+                  "name": "Thường lệ",
+                  "count": 9500,
+                  "pct": 96.5
+                }
+              },
+              {
+                "cells": {
+                  "code": "PXC",
+                  "name": "Thuê chuyến",
+                  "count": 242,
+                  "pct": 2.5
+                }
+              },
+              {
+                "cells": {
+                  "code": "Cargo",
+                  "name": "Chở hàng",
+                  "count": 62,
+                  "pct": 0.6
+                }
+              },
+              {
+                "cells": {
+                  "code": "Ferry",
+                  "name": "Chuyển sân",
+                  "count": 28,
+                  "pct": 0.3
+                }
+              },
+              {
+                "cells": {
+                  "code": "VIP",
+                  "name": "Chuyên cơ",
+                  "count": 10,
+                  "pct": 0.1
+                }
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "PXR (Thường lệ) 9.500 chuyến (96,5%) chiếm ưu thế tuyệt đối. PXC 2,5%; Cargo/Ferry/VIP dưới 1% — cơ cấu loại hình ổn định, không phát sinh bất thường.",
+            "severity": "good"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Đội tàu bay khai thác",
+      "items": [
+        {
+          "id": "b_fleet_ratio",
+          "col": 1,
+          "colSpan": 20,
+          "height": 200,
+          "title": "Tổng số tàu khai thác / Tổng số tàu có",
+          "subTitle": "Tháng 7/2026",
+          "autoChart": {
+            "chartType": "center-donut",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "label",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "Khai thác",
+                  92
+                ],
+                [
+                  "Ngừng khai thác",
+                  4
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "center-donut",
+                "xField": "label",
+                "series": [
+                  {
+                    "field": "value",
+                    "chartType": "donut"
+                  }
+                ]
+              }
+            ]
+          },
+          "extraComponent": {
+            "type": "text-stats",
+            "position": "right",
+            "chartSpan": 6,
+            "extraSpan": 6,
+            "config": {
+              "items": [
+                {
+                  "value": "92",
+                  "label": "tàu khai thác"
+                },
+                {
+                  "value": "96",
+                  "label": "tàu có"
+                },
+                {
+                  "label": "4 tàu ngừng khai thác (bảo dưỡng/dừng bay)",
+                  "muted": true
+                }
+              ]
+            }
+          },
+          "aiInsight": {
+            "text": "Tỷ lệ khai thác đội tàu đạt 95,8% (92/96 tàu), trong đó 4 tàu ngừng do bảo dưỡng định kỳ. Đây là tỷ lệ khả quan, cho thấy công tác quản lý đội tàu hiệu quả.",
+            "severity": "good"
+          }
+        },
+        {
+          "id": "b_fleet_by_type",
+          "col": 21,
+          "colSpan": 40,
+          "height": 200,
+          "title": "Số tàu khai thác theo từng đội tàu / số tàu có",
+          "subTitle": "Số tàu bay",
+          "autoChart": {
+            "chartType": "bar",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "type",
+                  "type": "string"
+                },
+                {
+                  "id": "khai_thac",
+                  "type": "number",
+                  "label": "Khai thác",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "khai_thac_cum",
+                  "type": "number",
+                  "label": "Khai thác (TB LK)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "total",
+                  "type": "number",
+                  "label": "Tổng số tàu có",
+                  "colorToken": "series.target"
+                },
+                {
+                  "id": "total_cum",
+                  "type": "number",
+                  "label": "Tổng số tàu có (TB LK)",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "A321",
+                  48,
+                  46,
+                  50,
+                  50
+                ],
+                [
+                  "A350",
+                  14,
+                  14,
+                  15,
+                  15
+                ],
+                [
+                  "B787",
+                  12,
+                  12,
+                  13,
+                  13
+                ],
+                [
+                  "ATR72",
+                  18,
+                  17,
+                  18,
+                  18
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "bar",
+                "xField": "type",
+                "series": [
+                  {
+                    "field": "khai_thac",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "total",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "Theo tháng"
+              },
+              {
+                "id": "main_cum",
+                "chartType": "bar",
+                "xField": "type",
+                "series": [
+                  {
+                    "field": "khai_thac_cum",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "total_cum",
+                    "chartType": "bar"
+                  }
+                ],
+                "label": "TB T1–T7: 89"
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "Đội bay A321 dẫn đầu với 48 tàu khai thác/50 tàu có (96%). ATR72 đạt tỷ lệ 100% (18/18). A350 và B787 có 1 tàu mỗi loại đang bảo dưỡng định kỳ.",
+            "severity": "good"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Đúng giờ chuyến bay đi (DEP)",
+      "subTitle": "12 tháng gần nhất",
+      "items": [
+        {
+          "id": "b_otp_dep",
+          "col": 1,
+          "colSpan": 30,
+          "height": 300,
+          "title": "OTP đi theo thời gian",
+          "subTitle": "% · T1–T12/2026 · xanh: nét liền T1–T7, nét đứt T8–T12 · vàng đứt: mục tiêu",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "otp",
+                  "type": "number",
+                  "label": "OTP đi (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "otp_fc",
+                  "type": "number",
+                  "label": "OTP đi (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "otp_cum",
+                  "type": "number",
+                  "label": "OTP đi lũy kế (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "otp_cum_fc",
+                  "type": "number",
+                  "label": "OTP đi lũy kế (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "target",
+                  "type": "number",
+                  "label": "Mục tiêu",
+                  "colorToken": "series.target"
+                },
+                {
+                  "id": "target_cum",
+                  "type": "number",
+                  "label": "Mục tiêu",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  87.8,
+                  null,
+                  87.8,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T2",
+                  89.0,
+                  null,
+                  88.4,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T3",
+                  89.3,
+                  null,
+                  88.7,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T4",
+                  88.8,
+                  null,
+                  88.7,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T5",
+                  90.1,
+                  null,
+                  89.0,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T6",
+                  88.9,
+                  null,
+                  89.0,
+                  null,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T7",
+                  89.5,
+                  89.5,
+                  89.1,
+                  89.1,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T8",
+                  null,
+                  89.5,
+                  null,
+                  89.1,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T9",
+                  null,
+                  89.6,
+                  null,
+                  89.2,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T10",
+                  null,
+                  89.6,
+                  null,
+                  89.2,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T11",
+                  null,
+                  89.7,
+                  null,
+                  89.3,
+                  90.0,
+                  90.0
+                ],
+                [
+                  "T12",
+                  null,
+                  89.8,
+                  null,
+                  89.3,
+                  90.0,
+                  90.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "label": "Theo T12",
+                "series": [
+                  {
+                    "field": "otp",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "otp_fc",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  },
+                  {
+                    "field": "target",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  }
+                ]
+              },
+              {
+                "id": "main_cum",
+                "chartType": "line",
+                "xField": "month",
+                "label": "LK T1–T7: 89,1",
+                "series": [
+                  {
+                    "field": "otp_cum",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "otp_cum_fc",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  },
+                  {
+                    "field": "target_cum",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  }
+                ]
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "OTP đi tháng 7 đạt 89,5%, tăng 0,6% so với tháng trước nhưng vẫn dưới mục tiêu 90%. Xu hướng 12 tháng gần nhất đang cải thiện dần, với đỉnh 90,1% vào tháng 5/2026.",
+            "severity": "warn",
+            "recommendation": "Tập trung cải thiện OTP tại các sân bay trọng điểm: HAN, SGN để tiến gần mục tiêu 90%."
+          }
+        },
+        {
+          "id": "b_osp_dep",
+          "col": 31,
+          "colSpan": 30,
+          "height": 300,
+          "title": "OSP đi theo thời gian",
+          "subTitle": "% · T1–T12/2026 · xanh: nét liền T1–T7, nét đứt T8–T12 · vàng đứt: mục tiêu",
+          "autoChart": {
+            "chartType": "line",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "month",
+                  "type": "string"
+                },
+                {
+                  "id": "osp",
+                  "type": "number",
+                  "label": "OSP đi (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "osp_fc",
+                  "type": "number",
+                  "label": "OSP đi (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "osp_cum",
+                  "type": "number",
+                  "label": "OSP đi lũy kế (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "osp_cum_fc",
+                  "type": "number",
+                  "label": "OSP đi lũy kế (%)",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "target",
+                  "type": "number",
+                  "label": "Mục tiêu",
+                  "colorToken": "series.target"
+                },
+                {
+                  "id": "target_cum",
+                  "type": "number",
+                  "label": "Mục tiêu",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "T1",
+                  75.0,
+                  null,
+                  75.0,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T2",
+                  76.5,
+                  null,
+                  75.7,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T3",
+                  76.9,
+                  null,
+                  76.1,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T4",
+                  76.3,
+                  null,
+                  76.2,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T5",
+                  77.8,
+                  null,
+                  76.5,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T6",
+                  76.5,
+                  null,
+                  76.5,
+                  null,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T7",
+                  78.2,
+                  78.2,
+                  76.8,
+                  76.8,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T8",
+                  null,
+                  78.3,
+                  null,
+                  77.0,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T9",
+                  null,
+                  78.5,
+                  null,
+                  77.2,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T10",
+                  null,
+                  78.7,
+                  null,
+                  77.3,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T11",
+                  null,
+                  78.9,
+                  null,
+                  77.5,
+                  80.0,
+                  80.0
+                ],
+                [
+                  "T12",
+                  null,
+                  79.1,
+                  null,
+                  77.6,
+                  80.0,
+                  80.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "line",
+                "xField": "month",
+                "label": "Theo T12",
+                "series": [
+                  {
+                    "field": "osp",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "osp_fc",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  },
+                  {
+                    "field": "target",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  }
+                ]
+              },
+              {
+                "id": "main_cum",
+                "chartType": "line",
+                "xField": "month",
+                "label": "LK T1–T7: 76,8",
+                "series": [
+                  {
+                    "field": "osp_cum",
+                    "chartType": "line",
+                    "lineType": "solid"
+                  },
+                  {
+                    "field": "osp_cum_fc",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  },
+                  {
+                    "field": "target_cum",
+                    "chartType": "line",
+                    "lineType": "dashed"
+                  }
+                ]
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "OSP đi tháng 7 đạt 78,2%, tăng 1,7% so với tháng trước nhưng vẫn cách mục tiêu 80% khá xa. Đây là chỉ số cần đặc biệt quan tâm vì phản ánh chất lượng điều hành bay tổng thể.",
+            "severity": "warn",
+            "recommendation": "Rà soát quy trình điều hành mặt đất, đặc biệt tại các sân bay có OSP thấp: CXR, DAD."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Nguyên nhân & bất thường phát sinh",
+      "subTitle": "",
+      "items": [
+        {
+          "id": "b_delay_pareto",
+          "col": 1,
+          "colSpan": 20,
+          "height": 320,
+          "title": "Phân rã mã nguyên nhân chậm chuyến (Pareto)",
+          "subTitle": "Cột: phút chậm · đường: % luỹ kế, tháng 7/2026",
+          "autoChart": {
+            "chartType": "combo",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "code",
+                  "type": "string"
+                },
+                {
+                  "id": "minutes",
+                  "type": "number",
+                  "label": "Phút chậm",
+                  "colorToken": "series.actual"
+                },
+                {
+                  "id": "cumPct",
+                  "type": "number",
+                  "label": "% Luỹ kế",
+                  "colorToken": "series.target"
+                }
+              ],
+              "rows": [
+                [
+                  "TC",
+                  1450,
+                  28.9
+                ],
+                [
+                  "WX",
+                  1200,
+                  52.9
+                ],
+                [
+                  "RA",
+                  980,
+                  72.5
+                ],
+                [
+                  "PA",
+                  580,
+                  84.0
+                ],
+                [
+                  "CG",
+                  520,
+                  94.4
+                ],
+                [
+                  "AT",
+                  280,
+                  100.0
+                ]
+              ]
+            },
+            "views": [
+              {
+                "id": "main",
+                "chartType": "combo",
+                "xField": "code",
+                "series": [
+                  {
+                    "field": "minutes",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "cumPct",
+                    "chartType": "line",
+                    "yAxis": "right"
+                  }
+                ]
+              }
+            ]
+          },
+          "aiInsight": {
+            "text": "TC chiếm 28,9% phút chậm; WX + RA đẩy top-3 lên 72,5%. Ưu tiên xử lý kỹ thuật.",
+            "severity": "crit"
+          },
+          "row": 1
+        },
+        {
+          "id": "b_iata_table",
+          "col": 21,
+          "colSpan": 20,
+          "title": "Chi tiết mã nguyên nhân IATA",
+          "subTitle": "Mã IATA",
+          "table": {
+            "columns": [
+              {
+                "id": "code",
+                "label": "Mã",
+                "type": "chip"
+              },
+              {
+                "id": "reason",
+                "label": "Nguyên nhân chính",
+                "type": "text"
+              },
+              {
+                "id": "freq",
+                "label": "Tần suất",
+                "type": "number",
+                "align": "right"
+              },
+              {
+                "id": "total_min",
+                "label": "Tổng phút",
+                "type": "number",
+                "align": "right"
+              },
+              {
+                "id": "trend",
+                "label": "Xu hướng",
+                "type": "trend"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "code": {
+                    "label": "TC",
+                    "color": "red"
+                  },
+                  "reason": "Kỹ thuật / lỗi tàu bay",
+                  "freq": 18,
+                  "total_min": 1450,
+                  "trend": {
+                    "direction": "up",
+                    "label": "Đỉnh điểm",
+                    "color": "red"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "code": {
+                    "label": "WX",
+                    "color": "yellow"
+                  },
+                  "reason": "Thời tiết tại sân bay đi",
+                  "freq": 15,
+                  "total_min": 1200,
+                  "trend": {
+                    "direction": "down",
+                    "label": "Giảm",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "code": {
+                    "label": "RA",
+                    "color": "yellow"
+                  },
+                  "reason": "Dây chuyền / tàu bay đến muộn",
+                  "freq": 45,
+                  "total_min": 980,
+                  "trend": {
+                    "direction": "up",
+                    "label": "Dây chuyền",
+                    "color": "red"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "code": {
+                    "label": "PA",
+                    "color": "blue"
+                  },
+                  "reason": "Hành khách",
+                  "freq": 22,
+                  "total_min": 580,
+                  "trend": {
+                    "direction": "down",
+                    "label": "Giảm",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "code": {
+                    "label": "CG",
+                    "color": "default"
+                  },
+                  "reason": "Xếp dỡ hàng hoá",
+                  "freq": 8,
+                  "total_min": 520,
+                  "trend": {
+                    "direction": "flat",
+                    "label": "Ổn định",
+                    "color": "default"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "code": {
+                    "label": "AT",
+                    "color": "green"
+                  },
+                  "reason": "Không lưu / ATC",
+                  "freq": 12,
+                  "total_min": 280,
+                  "trend": {
+                    "direction": "down",
+                    "label": "Giảm",
+                    "color": "green"
+                  }
+                }
+              }
+            ]
+          },
+          "row": 1,
+          "aiInsight": {
+            "text": "TC đang ở đỉnh điểm (1.450 phút); RA tần suất cao nhất (45). WX và PA đang giảm.",
+            "severity": "warn"
+          }
+        },
+        {
+          "id": "b_anomaly_table",
+          "col": 41,
+          "colSpan": 20,
+          "title": "Các bất thường phát sinh",
+          "subTitle": "Phân loại theo kỹ thuật, thời tiết, phát sinh khác",
+          "table": {
+            "columns": [
+              {
+                "id": "date",
+                "label": "Ngày",
+                "type": "text"
+              },
+              {
+                "id": "airport",
+                "label": "Sân bay",
+                "type": "text"
+              },
+              {
+                "id": "type",
+                "label": "Loại bất thường",
+                "type": "chip"
+              },
+              {
+                "id": "count",
+                "label": "SL chuyến bay",
+                "type": "number",
+                "align": "right"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "date": "09/06",
+                  "airport": "CXR",
+                  "type": {
+                    "label": "Thời tiết",
+                    "color": "blue"
+                  },
+                  "count": 5
+                }
+              },
+              {
+                "cells": {
+                  "date": "12/06",
+                  "airport": "SGN",
+                  "type": {
+                    "label": "Kỹ thuật",
+                    "color": "red"
+                  },
+                  "count": 2
+                }
+              },
+              {
+                "cells": {
+                  "date": "16/06",
+                  "airport": "SGN",
+                  "type": {
+                    "label": "Kỹ thuật",
+                    "color": "red"
+                  },
+                  "count": 3
+                }
+              },
+              {
+                "cells": {
+                  "date": "22/06",
+                  "airport": "SGN",
+                  "type": {
+                    "label": "Khác",
+                    "color": "default"
+                  },
+                  "count": 2
+                }
+              },
+              {
+                "cells": {
+                  "date": "28/06",
+                  "airport": "HAN",
+                  "type": {
+                    "label": "Kỹ thuật",
+                    "color": "red"
+                  },
+                  "count": 4
+                }
+              },
+              {
+                "cells": {
+                  "date": "30/06",
+                  "airport": "DAD",
+                  "type": {
+                    "label": "Khác",
+                    "color": "default"
+                  },
+                  "count": 3
+                }
+              },
+              {
+                "cells": {
+                  "date": "01/07",
+                  "airport": "DAD",
+                  "type": {
+                    "label": "Thời tiết",
+                    "color": "blue"
+                  },
+                  "count": 3
+                }
+              },
+              {
+                "cells": {
+                  "date": "04/07",
+                  "airport": "HAN",
+                  "type": {
+                    "label": "Thời tiết",
+                    "color": "blue"
+                  },
+                  "count": 6
+                }
+              }
+            ],
+            "maxHeight": 308
+          },
+          "row": 1,
+          "aiInsight": {
+            "text": "28 chuyến bất thường: Thời tiết 14, Kỹ thuật 9, Khác 5. HAN/DAD cần theo dõi thời tiết.",
+            "severity": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "title": "AI Insight — Tổng quan khai thác",
+      "items": [
+        {
+          "id": "b_ai_summary",
+          "col": 1,
+          "colSpan": 60,
+          "height": 280,
+          "extraComponent": {
+            "type": "card-html",
+            "config": {
+              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">📊 AI Insight — Đánh giá tổng quan khai thác</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>FLS</b> — đạt 9.842 chuyến (99,4% KH), tăng 3,1% so với cùng kỳ. Hoạt động khai thác ổn định trên toàn mạng.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Đội tàu</b> — 92/96 tàu khai thác (95,8%), 4 tàu bảo dưỡng định kỳ. Tỷ lệ khai thác cao, không có biến động bất thường.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#D3AC2B\"></span><b>OTP</b> — 89,5% (dưới mục tiêu 90%). Nguyên nhân TC (kỹ thuật) chiếm 28,9% tổng phút chậm, cần có kế hoạch khắc phục.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#D3AC2B\"></span><b>OSP</b> — 78,2% (cách mục tiêu 80%). Chất lượng điều hành mặt đất cần cải thiện tại HAN, SGN, DAD.</li></ul></div>",
+              "backgroundClassName": "",
+              "borderClassName": ""
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "timeFrameHiddenModes": [
+    "custom"
+  ],
+  "filters": [
+    {
+      "key": "dataView",
+      "col": 1,
+      "colSpan": 16,
+      "label": "",
+      "showInfo": true,
+      "infoTooltip": "Chọn loại số liệu: Thực hiện hoặc Ước thực hiện",
+      "size": "sm",
+      "options": [
+        {
+          "value": "actual",
+          "label": "Thực hiện"
+        },
+        {
+          "value": "estimate",
+          "label": "Ước thực hiện"
+        }
+      ],
+      "row": 1
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "cur",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          9792,
+          8697,
+          10268
+        ],
+        [
+          "T2",
+          9756,
+          8665,
+          10234
+        ],
+        [
+          "T3",
+          9546,
+          8476,
+          10134
+        ],
+        [
+          "T4",
+          9942,
+          8833,
+          10336
+        ],
+        [
+          "T5",
+          10356,
+          9194,
+          10744
+        ],
+        [
+          "T6",
+          10805,
+          9588,
+          11152
+        ],
+        [
+          "T7",
+          11166,
+          9914,
+          11492
+        ],
+        [
+          "T8",
+          null,
+          9976,
+          11560
+        ],
+        [
+          "T9",
+          null,
+          9044,
+          10608
+        ],
+        [
+          "T10",
+          null,
+          8908,
+          10472
+        ],
+        [
+          "T11",
+          null,
+          8806,
+          10336
+        ],
+        [
+          "T12",
+          null,
+          9262,
+          10846
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "kh",
+            "chartType": "line"
+          },
+          {
+            "field": "cur",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

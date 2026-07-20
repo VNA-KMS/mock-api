@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -8,94 +8,116 @@
           "type": "string"
         },
         {
-          "id": "otp_di",
+          "id": "cargo",
           "type": "number",
-          "label": "OTP đi",
+          "label": "Cargo",
           "colorToken": "seq.1"
         },
         {
-          "id": "otp_mt",
+          "id": "vip",
           "type": "number",
-          "label": "Mục tiêu",
-          "colorToken": "series.target"
+          "label": "VIP",
+          "colorToken": "seq.2"
+        },
+        {
+          "id": "ferry",
+          "type": "number",
+          "label": "Ferry",
+          "colorToken": "seq.3"
         }
       ],
       "rows": [
         [
           "T1",
-          84.2,
-          88
+          42,
+          15,
+          150
         ],
         [
           "T2",
-          84.5,
-          88
+          45,
+          16,
+          158
         ],
         [
           "T3",
-          83.8,
-          88
+          49,
+          18,
+          176
         ],
         [
           "T4",
-          84.0,
-          88
+          52,
+          19,
+          182
         ],
         [
           "T5",
-          84.7,
-          88
+          55,
+          20,
+          195
         ],
         [
           "T6",
-          85.1,
-          88
+          58,
+          22,
+          210
         ],
         [
           "T7",
-          84.9,
-          88
+          60,
+          23,
+          225
         ],
         [
           "T8",
           null,
-          88
+          null,
+          null
         ],
         [
           "T9",
           null,
-          88
+          null,
+          null
         ],
         [
           "T10",
           null,
-          88
+          null,
+          null
         ],
         [
           "T11",
           null,
-          88
+          null,
+          null
         ],
         [
           "T12",
           null,
-          88
+          null,
+          null
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "bar",
         "xField": "month",
         "series": [
           {
-            "field": "otp_di",
-            "chartType": "line"
+            "field": "cargo",
+            "chartType": "bar"
           },
           {
-            "field": "otp_mt",
-            "chartType": "line"
+            "field": "vip",
+            "chartType": "bar"
+          },
+          {
+            "field": "ferry",
+            "chartType": "bar"
           }
         ]
       }

@@ -445,7 +445,7 @@
           "title": "Chi phí bảo dưỡng theo phòng ban",
           "col": 1,
           "colSpan": 30,
-          "row": 1,
+          "row": 2,
           "subTitle": "Đơn vị: tỷ VNĐ",
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/07/chart/chart_mc_ask_dept.json",
@@ -459,7 +459,7 @@
           "title": "Bảng tổng hợp chi phí bảo dưỡng theo phòng ban",
           "col": 31,
           "colSpan": 30,
-          "row": 1,
+          "row": 2,
           "subTitle": "Đơn vị: tỷ VNĐ",
           "table": {
             "columns": [
@@ -596,7 +596,7 @@
           "title": "Cơ cấu chi phí bảo dưỡng theo ASK",
           "col": 1,
           "colSpan": 20,
-          "row": 2,
+          "row": 3,
           "subTitle": "Đơn vị: VNĐ/ASK",
           "aspectRatio": 1.2,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/07/chart/chart_cost_pie.json",
@@ -610,7 +610,7 @@
           "title": "Bảng chi tiết cơ cấu chi phí",
           "col": 21,
           "colSpan": 40,
-          "row": 2,
+          "row": 3,
           "subTitle": "Đơn vị: VNĐ/ASK",
           "table": {
             "type": "grouped",
@@ -645,8 +645,9 @@
             "columns": [
               {
                 "id": "cat",
-                "type": "text",
-                "label": "Hạng mục"
+                "type": "legend",
+                "label": "Hạng mục",
+                "width": 72
               },
               {
                 "id": "b787_kh",
@@ -717,7 +718,7 @@
             "rows": [
               {
                 "cells": {
-                  "cat": "QĐT",
+                  "cat": { "label": "QĐT", "color": "#004071" },
                   "b787_kh": 0,
                   "b787_th": 0,
                   "a350_kh": 0.21,
@@ -732,7 +733,7 @@
               },
               {
                 "cells": {
-                  "cat": "DVMN",
+                  "cat": { "label": "DVMN", "color": "#B4901F" },
                   "b787_kh": 0.019,
                   "b787_th": 0.018,
                   "a350_kh": 0.016,
@@ -747,7 +748,7 @@
               },
               {
                 "cells": {
-                  "cat": "BDTX",
+                  "cat": { "label": "BDTX", "color": "#0E7490" },
                   "b787_kh": 0.129,
                   "b787_th": 0.128,
                   "a350_kh": 0.108,
@@ -762,7 +763,7 @@
               },
               {
                 "cells": {
-                  "cat": "BDDK",
+                  "cat": { "label": "BDDK", "color": "#EA580C" },
                   "b787_kh": 0.02,
                   "b787_th": 0.021,
                   "a350_kh": 0.01,
@@ -777,7 +778,7 @@
               },
               {
                 "cells": {
-                  "cat": "PTVT",
+                  "cat": { "label": "PTVT", "color": "#6D28D9" },
                   "b787_kh": 0.114,
                   "b787_th": 0.115,
                   "a350_kh": 0.154,
@@ -792,7 +793,7 @@
               },
               {
                 "cells": {
-                  "cat": "Cảng",
+                  "cat": { "label": "Cảng", "color": "#BE185D" },
                   "b787_kh": 0.001,
                   "b787_th": 0.001,
                   "a350_kh": 0,
@@ -807,7 +808,7 @@
               },
               {
                 "cells": {
-                  "cat": "APU",
+                  "cat": { "label": "APU", "color": "#15803D" },
                   "b787_kh": 0.033,
                   "b787_th": 0.034,
                   "a350_kh": 0.014,
@@ -822,7 +823,7 @@
               },
               {
                 "cells": {
-                  "cat": "ĐC",
+                  "cat": { "label": "ĐC", "color": "#0369A1" },
                   "b787_kh": 0.794,
                   "b787_th": 0.859,
                   "a350_kh": 0.598,
@@ -837,7 +838,7 @@
               },
               {
                 "cells": {
-                  "cat": "Total",
+                  "cat": { "label": "Total" },
                   "b787_kh": 1.11,
                   "b787_th": 1.176,
                   "a350_kh": 1.11,
@@ -862,7 +863,7 @@
           "title": "Chi phí bảo dưỡng theo ASK trong năm",
           "col": 1,
           "colSpan": 60,
-          "row": 3,
+          "row": 1,
           "subTitle": "Đơn vị: VNĐ/ASK",
           "aspectRatio": 2.4,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/07/chart/chart_mc_ask.json",
@@ -907,14 +908,15 @@
         {
           "id": "chart_aog_cause",
           "title": "Phân tích theo nguyên nhân dừng bay",
+          "subTitle": "Cấp 1: kỹ thuật vs phi kỹ thuật · Cấp 2: chi tiết theo hệ thống",
           "col": 1,
           "colSpan": 30,
           "row": 2,
-          "subTitle": "Đơn vị: %",
-          "aspectRatio": 1.7,
+          "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/07/chart/chart_aog_cause.json",
+          "rightTitle": "%",
           "aiInsight": {
-            "text": "65% AOG do kỹ thuật; động cơ chiếm 25% — ưu tiên kiểm tra định kỳ.",
+            "text": "65% AOG do kỹ thuật, trong đó động cơ chiếm 25% — cần ưu tiên kiểm tra động cơ định kỳ.",
             "severity": "warn"
           }
         },
@@ -941,11 +943,6 @@
                 "id": "type",
                 "type": "text",
                 "label": "Loại"
-              },
-              {
-                "id": "status",
-                "type": "text",
-                "label": "Trạng thái"
               }
             ],
             "rows": [
@@ -953,30 +950,27 @@
                 "cells": {
                   "reg": "VN-A887",
                   "reason": "A350 · chờ phụ tùng động cơ",
-                  "type": "A350",
-                  "status": "D-1"
+                  "type": "A350"
                 }
               },
               {
                 "cells": {
                   "reg": "VN-A621",
                   "reason": "A321 · kiểm tra kết cấu định kỳ",
-                  "type": "A321",
-                  "status": "D-4"
+                  "type": "A321"
                 }
               },
               {
                 "cells": {
                   "reg": "VN-A879",
                   "reason": "B787 · bảo dưỡng C-Check",
-                  "type": "B787",
-                  "status": "D-9"
+                  "type": "B787"
                 }
               }
             ]
           },
           "aiInsight": {
-            "text": "3 tàu đang BQDB; ưu tiên VN-A887 (D-1) chờ phụ tùng động cơ.",
+            "text": "3 tàu đang BQDB; ưu tiên VN-A887 chờ phụ tùng động cơ.",
             "severity": "warn"
           }
         }
@@ -1060,11 +1054,6 @@
                 "id": "cause",
                 "type": "text",
                 "label": "Nguyên nhân chính"
-              },
-              {
-                "id": "status",
-                "type": "text",
-                "label": "Trạng thái xử lý"
               }
             ],
             "rows": [
@@ -1074,8 +1063,7 @@
                   "route": "SGN → HAN",
                   "time": "LATE 03:50",
                   "delay": "+65 phút",
-                  "cause": "ATC Congestion BKK",
-                  "status": "Đang xử lý"
+                  "cause": "ATC Congestion BKK"
                 }
               },
               {
@@ -1084,8 +1072,7 @@
                   "route": "SGN → HAN",
                   "time": "BOARDING 14:10",
                   "delay": "+15 phút",
-                  "cause": "Late Connecting Pax",
-                  "status": "Chờ đón"
+                  "cause": "Late Connecting Pax"
                 }
               },
               {
@@ -1094,8 +1081,7 @@
                   "route": "DAD → SGN",
                   "time": "LATE INC 04:30",
                   "delay": "+50 phút",
-                  "cause": "P1 · Late Aircraft",
-                  "status": "Đang xử lý"
+                  "cause": "P1 · Late Aircraft"
                 }
               },
               {
@@ -1104,8 +1090,7 @@
                   "route": "HAN → SGN",
                   "time": "ONTIME 16:20",
                   "delay": "0 phút",
-                  "cause": "—",
-                  "status": "Đúng giờ"
+                  "cause": "—"
                 }
               },
               {
@@ -1114,8 +1099,7 @@
                   "route": "SGN → DAD",
                   "time": "DELAYED 08:45",
                   "delay": "+35 phút",
-                  "cause": "Weather · Fog DAD",
-                  "status": "Đang xử lý"
+                  "cause": "Weather · Fog DAD"
                 }
               },
               {
@@ -1124,8 +1108,7 @@
                   "route": "HAN → ICN",
                   "time": "LATE 22:10",
                   "delay": "+20 phút",
-                  "cause": "Crew Scheduling",
-                  "status": "Chờ đón"
+                  "cause": "Crew Scheduling"
                 }
               }
             ]

@@ -6,7 +6,9 @@
   },
   "metricCards": {
     "accentClassName": "bg-regal-blue",
-    "layout": { "columns": 4 },
+    "layout": {
+      "columns": 4
+    },
     "items": [
       {
         "id": "t_arl",
@@ -162,7 +164,7 @@
           "id": "chart_arl",
           "title": "Hệ số sẵn sàng khai thác tàu bay",
           "col": 1,
-          "colSpan": 8,
+          "colSpan": 40,
           "row": 1,
           "aspectRatio": 1.6,
           "unit": "%",
@@ -177,21 +179,65 @@
           "id": "arl_summary_table",
           "title": "Bảng tổng hợp Hệ số sẵn sàng khai thác tàu bay (ARL) theo loại tàu bay",
           "subTitle": "Đơn vị: %",
-          "col": 9,
-          "colSpan": 4,
+          "col": 41,
+          "colSpan": 20,
           "row": 1,
           "table": {
             "columns": [
-              { "id": "fleet", "type": "string", "label": "Loại TB" },
-              { "id": "target", "type": "number", "label": "MT năm" },
-              { "id": "actual", "type": "number", "label": "Tháng này" },
-              { "id": "diff", "type": "number", "label": "VS MT" }
+              {
+                "id": "fleet",
+                "type": "text",
+                "label": "Loại TB"
+              },
+              {
+                "id": "target",
+                "type": "number",
+                "label": "MT năm"
+              },
+              {
+                "id": "actual",
+                "type": "number",
+                "label": "Tháng này"
+              },
+              {
+                "id": "diff",
+                "type": "number",
+                "label": "VS MT"
+              }
             ],
             "rows": [
-              ["B787", 95.5, 95.1, -0.4],
-              ["A350", 96.0, 96.4, 0.4],
-              ["A321", 94.5, 93.6, -0.9],
-              ["ATR72", 94.0, 93.8, -0.2]
+              {
+                "cells": {
+                  "fleet": "B787",
+                  "target": 95.5,
+                  "actual": 95.1,
+                  "diff": -0.4
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "A350",
+                  "target": 96,
+                  "actual": 96.4,
+                  "diff": 0.4
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "A321",
+                  "target": 94.5,
+                  "actual": 93.6,
+                  "diff": -0.9
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "ATR72",
+                  "target": 94,
+                  "actual": 93.8,
+                  "diff": -0.2
+                }
+              }
             ]
           }
         },
@@ -200,7 +246,7 @@
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
           "subTitle": "12 tháng gần nhất",
           "col": 1,
-          "colSpan": 8,
+          "colSpan": 40,
           "row": 2,
           "aspectRatio": 1.6,
           "unit": "%",
@@ -215,21 +261,65 @@
           "id": "dr_summary_table",
           "title": "Bảng tổng hợp Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
           "subTitle": "Đơn vị: %",
-          "col": 9,
-          "colSpan": 4,
+          "col": 41,
+          "colSpan": 20,
           "row": 2,
           "table": {
             "columns": [
-              { "id": "fleet", "type": "string", "label": "Loại TB" },
-              { "id": "target", "type": "number", "label": "MT năm" },
-              { "id": "actual", "type": "number", "label": "Tháng này" },
-              { "id": "diff", "type": "number", "label": "VS MT" }
+              {
+                "id": "fleet",
+                "type": "text",
+                "label": "Loại TB"
+              },
+              {
+                "id": "target",
+                "type": "number",
+                "label": "MT năm"
+              },
+              {
+                "id": "actual",
+                "type": "number",
+                "label": "Tháng này"
+              },
+              {
+                "id": "diff",
+                "type": "number",
+                "label": "VS MT"
+              }
             ],
             "rows": [
-              ["B787", 96.0, 95.4, -0.6],
-              ["A350", 95.5, 96.1, 0.6],
-              ["A321", 95.0, 93.8, -1.2],
-              ["ATR72", 94.5, 94.2, -0.3]
+              {
+                "cells": {
+                  "fleet": "B787",
+                  "target": 96,
+                  "actual": 95.4,
+                  "diff": -0.6
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "A350",
+                  "target": 95.5,
+                  "actual": 96.1,
+                  "diff": 0.6
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "A321",
+                  "target": 95,
+                  "actual": 93.8,
+                  "diff": -1.2
+                }
+              },
+              {
+                "cells": {
+                  "fleet": "ATR72",
+                  "target": 94.5,
+                  "actual": 94.2,
+                  "diff": -0.3
+                }
+              }
             ]
           }
         }
@@ -243,7 +333,7 @@
           "title": "Chi phí bảo dưỡng theo phòng ban",
           "subTitle": "Ước thực hiện cả năm · đơn vị: tỷ VNĐ",
           "col": 1,
-          "colSpan": 6,
+          "colSpan": 30,
           "row": 1,
           "aspectRatio": 1.5,
           "unit": "tỷ VNĐ",
@@ -258,21 +348,65 @@
           "id": "mc_ask_dept_table",
           "title": "Bảng tổng hợp chi phí bảo dưỡng theo phòng ban",
           "subTitle": "Đơn vị: tỷ VNĐ",
-          "col": 7,
-          "colSpan": 6,
+          "col": 31,
+          "colSpan": 30,
           "row": 1,
           "table": {
             "columns": [
-              { "id": "dept", "type": "string", "label": "Phòng ban" },
-              { "id": "kh", "type": "number", "label": "Kế hoạch" },
-              { "id": "th", "type": "number", "label": "Thực hiện" },
-              { "id": "diff", "type": "number", "label": "VS KH" }
+              {
+                "id": "dept",
+                "type": "text",
+                "label": "Phòng ban"
+              },
+              {
+                "id": "kh",
+                "type": "number",
+                "label": "Kế hoạch"
+              },
+              {
+                "id": "th",
+                "type": "number",
+                "label": "Thực hiện"
+              },
+              {
+                "id": "diff",
+                "type": "number",
+                "label": "VS KH"
+              }
             ],
             "rows": [
-              ["Tổng", 16735, 16911, 1.0],
-              ["KT", 2569, 2625, 2.2],
-              ["QLVT", 12230, 12313, 0.7],
-              ["ĐTMS", 1937, 1972, 1.8]
+              {
+                "cells": {
+                  "dept": "Tổng",
+                  "kh": 16735,
+                  "th": 16911,
+                  "diff": 1
+                }
+              },
+              {
+                "cells": {
+                  "dept": "KT",
+                  "kh": 2569,
+                  "th": 2625,
+                  "diff": 2.2
+                }
+              },
+              {
+                "cells": {
+                  "dept": "QLVT",
+                  "kh": 12230,
+                  "th": 12313,
+                  "diff": 0.7
+                }
+              },
+              {
+                "cells": {
+                  "dept": "ĐTMS",
+                  "kh": 1937,
+                  "th": 1972,
+                  "diff": 1.8
+                }
+              }
             ]
           }
         },
@@ -281,7 +415,7 @@
           "title": "Cơ cấu chi phí bảo dưỡng theo ASK",
           "subTitle": "Theo hạng mục chi phí · Toàn đội bay",
           "col": 1,
-          "colSpan": 6,
+          "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.5,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_cost_pie.json",
@@ -295,55 +429,255 @@
           "id": "chart_cost_table",
           "title": "Bảng chi tiết cơ cấu chi phí",
           "subTitle": "Heatmap: hạng mục chi phí × loại tàu bay · KH: kế hoạch · TH: thực hiện · đơn vị: VNĐ/ASK",
-          "col": 7,
-          "colSpan": 6,
+          "col": 31,
+          "colSpan": 30,
           "row": 2,
           "extraComponent": {
             "type": "table",
             "config": {
               "dataset": {
                 "headerGroups": [
-                  { "label": "Hạng mục", "rowspan": 2 },
-                  { "label": "B787", "colspan": 2 },
-                  { "label": "A350", "colspan": 2 },
-                  { "label": "A321", "colspan": 2 },
-                  { "label": "ATR72", "colspan": 2 },
-                  { "label": "Toàn đội bay", "colspan": 2 }
+                  {
+                    "label": "Hạng mục",
+                    "rowspan": 2
+                  },
+                  {
+                    "label": "B787",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "A350",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "A321",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "ATR72",
+                    "colspan": 2
+                  },
+                  {
+                    "label": "Toàn đội bay",
+                    "colspan": 2
+                  }
                 ],
                 "columns": [
-                  { "id": "cat", "type": "string", "label": "Hạng mục" },
-                  { "id": "b787_kh", "type": "number", "label": "KH" },
-                  { "id": "b787_th", "type": "number", "label": "TH" },
-                  { "id": "a350_kh", "type": "number", "label": "KH" },
-                  { "id": "a350_th", "type": "number", "label": "TH" },
-                  { "id": "a321_kh", "type": "number", "label": "KH" },
-                  { "id": "a321_th", "type": "number", "label": "TH" },
-                  { "id": "atr72_kh", "type": "number", "label": "KH" },
-                  { "id": "atr72_th", "type": "number", "label": "TH" },
-                  { "id": "td_kh", "type": "number", "label": "KH" },
-                  { "id": "td_th", "type": "number", "label": "TH" }
+                  {
+                    "id": "cat",
+                    "type": "string",
+                    "label": "Hạng mục"
+                  },
+                  {
+                    "id": "b787_kh",
+                    "type": "number",
+                    "label": "KH"
+                  },
+                  {
+                    "id": "b787_th",
+                    "type": "number",
+                    "label": "TH"
+                  },
+                  {
+                    "id": "a350_kh",
+                    "type": "number",
+                    "label": "KH"
+                  },
+                  {
+                    "id": "a350_th",
+                    "type": "number",
+                    "label": "TH"
+                  },
+                  {
+                    "id": "a321_kh",
+                    "type": "number",
+                    "label": "KH"
+                  },
+                  {
+                    "id": "a321_th",
+                    "type": "number",
+                    "label": "TH"
+                  },
+                  {
+                    "id": "atr72_kh",
+                    "type": "number",
+                    "label": "KH"
+                  },
+                  {
+                    "id": "atr72_th",
+                    "type": "number",
+                    "label": "TH"
+                  },
+                  {
+                    "id": "td_kh",
+                    "type": "number",
+                    "label": "KH"
+                  },
+                  {
+                    "id": "td_th",
+                    "type": "number",
+                    "label": "TH"
+                  }
                 ],
                 "rows": [
-                  ["QĐT", 0, 0, 0.21, 0.216, 0.243, 0.243, 0, 0, 0.453, 0.459],
-                  ["DVMN", 0.019, 0.018, 0.016, 0.013, 0.04, 0.044, 0.034, 0.036, 0.109, 0.111],
-                  ["BDTX", 0.129, 0.128, 0.108, 0.104, 0.121, 0.131, 0.104, 0.108, 0.462, 0.471],
-                  ["BDDK", 0.02, 0.021, 0.01, 0.011, 0.11, 0.113, 0.094, 0.093, 0.234, 0.238],
-                  ["PTVT", 0.114, 0.115, 0.154, 0.152, 0.233, 0.232, 0.288, 0.196, 0.789, 0.695],
-                  ["Cảng", 0.001, 0.001, 0, 0, 0.013, 0.013, 0.021, 0.02, 0.035, 0.034],
-                  ["APU", 0.033, 0.034, 0.014, 0.014, 0.032, 0.032, 0.01, 0.011, 0.089, 0.091],
-                  ["ĐC", 0.794, 0.859, 0.598, 0.583, 0.702, 0.71, 0.877, 0.883, 2.971, 3.035],
-                  ["Total", 1.11, 1.176, 1.11, 1.093, 1.494, 1.518, 1.428, 1.347, 5.142, 5.134]
+                  [
+                    "QĐT",
+                    0,
+                    0,
+                    0.21,
+                    0.216,
+                    0.243,
+                    0.243,
+                    0,
+                    0,
+                    0.453,
+                    0.459
+                  ],
+                  [
+                    "DVMN",
+                    0.019,
+                    0.018,
+                    0.016,
+                    0.013,
+                    0.04,
+                    0.044,
+                    0.034,
+                    0.036,
+                    0.109,
+                    0.111
+                  ],
+                  [
+                    "BDTX",
+                    0.129,
+                    0.128,
+                    0.108,
+                    0.104,
+                    0.121,
+                    0.131,
+                    0.104,
+                    0.108,
+                    0.462,
+                    0.471
+                  ],
+                  [
+                    "BDDK",
+                    0.02,
+                    0.021,
+                    0.01,
+                    0.011,
+                    0.11,
+                    0.113,
+                    0.094,
+                    0.093,
+                    0.234,
+                    0.238
+                  ],
+                  [
+                    "PTVT",
+                    0.114,
+                    0.115,
+                    0.154,
+                    0.152,
+                    0.233,
+                    0.232,
+                    0.288,
+                    0.196,
+                    0.789,
+                    0.695
+                  ],
+                  [
+                    "Cảng",
+                    0.001,
+                    0.001,
+                    0,
+                    0,
+                    0.013,
+                    0.013,
+                    0.021,
+                    0.02,
+                    0.035,
+                    0.034
+                  ],
+                  [
+                    "APU",
+                    0.033,
+                    0.034,
+                    0.014,
+                    0.014,
+                    0.032,
+                    0.032,
+                    0.01,
+                    0.011,
+                    0.089,
+                    0.091
+                  ],
+                  [
+                    "ĐC",
+                    0.794,
+                    0.859,
+                    0.598,
+                    0.583,
+                    0.702,
+                    0.71,
+                    0.877,
+                    0.883,
+                    2.971,
+                    3.035
+                  ],
+                  [
+                    "Total",
+                    1.11,
+                    1.176,
+                    1.11,
+                    1.093,
+                    1.494,
+                    1.518,
+                    1.428,
+                    1.347,
+                    5.142,
+                    5.134
+                  ]
                 ]
               },
               "headerGroups": [
-                { "label": "Hạng mục", "rowspan": 2 },
-                { "label": "B787", "colspan": 2 },
-                { "label": "A350", "colspan": 2 },
-                { "label": "A321", "colspan": 2 },
-                { "label": "ATR72", "colspan": 2 },
-                { "label": "Toàn đội bay", "colspan": 2 }
+                {
+                  "label": "Hạng mục",
+                  "rowspan": 2
+                },
+                {
+                  "label": "B787",
+                  "colspan": 2
+                },
+                {
+                  "label": "A350",
+                  "colspan": 2
+                },
+                {
+                  "label": "A321",
+                  "colspan": 2
+                },
+                {
+                  "label": "ATR72",
+                  "colspan": 2
+                },
+                {
+                  "label": "Toàn đội bay",
+                  "colspan": 2
+                }
               ],
-              "heatColors": { "light": [255, 247, 237], "dark": [154, 52, 18], "zeroColor": "#F8FAFC" },
+              "heatColors": {
+                "light": [
+                  255,
+                  247,
+                  237
+                ],
+                "dark": [
+                  154,
+                  52,
+                  18
+                ],
+                "zeroColor": "#F8FAFC"
+              },
               "format3dec": true
             }
           }
@@ -353,7 +687,7 @@
           "title": "Chi phí bảo dưỡng theo ASK trong năm",
           "subTitle": "Trục từ T1–T12 · thực tế đến T7 · line: thực tế, cùng kỳ, kế hoạch · đơn vị: VNĐ/ASK",
           "col": 1,
-          "colSpan": 12,
+          "colSpan": 60,
           "row": 3,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_mc_ask.json",
@@ -373,7 +707,7 @@
           "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
           "subTitle": "Kỹ thuật (đường cam) so với phi kỹ thuật (đường xám) · vụ/tháng",
           "col": 1,
-          "colSpan": 6,
+          "colSpan": 30,
           "row": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_aog_tech.json",
@@ -387,8 +721,8 @@
           "id": "chart_aog_fleet",
           "title": "Số chuyến bay dừng bay theo từng loại tàu bay",
           "subTitle": "Tháng này · nét đứt vàng: mục tiêu/loại",
-          "col": 7,
-          "colSpan": 6,
+          "col": 31,
+          "colSpan": 30,
           "row": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_aog_fleet.json",
@@ -403,7 +737,7 @@
           "title": "Phân tích theo nguyên nhân dừng bay",
           "subTitle": "Cấp 1: kỹ thuật vs phi kỹ thuật · Cấp 2: chi tiết theo hệ thống",
           "col": 1,
-          "colSpan": 6,
+          "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_aog_cause.json",
@@ -417,20 +751,57 @@
           "id": "bqdb_table",
           "title": "Bảo quản dừng bay (BQDB)",
           "subTitle": "Dừng bay vì lý do kỹ thuật",
-          "col": 7,
-          "colSpan": 6,
+          "col": 31,
+          "colSpan": 30,
           "row": 2,
           "table": {
             "columns": [
-              { "id": "reg", "type": "string", "label": "Số hiệu" },
-              { "id": "reason", "type": "string", "label": "Lý do" },
-              { "id": "type", "type": "string", "label": "Loại" },
-              { "id": "status", "type": "string", "label": "Trạng thái" }
+              {
+                "id": "reg",
+                "type": "text",
+                "label": "Số hiệu"
+              },
+              {
+                "id": "reason",
+                "type": "text",
+                "label": "Lý do"
+              },
+              {
+                "id": "type",
+                "type": "text",
+                "label": "Loại"
+              },
+              {
+                "id": "status",
+                "type": "text",
+                "label": "Trạng thái"
+              }
             ],
             "rows": [
-              ["VN-A887", "A350 · chờ phụ tùng động cơ", "A350", "D-1"],
-              ["VN-A621", "A321 · kiểm tra kết cấu định kỳ", "A321", "D-4"],
-              ["VN-A879", "B787 · bảo dưỡng C-Check", "B787", "D-9"]
+              {
+                "cells": {
+                  "reg": "VN-A887",
+                  "reason": "A350 · chờ phụ tùng động cơ",
+                  "type": "A350",
+                  "status": "D-1"
+                }
+              },
+              {
+                "cells": {
+                  "reg": "VN-A621",
+                  "reason": "A321 · kiểm tra kết cấu định kỳ",
+                  "type": "A321",
+                  "status": "D-4"
+                }
+              },
+              {
+                "cells": {
+                  "reg": "VN-A879",
+                  "reason": "B787 · bảo dưỡng C-Check",
+                  "type": "B787",
+                  "status": "D-9"
+                }
+              }
             ]
           }
         }
@@ -444,7 +815,7 @@
           "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
           "subTitle": "Theo tháng — cột số vụ N-Delay (trục trái) · đường liền thời gian chậm bình quân (trục phải) · đường nét đứt mục tiêu cả năm",
           "col": 1,
-          "colSpan": 12,
+          "colSpan": 60,
           "row": 1,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_delay_stats.json",
@@ -459,7 +830,7 @@
           "title": "Nguyên nhân chậm chuyến",
           "subTitle": "Theo mã nguyên nhân (root cause), % trên tổng số phút chậm",
           "col": 1,
-          "colSpan": 6,
+          "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_delay_cause.json",
@@ -473,8 +844,8 @@
           "id": "chart_delay_breakdown",
           "title": "Delay theo hãng bay / chặng bay / sân bay",
           "subTitle": "Chọn cấp độ phân tích",
-          "col": 7,
-          "colSpan": 6,
+          "col": 31,
+          "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_delay_breakdown.json",
@@ -488,24 +859,102 @@
           "title": "Delay theo từng chuyến bay",
           "subTitle": "Chi tiết theo chuyến bay · tháng hiện tại",
           "col": 1,
-          "colSpan": 12,
+          "colSpan": 60,
           "row": 3,
           "table": {
             "columns": [
-              { "id": "flight", "type": "string", "label": "Chuyến bay" },
-              { "id": "route", "type": "string", "label": "Chặng bay" },
-              { "id": "time", "type": "string", "label": "Ngày/ETM/Trạng thái" },
-              { "id": "delay", "type": "string", "label": "Thời gian chậm" },
-              { "id": "cause", "type": "string", "label": "Nguyên nhân chính" },
-              { "id": "status", "type": "string", "label": "Trạng thái xử lý" }
+              {
+                "id": "flight",
+                "type": "text",
+                "label": "Chuyến bay"
+              },
+              {
+                "id": "route",
+                "type": "text",
+                "label": "Chặng bay"
+              },
+              {
+                "id": "time",
+                "type": "text",
+                "label": "Ngày/ETM/Trạng thái"
+              },
+              {
+                "id": "delay",
+                "type": "text",
+                "label": "Thời gian chậm"
+              },
+              {
+                "id": "cause",
+                "type": "text",
+                "label": "Nguyên nhân chính"
+              },
+              {
+                "id": "status",
+                "type": "text",
+                "label": "Trạng thái xử lý"
+              }
             ],
             "rows": [
-              ["VN2144", "SGN → HAN", "LATE 03:50", "+65 phút", "ATC Congestion BKK", "Đang xử lý"],
-              ["VN2670", "SGN → HAN", "BOARDING 14:10", "+15 phút", "Late Connecting Pax", "Chờ đón"],
-              ["VN154", "DAD → SGN", "LATE INC 04:30", "+50 phút", "P1 · Late Aircraft", "Đang xử lý"],
-              ["VN318", "HAN → SGN", "ONTIME 16:20", "0 phút", "—", "Đúng giờ"],
-              ["VN7192", "SGN → DAD", "DELAYED 08:45", "+35 phút", "Weather · Fog DAD", "Đang xử lý"],
-              ["VN815", "HAN → ICN", "LATE 22:10", "+20 phút", "Crew Scheduling", "Chờ đón"]
+              {
+                "cells": {
+                  "flight": "VN2144",
+                  "route": "SGN → HAN",
+                  "time": "LATE 03:50",
+                  "delay": "+65 phút",
+                  "cause": "ATC Congestion BKK",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN2670",
+                  "route": "SGN → HAN",
+                  "time": "BOARDING 14:10",
+                  "delay": "+15 phút",
+                  "cause": "Late Connecting Pax",
+                  "status": "Chờ đón"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN154",
+                  "route": "DAD → SGN",
+                  "time": "LATE INC 04:30",
+                  "delay": "+50 phút",
+                  "cause": "P1 · Late Aircraft",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN318",
+                  "route": "HAN → SGN",
+                  "time": "ONTIME 16:20",
+                  "delay": "0 phút",
+                  "cause": "—",
+                  "status": "Đúng giờ"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN7192",
+                  "route": "SGN → DAD",
+                  "time": "DELAYED 08:45",
+                  "delay": "+35 phút",
+                  "cause": "Weather · Fog DAD",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN815",
+                  "route": "HAN → ICN",
+                  "time": "LATE 22:10",
+                  "delay": "+20 phút",
+                  "cause": "Crew Scheduling",
+                  "status": "Chờ đón"
+                }
+              }
             ]
           }
         }
