@@ -1,0 +1,123 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "step",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Nghìn tỷ VND",
+          "color": "#0D9488"
+        },
+        {
+          "id": "value_cum",
+          "type": "number",
+          "label": "Nghìn tỷ VND (LK)",
+          "color": "#0D9488"
+        }
+      ],
+      "rows": [
+        [
+          "Gross Revenue",
+          1003,
+          6220
+        ],
+        [
+          "Dvu khác",
+          150,
+          953
+        ],
+        [
+          "Nhiên liệu",
+          -301,
+          -1856
+        ],
+        [
+          "Bảo dưỡng",
+          -100,
+          -622
+        ],
+        [
+          "CP khác",
+          -201,
+          -1254
+        ],
+        [
+          "CP khác (2)",
+          -50,
+          -321
+        ],
+        [
+          "EBITDAR",
+          502,
+          3120
+        ],
+        [
+          "Thuê tàu bay",
+          -120,
+          -742
+        ],
+        [
+          "EBITDA",
+          381,
+          2378
+        ],
+        [
+          "Khấu hao",
+          -80,
+          -502
+        ],
+        [
+          "EBIT",
+          301,
+          1876
+        ],
+        [
+          "Lãi vay",
+          -50,
+          -311
+        ],
+        [
+          "Thuế",
+          -30,
+          -191
+        ],
+        [
+          "PBT",
+          221,
+          1374
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "Theo T12",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "waterfall"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "LK: 1374",
+        "series": [
+          {
+            "field": "value_cum",
+            "chartType": "waterfall"
+          }
+        ]
+      }
+    ]
+  }
+}

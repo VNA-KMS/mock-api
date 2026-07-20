@@ -1,0 +1,123 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "step",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Nghìn tỷ VND",
+          "color": "#0D9488"
+        },
+        {
+          "id": "value_cum",
+          "type": "number",
+          "label": "Nghìn tỷ VND (LK)",
+          "color": "#0D9488"
+        }
+      ],
+      "rows": [
+        [
+          "Gross Revenue",
+          88,
+          546
+        ],
+        [
+          "Dvu khác",
+          13,
+          84
+        ],
+        [
+          "Nhiên liệu",
+          -26,
+          -163
+        ],
+        [
+          "Bảo dưỡng",
+          -9,
+          -55
+        ],
+        [
+          "CP khác",
+          -18,
+          -110
+        ],
+        [
+          "CP khác (2)",
+          -4,
+          -28
+        ],
+        [
+          "EBITDAR",
+          44,
+          274
+        ],
+        [
+          "Thuê tàu bay",
+          -11,
+          -65
+        ],
+        [
+          "EBITDA",
+          33,
+          209
+        ],
+        [
+          "Khấu hao",
+          -7,
+          -44
+        ],
+        [
+          "EBIT",
+          26,
+          165
+        ],
+        [
+          "Lãi vay",
+          -4,
+          -27
+        ],
+        [
+          "Thuế",
+          -3,
+          -17
+        ],
+        [
+          "PBT",
+          19,
+          121
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "Theo T12",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "waterfall"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "LK: 121",
+        "series": [
+          {
+            "field": "value_cum",
+            "chartType": "waterfall"
+          }
+        ]
+      }
+    ]
+  }
+}

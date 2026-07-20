@@ -1,0 +1,249 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "transport",
+          "type": "number",
+          "label": "DT vận tải",
+          "color": "#2563EB"
+        },
+        {
+          "id": "other",
+          "type": "number",
+          "label": "DT khác",
+          "color": "#0D9488"
+        },
+        {
+          "id": "rask",
+          "type": "number",
+          "label": "RASK",
+          "color": "#F59E0B"
+        },
+        {
+          "id": "yield",
+          "type": "number",
+          "label": "Yield",
+          "color": "#7C3AED"
+        },
+        {
+          "id": "transport_cum",
+          "type": "number",
+          "label": "DT vận tải (LK)",
+          "color": "#2563EB"
+        },
+        {
+          "id": "other_cum",
+          "type": "number",
+          "label": "DT khác (LK)",
+          "color": "#0D9488"
+        },
+        {
+          "id": "rask_cum",
+          "type": "number",
+          "label": "RASK (LK)",
+          "color": "#F59E0B"
+        },
+        {
+          "id": "yield_cum",
+          "type": "number",
+          "label": "Yield (LK)",
+          "color": "#7C3AED"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          27.9,
+          6.98,
+          3.4,
+          4.6,
+          27.9,
+          6.98,
+          3.4,
+          4.6
+        ],
+        [
+          "T2",
+          30.52,
+          7.85,
+          3.5,
+          4.7,
+          58.42,
+          14.82,
+          3.45,
+          4.65
+        ],
+        [
+          "T3",
+          33.14,
+          8.72,
+          3.6,
+          4.8,
+          91.56,
+          23.54,
+          3.5,
+          4.7
+        ],
+        [
+          "T4",
+          34.88,
+          9.59,
+          3.6,
+          4.9,
+          126.44,
+          33.14,
+          3.53,
+          4.75
+        ],
+        [
+          "T5",
+          37.5,
+          10.46,
+          3.7,
+          5,
+          163.94,
+          43.6,
+          3.56,
+          4.8
+        ],
+        [
+          "T6",
+          35.75,
+          9.59,
+          3.8,
+          5.1,
+          199.69,
+          53.19,
+          3.6,
+          4.85
+        ],
+        [
+          "T7",
+          39.24,
+          11.34,
+          3.8,
+          5.1,
+          238.93,
+          64.53,
+          3.63,
+          4.89
+        ],
+        [
+          "T8",
+          38.37,
+          10.46,
+          3.9,
+          5.2,
+          277.3,
+          74.99,
+          3.66,
+          4.93
+        ],
+        [
+          "T9",
+          36.62,
+          9.59,
+          3.9,
+          5.1,
+          313.92,
+          84.58,
+          3.69,
+          4.94
+        ],
+        [
+          "T10",
+          40.11,
+          11.34,
+          3.9,
+          5,
+          354.03,
+          95.92,
+          3.71,
+          4.95
+        ],
+        [
+          "T11",
+          37.5,
+          10.46,
+          3.8,
+          5,
+          391.53,
+          106.38,
+          3.72,
+          4.95
+        ],
+        [
+          "T12",
+          39.24,
+          10.46,
+          3.8,
+          5.1,
+          430.77,
+          116.85,
+          3.72,
+          4.97
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "label": "Theo T12",
+        "series": [
+          {
+            "field": "transport",
+            "chartType": "bar"
+          },
+          {
+            "field": "other",
+            "chartType": "bar"
+          },
+          {
+            "field": "rask",
+            "chartType": "line",
+            "yAxis": "right"
+          },
+          {
+            "field": "yield",
+            "chartType": "line",
+            "yAxis": "right"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "combo",
+        "xField": "month",
+        "label": "LK: 548",
+        "series": [
+          {
+            "field": "transport_cum",
+            "chartType": "bar"
+          },
+          {
+            "field": "other_cum",
+            "chartType": "bar"
+          },
+          {
+            "field": "rask_cum",
+            "chartType": "line",
+            "yAxis": "right"
+          },
+          {
+            "field": "yield_cum",
+            "chartType": "line",
+            "yAxis": "right"
+          }
+        ]
+      }
+    ]
+  }
+}
