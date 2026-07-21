@@ -1,0 +1,18 @@
+---
+description: CEO command-center charts/mock — dùng KMS V4 fill + V1 object map; đọc skill kms-palette
+globs: apiV5/domain/ceo-command-center/**/*.json
+alwaysApply: false
+---
+
+# CEO Command Center — màu KMS
+
+Khi sửa JSON dưới `apiV5/domain/ceo-command-center/**`:
+
+1. Đọc [`kms-palette.config.json`](../../apiV5/domain/ceo-command-center/kms-palette.config.json) — **`activeFillSet: "v4"`**.
+2. Đọc skill `kms-palette` (mock-api hoặc vna-demo) — mục chart (P/CP từ `color.html`, `colorToken`).
+3. Áp dụng:
+   - TH / KH / CK / RAG → `chart.series` trong config CEO
+   - Domain → `v1Objects`
+   - Free / pie / multi → `chartPaletteV4`
+
+Không dùng palette cũ (`#2962A0`, `#EC4899`, …) cho chart mới trong domain này.
