@@ -1,0 +1,73 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "ky",
+          "type": "string"
+        },
+        {
+          "id": "dt",
+          "type": "number",
+          "label": "Doanh thu",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "cp",
+          "type": "number",
+          "label": "Chi phí",
+          "color": "#F97316"
+        },
+        {
+          "id": "ln",
+          "type": "number",
+          "label": "Lợi nhuận KD VTHK",
+          "color": "#22C55E"
+        }
+      ],
+      "rows": [
+        [
+          "CK (T4/2025)",
+          22855.8,
+          21160.9,
+          1694.8
+        ],
+        [
+          "Kế hoạch",
+          25355.3,
+          24533.2,
+          822.1
+        ],
+        [
+          "Thực hiện",
+          29087.5,
+          30535.8,
+          -1448.3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "ky",
+        "label": "So sánh",
+        "series": [
+          {
+            "field": "dt",
+            "chartType": "bar"
+          },
+          {
+            "field": "cp",
+            "chartType": "bar"
+          },
+          {
+            "field": "ln",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

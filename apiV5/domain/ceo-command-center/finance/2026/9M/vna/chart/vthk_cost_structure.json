@@ -1,0 +1,95 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "nhom",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Nhiên liệu",
+          14150.5,
+          28209.4
+        ],
+        [
+          "Thiết bị bay",
+          8502.4,
+          8025.1
+        ],
+        [
+          "DV chuyến bay",
+          5542.9,
+          5144.5
+        ],
+        [
+          "DV hành khách",
+          2345.8,
+          2242.6
+        ],
+        [
+          "Khấu hao",
+          1993.3,
+          1992.1
+        ],
+        [
+          "Bảo dưỡng",
+          8913.4,
+          8620.3
+        ],
+        [
+          "Nhân công",
+          3692.0,
+          3137.4
+        ],
+        [
+          "Marketing",
+          2920.3,
+          2868.7
+        ],
+        [
+          "Quản lý chung",
+          872.4,
+          725.8
+        ],
+        [
+          "Khác",
+          133.5,
+          105.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar-h",
+        "xField": "nhom",
+        "label": "KH vs TH",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

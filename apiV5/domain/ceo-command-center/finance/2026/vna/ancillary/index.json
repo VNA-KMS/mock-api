@@ -1,0 +1,209 @@
+{
+  "titleInfo": {
+    "title": "Tài chính & Kế toán",
+    "statusLabel": "REAL TIME",
+    "description": "DT sản phẩm bổ trợ · Cty mẹ VNA · Năm 2026"
+  },
+  "cardHtml": {
+    "html": "<div style=\"padding:12px 16px;font-size:13px;color:#1e293b;line-height:1.5\">(*) Doanh thu KHTX đã bao gồm doanh thu trả thưởng khách hãng khác trên chuyến bay VN, được ghi nhận chung vào doanh thu vận chuyển hành khách.</div>",
+    "backgroundClassName": "bg-polar",
+    "borderClassName": "border-regal-blue"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 4
+    },
+    "items": [
+      {
+        "id": "anc_total",
+        "status": "compact",
+        "title": "Tổng doanh thu SP bổ trợ",
+        "value": "1.382,8",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+27% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "KH: 100% (382,9)",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "anc_ala",
+        "status": "compact",
+        "title": "Alacarte & SP hợp tác",
+        "value": "414,4",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+100% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "KH: 114%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "anc_khtx",
+        "status": "compact",
+        "title": "Doanh thu KHTX (*)",
+        "value": "310",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+15% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "KH: 111%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "anc_ticket",
+        "status": "compact",
+        "title": "DT vé hết hạn, phí xuất/hoàn/đổi",
+        "value": "613,1",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+7% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "KH: 89% (191,2)",
+            "tone": "negative",
+            "status": 1
+          }
+        ]
+      }
+    ]
+  },
+  "filters": [
+    {
+      "key": "unit",
+      "col": 1,
+      "colSpan": 14,
+      "row": 1,
+      "label": "Đơn vị",
+      "showInfo": true,
+      "infoTooltip": "Chọn đơn vị báo cáo tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "hop_nhat",
+          "label": "Hợp nhất"
+        },
+        {
+          "value": "vna",
+          "label": "Cty mẹ VNA"
+        },
+        {
+          "value": "vasco",
+          "label": "Vasco"
+        }
+      ]
+    },
+    {
+      "key": "view",
+      "col": 1,
+      "colSpan": 17,
+      "row": 2,
+      "label": "View",
+      "showInfo": true,
+      "infoTooltip": "Chọn góc nhìn tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "revenue",
+          "label": "Revenue"
+        },
+        {
+          "value": "overview",
+          "label": "Overview"
+        },
+        {
+          "value": "vthk",
+          "label": "VTHK"
+        },
+        {
+          "value": "ancillary",
+          "label": "SP bổ trợ"
+        },
+        {
+          "value": "cashflow",
+          "label": "Dòng tiền"
+        }
+      ]
+    }
+  ],
+  "chartBoard": [
+    {
+      "title": "Biểu đồ phân tích",
+      "items": [
+        {
+          "id": "anc_group_bar",
+          "title": "Doanh thu SP bổ trợ theo nhóm: Kế hoạch vs Thực hiện",
+          "subTitle": "Năm 2026 · tỷ VNĐ",
+          "col": 1,
+          "colSpan": 35,
+          "row": 1,
+          "height": 300,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vna/chart/anc_group_bar.json"
+        },
+        {
+          "id": "anc_share_pie",
+          "title": "Tỷ trọng đóng góp theo nhóm SP",
+          "subTitle": "Thực hiện · Năm 2026",
+          "col": 36,
+          "colSpan": 25,
+          "row": 1,
+          "height": 300,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vna/chart/anc_share_pie.json"
+        },
+        {
+          "id": "anc_periods",
+          "title": "Diễn biến Kế hoạch vs Thực hiện theo kỳ",
+          "subTitle": "Tổng doanh thu sản phẩm bổ trợ · tỷ VNĐ",
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "height": 260,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vna/chart/anc_periods.json"
+        }
+      ]
+    }
+  ],
+  "timeFrameModes": [
+    "month",
+    "6m",
+    "9m",
+    "year"
+  ]
+}

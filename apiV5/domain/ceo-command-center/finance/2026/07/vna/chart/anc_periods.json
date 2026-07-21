@@ -1,0 +1,59 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "ky",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện / Ước TH",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Tháng 4/2026",
+          382.9,
+          384.1
+        ],
+        [
+          "Luỹ kế 4 tháng/2026",
+          1543.7,
+          1624.2
+        ],
+        [
+          "Dự báo Tháng 5/2026",
+          385.2,
+          384.6
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "ky",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

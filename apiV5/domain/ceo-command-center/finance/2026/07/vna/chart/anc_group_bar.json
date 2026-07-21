@@ -1,0 +1,70 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "nhom",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Alacarte & SP hợp tác",
+          101.1,
+          115.1
+        ],
+        [
+          "Bán trên tàu bay",
+          0.6,
+          0.5
+        ],
+        [
+          "Quảng cáo",
+          12.0,
+          12.2
+        ],
+        [
+          "Doanh thu KHTX (*)",
+          77.9,
+          86.1
+        ],
+        [
+          "Vé hết hạn, phí xuất/hoàn/đổi",
+          191.2,
+          170.3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "nhom",
+        "label": "KH vs TH",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

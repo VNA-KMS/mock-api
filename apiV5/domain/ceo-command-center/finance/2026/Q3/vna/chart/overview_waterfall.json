@@ -1,0 +1,57 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "step",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "tỷ VND",
+          "color": "#0D9488"
+        }
+      ],
+      "rows": [
+        [
+          "KD VTHK",
+          -1797.0
+        ],
+        [
+          "VTHK khác",
+          177.6
+        ],
+        [
+          "ĐTRNDN",
+          0.0
+        ],
+        [
+          "Thanh lý TS",
+          0.0
+        ],
+        [
+          "KD khác",
+          239.0
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "Tháng",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "waterfall"
+          }
+        ],
+        "yMin": -600,
+        "yMax": 0
+      }
+    ]
+  }
+}
