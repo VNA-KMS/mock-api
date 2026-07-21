@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          9.2,
+          14.2,
+          8.9
+        ],
+        [
+          "T2",
+          10.1,
+          15.0,
+          9.2
+        ],
+        [
+          "T3",
+          9.8,
+          13.3,
+          9.0
+        ],
+        [
+          "T4",
+          13.3,
+          12.1,
+          11.7
+        ],
+        [
+          "T5",
+          9.6,
+          12.7,
+          9.9
+        ],
+        [
+          "T6",
+          7.0,
+          15.8,
+          7.2
+        ],
+        [
+          "T7",
+          14.8,
+          22.2,
+          15.4
+        ],
+        [
+          "T8",
+          4.4,
+          5.3,
+          null
+        ],
+        [
+          "T9",
+          4.6,
+          7.9,
+          null
+        ],
+        [
+          "T10",
+          5.1,
+          6.9,
+          null
+        ],
+        [
+          "T11",
+          5.0,
+          10.8,
+          null
+        ],
+        [
+          "T12",
+          7.7,
+          12.7,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "upTrend",
+    "description": "dom dom vna",
+    "forecastStartIndex": 8
+  }
+}

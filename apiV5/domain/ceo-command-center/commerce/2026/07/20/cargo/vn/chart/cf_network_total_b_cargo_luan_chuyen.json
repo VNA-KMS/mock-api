@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          129.5,
+          123.7,
+          124.8
+        ],
+        [
+          "T2",
+          122.3,
+          133.6,
+          128.0
+        ],
+        [
+          "T3",
+          121.2,
+          134.9,
+          124.8
+        ],
+        [
+          "T4",
+          122.6,
+          131.8,
+          127.0
+        ],
+        [
+          "T5",
+          119.0,
+          135.6,
+          119.5
+        ],
+        [
+          "T6",
+          121.4,
+          144.9,
+          123.9
+        ],
+        [
+          "T7",
+          113.5,
+          147.4,
+          120.2
+        ],
+        [
+          "T8",
+          113.2,
+          147.9,
+          null
+        ],
+        [
+          "T9",
+          109.8,
+          145.0,
+          null
+        ],
+        [
+          "T10",
+          111.1,
+          152.1,
+          null
+        ],
+        [
+          "T11",
+          106.2,
+          154.3,
+          null
+        ],
+        [
+          "T12",
+          103.5,
+          159.4,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "description": "total cargo luan chuyen",
+    "forecastStartIndex": 8
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          10.0,
+          13.0,
+          7.3
+        ],
+        [
+          "T2",
+          8.0,
+          14.2,
+          8.3
+        ],
+        [
+          "T3",
+          7.9,
+          14.2,
+          8.4
+        ],
+        [
+          "T4",
+          8.1,
+          12.7,
+          7.8
+        ],
+        [
+          "T5",
+          7.6,
+          13.3,
+          7.7
+        ],
+        [
+          "T6",
+          5.6,
+          12.3,
+          6.3
+        ],
+        [
+          "T7",
+          5.9,
+          12.2,
+          6.4
+        ],
+        [
+          "T8",
+          6.5,
+          11.1,
+          null
+        ],
+        [
+          "T9",
+          5.9,
+          12.3,
+          null
+        ],
+        [
+          "T10",
+          4.9,
+          12.3,
+          null
+        ],
+        [
+          "T11",
+          4.4,
+          10.9,
+          null
+        ],
+        [
+          "T12",
+          3.2,
+          11.1,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "downTrend",
+    "description": "int int sea",
+    "forecastStartIndex": 8
+  }
+}

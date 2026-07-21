@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          8.2,
+          9.2,
+          10.7
+        ],
+        [
+          "T2",
+          5.9,
+          11.2,
+          10.0
+        ],
+        [
+          "T3",
+          9.5,
+          11.5,
+          5.6
+        ],
+        [
+          "T4",
+          9.5,
+          10.6,
+          5.3
+        ],
+        [
+          "T5",
+          9.4,
+          9.7,
+          7.5
+        ],
+        [
+          "T6",
+          7.7,
+          12.4,
+          5.5
+        ],
+        [
+          "T7",
+          13.5,
+          10.7,
+          10.8
+        ],
+        [
+          "T8",
+          12.1,
+          13.8,
+          null
+        ],
+        [
+          "T9",
+          14.8,
+          14.2,
+          null
+        ],
+        [
+          "T10",
+          14.7,
+          15.3,
+          null
+        ],
+        [
+          "T11",
+          14.2,
+          14.5,
+          null
+        ],
+        [
+          "T12",
+          14.6,
+          15.2,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "downWave",
+    "unit": "%",
+    "description": "LF - Hệ số tải hành khách - nội địa - 9G",
+    "forecastStartIndex": 8
+  }
+}

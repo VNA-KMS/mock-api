@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          44.5,
+          44.6,
+          42.3
+        ],
+        [
+          "T2",
+          45.7,
+          47.2,
+          44.8
+        ],
+        [
+          "T3",
+          42.3,
+          49.9,
+          40.3
+        ],
+        [
+          "T4",
+          42.2,
+          49.6,
+          42.8
+        ],
+        [
+          "T5",
+          43.0,
+          47.7,
+          43.5
+        ],
+        [
+          "T6",
+          42.1,
+          47.6,
+          42.8
+        ],
+        [
+          "T7",
+          43.3,
+          50.9,
+          43.6
+        ],
+        [
+          "T8",
+          40.7,
+          54.6,
+          null
+        ],
+        [
+          "T9",
+          36.5,
+          51.3,
+          null
+        ],
+        [
+          "T10",
+          41.2,
+          51.3,
+          null
+        ],
+        [
+          "T11",
+          37.0,
+          55.3,
+          null
+        ],
+        [
+          "T12",
+          36.1,
+          52.6,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "description": "dom cargo tai cung ung",
+    "forecastStartIndex": 8
+  }
+}

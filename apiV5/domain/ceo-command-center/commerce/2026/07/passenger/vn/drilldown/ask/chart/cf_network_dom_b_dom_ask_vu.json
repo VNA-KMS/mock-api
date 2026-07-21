@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          31.1,
+          37.4,
+          25.9
+        ],
+        [
+          "T2",
+          18.3,
+          21.1,
+          13.6
+        ],
+        [
+          "T3",
+          10.8,
+          18.7,
+          17.8
+        ],
+        [
+          "T4",
+          22.2,
+          33.6,
+          35.2
+        ],
+        [
+          "T5",
+          38.1,
+          44.0,
+          38.4
+        ],
+        [
+          "T6",
+          30.2,
+          29.5,
+          25.6
+        ],
+        [
+          "T7",
+          17.8,
+          21.9,
+          24.0
+        ],
+        [
+          "T8",
+          24.8,
+          32.4,
+          null
+        ],
+        [
+          "T9",
+          42.7,
+          48.5,
+          null
+        ],
+        [
+          "T10",
+          42.0,
+          40.8,
+          null
+        ],
+        [
+          "T11",
+          28.2,
+          27.3,
+          null
+        ],
+        [
+          "T12",
+          27.9,
+          32.5,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "upTrend",
+    "description": "dom/ask/cf_network_dom_b_dom_ask_vu.json",
+    "forecastStartIndex": 8,
+    "metric": "ask"
+  }
+}

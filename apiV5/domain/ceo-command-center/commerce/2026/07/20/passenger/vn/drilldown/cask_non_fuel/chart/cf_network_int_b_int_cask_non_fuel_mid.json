@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          54.7,
+          60.9,
+          49.6
+        ],
+        [
+          "T2",
+          51.7,
+          59.9,
+          47.9
+        ],
+        [
+          "T3",
+          51.3,
+          60.5,
+          46.5
+        ],
+        [
+          "T4",
+          48.7,
+          58.4,
+          44.0
+        ],
+        [
+          "T5",
+          48.5,
+          58.4,
+          45.0
+        ],
+        [
+          "T6",
+          49.8,
+          57.9,
+          46.1
+        ],
+        [
+          "T7",
+          48.0,
+          55.6,
+          45.7
+        ],
+        [
+          "T8",
+          46.2,
+          55.9,
+          null
+        ],
+        [
+          "T9",
+          45.2,
+          53.3,
+          null
+        ],
+        [
+          "T10",
+          46.8,
+          51.8,
+          null
+        ],
+        [
+          "T11",
+          42.7,
+          51.0,
+          null
+        ],
+        [
+          "T12",
+          40.4,
+          50.4,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "VND/ghế.km",
+    "description": "CASK Non Fuel - Chi phí phi nhiên liệu - quốc tế",
+    "forecastStartIndex": 8
+  }
+}

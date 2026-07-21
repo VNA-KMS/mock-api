@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          61.0,
+          85.0,
+          59.8
+        ],
+        [
+          "T2",
+          63.5,
+          82.5,
+          54.1
+        ],
+        [
+          "T3",
+          62.8,
+          85.1,
+          59.6
+        ],
+        [
+          "T4",
+          62.8,
+          88.0,
+          59.7
+        ],
+        [
+          "T5",
+          68.0,
+          86.1,
+          60.4
+        ],
+        [
+          "T6",
+          66.3,
+          88.3,
+          61.0
+        ],
+        [
+          "T7",
+          64.4,
+          86.8,
+          63.5
+        ],
+        [
+          "T8",
+          67.1,
+          88.9,
+          null
+        ],
+        [
+          "T9",
+          67.2,
+          89.5,
+          null
+        ],
+        [
+          "T10",
+          69.0,
+          93.0,
+          null
+        ],
+        [
+          "T11",
+          68.0,
+          91.7,
+          null
+        ],
+        [
+          "T12",
+          71.8,
+          93.8,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ VND",
+    "description": "DT VTHK - Doanh thu vận tải hàng không - nội địa - 9G",
+    "forecastStartIndex": 8
+  }
+}

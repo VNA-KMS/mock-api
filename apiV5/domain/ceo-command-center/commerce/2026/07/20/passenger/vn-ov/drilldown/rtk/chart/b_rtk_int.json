@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          685.4,
+          748.3,
+          632.8
+        ],
+        [
+          "T2",
+          654.3,
+          749.6,
+          654.4
+        ],
+        [
+          "T3",
+          631.6,
+          726.0,
+          616.6
+        ],
+        [
+          "T4",
+          637.0,
+          722.1,
+          653.7
+        ],
+        [
+          "T5",
+          634.4,
+          699.1,
+          651.8
+        ],
+        [
+          "T6",
+          629.1,
+          686.8,
+          591.0
+        ],
+        [
+          "T7",
+          594.8,
+          688.3,
+          593.0
+        ],
+        [
+          "T8",
+          627.5,
+          666.5,
+          null
+        ],
+        [
+          "T9",
+          604.7,
+          653.8,
+          null
+        ],
+        [
+          "T10",
+          599.5,
+          637.8,
+          null
+        ],
+        [
+          "T11",
+          594.5,
+          631.0,
+          null
+        ],
+        [
+          "T12",
+          575.3,
+          635.6,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ tấn.km",
+    "description": "RTK - Luân chuyển hàng hóa - tổng",
+    "forecastStartIndex": 8
+  }
+}

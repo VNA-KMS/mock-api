@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          318.1,
+          392.0,
+          282.5
+        ],
+        [
+          "T2",
+          323.8,
+          397.1,
+          250.8
+        ],
+        [
+          "T3",
+          320.9,
+          390.6,
+          261.5
+        ],
+        [
+          "T4",
+          310.3,
+          378.7,
+          259.8
+        ],
+        [
+          "T5",
+          304.3,
+          387.1,
+          261.4
+        ],
+        [
+          "T6",
+          310.4,
+          385.1,
+          274.7
+        ],
+        [
+          "T7",
+          298.5,
+          383.5,
+          257.1
+        ],
+        [
+          "T8",
+          284.7,
+          369.5,
+          null
+        ],
+        [
+          "T9",
+          301.2,
+          373.9,
+          null
+        ],
+        [
+          "T10",
+          301.2,
+          365.0,
+          null
+        ],
+        [
+          "T11",
+          292.9,
+          362.4,
+          null
+        ],
+        [
+          "T12",
+          285.2,
+          376.6,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ VND",
+    "description": "HQ SO CPBD - Hiệu quả sau CPBD - tổng",
+    "forecastStartIndex": 8
+  }
+}

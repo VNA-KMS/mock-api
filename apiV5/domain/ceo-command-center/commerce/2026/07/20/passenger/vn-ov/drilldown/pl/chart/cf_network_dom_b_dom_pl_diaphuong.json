@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          59.7,
+          63.9,
+          54.9
+        ],
+        [
+          "T2",
+          53.7,
+          63.7,
+          53.9
+        ],
+        [
+          "T3",
+          52.2,
+          60.9,
+          52.8
+        ],
+        [
+          "T4",
+          49.8,
+          56.7,
+          52.1
+        ],
+        [
+          "T5",
+          48.4,
+          55.1,
+          50.2
+        ],
+        [
+          "T6",
+          41.9,
+          52.7,
+          46.3
+        ],
+        [
+          "T7",
+          42.0,
+          51.9,
+          48.1
+        ],
+        [
+          "T8",
+          40.9,
+          48.7,
+          null
+        ],
+        [
+          "T9",
+          37.0,
+          45.6,
+          null
+        ],
+        [
+          "T10",
+          37.6,
+          45.0,
+          null
+        ],
+        [
+          "T11",
+          33.4,
+          44.1,
+          null
+        ],
+        [
+          "T12",
+          29.0,
+          39.9,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "downWave",
+    "unit": "tỷ VND",
+    "description": "PL - Lợi nhuận - nội địa",
+    "forecastStartIndex": 8
+  }
+}

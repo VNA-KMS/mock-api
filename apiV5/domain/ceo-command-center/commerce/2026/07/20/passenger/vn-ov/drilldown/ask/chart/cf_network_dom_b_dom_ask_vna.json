@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          44.3,
+          56.7,
+          41.4
+        ],
+        [
+          "T2",
+          44.6,
+          58.4,
+          40.7
+        ],
+        [
+          "T3",
+          47.1,
+          59.5,
+          40.5
+        ],
+        [
+          "T4",
+          45.0,
+          59.0,
+          41.1
+        ],
+        [
+          "T5",
+          46.1,
+          60.3,
+          36.8
+        ],
+        [
+          "T6",
+          45.4,
+          59.9,
+          40.5
+        ],
+        [
+          "T7",
+          43.9,
+          62.3,
+          42.8
+        ],
+        [
+          "T8",
+          48.4,
+          61.4,
+          null
+        ],
+        [
+          "T9",
+          49.1,
+          62.6,
+          null
+        ],
+        [
+          "T10",
+          48.5,
+          64.1,
+          null
+        ],
+        [
+          "T11",
+          46.8,
+          63.6,
+          null
+        ],
+        [
+          "T12",
+          48.8,
+          68.5,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ ghế.km",
+    "description": "ASK - Sức cung ứng ghế km - nội địa - VNA",
+    "forecastStartIndex": 8
+  }
+}

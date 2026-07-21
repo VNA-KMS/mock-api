@@ -1,0 +1,34 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "month", "type": "string" },
+        { "id": "count", "type": "number", "label": "Số vụ delay", "colorToken": "seq.1" },
+        { "id": "avg", "type": "number", "label": "TB delay (phút)", "colorToken": "seq.2" }
+      ],
+      "rows": [
+        ["T8", 9, 48, 52],
+        ["T9", 11, 50, 52],
+        ["T10", 8, 46, 52],
+        ["T11", 10, 52, 52],
+        ["T12", 13, 58, 52],
+        ["T1", 12, 55, 52],
+        ["T2", 9, 50, 52],
+        ["T3", 10, 53, 52],
+        ["T4", 11, 56, 52],
+        ["T5", 10, 60, 52],
+        ["T6", 9, 58, 52],
+        ["T7", 9.96, 61.44, 52]
+      ]
+    },
+    "views": [{
+      "id": "main", "chartType": "combo", "xField": "month",
+      "series": [
+        { "field": "count", "chartType": "bar", "yAxis": "left" },
+        { "field": "avg", "chartType": "line", "yAxis": "right" },
+        { "field": "target", "chartType": "line", "yAxis": "right" }
+      ]
+    }]
+  }
+}

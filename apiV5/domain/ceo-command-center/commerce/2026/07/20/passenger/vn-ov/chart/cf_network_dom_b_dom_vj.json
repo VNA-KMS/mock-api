@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          24.7,
+          29.5,
+          22.1
+        ],
+        [
+          "T2",
+          26.4,
+          34.6,
+          25.6
+        ],
+        [
+          "T3",
+          24.3,
+          27.8,
+          25.1
+        ],
+        [
+          "T4",
+          27.6,
+          32.4,
+          26.4
+        ],
+        [
+          "T5",
+          24.2,
+          34.1,
+          23.1
+        ],
+        [
+          "T6",
+          22.7,
+          28.0,
+          22.0
+        ],
+        [
+          "T7",
+          26.5,
+          36.5,
+          25.2
+        ],
+        [
+          "T8",
+          23.3,
+          27.2,
+          null
+        ],
+        [
+          "T9",
+          20.2,
+          27.4,
+          null
+        ],
+        [
+          "T10",
+          22.1,
+          28.4,
+          null
+        ],
+        [
+          "T11",
+          26.2,
+          28.5,
+          null
+        ],
+        [
+          "T12",
+          23.2,
+          28.1,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "description": "dom dom vj",
+    "forecastStartIndex": 8
+  }
+}

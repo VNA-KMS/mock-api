@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          643.5,
+          752.7,
+          791.6
+        ],
+        [
+          "T2",
+          624.9,
+          676.4,
+          684.5
+        ],
+        [
+          "T3",
+          569.2,
+          576.4,
+          531.5
+        ],
+        [
+          "T4",
+          530.3,
+          502.4,
+          489.7
+        ],
+        [
+          "T5",
+          526.5,
+          547.5,
+          512.7
+        ],
+        [
+          "T6",
+          581.7,
+          603.4,
+          623.7
+        ],
+        [
+          "T7",
+          638.9,
+          722.4,
+          701.5
+        ],
+        [
+          "T8",
+          586.9,
+          696.4,
+          null
+        ],
+        [
+          "T9",
+          510.2,
+          514.6,
+          null
+        ],
+        [
+          "T10",
+          490.1,
+          467.3,
+          null
+        ],
+        [
+          "T11",
+          532.0,
+          494.4,
+          null
+        ],
+        [
+          "T12",
+          604.2,
+          635.6,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "downTrend",
+    "description": "total pax dom",
+    "forecastStartIndex": 8
+  }
+}

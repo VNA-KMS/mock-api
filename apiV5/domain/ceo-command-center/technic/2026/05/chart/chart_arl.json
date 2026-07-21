@@ -1,0 +1,39 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "month", "type": "string" },
+        { "id": "actual", "type": "number", "label": "Thực tế", "color": "#F97316" },
+        { "id": "plan", "type": "number", "label": "Kế hoạch 12 tháng", "color": "#1E3A8A" },
+        { "id": "samePeriod", "type": "number", "label": "Cùng kỳ 12 tháng", "color": "#94A3B8" },
+        { "id": "target", "type": "number", "label": "Mục tiêu", "color": "#D3AC2B", "lineDash": [6, 4] }
+      ],
+      "rows": [
+        ["T1", 94.9, 94.8, 94.3, 95.5],
+        ["T2", 95.3, 95.0, 94.8, 95.5],
+        ["T3", 95.6, 95.3, 95.0, 95.5],
+        ["T4", 95.9, 95.6, 95.3, 95.5],
+        ["T5", 95.4, 95.8, 94.8, 95.5],
+        ["T6", 95.1, 96.0, 94.5, 95.5],
+        ["T7", 94.87, 96.2, 94.2, 95.5],
+        ["T8", null, 96.0, 94.6, 95.5],
+        ["T9", null, 95.7, 94.3, 95.5],
+        ["T10", null, 95.4, 95.0, 95.5],
+        ["T11", null, 95.0, 95.6, 95.5],
+        ["T12", null, 94.7, 95.2, 95.5]
+      ]
+    },
+    "views": [{
+      "id": "main",
+      "chartType": "combo",
+      "xField": "month",
+      "series": [
+        { "field": "actual", "chartType": "bar" },
+        { "field": "plan", "chartType": "line" },
+        { "field": "samePeriod", "chartType": "line" },
+        { "field": "target", "chartType": "line" }
+      ]
+    }]
+  }
+}

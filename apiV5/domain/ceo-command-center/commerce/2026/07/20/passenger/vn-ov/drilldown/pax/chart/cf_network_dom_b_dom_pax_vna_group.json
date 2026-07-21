@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          22.2,
+          26.3,
+          22.3
+        ],
+        [
+          "T2",
+          21.8,
+          27.3,
+          22.0
+        ],
+        [
+          "T3",
+          21.5,
+          26.4,
+          20.9
+        ],
+        [
+          "T4",
+          21.6,
+          26.2,
+          23.6
+        ],
+        [
+          "T5",
+          23.2,
+          28.6,
+          22.6
+        ],
+        [
+          "T6",
+          22.1,
+          29.5,
+          23.1
+        ],
+        [
+          "T7",
+          23.0,
+          28.6,
+          20.5
+        ],
+        [
+          "T8",
+          24.0,
+          30.7,
+          null
+        ],
+        [
+          "T9",
+          25.2,
+          31.3,
+          null
+        ],
+        [
+          "T10",
+          25.2,
+          31.9,
+          null
+        ],
+        [
+          "T11",
+          26.4,
+          32.9,
+          null
+        ],
+        [
+          "T12",
+          26.1,
+          34.5,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "nghìn khách",
+    "description": "PAX - Số lượng hành khách - nội địa - VNA",
+    "forecastStartIndex": 8
+  }
+}

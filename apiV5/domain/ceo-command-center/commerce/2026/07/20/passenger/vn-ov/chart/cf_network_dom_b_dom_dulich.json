@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          100.6,
+          109.0,
+          98.7
+        ],
+        [
+          "T2",
+          93.9,
+          107.7,
+          95.0
+        ],
+        [
+          "T3",
+          90.3,
+          111.8,
+          86.6
+        ],
+        [
+          "T4",
+          94.1,
+          112.1,
+          93.0
+        ],
+        [
+          "T5",
+          99.4,
+          117.1,
+          94.9
+        ],
+        [
+          "T6",
+          100.2,
+          118.8,
+          101.1
+        ],
+        [
+          "T7",
+          106.9,
+          120.2,
+          97.7
+        ],
+        [
+          "T8",
+          86.7,
+          100.4,
+          null
+        ],
+        [
+          "T9",
+          86.2,
+          99.5,
+          null
+        ],
+        [
+          "T10",
+          91.2,
+          104.8,
+          null
+        ],
+        [
+          "T11",
+          91.0,
+          101.2,
+          null
+        ],
+        [
+          "T12",
+          94.5,
+          107.4,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "upWave",
+    "description": "dom dom dulich",
+    "forecastStartIndex": 8
+  }
+}

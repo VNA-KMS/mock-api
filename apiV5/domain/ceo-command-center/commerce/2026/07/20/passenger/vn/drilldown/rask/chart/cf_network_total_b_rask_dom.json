@@ -1,0 +1,134 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          2562.7,
+          2951.4,
+          2470.9
+        ],
+        [
+          "T2",
+          2601.8,
+          2946.2,
+          2549.6
+        ],
+        [
+          "T3",
+          2668.3,
+          2855.3,
+          2722.5
+        ],
+        [
+          "T4",
+          2685.3,
+          2892.5,
+          2556.8
+        ],
+        [
+          "T5",
+          2665.3,
+          2810.8,
+          2451.8
+        ],
+        [
+          "T6",
+          2506.9,
+          2795.1,
+          2444.5
+        ],
+        [
+          "T7",
+          2585.7,
+          2851.3,
+          2640.6
+        ],
+        [
+          "T8",
+          2443.4,
+          2797.4,
+          null
+        ],
+        [
+          "T9",
+          2588.7,
+          2751.3,
+          null
+        ],
+        [
+          "T10",
+          2534.3,
+          2758.8,
+          null
+        ],
+        [
+          "T11",
+          2499.7,
+          2786.2,
+          null
+        ],
+        [
+          "T12",
+          2476.3,
+          2612.5,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "VND/ghế.km",
+    "description": "RASK - Doanh thu trên ghế km - tổng",
+    "forecastStartIndex": 8
+  }
+}
