@@ -2,141 +2,75 @@
   "titleInfo": {
     "title": "Tài chính & Kế toán",
     "statusLabel": "REAL TIME",
-    "description": "Dashboard tổng quan doanh thu & lợi nhuận · Vietnam Airlines"
+    "description": "Tài sản - VCSH - Chỉ số tài chính · Hợp nhất · T7/2026"
   },
   "metricCards": {
     "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 6
+      "columns": 3
     },
     "items": [
       {
-        "id": "gross_revenue",
-        "status": "compact",
-        "title": "Gross Revenue",
-        "value": "62,847",
+        "id": "total_assets",
+        "status": "featured",
+        "title": "Tổng tài sản",
+        "value": "58.426,30",
         "unit": "tỷ VND",
         "backgroundStatus": 1,
         "trend": [
           {
             "direction": "up",
-            "label": "+8.2% YoY",
+            "label": "+4.8% YoY",
             "tone": "positive",
             "status": 0
           },
           {
             "direction": "up",
-            "label": "Budget: 96.3%",
+            "label": "KH: 101.2%",
             "tone": "positive",
             "status": 1
           }
         ]
       },
       {
-        "id": "passenger_revenue",
-        "status": "compact",
-        "title": "Passenger Revenue",
-        "value": "45,291",
+        "id": "equity",
+        "status": "featured",
+        "title": "VCSH",
+        "value": "12.845,70",
         "unit": "tỷ VND",
         "backgroundStatus": 1,
         "trend": [
           {
             "direction": "up",
-            "label": "+6.5% YoY",
+            "label": "+3.2% YoY",
             "tone": "positive",
             "status": 0
           },
           {
             "direction": "up",
-            "label": "Tỷ trọng: 72.1%",
-            "tone": "positive",
+            "label": "KH: 99.8%",
+            "tone": "negative",
             "status": 1
           }
         ]
       },
       {
-        "id": "ancillary_revenue",
-        "status": "compact",
-        "title": "Ancillary Revenue",
-        "value": "8,152",
-        "unit": "tỷ VND",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "+12.8% YoY",
-            "tone": "positive",
-            "status": 0
-          },
-          {
-            "direction": "up",
-            "label": "Budget: 102.1%",
-            "tone": "positive",
-            "status": 1
-          }
-        ]
-      },
-      {
-        "id": "cargo_revenue",
-        "status": "compact",
-        "title": "Cargo Revenue",
-        "value": "5,392",
+        "id": "accumulated_loss",
+        "status": "featured",
+        "title": "Lỗ lũy kế",
+        "value": "8.215,40",
         "unit": "tỷ VND",
         "backgroundStatus": 2,
         "trend": [
           {
             "direction": "down",
-            "label": "-3.1% YoY",
-            "tone": "negative",
+            "label": "-5.6% YoY",
+            "tone": "positive",
             "status": 0
           },
           {
             "direction": "down",
-            "label": "Budget: 91.5%",
-            "tone": "negative",
-            "status": 1
-          }
-        ]
-      },
-      {
-        "id": "rask",
-        "status": "compact",
-        "title": "RASK",
-        "value": "3.84",
-        "unit": "nghìn VND",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "+4.2% YoY",
-            "tone": "positive",
-            "status": 0
-          },
-          {
-            "direction": "up",
-            "label": "Budget: 98.7%",
-            "tone": "positive",
-            "status": 1
-          }
-        ]
-      },
-      {
-        "id": "rev_per_km",
-        "status": "compact",
-        "title": "Doanh thu/km",
-        "value": "5.12",
-        "unit": "nghìn VND",
-        "backgroundStatus": 1,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "+3.8% YoY",
-            "tone": "positive",
-            "status": 0
-          },
-          {
-            "direction": "up",
-            "label": "Budget: 97.2%",
+            "label": "KH: 94.3%",
             "tone": "positive",
             "status": 1
           }
@@ -181,61 +115,41 @@
       "options": [
         {
           "value": "revenue",
-          "label": "Revenue"
+          "label": "Doanh thu - Chi phí - LNTT"
         },
         {
           "value": "cost_margin",
-          "label": "Cost & Margin"
+          "label": "Tài sản - VCSH"
         },
         {
           "value": "ratio",
-          "label": "Ratio"
+          "label": "Chỉ số tài chính"
         }
       ]
     }
   ],
   "chartBoard": [
     {
-      "title": "Phân tích doanh thu & lợi nhuận",
+      "title": "Tài sản & VCSH",
       "items": [
         {
-          "id": "b_waterfall",
-          "title": "P&L Bridge",
-          "subTitle": "Gross Revenue → Net Profit",
+          "id": "asset_equity_trend",
+          "title": "Tài sản và VCSH theo tháng",
+          "subTitle": "Biến động theo tháng (nghìn tỷ VND)",
           "col": 1,
           "colSpan": 35,
           "row": 1,
           "height": 320,
-          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_waterfall.json"
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/hop_nhat/chart/cost_margin_trend.json"
         },
         {
-          "id": "b_combo",
-          "title": "Monthly Revenue Trend",
-          "subTitle": "Cột chồng + Đường RASK & Yield",
+          "id": "asset_equity_table",
+          "title": "Tài sản & VCSH các đơn vị",
+          "subTitle": "Giá trị theo đơn vị",
           "col": 36,
           "colSpan": 25,
           "row": 1,
-          "height": 320,
-          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_combo.json"
-        },
-        {
-          "id": "b_structure",
-          "title": "Revenue Structure",
-          "subTitle": "Treemap 2 lớp",
-          "col": 1,
-          "colSpan": 30,
-          "row": 2,
-          "height": 320,
-          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_structure.json"
-        },
-        {
-          "id": "b_r1",
-          "title": "Revenues from Air Transportation (R1)",
-          "subTitle": "Nội địa vs Quốc tế",
-          "col": 31,
-          "colSpan": 30,
-          "row": 2,
-          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_r1.json"
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/hop_nhat/chart/cost_margin_table.json"
         }
       ]
     }
