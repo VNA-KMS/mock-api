@@ -1,126 +1,201 @@
 {
-  "autoChart": {
-    "chartType": "auto",
-    "dataset": {
-      "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "db",
-          "type": "number",
-          "label": "Kế hoạch",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "Thực hiện",
-          "colorToken": "series.actual"
-        }
-      ],
-      "rows": [
-        [
-          "T1",
-          9.2,
-          11.3,
-          8.8
-        ],
-        [
-          "T2",
-          14.7,
-          9.9,
-          14.2
-        ],
-        [
-          "T3",
-          14,
-          17.1,
-          13.4
-        ],
-        [
-          "T4",
-          10.6,
-          16.4,
-          10
-        ],
-        [
-          "T5",
-          8.9,
-          19.1,
-          8.4
-        ],
-        [
-          "T6",
-          15.6,
-          20.9,
-          15
-        ],
-        [
-          "T7",
-          13,
-          13.8,
-          12.4
-        ],
-        [
-          "T8",
-          6.3,
-          11.2,
-          null
-        ],
-        [
-          "T9",
-          10.5,
-          8.4,
-          null
-        ],
-        [
-          "T10",
-          9.7,
-          14,
-          null
-        ],
-        [
-          "T11",
-          5.7,
-          14.4,
-          null
-        ],
-        [
-          "T12",
-          9.9,
-          10.7,
-          null
-        ]
-      ]
+ "autoChart": {
+  "chartType": "auto",
+  "dataset": {
+   "columns": [
+    {
+     "id": "month",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "auto",
-        "xField": "month",
-        "series": [
-          {
-            "field": "ck",
-            "chartType": "line"
-          },
-          {
-            "field": "db",
-            "chartType": "line"
-          },
-          {
-            "field": "th",
-            "chartType": "line"
-          }
-        ]
-      }
+    {
+     "id": "ck",
+     "type": "number",
+     "label": "Cùng kỳ",
+     "colorToken": "series.previous"
+    },
+    {
+     "id": "db",
+     "type": "number",
+     "label": "Kế hoạch",
+     "colorToken": "series.target"
+    },
+    {
+     "id": "th",
+     "type": "number",
+     "label": "Thực hiện",
+     "colorToken": "series.actual"
+    },
+    {
+     "id": "ck_cum",
+     "type": "number",
+     "label": "Cùng kỳ (LK)",
+     "colorToken": "series.previous"
+    },
+    {
+     "id": "db_cum",
+     "type": "number",
+     "label": "Kế hoạch (LK)",
+     "colorToken": "series.target"
+    },
+    {
+     "id": "th_cum",
+     "type": "number",
+     "label": "Thực hiện (LK)",
+     "colorToken": "series.actual"
+    }
+   ],
+   "rows": [
+    [
+     "T1",
+     9.2,
+     11.3,
+     8.8,
+     9.2,
+     11.3,
+     8.8
+    ],
+    [
+     "T2",
+     14.7,
+     9.9,
+     14.2,
+     23.9,
+     21.2,
+     23
+    ],
+    [
+     "T3",
+     14,
+     17.1,
+     13.4,
+     37.9,
+     38.3,
+     36.4
+    ],
+    [
+     "T4",
+     10.6,
+     16.4,
+     10,
+     48.5,
+     54.7,
+     46.4
+    ],
+    [
+     "T5",
+     8.9,
+     19.1,
+     8.4,
+     57.4,
+     73.8,
+     54.8
+    ],
+    [
+     "T6",
+     15.6,
+     20.9,
+     15,
+     73,
+     94.7,
+     69.8
+    ],
+    [
+     "T7",
+     13,
+     13.8,
+     12.4,
+     86,
+     108.5,
+     82.2
+    ],
+    [
+     "T8",
+     6.3,
+     11.2,
+     null,
+     92.3,
+     119.7,
+     82.2
+    ],
+    [
+     "T9",
+     10.5,
+     8.4,
+     null,
+     102.8,
+     128.1,
+     82.2
+    ],
+    [
+     "T10",
+     9.7,
+     14,
+     null,
+     112.5,
+     142.1,
+     82.2
+    ],
+    [
+     "T11",
+     5.7,
+     14.4,
+     null,
+     118.2,
+     156.5,
+     82.2
+    ],
+    [
+     "T12",
+     9.9,
+     10.7,
+     null,
+     128.1,
+     167.2,
+     82.2
     ]
-  }
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "auto",
+    "xField": "month",
+    "series": [
+     {
+      "field": "ck",
+      "chartType": "line"
+     },
+     {
+      "field": "db",
+      "chartType": "line"
+     },
+     {
+      "field": "th",
+      "chartType": "line"
+     }
+    ],
+    "label": "Theo T12"
+   },
+   {
+    "id": "main_cum",
+    "chartType": "auto",
+    "xField": "month",
+    "series": [
+     {
+      "field": "ck_cum",
+      "chartType": "line"
+     },
+     {
+      "field": "db_cum",
+      "chartType": "line"
+     },
+     {
+      "field": "th_cum",
+      "chartType": "line"
+     }
+    ],
+    "label": "LK: 128,1"
+   }
+  ]
+ }
 }
