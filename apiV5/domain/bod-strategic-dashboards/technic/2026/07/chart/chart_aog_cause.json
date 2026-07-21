@@ -3,24 +3,74 @@
     "chartType": "sunburst",
     "dataset": {
       "columns": [
-        { "id": "name", "type": "string" },
-        { "id": "parent", "type": "string" },
-        { "id": "value", "type": "number" }
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "parent",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number"
+        },
+        {
+          "id": "color",
+          "type": "string"
+        }
       ],
       "rows": [
-        ["Kỹ thuật", "", 65],
-        ["Phi kỹ thuật", "", 35],
-        ["Động cơ", "Kỹ thuật", 25],
-        ["Càng đáp", "Kỹ thuật", 15],
-        ["Hệ thống điện", "Kỹ thuật", 13],
-        ["Khung sườn", "Kỹ thuật", 12]
+        [
+          "Kỹ thuật",
+          "",
+          65,
+          "#006D88"
+        ],
+        [
+          "Phi kỹ thuật",
+          "",
+          35,
+          "#C76449"
+        ],
+        [
+          "Động cơ",
+          "Kỹ thuật",
+          25,
+          "#1D4857"
+        ],
+        [
+          "Càng đáp",
+          "Kỹ thuật",
+          15,
+          "#479EB3"
+        ],
+        [
+          "Hệ thống điện",
+          "Kỹ thuật",
+          13,
+          "#889941"
+        ],
+        [
+          "Khung sườn",
+          "Kỹ thuật",
+          12,
+          "#C4A83A"
+        ]
       ]
     },
-    "views": [{
-      "id": "main",
-      "chartType": "sunburst",
-      "xField": "name",
-      "series": [{ "field": "value", "chartType": "sunburst" }]
-    }]
+    "views": [
+      {
+        "id": "main",
+        "chartType": "sunburst",
+        "xField": "name",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "sunburst"
+          }
+        ]
+      }
+    ]
   }
 }

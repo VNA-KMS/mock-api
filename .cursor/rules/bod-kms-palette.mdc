@@ -1,0 +1,32 @@
+---
+description: BOD chart JSON — màu theo `color` (hex), đồng bộ convention CEO; cấm `colorToken`
+globs: apiV5/domain/bod-strategic-dashboards/**/*.json
+alwaysApply: true
+---
+
+# BOD — gen chart color (bắt buộc)
+
+Đồng bộ với CEO (`ceo-kms-palette.mdc`). Mọi series **bắt buộc** có `color` (hex). Không dùng `colorToken`.
+
+## Bảng màu chuẩn
+
+| Series | `color` |
+|--------|---------|
+| Thực hiện | `#006D88` |
+| Kế hoạch / Mục tiêu | `#D3AC2B` |
+| Cùng kỳ | `#9AA0A6` |
+| Dự báo | `#A8B4C4` |
+| Positive / Tăng | `#22C55E` |
+| Negative / Giảm | `#EF4444` |
+| Warning | `#B45309` |
+
+## Free / multi-series — chartPaletteV4 (bỏ Kem)
+
+`#1D4857` `#479EB3` `#3D879B` `#C4A83A` `#889941` `#5E793D` `#C76449` `#A55C3E` `#B86A84` `#AE8655` `#476065` `#E28A81`
+
+## Checklist
+
+- [ ] Mỗi column số có `color` (hex)
+- [ ] Không còn `colorToken`
+- [ ] TH/KH/CK/RAG đúng bảng trên
+- [ ] Series tự do chỉ lấy V4 — không domain accent / legacy hex

@@ -1,123 +1,125 @@
 {
-  "autoChart": {
-    "chartType": "auto",
-    "dataset": {
-      "columns": [
-        {
-          "id": "step",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number",
-          "label": "Nghìn tỷ VND",
-          "color": "#0D9488"
-        },
-        {
-          "id": "value_cum",
-          "type": "number",
-          "label": "Nghìn tỷ VND (LK)",
-          "color": "#0D9488"
-        }
-      ],
-      "rows": [
-        [
-          "Gross Revenue",
-          295,
-          1829
-        ],
-        [
-          "Dvu khác",
-          44,
-          280
-        ],
-        [
-          "Nhiên liệu",
-          -88,
-          -546
-        ],
-        [
-          "Bảo dưỡng",
-          -29,
-          -183
-        ],
-        [
-          "CP khác",
-          -59,
-          -369
-        ],
-        [
-          "CP khác (2)",
-          -15,
-          -94
-        ],
-        [
-          "EBITDAR",
-          148,
-          917
-        ],
-        [
-          "Thuê tàu bay",
-          -35,
-          -218
-        ],
-        [
-          "EBITDA",
-          112,
-          699
-        ],
-        [
-          "Khấu hao",
-          -24,
-          -147
-        ],
-        [
-          "EBIT",
-          89,
-          552
-        ],
-        [
-          "Lãi vay",
-          -15,
-          -91
-        ],
-        [
-          "Thuế",
-          -9,
-          -56
-        ],
-        [
-          "PBT",
-          65,
-          404
-        ]
-      ]
+ "autoChart": {
+  "chartType": "auto",
+  "dataset": {
+   "columns": [
+    {
+     "id": "step",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "waterfall",
-        "xField": "step",
-        "label": "Theo T12",
-        "series": [
-          {
-            "field": "value",
-            "chartType": "waterfall"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "waterfall",
-        "xField": "step",
-        "label": "LK: 404",
-        "series": [
-          {
-            "field": "value_cum",
-            "chartType": "waterfall"
-          }
-        ]
-      }
+    {
+     "id": "value",
+     "type": "number",
+     "label": "Nghìn tỷ VND",
+     "color": "#006D88"
+    },
+    {
+     "id": "value_cum",
+     "type": "number",
+     "label": "Nghìn tỷ VND (LK)",
+     "color": "#006D88"
+    }
+   ],
+   "rows": [
+    [
+     "Gross Revenue",
+     295,
+     1829
+    ],
+    [
+     "Dvu khác",
+     44,
+     280
+    ],
+    [
+     "Nhiên liệu",
+     -88,
+     -546
+    ],
+    [
+     "Bảo dưỡng",
+     -29,
+     -183
+    ],
+    [
+     "CP khác",
+     -59,
+     -369
+    ],
+    [
+     "CP khác (2)",
+     -15,
+     -94
+    ],
+    [
+     "EBITDAR",
+     148,
+     917
+    ],
+    [
+     "Thuê tàu bay",
+     -35,
+     -218
+    ],
+    [
+     "EBITDA",
+     112,
+     699
+    ],
+    [
+     "Khấu hao",
+     -24,
+     -147
+    ],
+    [
+     "EBIT",
+     89,
+     552
+    ],
+    [
+     "Lãi vay",
+     -15,
+     -91
+    ],
+    [
+     "Thuế",
+     -9,
+     -56
+    ],
+    [
+     "PBT",
+     65,
+     404
     ]
-  }
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "waterfall",
+    "xField": "step",
+    "label": "Theo T12",
+    "series": [
+     {
+      "field": "value",
+      "chartType": "waterfall"
+     }
+    ],
+    "showLegend": false
+   },
+   {
+    "id": "main_cum",
+    "chartType": "waterfall",
+    "xField": "step",
+    "label": "LK: 404",
+    "series": [
+     {
+      "field": "value_cum",
+      "chartType": "waterfall"
+     }
+    ],
+    "showLegend": false
+   }
+  ]
+ }
 }

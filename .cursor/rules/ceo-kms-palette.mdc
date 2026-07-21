@@ -1,18 +1,52 @@
 ---
-description: CEO command-center charts/mock — dùng KMS V4 fill + V1 object map; đọc skill kms-palette
+description: CEO chart JSON — màu quyết định bởi `color` (hex); cấm dùng `colorToken`
 globs: apiV5/domain/ceo-command-center/**/*.json
-alwaysApply: false
+alwaysApply: true
 ---
 
-# CEO Command Center — màu KMS
+# CEO — gen chart color (bắt buộc)
 
-Khi sửa JSON dưới `apiV5/domain/ceo-command-center/**`:
+## Màu chart quyết định bởi `color`
 
-1. Đọc [`kms-palette.config.json`](../../apiV5/domain/ceo-command-center/kms-palette.config.json) — **`activeFillSet: "v4"`**.
-2. Đọc skill `kms-palette` (mock-api hoặc vna-demo) — mục chart (P/CP từ `color.html`, `colorToken`).
-3. Áp dụng:
-   - TH / KH / CK / RAG → `chart.series` trong config CEO
-   - Domain → `v1Objects`
-   - Free / pie / multi → `chartPaletteV4`
+Mọi series/chart trong CEO domain **bắt buộc** có `color` (hex string) do BE truyền.
+`colorToken` — đã xoá. FE không resolve token nữa.
 
-Không dùng palette cũ (`#2962A0`, `#EC4899`, …) cho chart mới trong domain này.
+## Bảng màu chuẩn
+
+| Series | `color` |
+|--------|---------|
+| Thực hiện | `#006D88` |
+| Kế hoạch / Mục tiêu | `#D3AC2B` |
+| Cùng kỳ | `#9AA0A6` |
+| Dự báo | `#A8B4C4` |
+| Positive / Tăng | `#22C55E` |
+| Negative / Giảm | `#EF4444` |
+| Warning | `#B45309` |
+
+## seq.N — V4 swatches
+
+| Token | `color` |
+|-------|---------|
+| seq.1 | `#1D4857` |
+| seq.2 | `#479EB3` |
+| seq.3 | `#3D879B` |
+| seq.4 | `#C4A83A` |
+| seq.5 | `#889941` |
+| seq.6 | `#5E793D` |
+
+## domain.*
+
+| Token | `color` |
+|-------|---------|
+| domain.flightOps | `#3B82F6` |
+| domain.engineering | `#F97316` |
+| domain.commerce | `#06B6D4` |
+| domain.service | `#D4AF37` |
+| domain.safety | `#10B981` |
+| domain.finance | `#059669` |
+
+## Checklist
+
+- [ ] Mỗi column có `color` (hex)
+- [ ] Không còn `colorToken` trong column nào
+- [ ] Hex lấy theo bảng trên

@@ -1,201 +1,201 @@
 {
- "autoChart": {
-  "chartType": "line",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "mt",
+          "type": "number",
+          "label": "Mục tiêu",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "mt_cum",
+          "type": "number",
+          "label": "Mục tiêu (LK)",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          32,
+          30,
+          43.5,
+          32,
+          30,
+          43.5
+        ],
+        [
+          "T2",
+          38,
+          35,
+          44,
+          70,
+          65,
+          87.5
+        ],
+        [
+          "T3",
+          35,
+          33,
+          43,
+          105,
+          98,
+          130.5
+        ],
+        [
+          "T4",
+          42,
+          38,
+          45,
+          147,
+          136,
+          175.5
+        ],
+        [
+          "T5",
+          40,
+          36,
+          44.5,
+          187,
+          172,
+          220
+        ],
+        [
+          "T6",
+          48,
+          42,
+          46,
+          235,
+          214,
+          266
+        ],
+        [
+          "T7",
+          55,
+          48,
+          45,
+          290,
+          262,
+          311
+        ],
+        [
+          "T8",
+          null,
+          45,
+          46.5,
+          290,
+          307,
+          357.5
+        ],
+        [
+          "T9",
+          null,
+          42,
+          47,
+          290,
+          349,
+          404.5
+        ],
+        [
+          "T10",
+          null,
+          38,
+          46,
+          290,
+          387,
+          450.5
+        ],
+        [
+          "T11",
+          null,
+          35,
+          45.5,
+          290,
+          422,
+          496
+        ],
+        [
+          "T12",
+          null,
+          32,
+          44,
+          290,
+          454,
+          540
+        ]
+      ]
     },
-    {
-     "id": "actual",
-     "type": "number",
-     "label": "Thực hiện",
-     "colorToken": "series.actual"
-    },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "mt",
-     "type": "number",
-     "label": "Mục tiêu",
-     "colorToken": "series.target"
-    },
-    {
-     "id": "actual_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)",
-     "colorToken": "series.actual"
-    },
-    {
-     "id": "ck_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "mt_cum",
-     "type": "number",
-     "label": "Mục tiêu (LK)",
-     "colorToken": "series.target"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     32,
-     30,
-     43.5,
-     32,
-     30,
-     43.5
-    ],
-    [
-     "T2",
-     38,
-     35,
-     44,
-     70,
-     65,
-     87.5
-    ],
-    [
-     "T3",
-     35,
-     33,
-     43,
-     105,
-     98,
-     130.5
-    ],
-    [
-     "T4",
-     42,
-     38,
-     45,
-     147,
-     136,
-     175.5
-    ],
-    [
-     "T5",
-     40,
-     36,
-     44.5,
-     187,
-     172,
-     220
-    ],
-    [
-     "T6",
-     48,
-     42,
-     46,
-     235,
-     214,
-     266
-    ],
-    [
-     "T7",
-     55,
-     48,
-     45,
-     290,
-     262,
-     311
-    ],
-    [
-     "T8",
-     null,
-     45,
-     46.5,
-     290,
-     307,
-     357.5
-    ],
-    [
-     "T9",
-     null,
-     42,
-     47,
-     290,
-     349,
-     404.5
-    ],
-    [
-     "T10",
-     null,
-     38,
-     46,
-     290,
-     387,
-     450.5
-    ],
-    [
-     "T11",
-     null,
-     35,
-     45.5,
-     290,
-     422,
-     496
-    ],
-    [
-     "T12",
-     null,
-     32,
-     44,
-     290,
-     454,
-     540
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "mt",
+            "chartType": "line"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "mt_cum",
+            "chartType": "line"
+          }
+        ],
+        "label": "LK: 290"
+      }
     ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "actual",
-      "chartType": "line"
-     },
-     {
-      "field": "ck",
-      "chartType": "line"
-     },
-     {
-      "field": "mt",
-      "chartType": "line"
-     }
-    ],
-    "label": "Theo T12"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "actual_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "ck_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "mt_cum",
-      "chartType": "line"
-     }
-    ],
-    "label": "LK: 290"
-   }
-  ]
- }
+  }
 }

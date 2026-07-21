@@ -1,0 +1,27 @@
+---
+description: Treemap — gradient HSL từ 1 màu gốc (color), không dùng colorToken
+globs: apiV5/domain/ceo-command-center/**/chart/*treemap*.json
+alwaysApply: true
+---
+
+# Treemap — gradient màu bằng HSL Lightness
+
+## Nguyên tắc
+
+- Mỗi nhánh lưu **1 màu gốc** (hex `color`) trên item có giá trị cao nhất.
+- Dùng `generateTreemapGradient(baseHex, count)` để sinh gradient:
+  - Giữ nguyên **Hue** và **Saturation**
+  - **Lightness** tăng từ gốc → 80%
+- Các item con dùng hex computed, không `colorToken`.
+
+## Màu gốc
+
+| Nhánh | Màu gốc |
+|-------|---------|
+| Nội địa / DOM | `#1D4857` |
+| Quốc tế / INT | `#C4A83A` |
+
+## File
+
+`scripts/generate-treemap-gradient.js` — hàm xử lý HSL.
+`scripts/process-treemap-data.js` — xử lý treemap JSON.

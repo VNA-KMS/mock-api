@@ -1,200 +1,200 @@
 {
- "autoChart": {
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "cur",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "cur_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "kh_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          40800,
+          39500,
+          41500,
+          40800,
+          39500,
+          41500
+        ],
+        [
+          "T2",
+          41200,
+          39800,
+          41800,
+          82000,
+          79300,
+          83300
+        ],
+        [
+          "T3",
+          41500,
+          40200,
+          42000,
+          123500,
+          119500,
+          125300
+        ],
+        [
+          "T4",
+          41800,
+          40500,
+          42200,
+          165300,
+          160000,
+          167500
+        ],
+        [
+          "T5",
+          42000,
+          40800,
+          42500,
+          207300,
+          200800,
+          210000
+        ],
+        [
+          "T6",
+          42500,
+          41000,
+          42800,
+          249800,
+          241800,
+          252800
+        ],
+        [
+          "T7",
+          42800,
+          41200,
+          43000,
+          292600,
+          283000,
+          295800
+        ],
+        [
+          "T8",
+          null,
+          40800,
+          42500,
+          292600,
+          323800,
+          338300
+        ],
+        [
+          "T9",
+          null,
+          40500,
+          42200,
+          292600,
+          364300,
+          380500
+        ],
+        [
+          "T10",
+          null,
+          40200,
+          42000,
+          292600,
+          404500,
+          422500
+        ],
+        [
+          "T11",
+          null,
+          39800,
+          41800,
+          292600,
+          444300,
+          464300
+        ],
+        [
+          "T12",
+          null,
+          39500,
+          41500,
+          292600,
+          483800,
+          505800
+        ]
+      ]
     },
-    {
-     "id": "cur",
-     "type": "number",
-     "label": "Thực hiện",
-     "colorToken": "series.actual"
-    },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "kh",
-     "type": "number",
-     "label": "Kế hoạch",
-     "colorToken": "series.target"
-    },
-    {
-     "id": "cur_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)",
-     "colorToken": "series.actual"
-    },
-    {
-     "id": "ck_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "kh_cum",
-     "type": "number",
-     "label": "Kế hoạch (LK)",
-     "colorToken": "series.target"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     40800,
-     39500,
-     41500,
-     40800,
-     39500,
-     41500
-    ],
-    [
-     "T2",
-     41200,
-     39800,
-     41800,
-     82000,
-     79300,
-     83300
-    ],
-    [
-     "T3",
-     41500,
-     40200,
-     42000,
-     123500,
-     119500,
-     125300
-    ],
-    [
-     "T4",
-     41800,
-     40500,
-     42200,
-     165300,
-     160000,
-     167500
-    ],
-    [
-     "T5",
-     42000,
-     40800,
-     42500,
-     207300,
-     200800,
-     210000
-    ],
-    [
-     "T6",
-     42500,
-     41000,
-     42800,
-     249800,
-     241800,
-     252800
-    ],
-    [
-     "T7",
-     42800,
-     41200,
-     43000,
-     292600,
-     283000,
-     295800
-    ],
-    [
-     "T8",
-     null,
-     40800,
-     42500,
-     292600,
-     323800,
-     338300
-    ],
-    [
-     "T9",
-     null,
-     40500,
-     42200,
-     292600,
-     364300,
-     380500
-    ],
-    [
-     "T10",
-     null,
-     40200,
-     42000,
-     292600,
-     404500,
-     422500
-    ],
-    [
-     "T11",
-     null,
-     39800,
-     41800,
-     292600,
-     444300,
-     464300
-    ],
-    [
-     "T12",
-     null,
-     39500,
-     41500,
-     292600,
-     483800,
-     505800
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "cur",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "kh",
+            "chartType": "line"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "cur_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "kh_cum",
+            "chartType": "line"
+          }
+        ],
+        "label": "LK: 292.600"
+      }
     ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "cur",
-      "chartType": "line"
-     },
-     {
-      "field": "ck",
-      "chartType": "line"
-     },
-     {
-      "field": "kh",
-      "chartType": "line"
-     }
-    ],
-    "label": "Theo T12"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "cur_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "ck_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "kh_cum",
-      "chartType": "line"
-     }
-    ],
-    "label": "LK: 292.600"
-   }
-  ]
- }
+  }
 }

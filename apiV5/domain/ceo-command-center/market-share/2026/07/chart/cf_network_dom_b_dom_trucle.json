@@ -1,203 +1,203 @@
 {
- "autoChart": {
-  "chartType": "auto",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          178,
+          192,
+          170,
+          178,
+          192,
+          170
+        ],
+        [
+          "T2",
+          172,
+          190,
+          164,
+          350,
+          382,
+          334
+        ],
+        [
+          "T3",
+          168,
+          194,
+          160,
+          518,
+          576,
+          494
+        ],
+        [
+          "T4",
+          174,
+          196,
+          166,
+          692,
+          772,
+          660
+        ],
+        [
+          "T5",
+          180,
+          200,
+          172,
+          872,
+          972,
+          832
+        ],
+        [
+          "T6",
+          182,
+          202,
+          174,
+          1054,
+          1174,
+          1006
+        ],
+        [
+          "T7",
+          185,
+          204,
+          176,
+          1239,
+          1378,
+          1182
+        ],
+        [
+          "T8",
+          162,
+          178,
+          null,
+          1401,
+          1556,
+          1182
+        ],
+        [
+          "T9",
+          158,
+          182,
+          null,
+          1559,
+          1738,
+          1182
+        ],
+        [
+          "T10",
+          165,
+          186,
+          null,
+          1724,
+          1924,
+          1182
+        ],
+        [
+          "T11",
+          170,
+          184,
+          null,
+          1894,
+          2108,
+          1182
+        ],
+        [
+          "T12",
+          175,
+          188,
+          null,
+          2069,
+          2296,
+          1182
+        ]
+      ]
     },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "db",
-     "type": "number",
-     "label": "Kế hoạch",
-     "colorToken": "series.target"
-    },
-    {
-     "id": "th",
-     "type": "number",
-     "label": "Thực hiện",
-     "colorToken": "series.actual"
-    },
-    {
-     "id": "ck_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "db_cum",
-     "type": "number",
-     "label": "Kế hoạch (LK)",
-     "colorToken": "series.target"
-    },
-    {
-     "id": "th_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)",
-     "colorToken": "series.actual"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     178,
-     192,
-     170,
-     178,
-     192,
-     170
-    ],
-    [
-     "T2",
-     172,
-     190,
-     164,
-     350,
-     382,
-     334
-    ],
-    [
-     "T3",
-     168,
-     194,
-     160,
-     518,
-     576,
-     494
-    ],
-    [
-     "T4",
-     174,
-     196,
-     166,
-     692,
-     772,
-     660
-    ],
-    [
-     "T5",
-     180,
-     200,
-     172,
-     872,
-     972,
-     832
-    ],
-    [
-     "T6",
-     182,
-     202,
-     174,
-     1054,
-     1174,
-     1006
-    ],
-    [
-     "T7",
-     185,
-     204,
-     176,
-     1239,
-     1378,
-     1182
-    ],
-    [
-     "T8",
-     162,
-     178,
-     null,
-     1401,
-     1556,
-     1182
-    ],
-    [
-     "T9",
-     158,
-     182,
-     null,
-     1559,
-     1738,
-     1182
-    ],
-    [
-     "T10",
-     165,
-     186,
-     null,
-     1724,
-     1924,
-     1182
-    ],
-    [
-     "T11",
-     170,
-     184,
-     null,
-     1894,
-     2108,
-     1182
-    ],
-    [
-     "T12",
-     175,
-     188,
-     null,
-     2069,
-     2296,
-     1182
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          }
+        ],
+        "label": "LK: 2.069"
+      }
     ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "ck",
-      "chartType": "line"
-     },
-     {
-      "field": "db",
-      "chartType": "line",
-      "lineStyle": "dashed"
-     },
-     {
-      "field": "th",
-      "chartType": "line"
-     }
-    ],
-    "label": "Theo T12"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "ck_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "db_cum",
-      "chartType": "line",
-      "lineStyle": "dashed"
-     },
-     {
-      "field": "th_cum",
-      "chartType": "line"
-     }
-    ],
-    "label": "LK: 2.069"
-   }
-  ]
- }
+  }
 }

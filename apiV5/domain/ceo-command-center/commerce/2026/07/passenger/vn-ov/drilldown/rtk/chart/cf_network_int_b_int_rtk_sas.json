@@ -11,19 +11,25 @@
           "id": "ck",
           "type": "number",
           "label": "Cùng kỳ",
-          "colorToken": "series.previous"
+          "color": "#9AA0A6"
         },
         {
           "id": "db",
           "type": "number",
-          "label": "Dự báo",
-          "colorToken": "series.forecast"
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
         },
         {
           "id": "th",
           "type": "number",
           "label": "Thực hiện",
-          "colorToken": "series.actual"
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
         }
       ],
       "rows": [
@@ -31,73 +37,85 @@
           "T1",
           10.9,
           12.5,
-          6.02
+          6.02,
+          null
         ],
         [
           "T2",
           -0.07,
           -0.15,
-          -4.64
+          -4.64,
+          null
         ],
         [
           "T3",
           -6.41,
           -0.98,
-          -1.74
+          -1.74,
+          null
         ],
         [
           "T4",
           1.49,
           11.4,
-          8.93
+          8.93,
+          null
         ],
         [
           "T5",
           7.33,
           10.5,
-          6.01
+          6.01,
+          null
         ],
         [
           "T6",
           -1.75,
           -0.38,
-          -7.43
+          -7.43,
+          null
         ],
         [
           "T7",
           -9.23,
           -4.4,
-          -4.75
+          -4.75,
+          null
         ],
         [
           "T8",
           -2.48,
           8.64,
-          null
+          null,
+          7.3
         ],
         [
           "T9",
           5.44,
           9.44,
-          null
+          null,
+          8.0
         ],
         [
           "T10",
           -4.16,
           -1.65,
-          null
+          null,
+          -1.4
         ],
         [
           "T11",
           -12.3,
           -4.95,
-          null
+          null,
+          -4.2
         ],
         [
           "T12",
           -4.17,
           3.72,
-          null
+          null,
+          3.2
         ]
       ]
     },
@@ -117,6 +135,10 @@
           },
           {
             "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
             "chartType": "line"
           }
         ]

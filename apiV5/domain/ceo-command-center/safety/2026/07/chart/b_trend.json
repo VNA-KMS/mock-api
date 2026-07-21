@@ -1,155 +1,157 @@
 {
- "autoChart": {
-  "chartType": "auto",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "cur",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "cur_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          37,
+          40,
+          37,
+          40
+        ],
+        [
+          "T2",
+          36,
+          39,
+          73,
+          79
+        ],
+        [
+          "T3",
+          35,
+          38,
+          108,
+          117
+        ],
+        [
+          "T4",
+          34,
+          37,
+          142,
+          154
+        ],
+        [
+          "T5",
+          33,
+          36,
+          175,
+          190
+        ],
+        [
+          "T6",
+          32,
+          35,
+          207,
+          225
+        ],
+        [
+          "T7",
+          42,
+          47,
+          249,
+          272
+        ],
+        [
+          "T8",
+          null,
+          42,
+          249,
+          314
+        ],
+        [
+          "T9",
+          null,
+          40,
+          249,
+          354
+        ],
+        [
+          "T10",
+          null,
+          38,
+          249,
+          392
+        ],
+        [
+          "T11",
+          null,
+          41,
+          249,
+          433
+        ],
+        [
+          "T12",
+          null,
+          39,
+          249,
+          472
+        ]
+      ]
     },
-    {
-     "id": "cur",
-     "type": "number",
-     "label": "Thực hiện"
-    },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "colorToken": "series.previous"
-    },
-    {
-     "id": "cur_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)"
-    },
-    {
-     "id": "ck_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "colorToken": "series.previous"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     37,
-     40,
-     37,
-     40
-    ],
-    [
-     "T2",
-     36,
-     39,
-     73,
-     79
-    ],
-    [
-     "T3",
-     35,
-     38,
-     108,
-     117
-    ],
-    [
-     "T4",
-     34,
-     37,
-     142,
-     154
-    ],
-    [
-     "T5",
-     33,
-     36,
-     175,
-     190
-    ],
-    [
-     "T6",
-     32,
-     35,
-     207,
-     225
-    ],
-    [
-     "T7",
-     42,
-     47,
-     249,
-     272
-    ],
-    [
-     "T8",
-     null,
-     42,
-     249,
-     314
-    ],
-    [
-     "T9",
-     null,
-     40,
-     249,
-     354
-    ],
-    [
-     "T10",
-     null,
-     38,
-     249,
-     392
-    ],
-    [
-     "T11",
-     null,
-     41,
-     249,
-     433
-    ],
-    [
-     "T12",
-     null,
-     39,
-     249,
-     472
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "cur",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "cur_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          }
+        ],
+        "label": "LK: 249"
+      }
     ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "cur",
-      "chartType": "line"
-     },
-     {
-      "field": "ck",
-      "chartType": "line"
-     }
-    ],
-    "label": "Theo T12"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "cur_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "ck_cum",
-      "chartType": "line"
-     }
-    ],
-    "label": "LK: 249"
-   }
-  ]
- }
+  }
 }

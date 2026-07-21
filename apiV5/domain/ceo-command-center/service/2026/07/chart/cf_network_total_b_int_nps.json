@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "radar",
     "dataset": {
       "columns": [
         {
@@ -8,74 +8,59 @@
           "type": "string"
         },
         {
-          "id": "bar_current",
-          "type": "number",
-          "label": "Tháng này"
+          "label": "Kế hoạch",
+          "id": "ke_hoach",
+          "type": "number"
         },
         {
-          "id": "bar_prev",
-          "type": "number",
-          "label": "Tháng trước"
-        },
-        {
-          "id": "line_target",
-          "type": "number",
-          "label": "Mục tiêu"
+          "label": "Thực hiện",
+          "id": "thuc_hien",
+          "type": "number"
         }
       ],
       "rows": [
         [
           "Thu tuc",
-          72,
-          68,
-          75
-        ],
-        [
-          "Tien nghi",
-          68,
-          65,
+          75,
           72
         ],
         [
-          "Dich vu",
-          65,
-          62,
-          70
+          "Tien nghi",
+          72,
+          68
         ],
         [
-          "An toan",
-          60,
-          58,
+          "Dich vu",
+          70,
           65
         ],
         [
-          "Thong tin",
-          55,
-          52,
+          "An toan",
+          65,
           60
+        ],
+        [
+          "Thong tin",
+          60,
+          55
         ]
       ]
     },
     "views": [
       {
-        "id": "main",
-        "chartType": "auto",
         "xField": "reason",
         "series": [
           {
-            "field": "bar_current",
-            "chartType": "bar"
-          },
-          {
-            "field": "bar_prev",
-            "chartType": "bar"
-          },
-          {
-            "field": "line_target",
             "chartType": "line",
-            "lineType": "solid"
+            "field": "ke_hoach"
+          },
+          {
+            "chartType": "line",
+            "field": "thuc_hien"
           }
-        ]
+        ],
+        "id": "main",
+        "chartType": "radar"
       }
     ]
   }

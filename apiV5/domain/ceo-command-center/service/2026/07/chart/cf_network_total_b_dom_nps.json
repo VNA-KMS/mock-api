@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "radar",
     "dataset": {
       "columns": [
         {
@@ -8,74 +8,59 @@
           "type": "string"
         },
         {
-          "id": "bar_current",
-          "type": "number",
-          "label": "Tháng này"
+          "label": "Kế hoạch",
+          "id": "ke_hoach",
+          "type": "number"
         },
         {
-          "id": "bar_prev",
-          "type": "number",
-          "label": "Tháng trước"
-        },
-        {
-          "id": "line_target",
-          "type": "number",
-          "label": "Mục tiêu"
+          "label": "Thực hiện",
+          "id": "thuc_hien",
+          "type": "number"
         }
       ],
       "rows": [
         [
           "Thoi gian cho",
-          62,
-          58,
-          65
-        ],
-        [
-          "Thai do phuc vu",
-          58,
-          55,
+          65,
           62
         ],
         [
-          "Dich vu an uong",
-          55,
-          52,
-          60
+          "Thai do phuc vu",
+          62,
+          58
         ],
         [
-          "Tien nghi san bay",
-          50,
-          48,
+          "Dich vu an uong",
+          60,
           55
         ],
         [
-          "Thong tin bay",
-          45,
-          42,
+          "Tien nghi san bay",
+          55,
           50
+        ],
+        [
+          "Thong tin bay",
+          50,
+          45
         ]
       ]
     },
     "views": [
       {
-        "id": "main",
-        "chartType": "auto",
         "xField": "reason",
         "series": [
           {
-            "field": "bar_current",
-            "chartType": "bar"
-          },
-          {
-            "field": "bar_prev",
-            "chartType": "bar"
-          },
-          {
-            "field": "line_target",
             "chartType": "line",
-            "lineType": "solid"
+            "field": "ke_hoach"
+          },
+          {
+            "chartType": "line",
+            "field": "thuc_hien"
           }
-        ]
+        ],
+        "id": "main",
+        "chartType": "radar"
       }
     ]
   }

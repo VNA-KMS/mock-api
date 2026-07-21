@@ -17,13 +17,13 @@
           "id": "income",
           "type": "number",
           "label": "Tăng",
-          "colorToken": "rag.positive"
+          "color": "#22C55E"
         },
         {
           "id": "expense",
           "type": "number",
           "label": "Giảm",
-          "colorToken": "rag.negative"
+          "color": "#EF4444"
         }
       ],
       "rows": [
@@ -33,7 +33,7 @@
         ["Chi thuê MB", 22926, null, 3969],
         ["Chi SCBD MB", 21371, null, 1555],
         ["Chi SXKD khác", 15823, null, 5548],
-        ["Lợi nhuận", 0, 15823, null]
+        ["Lợi nhuận", null, 15823, null]
       ]
     },
     "views": [
@@ -43,9 +43,18 @@
         "xField": "step",
         "stack": "Total",
         "series": [
-          { "field": "helper", "chartType": "bar" },
-          { "field": "income", "chartType": "bar" },
-          { "field": "expense", "chartType": "bar" }
+          {
+            "field": "helper",
+            "chartType": "bar"
+          },
+          {
+            "field": "income",
+            "chartType": "bar"
+          },
+          {
+            "field": "expense",
+            "chartType": "bar"
+          }
         ]
       }
     ]

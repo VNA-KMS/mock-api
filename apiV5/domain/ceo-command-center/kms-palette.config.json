@@ -1,19 +1,20 @@
 {
-  "$schemaNote": "CEO Command Center — dùng KMS fill set V4. Identity/domain vẫn lấy V1 + primary/semantic từ SSOT.",
+  "$schemaNote": "CEO Command Center — fill duy nhất V4 từ color.html. Primary/Semantic/domain từ SSOT.",
   "extends": "../../../../vna-demo/src/theme/kms/kms-palette.config.json",
   "domain": "ceo-command-center",
   "activeFillSet": "v4",
+  "onlyFillSet": "v4",
   "primary": {
     "branding": "#006D88",
-    "accent": "#D3AC2B"
+    "accent": "#E6B441"
   },
   "semantic": {
     "positive": "#22C55E",
     "negative": "#EF4444",
-    "target": "#D3AC2B",
+    "target": "#E6B441",
     "reference": "#9AA0A6"
   },
-  "v1Objects": {
+  "domainObjects": {
     "commerce": { "main": "#06B6D4", "pair": "#005F6E" },
     "flightOps": { "main": "#3B82F6", "pair": "#3730A3" },
     "engineering": { "main": "#F97316", "pair": "#64748B" },
@@ -47,16 +48,45 @@
   "chart": {
     "series": {
       "actual": "#006D88",
-      "target": "#D3AC2B",
+      "target": "#E6B441",
       "previous": "#9AA0A6",
       "positive": "#22C55E",
       "negative": "#EF4444"
     },
     "rules": [
-      "CEO free/multi-series colors → chartPaletteV4 (V4, bỏ Kem khỏi CP giống color.html exclude #EFE9D6)",
-      "Domain accents → v1Objects",
-      "TH/KH/CK/RAG → chart.series",
-      "Cùng kỳ = line dashed only"
+      "Fill duy nhất V4 — cấm V2/V3",
+      "CEO free/multi-series → chartPaletteV4 (bỏ Kem #EFE9D6)",
+      "Domain accents → domainObjects (không phải fill version)",
+      "TH/KH/CK/RAG → chart.series (light); dark resolve ở FE",
+      "Cùng kỳ = line dashed only",
+      "Mock JSON: ưu tiên colorToken — không hardcode hex dark"
+    ]
+  },
+  "themes": {
+    "note": "BE chỉ emit colorToken / hex light. Dark mode resolve ở FE. Chi tiết SSOT themes.",
+    "light": {
+      "actual": "#006D88",
+      "target": "#E6B441",
+      "previous": "#9AA0A6",
+      "positive": "#22C55E",
+      "negative": "#EF4444",
+      "warning": "#B45309",
+      "forecast": "#A8B4C4"
+    },
+    "dark": {
+      "actual": "#0f6176",
+      "target": "#c39e4a",
+      "previous": "#8b9095",
+      "positive": "#34D399",
+      "negative": "#F87171",
+      "warning": "#FBBF24",
+      "forecast": "#64748B"
+    },
+    "rules": [
+      "TH/KH/CK/RAG: light|dark theo theme FE",
+      "chartPaletteV4 / domainObjects: cùng hex cả light lẫn dark",
+      "rowStyle pastel → FE resolveTableRowStyle(isDark)",
+      "Không ghi hex dark vào mock JSON"
     ]
   }
 }
