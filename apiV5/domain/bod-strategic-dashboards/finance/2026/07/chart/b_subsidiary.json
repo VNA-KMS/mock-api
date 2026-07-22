@@ -1,114 +1,137 @@
 {
- "autoChart": {
-  "chartType": "bar",
-  "dataset": {
-   "columns": [
-    {
-     "id": "company",
-     "type": "string"
-    },
-    {
-     "id": "th",
-     "type": "number",
-     "label": "Thực hiện",
-     "color": "#006D88"
-    },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "color": "#9AA0A6"
-    },
-    {
-     "id": "kh",
-     "type": "number",
-     "label": "Kế hoạch",
-     "color": "#D3AC2B"
-    }
-   ],
-   "rows": [
-    [
-     "SKYPEC",
-     1200,
-     1100,
-     1150
-    ],
-    [
-     "NCTS",
-     950,
-     880,
-     920
-    ],
-    [
-     "TCS",
-     850,
-     800,
-     830
-    ],
-    [
-     "VAECO",
-     1500,
-     1400,
-     1450
-    ],
-    [
-     "VIAGS",
-     700,
-     650,
-     680
-    ],
-    [
-     "VACS",
-     450,
-     400,
-     430
-    ],
-    [
-     "TECS",
-     350,
-     320,
-     340
-    ],
-    [
-     "NCS",
-     280,
-     250,
-     270
-    ],
-    [
-     "VINAKO",
-     200,
-     180,
-     190
-    ],
-    [
-     "PA",
-     150,
-     140,
-     145
-    ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
+  "autoChart": {
     "chartType": "bar",
-    "xField": "company",
-    "series": [
-     {
-      "field": "th",
-      "chartType": "bar"
-     },
-     {
-      "field": "ck",
-      "chartType": "bar"
-     },
-     {
-      "field": "kh",
-      "chartType": "bar"
-     }
+    "dataset": {
+      "columns": [
+        {
+          "id": "company",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "SKYPEC",
+          1200,
+          null,
+          1100,
+          1150
+        ],
+        [
+          "NCTS",
+          950,
+          null,
+          880,
+          920
+        ],
+        [
+          "TCS",
+          850,
+          null,
+          800,
+          830
+        ],
+        [
+          "VAECO",
+          1500,
+          null,
+          1400,
+          1450
+        ],
+        [
+          "VIAGS",
+          700,
+          null,
+          650,
+          680
+        ],
+        [
+          "VACS",
+          450,
+          null,
+          400,
+          430
+        ],
+        [
+          "TECS",
+          350,
+          null,
+          320,
+          340
+        ],
+        [
+          "NCS",
+          280,
+          null,
+          250,
+          270
+        ],
+        [
+          "VINAKO",
+          200,
+          null,
+          180,
+          190
+        ],
+        [
+          "PA",
+          150,
+          null,
+          140,
+          145
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "company",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "kh",
+            "chartType": "bar"
+          }
+        ]
+      }
     ]
-   }
-  ]
- }
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
 }

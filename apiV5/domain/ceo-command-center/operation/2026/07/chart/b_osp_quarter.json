@@ -24,6 +24,12 @@
           "type": "number",
           "label": "Thực tế",
           "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
         }
       ],
       "rows": [
@@ -31,25 +37,29 @@
           "Quý I",
           32.5,
           95,
-          97.4
+          97.4,
+          null
         ],
         [
           "Quý II",
           35,
           93,
-          94.7
+          94.7,
+          null
         ],
         [
           "Quý III",
           52.2,
           95,
-          null
+          null,
+          97.1
         ],
         [
           "Quý IV",
           92.2,
           96,
-          null
+          null,
+          98.1
         ]
       ]
     },
@@ -70,9 +80,16 @@
           {
             "field": "cur",
             "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "line"
           }
         ]
       }
     ]
+  },
+  "metadata": {
+    "forecastStartIndex": 3
   }
 }

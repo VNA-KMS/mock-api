@@ -1,157 +1,194 @@
 {
- "autoChart": {
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#C4A83A"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth_cum",
+          "type": "number",
+          "label": "Ước thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Dự báo (LK)",
+          "color": "#C4A83A"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          422,
+          null,
+          410,
+          420,
+          422,
+          null,
+          410,
+          420
+        ],
+        [
+          "T2",
+          428,
+          null,
+          415,
+          426,
+          850,
+          null,
+          825,
+          846
+        ],
+        [
+          "T3",
+          434,
+          null,
+          420,
+          432,
+          1284,
+          null,
+          1245,
+          1278
+        ],
+        [
+          "T4",
+          440,
+          null,
+          425,
+          438,
+          1724,
+          null,
+          1670,
+          1716
+        ],
+        [
+          "T5",
+          445,
+          null,
+          430,
+          445,
+          2169,
+          null,
+          2100,
+          2161
+        ],
+        [
+          "T6",
+          450,
+          null,
+          435,
+          452,
+          2619,
+          null,
+          2535,
+          2613
+        ],
+        [
+          "T7",
+          455,
+          null,
+          440,
+          458,
+          3074,
+          null,
+          2975,
+          3071
+        ]
+      ]
     },
-    {
-     "id": "th",
-     "type": "number",
-     "label": "Thực hiện",
-     "color": "#006D88"
-    },
-    {
-     "id": "ck",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "color": "#9AA0A6"
-    },
-    {
-     "id": "db",
-     "type": "number",
-     "label": "Dự báo",
-     "color": "#C4A83A"
-    },
-    {
-     "id": "th_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)",
-     "color": "#006D88"
-    },
-    {
-     "id": "ck_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "color": "#9AA0A6"
-    },
-    {
-     "id": "db_cum",
-     "type": "number",
-     "label": "Dự báo (LK)",
-     "color": "#C4A83A"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     422,
-     410,
-     420,
-     422,
-     410,
-     420
-    ],
-    [
-     "T2",
-     428,
-     415,
-     426,
-     850,
-     825,
-     846
-    ],
-    [
-     "T3",
-     434,
-     420,
-     432,
-     1284,
-     1245,
-     1278
-    ],
-    [
-     "T4",
-     440,
-     425,
-     438,
-     1724,
-     1670,
-     1716
-    ],
-    [
-     "T5",
-     445,
-     430,
-     445,
-     2169,
-     2100,
-     2161
-    ],
-    [
-     "T6",
-     450,
-     435,
-     452,
-     2619,
-     2535,
-     2613
-    ],
-    [
-     "T7",
-     455,
-     440,
-     458,
-     3074,
-     2975,
-     3071
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ],
+        "label": "Theo T7"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "uth_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ],
+        "label": "LK: 3.074"
+      }
     ]
-   ]
   },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "th",
-      "chartType": "line"
-     },
-     {
-      "field": "ck",
-      "chartType": "line"
-     },
-     {
-      "field": "db",
-      "chartType": "line",
-      "lineType": "dashed"
-     }
-    ],
-    "label": "Theo T7"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "th_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "ck_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "db_cum",
-      "chartType": "line",
-      "lineType": "dashed"
-     }
-    ],
-    "label": "LK: 3.074"
-   }
-  ]
- }
+  "metadata": {
+    "forecastStartIndex": 7
+  }
 }

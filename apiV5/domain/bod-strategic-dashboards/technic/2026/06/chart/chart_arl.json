@@ -1,152 +1,177 @@
 {
- "autoChart": {
-  "chartType": "combo",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
-    },
-    {
-     "id": "actual",
-     "type": "number",
-     "label": "Thực tế",
-     "color": "#006D88"
-    },
-    {
-     "id": "plan",
-     "type": "number",
-     "label": "Kế hoạch 12 tháng",
-     "color": "#C4A83A"
-    },
-    {
-     "id": "samePeriod",
-     "type": "number",
-     "label": "Cùng kỳ 12 tháng",
-     "color": "#9AA0A6"
-    },
-    {
-     "id": "target",
-     "type": "number",
-     "label": "Mục tiêu",
-     "lineDash": [
-      6,
-      4
-     ],
-     "color": "#C76449"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     94.9,
-     94.8,
-     94.3,
-     95.5
-    ],
-    [
-     "T2",
-     95.3,
-     95.0,
-     94.8,
-     95.5
-    ],
-    [
-     "T3",
-     95.6,
-     95.3,
-     95.0,
-     95.5
-    ],
-    [
-     "T4",
-     95.9,
-     95.6,
-     95.3,
-     95.5
-    ],
-    [
-     "T5",
-     95.4,
-     95.8,
-     94.8,
-     95.5
-    ],
-    [
-     "T6",
-     95.1,
-     96.0,
-     94.5,
-     95.5
-    ],
-    [
-     "T7",
-     94.87,
-     96.2,
-     94.2,
-     95.5
-    ],
-    [
-     "T8",
-     null,
-     96.0,
-     94.6,
-     95.5
-    ],
-    [
-     "T9",
-     null,
-     95.7,
-     94.3,
-     95.5
-    ],
-    [
-     "T10",
-     null,
-     95.4,
-     95.0,
-     95.5
-    ],
-    [
-     "T11",
-     null,
-     95.0,
-     95.6,
-     95.5
-    ],
-    [
-     "T12",
-     null,
-     94.7,
-     95.2,
-     95.5
-    ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
+  "autoChart": {
     "chartType": "combo",
-    "xField": "month",
-    "series": [
-     {
-      "field": "actual",
-      "chartType": "bar"
-     },
-     {
-      "field": "plan",
-      "chartType": "line"
-     },
-     {
-      "field": "samePeriod",
-      "chartType": "line"
-     },
-     {
-      "field": "target",
-      "chartType": "line"
-     }
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực tế",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch 12 tháng",
+          "color": "#C4A83A"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ 12 tháng",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "Mục tiêu",
+          "lineDash": [
+            6,
+            4
+          ],
+          "color": "#C76449"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          94.9,
+          null,
+          94.8,
+          94.3,
+          95.5
+        ],
+        [
+          "T2",
+          95.3,
+          null,
+          95.0,
+          94.8,
+          95.5
+        ],
+        [
+          "T3",
+          95.6,
+          null,
+          95.3,
+          95.0,
+          95.5
+        ],
+        [
+          "T4",
+          95.9,
+          null,
+          95.6,
+          95.3,
+          95.5
+        ],
+        [
+          "T5",
+          95.4,
+          null,
+          95.8,
+          94.8,
+          95.5
+        ],
+        [
+          "T6",
+          95.1,
+          null,
+          96.0,
+          94.5,
+          95.5
+        ],
+        [
+          "T7",
+          94.87,
+          null,
+          96.2,
+          94.2,
+          95.5
+        ],
+        [
+          "T8",
+          null,
+          95.8,
+          96.0,
+          94.6,
+          95.5
+        ],
+        [
+          "T9",
+          null,
+          95.5,
+          95.7,
+          94.3,
+          95.5
+        ],
+        [
+          "T10",
+          null,
+          95.2,
+          95.4,
+          95.0,
+          95.5
+        ],
+        [
+          "T11",
+          null,
+          94.8,
+          95.0,
+          95.6,
+          95.5
+        ],
+        [
+          "T12",
+          null,
+          94.5,
+          94.7,
+          95.2,
+          95.5
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "line"
+          },
+          {
+            "field": "target",
+            "chartType": "line"
+          }
+        ]
+      }
     ]
-   }
-  ]
- }
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
 }

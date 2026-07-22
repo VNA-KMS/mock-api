@@ -1,160 +1,197 @@
 {
- "autoChart": {
-  "chartType": "line",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth_cum",
+          "type": "number",
+          "label": "Ước thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "plan_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "samePeriod_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          93.5,
+          null,
+          93.2,
+          93.0,
+          93.5,
+          null,
+          98,
+          88
+        ],
+        [
+          "T2",
+          93.2,
+          null,
+          93.2,
+          92.8,
+          186.7,
+          null,
+          192,
+          172
+        ],
+        [
+          "T3",
+          92.8,
+          null,
+          93.2,
+          92.5,
+          279.5,
+          null,
+          285,
+          255
+        ],
+        [
+          "T4",
+          92.5,
+          null,
+          93.2,
+          92.2,
+          372.0,
+          null,
+          384,
+          346
+        ],
+        [
+          "T5",
+          92.0,
+          null,
+          93.2,
+          91.8,
+          464.0,
+          null,
+          480,
+          431
+        ],
+        [
+          "T6",
+          91.8,
+          null,
+          93.2,
+          91.8,
+          555.8,
+          null,
+          578,
+          520
+        ],
+        [
+          "T7",
+          91.8,
+          null,
+          93.2,
+          92.8,
+          647.6,
+          null,
+          672,
+          607
+        ]
+      ]
     },
-    {
-     "id": "actual",
-     "type": "number",
-     "label": "Thực hiện",
-     "color": "#006D88"
-    },
-    {
-     "id": "plan",
-     "type": "number",
-     "label": "Kế hoạch",
-     "color": "#D3AC2B"
-    },
-    {
-     "id": "samePeriod",
-     "type": "number",
-     "label": "Cùng kỳ",
-     "color": "#9AA0A6"
-    },
-    {
-     "id": "actual_cum",
-     "type": "number",
-     "label": "Thực hiện (LK)",
-     "color": "#006D88"
-    },
-    {
-     "id": "plan_cum",
-     "type": "number",
-     "label": "Kế hoạch (LK)",
-     "color": "#D3AC2B"
-    },
-    {
-     "id": "samePeriod_cum",
-     "type": "number",
-     "label": "Cùng kỳ (LK)",
-     "color": "#9AA0A6"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     93.5,
-     93.2,
-     93.0,
-     93.5,
-     98,
-     88
-    ],
-    [
-     "T2",
-     93.2,
-     93.2,
-     92.8,
-     186.7,
-     192,
-     172
-    ],
-    [
-     "T3",
-     92.8,
-     93.2,
-     92.5,
-     279.5,
-     285,
-     255
-    ],
-    [
-     "T4",
-     92.5,
-     93.2,
-     92.2,
-     372.0,
-     384,
-     346
-    ],
-    [
-     "T5",
-     92.0,
-     93.2,
-     91.8,
-     464.0,
-     480,
-     431
-    ],
-    [
-     "T6",
-     91.8,
-     93.2,
-     91.8,
-     555.8,
-     578,
-     520
-    ],
-    [
-     "T7",
-     91.8,
-     93.2,
-     92.8,
-     647.6,
-     672,
-     607
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ],
+        "label": "Theo T7"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "uth_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "plan_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "samePeriod_cum",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ],
+        "label": "LK: 647,6"
+      }
     ]
-   ]
   },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "actual",
-      "chartType": "line"
-     },
-     {
-      "field": "plan",
-      "chartType": "line",
-      "lineType": "dashed"
-     },
-     {
-      "field": "samePeriod",
-      "chartType": "line",
-      "lineType": "dashed"
-     }
-    ],
-    "label": "Theo T7"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "line",
-    "xField": "month",
-    "series": [
-     {
-      "field": "actual_cum",
-      "chartType": "line"
-     },
-     {
-      "field": "plan_cum",
-      "chartType": "line",
-      "lineType": "dashed"
-     },
-     {
-      "field": "samePeriod_cum",
-      "chartType": "line",
-      "lineType": "dashed"
-     }
-    ],
-    "label": "LK: 647,6"
-   }
-  ]
- }
+  "metadata": {
+    "forecastStartIndex": 7
+  }
 }
