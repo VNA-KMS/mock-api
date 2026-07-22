@@ -11,184 +11,52 @@
           "id": "actual",
           "type": "number",
           "label": "Thực hiện",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "Ước thực hiện",
-          "color": "#006D88"
+          "color": "#004071"
         },
         {
           "id": "ck",
           "type": "number",
           "label": "Cùng kỳ",
-          "color": "#9AA0A6"
+          "color": "#64748B"
         },
         {
-          "id": "mt",
+          "id": "kh",
           "type": "number",
-          "label": "Mục tiêu",
-          "color": "#D3AC2B"
+          "label": "Kế hoạch",
+          "color": "#B4901F"
         },
         {
           "id": "actual_cum",
           "type": "number",
           "label": "Thực hiện (LK)",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth_cum",
-          "type": "number",
-          "label": "Ước thực hiện (LK)",
-          "color": "#006D88"
+          "color": "#004071"
         },
         {
           "id": "ck_cum",
           "type": "number",
           "label": "Cùng kỳ (LK)",
-          "color": "#9AA0A6"
+          "color": "#64748B"
         },
         {
-          "id": "mt_cum",
+          "id": "kh_cum",
           "type": "number",
-          "label": "Mục tiêu (LK)",
-          "color": "#D3AC2B"
+          "label": "Kế hoạch (LK)",
+          "color": "#B4901F"
         }
       ],
       "rows": [
-        [
-          "T1",
-          46,
-          null,
-          37,
-          50.5,
-          46,
-          null,
-          37,
-          50.5
-        ],
-        [
-          "T2",
-          50,
-          null,
-          42,
-          51,
-          96,
-          null,
-          79,
-          101.5
-        ],
-        [
-          "T3",
-          48,
-          null,
-          40,
-          50,
-          144,
-          null,
-          119,
-          151.5
-        ],
-        [
-          "T4",
-          55,
-          null,
-          45,
-          52,
-          199,
-          null,
-          164,
-          203.5
-        ],
-        [
-          "T5",
-          52,
-          null,
-          43,
-          51.5,
-          251,
-          null,
-          207,
-          255
-        ],
-        [
-          "T6",
-          60,
-          null,
-          48,
-          52.5,
-          311,
-          null,
-          255,
-          307.5
-        ],
-        [
-          "T7",
-          66,
-          null,
-          48,
-          52,
-          377,
-          null,
-          303,
-          359.5
-        ],
-        [
-          "T8",
-          null,
-          53.5,
-          45,
-          51,
-          null,
-          430.5,
-          348,
-          410.5
-        ],
-        [
-          "T9",
-          null,
-          55.6,
-          42,
-          53,
-          null,
-          486.1,
-          390,
-          463.5
-        ],
-        [
-          "T10",
-          null,
-          54.5,
-          40,
-          52,
-          null,
-          540.6,
-          430,
-          515.5
-        ],
-        [
-          "T11",
-          null,
-          54.0,
-          38,
-          51.5,
-          null,
-          594.6,
-          468,
-          567
-        ],
-        [
-          "T12",
-          null,
-          52.4,
-          37,
-          50,
-          null,
-          647.0,
-          505,
-          617
-        ]
+        ["T1", 91, 89, 92, 91, 89, 92],
+        ["T2", 92, 91, 93, 183, 180, 185],
+        ["T3", 91, 90, 92, 274, 270, 277],
+        ["T4", 93, 91, 93, 367, 361, 370],
+        ["T5", 92, 90, 93, 459, 451, 463],
+        ["T6", 94, 92, 94, 553, 543, 557],
+        ["T7", 95, 93, 95, 648, 636, 652],
+        ["T8", null, 92, 94, null, 728, 746],
+        ["T9", null, 91, 93, null, 819, 839],
+        ["T10", null, 90, 93, null, 909, 932],
+        ["T11", null, 89, 92, null, 998, 1024],
+        ["T12", null, 89, 92, null, 1087, 1116]
       ]
     },
     "views": [
@@ -196,49 +64,41 @@
         "id": "main",
         "chartType": "line",
         "xField": "month",
+        "label": "Theo T12",
         "series": [
           {
             "field": "actual",
             "chartType": "line"
           },
           {
-            "field": "uth",
-            "chartType": "bar"
-          },
-          {
             "field": "ck",
             "chartType": "line"
           },
           {
-            "field": "mt",
+            "field": "kh",
             "chartType": "line"
           }
-        ],
-        "label": "Theo T12"
+        ]
       },
       {
         "id": "main_cum",
         "chartType": "line",
         "xField": "month",
+        "label": "LK: 648",
         "series": [
           {
             "field": "actual_cum",
             "chartType": "line"
           },
           {
-            "field": "uth_cum",
-            "chartType": "bar"
-          },
-          {
             "field": "ck_cum",
             "chartType": "line"
           },
           {
-            "field": "mt_cum",
+            "field": "kh_cum",
             "chartType": "line"
           }
-        ],
-        "label": "LK: 377"
+        ]
       }
     ]
   },

@@ -1,123 +1,34 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "pie",
     "dataset": {
       "columns": [
         {
-          "id": "month",
+          "id": "type",
           "type": "string"
         },
         {
-          "id": "cargo",
+          "id": "value",
           "type": "number",
-          "label": "Cargo",
-          "color": "#C76449"
-        },
-        {
-          "id": "vip",
-          "type": "number",
-          "label": "VIP",
-          "color": "#889941"
-        },
-        {
-          "id": "ferry",
-          "type": "number",
-          "label": "Ferry",
-          "color": "#479EB3"
+          "label": "Số chuyến",
+          "color": ["#004071", "#B4901F", "#0E7490"]
         }
       ],
       "rows": [
-        [
-          "T1",
-          42,
-          15,
-          150
-        ],
-        [
-          "T2",
-          45,
-          16,
-          158
-        ],
-        [
-          "T3",
-          49,
-          18,
-          176
-        ],
-        [
-          "T4",
-          52,
-          19,
-          182
-        ],
-        [
-          "T5",
-          55,
-          20,
-          195
-        ],
-        [
-          "T6",
-          58,
-          22,
-          210
-        ],
-        [
-          "T7",
-          60,
-          23,
-          225
-        ],
-        [
-          "T8",
-          null,
-          null,
-          null
-        ],
-        [
-          "T9",
-          null,
-          null,
-          null
-        ],
-        [
-          "T10",
-          null,
-          null,
-          null
-        ],
-        [
-          "T11",
-          null,
-          null,
-          null
-        ],
-        [
-          "T12",
-          null,
-          null,
-          null
-        ]
+        ["Cargo", 580],
+        ["VIP", 210],
+        ["Ferry", 1950]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
-        "xField": "month",
+        "chartType": "pie",
+        "xField": "type",
         "series": [
           {
-            "field": "cargo",
-            "chartType": "bar"
-          },
-          {
-            "field": "vip",
-            "chartType": "bar"
-          },
-          {
-            "field": "ferry",
-            "chartType": "bar"
+            "field": "value",
+            "chartType": "pie"
           }
         ]
       }

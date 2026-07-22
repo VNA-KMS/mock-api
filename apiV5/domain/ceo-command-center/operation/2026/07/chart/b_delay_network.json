@@ -1,0 +1,60 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "network",
+          "type": "string"
+        },
+        {
+          "id": "delay_pct",
+          "type": "number",
+          "label": "Tỷ lệ chậm",
+          "color": "#004071"
+        },
+        {
+          "id": "mt",
+          "type": "number",
+          "label": "Mục tiêu",
+          "color": "#B4901F"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#64748B"
+        }
+      ],
+      "rows": [
+        ["Toàn mạng", 0.21, 0.35, 0.37],
+        ["Nội địa (DOM)", 0.23, 0.40, 0.42],
+        ["Quốc tế (INT)", 0.19, 0.40, 0.36]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "network",
+        "label": "T7/2026",
+        "series": [
+          {
+            "field": "delay_pct",
+            "chartType": "bar"
+          },
+          {
+            "field": "mt",
+            "chartType": "line",
+            "yAxis": "right"
+          },
+          {
+            "field": "ck",
+            "chartType": "line",
+            "yAxis": "right"
+          }
+        ]
+      }
+    ]
+  }
+}
