@@ -1,0 +1,92 @@
+{
+  "$schemaNote": "CEO Command Center — fill duy nhất V4 từ color.html. Primary/Semantic/domain từ SSOT.",
+  "extends": "../../../../vna-demo/src/theme/kms/kms-palette.config.json",
+  "domain": "ceo-command-center",
+  "activeFillSet": "v4",
+  "onlyFillSet": "v4",
+  "primary": {
+    "branding": "#006D88",
+    "accent": "#E6B441"
+  },
+  "semantic": {
+    "positive": "#22C55E",
+    "negative": "#EF4444",
+    "target": "#E6B441",
+    "reference": "#9AA0A6"
+  },
+  "domainObjects": {
+    "commerce": { "main": "#06B6D4", "pair": "#005F6E" },
+    "flightOps": { "main": "#3B82F6", "pair": "#3730A3" },
+    "engineering": { "main": "#F97316", "pair": "#64748B" },
+    "service": { "main": "#D4AF37", "pair": "#9D174D" },
+    "loyalty": { "main": "#5B21B6", "pair": "#C3913A" },
+    "cargo": { "main": "#F59E0B", "pair": "#1E3A8A" },
+    "safety": { "main": "#10B981", "pair": "#047857" },
+    "finance": { "main": "#059669", "pair": "#0F172A" },
+    "hr": { "main": "#F43F5E", "pair": "#FDA4AF" },
+    "digital": { "main": "#8B5CF6", "pair": "#D946EF" },
+    "admin": { "main": "#A8A29E", "pair": "#475569" }
+  },
+  "fillSeq": {
+    "v4": [
+      { "name": "Xanh đậm", "hex": "#1D4857", "token": "deep-teal" },
+      { "name": "Xanh ngọc", "hex": "#479EB3", "token": "jade-blue" },
+      { "name": "Xanh biển", "hex": "#3D879B", "token": "sea-blue" },
+      { "name": "Vàng ô liu", "hex": "#C4A83A", "token": "olive-gold" },
+      { "name": "Xanh ô liu", "hex": "#889941", "token": "olive-green" },
+      { "name": "Xanh rêu", "hex": "#5E793D", "token": "moss-green" },
+      { "name": "Gạch", "hex": "#C76449", "token": "brick" },
+      { "name": "Đất nung", "hex": "#A55C3E", "token": "terracotta-earth" },
+      { "name": "Mận", "hex": "#B86A84", "token": "plum" },
+      { "name": "Nâu", "hex": "#AE8655", "token": "brown" },
+      { "name": "Xám xanh", "hex": "#476065", "token": "blue-grey" },
+      { "name": "San hô", "hex": "#E28A81", "token": "coral" },
+      { "name": "Kem", "hex": "#EFE9D6", "token": "cream" }
+    ]
+  },
+  "chartPaletteV4": ["#1D4857", "#479EB3", "#3D879B", "#C4A83A", "#889941", "#5E793D", "#C76449", "#A55C3E", "#B86A84", "#AE8655", "#476065", "#E28A81"],
+  "chart": {
+    "series": {
+      "actual": "#006D88",
+      "target": "#E6B441",
+      "previous": "#9AA0A6",
+      "positive": "#22C55E",
+      "negative": "#EF4444"
+    },
+    "rules": [
+      "Fill duy nhất V4 — cấm V2/V3",
+      "CEO free/multi-series → chartPaletteV4 (bỏ Kem #EFE9D6)",
+      "Domain accents → domainObjects (không phải fill version)",
+      "TH/KH/CK/RAG → chart.series (light); dark resolve ở FE",
+      "Cùng kỳ = line dashed only",
+      "Mock JSON: ưu tiên colorToken — không hardcode hex dark"
+    ]
+  },
+  "themes": {
+    "note": "BE chỉ emit colorToken / hex light. Dark mode resolve ở FE. Chi tiết SSOT themes.",
+    "light": {
+      "actual": "#006D88",
+      "target": "#E6B441",
+      "previous": "#9AA0A6",
+      "positive": "#22C55E",
+      "negative": "#EF4444",
+      "warning": "#B45309",
+      "forecast": "#A8B4C4"
+    },
+    "dark": {
+      "actual": "#0f6176",
+      "target": "#c39e4a",
+      "previous": "#8b9095",
+      "positive": "#34D399",
+      "negative": "#F87171",
+      "warning": "#FBBF24",
+      "forecast": "#64748B"
+    },
+    "rules": [
+      "TH/KH/CK/RAG: light|dark theo theme FE",
+      "chartPaletteV4 / domainObjects: cùng hex cả light lẫn dark",
+      "rowStyle pastel → FE resolveTableRowStyle(isDark)",
+      "Không ghi hex dark vào mock JSON"
+    ]
+  }
+}

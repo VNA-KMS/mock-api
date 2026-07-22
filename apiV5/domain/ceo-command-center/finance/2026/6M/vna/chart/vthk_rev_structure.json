@@ -1,0 +1,60 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "nhom",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "Hành khách",
+          33754.1,
+          29545.8
+        ],
+        [
+          "Hàng hoá, bưu kiện",
+          3581,
+          2722
+        ],
+        [
+          "Hoạt động gia tăng",
+          1448.2,
+          1539.2
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "nhom",
+        "label": "KH vs TH",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "kh",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

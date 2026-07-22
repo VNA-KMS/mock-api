@@ -1,0 +1,125 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "step",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Nghìn tỷ VND",
+          "color": "#006D88"
+        },
+        {
+          "id": "value_cum",
+          "type": "number",
+          "label": "Nghìn tỷ VND (LK)",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Gross Revenue",
+          515,
+          3192
+        ],
+        [
+          "Dvu khác",
+          77,
+          489
+        ],
+        [
+          "Nhiên liệu",
+          -154,
+          -952
+        ],
+        [
+          "Bảo dưỡng",
+          -51,
+          -319
+        ],
+        [
+          "CP khác",
+          -103,
+          -643
+        ],
+        [
+          "CP khác (2)",
+          -26,
+          -165
+        ],
+        [
+          "EBITDAR",
+          257,
+          1601
+        ],
+        [
+          "Thuê tàu bay",
+          -62,
+          -381
+        ],
+        [
+          "EBITDA",
+          196,
+          1220
+        ],
+        [
+          "Khấu hao",
+          -41,
+          -257
+        ],
+        [
+          "EBIT",
+          154,
+          963
+        ],
+        [
+          "Lãi vay",
+          -26,
+          -160
+        ],
+        [
+          "Thuế",
+          -15,
+          -98
+        ],
+        [
+          "PBT",
+          113,
+          705
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "Theo T12",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "waterfall"
+          }
+        ],
+        "showLegend": false
+      },
+      {
+        "id": "main_cum",
+        "chartType": "waterfall",
+        "xField": "step",
+        "label": "LK: 705",
+        "series": [
+          {
+            "field": "value_cum",
+            "chartType": "waterfall"
+          }
+        ],
+        "showLegend": false
+      }
+    ]
+  }
+}

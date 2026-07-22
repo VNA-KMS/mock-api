@@ -9,96 +9,114 @@
           "type": "string"
         },
         {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
           "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
+          "label": "Cùng kỳ 2026",
+          "color": "#9AA0A6"
         },
         {
           "id": "db",
           "type": "number",
-          "label": "Kế hoạch",
+          "label": "Kế hoạch 2027",
           "color": "#D3AC2B"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
         }
       ],
       "rows": [
         [
           "T1",
-          560,
           600,
+          null,
+          560,
           600
         ],
         [
           "T2",
+          610,
+          null,
           568,
-          605,
-          610
+          605
         ],
         [
           "T3",
+          590,
+          null,
           550,
-          610,
-          590
+          610
         ],
         [
           "T4",
+          600,
+          null,
           558,
-          615,
-          600
+          615
         ],
         [
           "T5",
-          572,
           620,
+          null,
+          572,
           620
         ],
         [
           "T6",
+          610,
+          null,
           565,
-          620,
-          610
+          620
         ],
         [
           "T7",
+          620,
+          null,
           575,
-          625,
-          620
+          625
         ],
         [
           "T8",
+          null,
+          560.0,
           532,
-          580,
-          560
+          580
         ],
         [
           "T9",
+          null,
+          570.0,
           540,
-          585,
-          570
+          585
         ],
         [
           "T10",
+          null,
+          600.0,
           565,
-          590,
-          600
-        ],
-        [
-          "T11",
-          555,
-          595,
           590
         ],
         [
+          "T11",
+          null,
+          590.0,
+          555,
+          595
+        ],
+        [
           "T12",
+          null,
+          620.0,
           580,
-          600,
-          620
+          600
         ]
       ]
     },
@@ -109,19 +127,27 @@
         "xField": "month",
         "series": [
           {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
           {
             "field": "db",
-            "chartType": "line"
-          },
-          {
-            "field": "th",
-            "chartType": "line"
+            "chartType": "line",
+            "lineStyle": "dashed"
           }
         ]
       }
     ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
   }
 }

@@ -1,0 +1,64 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "Mục tiêu năm",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          94.2,
+          95
+        ],
+        [
+          "A350",
+          93,
+          94
+        ],
+        [
+          "B787",
+          88,
+          92
+        ],
+        [
+          "ATR72",
+          92.4,
+          94
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "target",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

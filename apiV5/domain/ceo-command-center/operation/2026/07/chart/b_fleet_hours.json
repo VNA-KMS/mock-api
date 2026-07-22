@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "bar-h",
     "dataset": {
       "columns": [
         {
@@ -8,43 +8,39 @@
           "type": "string"
         },
         {
-          "id": "hours",
+          "id": "actual",
           "type": "number",
-          "label": "Giờ bay",
-          "color": "#004071"
+          "label": "Nghìn BH",
+          "color": "#006D88"
         }
       ],
       "rows": [
         [
+          "A321",
+          24.8
+        ],
+        [
           "B787",
-          12000
+          10.2
         ],
         [
           "A350",
-          10000
-        ],
-        [
-          "A321",
-          15000
+          8.1
         ],
         [
           "ATR72",
-          3000
-        ],
-        [
-          "A320",
-          2800
+          3.2
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "bar-h",
         "xField": "fleet",
         "series": [
           {
-            "field": "hours",
+            "field": "actual",
             "chartType": "bar"
           }
         ]

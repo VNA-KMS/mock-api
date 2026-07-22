@@ -1,0 +1,54 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "assets",
+          "type": "number",
+          "label": "Tổng tài sản",
+          "color": "#1D4857"
+        },
+        {
+          "id": "equity",
+          "type": "number",
+          "label": "VCSH",
+          "color": "#C4A83A"
+        }
+      ],
+      "rows": [
+        ["T1", 54.2, 11.6],
+        ["T2", 54.8, 11.9],
+        ["T3", 55.5, 12.1],
+        ["T4", 56.1, 12.3],
+        ["T5", 56.8, 12.5],
+        ["T6", 57.6, 12.7],
+        ["T7", 58.4, 12.8]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "label": "T7/2026",
+        "series": [
+          {
+            "field": "assets",
+            "chartType": "bar",
+            "yAxis": "left"
+          },
+          {
+            "field": "equity",
+            "chartType": "line",
+            "yAxis": "right"
+          }
+        ]
+      }
+    ]
+  }
+}

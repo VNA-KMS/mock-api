@@ -1,122 +1,121 @@
 {
-  "autoChart": {
-    "dataset": {
-      "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "cur",
-          "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
-        },
-        {
-          "id": "cur_cum",
-          "type": "number",
-          "label": "Thực hiện (LK)",
-          "color": "#004071"
-        },
-        {
-          "id": "ck_cum",
-          "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "color": "#94A3B8"
-        }
-      ],
-      "rows": [
-        [
-          "T1",
-          37,
-          40,
-          37,
-          40
-        ],
-        [
-          "T2",
-          36,
-          39,
-          73,
-          79
-        ],
-        [
-          "T3",
-          35,
-          38,
-          108,
-          117
-        ],
-        [
-          "T4",
-          34,
-          37,
-          142,
-          154
-        ],
-        [
-          "T5",
-          33,
-          36,
-          175,
-          190
-        ],
-        [
-          "T6",
-          32,
-          35,
-          207,
-          225
-        ],
-        [
-          "T7",
-          42,
-          47,
-          249,
-          272
-        ]
-      ]
+ "autoChart": {
+  "dataset": {
+   "columns": [
+    {
+     "id": "month",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "cur",
-            "chartType": "line"
-          },
-          {
-            "field": "ck",
-            "chartType": "line"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "cur_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "ck_cum",
-            "chartType": "line"
-          }
-        ]
-      }
-    ],
-    "viewSwitch": {
-      "enabled": true
+    {
+     "id": "cur",
+     "type": "number",
+     "label": "Thực hiện 2027",
+     "color": "#006D88"
+    },
+    {
+     "id": "ck",
+     "type": "number",
+     "label": "Cùng kỳ 2026",
+     "color": "#9AA0A6"
+    },
+    {
+     "id": "cur_cum",
+     "type": "number",
+     "label": "Thực hiện (LK)",
+     "color": "#006D88"
+    },
+    {
+     "id": "ck_cum",
+     "type": "number",
+     "label": "Cùng kỳ (LK)",
+     "color": "#9AA0A6"
     }
-  }
+   ],
+   "rows": [
+    [
+     "T1",
+     37,
+     40,
+     37,
+     40
+    ],
+    [
+     "T2",
+     36,
+     39,
+     73,
+     79
+    ],
+    [
+     "T3",
+     35,
+     38,
+     108,
+     117
+    ],
+    [
+     "T4",
+     34,
+     37,
+     142,
+     154
+    ],
+    [
+     "T5",
+     33,
+     36,
+     175,
+     190
+    ],
+    [
+     "T6",
+     32,
+     35,
+     207,
+     225
+    ],
+    [
+     "T7",
+     42,
+     47,
+     249,
+     272
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "line",
+    "xField": "month",
+    "series": [
+     {
+      "field": "cur",
+      "chartType": "line"
+     },
+     {
+      "field": "ck",
+      "chartType": "line"
+     }
+    ],
+    "label": "Theo T7"
+   },
+   {
+    "id": "main_cum",
+    "chartType": "line",
+    "xField": "month",
+    "series": [
+     {
+      "field": "cur_cum",
+      "chartType": "line"
+     },
+     {
+      "field": "ck_cum",
+      "chartType": "line"
+     }
+    ],
+    "label": "LK: 249"
+   }
+  ]
+ }
 }

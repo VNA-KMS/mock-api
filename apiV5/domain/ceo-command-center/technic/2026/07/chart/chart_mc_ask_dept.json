@@ -1,0 +1,101 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "dept",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH2025 2.0",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "UTH2025",
+          "color": "#006D88"
+        },
+        {
+          "id": "kh_m",
+          "type": "number",
+          "label": "KH2025 2.0 (tháng)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth_m",
+          "type": "number",
+          "label": "UTH2025 (tháng)",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Tổng",
+          16735,
+          16911,
+          2390.7,
+          2415.9
+        ],
+        [
+          "KT",
+          2569,
+          2625,
+          367,
+          375
+        ],
+        [
+          "QLVT",
+          12230,
+          12313,
+          1747.1,
+          1759
+        ],
+        [
+          "ĐTMS",
+          1937,
+          1972,
+          276.7,
+          281.7
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "dept",
+        "label": "Theo tháng",
+        "series": [
+          {
+            "field": "kh_m",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth_m",
+            "chartType": "bar"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "bar",
+        "xField": "dept",
+        "label": "LK năm: 16.911",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

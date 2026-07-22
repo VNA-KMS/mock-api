@@ -1,159 +1,62 @@
 {
   "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
     "dataset": {
       "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "jet_a1",
-          "type": "number",
-          "label": "Jet A1",
-          "color": "#004071"
-        },
-        {
-          "id": "kh",
-          "type": "number",
-          "label": "KH",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "jet_a1_cum",
-          "type": "number",
-          "label": "Jet A1 (LK)",
-          "color": "#004071"
-        },
-        {
-          "id": "kh_cum",
-          "type": "number",
-          "label": "KH (LK)",
-          "color": "#D3AC2B"
-        }
+        { "id": "month", "type": "string" },
+        { "id": "th", "type": "number", "label": "Thực hiện 2027", "color": "#006D88" },
+        { "id": "uth", "type": "number", "label": "Ước thực hiện 2027", "color": "#006D88" },
+        { "id": "ck", "type": "number", "label": "Cùng kỳ 2026", "color": "#9AA0A6" },
+        { "id": "db", "type": "number", "label": "Kế hoạch 2027", "color": "#D3AC2B" },
+        { "id": "th_cum", "type": "number", "label": "Thực hiện (LK)", "color": "#006D88" },
+        { "id": "uth_cum", "type": "number", "label": "Ước thực hiện (LK)", "color": "#006D88" },
+        { "id": "ck_cum", "type": "number", "label": "Cùng kỳ (LK)", "color": "#9AA0A6" },
+        { "id": "db_cum", "type": "number", "label": "Kế hoạch (LK)", "color": "#D3AC2B" }
       ],
       "rows": [
-        [
-          "T8",
-          92,
-          93,
-          92,
-          93
-        ],
-        [
-          "T9",
-          93,
-          93,
-          185,
-          186
-        ],
-        [
-          "T10",
-          95,
-          94,
-          280,
-          280
-        ],
-        [
-          "T11",
-          94,
-          94,
-          374,
-          374
-        ],
-        [
-          "T12",
-          96,
-          95,
-          470,
-          469
-        ],
-        [
-          "T1",
-          95,
-          95,
-          565,
-          564
-        ],
-        [
-          "T2",
-          96,
-          95,
-          661,
-          659
-        ],
-        [
-          "T3",
-          94,
-          96,
-          755,
-          755
-        ],
-        [
-          "T4",
-          95,
-          96,
-          850,
-          851
-        ],
-        [
-          "T5",
-          96,
-          96,
-          946,
-          947
-        ],
-        [
-          "T6",
-          95,
-          97,
-          1041,
-          1044
-        ],
-        [
-          "T7",
-          95.9,
-          97,
-          1136.9,
-          1141
-        ]
+        ["T1", 95, null, 90, 95, 95, null, 90, 95],
+        ["T2", 96, null, 90, 95, 191, null, 180, 190],
+        ["T3", 94, null, 90, 96, 285, null, 270, 286],
+        ["T4", 95, null, 90, 96, 380, null, 360, 382],
+        ["T5", 96, null, 90, 96, 476, null, 450, 478],
+        ["T6", 95, null, 90, 97, 571, null, 540, 575],
+        ["T7", 95.9, null, 90, 97, 667, null, 630, 672],
+        ["T8", null, 92.3, 90, 93, null, 759.3, 720, 765],
+        ["T9", null, 92.3, 90, 93, null, 851.6, 810, 858],
+        ["T10", null, 93.3, 90, 94, null, 944.9, 900, 952],
+        ["T11", null, 93.3, 90, 94, null, 1038.2, 990, 1046],
+        ["T12", null, 94.3, 90, 95, null, 1132.5, 1080, 1141]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "series": [
-          {
-            "field": "jet_a1",
-            "chartType": "line"
-          },
-          {
-            "field": "kh",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
+          { "field": "th", "chartType": "line" },
+          { "field": "uth", "chartType": "bar" },
+          { "field": "ck", "chartType": "line" },
+          { "field": "db", "chartType": "line" }
+        ],
+        "label": "Theo T12"
       },
       {
         "id": "main_cum",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "series": [
-          {
-            "field": "jet_a1_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "kh_cum",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
+          { "field": "th_cum", "chartType": "line" },
+          { "field": "uth_cum", "chartType": "bar" },
+          { "field": "ck_cum", "chartType": "line" },
+          { "field": "db_cum", "chartType": "line" }
+        ],
+        "label": "LK: 667"
       }
-    ],
-    "viewSwitch": {
-      "enabled": true
-    }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
   }
 }

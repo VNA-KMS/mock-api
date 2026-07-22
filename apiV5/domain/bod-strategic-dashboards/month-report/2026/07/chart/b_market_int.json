@@ -9,101 +9,127 @@
         {
           "id": "th",
           "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2027",
+          "color": "#006D88"
         },
         {
           "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
+          "label": "Cùng kỳ 2026",
+          "color": "#9AA0A6"
         },
         {
           "id": "db",
           "type": "number",
-          "label": "Dự báo",
-          "color": "#CBD5E1"
+          "label": "Kế hoạch 2027",
+          "color": "#D3AC2B"
         },
         {
           "id": "th_cum",
           "type": "number",
           "label": "Thực hiện (LK)",
-          "color": "#004071"
+          "color": "#006D88"
+        },
+        {
+          "id": "uth_cum",
+          "type": "number",
+          "label": "Ước thực hiện (LK)",
+          "color": "#006D88"
         },
         {
           "id": "ck_cum",
           "type": "number",
           "label": "Cùng kỳ (LK)",
-          "color": "#94A3B8"
+          "color": "#9AA0A6"
         },
         {
           "id": "db_cum",
           "type": "number",
-          "label": "Dự báo (LK)",
-          "color": "#CBD5E1"
+          "label": "Kế hoạch (LK)",
+          "color": "#D3AC2B"
         }
       ],
       "rows": [
         [
           "T1",
           354,
+          null,
           340,
           352,
           354,
+          null,
           340,
           352
         ],
         [
           "T2",
           359,
+          null,
           345,
           357,
           713,
+          null,
           685,
           709
         ],
         [
           "T3",
           364,
+          null,
           350,
           362,
           1077,
+          null,
           1035,
           1071
         ],
         [
           "T4",
           369,
+          null,
           355,
           368,
           1446,
+          null,
           1390,
           1439
         ],
         [
           "T5",
           373,
+          null,
           360,
           374,
           1819,
+          null,
           1750,
           1813
         ],
         [
           "T6",
           378,
+          null,
           365,
           380,
           2197,
+          null,
           2115,
           2193
         ],
         [
           "T7",
           383,
+          null,
           370,
           385,
           2580,
+          null,
           2485,
           2578
         ]
@@ -120,6 +146,10 @@
             "chartType": "line"
           },
           {
+            "field": "uth",
+            "chartType": "bar"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -128,7 +158,8 @@
             "chartType": "line",
             "lineType": "dashed"
           }
-        ]
+        ],
+        "label": "Theo T7"
       },
       {
         "id": "main_cum",
@@ -140,6 +171,10 @@
             "chartType": "line"
           },
           {
+            "field": "uth_cum",
+            "chartType": "bar"
+          },
+          {
             "field": "ck_cum",
             "chartType": "line"
           },
@@ -148,11 +183,12 @@
             "chartType": "line",
             "lineType": "dashed"
           }
-        ]
+        ],
+        "label": "LK: 2.580"
       }
-    ],
-    "viewSwitch": {
-      "enabled": true
-    }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 7
   }
 }

@@ -1,0 +1,26 @@
+{
+  "autoChart": {
+    "chartType": "sunburst",
+    "dataset": {
+      "columns": [
+        { "id": "name", "type": "string" },
+        { "id": "parent", "type": "string" },
+        { "id": "value", "type": "number" }
+      ],
+      "rows": [
+        ["Kỹ thuật", "", 65],
+        ["Phi kỹ thuật", "", 35],
+        ["Động cơ", "Kỹ thuật", 25],
+        ["Càng đáp", "Kỹ thuật", 15],
+        ["Hệ thống điện", "Kỹ thuật", 13],
+        ["Khung sườn", "Kỹ thuật", 12]
+      ]
+    },
+    "views": [{
+      "id": "main",
+      "chartType": "sunburst",
+      "xField": "name",
+      "series": [{ "field": "value", "chartType": "sunburst" }]
+    }]
+  }
+}

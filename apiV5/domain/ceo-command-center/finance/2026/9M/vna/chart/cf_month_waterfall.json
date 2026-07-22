@@ -1,0 +1,56 @@
+{
+ "autoChart": {
+  "chartType": "auto",
+  "dataset": {
+   "columns": [
+    {
+     "id": "step",
+     "type": "string"
+    },
+    {
+     "id": "value",
+     "type": "number",
+     "label": "tỷ VND",
+     "color": "#1D4857"
+    }
+   ],
+   "rows": [
+    [
+     "Dư đầu kỳ",
+     12800
+    ],
+    [
+     "Net SXKD",
+     3650
+    ],
+    [
+     "Net tài chính",
+     -1720
+    ],
+    [
+     "Net đầu tư",
+     -2410
+    ],
+    [
+     "Dư cuối kỳ",
+     12320
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "waterfall",
+    "xField": "step",
+    "label": "Tháng",
+    "series": [
+     {
+      "field": "value",
+      "chartType": "waterfall"
+     }
+    ],
+    "showLegend": false
+   }
+  ]
+ }
+}

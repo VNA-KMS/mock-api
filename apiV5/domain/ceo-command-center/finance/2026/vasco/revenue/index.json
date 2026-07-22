@@ -1,0 +1,249 @@
+{
+  "titleInfo": {
+    "title": "Tài chính & Kế toán",
+    "statusLabel": "REAL TIME",
+    "description": "Doanh thu · Vasco · Năm 2026"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 6
+    },
+    "items": [
+      {
+        "id": "gross_revenue",
+        "status": "compact",
+        "title": "Gross Revenue",
+        "value": "78,810",
+        "unit": "tỷ VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+15.4% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 101.2%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "passenger_revenue",
+        "status": "compact",
+        "title": "Passenger Revenue",
+        "value": "56,795",
+        "unit": "tỷ VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+14.2% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Tỷ trọng: 81.3%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "ancillary_revenue",
+        "status": "compact",
+        "title": "Ancillary Revenue",
+        "value": "10,223",
+        "unit": "tỷ VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+18.6% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 108.5%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "cargo_revenue",
+        "status": "compact",
+        "title": "Cargo Revenue",
+        "value": "6,762",
+        "unit": "tỷ VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+4.5% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 96.8%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "rask",
+        "status": "compact",
+        "title": "RASK",
+        "value": "3.90",
+        "unit": "nghìn VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+6.8% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 102.4%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "rev_per_km",
+        "status": "compact",
+        "title": "Doanh thu/km",
+        "value": "5.10",
+        "unit": "nghìn VND",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+5.9% YoY",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 100.8%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      }
+    ]
+  },
+  "filters": [
+    {
+      "key": "unit",
+      "col": 1,
+      "colSpan": 14,
+      "row": 1,
+      "label": "Đơn vị",
+      "showInfo": true,
+      "infoTooltip": "Chọn đơn vị báo cáo tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "hop_nhat",
+          "label": "Hợp nhất"
+        },
+        {
+          "value": "vna",
+          "label": "Cty mẹ VNA"
+        },
+        {
+          "value": "vasco",
+          "label": "Vasco"
+        }
+      ]
+    },
+    {
+      "key": "view",
+      "col": 1,
+      "colSpan": 17,
+      "row": 2,
+      "label": "View",
+      "showInfo": true,
+      "infoTooltip": "Chọn góc nhìn tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "revenue",
+          "label": "Revenue"
+        },
+        {
+          "value": "cost_margin",
+          "label": "Cost & Margin"
+        },
+        {
+          "value": "ratio",
+          "label": "Ratio"
+        }
+      ]
+    }
+  ],
+  "chartBoard": [
+    {
+      "title": "Phân tích doanh thu & lợi nhuận",
+      "items": [
+        {
+          "id": "b_waterfall",
+          "title": "P&L Bridge",
+          "subTitle": "Gross Revenue → Net Profit",
+          "col": 1,
+          "colSpan": 35,
+          "row": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vasco/chart/b_waterfall.json"
+        },
+        {
+          "id": "b_combo",
+          "title": "Monthly Revenue Trend",
+          "subTitle": "Cột chồng + Đường RASK & Yield",
+          "col": 36,
+          "colSpan": 25,
+          "row": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vasco/chart/b_combo.json"
+        },
+        {
+          "id": "b_structure",
+          "title": "Revenue Structure",
+          "subTitle": "Treemap 2 lớp",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vasco/chart/b_structure.json"
+        },
+        {
+          "id": "b_r1",
+          "title": "Revenues from Air Transportation (R1)",
+          "subTitle": "Nội địa vs Quốc tế",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/vasco/chart/b_r1.json"
+        }
+      ]
+    }
+  ],
+  "timeFrameModes": [
+    "month",
+    "6m",
+    "9m",
+    "year"
+  ]
+}

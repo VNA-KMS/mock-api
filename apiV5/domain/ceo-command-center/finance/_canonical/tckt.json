@@ -1,0 +1,189 @@
+{
+  "titleInfo": {
+    "title": "Tài chính & Kế toán",
+    "statusLabel": "REAL TIME",
+    "description": "Dashboard tổng quan doanh thu & lợi nhuận · Vietnam Airlines"
+  },
+  "filters": [
+    {
+      "key": "unit",
+      "col": 1,
+      "colSpan": 14,
+      "row": 1,
+      "label": "Đơn vị",
+      "showInfo": true,
+      "infoTooltip": "Chọn đơn vị báo cáo tài chính",
+      "size": "sm",
+      "options": [
+        { "value": "hop_nhat", "label": "Hợp nhất" },
+        { "value": "vna", "label": "Cty mẹ VNA" },
+        { "value": "vasco", "label": "Vasco" }
+      ]
+    },
+    {
+      "key": "view",
+      "col": 1,
+      "colSpan": 17,
+      "row": 2,
+      "label": "View",
+      "showInfo": true,
+      "infoTooltip": "Chọn góc nhìn tài chính",
+      "size": "sm",
+      "options": [
+        { "value": "revenue", "label": "Revenue" },
+        { "value": "cost_margin", "label": "Cost & Margin" },
+        { "value": "ratio", "label": "Ratio" }
+      ]
+    }
+  ],
+  "timeFrameModes": ["month", "6m", "9m", "year"],
+  "kpis": [
+    {
+      "id": "gross_revenue",
+      "label": "Gross Revenue",
+      "value": "62,847",
+      "unit": "tỷ VND",
+      "yoy": "+8.2% YoY",
+      "yoyTone": "positive",
+      "badgeLabel": "Budget:",
+      "badgeValue": "96.3%",
+      "badgeTone": "positive",
+      "accentColor": "#1D4857",
+      "sparkline": [42, 45, 48, 52, 55, 53, 58, 56, 59, 62, 61, 63]
+    },
+    {
+      "id": "passenger_revenue",
+      "label": "Passenger Revenue",
+      "value": "45,291",
+      "unit": "tỷ VND",
+      "yoy": "+6.5% YoY",
+      "yoyTone": "positive",
+      "badgeLabel": "Tỷ trọng:",
+      "badgeValue": "72.1%",
+      "badgeTone": "positive",
+      "accentColor": "#479EB3",
+      "sparkline": [30, 32, 35, 33, 38, 40, 39, 42, 44, 43, 45, 45]
+    },
+    {
+      "id": "ancillary_revenue",
+      "label": "Ancillary Revenue",
+      "value": "8,152",
+      "unit": "tỷ VND",
+      "yoy": "+12.8% YoY",
+      "yoyTone": "positive",
+      "badgeLabel": "Budget:",
+      "badgeValue": "102.1%",
+      "badgeTone": "positive",
+      "accentColor": "#889941",
+      "sparkline": [5.0, 5.4, 5.8, 6.2, 6.7, 7.1, 7.5, 7.8, 8.0, 8.2, 8.2, 8.2]
+    },
+    {
+      "id": "cargo_revenue",
+      "label": "Cargo Revenue",
+      "value": "5,392",
+      "unit": "tỷ VND",
+      "yoy": "-3.1% YoY",
+      "yoyTone": "negative",
+      "badgeLabel": "Budget:",
+      "badgeValue": "91.5%",
+      "badgeTone": "warning",
+      "accentColor": "#C4A83A",
+      "sparkline": [4.8, 4.7, 4.9, 5.0, 5.2, 5.3, 5.3, 5.2, 5.4, 5.2, 5.3, 5.4]
+    },
+    {
+      "id": "rask",
+      "label": "RASK",
+      "value": "3.84",
+      "unit": "nghìn VND",
+      "yoy": "+4.2% YoY",
+      "yoyTone": "positive",
+      "badgeLabel": "Budget:",
+      "badgeValue": "98.7%",
+      "badgeTone": "positive",
+      "accentColor": "#479EB3",
+      "sparkline": [3.2, 3.3, 3.5, 3.4, 3.6, 3.7, 3.7, 3.8, 3.9, 3.8, 3.9, 3.8]
+    },
+    {
+      "id": "rev_per_km",
+      "label": "Doanh thu/km",
+      "value": "5.12",
+      "unit": "nghìn VND",
+      "yoy": "+3.8% YoY",
+      "yoyTone": "positive",
+      "badgeLabel": "Budget:",
+      "badgeValue": "97.2%",
+      "badgeTone": "positive",
+      "accentColor": "#1D4857",
+      "sparkline": [4.5, 4.6, 4.8, 4.7, 4.9, 5.0, 5.0, 5.1, 5.2, 5.1, 5.1, 5.1]
+    }
+  ],
+  "waterfall": {
+    "labels": [
+      "Gross Revenue",
+      "Dvu khác",
+      "Nhiên liệu",
+      "Bảo dưỡng",
+      "CP khác",
+      "CP khác (2)",
+      "EBITDAR",
+      "Thuê tàu bay",
+      "EBITDA",
+      "Khấu hao",
+      "EBIT",
+      "Lãi vay",
+      "Thuế",
+      "PBT"
+    ],
+    "values": [100, 15, -30, -10, -20, -5, 50, -12, 38, -8, 30, -5, -3, 22],
+    "totalIndices": [6, 8, 10, 13]
+  },
+  "combo": {
+    "months": ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10", "T11", "T12"],
+    "transport": [3.2, 3.5, 3.8, 4.0, 4.3, 4.1, 4.5, 4.4, 4.2, 4.6, 4.3, 4.5],
+    "other": [0.8, 0.9, 1.0, 1.1, 1.2, 1.1, 1.3, 1.2, 1.1, 1.3, 1.2, 1.2],
+    "rask": [3.4, 3.5, 3.6, 3.6, 3.7, 3.8, 3.8, 3.9, 3.9, 3.9, 3.8, 3.8],
+    "yield": [4.6, 4.7, 4.8, 4.9, 5.0, 5.1, 5.1, 5.2, 5.1, 5.0, 5.0, 5.1]
+  },
+  "structure": {
+    "inner": [
+      { "name": "Vận tải hàng không (R1)", "value": 85, "color": "#1D4857" },
+      { "name": "Dịch vụ ngoài vận tải", "value": 15, "color": "#479EB3" }
+    ],
+    "outer": [
+      { "name": "Passenger (incl VIP, CHR)", "value": 63.75, "color": "#1D4ED8" },
+      { "name": "Cargo & Mail", "value": 8.5, "color": "#1D4857" },
+      { "name": "Ancillary Services", "value": 6.8, "color": "#3B82F6" },
+      { "name": "Other Services", "value": 3.4, "color": "#60A5FA" },
+      { "name": "Expired Tickets & Adj", "value": 1.7, "color": "#93C5FD" },
+      { "name": "Other Revenues", "value": 0.85, "color": "#BFDBFE" },
+      { "name": "Commission", "value": 5.25, "color": "#479EB3" },
+      { "name": "Advertisement", "value": 3.75, "color": "#14B8A6" },
+      { "name": "A/C & Equipment Services", "value": 3.3, "color": "#2DD4BF" },
+      { "name": "Others", "value": 2.7, "color": "#5EEAD4" }
+    ]
+  },
+  "r1Table": {
+    "rows": [
+      {
+        "route": "Nội địa",
+        "flights": 48520,
+        "lf": 82.4,
+        "pax": 28150,
+        "cargo": 1280,
+        "anci": 4520,
+        "other": 840,
+        "total": 34790
+      },
+      {
+        "route": "Quốc tế",
+        "flights": 21340,
+        "lf": 78.6,
+        "pax": 17141,
+        "cargo": 4112,
+        "anci": 3632,
+        "other": 1172,
+        "total": 26057
+      }
+    ]
+  }
+}

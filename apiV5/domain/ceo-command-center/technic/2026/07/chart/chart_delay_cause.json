@@ -1,0 +1,90 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "cause",
+          "type": "string"
+        },
+        {
+          "id": "pct",
+          "type": "number",
+          "label": "% tổng phút chậm",
+          "color": [
+            "#C76449",
+            "#006D88",
+            "#479EB3",
+            "#889941",
+            "#C4A83A"
+          ]
+        },
+        {
+          "id": "pct_ytd",
+          "type": "number",
+          "label": "% tổng phút chậm (LK)",
+          "color": [
+            "#C76449",
+            "#006D88",
+            "#479EB3",
+            "#889941",
+            "#C4A83A"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Mã 71-77 · Tàu bay đến muộn",
+          34,
+          32
+        ],
+        [
+          "Mã 41-48 · Lỗi kỹ thuật tàu bay",
+          26,
+          27
+        ],
+        [
+          "Mã 91-96 · ATC/Không lưu",
+          21,
+          20
+        ],
+        [
+          "Mã 61-69 · Phục vụ mặt đất",
+          12,
+          13
+        ],
+        [
+          "Mã 11-18 · Thời tiết",
+          7,
+          8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "cause",
+        "label": "Theo tháng",
+        "series": [
+          {
+            "field": "pct",
+            "chartType": "bar"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "bar",
+        "xField": "cause",
+        "label": "LK: 100%",
+        "series": [
+          {
+            "field": "pct_ytd",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

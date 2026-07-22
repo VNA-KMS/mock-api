@@ -11,52 +11,52 @@
           "id": "net_hd_sxkd",
           "type": "number",
           "label": "Net HĐ SXKD",
-          "color": "#5B9BD5"
+          "color": "#1D4857"
         },
         {
           "id": "net_hd_tai_chinh",
           "type": "number",
           "label": "Net HĐ tài chính (bao gồm vay NH)",
-          "color": "#C0504D"
+          "color": "#479EB3"
         },
         {
           "id": "net_hd_dau_tu",
           "type": "number",
           "label": "Net HĐ đầu tư",
-          "color": "#FFC000"
+          "color": "#3D879B"
         },
         {
           "id": "chenh_lech_trong_ky",
           "type": "number",
           "label": "Chênh lệch trong kỳ",
-          "color": "#7030A0"
+          "color": "#C76449"
         },
         {
           "id": "du_tien_ck",
           "type": "number",
           "label": "Dư tiền CK",
-          "color": "#92D050"
+          "color": "#889941"
         },
         {
           "id": "du_no_vay_nh_ck",
           "type": "number",
           "label": "Dư nợ vay ngắn hạn CK",
-          "color": "#C00000"
+          "color": "#C4A83A"
         }
       ],
       "rows": [
-        ["T1", 650, -180, -250, 220, 12692, -1850],
-        ["T2", 480, -120, -200, 160, 13142, -1820],
-        ["T3", 3050, 150, 120, 3320, 16328, -1780],
-        ["T4", 320, -90, -110, 120, 16456, -1800],
-        ["T5", -1450, -420, -780, -2650, 13419, -1900],
-        ["T6", 720, 780, -250, 1250, 14670, -1750],
-        ["T7", 260, -150, -240, -130, 14527, -1720],
-        ["T8", 430, 120, 90, 640, 14828, -1680],
-        ["T9", 210, -110, -220, -120, 14347, -1650],
-        ["T10", -1420, -380, -420, -2220, 12742, -1600],
-        ["T11", -280, -160, -340, -780, 11959, -1550],
-        ["T12", -820, -180, -290, -1290, 10662, -1500]
+        ["T1", 1029, -196, -1970, -1137, 12692, 0],
+        ["T2", 730, -247, -33, 450, 13141, 0],
+        ["T3", 3136, -36, 86, 3186, 16327, 0],
+        ["T4", 176, -115, -69, -8, 16320, 0],
+        ["T5", -483, -769, -1401, -2653, 13668, 0],
+        ["T6", -670, -972, -2729, -4371, 9297, 0],
+        ["T7", 599, -730, 87, -44, 9254, 0],
+        ["T8", 856, 97, -455, 498, 9751, 0],
+        ["T9", 247, -47, -29, 171, 9922, 0],
+        ["T10", -534, -383, 0, -917, 9005, 0],
+        ["T11", -256, -377, -87, -720, 8285, 0],
+        ["T12", -1574, 1209, -2039, -2404, 5881, 0]
       ]
     },
     "views": [
@@ -65,12 +65,39 @@
         "chartType": "combo",
         "xField": "month",
         "series": [
-          { "field": "net_hd_sxkd", "chartType": "bar" },
-          { "field": "net_hd_tai_chinh", "chartType": "bar" },
-          { "field": "net_hd_dau_tu", "chartType": "bar" },
-          { "field": "chenh_lech_trong_ky", "chartType": "line", "lineType": "solid" },
-          { "field": "du_tien_ck", "chartType": "line", "lineType": "solid", "yAxis": "right" },
-          { "field": "du_no_vay_nh_ck", "chartType": "line", "lineType": "solid" }
+          {
+            "field": "net_hd_sxkd",
+            "chartType": "bar",
+            "yAxis": "left"
+          },
+          {
+            "field": "net_hd_tai_chinh",
+            "chartType": "bar",
+            "yAxis": "left"
+          },
+          {
+            "field": "net_hd_dau_tu",
+            "chartType": "bar",
+            "yAxis": "left"
+          },
+          {
+            "field": "chenh_lech_trong_ky",
+            "chartType": "line",
+            "lineType": "solid",
+            "yAxis": "left"
+          },
+          {
+            "field": "du_tien_ck",
+            "chartType": "line",
+            "lineType": "solid",
+            "yAxis": "right"
+          },
+          {
+            "field": "du_no_vay_nh_ck",
+            "chartType": "line",
+            "lineType": "solid",
+            "yAxis": "left"
+          }
         ]
       }
     ]

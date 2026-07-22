@@ -1,156 +1,155 @@
 {
-  "autoChart": {
-    "chartType": "auto",
-    "dataset": {
-      "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "tt",
-          "type": "number",
-          "label": "Thực tế"
-        },
-        {
-          "id": "kh",
-          "type": "number",
-          "label": "Kế hoạch",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "tt_cum",
-          "type": "number",
-          "label": "Thực tế (LK)"
-        },
-        {
-          "id": "kh_cum",
-          "type": "number",
-          "label": "Kế hoạch (LK)",
-          "color": "#D3AC2B"
-        }
-      ],
-      "rows": [
-        [
-          "T8",
-          1700,
-          1750,
-          1700,
-          1750
-        ],
-        [
-          "T9",
-          1800,
-          1780,
-          3500,
-          3530
-        ],
-        [
-          "T10",
-          1750,
-          1800,
-          5250,
-          5330
-        ],
-        [
-          "T11",
-          1900,
-          1850,
-          7150,
-          7180
-        ],
-        [
-          "T12",
-          2000,
-          1900,
-          9150,
-          9080
-        ],
-        [
-          "T1",
-          1850,
-          1950,
-          11000,
-          11030
-        ],
-        [
-          "T2",
-          2100,
-          2000,
-          13100,
-          13030
-        ],
-        [
-          "T3",
-          1950,
-          2050,
-          15050,
-          15080
-        ],
-        [
-          "T4",
-          2200,
-          2100,
-          17250,
-          17180
-        ],
-        [
-          "T5",
-          2050,
-          2150,
-          19300,
-          19330
-        ],
-        [
-          "T6",
-          2300,
-          2200,
-          21600,
-          21530
-        ],
-        [
-          "T7",
-          2150,
-          2250,
-          23750,
-          23780
-        ]
-      ]
+ "autoChart": {
+  "chartType": "auto",
+  "dataset": {
+   "columns": [
+    {
+     "id": "month",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "auto",
-        "xField": "month",
-        "series": [
-          {
-            "field": "tt",
-            "chartType": "line"
-          },
-          {
-            "field": "kh",
-            "chartType": "line"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "auto",
-        "xField": "month",
-        "series": [
-          {
-            "field": "tt_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "kh_cum",
-            "chartType": "line"
-          }
-        ]
-      }
-    ],
-    "viewSwitch": {
-      "enabled": true
+    {
+     "id": "tt",
+     "type": "number",
+     "label": "Thực tế"
+    },
+    {
+     "id": "kh",
+     "type": "number",
+     "label": "Kế hoạch 2027",
+     "color": "#D3AC2B"
+    },
+    {
+     "id": "tt_cum",
+     "type": "number",
+     "label": "Thực tế (LK)"
+    },
+    {
+     "id": "kh_cum",
+     "type": "number",
+     "label": "Kế hoạch (LK)",
+     "color": "#D3AC2B"
     }
-  }
+   ],
+   "rows": [
+    [
+     "T8",
+     1700,
+     1750,
+     1700,
+     1750
+    ],
+    [
+     "T9",
+     1800,
+     1780,
+     3500,
+     3530
+    ],
+    [
+     "T10",
+     1750,
+     1800,
+     5250,
+     5330
+    ],
+    [
+     "T11",
+     1900,
+     1850,
+     7150,
+     7180
+    ],
+    [
+     "T12",
+     2000,
+     1900,
+     9150,
+     9080
+    ],
+    [
+     "T1",
+     1850,
+     1950,
+     11000,
+     11030
+    ],
+    [
+     "T2",
+     2100,
+     2000,
+     13100,
+     13030
+    ],
+    [
+     "T3",
+     1950,
+     2050,
+     15050,
+     15080
+    ],
+    [
+     "T4",
+     2200,
+     2100,
+     17250,
+     17180
+    ],
+    [
+     "T5",
+     2050,
+     2150,
+     19300,
+     19330
+    ],
+    [
+     "T6",
+     2300,
+     2200,
+     21600,
+     21530
+    ],
+    [
+     "T7",
+     2150,
+     2250,
+     23750,
+     23780
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "auto",
+    "xField": "month",
+    "series": [
+     {
+      "field": "tt",
+      "chartType": "line"
+     },
+     {
+      "field": "kh",
+      "chartType": "line"
+     }
+    ],
+    "label": "Theo T7"
+   },
+   {
+    "id": "main_cum",
+    "chartType": "auto",
+    "xField": "month",
+    "series": [
+     {
+      "field": "tt_cum",
+      "chartType": "line"
+     },
+     {
+      "field": "kh_cum",
+      "chartType": "line"
+     }
+    ],
+    "label": "LK: 23.750"
+   }
+  ]
+ }
 }

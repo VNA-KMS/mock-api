@@ -1,0 +1,210 @@
+{
+  "filterViews": [
+    {
+      "label": "Hãng bay",
+      "autoChart": {
+        "chartType": "combo",
+        "dataset": {
+          "columns": [
+            {
+              "id": "item",
+              "type": "string"
+            },
+            {
+              "id": "count",
+              "type": "number",
+              "label": "Số chuyến",
+              "color": "#006D88"
+            },
+            {
+              "id": "mins",
+              "type": "number",
+              "label": "Số phút chậm",
+              "color": "#C76449"
+            }
+          ],
+          "rows": [
+            [
+              "VNA",
+              86,
+              612
+            ],
+            [
+              "VASCO",
+              14,
+              54
+            ],
+            [
+              "Pacific Airlines",
+              6,
+              22
+            ]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "combo",
+            "xField": "item",
+            "series": [
+              {
+                "field": "count",
+                "chartType": "bar",
+                "yAxis": "left"
+              },
+              {
+                "field": "mins",
+                "chartType": "bar",
+                "yAxis": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Chặng bay",
+      "autoChart": {
+        "chartType": "combo",
+        "dataset": {
+          "columns": [
+            {
+              "id": "item",
+              "type": "string"
+            },
+            {
+              "id": "count",
+              "type": "number",
+              "label": "Số chuyến",
+              "color": "#006D88"
+            },
+            {
+              "id": "mins",
+              "type": "number",
+              "label": "Số phút chậm",
+              "color": "#C76449"
+            }
+          ],
+          "rows": [
+            [
+              "SGN–HAN",
+              22,
+              180
+            ],
+            [
+              "HAN–SGN",
+              19,
+              150
+            ],
+            [
+              "SGN–DAD",
+              14,
+              95
+            ],
+            [
+              "DAD–SGN",
+              11,
+              80
+            ],
+            [
+              "SGN–PQC",
+              8,
+              52
+            ]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "combo",
+            "xField": "item",
+            "series": [
+              {
+                "field": "count",
+                "chartType": "bar",
+                "yAxis": "left"
+              },
+              {
+                "field": "mins",
+                "chartType": "bar",
+                "yAxis": "right"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Sân bay",
+      "autoChart": {
+        "chartType": "combo",
+        "dataset": {
+          "columns": [
+            {
+              "id": "item",
+              "type": "string"
+            },
+            {
+              "id": "count",
+              "type": "number",
+              "label": "Số chuyến",
+              "color": "#006D88"
+            },
+            {
+              "id": "mins",
+              "type": "number",
+              "label": "Số phút chậm",
+              "color": "#C76449"
+            }
+          ],
+          "rows": [
+            [
+              "SGN",
+              62,
+              420
+            ],
+            [
+              "HAN",
+              54,
+              360
+            ],
+            [
+              "DAD",
+              28,
+              190
+            ],
+            [
+              "CXR",
+              19,
+              130
+            ],
+            [
+              "PQC",
+              15,
+              95
+            ]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "combo",
+            "xField": "item",
+            "series": [
+              {
+                "field": "count",
+                "chartType": "bar",
+                "yAxis": "left"
+              },
+              {
+                "field": "mins",
+                "chartType": "bar",
+                "yAxis": "right"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

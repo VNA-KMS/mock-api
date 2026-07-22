@@ -1,19 +1,75 @@
 {
   "autoChart": {
-    "chartType": "pie-simple",
+    "chartType": "center-donut",
     "dataset": {
       "columns": [
-        { "id": "item", "type": "string" },
-        { "id": "value", "type": "number", "label": "VNĐ/ASK", "color": ["#14532D", "#9A3412", "#004071", "#4ADE80", "#7C3AED", "#38BDF8", "#166534", "#F97316"] }
+        {
+          "id": "item",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "VNĐ/ASK",
+          "color": [
+            "#1D4857",
+            "#479EB3",
+            "#3D879B",
+            "#C4A83A",
+            "#889941",
+            "#5E793D",
+            "#C76449",
+            "#006D88"
+          ]
+        }
       ],
       "rows": [
-        ["QĐT", 0.459], ["DVMN", 0.111], ["BDTX", 0.471], ["BDDK", 0.238],
-        ["PTVT", 0.695], ["Cảng", 0.034], ["APU", 0.091], ["ĐC", 3.035]
+        [
+          "QĐT",
+          0.459
+        ],
+        [
+          "DVMN",
+          0.111
+        ],
+        [
+          "BDTX",
+          0.471
+        ],
+        [
+          "BDDK",
+          0.238
+        ],
+        [
+          "PTVT",
+          0.695
+        ],
+        [
+          "Cảng",
+          0.034
+        ],
+        [
+          "APU",
+          0.091
+        ],
+        [
+          "ĐC",
+          3.035
+        ]
       ]
     },
-    "views": [{
-      "id": "main", "chartType": "pie-simple", "xField": "item",
-      "series": [{ "field": "value", "chartType": "pie" }]
-    }]
+    "views": [
+      {
+        "id": "main",
+        "chartType": "pie",
+        "xField": "item",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "pie"
+          }
+        ]
+      }
+    ]
   }
 }

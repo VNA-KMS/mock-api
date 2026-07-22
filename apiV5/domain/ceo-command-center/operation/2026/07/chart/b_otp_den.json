@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "line",
     "dataset": {
       "columns": [
         {
@@ -8,79 +8,55 @@
           "type": "string"
         },
         {
-          "id": "otp_den",
+          "id": "actual",
           "type": "number",
-          "label": "OTP đến",
+          "label": "Thực hiện 2027",
           "color": "#004071"
         },
         {
-          "id": "otp_mt",
+          "id": "ck",
           "type": "number",
-          "label": "Mục tiêu",
-          "color": "#D3AC2B"
+          "label": "Cùng kỳ 2026",
+          "color": "#64748B"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "color": "#B4901F"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#004071"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#64748B"
+        },
+        {
+          "id": "kh_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#B4901F"
         }
       ],
       "rows": [
-        [
-          "T1",
-          85.1,
-          88
-        ],
-        [
-          "T2",
-          85.3,
-          88
-        ],
-        [
-          "T3",
-          84.9,
-          88
-        ],
-        [
-          "T4",
-          85.0,
-          88
-        ],
-        [
-          "T5",
-          85.6,
-          88
-        ],
-        [
-          "T6",
-          86.2,
-          88
-        ],
-        [
-          "T7",
-          85.8,
-          88
-        ],
-        [
-          "T8",
-          86.0,
-          88
-        ],
-        [
-          "T9",
-          85.5,
-          88
-        ],
-        [
-          "T10",
-          85.0,
-          88
-        ],
-        [
-          "T11",
-          84.8,
-          88
-        ],
-        [
-          "T12",
-          84.5,
-          88
-        ]
+        ["T1", 74, 72, 78, 74, 72, 78],
+        ["T2", 78, 76, 80, 152, 148, 158],
+        ["T3", 76, 74, 79, 228, 222, 237],
+        ["T4", 81, 79, 81, 309, 301, 318],
+        ["T5", 77, 78, 80, 386, 379, 398],
+        ["T6", 84, 83, 82, 470, 462, 480],
+        ["T7", 87, 85, 83, 557, 547, 563],
+        ["T8", null, 84, 82, null, 631, 645],
+        ["T9", null, 81, 81, null, 712, 726],
+        ["T10", null, 79, 80, null, 791, 806],
+        ["T11", null, 77, 79, null, 868, 885],
+        ["T12", null, 75, 79, null, 943, 964]
       ]
     },
     "views": [
@@ -88,17 +64,45 @@
         "id": "main",
         "chartType": "line",
         "xField": "month",
+        "label": "Theo T12",
         "series": [
           {
-            "field": "otp_den",
+            "field": "actual",
             "chartType": "line"
           },
           {
-            "field": "otp_mt",
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "kh",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "line",
+        "xField": "month",
+        "label": "LK: 557",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "kh_cum",
             "chartType": "line"
           }
         ]
       }
     ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
   }
 }

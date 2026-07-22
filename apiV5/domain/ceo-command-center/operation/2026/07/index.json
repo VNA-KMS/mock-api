@@ -1,125 +1,230 @@
 {
   "titleInfo": {
-    "title": "Operation",
+    "title": "Khai thác",
     "statusLabel": "REAL TIME",
     "description": "Khai thác toàn mạng thế nào — OTP giảm do đâu, ở sân bay nào?"
   },
   "metricCards": {
     "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 6
+    },
     "items": [
       {
         "id": "m_flt",
         "status": "compact",
-        "title": "Chuyến bay",
-        "value": "12.400",
+        "title": "Tổng số chuyến bay",
+        "value": "14.038",
         "unit": "chuyến",
-        "backgroundStatus": 2,
+        "backgroundStatus": 1,
         "trend": [
           {
-            "direction": "down",
-            "label": "0.8% so với Kế hoạch",
-            "tone": "negative"
+            "direction": "up",
+            "label": "12,6% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
           },
           {
-            "direction": "up",
-            "label": "2% so với Cùng kỳ",
-            "tone": "positive"
+            "direction": "down",
+            "label": "Kế hoạch: 94,2%",
+            "tone": "negative",
+            "status": 1
           }
         ]
       },
       {
         "id": "m_bh",
         "status": "compact",
-        "title": "Giờ bay",
-        "value": "42.800",
-        "unit": "giờ",
-        "backgroundStatus": 2,
+        "title": "Tổng số giờ bay khai thác",
+        "value": "46,3",
+        "unit": "nghìn BH",
+        "backgroundStatus": 1,
         "trend": [
           {
             "direction": "up",
-            "label": "0.5% so với Kế hoạch",
-            "tone": "positive"
+            "label": "11,8% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
           },
           {
-            "direction": "up",
-            "label": "3% so với Cùng kỳ",
-            "tone": "positive"
+            "direction": "down",
+            "label": "Kế hoạch: 96,5%",
+            "tone": "negative",
+            "status": 1
           }
         ]
       },
       {
-        "id": "m_otpd",
+        "id": "m_bh_daily",
         "status": "compact",
-        "title": "OTP đi",
-        "value": "85.1",
-        "unit": "%",
-        "backgroundStatus": 2,
+        "title": "Giờ bay/tàu (toàn đội)/ngày",
+        "value": "14,6",
+        "unit": "giờ/ngày",
+        "backgroundStatus": 1,
         "trend": [
           {
-            "direction": "down",
-            "label": "2% so với Kế hoạch",
-            "tone": "negative"
+            "direction": "up",
+            "label": "14,7% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
           },
           {
             "direction": "down",
-            "label": "1% so với Cùng kỳ",
-            "tone": "negative"
+            "label": "Kế hoạch: 97,3%",
+            "tone": "negative",
+            "status": 1
           }
-        ],
-        "subTitle": "Đơn vị: %"
+        ]
       },
       {
-        "id": "m_otpa",
+        "id": "m_otp",
         "status": "compact",
-        "title": "OTP đến",
-        "value": "86.2",
+        "title": "Chỉ số đúng giờ",
+        "value": "79,82",
         "unit": "%",
-        "backgroundStatus": 2,
+        "backgroundStatus": 1,
         "trend": [
           {
-            "direction": "down",
-            "label": "1.8% so với Kế hoạch",
-            "tone": "negative"
+            "direction": "up",
+            "label": "12,12% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
           },
           {
             "direction": "down",
-            "label": "1% so với Cùng kỳ",
-            "tone": "negative"
+            "label": "Kế hoạch: 97,3%",
+            "tone": "negative",
+            "status": 1
           }
-        ],
-        "subTitle": "Đơn vị: %"
+        ]
+      },
+      {
+        "id": "m_osp",
+        "status": "compact",
+        "title": "Chỉ số đúng giờ tuyệt đối",
+        "value": "96,13",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "69,36% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Kế hoạch: 101,2%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "m_fuel",
+        "status": "compact",
+        "title": "Tổng nhiên liệu tiêu thụ/Tổng BH",
+        "value": "2.845",
+        "unit": "kg/h",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "3,2% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Kế hoạch: 97,4%",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
       }
     ]
   },
   "chartBoard": [
     {
-      "title": "",
+      "title": "1. Tổng số chuyến bay (FLS)",
       "items": [
         {
-          "id": "b_flight",
-          "title": "Số chuyến bay theo thời gian",
+          "id": "b_fls_total",
+          "title": "FLS Total",
           "col": 1,
-          "colSpan": 30,
+          "colSpan": 20,
+          "row": 1,
+          "subTitle": "Số chuyến/tháng · toàn mạng",
           "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "Số chuyến bay tháng 7 đạt 12.400 chuyến, thấp hơn kế hoạch 0,8% nhưng tăng 2% so với cùng kỳ. Xu hướng tăng trưởng ổn định qua 7 tháng đầu năm, đạt đỉnh 12.400 chuyến/tháng từ T6.",
-            "severity": "good"
-          },
-          "subTitle": "Đơn vị: số chuyến",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_flight.json"
+          "rightTitle": "chuyến",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_total.json"
         },
         {
+          "id": "b_fls_dom",
+          "title": "FLS Nội địa",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "subTitle": "Số chuyến/tháng · mạng DOM",
+          "aspectRatio": 1.8,
+          "rightTitle": "chuyến",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_dom.json"
+        },
+        {
+          "id": "b_fls_hang",
+          "title": "FLS theo hãng",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "subTitle": "Số chuyến/tháng · Thực tế · side by side",
+          "aspectRatio": 1.8,
+          "rightTitle": "chuyến",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_hang.json"
+        },
+        {
+          "id": "b_fls_int",
+          "title": "FLS Quốc tế",
+          "col": 21,
+          "colSpan": 20,
+          "row": 2,
+          "subTitle": "Số chuyến/tháng · mạng INT",
+          "aspectRatio": 1.8,
+          "rightTitle": "chuyến",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_int.json"
+        },
+        {
+          "id": "b_fls_dacbiet",
+          "title": "FLS Cargo, VIP, Ferry",
+          "col": 41,
+          "colSpan": 20,
+          "row": 2,
+          "subTitle": "Phân bố",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_dacbiet.json"
+        }
+      ]
+    },
+    {
+      "title": "2. Giờ bay khai thác & Giờ bay (toàn đội)/ngày",
+      "items": [
+        {
           "id": "b_hours",
-          "title": "Giờ bay theo thời gian",
+          "title": "Giờ bay khai thác theo thời gian",
+          "col": 1,
+          "colSpan": 30,
+          "subTitle": "Nghìn BH/tháng · toàn mạng",
+          "aspectRatio": 1.8,
+          "rightTitle": "nghìn BH",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_hours.json"
+        },
+        {
+          "id": "b_fleet_hours",
+          "title": "Giờ bay khai thác theo Aircraft Type",
           "col": 31,
           "colSpan": 30,
+          "subTitle": "Nghìn BH · theo đội tàu bay",
           "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "Giờ bay tháng 7 đạt 42.800 giờ, vượt 0,5% so với kế hoạch và tăng 3% so với cùng kỳ. Sản lượng khai thác duy trì tốt nhờ tăng cường đội bay A321 và B787.",
-            "severity": "good"
-          },
-          "subTitle": "Đơn vị: số giờ",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_hours.json"
+          "rightTitle": "nghìn BH",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fleet_hours.json"
         }
       ]
     },
@@ -127,79 +232,97 @@
       "title": "",
       "items": [
         {
-          "id": "b_fleet_hours",
-          "title": "Giờ bay theo đội bay",
+          "id": "b_bhday_time",
+          "title": "Giờ bay (toàn đội)/ngày theo tháng",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 30,
+          "subTitle": "Giờ/ngày · toàn đội",
           "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "A321 dẫn đầu về giờ bay với 15.000 giờ, chiếm tỷ trọng lớn nhất đội bay. B787 đạt 12.000 giờ, A350 đạt 10.000 giờ. ATR72 và A320 có giờ bay thấp hơn do hạn chế khai thác.",
-            "severity": "good"
-          },
-          "subTitle": "Đơn vị: Giờ/tháng",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_fleet_hours.json"
+          "rightTitle": "giờ/ngày",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_bhday_time.json"
         },
+        {
+          "id": "b_bhday_fleet",
+          "title": "Giờ bay (toàn đội)/ngày theo Aircraft Type",
+          "col": 31,
+          "colSpan": 30,
+          "subTitle": "Giờ/ngày · theo đội tàu bay",
+          "aspectRatio": 1.8,
+          "rightTitle": "giờ/ngày",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_bhday_fleet.json"
+        }
+      ]
+    },
+    {
+      "title": "3. OTP & OSP",
+      "items": [
         {
           "id": "b_otp_di",
           "title": "OTP đi",
-          "col": 21,
-          "colSpan": 20,
-          "row": 1,
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_di.json"
+          "col": 1,
+          "colSpan": 15,
+          "subTitle": "% · các tháng trong năm",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_di.json"
         },
         {
           "id": "b_otp_den",
           "title": "OTP đến",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_den.json"
+          "col": 16,
+          "colSpan": 15,
+          "subTitle": "% · các tháng trong năm",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_den.json"
+        },
+        {
+          "id": "b_osp_di",
+          "title": "OSP đi",
+          "col": 31,
+          "colSpan": 15,
+          "subTitle": "% · các tháng trong năm",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_di.json"
+        },
+        {
+          "id": "b_osp_den",
+          "title": "OSP đến",
+          "col": 46,
+          "colSpan": 15,
+          "subTitle": "% · các tháng trong năm",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_den.json"
         }
       ]
     },
     {
-      "title": "",
+      "title": "4. Chậm chuyến",
       "items": [
         {
-          "id": "b_delay_heatmap",
-          "title": "Số chuyến bay chậm theo mức độ và mạng bay",
+          "id": "b_delay_network",
+          "title": "Chậm chuyến theo mạng bay",
+          "subTitle": "Tỷ lệ chậm (%) — thấp hơn mục tiêu là tốt",
           "col": 1,
           "colSpan": 30,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "Nội địa ghi nhận 1.133 chuyến bay chậm, gấp đôi quốc tế (578 chuyến). Phần lớn chậm dưới 5 phút (DOM 620, INT 280). Chậm trên 20 phút chỉ chiếm tỷ lệ nhỏ (DOM 58, INT 41).",
-            "severity": "warn"
-          },
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_delay_heatmap.json"
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_delay_network.json"
         },
         {
-          "id": "b_top_otp_high",
-          "title": "Top 5 sân bay OTP cao nhất",
+          "id": "b_delay_heatmap",
+          "title": "Phân bố chuyến bay chậm theo mức độ & mạng bay",
           "col": 31,
-          "colSpan": 15,
-          "aspectRatio": 1.8,
+          "colSpan": 30,
+          "subTitle": "SL chuyến bay chậm · nhóm số phút chậm × mạng bay",
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_delay_heatmap.json",
           "aiInsight": {
-            "text": "SGN dẫn đầu với OTP 98%, vượt trội so với các sân bay còn lại. HAN (91%), DAD (89%), CXR (88%) và VII (83%) đều đạt mức OTP khả quan trên 80%.",
-            "severity": "good"
-          },
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_top_otp_high.json"
-        },
-        {
-          "id": "b_top_otp_low",
-          "title": "Top 5 sân bay OTP thấp nhất",
-          "col": 46,
-          "colSpan": 15,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "SGN dẫn đầu với OTP 98%, vượt trội so với các sân bay còn lại. HAN (91%), DAD (89%), CXR (88%) và VII (83%) đều đạt mức OTP khả quan trên 80%.",
-            "severity": "good"
-          },
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_top_otp_low.json"
+            "text": "Nội địa ghi nhận nhiều chuyến chậm hơn quốc tế.",
+            "severity": "warn",
+            "status": 1
+          }
         }
       ]
     },
@@ -209,23 +332,107 @@
         {
           "id": "b_otp_reasons",
           "title": "Nguyên nhân giảm chỉ số OTP",
-          "col": 1,
-          "colSpan": 60,
+          "col": 31,
+          "colSpan": 30,
+          "subTitle": "Tỷ trọng nguyên nhân (%) — Trực tiếp vs Dây chuyền",
           "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_reasons.json",
           "aiInsight": {
-            "text": "Nguyên nhân tại sân bay (tổng 7,3%) và nguyên nhân trên đường bay (tổng 5,8%) là 2 yếu tố ảnh hưởng lớn nhất đến OTP. Tắc nghẽn hàng không (4,8%) và phi hành đoàn (3,7%) cũng đóng góp đáng kể.",
-            "severity": "warn"
-          },
-          "subTitle": "Đơn vị: %",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_reasons.json"
+            "text": "Nguyên nhân tại sân bay và trên đường bay là 2 yếu tố ảnh hưởng lớn nhất đến OTP.",
+            "severity": "warn",
+            "status": 1
+          }
+        }
+      ]
+    },
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "b_otp_quarter",
+          "title": "OTP theo Quý",
+          "col": 1,
+          "colSpan": 30,
+          "subTitle": "% · Cùng kỳ / Mục tiêu / Thực tế · Quý III, IV chưa có số thực tế",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_quarter.json"
+        },
+        {
+          "id": "b_osp_quarter",
+          "title": "OSP theo Quý",
+          "col": 31,
+          "colSpan": 30,
+          "subTitle": "% · Cùng kỳ / Mục tiêu / Thực tế · Quý III, IV chưa có số thực tế",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_quarter.json"
+        }
+      ]
+    },
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "b_top_otp_high",
+          "title": "OTP theo sân bay — Top 5 cao nhất",
+          "col": 1,
+          "colSpan": 30,
+          "subTitle": "%",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_top_otp_high.json",
+          "aiInsight": {
+            "text": "VCS dẫn đầu với OTP 96,5%.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_top_otp_low",
+          "title": "OTP theo sân bay — Bottom 5 thấp nhất",
+          "col": 31,
+          "colSpan": 30,
+          "subTitle": "%",
+          "aspectRatio": 1.8,
+          "rightTitle": "%",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_top_otp_low.json",
+          "aiInsight": {
+            "text": "SGN có OTP thấp nhất 68,4%, cần cải thiện quy trình khai thác.",
+            "severity": "warn",
+            "status": 1
+          }
+        }
+      ]
+    },
+    {
+      "title": "5. Fuel burn & Fuel burn/BH",
+      "items": [
+        {
+          "id": "b_fuel_burn",
+          "title": "Fuel burn theo thời gian & Aircraft Type",
+          "col": 1,
+          "colSpan": 30,
+          "subTitle": "Tấn/tháng · mỗi cụm = 1 tháng",
+          "aspectRatio": 1.8,
+          "rightTitle": "tấn",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fuel_burn.json"
+        },
+        {
+          "id": "b_fuel_burn_bh",
+          "title": "Fuel burn/BH theo thời gian & Aircraft Type",
+          "col": 31,
+          "colSpan": 30,
+          "subTitle": "Kg/h · mỗi cụm = 1 tháng",
+          "aspectRatio": 1.8,
+          "rightTitle": "kg/h",
+          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fuel_burn_bh.json"
         }
       ]
     }
   ],
   "timeFrameHiddenModes": [
-    "day",
-    "week",
-    "quarter",
     "custom"
   ]
 }

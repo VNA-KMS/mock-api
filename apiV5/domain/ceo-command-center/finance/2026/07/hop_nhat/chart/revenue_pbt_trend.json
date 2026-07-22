@@ -1,0 +1,52 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "revenue",
+          "type": "number",
+          "label": "Doanh thu",
+          "color": "#006D88"
+        },
+        {
+          "id": "pbt",
+          "type": "number",
+          "label": "LNTT",
+          "color": "#889941"
+        }
+      ],
+      "rows": [
+        ["T1", 2.8, 0.12],
+        ["T2", 2.9, 0.13],
+        ["T3", 3.1, 0.135],
+        ["T4", 3.2, 0.14],
+        ["T5", 3.3, 0.145],
+        ["T6", 3.4, 0.15],
+        ["T7", 3.34, 0.164]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "label": "T7/2026",
+        "series": [
+          {
+            "field": "revenue",
+            "chartType": "area"
+          },
+          {
+            "field": "pbt",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "ky",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện / Ước TH",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Tháng",
+          382.9,
+          384.1
+        ],
+        [
+          "Luỹ kế kỳ",
+          1157.8,
+          1218.2
+        ],
+        [
+          "Dự báo tháng sau",
+          385.2,
+          384.6
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "ky",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

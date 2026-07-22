@@ -1,0 +1,35 @@
+{
+  "autoChart": {
+    "chartType": "pie-simple",
+    "dataset": {
+      "columns": [
+        { "id": "currency", "type": "string" },
+        {
+          "id": "pct",
+          "type": "number",
+          "label": "Tỷ lệ",
+          "color": ["#1D4857", "#479EB3", "#3D879B", "#C4A83A", "#889941", "#5E793D", "#C76449", "#A55C3E", "#B86A84"]
+        }
+      ],
+      "rows": [
+        ["VND", 50.0],
+        ["USD", 47.54],
+        ["EUR", 0.5],
+        ["JPY", 0.4],
+        ["AUD", 0.35],
+        ["KRW", 0.3],
+        ["CNY", 0.25],
+        ["GBP", 0.33],
+        ["Khác", 0.33]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "pie-simple",
+        "xField": "currency",
+        "series": [{ "field": "pct", "chartType": "pie" }]
+      }
+    ]
+  }
+}

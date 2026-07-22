@@ -1,0 +1,190 @@
+{
+  "titleInfo": {
+    "title": "Tài chính & Kế toán",
+    "statusLabel": "REAL TIME",
+    "description": "Dòng tiền · Cty mẹ VNA · Q3/2026"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 4
+    },
+    "items": [
+      {
+        "id": "cf_bal",
+        "status": "compact",
+        "title": "Dư tiền cuối kỳ",
+        "value": "16.320",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+18,0% từ đầu năm (13.829)",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Xu hướng ổn định",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "cf_sxkd",
+        "status": "compact",
+        "title": "Dòng tiền HĐ SXKD (Net)",
+        "value": "176",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "−84% vs T3 (3.136)",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "KH: 17% (1.034)",
+            "tone": "negative",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "cf_tc",
+        "status": "compact",
+        "title": "Dòng tiền HĐ tài chính (Net)",
+        "value": "-115",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "vs T3: −36",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Tốt hơn KH (−770)",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      },
+      {
+        "id": "cf_dt",
+        "status": "compact",
+        "title": "Dòng tiền HĐ đầu tư (Net)",
+        "value": "-69",
+        "unit": "tỷ VNĐ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "vs T3: +86",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "Tốt hơn KH (−105)",
+            "tone": "positive",
+            "status": 1
+          }
+        ]
+      }
+    ]
+  },
+  "filters": [
+    {
+      "key": "unit",
+      "col": 1,
+      "colSpan": 14,
+      "row": 1,
+      "label": "Đơn vị",
+      "showInfo": true,
+      "infoTooltip": "Chọn đơn vị báo cáo tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "hop_nhat",
+          "label": "Hợp nhất"
+        },
+        {
+          "value": "vna",
+          "label": "Cty mẹ VNA"
+        },
+        {
+          "value": "vasco",
+          "label": "Vasco"
+        }
+      ]
+    },
+    {
+      "key": "view",
+      "col": 1,
+      "colSpan": 17,
+      "row": 2,
+      "label": "View",
+      "showInfo": true,
+      "infoTooltip": "Chọn góc nhìn tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "overview",
+          "label": "Overview"
+        },
+        {
+          "value": "vthk",
+          "label": "VTHK"
+        },
+        {
+          "value": "ancillary",
+          "label": "SP bổ trợ"
+        },
+        {
+          "value": "cashflow",
+          "label": "Dòng tiền"
+        }
+      ]
+    }
+  ],
+  "chartBoard": [
+    {
+      "title": "Biểu đồ phân tích dòng tiền",
+      "items": [
+        {
+          "id": "cf_year_combo",
+          "title": "Diễn biến dòng tiền theo tháng & Dư tiền cuối kỳ",
+          "subTitle": "tỷ VNĐ · Cột: Net theo hoạt động · Đường: Dư tiền cuối kỳ",
+          "col": 1,
+          "colSpan": 35,
+          "row": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/Q3/vna/chart/cf_year_combo.json"
+        },
+        {
+          "id": "cf_month_waterfall",
+          "title": "Cân đối dòng tiền tháng",
+          "subTitle": "Từ dư đầu kỳ đến dư cuối kỳ (tỷ VNĐ)",
+          "col": 36,
+          "colSpan": 25,
+          "row": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/finance/2026/Q3/vna/chart/cf_month_waterfall.json"
+        }
+      ]
+    }
+  ],
+  "timeFrameModes": [
+    "month",
+    "6m",
+    "9m",
+    "year"
+  ]
+}

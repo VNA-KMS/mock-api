@@ -1,0 +1,251 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ 2026",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "Cùng kỳ (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "Kế hoạch (LK)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "Thực hiện (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth_cum",
+          "type": "number",
+          "label": "Ước thực hiện (LK)",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          600,
+          560,
+          600,
+          null,
+          560,
+          600,
+          600,
+          null
+        ],
+        [
+          "T2",
+          610,
+          568,
+          605,
+          null,
+          1128,
+          1205,
+          1210,
+          null
+        ],
+        [
+          "T3",
+          590,
+          550,
+          610,
+          null,
+          1678,
+          1815,
+          1800,
+          null
+        ],
+        [
+          "T4",
+          600,
+          558,
+          615,
+          null,
+          2236,
+          2430,
+          2400,
+          null
+        ],
+        [
+          "T5",
+          620,
+          572,
+          620,
+          null,
+          2808,
+          3050,
+          3020,
+          null
+        ],
+        [
+          "T6",
+          610,
+          565,
+          620,
+          null,
+          3373,
+          3670,
+          3630,
+          null
+        ],
+        [
+          "T7",
+          620,
+          575,
+          625,
+          null,
+          3948,
+          4295,
+          4250,
+          null
+        ],
+        [
+          "T8",
+          null,
+          532,
+          580,
+          560,
+          4480,
+          4875,
+          null,
+          4810
+        ],
+        [
+          "T9",
+          null,
+          540,
+          585,
+          570,
+          5020,
+          5460,
+          null,
+          5380
+        ],
+        [
+          "T10",
+          null,
+          565,
+          590,
+          600,
+          5585,
+          6050,
+          null,
+          5980
+        ],
+        [
+          "T11",
+          null,
+          555,
+          595,
+          590,
+          6140,
+          6645,
+          null,
+          6570
+        ],
+        [
+          "T12",
+          null,
+          580,
+          600,
+          620,
+          6720,
+          7245,
+          null,
+          7190
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "uth_cum",
+            "chartType": "bar"
+          }
+        ],
+        "label": "LK: 6.720"
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}

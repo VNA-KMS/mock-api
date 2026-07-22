@@ -10,14 +10,20 @@
         {
           "id": "actual",
           "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2027",
+          "color": "#006D88"
         },
         {
           "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
+          "label": "Cùng kỳ 2026",
+          "color": "#9AA0A6"
         },
         {
           "id": "mt",
@@ -29,13 +35,19 @@
           "id": "actual_cum",
           "type": "number",
           "label": "Thực hiện (LK)",
-          "color": "#004071"
+          "color": "#006D88"
+        },
+        {
+          "id": "uth_cum",
+          "type": "number",
+          "label": "Ước thực hiện (LK)",
+          "color": "#006D88"
         },
         {
           "id": "ck_cum",
           "type": "number",
           "label": "Cùng kỳ (LK)",
-          "color": "#94A3B8"
+          "color": "#9AA0A6"
         },
         {
           "id": "mt_cum",
@@ -48,108 +60,132 @@
         [
           "T1",
           32,
+          null,
           30,
           43.5,
           32,
+          null,
           30,
           43.5
         ],
         [
           "T2",
           38,
+          null,
           35,
           44,
           70,
+          null,
           65,
           87.5
         ],
         [
           "T3",
           35,
+          null,
           33,
           43,
           105,
+          null,
           98,
           130.5
         ],
         [
           "T4",
           42,
+          null,
           38,
           45,
           147,
+          null,
           136,
           175.5
         ],
         [
           "T5",
           40,
+          null,
           36,
           44.5,
           187,
+          null,
           172,
           220
         ],
         [
           "T6",
           48,
+          null,
           42,
           46,
           235,
+          null,
           214,
           266
         ],
         [
           "T7",
           55,
+          null,
           48,
           45,
           290,
+          null,
           262,
           311
         ],
         [
           "T8",
           null,
+          43.4,
           45,
           46.5,
-          290,
+          null,
+          333.4,
           307,
           357.5
         ],
         [
           "T9",
           null,
+          43.8,
           42,
           47,
-          290,
+          null,
+          377.2,
           349,
           404.5
         ],
         [
           "T10",
           null,
+          42.9,
           38,
           46,
-          290,
+          null,
+          420.1,
           387,
           450.5
         ],
         [
           "T11",
           null,
+          42.4,
           35,
           45.5,
-          290,
+          null,
+          462.5,
           422,
           496
         ],
         [
           "T12",
           null,
+          41.0,
           32,
           44,
-          290,
+          null,
+          503.5,
           454,
           540
         ]
@@ -166,6 +202,10 @@
             "chartType": "line"
           },
           {
+            "field": "uth",
+            "chartType": "bar"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -173,7 +213,8 @@
             "field": "mt",
             "chartType": "line"
           }
-        ]
+        ],
+        "label": "Theo T12"
       },
       {
         "id": "main_cum",
@@ -185,6 +226,10 @@
             "chartType": "line"
           },
           {
+            "field": "uth_cum",
+            "chartType": "bar"
+          },
+          {
             "field": "ck_cum",
             "chartType": "line"
           },
@@ -192,11 +237,12 @@
             "field": "mt_cum",
             "chartType": "line"
           }
-        ]
+        ],
+        "label": "LK: 290"
       }
-    ],
-    "viewSwitch": {
-      "enabled": true
-    }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
   }
 }

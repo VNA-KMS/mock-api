@@ -1,162 +1,252 @@
 {
-  "autoChart": {
-    "chartType": "line",
-    "dataset": {
-      "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "actual",
-          "type": "number",
-          "label": "Thực hiện",
-          "color": "#00558F"
-        },
-        {
-          "id": "plan",
-          "type": "number",
-          "label": "Kế hoạch",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "samePeriod",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94a3b8"
-        },
-        {
-          "id": "actual_cum",
-          "type": "number",
-          "label": "Thực hiện (LK)",
-          "color": "#00558F"
-        },
-        {
-          "id": "plan_cum",
-          "type": "number",
-          "label": "Kế hoạch (LK)",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "samePeriod_cum",
-          "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "color": "#94a3b8"
-        }
-      ],
-      "rows": [
-        [
-          "T1",
-          93.5,
-          93.2,
-          93.0,
-          93.5,
-          98,
-          88
-        ],
-        [
-          "T2",
-          93.2,
-          93.2,
-          92.8,
-          186.7,
-          192,
-          172
-        ],
-        [
-          "T3",
-          92.8,
-          93.2,
-          92.5,
-          279.5,
-          285,
-          255
-        ],
-        [
-          "T4",
-          92.5,
-          93.2,
-          92.2,
-          372.0,
-          384,
-          346
-        ],
-        [
-          "T5",
-          92.0,
-          93.2,
-          91.8,
-          464.0,
-          480,
-          431
-        ],
-        [
-          "T6",
-          91.8,
-          93.2,
-          91.8,
-          555.8,
-          578,
-          520
-        ],
-        [
-          "T7",
-          91.8,
-          93.2,
-          92.8,
-          647.6,
-          672,
-          607
-        ]
-      ]
-    },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual",
-            "chartType": "line"
-          },
-          {
-            "field": "plan",
-            "chartType": "line",
-            "lineType": "dashed"
-          },
-          {
-            "field": "samePeriod",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "plan_cum",
-            "chartType": "line",
-            "lineType": "dashed"
-          },
-          {
-            "field": "samePeriod_cum",
-            "chartType": "line",
-            "lineType": "dashed"
-          }
-        ]
-      }
-    ],
-    "viewSwitch": {
-      "enabled": true,
-      "label": "Lũy kế thực hiện"
-    }
-  }
+    "autoChart":  {
+                      "chartType":  "line",
+                      "dataset":  {
+                                      "columns":  [
+                                                      {
+                                                          "id":  "month",
+                                                          "type":  "string"
+                                                      },
+                                                      {
+                                                          "id":  "actual",
+                                                          "type":  "number",
+                                                          "label": "Thực hiện 2027",
+                                                          "color":  "#006D88"
+                                                      },
+                                                      {
+                                                          "id":  "uth",
+                                                          "type":  "number",
+                                                          "label": "Ước thực hiện 2027",
+                                                          "color":  "#006D88"
+                                                      },
+                                                      {
+                                                          "id":  "plan",
+                                                          "type":  "number",
+                                                          "label": "Kế hoạch 2027",
+                                                          "color":  "#D3AC2B"
+                                                      },
+                                                      {
+                                                          "id":  "samePeriod",
+                                                          "type":  "number",
+                                                          "label": "Cùng kỳ 2026",
+                                                          "color":  "#9AA0A6"
+                                                      },
+                                                      {
+                                                          "id":  "actual_cum",
+                                                          "type":  "number",
+                                                          "label":  "Thực hiện (LK)",
+                                                          "color":  "#006D88"
+                                                      },
+                                                      {
+                                                          "id":  "uth_cum",
+                                                          "type":  "number",
+                                                          "label":  "Ước thực hiện (LK)",
+                                                          "color":  "#006D88"
+                                                      },
+                                                      {
+                                                          "id":  "plan_cum",
+                                                          "type":  "number",
+                                                          "label":  "Kế hoạch (LK)",
+                                                          "color":  "#D3AC2B"
+                                                      },
+                                                      {
+                                                          "id":  "samePeriod_cum",
+                                                          "type":  "number",
+                                                          "label":  "Cùng kỳ (LK)",
+                                                          "color":  "#9AA0A6"
+                                                      }
+                                                  ],
+                                      "rows":  [
+                                                   [
+                                                       "T1",
+                                                       93.5,
+                                                       null,
+                                                       93.2,
+                                                       93.0,
+                                                       93.5,
+                                                       null,
+                                                       98,
+                                                       88
+                                                   ],
+                                                   [
+                                                       "T2",
+                                                       93.2,
+                                                       null,
+                                                       93.2,
+                                                       92.8,
+                                                       186.7,
+                                                       null,
+                                                       192,
+                                                       172
+                                                   ],
+                                                   [
+                                                       "T3",
+                                                       92.8,
+                                                       null,
+                                                       93.2,
+                                                       92.5,
+                                                       279.5,
+                                                       null,
+                                                       285,
+                                                       255
+                                                   ],
+                                                   [
+                                                       "T4",
+                                                       92.5,
+                                                       null,
+                                                       93.2,
+                                                       92.2,
+                                                       372.0,
+                                                       null,
+                                                       384,
+                                                       346
+                                                   ],
+                                                   [
+                                                       "T5",
+                                                       92.0,
+                                                       null,
+                                                       93.2,
+                                                       91.8,
+                                                       464.0,
+                                                       null,
+                                                       480,
+                                                       431
+                                                   ],
+                                                   [
+                                                       "T6",
+                                                       91.8,
+                                                       null,
+                                                       93.2,
+                                                       91.8,
+                                                       555.8,
+                                                       null,
+                                                       578,
+                                                       520
+                                                   ],
+                                                   [
+                                                       "T7",
+                                                       91.8,
+                                                       null,
+                                                       93.2,
+                                                       92.8,
+                                                       647.6,
+                                                       null,
+                                                       672,
+                                                       607
+                                                   ],
+                                                    [
+                                                        "T8",
+                                                        null,
+                                                        91.5,
+                                                        93.2,
+                                                        92.5,
+                                                        null,
+                                                        739.1,
+                                                        765.2,
+                                                        699.5
+                                                    ],
+                                                    [
+                                                        "T9",
+                                                        null,
+                                                        91.2,
+                                                        93.2,
+                                                        92.2,
+                                                        null,
+                                                        830.3,
+                                                        858.4,
+                                                        791.7
+                                                    ],
+                                                    [
+                                                        "T10",
+                                                        null,
+                                                        91.0,
+                                                        93.2,
+                                                        92.0,
+                                                        null,
+                                                        921.3,
+                                                        951.6,
+                                                        883.7
+                                                    ],
+                                                    [
+                                                        "T11",
+                                                        null,
+                                                        90.8,
+                                                        93.2,
+                                                        91.8,
+                                                        null,
+                                                        1012.1,
+                                                        1044.8,
+                                                        975.5
+                                                    ],
+                                                    [
+                                                        "T12",
+                                                        null,
+                                                        90.5,
+                                                        93.2,
+                                                        91.5,
+                                                        null,
+                                                        1102.6,
+                                                        1138.0,
+                                                        1067.0
+                                                    ]
+                                               ]
+                                  },
+                      "views":  [
+                                    {
+                                        "id":  "main",
+                                        "chartType":  "line",
+                                        "xField":  "month",
+                                        "series":  [
+                                                       {
+                                                           "field":  "actual",
+                                                           "chartType":  "line"
+                                                       },
+                                                        {
+                                                            "field": "uth",
+                                                            "chartType": "line"
+                                                        },
+                                                       {
+                                                           "field":  "plan",
+                                                           "chartType":  "line",
+                                                           "lineType":  "dashed"
+                                                       },
+                                                       {
+                                                           "field":  "samePeriod",
+                                                           "chartType":  "line",
+                                                           "lineType":  "dashed"
+                                                       }
+                                                   ],
+                                        "label":  "Theo T12"
+                                    },
+                                    {
+                                        "id":  "main_cum",
+                                        "chartType":  "line",
+                                        "xField":  "month",
+                                        "series":  [
+                                                       {
+                                                           "field":  "actual_cum",
+                                                           "chartType":  "line"
+                                                       },
+                                                       {
+                                                           "field":  "uth_cum",
+                                                           "chartType":  "bar"
+                                                       },
+                                                       {
+                                                           "field":  "plan_cum",
+                                                           "chartType":  "line",
+                                                           "lineType":  "dashed"
+                                                       },
+                                                       {
+                                                           "field":  "samePeriod_cum",
+                                                           "chartType":  "line",
+                                                           "lineType":  "dashed"
+                                                       }
+                                                   ],
+                                        "label":  "LK: 1.102,6"
+                                    }
+                                ]
+                  },
+    "metadata":  {
+                     "forecastStartIndex":  8
+                 }
 }

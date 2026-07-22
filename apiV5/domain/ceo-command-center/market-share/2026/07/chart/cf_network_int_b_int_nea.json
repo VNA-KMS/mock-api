@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "actual-plan-combo",
     "dataset": {
       "columns": [
         {
@@ -10,25 +10,46 @@
         {
           "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#94A3B8"
+          "label": "2025",
+          "color": "#9AA0A6"
         },
         {
           "id": "db",
           "type": "number",
-          "label": "Kế hoạch",
+          "label": "KH 2026",
           "color": "#D3AC2B"
         },
         {
           "id": "th",
           "type": "number",
-          "label": "Thực hiện",
-          "color": "#004071"
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_cum",
+          "type": "number",
+          "label": "2025 (LK)",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db_cum",
+          "type": "number",
+          "label": "KH 2026 (LK)",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_cum",
+          "type": "number",
+          "label": "2026 (LK)",
+          "color": "#006D88"
         }
       ],
       "rows": [
         [
           "T1",
+          91,
+          104,
+          86,
           91,
           104,
           86
@@ -37,66 +58,99 @@
           "T2",
           91,
           95,
-          86
+          86,
+          182,
+          199,
+          172
         ],
         [
           "T3",
           87,
           104,
-          82
+          82,
+          269,
+          303,
+          254
         ],
         [
           "T4",
           92,
           112,
-          88
+          88,
+          361,
+          415,
+          342
         ],
         [
           "T5",
           89,
           101,
-          84
+          84,
+          450,
+          516,
+          426
         ],
         [
           "T6",
           96,
           108,
-          92
+          92,
+          546,
+          624,
+          518
         ],
         [
           "T7",
           101,
           103,
-          96
+          96,
+          647,
+          727,
+          614
         ],
         [
           "T8",
           83,
           91,
+          null,
+          730,
+          818,
           null
         ],
         [
           "T9",
           83,
           92,
+          null,
+          813,
+          910,
           null
         ],
         [
           "T10",
           88,
           98,
+          null,
+          901,
+          1008,
           null
         ],
         [
           "T11",
           89,
           94,
+          null,
+          990,
+          1102,
           null
         ],
         [
           "T12",
           93,
           91,
+          null,
+          1083,
+          1193,
           null
         ]
       ]
@@ -119,7 +173,28 @@
             "field": "th",
             "chartType": "line"
           }
-        ]
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "db_cum",
+            "chartType": "line"
+          },
+          {
+            "field": "th_cum",
+            "chartType": "line"
+          }
+        ],
+        "label": "LK: 1.083"
       }
     ]
   }

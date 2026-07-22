@@ -1,0 +1,59 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "domain",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Tháng 7/2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "yoy",
+          "type": "number",
+          "label": "Cùng kỳ 2025",
+          "color": "#9AA0A6"
+        }
+      ],
+      "rows": [
+        [
+          "Khai thác bay",
+          4,
+          5
+        ],
+        [
+          "Kỹ thuật",
+          3,
+          6
+        ],
+        [
+          "Khai thác mặt đất",
+          2,
+          2
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "domain",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "yoy",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}
