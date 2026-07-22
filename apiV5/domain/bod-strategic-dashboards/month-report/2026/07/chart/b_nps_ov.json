@@ -1,207 +1,207 @@
 {
- "autoChart": {
-  "chartType": "auto",
-  "dataset": {
-   "columns": [
-    {
-     "id": "month",
-     "type": "string"
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "y2026",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "y2025",
+          "type": "number",
+          "label": "2025",
+          "color": "#C76449"
+        },
+        {
+          "id": "y2024",
+          "type": "number",
+          "label": "2024",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "y2026_cum",
+          "type": "number",
+          "label": "2026 (LK)",
+          "color": "#006D88"
+        },
+        {
+          "id": "y2025_cum",
+          "type": "number",
+          "label": "2025 (LK)",
+          "color": "#C76449"
+        },
+        {
+          "id": "y2024_cum",
+          "type": "number",
+          "label": "2024 (LK)",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          72,
+          70,
+          68,
+          72,
+          70,
+          68
+        ],
+        [
+          "T2",
+          72,
+          71,
+          68,
+          144,
+          141,
+          136
+        ],
+        [
+          "T3",
+          73,
+          71,
+          69,
+          217,
+          212,
+          205
+        ],
+        [
+          "T4",
+          74,
+          72,
+          70,
+          291,
+          284,
+          275
+        ],
+        [
+          "T5",
+          74,
+          73,
+          70,
+          365,
+          357,
+          345
+        ],
+        [
+          "T6",
+          75,
+          73,
+          71,
+          440,
+          430,
+          416
+        ],
+        [
+          "T7",
+          68,
+          66,
+          64,
+          508,
+          496,
+          480
+        ],
+        [
+          "T8",
+          null,
+          67,
+          65,
+          508,
+          563,
+          545
+        ],
+        [
+          "T9",
+          null,
+          68,
+          66,
+          508,
+          631,
+          611
+        ],
+        [
+          "T10",
+          null,
+          69,
+          67,
+          508,
+          700,
+          678
+        ],
+        [
+          "T11",
+          null,
+          70,
+          68,
+          508,
+          770,
+          746
+        ],
+        [
+          "T12",
+          null,
+          71,
+          68,
+          508,
+          841,
+          814
+        ]
+      ]
     },
-    {
-     "id": "y2024",
-     "type": "number",
-     "label": "2024",
-     "color": "#D3AC2B"
-    },
-    {
-     "id": "y2025",
-     "type": "number",
-     "label": "2025",
-     "color": "#C76449"
-    },
-    {
-     "id": "y2026",
-     "type": "number",
-     "label": "2026",
-     "color": "#006D88"
-    },
-    {
-     "id": "y2024_cum",
-     "type": "number",
-     "label": "2024 (LK)",
-     "color": "#D3AC2B"
-    },
-    {
-     "id": "y2025_cum",
-     "type": "number",
-     "label": "2025 (LK)",
-     "color": "#C76449"
-    },
-    {
-     "id": "y2026_cum",
-     "type": "number",
-     "label": "2026 (LK)",
-     "color": "#006D88"
-    }
-   ],
-   "rows": [
-    [
-     "T1",
-     68,
-     70,
-     72,
-     68,
-     70,
-     72
-    ],
-    [
-     "T2",
-     68,
-     71,
-     72,
-     136,
-     141,
-     144
-    ],
-    [
-     "T3",
-     69,
-     71,
-     73,
-     205,
-     212,
-     217
-    ],
-    [
-     "T4",
-     70,
-     72,
-     74,
-     275,
-     284,
-     291
-    ],
-    [
-     "T5",
-     70,
-     73,
-     74,
-     345,
-     357,
-     365
-    ],
-    [
-     "T6",
-     71,
-     73,
-     75,
-     416,
-     430,
-     440
-    ],
-    [
-     "T7",
-     64,
-     66,
-     68,
-     480,
-     496,
-     508
-    ],
-    [
-     "T8",
-     65,
-     67,
-     null,
-     545,
-     563,
-     508
-    ],
-    [
-     "T9",
-     66,
-     68,
-     null,
-     611,
-     631,
-     508
-    ],
-    [
-     "T10",
-     67,
-     69,
-     null,
-     678,
-     700,
-     508
-    ],
-    [
-     "T11",
-     68,
-     70,
-     null,
-     746,
-     770,
-     508
-    ],
-    [
-     "T12",
-     68,
-     71,
-     null,
-     814,
-     841,
-     508
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "month",
+        "series": [
+          {
+            "field": "y2026",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "y2025",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "chartType": "line",
+            "lineType": "solid",
+            "field": "y2024"
+          }
+        ],
+        "label": "Theo T12"
+      },
+      {
+        "id": "main_cum",
+        "chartType": "bar",
+        "xField": "month",
+        "series": [
+          {
+            "field": "y2026_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "field": "y2025_cum",
+            "chartType": "line",
+            "lineType": "solid"
+          },
+          {
+            "chartType": "line",
+            "lineType": "solid",
+            "field": "y2024_cum"
+          }
+        ],
+        "label": "LK: 814"
+      }
     ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "y2024",
-      "chartType": "line",
-      "lineType": "solid"
-     },
-     {
-      "field": "y2025",
-      "chartType": "line",
-      "lineType": "solid"
-     },
-     {
-      "field": "y2026",
-      "chartType": "line",
-      "lineType": "solid"
-     }
-    ],
-    "label": "Theo T12"
-   },
-   {
-    "id": "main_cum",
-    "chartType": "auto",
-    "xField": "month",
-    "series": [
-     {
-      "field": "y2024_cum",
-      "chartType": "line",
-      "lineType": "solid"
-     },
-     {
-      "field": "y2025_cum",
-      "chartType": "line",
-      "lineType": "solid"
-     },
-     {
-      "field": "y2026_cum",
-      "chartType": "line",
-      "lineType": "solid"
-     }
-    ],
-    "label": "LK: 814"
-   }
-  ]
- }
+  }
 }
