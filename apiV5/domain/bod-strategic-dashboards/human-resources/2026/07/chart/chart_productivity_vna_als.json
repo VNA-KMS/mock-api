@@ -1,0 +1,67 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "color": "#006D88"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#C8CDD2"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "lineDash": [6, 4],
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        ["T1", 1095, 1040, 1110],
+        ["T2", 1108, 1055, 1125],
+        ["T3", 1120, 1070, 1140],
+        ["T4", 1132, 1085, 1155],
+        ["T5", 1140, 1095, 1165],
+        ["T6", 1148, 1105, 1175],
+        ["T7", 1158, 1118, 1185],
+        ["T8", null, 1130, 1195],
+        ["T9", null, 1140, 1205],
+        ["T10", null, 1155, 1215],
+        ["T11", null, 1165, 1225],
+        ["T12", null, 1180, 1235]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "bar"
+          },
+          {
+            "field": "plan",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}
