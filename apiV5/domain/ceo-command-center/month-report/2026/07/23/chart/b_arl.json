@@ -1,0 +1,118 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ 2026",
+          "color": "#9AA0A6"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          93.5,
+          null,
+          93.2,
+          93
+        ],
+        [
+          "T2",
+          93.2,
+          null,
+          93.2,
+          92.8
+        ],
+        [
+          "T3",
+          92.8,
+          null,
+          93.2,
+          92.5
+        ],
+        [
+          "T4",
+          92.5,
+          null,
+          93.2,
+          92.2
+        ],
+        [
+          "T5",
+          92,
+          null,
+          93.2,
+          91.8
+        ],
+        [
+          "T6",
+          91.8,
+          null,
+          93.2,
+          91.8
+        ],
+        [
+          "T7",
+          91.8,
+          null,
+          93.2,
+          92.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 7
+  }
+}

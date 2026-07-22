@@ -1,0 +1,97 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "otp_di",
+          "type": "number",
+          "label": "OTP đi",
+          "color": "#006D88"
+        },
+        {
+          "id": "otp_den",
+          "type": "number",
+          "label": "OTP đến",
+          "color": "#C76449"
+        },
+        {
+          "id": "otp_mt",
+          "type": "number",
+          "label": "Mục tiêu",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          84.2,
+          85.1,
+          88
+        ],
+        [
+          "T2",
+          84.5,
+          85.3,
+          88
+        ],
+        [
+          "T3",
+          83.8,
+          84.9,
+          88
+        ],
+        [
+          "T4",
+          84,
+          85,
+          88
+        ],
+        [
+          "T5",
+          84.7,
+          85.6,
+          88
+        ],
+        [
+          "T6",
+          85.1,
+          86.2,
+          88
+        ],
+        [
+          "T7",
+          84.9,
+          85.8,
+          88
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "series": [
+          {
+            "field": "otp_di",
+            "chartType": "line"
+          },
+          {
+            "field": "otp_den",
+            "chartType": "line"
+          },
+          {
+            "field": "otp_mt",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}
