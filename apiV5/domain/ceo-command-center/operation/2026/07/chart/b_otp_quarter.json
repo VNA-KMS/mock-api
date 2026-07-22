@@ -8,6 +8,12 @@
           "type": "string"
         },
         {
+          "id": "cur",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
           "id": "ck",
           "type": "number",
           "label": "Cùng kỳ 2026",
@@ -20,12 +26,6 @@
           "color": "#D3AC2B"
         },
         {
-          "id": "cur",
-          "type": "number",
-          "label": "Thực tế",
-          "color": "#006D88"
-        },
-        {
           "id": "uth",
           "type": "number",
           "label": "Ước thực hiện 2027",
@@ -35,30 +35,30 @@
       "rows": [
         [
           "Quý I",
+          80.2,
           71.6,
           82,
-          80.2,
           null
         ],
         [
           "Quý II",
+          89.3,
           79.5,
           85,
-          89.3,
           null
         ],
         [
           "Quý III",
+          null,
           76.8,
           83,
-          null,
           84.2
         ],
         [
           "Quý IV",
+          null,
           78.2,
           84,
-          null,
           85.3
         ]
       ]
@@ -70,15 +70,15 @@
         "xField": "quarter",
         "series": [
           {
+            "field": "cur",
+            "chartType": "bar"
+          },
+          {
             "field": "ck",
             "chartType": "bar"
           },
           {
             "field": "kh",
-            "chartType": "bar"
-          },
-          {
-            "field": "cur",
             "chartType": "bar"
           },
           {
