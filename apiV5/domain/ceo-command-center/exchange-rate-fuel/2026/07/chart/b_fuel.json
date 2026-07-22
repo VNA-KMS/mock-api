@@ -9,18 +9,6 @@
           "type": "string"
         },
         {
-          "id": "ck",
-          "type": "number",
-          "label": "Cùng kỳ",
-          "color": "#9AA0A6"
-        },
-        {
-          "id": "db",
-          "type": "number",
-          "label": "Kế hoạch",
-          "color": "#D3AC2B"
-        },
-        {
           "id": "th",
           "type": "number",
           "label": "Thực hiện",
@@ -31,92 +19,104 @@
           "type": "number",
           "label": "Ước thực hiện",
           "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch",
+          "color": "#D3AC2B"
         }
       ],
       "rows": [
         [
           "T1",
+          600,
+          null,
           560,
-          600,
-          600,
-          null
+          600
         ],
         [
           "T2",
-          568,
-          605,
           610,
-          null
+          null,
+          568,
+          605
         ],
         [
           "T3",
-          550,
-          610,
           590,
-          null
+          null,
+          550,
+          610
         ],
         [
           "T4",
-          558,
-          615,
           600,
-          null
+          null,
+          558,
+          615
         ],
         [
           "T5",
+          620,
+          null,
           572,
-          620,
-          620,
-          null
+          620
         ],
         [
           "T6",
-          565,
-          620,
           610,
-          null
+          null,
+          565,
+          620
         ],
         [
           "T7",
-          575,
-          625,
           620,
-          null
+          null,
+          575,
+          625
         ],
         [
           "T8",
-          532,
-          580,
           null,
-          560.0
+          560.0,
+          532,
+          580
         ],
         [
           "T9",
-          540,
-          585,
           null,
-          570.0
+          570.0,
+          540,
+          585
         ],
         [
           "T10",
-          565,
-          590,
           null,
-          600.0
+          600.0,
+          565,
+          590
         ],
         [
           "T11",
-          555,
-          595,
           null,
-          590.0
+          590.0,
+          555,
+          595
         ],
         [
           "T12",
-          580,
-          600,
           null,
-          620.0
+          620.0,
+          580,
+          600
         ]
       ]
     },
@@ -127,6 +127,14 @@
         "xField": "month",
         "series": [
           {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -134,14 +142,6 @@
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
-          },
-          {
-            "field": "th",
-            "chartType": "line"
-          },
-          {
-            "field": "uth",
-            "chartType": "bar"
           }
         ]
       }
