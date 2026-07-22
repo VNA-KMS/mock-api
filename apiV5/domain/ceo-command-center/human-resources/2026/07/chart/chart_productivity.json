@@ -1,0 +1,67 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện 2027",
+          "color": "#006D88"
+        },
+        {
+          "id": "samePeriod",
+          "type": "number",
+          "label": "Cùng kỳ 2026",
+          "color": "#C8CDD2"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch 2027",
+          "lineDash": [6, 4],
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        ["T1", 1180, 1120, 1200],
+        ["T2", 1195, 1135, 1215],
+        ["T3", 1210, 1150, 1230],
+        ["T4", 1220, 1165, 1245],
+        ["T5", 1228, 1175, 1255],
+        ["T6", 1235, 1185, 1265],
+        ["T7", 1245, 1199, 1272],
+        ["T8", null, 1210, 1280],
+        ["T9", null, 1220, 1290],
+        ["T10", null, 1235, 1300],
+        ["T11", null, 1245, 1310],
+        ["T12", null, 1260, 1320]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "samePeriod",
+            "chartType": "bar"
+          },
+          {
+            "field": "plan",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}
