@@ -13,7 +13,7 @@
       {
         "id": "m_flt",
         "status": "compact",
-        "title": "Chuyến bay",
+        "title": "FLS",
         "period": "Tháng 06/2026",
         "value": "13.420",
         "unit": "chuyến bay",
@@ -34,7 +34,7 @@
       {
         "id": "m_flt_daily",
         "status": "compact",
-        "title": "SL chuyến bay BQ / ngày",
+        "title": "SL chuyến bay TB/ngày",
         "value": "447",
         "unit": "chuyến/ngày",
         "backgroundStatus": 2,
@@ -49,7 +49,7 @@
       {
         "id": "m_bh",
         "status": "compact",
-        "title": "Giờ bay",
+        "title": "Tổng giờ bay",
         "value": "42.800",
         "unit": "giờ",
         "backgroundStatus": 2,
@@ -69,7 +69,7 @@
       {
         "id": "m_bh_daily",
         "status": "compact",
-        "title": "Giờ bay BQ / ngày (toàn đội)",
+        "title": "Giờ bay TB/tàu/ngày",
         "value": "12,6",
         "unit": "giờ/ngày",
         "backgroundStatus": 2,
@@ -91,7 +91,7 @@
         "trend": [
           {
             "direction": "flat",
-            "label": "vs Mục tiêu: 102.0%",
+            "label": "0% so với mục tiêu",
             "tone": "positive"
           },
           {
@@ -112,7 +112,7 @@
         "trend": [
           {
             "direction": "flat",
-            "label": "vs Mục tiêu: 102.6%",
+            "label": "0% so với mục tiêu",
             "tone": "positive"
           },
           {
@@ -133,7 +133,7 @@
         "trend": [
           {
             "direction": "up",
-            "label": "vs Mục tiêu: 98.2%",
+            "label": "1.5% so với mục tiêu",
             "tone": "positive"
           },
           {
@@ -154,7 +154,7 @@
         "trend": [
           {
             "direction": "up",
-            "label": "vs Mục tiêu: 101.5%",
+            "label": "2% so với mục tiêu",
             "tone": "positive"
           },
           {
@@ -173,7 +173,7 @@
       "items": [
         {
           "id": "b_flight",
-          "title": "Số chuyến bay theo thời gian",
+          "title": "FLS",
           "col": 1,
           "colSpan": 20,
           "aspectRatio": 1.8,
@@ -191,7 +191,7 @@
         },
         {
           "id": "b_hours",
-          "title": "Giờ bay theo thời gian",
+          "title": "Tổng giờ bay",
           "col": 21,
           "colSpan": 20,
           "aspectRatio": 1.8,
@@ -209,7 +209,7 @@
         },
         {
           "id": "b_fleet_hours",
-          "title": "Giờ bay theo đội bay",
+          "title": "Giờ bay TB theo đội bay",
           "col": 41,
           "colSpan": 20,
           "aspectRatio": 1.8,
@@ -219,8 +219,7 @@
             "status": 1
           },
           "subTitle": "Đơn vị: Giờ/tháng",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_fleet_hours.json",
-          "rightTitle": "giờ"
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_fleet_hours.json"
         }
       ]
     },
@@ -232,48 +231,36 @@
           "title": "OTP đi",
           "col": 1,
           "colSpan": 15,
-          "subTitle": "%",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_di.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+          "subTitle": "Đơn vị: %",
+          "height": 150,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_di.json"
         },
         {
           "id": "b_otp_den",
           "title": "OTP đến",
           "col": 16,
           "colSpan": 15,
-          "subTitle": "%",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_den.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+          "subTitle": "Đơn vị: %",
+          "height": 150,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_den.json"
         },
         {
           "id": "b_osp_di",
           "title": "OSP đi",
           "col": 31,
           "colSpan": 15,
-          "subTitle": "%",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_osp_di.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+          "subTitle": "Đơn vị: %",
+          "height": 150,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_osp_di.json"
         },
         {
           "id": "b_osp_den",
           "title": "OSP đến",
           "col": 46,
           "colSpan": 15,
-          "subTitle": "%",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_osp_den.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+          "subTitle": "Đơn vị: %",
+          "height": 150,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_osp_den.json"
         }
       ]
     },
@@ -284,66 +271,63 @@
           "id": "b_delay_heatmap",
           "title": "Số chuyến bay chậm theo mức độ và mạng bay",
           "col": 1,
-          "colSpan": 30,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "Nội địa ghi nhận 1.133 chuyến bay chậm, gấp đôi quốc tế (578 chuyến).",
-            "severity": "warn",
-            "status": 1
-          },
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 2,
           "subTitle": "Đơn vị: chuyến",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_delay_heatmap.json",
-          "rightTitle": "%"
+          "aiInsight": {
+            "text": "Nội địa ghi nhận 1.133 chuyến bay chậm, gấp đôi quốc tế (578 chuyến).",
+            "tone": "warn",
+            "status": 1
+          },
+          "height": 340
         },
         {
           "id": "b_otp_reasons",
           "title": "Nguyên nhân giảm chỉ số OTP",
-          "col": 31,
-          "colSpan": 30,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "Nguyên nhân tại sân bay (tổng 7,3%) và nguyên nhân trên đường bay (tổng 5,8%) là 2 yếu tố ảnh hưởng lớn nhất đến OTP.",
-            "severity": "warn",
-            "status": 1
-          },
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 2,
           "subTitle": "Đơn vị: %",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_otp_reasons.json",
-          "rightTitle": "%"
-        }
-      ]
-    },
-    {
-      "title": "",
-      "items": [
+          "aiInsight": {
+            "text": "Nguyên nhân tại sân bay (tổng 7,3%) và nguyên nhân trên đường bay (tổng 5,8%) là 2 yếu tố ảnh hưởng lớn nhất đến OTP.",
+            "tone": "warn",
+            "status": 1
+          },
+          "height": 340
+        },
         {
           "id": "b_top_otp_high",
           "title": "Top 5 sân bay OTP cao nhất",
-          "col": 1,
-          "colSpan": 30,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "SGN dẫn đầu với OTP 98%, vượt trội so với các sân bay còn lại.",
-            "severity": "good",
-            "status": 1
-          },
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
           "subTitle": "Đơn vị: %",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_top_otp_high.json",
-          "rightTitle": "%"
+          "aiInsight": {
+            "text": "SGN dẫn đầu với OTP 98%, vượt trội so với các sân bay còn lại.",
+            "tone": "good",
+            "status": 1
+          },
+          "height": 160
         },
         {
           "id": "b_top_otp_low",
           "title": "Top 5 sân bay OTP thấp nhất",
-          "col": 31,
-          "colSpan": 30,
-          "aspectRatio": 1.8,
-          "aiInsight": {
-            "text": "VDO có OTP thấp nhất 68%, cần cải thiện quy trình khai thác.",
-            "severity": "warn",
-            "status": 1
-          },
+          "col": 41,
+          "colSpan": 20,
+          "row": 2,
           "subTitle": "Đơn vị: %",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/operation/2026/07/chart/b_top_otp_low.json",
-          "rightTitle": "%"
+          "aiInsight": {
+            "text": "VDO có OTP thấp nhất 68%, cần cải thiện quy trình khai thác.",
+            "tone": "warn",
+            "status": 1
+          },
+          "height": 160
         }
       ]
     }

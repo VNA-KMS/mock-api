@@ -1,64 +1,65 @@
 {
- "autoChart": {
-  "chartType": "bar",
-  "dataset": {
-   "columns": [
-    {
-     "id": "fleet",
-     "type": "string"
-    },
-    {
-     "id": "actual",
-     "type": "number",
-     "label": "Thực hiện 2026",
-     "color": "#006D88"
-    },
-    {
-     "id": "target",
-     "type": "number",
-     "label": "Mục tiêu",
-     "color": "#D3AC2B"
-    }
-   ],
-   "rows": [
-    [
-     "B787",
-     1,
-     1
-    ],
-    [
-     "A350",
-     0,
-     1
-    ],
-    [
-     "A321",
-     2,
-     1
-    ],
-    [
-     "ATR72",
-     0,
-     1
-    ]
-   ]
-  },
-  "views": [
-   {
-    "id": "main",
+  "autoChart": {
     "chartType": "bar",
-    "xField": "fleet",
-    "series": [
-     {
-      "field": "actual",
-      "chartType": "bar"
-     },
-     {
-      "field": "target",
-      "chartType": "bar"
-     }
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "B787",
+          5,
+          8
+        ],
+        [
+          "A350",
+          3,
+          6
+        ],
+        [
+          "A321",
+          14,
+          10
+        ],
+        [
+          "ATR72",
+          2,
+          4
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "bar"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
     ]
-   }
-  ]
- }
+  }
 }
