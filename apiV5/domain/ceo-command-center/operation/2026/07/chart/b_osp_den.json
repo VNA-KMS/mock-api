@@ -10,95 +10,35 @@
         {
           "id": "actual",
           "type": "number",
-          "label": "Thực hiện 2026",
+          "label": "2026",
           "color": "#004071"
         },
         {
-          "id": "ck",
+          "id": "yoy",
           "type": "number",
-          "label": "Cùng kỳ 2025",
+          "label": "2025",
           "color": "#64748B"
         },
         {
-          "id": "kh",
+          "id": "plan",
           "type": "number",
-          "label": "Kế hoạch 2026",
+          "label": "MT 2026",
           "color": "#B4901F"
         }
       ],
       "rows": [
-        [
-          "T1",
-          91,
-          89,
-          92
-        ],
-        [
-          "T2",
-          92,
-          91,
-          93
-        ],
-        [
-          "T3",
-          91,
-          90,
-          92
-        ],
-        [
-          "T4",
-          93,
-          91,
-          93
-        ],
-        [
-          "T5",
-          92,
-          90,
-          93
-        ],
-        [
-          "T6",
-          94,
-          92,
-          94
-        ],
-        [
-          "T7",
-          95,
-          93,
-          95
-        ],
-        [
-          "T8",
-          null,
-          92,
-          94
-        ],
-        [
-          "T9",
-          null,
-          91,
-          93
-        ],
-        [
-          "T10",
-          null,
-          90,
-          93
-        ],
-        [
-          "T11",
-          null,
-          89,
-          92
-        ],
-        [
-          "T12",
-          null,
-          89,
-          92
-        ]
+        ["T1", 40, 38, 44],
+        ["T2", 42, 39, 45],
+        ["T3", 45, 41, 46],
+        ["T4", 47, 43, 46],
+        ["T5", 46, 44, 47],
+        ["T6", 44, 45, 48],
+        ["T7", 46, 46, 49],
+        ["T8", null, 45, 48],
+        ["T9", null, 43, 48],
+        ["T10", null, 42, 47],
+        ["T11", null, 44, 46],
+        ["T12", null, 45, 46]
       ]
     },
     "views": [
@@ -106,18 +46,25 @@
         "id": "main",
         "chartType": "line",
         "xField": "month",
+        "yMin": 30,
+        "yMax": 60,
         "series": [
           {
             "field": "actual",
-            "chartType": "line"
+            "chartType": "line",
+            "showSymbol": true
           },
           {
-            "field": "ck",
-            "chartType": "line"
+            "field": "yoy",
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true
           },
           {
-            "field": "kh",
-            "chartType": "line"
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true
           }
         ]
       }

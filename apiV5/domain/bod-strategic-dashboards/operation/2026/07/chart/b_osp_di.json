@@ -11,94 +11,34 @@
           "id": "actual",
           "type": "number",
           "label": "2026",
-          "color": "#006D88"
+          "color": "#004071"
         },
         {
-          "id": "ck",
+          "id": "yoy",
           "type": "number",
           "label": "2025",
-          "color": "#9AA0A6"
+          "color": "#64748B"
         },
         {
-          "id": "mt",
+          "id": "plan",
           "type": "number",
           "label": "MT 2026",
-          "color": "#D3AC2B"
+          "color": "#B4901F"
         }
       ],
       "rows": [
-        [
-          "T1",
-          32,
-          30,
-          43.5
-        ],
-        [
-          "T2",
-          38,
-          35,
-          44
-        ],
-        [
-          "T3",
-          35,
-          33,
-          43
-        ],
-        [
-          "T4",
-          42,
-          38,
-          45
-        ],
-        [
-          "T5",
-          40,
-          36,
-          44.5
-        ],
-        [
-          "T6",
-          48,
-          42,
-          46
-        ],
-        [
-          "T7",
-          55,
-          48,
-          45
-        ],
-        [
-          "T8",
-          null,
-          45,
-          46.5
-        ],
-        [
-          "T9",
-          null,
-          42,
-          47
-        ],
-        [
-          "T10",
-          null,
-          38,
-          46
-        ],
-        [
-          "T11",
-          null,
-          35,
-          45.5
-        ],
-        [
-          "T12",
-          null,
-          32,
-          44
-        ]
+        ["T1", 32, 30, 43.5],
+        ["T2", 38, 35, 44],
+        ["T3", 35, 33, 43],
+        ["T4", 42, 38, 45],
+        ["T5", 40, 36, 44.5],
+        ["T6", 48, 42, 46],
+        ["T7", 55, 48, 45],
+        ["T8", null, 45, 46.5],
+        ["T9", null, 42, 47],
+        ["T10", null, 38, 46],
+        ["T11", null, 35, 45.5],
+        ["T12", null, 32, 44]
       ]
     },
     "views": [
@@ -106,18 +46,25 @@
         "id": "main",
         "chartType": "line",
         "xField": "month",
+        "yMin": 30,
+        "yMax": 60,
         "series": [
           {
             "field": "actual",
-            "chartType": "line"
+            "chartType": "line",
+            "showSymbol": true
           },
           {
-            "field": "ck",
-            "chartType": "line"
+            "field": "yoy",
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true
           },
           {
-            "field": "mt",
-            "chartType": "line"
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true
           }
         ]
       }

@@ -152,53 +152,50 @@
           "id": "b_fls_total",
           "title": "FLS Total",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 28,
           "row": 1,
-          "subTitle": "Số chuyến/tháng · toàn mạng",
-          "aspectRatio": 1.8,
+          "rowSpan": 2,
+          "height": 200,
           "rightTitle": "chuyến",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_total.json"
         },
         {
           "id": "b_fls_dom",
           "title": "FLS Nội địa",
-          "col": 21,
-          "colSpan": 20,
+          "col": 29,
+          "colSpan": 16,
           "row": 1,
-          "subTitle": "Số chuyến/tháng · mạng DOM",
-          "aspectRatio": 1.8,
+          "height": 200,
           "rightTitle": "chuyến",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_dom.json"
         },
         {
           "id": "b_fls_hang",
           "title": "FLS theo hãng",
-          "col": 41,
-          "colSpan": 20,
+          "col": 45,
+          "colSpan": 16,
           "row": 1,
-          "subTitle": "Số chuyến/tháng · Thực tế · side by side",
-          "aspectRatio": 1.8,
+          "height": 200,
           "rightTitle": "chuyến",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_hang.json"
         },
         {
           "id": "b_fls_int",
           "title": "FLS Quốc tế",
-          "col": 21,
-          "colSpan": 20,
+          "col": 29,
+          "colSpan": 16,
           "row": 2,
-          "subTitle": "Số chuyến/tháng · mạng INT",
-          "aspectRatio": 1.8,
+          "height": 200,
           "rightTitle": "chuyến",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_int.json"
         },
         {
           "id": "b_fls_dacbiet",
           "title": "FLS Cargo, VIP, Ferry",
-          "col": 41,
-          "colSpan": 20,
+          "col": 45,
+          "colSpan": 16,
           "row": 2,
-          "subTitle": "Phân bố",
+          "height": 200,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fls_dacbiet.json"
         }
       ]
@@ -265,7 +262,7 @@
           "col": 1,
           "colSpan": 15,
           "subTitle": "% · các tháng trong năm",
-          "aspectRatio": 1.8,
+          "height": 150,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_di.json",
           "headerAction": {
             "type": "cumulative",
@@ -278,7 +275,7 @@
           "col": 16,
           "colSpan": 15,
           "subTitle": "% · các tháng trong năm",
-          "aspectRatio": 1.8,
+          "height": 150,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_den.json",
           "headerAction": {
             "type": "cumulative",
@@ -291,7 +288,7 @@
           "col": 31,
           "colSpan": 15,
           "subTitle": "% · các tháng trong năm",
-          "aspectRatio": 1.8,
+          "height": 150,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_di.json",
           "headerAction": {
             "type": "cumulative",
@@ -304,7 +301,7 @@
           "col": 46,
           "colSpan": 15,
           "subTitle": "% · các tháng trong năm",
-          "aspectRatio": 1.8,
+          "height": 150,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_den.json",
           "headerAction": {
             "type": "cumulative",
@@ -321,68 +318,42 @@
           "title": "Chậm chuyến theo mạng bay",
           "subTitle": "Tỷ lệ chậm (%) — thấp hơn mục tiêu là tốt",
           "col": 1,
-          "colSpan": 30,
-          "height": 320,
+          "colSpan": 25,
+          "row": 1,
+          "rowSpan": 2,
+          "height": 160,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_delay_network.json"
         },
         {
           "id": "b_delay_heatmap",
           "title": "Phân bố chuyến bay chậm theo mức độ & mạng bay",
-          "col": 31,
-          "colSpan": 30,
+          "col": 26,
+          "colSpan": 35,
+          "row": 1,
           "subTitle": "SL chuyến bay chậm · nhóm số phút chậm × mạng bay",
-          "height": 320,
+          "height": 160,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_delay_heatmap.json",
           "aiInsight": {
             "text": "Nội địa ghi nhận nhiều chuyến chậm hơn quốc tế.",
-            "severity": "warn",
+            "tone": "warn",
             "status": 1
           }
-        }
-      ]
-    },
-    {
-      "title": "",
-      "items": [
+        },
         {
           "id": "b_otp_reasons",
           "title": "Nguyên nhân giảm chỉ số OTP",
-          "col": 31,
-          "colSpan": 30,
+          "col": 26,
+          "colSpan": 35,
+          "row": 2,
           "subTitle": "Tỷ trọng nguyên nhân (%) — Trực tiếp vs Dây chuyền",
-          "aspectRatio": 1.8,
+          "height": 160,
           "rightTitle": "%",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_reasons.json",
           "aiInsight": {
             "text": "Nguyên nhân tại sân bay và trên đường bay là 2 yếu tố ảnh hưởng lớn nhất đến OTP.",
-            "severity": "warn",
+            "tone": "warn",
             "status": 1
           }
-        }
-      ]
-    },
-    {
-      "title": "",
-      "items": [
-        {
-          "id": "b_otp_quarter",
-          "title": "OTP theo Quý",
-          "col": 1,
-          "colSpan": 30,
-          "subTitle": "% · Cùng kỳ / Mục tiêu / Thực tế · Quý III, IV chưa có số thực tế",
-          "aspectRatio": 1.8,
-          "rightTitle": "%",
-          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_otp_quarter.json"
-        },
-        {
-          "id": "b_osp_quarter",
-          "title": "OSP theo Quý",
-          "col": 31,
-          "colSpan": 30,
-          "subTitle": "% · Cùng kỳ / Mục tiêu / Thực tế · Quý III, IV chưa có số thực tế",
-          "aspectRatio": 1.8,
-          "rightTitle": "%",
-          "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_osp_quarter.json"
         }
       ]
     },
@@ -400,7 +371,7 @@
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_top_otp_high.json",
           "aiInsight": {
             "text": "VCS dẫn đầu với OTP 96,5%.",
-            "severity": "good",
+            "tone": "good",
             "status": 1
           }
         },
@@ -415,7 +386,7 @@
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_top_otp_low.json",
           "aiInsight": {
             "text": "SGN có OTP thấp nhất 68,4%, cần cải thiện quy trình khai thác.",
-            "severity": "warn",
+            "tone": "warn",
             "status": 1
           }
         }
@@ -439,7 +410,7 @@
           "title": "Fuel burn/BH theo thời gian & Aircraft Type",
           "col": 31,
           "colSpan": 30,
-          "subTitle": "Kg/h · mỗi cụm = 1 tháng",
+          "subTitle": "kg/h · mỗi cụm = 1 tháng",
           "aspectRatio": 1.8,
           "rightTitle": "kg/h",
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_fuel_burn_bh.json"
