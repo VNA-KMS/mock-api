@@ -1,0 +1,100 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          75.0,
+          84.3,
+          106.0,
+          null
+        ],
+        [
+          "Q2",
+          75.1,
+          85.9,
+          113.4,
+          null
+        ],
+        [
+          "Q3",
+          26.3,
+          91.80000000000001,
+          119.1,
+          68.5
+        ],
+        [
+          "Q4",
+          null,
+          93.8,
+          129.4,
+          110.0
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ tấn.km",
+    "description": "RTK - Luân chuyển hàng hóa - nội địa - VNA",
+    "forecastStartIndex": 3
+  }
+}

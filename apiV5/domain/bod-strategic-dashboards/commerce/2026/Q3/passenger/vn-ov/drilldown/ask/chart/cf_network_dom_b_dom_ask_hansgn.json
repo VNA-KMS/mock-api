@@ -1,0 +1,100 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          433.90000000000003,
+          442.6,
+          479.5,
+          null
+        ],
+        [
+          "Q2",
+          409.4,
+          423.9,
+          463.4,
+          null
+        ],
+        [
+          "Q3",
+          134.9,
+          396.70000000000005,
+          447.90000000000003,
+          271.1
+        ],
+        [
+          "Q4",
+          null,
+          374.9,
+          425.5,
+          382.2
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ ghế.km",
+    "description": "ASK - Sức cung ứng ghế km - nội địa",
+    "forecastStartIndex": 3
+  }
+}

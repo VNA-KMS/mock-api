@@ -1,0 +1,100 @@
+{
+  "autoChart": {
+    "chartType": "auto",
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          225.8,
+          226.7,
+          242.1,
+          null
+        ],
+        [
+          "Q2",
+          213.49999999999997,
+          223.20000000000002,
+          242.39999999999998,
+          null
+        ],
+        [
+          "Q3",
+          81.8,
+          220.0,
+          240.70000000000002,
+          147.5
+        ],
+        [
+          "Q4",
+          null,
+          221.2,
+          233.79999999999998,
+          215.6
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "%",
+    "description": "LF - Hệ số tải Hành khách - tổng",
+    "forecastStartIndex": 3
+  }
+}
