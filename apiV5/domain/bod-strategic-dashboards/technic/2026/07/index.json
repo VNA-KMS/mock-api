@@ -185,59 +185,87 @@
             "columns": [
               {
                 "id": "fleet",
-                "type": "text",
-                "label": "Loại TB"
+                "type": "badge",
+                "label": "Đội bay"
               },
               {
                 "id": "target",
                 "type": "number",
-                "label": "MT năm"
+                "label": "MT năm",
+                "decimals": 1
               },
               {
                 "id": "actual",
                 "type": "number",
-                "label": "Tháng này"
+                "label": "Thực tế",
+                "decimals": 1
               },
               {
                 "id": "diff",
-                "type": "number",
+                "type": "tone-value",
                 "label": "VS MT"
               }
             ],
             "rows": [
               {
                 "cells": {
-                  "fleet": "B787",
+                  "fleet": {
+                    "label": "B787",
+                    "color": "blue"
+                  },
                   "target": 96,
                   "actual": 95.4,
-                  "diff": -0.6
+                  "diff": {
+                    "value": -0.6,
+                    "tone": "negative"
+                  }
                 }
               },
               {
                 "cells": {
-                  "fleet": "A350",
+                  "fleet": {
+                    "label": "A350",
+                    "color": "purple"
+                  },
                   "target": 95.5,
                   "actual": 96.1,
-                  "diff": 0.6
+                  "diff": {
+                    "value": 0.6,
+                    "tone": "positive"
+                  }
                 }
               },
               {
                 "cells": {
-                  "fleet": "A321",
+                  "fleet": {
+                    "label": "A321",
+                    "color": "orange"
+                  },
                   "target": 95,
                   "actual": 93.8,
-                  "diff": -1.2
+                  "diff": {
+                    "value": -1.2,
+                    "tone": "negative"
+                  }
                 }
               },
               {
                 "cells": {
-                  "fleet": "ATR72",
+                  "fleet": {
+                    "label": "ATR72",
+                    "color": "teal"
+                  },
                   "target": 94.5,
                   "actual": 94.2,
-                  "diff": -0.3
+                  "diff": {
+                    "value": -0.3,
+                    "tone": "negative"
+                  }
                 }
               }
-            ]
+            ],
+            "density": "compact",
+            "format3dec": false
           },
           "subTitle": "Đơn vị: %"
         }
