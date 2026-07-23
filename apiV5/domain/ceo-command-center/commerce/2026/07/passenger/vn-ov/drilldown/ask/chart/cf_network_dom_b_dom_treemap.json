@@ -1,87 +1,65 @@
 {
-  "autoChart": {
-    "chartType": "treemap",
-    "dataset": {
-      "columns": [
-        {
-          "id": "name",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
-        }
-      ],
-      "rows": [
-        [
-          "Nội địa",
-          90,
-          "",
-          ""
-        ],
-        [
-          "Nhóm ngành",
-          45000,
-          "Nội địa",
-          "#EAB308"
-        ],
-        [
-          "Trục lẻ",
-          12600,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "HANDAD",
-          10350,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "Du lịch",
-          7560,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "HANSGN",
-          5220,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "SGNDAD",
-          4770,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "Địa phương",
-          4500,
-          "Nhóm ngành",
-          null
-        ]
-      ]
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "name",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap"
-      }
+    {
+     "id": "value",
+     "type": "number",
+     "label": "Nội địa",
+     "color": "#479EB3"
+    }
+   ],
+   "rows": [
+    [
+     "Trục lẻ",
+     12600
+    ],
+    [
+     "HANDAD",
+     10350
+    ],
+    [
+     "Du lịch",
+     7560
+    ],
+    [
+     "HANSGN",
+     5220
+    ],
+    [
+     "SGNDAD",
+     4770
+    ],
+    [
+     "Địa phương",
+     4500
     ]
+   ]
   },
-  "metadata": {
-    "chartType": "line",
-    "pattern": "stable",
-    "unit": "tỷ ghế.km",
-    "description": "ASK - Sức cung ứng ghế km - nội địa"
-  }
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "labelInside": true,
+    "xField": "name",
+    "series": [
+     {
+      "field": "value",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "chartType": "line",
+  "pattern": "stable",
+  "unit": "tỷ ghế.km",
+  "description": "ASK - Sức cung ứng ghế km - nội địa"
+ }
 }
