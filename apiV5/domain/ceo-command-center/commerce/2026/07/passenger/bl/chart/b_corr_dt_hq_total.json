@@ -18,100 +18,86 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
+              "Toàn mạng VNA",
+              "Toàn mạng VNA",
+              8600,
+              -1600
+            ],
+            [
+              "EU",
+              "INT (8 areas)",
+              980,
+              -120
+            ],
+            [
+              "AU & US",
+              "INT (8 areas)",
+              720,
+              40
+            ],
+            [
               "CLMV",
-              "CLMV",
+              "INT (8 areas)",
               450,
               80
             ],
             [
-              "NEA",
-              "NEA",
-              1250,
-              -220
+              "SEA",
+              "INT (8 areas)",
+              1100,
+              -80
             ],
             [
               "MID",
-              "MID",
+              "INT (8 areas)",
               380,
               -40
             ],
             [
               "NOA",
-              "NOA",
+              "INT (8 areas)",
               860,
               -180
             ],
             [
-              "SWP",
-              "SWP",
-              620,
-              -90
-            ],
-            [
-              "SEA",
-              "SEA",
-              1100,
-              -80
-            ],
-            [
-              "EUR",
-              "EUR",
-              980,
-              -120
+              "NEA",
+              "INT (8 areas)",
+              1250,
+              -220
             ],
             [
               "SAS",
-              "SAS",
+              "INT (8 areas)",
               560,
               20
             ],
             [
-              "HANSGN",
-              "HANSGN",
+              "Trục chính",
+              "DOM (3 areas)",
               1400,
               -90
             ],
             [
-              "HANDAD",
-              "HANDAD",
+              "Du lịch",
+              "DOM (3 areas)",
               780,
-              -40
-            ],
-            [
-              "SGNDAD",
-              "SGNDAD",
-              720,
-              -30
-            ],
-            [
-              "Trục lẻ",
-              "Trục lẻ",
-              520,
-              -20
-            ],
-            [
-              "Du lịch",
-              "Du lịch",
-              480,
               60
             ],
             [
               "Địa phương",
-              "Địa phương",
-              350,
-              -50
+              "DOM (3 areas)",
+              520,
+              -30
             ]
           ]
         },
@@ -128,11 +114,68 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Tương quan doanh thu và HQ VTHK tháng 7/2026: Hầu hết các khu vực có hiệu quả âm, ngoại trừ CLMV (+80 tỷ), SAS (+20 tỷ) và Du lịch (+60 tỷ). NEA (-220 tỷ) và NOA (-180 tỷ) là hai khu vực lỗ nặng nhất mặc dù doanh thu cao.",
-        "severity": "crit",
-        "status": 1
+      }
+    },
+    {
+      "label": "Network",
+      "autoChart": {
+        "chartType": "scatter",
+        "aspectRatio": 2.2,
+        "dataset": {
+          "columns": [
+            {
+              "id": "name",
+              "type": "string"
+            },
+            {
+              "id": "segment",
+              "type": "string"
+            },
+            {
+              "id": "dt",
+              "type": "number",
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
+            },
+            {
+              "id": "hq",
+              "type": "number",
+              "label": "Hiệu quả VTHK (tỷ VND)"
+            }
+          ],
+          "rows": [
+            [
+              "Toàn mạng VNA",
+              "Toàn mạng VNA",
+              8600,
+              -1600
+            ],
+            [
+              "INT",
+              "INT (1)",
+              5200,
+              -950
+            ],
+            [
+              "DOM",
+              "DOM (1)",
+              3400,
+              -650
+            ]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "scatter",
+            "xField": "dt",
+            "series": [
+              {
+                "field": "hq",
+                "chartType": "scatter"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -153,58 +196,86 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
-              "Vietnam",
-              "Vietnam",
-              980,
-              -70
+              "Toàn mạng VNA",
+              "Toàn mạng VNA",
+              8600,
+              -1600
             ],
             [
-              "Korea",
-              "Korea",
-              880,
-              -110
-            ],
-            [
-              "Japan",
-              "Japan",
+              "Nhật Bản",
+              "INT (8 countries)",
               920,
               -140
             ],
             [
-              "Australia",
-              "Australia",
+              "Hàn Quốc",
+              "INT (8 countries)",
+              880,
+              -110
+            ],
+            [
+              "Trung Quốc",
+              "INT (8 countries)",
+              760,
+              -200
+            ],
+            [
+              "Úc",
+              "INT (8 countries)",
               540,
               30
             ],
             [
-              "France",
-              "France",
+              "Mỹ",
+              "INT (8 countries)",
+              480,
+              -60
+            ],
+            [
+              "Pháp",
+              "INT (8 countries)",
               410,
               -90
             ],
             [
-              "Germany",
-              "Germany",
+              "Thái Lan",
+              "INT (8 countries)",
               350,
-              -60
+              50
             ],
             [
-              "Thailand",
-              "Thailand",
-              280,
-              -120
+              "Singapore",
+              "INT (8 countries)",
+              320,
+              70
+            ],
+            [
+              "Hà Nội",
+              "DOM (3 countries)",
+              980,
+              -70
+            ],
+            [
+              "TP.HCM",
+              "DOM (3 countries)",
+              1100,
+              -100
+            ],
+            [
+              "Đà Nẵng",
+              "DOM (3 countries)",
+              640,
+              40
             ]
           ]
         },
@@ -221,11 +292,6 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Xét theo quốc gia: Japan (-140 tỷ), Korea (-110 tỷ) và Thailand (-120 tỷ) là các thị trường có mức lỗ cao nhất. Australia là điểm sáng duy nhất có lãi (+30 tỷ).",
-        "severity": "crit",
-        "status": 1
       }
     },
     {
@@ -246,112 +312,86 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
-              "HAN-SGN",
-              "HAN-SGN",
+              "Toàn mạng VNA",
+              "Toàn mạng VNA",
+              8600,
+              -1600
+            ],
+            [
+              "SGN–NRT",
+              "INT (8 routes)",
+              420,
+              -80
+            ],
+            [
+              "HAN–ICN",
+              "INT (8 routes)",
+              380,
+              -60
+            ],
+            [
+              "SGN–ICN",
+              "INT (8 routes)",
+              360,
+              -50
+            ],
+            [
+              "HAN–NRT",
+              "INT (8 routes)",
+              340,
+              -90
+            ],
+            [
+              "SGN–SYD",
+              "INT (8 routes)",
+              310,
+              20
+            ],
+            [
+              "SGN–LAX",
+              "INT (8 routes)",
+              290,
+              -40
+            ],
+            [
+              "HAN–CDG",
+              "INT (8 routes)",
+              270,
+              -70
+            ],
+            [
+              "SGN–FRA",
+              "INT (8 routes)",
+              250,
+              -30
+            ],
+            [
+              "SGN–HAN",
+              "DOM (3 routes)",
               480,
               -20
             ],
             [
-              "HPH-SGN",
-              "HPH-SGN",
-              320,
-              -10
+              "HAN–SGN",
+              "DOM (3 routes)",
+              470,
+              -15
             ],
             [
-              "HAN-DAD",
-              "HAN-DAD",
+              "SGN–DAD",
+              "DOM (3 routes)",
               210,
               25
-            ],
-            [
-              "THD-SGN",
-              "THD-SGN",
-              180,
-              15
-            ],
-            [
-              "HAN-VCA",
-              "HAN-VCA",
-              150,
-              -5
-            ],
-            [
-              "HAN-CXR",
-              "HAN-CXR",
-              130,
-              8
-            ],
-            [
-              "VII-SGN",
-              "VII-SGN",
-              110,
-              3
-            ],
-            [
-              "HAN-DLI",
-              "HAN-DLI",
-              95,
-              -12
-            ],
-            [
-              "HAN-BMV",
-              "HAN-BMV",
-              85,
-              6
-            ],
-            [
-              "HAN-PQC",
-              "HAN-PQC",
-              75,
-              -8
-            ],
-            [
-              "HAN-PXU",
-              "HAN-PXU",
-              65,
-              4
-            ],
-            [
-              "HAN-HUI",
-              "HAN-HUI",
-              55,
-              -3
-            ],
-            [
-              "HAN-TBB",
-              "HAN-TBB",
-              50,
-              2
-            ],
-            [
-              "HAN-UIH",
-              "HAN-UIH",
-              45,
-              -6
-            ],
-            [
-              "HAN-DIN",
-              "HAN-DIN",
-              40,
-              1
-            ],
-            [
-              "HAN-VCL",
-              "HAN-VCL",
-              35,
-              -15
             ]
           ]
         },
@@ -368,11 +408,6 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Xét theo đường bay nội địa: HAN-DAD (+25 tỷ) và THD-SGN (+15 tỷ) có hiệu quả tốt nhất. HAN-SGN (-20 tỷ) và HAN-VCL (-15 tỷ) có mức lỗ đáng kể.",
-        "severity": "warn",
-        "status": 1
       }
     }
   ]

@@ -1,124 +1,66 @@
 {
   "chartBoard": [
     {
-      "title": "DT VTHK",
+      "title": "Doanh thu vận tải hàng không",
       "items": [
         {
           "id": "b_dt_vthk_total",
-          "title": "DT VTHK – INT + DOM",
-          "subTitle": "Đơn vị: Tỷ VND",
+          "title": "Doanh thu vận tải hàng không",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 36,
           "row": 1,
-          "rowSpan": 1,
-          "height": 280,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_total.json",
+          "rowSpan": 2,
+          "height": 260,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_dt_vthk_total.json",
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: Tỷ VND"
         },
         {
           "id": "b_dt_vthk_int",
-          "title": "DT VTHK – INT",
-          "subTitle": "Đơn vị: Tỷ VND",
-          "col": 21,
-          "colSpan": 20,
+          "title": "Doanh thu vận tải hàng không - Quốc tế",
+          "col": 37,
+          "colSpan": 24,
           "row": 1,
           "rowSpan": 1,
-          "height": 280,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_int.json",
+          "height": 200,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_dt_vthk_int.json",
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: Tỷ VND"
         },
         {
           "id": "b_dt_vthk_dom",
-          "title": "DT VTHK – DOM",
-          "subTitle": "Đơn vị: Tỷ VND",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
+          "title": "Doanh thu vận tải hàng không - Nội địa",
+          "col": 37,
+          "colSpan": 24,
+          "row": 2,
           "rowSpan": 1,
-          "height": 280,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_dom.json",
+          "height": 200,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_dt_vthk_dom.json",
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: Tỷ VND"
         }
       ]
     },
     {
-      "title": "Tương quan doanh thu",
       "items": [
         {
-          "id": "b_corr_dt_hq",
-          "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
+          "id": "b_market_structure",
+          "title": "Doanh thu vận tải hàng không – Theo khu vực",
           "col": 1,
-          "colSpan": 39,
+          "colSpan": 60,
           "row": 1,
-          "height": 420,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/b_corr_dt_hq_total.json",
-          "aiInsight": {
-            "text": "Tương quan doanh thu và HQ VTHK tháng 7/2026: Hầu hết các khu vực có hiệu quả âm, ngoại trừ CLMV (+80 tỷ), SAS (+20 tỷ) và Du lịch (+60 tỷ). NEA (-220 tỷ) và NOA (-180 tỷ) là hai khu vực lỗ nặng nhất.",
-            "severity": "crit",
-            "status": 1
-          }
-        },
-        {
-          "id": "b_corr_detail_table",
-          "title": "Chi tiết DT VTHK",
-          "col": 40,
-          "colSpan": 21,
-          "row": 1,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_corr_detail_table_total.json"
-        }
-      ]
-    },
-    {
-      "title": "Đánh giá thị trường",
-      "items": [
-        {
-          "id": "b_int_ai_insight",
-          "col": 1,
-          "colSpan": 30,
-          "row": 1,
-          "rowSpan": 1,
-          "extraComponent": {
-            "type": "insight-card",
-            "config": {
-              "title": "Nhận định",
-              "variant": "info",
-              "items": [
-                "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
-                "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
-              ],
-              "showAiBadge": true,
-              "aiBadgeLabel": "TRỢ LÝ AI"
-            }
-          }
-        },
-        {
-          "id": "b_dom_ai_insight",
-          "col": 31,
-          "colSpan": 30,
-          "row": 1,
-          "rowSpan": 1,
-          "extraComponent": {
-            "type": "insight-card",
-            "config": {
-              "title": "Nhận định",
-              "variant": "info",
-              "items": [
-                "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
-                "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
-              ],
-              "showAiBadge": true,
-              "aiBadgeLabel": "TRỢ LÝ AI"
-            }
-          }
+          "height": 350,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_market_structure.json",
+          "subTitle": "Đơn vị: Tỷ VND"
         }
       ]
     }
@@ -128,124 +70,66 @@
       "total": {
         "chartBoard": [
           {
-            "title": "DT VTHK",
+            "title": "Doanh thu vận tải hàng không",
             "items": [
               {
                 "id": "b_dt_vthk_total",
-                "title": "DT VTHK – INT + DOM",
-                "subTitle": "Đơn vị: Tỷ VND",
+                "title": "Doanh thu vận tải hàng không",
                 "col": 1,
-                "colSpan": 20,
+                "colSpan": 36,
                 "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_total.json",
+                "rowSpan": 2,
+                "height": 260,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_total.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dt_vthk_int",
-                "title": "DT VTHK – INT",
-                "subTitle": "Đơn vị: Tỷ VND",
-                "col": 21,
-                "colSpan": 20,
+                "title": "Doanh thu vận tải hàng không - Quốc tế",
+                "col": 37,
+                "colSpan": 24,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_int.json",
+                "height": 200,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_int.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dt_vthk_dom",
-                "title": "DT VTHK – DOM",
-                "subTitle": "Đơn vị: Tỷ VND",
-                "col": 41,
-                "colSpan": 20,
-                "row": 1,
+                "title": "Doanh thu vận tải hàng không - Nội địa",
+                "col": 37,
+                "colSpan": 24,
+                "row": 2,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_dom.json",
+                "height": 200,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_dt_vthk_dom.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           },
           {
-            "title": "Tương quan doanh thu",
             "items": [
               {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
+                "id": "b_market_structure",
+                "title": "Doanh thu vận tải hàng không – Theo khu vực",
                 "col": 1,
-                "colSpan": 39,
+                "colSpan": 60,
                 "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/b_corr_dt_hq_total.json",
-                "aiInsight": {
-                  "text": "Tương quan doanh thu và HQ VTHK tháng 7/2026: Hầu hết các khu vực có hiệu quả âm, ngoại trừ CLMV (+80 tỷ), SAS (+20 tỷ) và Du lịch (+60 tỷ). NEA (-220 tỷ) và NOA (-180 tỷ) là hai khu vực lỗ nặng nhất.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết DT VTHK",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_corr_detail_table_total.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
-              },
-              {
-                "id": "b_dom_ai_insight",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_total_b_market_structure.json",
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           }
@@ -254,430 +138,775 @@
       "int": {
         "chartBoard": [
           {
-            "title": "DT VTHK",
+            "title": "Doanh thu vận tải hàng không",
             "items": [
               {
-                "id": "b_int_dt_vthk_eu",
-                "title": "EU",
-                "col": 1,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_eu.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_dt_vthk_au_us",
-                "title": "AU & US",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_au_us.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
                 "id": "b_int_dt_vthk_clmv",
-                "title": "CLMV",
-                "col": 31,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_clmv.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_dt_vthk_sea",
-                "title": "SEA (ĐNA)",
-                "col": 46,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_sea.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_dt_vthk_mid",
-                "title": "MID (Trung Đông)",
+                "title": "Doanh thu vận tải hàng không – CLMV",
                 "col": 1,
                 "colSpan": 15,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_mid.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_clmv.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_dt_vthk_noa",
-                "title": "NOA (Bắc Á)",
-                "col": 16,
-                "colSpan": 15,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_noa.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_int_dt_vthk_nea",
-                "title": "NEA (ĐBA)",
+                "title": "Doanh thu vận tải hàng không – NEA",
+                "col": 16,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_nea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_int_dt_vthk_mid",
+                "title": "Doanh thu vận tải hàng không – MID",
+                "col": 31,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_mid.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_int_dt_vthk_noa",
+                "title": "Doanh thu vận tải hàng không – NOA",
+                "col": 46,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_noa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_int_dt_vthk_au_us",
+                "title": "Doanh thu vận tải hàng không – SWP",
+                "col": 1,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_au_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_int_dt_vthk_sea",
+                "title": "Doanh thu vận tải hàng không – SEA",
+                "col": 16,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_sea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_int_dt_vthk_eu",
+                "title": "Doanh thu vận tải hàng không – EUR",
                 "col": 31,
                 "colSpan": 15,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_nea.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_eu.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_int_dt_vthk_sas",
-                "title": "SAS (Nam Á)",
+                "title": "Doanh thu vận tải hàng không – SAS",
                 "col": 46,
                 "colSpan": 15,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_sas.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_dt_vthk_sas.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           },
           {
-            "title": "Tương quan doanh thu",
             "items": [
               {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
-                "col": 1,
-                "colSpan": 39,
-                "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/b_corr_dt_hq_int.json",
-                "aiInsight": {
-                  "text": "Tương quan thị trường quốc tế: NEA (-220 tỷ), NOA (-180 tỷ) và EUR (-120 tỷ) có doanh thu cao nhưng hiệu quả âm nặng. CLMV (+80 tỷ) và SAS (+20 tỷ) là điểm sáng.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết DT VTHK",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_corr_detail_table_int.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
+                "id": "b_int_treemap",
+                "title": "Doanh thu vận tải hàng không – Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_int_b_int_treemap.json",
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           }
-        ]
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "Khách vận chuyển",
+              "value": "985",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "97.1% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "5.4% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "drillDownPath": null,
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "ask",
+              "status": "compact",
+              "title": "Ghế luân chuyển",
+              "value": "2,150",
+              "unit": "tỷ ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.7% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "6.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/ask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "Hệ số sử dụng ghế",
+              "value": "82.5",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "98.4% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/lf/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "rtk",
+              "status": "compact",
+              "title": "Tấn luân chuyển",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.9% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/rtk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "dt_vthk",
+              "status": "compact",
+              "title": "Doanh thu vận tải hàng không",
+              "value": "+4,850",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "94.9% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "12.5% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "hq_so_cpbd",
+              "status": "compact",
+              "title": "Hiệu quả so với chi phí biến đổi",
+              "value": "+320",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.6% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "15.3% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/hq_so_cpbd/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "hq_vthk",
+              "status": "compact",
+              "title": "Hiệu quả VTHK (*)",
+              "value": "+185",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.2% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "25.0% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/hq_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "Thu suất trên 1 ghế luân chuyển",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "102.6% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/rask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
       },
       "dom": {
         "chartBoard": [
           {
-            "title": "DT VTHK – DOM",
+            "title": "Doanh thu vận tải hàng không",
             "items": [
               {
                 "id": "b_dom_dt_vthk_hansgn",
-                "title": "HANSGN",
+                "title": "Doanh thu vận tải hàng không – HANSGN",
                 "col": 1,
-                "colSpan": 12,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_hansgn.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_hansgn.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dom_dt_vthk_handad",
-                "title": "HANDAD",
-                "col": 13,
-                "colSpan": 12,
+                "title": "Doanh thu vận tải hàng không – HANDAD",
+                "col": 21,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_handad.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_handad.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dom_dt_vthk_sgndad",
-                "title": "SGNDAD",
-                "col": 25,
-                "colSpan": 12,
+                "title": "Doanh thu vận tải hàng không – SGNDAD",
+                "col": 41,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_sgndad.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_sgndad.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dom_dt_vthk_dulich",
-                "title": "Du lịch",
-                "col": 37,
-                "colSpan": 12,
-                "row": 1,
+                "title": "Doanh thu vận tải hàng không – Du lịch",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_dulich.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_dulich.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
                 "id": "b_dom_dt_vthk_trucle",
-                "title": "Trục lẻ",
-                "col": 49,
-                "colSpan": 12,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_trucle.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              }
-            ]
-          },
-          {
-            "title": "DT VTHK – theo hãng bay",
-            "items": [
-              {
-                "id": "b_dom_dt_vthk_vna",
-                "title": "VNA",
-                "col": 1,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vna.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dt_vthk_pa",
-                "title": "QH",
-                "col": 21,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_pa.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dt_vthk_vna_group",
-                "title": "VNA Group",
-                "col": 41,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vna_group.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dt_vthk_vj",
-                "title": "VJ",
-                "col": 1,
-                "colSpan": 20,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vj.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dt_vthk_ba",
-                "title": "BA",
+                "title": "Doanh thu vận tải hàng không – Trục lẻ",
                 "col": 21,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_ba.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_trucle.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               },
               {
-                "id": "b_dom_dt_vthk_sun",
-                "title": "9G",
+                "id": "b_dom_dt_vthk_diaphuong",
+                "title": "Doanh thu vận tải hàng không – Địa phương",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_sun.json",
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_diaphuong.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dt_vthk_vu",
-                "title": "VU",
-                "col": 1,
-                "colSpan": 20,
-                "row": 3,
-                "rowSpan": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Tỷ VND",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vu.json"
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           },
           {
-            "title": "Tương quan doanh thu",
             "items": [
               {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
-                "col": 1,
-                "colSpan": 39,
-                "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/b_corr_dt_hq_dom.json",
-                "aiInsight": {
-                  "text": "Tương quan thị trường nội địa: HANSGN dẫn đầu doanh thu (1.400 tỷ) nhưng lỗ -90 tỷ. Du lịch (+60 tỷ) có hiệu quả tốt nhất.",
-                  "severity": "warn",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết DT VTHK",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/b_corr_detail_table_dom.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_dom_ai_insight",
+                "id": "b_dom_treemap",
+                "title": "Doanh thu vận tải hàng không – Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_treemap.json",
+                "subTitle": "Đơn vị: Tỷ VND"
+              }
+            ]
+          },
+          {
+            "title": "Thị phần khách theo hãng bay",
+            "items": [
+              {
+                "id": "b_dom_dt_vthk_vna_group",
+                "title": "Doanh thu vận tải hàng không – VNA Group",
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
                 "rowSpan": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vna_group.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_dom_dt_vthk_vna",
+                "title": "Doanh thu vận tải hàng không – VNA",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vna.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_dom_dt_vthk_ba",
+                "title": "Doanh thu vận tải hàng không – BA",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_ba.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_dom_dt_vthk_pa",
+                "title": "Doanh thu vận tải hàng không – PA",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_pa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_dom_dt_vthk_vj",
+                "title": "Doanh thu vận tải hàng không – VJ",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
+              },
+              {
+                "id": "b_dom_dt_vthk_sun",
+                "title": "Doanh thu vận tải hàng không – Sun",
+                "col": 41,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/chart/cf_network_dom_b_dom_dt_vthk_sun.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: Tỷ VND"
               }
             ]
           }
-        ]
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "Khách vận chuyển",
+              "value": "985",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "97.1% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "5.4% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "drillDownPath": null,
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "ask",
+              "status": "compact",
+              "title": "Ghế luân chuyển",
+              "value": "2,150",
+              "unit": "tỷ ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.7% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "6.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/ask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "Hệ số sử dụng ghế",
+              "value": "82.5",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "98.4% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/lf/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "rtk",
+              "status": "compact",
+              "title": "Tấn luân chuyển",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.9% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/rtk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "dt_vthk",
+              "status": "compact",
+              "title": "Doanh thu vận tải hàng không",
+              "value": "+4,850",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "94.9% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "12.5% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "hq_so_cpbd",
+              "status": "compact",
+              "title": "Hiệu quả so với chi phí biến đổi",
+              "value": "+320",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.6% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "15.3% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/hq_so_cpbd/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "hq_vthk",
+              "status": "compact",
+              "title": "Hiệu quả VTHK (*)",
+              "value": "+185",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "90.2% với Kế hoạch",
+                  "tone": "negative",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "25.0% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/hq_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "Thu suất trên 1 ghế luân chuyển",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "102.6% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/rask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
       }
     }
   },
   "timeFrameHiddenModes": [
+    "day",
+    "week",
     "quarter",
     "custom"
-  ]
+  ],
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Thị trường quốc tế — Khách tổng T7:</strong> đạt <strong>471</strong> nghìn lượt, tăng <strong>10%</strong> so với Cùng kỳ, tăng <strong>21,3%</strong> so với T6.",
+        "<strong>Thị trường quốc tế — Lũy kế T1–T7:</strong> đạt <strong>2.716</strong> nghìn lượt, tăng <strong>14,6%</strong> so với Cùng kỳ, vượt <strong>5%</strong> so với Kế hoạch.",
+        "<strong>Thị trường nội địa — Khách tổng T7:</strong> đạt <strong>758,7</strong> nghìn lượt, tăng <strong>8,9%</strong> so với Cùng kỳ, tăng <strong>13,8%</strong> so với T6."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    }
+  }
 }

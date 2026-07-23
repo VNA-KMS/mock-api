@@ -1,141 +1,121 @@
 {
-  "autoChart": {
-    "chartType": "treemap",
-    "dataset": {
-      "columns": [
-        {
-          "id": "name",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
-        }
-      ],
-      "rows": [
-        [
-          "Tổng thị trường",
-          89.2,
-          "",
-          ""
-        ],
-        [
-          "Nội địa",
-          45001.0,
-          "Tổng thị trường",
-          "#EAB308"
-        ],
-        [
-          "Trục lẻ",
-          12600.7,
-          "Nội địa",
-          null
-        ],
-        [
-          "HANDAD",
-          10351.8,
-          "Nội địa",
-          null
-        ],
-        [
-          "Du lịch",
-          7561.8,
-          "Nội địa",
-          null
-        ],
-        [
-          "HANSGN",
-          5221.8,
-          "Nội địa",
-          null
-        ],
-        [
-          "SGNDAD",
-          4769.4,
-          "Nội địa",
-          null
-        ],
-        [
-          "Địa phương",
-          4499.1,
-          "Nội địa",
-          null
-        ],
-        [
-          "Quốc tế",
-          45001.1,
-          "Tổng thị trường",
-          "#00558F"
-        ],
-        [
-          "SWP",
-          18631.3,
-          "Quốc tế",
-          null
-        ],
-        [
-          "CLMV",
-          12961.9,
-          "Quốc tế",
-          null
-        ],
-        [
-          "NEA",
-          4767.7,
-          "Quốc tế",
-          null
-        ],
-        [
-          "MID",
-          2517.8,
-          "Quốc tế",
-          "#ff0505"
-        ],
-        [
-          "SEA",
-          2430.7,
-          "Quốc tế",
-          "#ff0000"
-        ],
-        [
-          "NOA",
-          2252.1,
-          "Quốc tế",
-          "#eb0000"
-        ],
-        [
-          "EUR",
-          1082.5,
-          "Quốc tế",
-          "#750000"
-        ],
-        [
-          "SAS",
-          361.2,
-          "Quốc tế",
-          "#2e0000"
-        ]
-      ]
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "name",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap"
-      }
+    {
+     "id": "quoc_te",
+     "type": "number",
+     "label": "Quốc tế",
+     "color": "#C4A83A"
+    },
+    {
+     "id": "noi_dia",
+     "type": "number",
+     "label": "Nội địa",
+     "color": "#479EB3"
+    }
+   ],
+   "rows": [
+    [
+     "SWP",
+     18629.2,
+     0
+    ],
+    [
+     "CLMV",
+     12960.9,
+     0
+    ],
+    [
+     "NEA",
+     4771.8,
+     0
+    ],
+    [
+     "MID",
+     2519.1,
+     0
+    ],
+    [
+     "SEA",
+     2431,
+     0
+    ],
+    [
+     "NOA",
+     2248.9,
+     0
+    ],
+    [
+     "EUR",
+     1082.2,
+     0
+    ],
+    [
+     "SAS",
+     361.6,
+     0
+    ],
+    [
+     "Trục lẻ",
+     0,
+     12601.8
+    ],
+    [
+     "HANDAD",
+     0,
+     10352.3
+    ],
+    [
+     "Du lịch",
+     0,
+     7559.6
+    ],
+    [
+     "HANSGN",
+     0,
+     5221.2
+    ],
+    [
+     "SGNDAD",
+     0,
+     4770.2
+    ],
+    [
+     "Địa phương",
+     0,
+     4500.5
     ]
+   ]
   },
-  "metadata": {
-    "chartType": "line",
-    "pattern": "stable",
-    "unit": "%",
-    "description": "LF - Hệ số tải hành khách - tổng"
-  }
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "xField": "name",
+    "labelInside": true,
+    "series": [
+     {
+      "field": "quoc_te",
+      "chartType": "bar"
+     },
+     {
+      "field": "noi_dia",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "chartType": "line",
+  "pattern": "stable",
+  "unit": "%",
+  "description": "LF - Hệ số tải Hành khách - tổng"
+ }
 }

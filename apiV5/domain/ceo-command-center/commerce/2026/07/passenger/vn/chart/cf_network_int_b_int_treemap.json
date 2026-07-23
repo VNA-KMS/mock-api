@@ -1,92 +1,72 @@
 {
-  "autoChart": {
-    "chartType": "treemap",
-    "dataset": {
-      "columns": [
-        {
-          "id": "name",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
-        }
-      ],
-      "rows": [
-        [
-          "Quốc tế",
-          90,
-          "",
-          "#00558F"
-        ],
-        [
-          "SWP",
-          18630,
-          "Quốc tế",
-          "#004071"
-        ],
-        [
-          "CLMV",
-          12960,
-          "Quốc tế",
-          "#004071"
-        ],
-        [
-          "NEA",
-          4770,
-          "Quốc tế",
-          "#00558F"
-        ],
-        [
-          "MID",
-          2520,
-          "Quốc tế",
-          "#ff0505"
-        ],
-        [
-          "SEA",
-          2430,
-          "Quốc tế",
-          "#ff0000"
-        ],
-        [
-          "NOA",
-          2250,
-          "Quốc tế",
-          "#eb0000"
-        ],
-        [
-          "EUR",
-          1080,
-          "Quốc tế",
-          "#750000"
-        ],
-        [
-          "SAS",
-          360,
-          "Quốc tế",
-          "#2e0000"
-        ]
-      ]
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "name",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap"
-      }
+    {
+     "id": "value",
+     "type": "number",
+     "label": "Quốc tế",
+     "color": "#C4A83A"
+    }
+   ],
+   "rows": [
+    [
+     "SWP",
+     18630
+    ],
+    [
+     "CLMV",
+     12960
+    ],
+    [
+     "NEA",
+     4770
+    ],
+    [
+     "MID",
+     2520
+    ],
+    [
+     "SEA",
+     2430
+    ],
+    [
+     "NOA",
+     2250
+    ],
+    [
+     "EUR",
+     1080
+    ],
+    [
+     "SAS",
+     360
     ]
+   ]
   },
-  "metadata": {
-    "chartType": "line",
-    "pattern": "stable",
-    "description": "int int treemap"
-  }
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "labelInside": true,
+    "xField": "name",
+    "series": [
+     {
+      "field": "value",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "chartType": "line",
+  "pattern": "stable",
+  "description": "int int treemap"
+ }
 }

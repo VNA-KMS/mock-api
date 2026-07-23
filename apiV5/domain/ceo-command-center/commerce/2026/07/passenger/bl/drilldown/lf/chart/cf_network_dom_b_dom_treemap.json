@@ -1,87 +1,65 @@
 {
-  "autoChart": {
-    "chartType": "treemap",
-    "dataset": {
-      "columns": [
-        {
-          "id": "name",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
-        }
-      ],
-      "rows": [
-        [
-          "Nội địa",
-          89.3,
-          "",
-          ""
-        ],
-        [
-          "Nhóm ngành",
-          45001.3,
-          "Nội địa",
-          "#EAB308"
-        ],
-        [
-          "Trục lẻ",
-          12601.8,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "HANDAD",
-          10352.3,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "Du lịch",
-          7559.6,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "HANSGN",
-          5221.2,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "SGNDAD",
-          4770.2,
-          "Nhóm ngành",
-          null
-        ],
-        [
-          "Địa phương",
-          4500.5,
-          "Nhóm ngành",
-          null
-        ]
-      ]
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "name",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap"
-      }
+    {
+     "id": "value",
+     "type": "number",
+     "label": "Nội địa",
+     "color": "#479EB3"
+    }
+   ],
+   "rows": [
+    [
+     "Trục lẻ",
+     12601.8
+    ],
+    [
+     "HANDAD",
+     10352.3
+    ],
+    [
+     "Du lịch",
+     7559.6
+    ],
+    [
+     "HANSGN",
+     5221.2
+    ],
+    [
+     "SGNDAD",
+     4770.2
+    ],
+    [
+     "Địa phương",
+     4500.5
     ]
+   ]
   },
-  "metadata": {
-    "chartType": "line",
-    "pattern": "stable",
-    "unit": "%",
-    "description": "LF - Hệ số tải hành khách - nội địa"
-  }
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "labelInside": true,
+    "xField": "name",
+    "series": [
+     {
+      "field": "value",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "chartType": "line",
+  "pattern": "stable",
+  "unit": "%",
+  "description": "LF - Hệ số tải Hành khách - nội địa"
+ }
 }
