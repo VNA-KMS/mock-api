@@ -1,26 +1,25 @@
 {
   "filterViews": [
     {
-      "label": "Area",
-      "title": "Chi tiết PAX theo Area",
+      "label": "Network",
       "table": {
         "columns": [
           {
-            "id": "area",
-            "label": "Area",
+            "id": "level",
+            "label": "TÊN MỨC",
             "type": "chip",
             "align": "left"
           },
           {
             "id": "th",
-            "label": "TH",
+            "label": "TH · 20/07/2026",
             "type": "number",
             "align": "right",
             "decimals": 1
           },
           {
             "id": "ck",
-            "label": "CK",
+            "label": "CK · 20/07/2025",
             "type": "number",
             "align": "right",
             "decimals": 1
@@ -53,15 +52,15 @@
         ],
         "rows": [
           {
-            "id": "area-HANSGN",
+            "id": "pax",
             "cells": {
-              "area": {
-                "label": "HANSGN",
+              "level": {
+                "label": "Khách vận chuyển",
                 "color": "blue"
               },
-              "th": 413.7,
-              "ck": 392.1,
-              "kh": 405.2,
+              "th": 541.8,
+              "ck": 513.7,
+              "kh": 530.8,
               "pct_ck": {
                 "direction": "up",
                 "label": "+5,5%",
@@ -76,84 +75,231 @@
             }
           },
           {
-            "id": "area-HANDAD",
+            "id": "ask",
             "cells": {
-              "area": {
-                "label": "HANDAD",
+              "level": {
+                "label": "Ghế luân chuyển",
                 "color": "green"
               },
-              "th": 243.6,
-              "ck": 230.9,
-              "kh": 238.6,
+              "th": 1182.5,
+              "ck": 1105.5,
+              "kh": 1144.0,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+7,0%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+3,4%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ ghế.km"
             }
           },
           {
-            "id": "area-SGNDAD",
+            "id": "lf",
             "cells": {
-              "area": {
-                "label": "SGNDAD",
+              "level": {
+                "label": "Hệ số sử dụng ghế",
                 "color": "default"
               },
-              "th": 228.3,
-              "ck": 216.4,
-              "kh": 223.6,
+              "th": 45.4,
+              "ck": 43.7,
+              "kh": 44.6,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+3,9%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+1,8%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "%"
             }
           },
           {
-            "id": "area-Trục lẻ",
+            "id": "raskpax",
             "cells": {
-              "area": {
-                "label": "Trục lẻ",
+              "level": {
+                "label": "Thu suất trên 1 ghế luân chuyển",
                 "color": "yellow"
               },
-              "th": 228.3,
-              "ck": 216.4,
-              "kh": 223.6,
+              "th": 1567.5,
+              "ck": 1501.5,
+              "kh": 1540.0,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+4,4%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+1,8%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "VND/ghế.km"
             }
           },
           {
-            "id": "area-Du lịch",
+            "id": "rtk",
             "cells": {
-              "area": {
-                "label": "Du lịch",
+              "level": {
+                "label": "Tấn luân chuyển",
                 "color": "blue"
               },
-              "th": 248.1,
-              "ck": 235.2,
-              "kh": 243.0,
+              "th": 704.0,
+              "ck": 649.0,
+              "kh": 682.0,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+8,5%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+3,2%",
+                "color": "green"
+              },
+              "unit": "tỷ tấn.km"
+            }
+          },
+          {
+            "id": "dt_vthk",
+            "cells": {
+              "level": {
+                "label": "Doanh thu vận tải hàng không",
+                "color": "green"
+              },
+              "th": 2667.5,
+              "ck": 2370.5,
+              "kh": 2530.0,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+12,5%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+5,4%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_so_cpbd",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả so với chi phí biến đổi",
+                "color": "default"
+              },
+              "th": 176.0,
+              "ck": 154.0,
+              "kh": 165.0,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+14,3%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+6,7%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_vthk",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả VTHK (*)",
+                "color": "yellow"
+              },
+              "th": -31.4,
+              "ck": -23.1,
+              "kh": -16.5,
+              "pct_ck": {
+                "direction": "down",
+                "label": "-35,9%",
+                "color": "red"
+              },
+              "pct_kh": {
+                "direction": "down",
+                "label": "-90,3%",
+                "color": "red"
+              },
+              "unit": "tỷ VND"
+            }
+          }
+        ],
+        "maxHeight": 420
+      }
+    },
+    {
+      "label": "Area",
+      "table": {
+        "columns": [
+          {
+            "id": "level",
+            "label": "TÊN MỨC",
+            "type": "chip",
+            "align": "left"
+          },
+          {
+            "id": "th",
+            "label": "TH · 20/07/2026",
+            "type": "number",
+            "align": "right",
+            "decimals": 1
+          },
+          {
+            "id": "ck",
+            "label": "CK · 20/07/2025",
+            "type": "number",
+            "align": "right",
+            "decimals": 1
+          },
+          {
+            "id": "kh",
+            "label": "KH",
+            "type": "number",
+            "align": "right",
+            "decimals": 1
+          },
+          {
+            "id": "pct_ck",
+            "label": "% CK",
+            "type": "trend",
+            "align": "right"
+          },
+          {
+            "id": "pct_kh",
+            "label": "% KH",
+            "type": "trend",
+            "align": "right"
+          },
+          {
+            "id": "unit",
+            "label": "Đơn vị",
+            "type": "text",
+            "align": "left"
+          }
+        ],
+        "rows": [
+          {
+            "id": "pax",
+            "cells": {
+              "level": {
+                "label": "Khách vận chuyển",
+                "color": "blue"
+              },
+              "th": 498.5,
+              "ck": 472.6,
+              "kh": 488.3,
               "pct_ck": {
                 "direction": "up",
                 "label": "+5,5%",
@@ -168,15 +314,153 @@
             }
           },
           {
-            "id": "area-Địa phương",
+            "id": "ask",
             "cells": {
-              "area": {
-                "label": "Địa phương",
+              "level": {
+                "label": "Ghế luân chuyển",
                 "color": "green"
               },
-              "th": -57.0,
-              "ck": -42.0,
-              "kh": -30.0,
+              "th": 1087.9,
+              "ck": 1017.1,
+              "kh": 1052.5,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+7,0%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+3,4%",
+                "color": "green"
+              },
+              "unit": "tỷ ghế.km"
+            }
+          },
+          {
+            "id": "lf",
+            "cells": {
+              "level": {
+                "label": "Hệ số sử dụng ghế",
+                "color": "default"
+              },
+              "th": 41.8,
+              "ck": 40.2,
+              "kh": 41.0,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+4,0%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+2,0%",
+                "color": "green"
+              },
+              "unit": "%"
+            }
+          },
+          {
+            "id": "raskpax",
+            "cells": {
+              "level": {
+                "label": "Thu suất trên 1 ghế luân chuyển",
+                "color": "yellow"
+              },
+              "th": 1442.1,
+              "ck": 1381.4,
+              "kh": 1416.8,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+4,4%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+1,8%",
+                "color": "green"
+              },
+              "unit": "VND/ghế.km"
+            }
+          },
+          {
+            "id": "rtk",
+            "cells": {
+              "level": {
+                "label": "Tấn luân chuyển",
+                "color": "blue"
+              },
+              "th": 647.7,
+              "ck": 597.1,
+              "kh": 627.4,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+8,5%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+3,2%",
+                "color": "green"
+              },
+              "unit": "tỷ tấn.km"
+            }
+          },
+          {
+            "id": "dt_vthk",
+            "cells": {
+              "level": {
+                "label": "Doanh thu vận tải hàng không",
+                "color": "green"
+              },
+              "th": 2454.1,
+              "ck": 2180.9,
+              "kh": 2327.6,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+12,5%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+5,4%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_so_cpbd",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả so với chi phí biến đổi",
+                "color": "default"
+              },
+              "th": 161.9,
+              "ck": 141.7,
+              "kh": 151.8,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+14,3%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+6,7%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_vthk",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả VTHK (*)",
+                "color": "yellow"
+              },
+              "th": -28.9,
+              "ck": -21.3,
+              "kh": -15.2,
               "pct_ck": {
                 "direction": "down",
                 "label": "-35,7%",
@@ -184,49 +468,36 @@
               },
               "pct_kh": {
                 "direction": "down",
-                "label": "-90,0%",
+                "label": "-90,1%",
                 "color": "red"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ VND"
             }
           }
         ],
-        "maxHeight": 440,
-        "minHeight": 440
-      },
-      "aiInsight": {
-        "text": "Khu vực trục chính (HANSGN, SGNDAD) chiếm thị phần lớn nhất nội địa. Du lịch ghi nhận tăng trưởng tích cực so với CK.",
-        "severity": "good",
-        "status": 1
+        "maxHeight": 420
       }
     },
     {
       "label": "Country",
-      "title": "Chi tiết PAX theo Country",
       "table": {
         "columns": [
           {
-            "id": "area",
-            "label": "Area",
-            "type": "chip",
-            "align": "left"
-          },
-          {
-            "id": "country",
-            "label": "Country",
+            "id": "level",
+            "label": "TÊN MỨC",
             "type": "chip",
             "align": "left"
           },
           {
             "id": "th",
-            "label": "TH",
+            "label": "TH · 20/07/2026",
             "type": "number",
             "align": "right",
             "decimals": 1
           },
           {
             "id": "ck",
-            "label": "CK",
+            "label": "CK · 20/07/2025",
             "type": "number",
             "align": "right",
             "decimals": 1
@@ -259,19 +530,15 @@
         ],
         "rows": [
           {
-            "id": "country-HANSGN-Vietnam",
+            "id": "pax",
             "cells": {
-              "area": {
-                "label": "HANSGN",
+              "level": {
+                "label": "Khách vận chuyển",
                 "color": "blue"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "th": 161.1,
-              "ck": 152.7,
-              "kh": 157.8,
+              "th": 422.6,
+              "ck": 400.7,
+              "kh": 414.0,
               "pct_ck": {
                 "direction": "up",
                 "label": "+5,5%",
@@ -286,183 +553,190 @@
             }
           },
           {
-            "id": "country-HANDAD-Vietnam",
+            "id": "ask",
             "cells": {
-              "area": {
-                "label": "HANDAD",
+              "level": {
+                "label": "Ghế luân chuyển",
                 "color": "green"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "th": 181.2,
-              "ck": 171.8,
-              "kh": 177.5,
+              "th": 922.4,
+              "ck": 862.3,
+              "kh": 892.3,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+7,0%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+3,4%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ ghế.km"
             }
           },
           {
-            "id": "country-SGNDAD-Vietnam",
+            "id": "lf",
             "cells": {
-              "area": {
-                "label": "SGNDAD",
+              "level": {
+                "label": "Hệ số sử dụng ghế",
                 "color": "default"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "th": 170.2,
-              "ck": 161.3,
-              "kh": 166.7,
+              "th": 35.4,
+              "ck": 34.1,
+              "kh": 34.8,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+3,8%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+1,7%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "%"
             }
           },
           {
-            "id": "country-Trục lẻ-Vietnam",
+            "id": "raskpax",
             "cells": {
-              "area": {
-                "label": "Trục lẻ",
+              "level": {
+                "label": "Thu suất trên 1 ghế luân chuyển",
                 "color": "yellow"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "th": 235.0,
-              "ck": 222.7,
-              "kh": 230.2,
+              "th": 1222.7,
+              "ck": 1171.2,
+              "kh": 1201.2,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+4,4%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+1,8%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "VND/ghế.km"
             }
           },
           {
-            "id": "country-Du lịch-Vietnam",
+            "id": "rtk",
             "cells": {
-              "area": {
-                "label": "Du lịch",
+              "level": {
+                "label": "Tấn luân chuyển",
                 "color": "blue"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "th": 184.5,
-              "ck": 174.9,
-              "kh": 180.7,
+              "th": 549.1,
+              "ck": 506.2,
+              "kh": 532.0,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+8,5%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+3,2%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ tấn.km"
             }
           },
           {
-            "id": "country-Địa phương-Vietnam",
+            "id": "dt_vthk",
             "cells": {
-              "area": {
-                "label": "Địa phương",
+              "level": {
+                "label": "Doanh thu vận tải hàng không",
                 "color": "green"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
+              "th": 2080.7,
+              "ck": 1849.0,
+              "kh": 1973.4,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+12,5%",
+                "color": "green"
               },
-              "th": -41.0,
-              "ck": -30.2,
-              "kh": -21.6,
+              "pct_kh": {
+                "direction": "up",
+                "label": "+5,4%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_so_cpbd",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả so với chi phí biến đổi",
+                "color": "default"
+              },
+              "th": 137.3,
+              "ck": 120.1,
+              "kh": 128.7,
+              "pct_ck": {
+                "direction": "up",
+                "label": "+14,3%",
+                "color": "green"
+              },
+              "pct_kh": {
+                "direction": "up",
+                "label": "+6,7%",
+                "color": "green"
+              },
+              "unit": "tỷ VND"
+            }
+          },
+          {
+            "id": "hq_vthk",
+            "cells": {
+              "level": {
+                "label": "Hiệu quả VTHK (*)",
+                "color": "yellow"
+              },
+              "th": -24.5,
+              "ck": -18.0,
+              "kh": -12.9,
               "pct_ck": {
                 "direction": "down",
-                "label": "-35,7%",
+                "label": "-36,1%",
                 "color": "red"
               },
               "pct_kh": {
                 "direction": "down",
-                "label": "-90,0%",
+                "label": "-89,9%",
                 "color": "red"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ VND"
             }
           }
         ],
-        "maxHeight": 440,
-        "minHeight": 440
-      },
-      "aiInsight": {
-        "text": "Các tỉnh thành trọng điểm (Hà Nội, TP.HCM, Đà Nẵng) duy trì sản lượng nội địa. Địa phương ghi nhận sụt giảm cần hỗ trợ.",
-        "severity": "warn",
-        "status": 1
+        "maxHeight": 420
       }
     },
     {
       "label": "Route",
-      "title": "Chi tiết PAX theo Route",
       "table": {
         "columns": [
           {
-            "id": "area",
-            "label": "Area",
-            "type": "chip",
-            "align": "left"
-          },
-          {
-            "id": "country",
-            "label": "Country",
-            "type": "chip",
-            "align": "left"
-          },
-          {
-            "id": "route",
-            "label": "Route",
+            "id": "level",
+            "label": "TÊN MỨC",
             "type": "chip",
             "align": "left"
           },
           {
             "id": "th",
-            "label": "TH",
+            "label": "TH · 20/07/2026",
             "type": "number",
             "align": "right",
             "decimals": 1
           },
           {
             "id": "ck",
-            "label": "CK",
+            "label": "CK · 20/07/2025",
             "type": "number",
             "align": "right",
             "decimals": 1
@@ -495,23 +769,15 @@
         ],
         "rows": [
           {
-            "id": "route-HANSGN-Vietnam-HAN-SGN",
+            "id": "pax",
             "cells": {
-              "area": {
-                "label": "HANSGN",
+              "level": {
+                "label": "Khách vận chuyển",
                 "color": "blue"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "route": {
-                "label": "HAN-SGN",
-                "color": "blue"
-              },
-              "th": 116.4,
-              "ck": 110.3,
-              "kh": 114.0,
+              "th": 298.0,
+              "ck": 282.5,
+              "kh": 291.9,
               "pct_ck": {
                 "direction": "up",
                 "label": "+5,5%",
@@ -526,412 +792,168 @@
             }
           },
           {
-            "id": "route-HANSGN-Vietnam-HPH-SGN",
+            "id": "ask",
             "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HPH-SGN",
+              "level": {
+                "label": "Ghế luân chuyển",
                 "color": "green"
               },
-              "th": 113.6,
-              "ck": 107.7,
-              "kh": 111.3,
+              "th": 650.4,
+              "ck": 608.0,
+              "kh": 629.2,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+7,0%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+3,4%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ ghế.km"
             }
           },
           {
-            "id": "route-HANSGN-Vietnam-THD-SGN",
+            "id": "lf",
             "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "THD-SGN",
+              "level": {
+                "label": "Hệ số sử dụng ghế",
                 "color": "default"
               },
-              "th": 113.6,
-              "ck": 107.7,
-              "kh": 111.3,
+              "th": 25.0,
+              "ck": 24.0,
+              "kh": 24.5,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+4,2%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+2,0%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "%"
             }
           },
           {
-            "id": "route-HANSGN-Vietnam-VII-SGN",
+            "id": "raskpax",
             "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "VII-SGN",
+              "level": {
+                "label": "Thu suất trên 1 ghế luân chuyển",
                 "color": "yellow"
               },
-              "th": 111.1,
-              "ck": 105.3,
-              "kh": 108.8,
+              "th": 862.1,
+              "ck": 825.8,
+              "kh": 847.0,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+4,4%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+1,8%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "VND/ghế.km"
             }
           },
           {
-            "id": "route-HANDAD-Vietnam-HAN-DAD",
+            "id": "rtk",
             "cells": {
-              "area": {
-                "label": "HANDAD",
-                "color": "green"
-              },
-              "country": {
-                "label": "Vietnam",
+              "level": {
+                "label": "Tấn luân chuyển",
                 "color": "blue"
               },
-              "route": {
-                "label": "HAN-DAD",
-                "color": "blue"
-              },
-              "th": 136.0,
-              "ck": 128.9,
-              "kh": 133.2,
+              "th": 387.2,
+              "ck": 357.0,
+              "kh": 375.1,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+8,5%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+3,2%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ tấn.km"
             }
           },
           {
-            "id": "route-Trục lẻ-Vietnam-HAN-VCA",
+            "id": "dt_vthk",
             "cells": {
-              "area": {
-                "label": "Trục lẻ",
-                "color": "yellow"
+              "level": {
+                "label": "Doanh thu vận tải hàng không",
+                "color": "green"
               },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "route": {
-                "label": "HAN-VCA",
-                "color": "blue"
-              },
-              "th": 125.3,
-              "ck": 118.8,
-              "kh": 122.7,
+              "th": 1467.1,
+              "ck": 1303.8,
+              "kh": 1391.5,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+12,5%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+5,4%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ VND"
             }
           },
           {
-            "id": "route-Trục lẻ-Vietnam-HAN-CXR",
+            "id": "hq_so_cpbd",
             "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-CXR",
-                "color": "green"
-              },
-              "th": 119.3,
-              "ck": 113.1,
-              "kh": 116.8,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Trục lẻ-Vietnam-HAN-DLI",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-DLI",
+              "level": {
+                "label": "Hiệu quả so với chi phí biến đổi",
                 "color": "default"
               },
-              "th": 125.6,
-              "ck": 119.1,
-              "kh": 123.0,
+              "th": 96.8,
+              "ck": 84.7,
+              "kh": 90.8,
               "pct_ck": {
                 "direction": "up",
-                "label": "+5,5%",
+                "label": "+14,3%",
                 "color": "green"
               },
               "pct_kh": {
                 "direction": "up",
-                "label": "+2,1%",
+                "label": "+6,6%",
                 "color": "green"
               },
-              "unit": "nghìn khách"
+              "unit": "tỷ VND"
             }
           },
           {
-            "id": "route-Trục lẻ-Vietnam-HAN-BMV",
+            "id": "hq_vthk",
             "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-BMV",
+              "level": {
+                "label": "Hiệu quả VTHK (*)",
                 "color": "yellow"
               },
-              "th": 121.8,
-              "ck": 115.5,
-              "kh": 119.3,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Trục lẻ-Vietnam-HAN-PXU",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-PXU",
-                "color": "blue"
-              },
-              "th": 114.2,
-              "ck": 108.2,
-              "kh": 111.9,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Trục lẻ-Vietnam-HAN-HUI",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-HUI",
-                "color": "green"
-              },
-              "th": 121.5,
-              "ck": 115.2,
-              "kh": 119.0,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Trục lẻ-Vietnam-HAN-TBB",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-TBB",
-                "color": "default"
-              },
-              "th": 125.9,
-              "ck": 119.3,
-              "kh": 123.3,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Du lịch-Vietnam-HAN-PQC",
-            "cells": {
-              "area": {
-                "label": "Du lịch",
-                "color": "blue"
-              },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "route": {
-                "label": "HAN-PQC",
-                "color": "blue"
-              },
-              "th": 129.0,
-              "ck": 122.3,
-              "kh": 126.3,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Du lịch-Vietnam-HAN-UIH",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-UIH",
-                "color": "green"
-              },
-              "th": 128.4,
-              "ck": 121.7,
-              "kh": 125.8,
-              "pct_ck": {
-                "direction": "up",
-                "label": "+5,5%",
-                "color": "green"
-              },
-              "pct_kh": {
-                "direction": "up",
-                "label": "+2,1%",
-                "color": "green"
-              },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Địa phương-Vietnam-HAN-DIN",
-            "cells": {
-              "area": {
-                "label": "Địa phương",
-                "color": "green"
-              },
-              "country": {
-                "label": "Vietnam",
-                "color": "blue"
-              },
-              "route": {
-                "label": "HAN-DIN",
-                "color": "blue"
-              },
-              "th": -19.9,
-              "ck": -14.7,
-              "kh": -10.5,
+              "th": -17.3,
+              "ck": -12.7,
+              "kh": -9.1,
               "pct_ck": {
                 "direction": "down",
-                "label": "-35,7%",
+                "label": "-36,2%",
                 "color": "red"
               },
               "pct_kh": {
                 "direction": "down",
-                "label": "-90,0%",
+                "label": "-90,1%",
                 "color": "red"
               },
-              "unit": "nghìn khách"
-            }
-          },
-          {
-            "id": "route-Địa phương-Vietnam-HAN-VCL",
-            "cells": {
-              "area": null,
-              "country": null,
-              "route": {
-                "label": "HAN-VCL",
-                "color": "green"
-              },
-              "th": -19.9,
-              "ck": -14.7,
-              "kh": -10.5,
-              "pct_ck": {
-                "direction": "down",
-                "label": "-35,7%",
-                "color": "red"
-              },
-              "pct_kh": {
-                "direction": "down",
-                "label": "-90,0%",
-                "color": "red"
-              },
-              "unit": "nghìn khách"
+              "unit": "tỷ VND"
             }
           }
         ],
-        "maxHeight": 440,
-        "minHeight": 440
-      },
-      "aiInsight": {
-        "text": "Đường bay HAN-SGN dẫn đầu sản lượng nội địa. Các đường bay địa phương như HAN-VCL đang đối mặt với sụt giảm doanh thu.",
-        "severity": "warn",
-        "status": 1
+        "maxHeight": 420
       }
     }
   ]

@@ -1,141 +1,121 @@
 {
-  "autoChart": {
-    "chartType": "treemap",
-    "dataset": {
-      "columns": [
-        {
-          "id": "name",
-          "type": "string"
-        },
-        {
-          "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
-        }
-      ],
-      "rows": [
-        [
-          "Tổng thị trường",
-          90,
-          "",
-          ""
-        ],
-        [
-          "Nội địa",
-          45000,
-          "Tổng thị trường",
-          "#EAB308"
-        ],
-        [
-          "Trục lẻ",
-          12600,
-          "Nội địa",
-          null
-        ],
-        [
-          "HANDAD",
-          10350,
-          "Nội địa",
-          null
-        ],
-        [
-          "Du lịch",
-          7560,
-          "Nội địa",
-          null
-        ],
-        [
-          "HANSGN",
-          5220,
-          "Nội địa",
-          null
-        ],
-        [
-          "SGNDAD",
-          4770,
-          "Nội địa",
-          null
-        ],
-        [
-          "Địa phương",
-          4500,
-          "Nội địa",
-          null
-        ],
-        [
-          "Quốc tế",
-          45000,
-          "Tổng thị trường",
-          "#00558F"
-        ],
-        [
-          "SWP",
-          18630,
-          "Quốc tế",
-          null
-        ],
-        [
-          "CLMV",
-          12960,
-          "Quốc tế",
-          null
-        ],
-        [
-          "NEA",
-          4770,
-          "Quốc tế",
-          null
-        ],
-        [
-          "MID",
-          2520,
-          "Quốc tế",
-          "#ff0505"
-        ],
-        [
-          "SEA",
-          2430,
-          "Quốc tế",
-          "#ff0000"
-        ],
-        [
-          "NOA",
-          2250,
-          "Quốc tế",
-          "#eb0000"
-        ],
-        [
-          "EUR",
-          1080,
-          "Quốc tế",
-          "#750000"
-        ],
-        [
-          "SAS",
-          360,
-          "Quốc tế",
-          "#2e0000"
-        ]
-      ]
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "name",
+     "type": "string"
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "treemap"
-      }
+    {
+     "id": "quoc_te",
+     "type": "number",
+     "label": "Quốc tế",
+     "color": "#C4A83A"
+    },
+    {
+     "id": "noi_dia",
+     "type": "number",
+     "label": "Nội địa",
+     "color": "#479EB3"
+    }
+   ],
+   "rows": [
+    [
+     "SWP",
+     18630,
+     0
+    ],
+    [
+     "CLMV",
+     12960,
+     0
+    ],
+    [
+     "NEA",
+     4770,
+     0
+    ],
+    [
+     "MID",
+     2520,
+     0
+    ],
+    [
+     "SEA",
+     2430,
+     0
+    ],
+    [
+     "NOA",
+     2250,
+     0
+    ],
+    [
+     "EUR",
+     1080,
+     0
+    ],
+    [
+     "SAS",
+     360,
+     0
+    ],
+    [
+     "Trục lẻ",
+     0,
+     12600
+    ],
+    [
+     "HANDAD",
+     0,
+     10350
+    ],
+    [
+     "Du lịch",
+     0,
+     7560
+    ],
+    [
+     "HANSGN",
+     0,
+     5220
+    ],
+    [
+     "SGNDAD",
+     0,
+     4770
+    ],
+    [
+     "Địa phương",
+     0,
+     4500
     ]
+   ]
   },
-  "metadata": {
-    "chartType": "line",
-    "pattern": "stable",
-    "unit": "VND/ghế.km",
-    "description": "CASK - Chi phí trên ghế km - tổng"
-  }
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "xField": "name",
+    "labelInside": true,
+    "series": [
+     {
+      "field": "quoc_te",
+      "chartType": "bar"
+     },
+     {
+      "field": "noi_dia",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "chartType": "line",
+  "pattern": "stable",
+  "unit": "VND/ghế.km",
+  "description": "CASK - Chi phí trên ghế km - tổng"
+ }
 }
