@@ -159,8 +159,7 @@
         },
         {
           "id": "chart_dr_fleet",
-          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
-          "subTitle": "12 tháng gần nhất",
+          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
           "col": 24,
           "colSpan": 22,
           "row": 1,
@@ -178,8 +177,7 @@
         },
         {
           "id": "dr_summary_table",
-          "title": "Bảng tổng hợp Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
-          "subTitle": "Đơn vị: %",
+          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
           "col": 46,
           "colSpan": 15,
           "row": 1,
@@ -240,7 +238,8 @@
                 }
               }
             ]
-          }
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -293,7 +292,7 @@
           "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
           "subTitle": "Theo tháng — cột số vụ N-Delay (trục trái) · đường liền thời gian chậm bình quân (trục phải) · đường nét đứt mục tiêu cả năm",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 30,
           "row": 1,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_stats.json",
@@ -312,7 +311,7 @@
           "subTitle": "Chọn cấp độ phân tích",
           "col": 31,
           "colSpan": 30,
-          "row": 2,
+          "row": 1,
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
           "aiInsight": {
@@ -330,7 +329,7 @@
           "title": "Chi phí bảo dưỡng theo phòng ban",
           "subTitle": "Ước thực hiện cả năm · đơn vị: tỷ VNĐ",
           "col": 1,
-          "colSpan": 30,
+          "colSpan": 20,
           "row": 1,
           "aspectRatio": 1.5,
           "unit": "tỷ VNĐ",
@@ -345,78 +344,12 @@
           }
         },
         {
-          "id": "mc_ask_dept_table",
-          "title": "Bảng tổng hợp chi phí bảo dưỡng theo phòng ban",
-          "subTitle": "Đơn vị: tỷ VNĐ",
-          "col": 31,
-          "colSpan": 30,
-          "row": 1,
-          "table": {
-            "columns": [
-              {
-                "id": "dept",
-                "type": "text",
-                "label": "Phòng ban"
-              },
-              {
-                "id": "kh",
-                "type": "number",
-                "label": "Kế hoạch 2026"
-              },
-              {
-                "id": "th",
-                "type": "number",
-                "label": "Thực hiện 2026"
-              },
-              {
-                "id": "diff",
-                "type": "number",
-                "label": "VS KH"
-              }
-            ],
-            "rows": [
-              {
-                "cells": {
-                  "dept": "Tổng",
-                  "kh": 16735,
-                  "th": 16911,
-                  "diff": 1
-                }
-              },
-              {
-                "cells": {
-                  "dept": "KT",
-                  "kh": 2569,
-                  "th": 2625,
-                  "diff": 2.2
-                }
-              },
-              {
-                "cells": {
-                  "dept": "QLVT",
-                  "kh": 12230,
-                  "th": 12313,
-                  "diff": 0.7
-                }
-              },
-              {
-                "cells": {
-                  "dept": "ĐTMS",
-                  "kh": 1937,
-                  "th": 1972,
-                  "diff": 1.8
-                }
-              }
-            ]
-          }
-        },
-        {
           "id": "chart_cost_pie",
           "title": "Cơ cấu chi phí bảo dưỡng theo ASK",
           "subTitle": "Theo hạng mục chi phí · Toàn đội bay",
-          "col": 1,
-          "colSpan": 30,
-          "row": 2,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
           "aspectRatio": 1.5,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_pie.json",
           "rightTitle": "VNĐ/ASK",
@@ -426,269 +359,12 @@
           }
         },
         {
-          "id": "chart_cost_table",
-          "title": "Bảng chi tiết cơ cấu chi phí",
-          "subTitle": "Heatmap: hạng mục chi phí × loại tàu bay · KH: kế hoạch · TH: thực hiện · đơn vị: VNĐ/ASK",
-          "col": 31,
-          "colSpan": 30,
-          "row": 2,
-          "extraComponent": {
-            "type": "table",
-            "config": {
-              "dataset": {
-                "headerGroups": [
-                  {
-                    "label": "Hạng mục",
-                    "rowspan": 2
-                  },
-                  {
-                    "label": "B787",
-                    "colspan": 2
-                  },
-                  {
-                    "label": "A350",
-                    "colspan": 2
-                  },
-                  {
-                    "label": "A321",
-                    "colspan": 2
-                  },
-                  {
-                    "label": "ATR72",
-                    "colspan": 2
-                  },
-                  {
-                    "label": "Toàn đội bay",
-                    "colspan": 2
-                  }
-                ],
-                "columns": [
-                  {
-                    "id": "cat",
-                    "type": "string",
-                    "label": "Hạng mục"
-                  },
-                  {
-                    "id": "b787_kh",
-                    "type": "number",
-                    "label": "KH"
-                  },
-                  {
-                    "id": "b787_th",
-                    "type": "number",
-                    "label": "TH"
-                  },
-                  {
-                    "id": "a350_kh",
-                    "type": "number",
-                    "label": "KH"
-                  },
-                  {
-                    "id": "a350_th",
-                    "type": "number",
-                    "label": "TH"
-                  },
-                  {
-                    "id": "a321_kh",
-                    "type": "number",
-                    "label": "KH"
-                  },
-                  {
-                    "id": "a321_th",
-                    "type": "number",
-                    "label": "TH"
-                  },
-                  {
-                    "id": "atr72_kh",
-                    "type": "number",
-                    "label": "KH"
-                  },
-                  {
-                    "id": "atr72_th",
-                    "type": "number",
-                    "label": "TH"
-                  },
-                  {
-                    "id": "td_kh",
-                    "type": "number",
-                    "label": "KH"
-                  },
-                  {
-                    "id": "td_th",
-                    "type": "number",
-                    "label": "TH"
-                  }
-                ],
-                "rows": [
-                  [
-                    "QĐT",
-                    0,
-                    0,
-                    0.21,
-                    0.216,
-                    0.243,
-                    0.243,
-                    0,
-                    0,
-                    0.453,
-                    0.459
-                  ],
-                  [
-                    "DVMN",
-                    0.019,
-                    0.018,
-                    0.016,
-                    0.013,
-                    0.04,
-                    0.044,
-                    0.034,
-                    0.036,
-                    0.109,
-                    0.111
-                  ],
-                  [
-                    "BDTX",
-                    0.129,
-                    0.128,
-                    0.108,
-                    0.104,
-                    0.121,
-                    0.131,
-                    0.104,
-                    0.108,
-                    0.462,
-                    0.471
-                  ],
-                  [
-                    "BDDK",
-                    0.02,
-                    0.021,
-                    0.01,
-                    0.011,
-                    0.11,
-                    0.113,
-                    0.094,
-                    0.093,
-                    0.234,
-                    0.238
-                  ],
-                  [
-                    "PTVT",
-                    0.114,
-                    0.115,
-                    0.154,
-                    0.152,
-                    0.233,
-                    0.232,
-                    0.288,
-                    0.196,
-                    0.789,
-                    0.695
-                  ],
-                  [
-                    "Cảng",
-                    0.001,
-                    0.001,
-                    0,
-                    0,
-                    0.013,
-                    0.013,
-                    0.021,
-                    0.02,
-                    0.035,
-                    0.034
-                  ],
-                  [
-                    "APU",
-                    0.033,
-                    0.034,
-                    0.014,
-                    0.014,
-                    0.032,
-                    0.032,
-                    0.01,
-                    0.011,
-                    0.089,
-                    0.091
-                  ],
-                  [
-                    "ĐC",
-                    0.794,
-                    0.859,
-                    0.598,
-                    0.583,
-                    0.702,
-                    0.71,
-                    0.877,
-                    0.883,
-                    2.971,
-                    3.035
-                  ],
-                  [
-                    "Total",
-                    1.11,
-                    1.176,
-                    1.11,
-                    1.093,
-                    1.494,
-                    1.518,
-                    1.428,
-                    1.347,
-                    5.142,
-                    5.134
-                  ]
-                ]
-              },
-              "headerGroups": [
-                {
-                  "label": "Hạng mục",
-                  "rowspan": 2
-                },
-                {
-                  "label": "B787",
-                  "colspan": 2
-                },
-                {
-                  "label": "A350",
-                  "colspan": 2
-                },
-                {
-                  "label": "A321",
-                  "colspan": 2
-                },
-                {
-                  "label": "ATR72",
-                  "colspan": 2
-                },
-                {
-                  "label": "Toàn đội bay",
-                  "colspan": 2
-                }
-              ],
-              "heatColors": {
-                "light": [
-                  255,
-                  247,
-                  237
-                ],
-                "dark": [
-                  154,
-                  52,
-                  18
-                ],
-                "zeroColor": "#F8FAFC"
-              },
-              "format3dec": true
-            }
-          }
-        },
-        {
           "id": "chart_mc_ask",
           "title": "Chi phí bảo dưỡng theo ASK trong năm",
           "subTitle": "Trục từ T1–T12 · thực tế đến T7 · line: thực tế, cùng kỳ, kế hoạch · đơn vị: VNĐ/ASK",
-          "col": 1,
-          "colSpan": 60,
-          "row": 3,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_mc_ask.json",
           "aiInsight": {
