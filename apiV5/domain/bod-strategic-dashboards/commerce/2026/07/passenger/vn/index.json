@@ -10,7 +10,7 @@
       {
         "id": "pax",
         "status": "compact",
-        "title": "Pax",
+        "title": "Khách vận chuyển",
         "value": "985",
         "unit": "nghìn khách",
         "trend": [
@@ -32,7 +32,7 @@
       {
         "id": "ask",
         "status": "compact",
-        "title": "ASK",
+        "title": "Ghế luân chuyển",
         "value": "2,150",
         "unit": "tỷ ghế.km",
         "trend": [
@@ -53,7 +53,7 @@
       {
         "id": "lf",
         "status": "compact",
-        "title": "LF",
+        "title": "Hệ số sử dụng ghế",
         "value": "82.5",
         "unit": "%",
         "trend": [
@@ -74,7 +74,7 @@
       {
         "id": "rtk",
         "status": "compact",
-        "title": "RTK",
+        "title": "Tấn luân chuyển",
         "value": "1,280",
         "unit": "tỷ tấn.km",
         "trend": [
@@ -95,7 +95,7 @@
       {
         "id": "dt_vthk",
         "status": "compact",
-        "title": "DT VTHK",
+        "title": "Doanh thu vận tải hàng không",
         "value": "+4,850",
         "unit": "tỷ VND",
         "trend": [
@@ -116,7 +116,7 @@
       {
         "id": "hq_so_cpbd",
         "status": "compact",
-        "title": "HQ SO CPBD",
+        "title": "Hiệu quả so với chi phí biến đổi",
         "value": "+320",
         "unit": "tỷ VND",
         "trend": [
@@ -137,7 +137,7 @@
       {
         "id": "hq_vthk",
         "status": "compact",
-        "title": "HQ VTHK (*)",
+        "title": "Hiệu quả VTHK (*)",
         "value": "+185",
         "unit": "tỷ VND",
         "trend": [
@@ -158,7 +158,7 @@
       {
         "id": "raskpax",
         "status": "compact",
-        "title": "RASKpax",
+        "title": "Thu suất trên 1 ghế luân chuyển",
         "value": "2,850",
         "unit": "VND/ghế.km",
         "trend": [
@@ -179,7 +179,7 @@
       {
         "id": "cask",
         "status": "compact",
-        "title": "CASK",
+        "title": "Chi suất trên 1 ghế luân chuyển",
         "value": "2,420",
         "unit": "VND/ghế/km",
         "trend": [
@@ -200,7 +200,7 @@
       {
         "id": "cask_non_fuel",
         "status": "compact",
-        "title": "CASK NON FUEL",
+        "title": "Chi suất trên 1 ghế luân chuyển (không bao gồm chi phí nhiên liệu)",
         "value": "1,850",
         "unit": "VND/ghế/km",
         "trend": [
@@ -226,7 +226,7 @@
       "items": [
         {
           "id": "b_int",
-          "title": "PAX – INT theo khu vực",
+          "title": "Khách vận chuyển - Quốc tế theo khu vực",
           "col": 1,
           "colSpan": 30,
           "aspectRatio": 1.8,
@@ -238,7 +238,7 @@
         },
         {
           "id": "b_dom",
-          "title": "PAX – DOM theo nhóm",
+          "title": "Khách vận chuyển - Nội địa theo nhóm",
           "col": 31,
           "colSpan": 30,
           "aspectRatio": 1.8,
@@ -299,8 +299,9 @@
     {
       "key": "dataType",
       "col": 1,
-      "colSpan": 10,
-      "label": "",
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
       "showInfo": true,
       "infoTooltip": "Chọn loại dữ liệu",
       "size": "sm",
@@ -313,21 +314,21 @@
           "value": "cargo",
           "label": "Hàng hoá"
         }
-      ],
-      "row": 1
+      ]
     },
     {
       "key": "network",
-      "col": 1,
-      "colSpan": 12,
-      "label": "Phạm vi mạng bay",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
       "showInfo": true,
       "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
       "size": "sm",
       "options": [
         {
           "value": "total",
-          "label": "Tổng quan"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
@@ -337,13 +338,13 @@
           "value": "dom",
           "label": "Nội địa"
         }
-      ],
-      "row": 2
+      ]
     },
     {
       "key": "carrier",
-      "col": 13,
-      "colSpan": 12,
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
       "label": "Hãng vận chuyển",
       "showInfo": true,
       "infoTooltip": "Chọn hãng vận chuyển",
@@ -357,8 +358,7 @@
           "value": "vn-ov",
           "label": "VN & 0V"
         }
-      ],
-      "row": 2
+      ]
     }
   ],
   "contentFilter": {
@@ -366,11 +366,11 @@
       "total": {
         "chartBoard": [
           {
-            "title": "PAX",
+            "title": "Khách vận chuyển",
             "items": [
               {
                 "id": "b_pax_total",
-                "title": "Khách tổng thị trường",
+                "title": "Khách vận chuyển",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 1,
                 "colSpan": 20,
@@ -385,7 +385,7 @@
               },
               {
                 "id": "b_pax_int",
-                "title": "PAX – INT",
+                "title": "Khách vận chuyển - Quốc tế",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 21,
                 "colSpan": 20,
@@ -400,7 +400,7 @@
               },
               {
                 "id": "b_pax_dom",
-                "title": "PAX – DOM",
+                "title": "Khách vận chuyển - Nội địa",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 41,
                 "colSpan": 20,
@@ -478,11 +478,11 @@
       "int": {
         "chartBoard": [
           {
-            "title": "PAX",
+            "title": "Khách vận chuyển",
             "items": [
               {
                 "id": "b_int_clmv",
-                "title": "PAX – CLMV",
+                "title": "Khách vận chuyển – CLMV",
                 "col": 1,
                 "colSpan": 15,
                 "row": 1,
@@ -497,7 +497,7 @@
               },
               {
                 "id": "b_int_nea",
-                "title": "PAX – NEA",
+                "title": "Khách vận chuyển – NEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 1,
@@ -512,7 +512,7 @@
               },
               {
                 "id": "b_int_mid",
-                "title": "PAX – MID",
+                "title": "Khách vận chuyển – MID",
                 "col": 31,
                 "colSpan": 15,
                 "row": 1,
@@ -527,7 +527,7 @@
               },
               {
                 "id": "b_int_noa",
-                "title": "PAX – NOA",
+                "title": "Khách vận chuyển – NOA",
                 "col": 46,
                 "colSpan": 15,
                 "row": 1,
@@ -542,7 +542,7 @@
               },
               {
                 "id": "b_int_au_us",
-                "title": "PAX – SWP",
+                "title": "Khách vận chuyển – SWP",
                 "col": 1,
                 "colSpan": 15,
                 "row": 2,
@@ -557,7 +557,7 @@
               },
               {
                 "id": "b_int_sea",
-                "title": "PAX – SEA",
+                "title": "Khách vận chuyển – SEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 2,
@@ -572,7 +572,7 @@
               },
               {
                 "id": "b_int_eu",
-                "title": "PAX – EUR",
+                "title": "Khách vận chuyển – EUR",
                 "col": 31,
                 "colSpan": 15,
                 "row": 2,
@@ -587,7 +587,7 @@
               },
               {
                 "id": "b_int_sas",
-                "title": "PAX – SAS",
+                "title": "Khách vận chuyển – SAS",
                 "col": 46,
                 "colSpan": 15,
                 "row": 2,
@@ -647,7 +647,7 @@
             {
               "id": "pax",
               "status": "compact",
-              "title": "Pax",
+              "title": "Khách vận chuyển",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -669,7 +669,7 @@
             {
               "id": "ask",
               "status": "compact",
-              "title": "ASK",
+              "title": "Ghế luân chuyển",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -690,7 +690,7 @@
             {
               "id": "lf",
               "status": "compact",
-              "title": "LF",
+              "title": "Hệ số sử dụng ghế",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -711,7 +711,7 @@
             {
               "id": "rtk",
               "status": "compact",
-              "title": "RTK",
+              "title": "Tấn luân chuyển",
               "value": "1,280",
               "unit": "tỷ tấn.km",
               "trend": [
@@ -732,7 +732,7 @@
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "DT VTHK",
+              "title": "Doanh thu vận tải hàng không",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -753,7 +753,7 @@
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "HQ SO CPBD",
+              "title": "Hiệu quả so với chi phí biến đổi",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -774,7 +774,7 @@
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "HQ VTHK (*)",
+              "title": "Hiệu quả VTHK (*)",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -795,7 +795,7 @@
             {
               "id": "raskpax",
               "status": "compact",
-              "title": "RASKpax",
+              "title": "Thu suất trên 1 ghế luân chuyển",
               "value": "2,850",
               "unit": "VND/ghế.km",
               "trend": [
@@ -822,11 +822,11 @@
       "dom": {
         "chartBoard": [
           {
-            "title": "PAX – DOM",
+            "title": "Khách vận chuyển - Nội địa",
             "items": [
               {
                 "id": "b_dom_hansgn",
-                "title": "PAX – HANSGN",
+                "title": "Khách vận chuyển – HANSGN",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 1,
                 "colSpan": 20,
@@ -841,7 +841,7 @@
               },
               {
                 "id": "b_dom_handad",
-                "title": "PAX – HANDAD",
+                "title": "Khách vận chuyển – HANDAD",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 21,
                 "colSpan": 20,
@@ -856,7 +856,7 @@
               },
               {
                 "id": "b_dom_sgndad",
-                "title": "PAX – SGNDAD",
+                "title": "Khách vận chuyển – SGNDAD",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 41,
                 "colSpan": 20,
@@ -871,7 +871,7 @@
               },
               {
                 "id": "b_dom_dulich",
-                "title": "PAX – Du lịch",
+                "title": "Khách vận chuyển – Du lịch",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 1,
                 "colSpan": 20,
@@ -886,7 +886,7 @@
               },
               {
                 "id": "b_dom_trucle",
-                "title": "PAX – Trục lẻ",
+                "title": "Khách vận chuyển – Trục lẻ",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 21,
                 "colSpan": 20,
@@ -901,7 +901,7 @@
               },
               {
                 "id": "b_dom_diaphuong",
-                "title": "PAX – Địa phương",
+                "title": "Khách vận chuyển – Địa phương",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 41,
                 "colSpan": 20,
@@ -1072,7 +1072,7 @@
             {
               "id": "pax",
               "status": "compact",
-              "title": "Pax",
+              "title": "Khách vận chuyển",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -1094,7 +1094,7 @@
             {
               "id": "ask",
               "status": "compact",
-              "title": "ASK",
+              "title": "Ghế luân chuyển",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -1115,7 +1115,7 @@
             {
               "id": "lf",
               "status": "compact",
-              "title": "LF",
+              "title": "Hệ số sử dụng ghế",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -1136,7 +1136,7 @@
             {
               "id": "rtk",
               "status": "compact",
-              "title": "RTK",
+              "title": "Tấn luân chuyển",
               "value": "1,280",
               "unit": "tỷ tấn.km",
               "trend": [
@@ -1157,7 +1157,7 @@
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "DT VTHK",
+              "title": "Doanh thu vận tải hàng không",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -1178,7 +1178,7 @@
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "HQ SO CPBD",
+              "title": "Hiệu quả so với chi phí biến đổi",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -1199,7 +1199,7 @@
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "HQ VTHK (*)",
+              "title": "Hiệu quả VTHK (*)",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -1220,7 +1220,7 @@
             {
               "id": "raskpax",
               "status": "compact",
-              "title": "RASKpax",
+              "title": "Thu suất trên 1 ghế luân chuyển",
               "value": "2,850",
               "unit": "VND/ghế.km",
               "trend": [
@@ -1251,5 +1251,6 @@
     "week",
     "quarter",
     "custom"
-  ]
+  ],
+  "filterColumns": 60
 }
