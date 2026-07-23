@@ -230,7 +230,11 @@
           "col": 1,
           "colSpan": 30,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_int.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_dom",
@@ -238,7 +242,11 @@
           "col": 31,
           "colSpan": 30,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_dom.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_carrier",
@@ -246,7 +254,11 @@
           "col": 1,
           "colSpan": 60,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_carrier.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_carrier.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -263,15 +275,20 @@
         },
         {
           "id": "b_ai_card",
-          "title": "AI Insight — Market Share Risk",
+          "title": "Cảnh báo / Rủi ro",
           "col": 41,
           "colSpan": 20,
           "extraComponent": {
-            "type": "card-html",
+            "type": "insight-card",
             "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
-              "backgroundClassName": "",
-              "borderClassName": ""
+              "title": "Cảnh báo / Rủi ro",
+              "variant": "danger",
+              "items": [
+                "<strong>EU:</strong> thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu",
+                "<strong>NEA (ĐBA):</strong> thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc",
+                "<strong>SEA & CLMV:</strong> thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN",
+                "<strong>Nội địa:</strong> ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)"
+              ]
             }
           }
         }

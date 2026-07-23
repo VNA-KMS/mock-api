@@ -6,6 +6,10 @@
   },
   "metricCards": {
     "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 3,
+      "gap": 12
+    },
     "items": [
       {
         "id": "t_tot",
@@ -26,7 +30,23 @@
             "label": "1% với Kế hoạch",
             "tone": "negative"
           }
-        ]
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            980,
+            1005,
+            995,
+            1030,
+            1055,
+            1070,
+            1085,
+            1095
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "t_int",
@@ -47,7 +67,23 @@
             "label": "2% với Kế hoạch",
             "tone": "negative"
           }
-        ]
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            360,
+            375,
+            370,
+            390,
+            400,
+            410,
+            415,
+            420
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "t_dom",
@@ -68,7 +104,134 @@
             "label": "3% với Kế hoạch",
             "tone": "negative"
           }
-        ]
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            640,
+            650,
+            645,
+            655,
+            660,
+            668,
+            672,
+            675
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
+      },
+      {
+        "id": "s_tot",
+        "status": "compact",
+        "title": "Thị phần VNA group",
+        "value": "38.4",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.4% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "0.6% với Kế hoạch",
+            "tone": "negative"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            37.5,
+            36.2,
+            38.2,
+            39.6,
+            37.2,
+            36.4,
+            38.6,
+            38.4
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
+      },
+      {
+        "id": "s_int",
+        "status": "compact",
+        "title": "Thị phần VNA group - Quốc tế",
+        "value": "28.2",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.5% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "1.0% với Kế hoạch",
+            "tone": "negative"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            27.3,
+            26.0,
+            28.0,
+            29.4,
+            27.0,
+            26.2,
+            28.4,
+            28.2
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
+      },
+      {
+        "id": "s_dom",
+        "status": "compact",
+        "title": "Thị phần VNA group - Nội địa",
+        "value": "45.4",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "0.6% với Cùng kỳ",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "down",
+            "label": "0.4% với Kế hoạch",
+            "tone": "negative"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            44.5,
+            43.2,
+            45.2,
+            46.6,
+            44.2,
+            43.4,
+            45.6,
+            45.4
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
       }
     ]
   },
@@ -83,7 +246,10 @@
           "colSpan": 30,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/b_int.json",
-          "rightTitle": "nghìn khách"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_dom",
@@ -92,7 +258,10 @@
           "colSpan": 30,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/b_dom.json",
-          "rightTitle": "nghìn khách"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_carrier",
@@ -101,7 +270,10 @@
           "colSpan": 60,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/b_carrier.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -112,23 +284,9 @@
           "id": "b_risk",
           "title": "Enterprise Risk — thị phần theo khu vực (cảnh báo giảm)",
           "col": 1,
-          "colSpan": 40,
+          "colSpan": 60,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/b_risk.json"
-        },
-        {
-          "id": "b_ai_card",
-          "title": "AI Insight — Market Share Risk",
-          "col": 41,
-          "colSpan": 20,
-          "extraComponent": {
-            "type": "card-html",
-            "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
-              "backgroundClassName": "",
-              "borderClassName": ""
-            }
-          }
         }
       ]
     }
@@ -145,7 +303,7 @@
       "options": [
         {
           "value": "total",
-          "label": "Tổng quan"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
@@ -170,21 +328,29 @@
                 "title": "Khách tổng thị trường",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 1,
-                "colSpan": 60,
+                "colSpan": 30,
                 "row": 1,
-                "rowSpan": 1,
-                "height": 320,
+                "rowSpan": 2,
+                "height": 260,
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_total.json"
               },
               {
                 "id": "b_pax_int",
                 "title": "Khách tổng thị trường - Quốc tế",
                 "subTitle": "Đơn vị: Nghìn khách",
-                "col": 1,
+                "col": 31,
                 "colSpan": 30,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 320,
+                "height": 200,
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_int.json"
               },
               {
@@ -195,8 +361,50 @@
                 "colSpan": 30,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 320,
+                "height": 200,
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_dom.json"
+              }
+            ]
+          },
+          {
+            "title": "Thị phần VNA group",
+            "items": [
+              {
+                "id": "b_share_total",
+                "title": "Thị phần VNA group",
+                "subTitle": "Đơn vị: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 260,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_total.json"
+              },
+              {
+                "id": "b_share_int",
+                "title": "Thị phần VNA group - Quốc tế",
+                "subTitle": "Đơn vị: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 200,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_int.json"
+              },
+              {
+                "id": "b_share_dom",
+                "title": "Thị phần VNA group - Nội địa",
+                "subTitle": "Đơn vị: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 200,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_dom.json"
               }
             ]
           },
@@ -211,51 +419,6 @@
                 "row": 1,
                 "height": 350,
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure.json"
-              },
-              {
-                "id": "b_market_structure_bar100",
-                "title": "Cơ cấu thị trường — thanh chồng (Quốc tế 60% · Nội địa 40%)",
-                "subTitle": "Đơn vị: Nghìn khách",
-                "col": 1,
-                "colSpan": 60,
-                "row": 2,
-                "height": 280,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure_bar100.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
-                }
-              },
-              {
-                "id": "b_dom_ai_insight",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khách tổng thị trường T7</b> — đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
-                }
               }
             ]
           }
@@ -275,7 +438,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_clmv.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_clmv.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_nea",
@@ -286,7 +453,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_nea.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_nea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_mid",
@@ -297,7 +468,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_mid.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_mid.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_noa",
@@ -308,7 +483,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_noa.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_noa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_au_us",
@@ -319,7 +498,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_au_us.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_au_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_sea",
@@ -330,7 +513,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_sea.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_sea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_eu",
@@ -341,7 +528,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_eu.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_eu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_sas",
@@ -352,7 +543,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_sas.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_sas.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -367,26 +562,6 @@
                 "row": 1,
                 "height": 350,
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_int_b_int_treemap.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
-                }
               }
             ]
           }
@@ -406,7 +581,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_hansgn.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_hansgn.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_handad",
@@ -417,7 +596,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_handad.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_handad.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_sgndad",
@@ -428,7 +611,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_sgndad.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_sgndad.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_dulich",
@@ -439,7 +626,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_dulich.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_dulich.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_trucle",
@@ -450,7 +641,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_trucle.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_trucle.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_diaphuong",
@@ -461,7 +656,11 @@
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_diaphuong.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_diaphuong.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -469,32 +668,10 @@
             "title": "Thị phần khách theo hãng bay",
             "items": [
               {
-                "id": "b_dom_vna",
-                "title": "VNA",
-                "col": 1,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_vna.json"
-              },
-              {
-                "id": "b_dom_pa",
-                "title": "QH",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_pa.json"
-              },
-              {
                 "id": "b_dom_vna_group",
                 "title": "VNA Group",
-                "col": 31,
-                "colSpan": 15,
+                "col": 1,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
@@ -502,32 +679,54 @@
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_vna_group.json"
               },
               {
-                "id": "b_dom_vj",
-                "title": "VJ",
-                "col": 46,
-                "colSpan": 15,
+                "id": "b_dom_vna",
+                "title": "VNA",
+                "col": 21,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_vj.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_vna.json"
               },
               {
                 "id": "b_dom_ba",
                 "title": "BL",
-                "col": 1,
+                "col": 41,
                 "colSpan": 20,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_ba.json"
               },
               {
+                "id": "b_dom_pa",
+                "title": "QH",
+                "col": 1,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_pa.json"
+              },
+              {
+                "id": "b_dom_vj",
+                "title": "VJ",
+                "col": 16,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_vj.json"
+              },
+              {
                 "id": "b_dom_sun",
                 "title": "9G",
-                "col": 21,
-                "colSpan": 20,
+                "col": 31,
+                "colSpan": 15,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
@@ -537,8 +736,8 @@
               {
                 "id": "b_dom_vu",
                 "title": "VU",
-                "col": 41,
-                "colSpan": 20,
+                "col": 46,
+                "colSpan": 15,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
@@ -561,26 +760,6 @@
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_dom_b_dom_treemap.json"
               }
             ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_dom_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khách tổng thị trường T7</b> — đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
-                }
-              }
-            ]
           }
         ]
       }
@@ -591,5 +770,28 @@
     "week",
     "quarter",
     "custom"
-  ]
+  ],
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Thị trường quốc tế — Khách tổng T7:</strong> đạt <strong>471</strong> nghìn lượt, tăng <strong>10%</strong> so với Cùng kỳ, tăng <strong>21,3%</strong> so với T6.",
+        "<strong>Thị trường quốc tế — Lũy kế T1–T7:</strong> đạt <strong>2.716</strong> nghìn lượt, tăng <strong>14,6%</strong> so với Cùng kỳ, vượt <strong>5%</strong> so với Kế hoạch.",
+        "<strong>Thị trường nội địa — Khách tổng T7:</strong> đạt <strong>758,7</strong> nghìn lượt, tăng <strong>8,9%</strong> so với Cùng kỳ, tăng <strong>13,8%</strong> so với T6."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "items": [
+        "<strong>EU:</strong> thị phần giảm <strong>1.2%</strong> so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu",
+        "<strong>NEA (ĐBA):</strong> thị phần giảm <strong>2.1%</strong> so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc",
+        "<strong>SEA &amp; CLMV:</strong> thị phần giảm <strong>0.8%</strong>, đối thủ mở rộng đường bay nội khối ASEAN",
+        "<strong>Nội địa — Lũy kế T1–T7:</strong> tăng <strong>5,3%</strong> so với Cùng kỳ — chậm hơn quốc tế (<strong>14,6%</strong>), cần theo dõi đà tăng trưởng nội địa."
+      ],
+      "variant": "danger"
+    }
+  }
 }

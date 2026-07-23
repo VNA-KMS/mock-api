@@ -230,7 +230,11 @@
           "col": 1,
           "colSpan": 30,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_int.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_dom",
@@ -238,7 +242,11 @@
           "col": 31,
           "colSpan": 30,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_dom.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_carrier",
@@ -246,7 +254,11 @@
           "col": 1,
           "colSpan": 60,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_carrier.json"
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/b_carrier.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -263,15 +275,20 @@
         },
         {
           "id": "b_ai_card",
-          "title": "AI Insight — Market Share Risk",
+          "title": "Cảnh báo / Rủi ro",
           "col": 41,
           "colSpan": 20,
           "extraComponent": {
-            "type": "card-html",
+            "type": "insight-card",
             "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">AI Insight</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12.5px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>EU</b> — thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>NEA (ĐBA)</b> — thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>SEA & CLMV</b> — thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Nội địa</b> — ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)</li></ul></div>",
-              "backgroundClassName": "",
-              "borderClassName": ""
+              "title": "Cảnh báo / Rủi ro",
+              "variant": "danger",
+              "items": [
+                "<strong>EU:</strong> thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu",
+                "<strong>NEA (ĐBA):</strong> thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc",
+                "<strong>SEA & CLMV:</strong> thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN",
+                "<strong>Nội địa:</strong> ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)"
+              ]
             }
           }
         }
@@ -364,7 +381,11 @@
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_total.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_total.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_pax_int",
@@ -375,7 +396,11 @@
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_int.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_pax_dom",
@@ -386,7 +411,11 @@
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_dom.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_dom.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -427,11 +456,16 @@
                 "row": 1,
                 "rowSpan": 1,
                 "extraComponent": {
-                  "type": "card-html",
+                  "type": "insight-card",
                   "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
+                    "title": "Nhận định",
+                    "variant": "info",
+                    "items": [
+                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
+                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
+                    ],
+                    "showAiBadge": true,
+                    "aiBadgeLabel": "TRỢ LÝ AI"
                   }
                 }
               },
@@ -442,11 +476,16 @@
                 "row": 1,
                 "rowSpan": 1,
                 "extraComponent": {
-                  "type": "card-html",
+                  "type": "insight-card",
                   "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khách tổng thị trường T7</b> — đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
+                    "title": "Nhận định",
+                    "variant": "info",
+                    "items": [
+                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
+                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
+                    ],
+                    "showAiBadge": true,
+                    "aiBadgeLabel": "TRỢ LÝ AI"
                   }
                 }
               }
@@ -468,7 +507,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_eu.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_eu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_au_us",
@@ -479,7 +522,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_au_us.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_au_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_clmv",
@@ -490,7 +537,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_clmv.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_clmv.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_sea",
@@ -501,7 +552,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_sea.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_sea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_mid",
@@ -512,7 +567,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_mid.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_mid.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_noa",
@@ -523,7 +582,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_noa.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_noa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_nea",
@@ -534,7 +597,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_nea.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_nea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_int_sas",
@@ -545,7 +612,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_sas.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn/chart/cf_network_int_b_int_sas.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -586,11 +657,16 @@
                 "row": 1,
                 "rowSpan": 1,
                 "extraComponent": {
-                  "type": "card-html",
+                  "type": "insight-card",
                   "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường quốc tế</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Khách tổng thị trường T7</b> — đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
+                    "title": "Nhận định",
+                    "variant": "info",
+                    "items": [
+                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
+                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
+                    ],
+                    "showAiBadge": true,
+                    "aiBadgeLabel": "TRỢ LÝ AI"
                   }
                 }
               }
@@ -790,7 +866,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_hansgn.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_hansgn.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_handad",
@@ -801,7 +881,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_handad.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_handad.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_sgndad",
@@ -812,7 +896,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_sgndad.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_sgndad.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_dulich",
@@ -823,7 +911,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_dulich.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_dulich.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_trucle",
@@ -834,7 +926,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_trucle.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_trucle.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -850,7 +946,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vna.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vna.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_pa",
@@ -861,7 +961,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_pa.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_pa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_vna_group",
@@ -872,7 +976,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vna_group.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vna_group.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_vj",
@@ -883,7 +991,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vj.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_ba",
@@ -894,7 +1006,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_ba.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_ba.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_sun",
@@ -905,7 +1021,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_sun.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_sun.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               },
               {
                 "id": "b_dom_vu",
@@ -916,7 +1036,11 @@
                 "rowSpan": 1,
                 "height": 160,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vu.json"
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/07/passenger/vn-ov/chart/cf_network_dom_b_dom_vu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
               }
             ]
           },
@@ -957,11 +1081,16 @@
                 "row": 1,
                 "rowSpan": 1,
                 "extraComponent": {
-                  "type": "card-html",
+                  "type": "insight-card",
                   "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường nội địa</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#004071\"></span><b>Khách tổng thị trường T7</b> — đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
+                    "title": "Nhận định",
+                    "variant": "info",
+                    "items": [
+                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
+                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
+                    ],
+                    "showAiBadge": true,
+                    "aiBadgeLabel": "TRỢ LÝ AI"
                   }
                 }
               }
