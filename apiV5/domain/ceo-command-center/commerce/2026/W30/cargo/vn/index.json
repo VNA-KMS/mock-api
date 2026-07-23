@@ -5,7 +5,7 @@
     "description": "Vị thế thị trường & thị phần theo khu vực đang biến động ra sao?"
   },
   "metricCards": {
-    "accentClassName": "bg-primary",
+    "accentClassName": "bg-regal-blue",
     "items": [
       {
         "id": "san_luong",
@@ -26,7 +26,10 @@
             "label": "7.1% với Cùng kỳ",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "doanh_thu_hh",
@@ -47,15 +50,17 @@
             "label": "11.3% với Cùng kỳ",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "lf",
         "status": "compact",
-        "title": "LF",
+        "title": "Hệ số sử dụng ghế",
         "value": "72.3",
         "unit": "%",
-        "backgroundStatus": 2,
         "trend": [
           {
             "direction": "flat",
@@ -68,7 +73,10 @@
             "label": "2.1% với Cùng kỳ",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
       }
     ]
   },
@@ -80,10 +88,11 @@
           "id": "b_cargo_van_chuyen",
           "title": "Sản lượng",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
           "height": 280,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_cargo_van_chuyen.json",
-          "row": 1,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
@@ -92,11 +101,12 @@
         {
           "id": "b_cargo_doanh_thu",
           "title": "Doanh thu",
-          "col": 1,
-          "colSpan": 60,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
           "height": 280,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_cargo_doanh_thu.json",
-          "row": 2,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
@@ -104,63 +114,32 @@
         },
         {
           "id": "b_cargo_tai_cung_ung",
-          "title": "LF",
-          "col": 1,
-          "colSpan": 60,
+          "title": "Hệ số sử dụng ghế",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
           "height": 280,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_cargo_tai_cung_ung.json",
-          "row": 3,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
     {
-      "title": "Tương quan sản lượng - doanh thu",
+      "title": "Cơ cấu thị trường hàng hoá",
       "items": [
         {
-          "id": "b_corr_sl_dt",
-          "title": "Tương quan sản lượng và doanh thu hàng hoá",
-          "col": 1,
-          "colSpan": 60,
-          "height": 380,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_sl_dt_total.json",
-          "row": 1
-        },
-        {
-          "id": "b_corr_chart_table",
-          "title": "Bảng biểu đồ tương quan giữa sản lượng và doanh thu hàng hóa",
-          "col": 1,
-          "colSpan": 60,
-          "height": 420,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_chart_table_total.json",
-          "row": 2
-        }
-      ]
-    },
-    {
-      "title": "Đánh giá thị trường",
-      "items": [
-        {
-          "id": "b_cargo_ai_insight",
+          "id": "b_cargo_treemap_total",
+          "title": "Cơ cấu thị trường hàng hoá",
           "col": 1,
           "colSpan": 60,
           "row": 1,
-          "extraComponent": {
-            "type": "insight-card",
-            "config": {
-              "title": "Nhận định",
-              "variant": "info",
-              "items": [
-                "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
-                "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
-              ],
-              "showAiBadge": true,
-              "aiBadgeLabel": "TRỢ LÝ AI"
-            }
-          }
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_cargo_treemap_total.json"
         }
       ]
     }
@@ -169,8 +148,9 @@
     {
       "key": "dataType",
       "col": 1,
-      "colSpan": 10,
-      "label": "",
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
       "showInfo": true,
       "infoTooltip": "Chọn loại dữ liệu",
       "size": "sm",
@@ -183,21 +163,21 @@
           "value": "cargo",
           "label": "Hàng hoá"
         }
-      ],
-      "row": 1
+      ]
     },
     {
       "key": "network",
-      "col": 1,
-      "colSpan": 12,
-      "label": "Phạm vi mạng bay",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
       "showInfo": true,
       "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
       "size": "sm",
       "options": [
         {
           "value": "total",
-          "label": "Tổng quan"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
@@ -207,13 +187,13 @@
           "value": "dom",
           "label": "Nội địa"
         }
-      ],
-      "row": 2
+      ]
     },
     {
       "key": "carrier",
-      "col": 13,
-      "colSpan": 12,
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
       "label": "Hãng vận chuyển",
       "showInfo": true,
       "infoTooltip": "Chọn hãng vận chuyển",
@@ -225,10 +205,9 @@
         },
         {
           "value": "vn-ov",
-          "label": "VN & 0V"
+          "label": "VN+0V+BL"
         }
-      ],
-      "row": 2
+      ]
     }
   ],
   "contentFilter": {
@@ -244,6 +223,7 @@
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_van_chuyen.json",
                 "headerAction": {
@@ -257,6 +237,7 @@
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_doanh_thu.json",
                 "headerAction": {
@@ -266,63 +247,32 @@
               },
               {
                 "id": "b_cargo_tai_cung_ung",
-                "title": "LF",
+                "title": "Hệ số sử dụng ghế",
                 "col": 41,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_tai_cung_ung.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: %"
               }
             ]
           },
           {
-            "title": "Tương quan sản lượng - doanh thu",
+            "title": "Cơ cấu thị trường hàng hoá",
             "items": [
               {
-                "id": "b_corr_sl_dt",
-                "title": "Tương quan sản lượng và doanh thu hàng hoá",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "height": 380,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_sl_dt_total.json"
-              },
-              {
-                "id": "b_corr_chart_table",
-                "title": "Bảng biểu đồ tương quan giữa sản lượng và doanh thu hàng hóa",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_chart_table_total.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
+                "id": "b_cargo_treemap_total",
+                "title": "Cơ cấu thị trường hàng hoá",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_treemap_total.json"
               }
             ]
           }
@@ -339,6 +289,7 @@
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_van_chuyen.json",
                 "headerAction": {
@@ -352,6 +303,7 @@
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_doanh_thu.json",
                 "headerAction": {
@@ -361,16 +313,18 @@
               },
               {
                 "id": "b_cargo_tai_cung_ung",
-                "title": "LF",
+                "title": "Hệ số sử dụng ghế",
                 "col": 41,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_tai_cung_ung.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: %"
               }
             ]
           },
@@ -381,8 +335,9 @@
                 "id": "b_dom_vna",
                 "title": "VNA",
                 "col": 1,
-                "colSpan": 20,
+                "colSpan": 15,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna.json",
@@ -394,9 +349,10 @@
               {
                 "id": "b_dom_pa",
                 "title": "QH",
-                "col": 21,
-                "colSpan": 20,
+                "col": 16,
+                "colSpan": 15,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_pa.json",
@@ -408,9 +364,10 @@
               {
                 "id": "b_dom_vna_group",
                 "title": "VNA Group",
-                "col": 41,
-                "colSpan": 20,
+                "col": 31,
+                "colSpan": 15,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna_group.json",
@@ -422,9 +379,10 @@
               {
                 "id": "b_dom_vj",
                 "title": "VJ",
-                "col": 1,
-                "colSpan": 20,
-                "row": 2,
+                "col": 46,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vj.json",
@@ -436,9 +394,10 @@
               {
                 "id": "b_dom_ba",
                 "title": "BA",
-                "col": 21,
+                "col": 1,
                 "colSpan": 20,
                 "row": 2,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_ba.json",
@@ -450,9 +409,10 @@
               {
                 "id": "b_dom_sun",
                 "title": "9G",
-                "col": 41,
+                "col": 21,
                 "colSpan": 20,
                 "row": 2,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_sun.json",
@@ -464,9 +424,10 @@
               {
                 "id": "b_dom_vu",
                 "title": "VU",
-                "col": 1,
+                "col": 41,
                 "colSpan": 20,
-                "row": 3,
+                "row": 2,
+                "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vu.json",
@@ -478,121 +439,20 @@
             ]
           },
           {
-            "title": "Tương quan sản lượng - doanh thu",
+            "title": "Cơ cấu thị trường hàng hoá nội địa",
             "items": [
               {
-                "id": "b_corr_sl_dt",
-                "title": "Tương quan sản lượng và doanh thu hàng hoá",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "height": 380,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_sl_dt_dom.json"
-              },
-              {
-                "id": "b_corr_chart_table",
-                "title": "Bảng biểu đồ tương quan giữa sản lượng và doanh thu hàng hóa",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_chart_table_dom.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
+                "id": "b_cargo_treemap_dom",
+                "title": "Cơ cấu thị trường hàng hoá nội địa",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_treemap_dom.json"
               }
             ]
           }
-        ],
-        "metricCards": {
-          "accentClassName": "bg-primary",
-          "items": [
-            {
-              "id": "san_luong",
-              "status": "compact",
-              "title": "Sản lượng",
-              "value": "45.2",
-              "unit": "nghìn tấn",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "98.1% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "7.1% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            },
-            {
-              "id": "doanh_thu_hh",
-              "status": "compact",
-              "title": "Doanh thu",
-              "value": "1,850",
-              "unit": "tỷ VND",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "94.6% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "11.3% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            },
-            {
-              "id": "lf",
-              "status": "compact",
-              "title": "LF",
-              "value": "72.3",
-              "unit": "%",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "98.4% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "2.1% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       },
       "int": {
         "chartBoard": [
@@ -605,6 +465,7 @@
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_van_chuyen.json",
                 "headerAction": {
@@ -618,6 +479,7 @@
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_doanh_thu.json",
                 "headerAction": {
@@ -627,140 +489,53 @@
               },
               {
                 "id": "b_cargo_tai_cung_ung",
-                "title": "LF",
+                "title": "Hệ số sử dụng ghế",
                 "col": 41,
                 "colSpan": 20,
                 "row": 1,
+                "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_tai_cung_ung.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
+                },
+                "subTitle": "Đơn vị: %"
               }
             ]
           },
           {
-            "title": "Tương quan sản lượng - doanh thu",
+            "title": "Cơ cấu thị trường hàng hoá quốc tế",
             "items": [
               {
-                "id": "b_corr_sl_dt",
-                "title": "Tương quan sản lượng và doanh thu hàng hoá",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "height": 380,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_sl_dt_int.json"
-              },
-              {
-                "id": "b_corr_chart_table",
-                "title": "Bảng biểu đồ tương quan giữa sản lượng và doanh thu hàng hóa",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "height": 420,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/b_corr_chart_table_int.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
+                "id": "b_cargo_treemap_int",
+                "title": "Cơ cấu thị trường hàng hoá quốc tế",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_treemap_int.json"
               }
             ]
           }
-        ],
-        "metricCards": {
-          "accentClassName": "bg-primary",
-          "items": [
-            {
-              "id": "san_luong",
-              "status": "compact",
-              "title": "Sản lượng",
-              "value": "45.2",
-              "unit": "nghìn tấn",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "98.1% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "7.1% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            },
-            {
-              "id": "doanh_thu_hh",
-              "status": "compact",
-              "title": "Doanh thu",
-              "value": "1,850",
-              "unit": "tỷ VND",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "94.6% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "11.3% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            },
-            {
-              "id": "lf",
-              "status": "compact",
-              "title": "LF",
-              "value": "72.3",
-              "unit": "%",
-              "backgroundStatus": 2,
-              "trend": [
-                {
-                  "direction": "flat",
-                  "label": "98.4% với Kế hoạch",
-                  "tone": "negative",
-                  "status": 0
-                },
-                {
-                  "direction": "up",
-                  "label": "2.1% với Cùng kỳ",
-                  "tone": "positive"
-                }
-              ]
-            }
-          ]
-        }
+        ]
       }
     }
   },
   "timeFrameHiddenModes": [
-    "quarter",
     "custom"
-  ]
+  ],
+  "filterColumns": 60,
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
+        "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    }
+  }
 }

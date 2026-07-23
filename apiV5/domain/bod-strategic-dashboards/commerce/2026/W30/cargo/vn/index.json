@@ -1,0 +1,544 @@
+{
+  "titleInfo": {
+    "title": "Market share",
+    "statusLabel": "REAL TIME",
+    "description": "Vị thế thị trường & thị phần theo khu vực đang biến động ra sao?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "san_luong",
+        "status": "compact",
+        "title": "Sản lượng",
+        "value": "45.2",
+        "unit": "nghìn tấn",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.1% với Kế hoạch",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "7.1% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
+      },
+      {
+        "id": "doanh_thu_hh",
+        "status": "compact",
+        "title": "Doanh thu",
+        "value": "1,850",
+        "unit": "tỷ VND",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "94.6% với Kế hoạch",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "11.3% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
+      },
+      {
+        "id": "lf",
+        "status": "compact",
+        "title": "Hệ số sử dụng ghế",
+        "value": "72.3",
+        "unit": "%",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.4% với Kế hoạch",
+            "tone": "negative",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "2.1% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Vận tải hàng hoá",
+      "items": [
+        {
+          "id": "b_cargo_van_chuyen",
+          "title": "Sản lượng",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/b_cargo_van_chuyen.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_cargo_doanh_thu",
+          "title": "Doanh thu",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/b_cargo_doanh_thu.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_cargo_tai_cung_ung",
+          "title": "Hệ số sử dụng ghế",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/b_cargo_tai_cung_ung.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "subTitle": "Đơn vị: %"
+        }
+      ]
+    },
+    {
+      "title": "Cơ cấu thị trường hàng hoá",
+      "items": [
+        {
+          "id": "b_cargo_treemap_total",
+          "title": "Cơ cấu thị trường hàng hoá",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/b_cargo_treemap_total.json"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "key": "dataType",
+      "col": 1,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
+      "showInfo": true,
+      "infoTooltip": "Chọn loại dữ liệu",
+      "size": "sm",
+      "options": [
+        {
+          "value": "passenger",
+          "label": "Hành khách"
+        },
+        {
+          "value": "cargo",
+          "label": "Hàng hoá"
+        }
+      ]
+    },
+    {
+      "key": "network",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
+      "showInfo": true,
+      "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
+      "size": "sm",
+      "options": [
+        {
+          "value": "total",
+          "label": "Toàn mạng"
+        },
+        {
+          "value": "int",
+          "label": "Quốc tế"
+        },
+        {
+          "value": "dom",
+          "label": "Nội địa"
+        }
+      ]
+    },
+    {
+      "key": "carrier",
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Hãng vận chuyển",
+      "showInfo": true,
+      "infoTooltip": "Chọn hãng vận chuyển",
+      "size": "sm",
+      "options": [
+        {
+          "value": "vn",
+          "label": "VN"
+        },
+        {
+          "value": "vn-ov",
+          "label": "VN+0V+BL"
+        }
+      ]
+    }
+  ],
+  "contentFilter": {
+    "network": {
+      "total": {
+        "chartBoard": [
+          {
+            "title": "Vận tải hàng hoá",
+            "items": [
+              {
+                "id": "b_cargo_van_chuyen",
+                "title": "Sản lượng",
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_doanh_thu",
+                "title": "Doanh thu",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_tai_cung_ung",
+                "title": "Hệ số sử dụng ghế",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %"
+              }
+            ]
+          },
+          {
+            "title": "Cơ cấu thị trường hàng hoá",
+            "items": [
+              {
+                "id": "b_cargo_treemap_total",
+                "title": "Cơ cấu thị trường hàng hoá",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_total_b_cargo_treemap_total.json"
+              }
+            ]
+          }
+        ]
+      },
+      "dom": {
+        "chartBoard": [
+          {
+            "title": "Vận tải hàng hoá nội địa",
+            "items": [
+              {
+                "id": "b_cargo_van_chuyen",
+                "title": "Sản lượng",
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_doanh_thu",
+                "title": "Doanh thu",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_tai_cung_ung",
+                "title": "Hệ số sử dụng ghế",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %"
+              }
+            ]
+          },
+          {
+            "title": "Thị phần khách theo hãng bay",
+            "items": [
+              {
+                "id": "b_dom_vna",
+                "title": "VNA",
+                "col": 1,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_pa",
+                "title": "QH",
+                "col": 16,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_pa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_vna_group",
+                "title": "VNA Group",
+                "col": 31,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna_group.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_vj",
+                "title": "VJ",
+                "col": 46,
+                "colSpan": 15,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_ba",
+                "title": "BA",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_ba.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_sun",
+                "title": "9G",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_sun.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_vu",
+                "title": "VU",
+                "col": 41,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Cơ cấu thị trường hàng hoá nội địa",
+            "items": [
+              {
+                "id": "b_cargo_treemap_dom",
+                "title": "Cơ cấu thị trường hàng hoá nội địa",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_dom_b_cargo_treemap_dom.json"
+              }
+            ]
+          }
+        ]
+      },
+      "int": {
+        "chartBoard": [
+          {
+            "title": "Vận tải hàng hoá quốc tế",
+            "items": [
+              {
+                "id": "b_cargo_van_chuyen",
+                "title": "Sản lượng",
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_doanh_thu",
+                "title": "Doanh thu",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_cargo_tai_cung_ung",
+                "title": "Hệ số sử dụng ghế",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %"
+              }
+            ]
+          },
+          {
+            "title": "Cơ cấu thị trường hàng hoá quốc tế",
+            "items": [
+              {
+                "id": "b_cargo_treemap_int",
+                "title": "Cơ cấu thị trường hàng hoá quốc tế",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/W30/cargo/vn/chart/cf_network_int_b_cargo_treemap_int.json"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "timeFrameHiddenModes": [
+    "day",
+    "week",
+    "quarter",
+    "custom"
+  ],
+  "filterColumns": 60,
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
+        "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    }
+  }
+}

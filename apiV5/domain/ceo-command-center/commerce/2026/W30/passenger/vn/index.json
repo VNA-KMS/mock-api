@@ -5,12 +5,12 @@
     "description": "Vị thế thị trường & thị phần theo khu vực đang biến động ra sao?"
   },
   "metricCards": {
-    "accentClassName": "bg-primary",
+    "accentClassName": "bg-regal-blue",
     "items": [
       {
         "id": "pax",
         "status": "compact",
-        "title": "Pax",
+        "title": "Khách vận chuyển",
         "value": "985",
         "unit": "nghìn khách",
         "trend": [
@@ -27,12 +27,15 @@
           }
         ],
         "defaultSelected": true,
-        "drillDownPath": null
+        "drillDownPath": null,
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "ask",
         "status": "compact",
-        "title": "ASK",
+        "title": "Ghế luân chuyển",
         "value": "2,150",
         "unit": "tỷ ghế.km",
         "trend": [
@@ -48,12 +51,15 @@
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "lf",
         "status": "compact",
-        "title": "LF",
+        "title": "Hệ số sử dụng ghế",
         "value": "82.5",
         "unit": "%",
         "trend": [
@@ -69,33 +75,39 @@
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
-        "id": "raskpax",
+        "id": "rtk",
         "status": "compact",
-        "title": "RASKpax",
-        "value": "2,850",
-        "unit": "VND/ghế.km",
+        "title": "Tấn luân chuyển",
+        "value": "1,280",
+        "unit": "tỷ tấn.km",
         "trend": [
           {
             "direction": "flat",
-            "label": "102.6% với Kế hoạch",
-            "tone": "positive",
+            "label": "90.9% với Kế hoạch",
+            "tone": "negative",
             "status": 0
           },
           {
             "direction": "up",
-            "label": "4.2% với Cùng kỳ",
+            "label": "8.2% với Cùng kỳ",
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rtk/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "dt_vthk",
         "status": "compact",
-        "title": "DT VTHK",
+        "title": "Doanh thu vận tải hàng không",
         "value": "+4,850",
         "unit": "tỷ VND",
         "trend": [
@@ -111,12 +123,15 @@
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "hq_so_cpbd",
         "status": "compact",
-        "title": "HQ SO CPBD",
+        "title": "Hiệu quả so với chi phí biến đổi",
         "value": "+320",
         "unit": "tỷ VND",
         "trend": [
@@ -132,12 +147,15 @@
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
       },
       {
         "id": "hq_vthk",
         "status": "compact",
-        "title": "HQ VTHK (*)",
+        "title": "Hiệu quả VTHK (*)",
         "value": "+185",
         "unit": "tỷ VND",
         "trend": [
@@ -153,7 +171,82 @@
             "tone": "positive"
           }
         ],
-        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json"
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
+      },
+      {
+        "id": "raskpax",
+        "status": "compact",
+        "title": "Thu suất trên 1 ghế luân chuyển",
+        "value": "2,850",
+        "unit": "VND/ghế.km",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "102.6% với Kế hoạch",
+            "tone": "positive",
+            "status": 0
+          },
+          {
+            "direction": "up",
+            "label": "4.2% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json",
+        "colorTokens": {
+          "visualization": "#22C55E"
+        }
+      },
+      {
+        "id": "cask",
+        "status": "compact",
+        "title": "Chi suất trên 1 ghế luân chuyển",
+        "value": "2,420",
+        "unit": "VND/ghế/km",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "99.2% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "3.1% với Cùng kỳ",
+            "tone": "negative"
+          }
+        ],
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/cask/index.json",
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
+      },
+      {
+        "id": "cask_non_fuel",
+        "status": "compact",
+        "title": "Chi suất trên 1 ghế luân chuyển (không bao gồm chi phí nhiên liệu)",
+        "value": "1,850",
+        "unit": "VND/ghế/km",
+        "backgroundStatus": 3,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "100.6% với Kế hoạch",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2.5% với Cùng kỳ",
+            "tone": "positive"
+          }
+        ],
+        "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/cask_non_fuel/index.json",
+        "colorTokens": {
+          "visualization": "#EF4444"
+        }
       }
     ]
   },
@@ -163,29 +256,29 @@
       "items": [
         {
           "id": "b_int",
-          "title": "PAX – INT theo khu vực",
+          "title": "Khách vận chuyển - Quốc tế theo khu vực",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 30,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_int.json",
-          "row": 1,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: Nghìn khách"
         },
         {
           "id": "b_dom",
-          "title": "PAX – DOM theo nhóm",
-          "col": 1,
-          "colSpan": 60,
+          "title": "Khách vận chuyển - Nội địa theo nhóm",
+          "col": 31,
+          "colSpan": 30,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_dom.json",
-          "row": 2,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "Đơn vị: Nghìn khách"
         },
         {
           "id": "b_carrier",
@@ -194,7 +287,6 @@
           "colSpan": 60,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_carrier.json",
-          "row": 3,
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
@@ -209,30 +301,9 @@
           "id": "b_risk",
           "title": "Enterprise Risk — thị phần theo khu vực (cảnh báo giảm)",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 40,
           "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_risk.json",
-          "row": 1
-        },
-        {
-          "id": "b_ai_card",
-          "title": "Cảnh báo / Rủi ro",
-          "col": 1,
-          "colSpan": 60,
-          "extraComponent": {
-            "type": "insight-card",
-            "config": {
-              "title": "Cảnh báo / Rủi ro",
-              "variant": "danger",
-              "items": [
-                "<strong>EU:</strong> thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu",
-                "<strong>NEA (ĐBA):</strong> thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc",
-                "<strong>SEA & CLMV:</strong> thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN",
-                "<strong>Nội địa:</strong> ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)"
-              ]
-            }
-          },
-          "row": 2
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_risk.json"
         }
       ]
     }
@@ -241,8 +312,9 @@
     {
       "key": "dataType",
       "col": 1,
-      "colSpan": 10,
-      "label": "",
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
       "showInfo": true,
       "infoTooltip": "Chọn loại dữ liệu",
       "size": "sm",
@@ -255,21 +327,21 @@
           "value": "cargo",
           "label": "Hàng hoá"
         }
-      ],
-      "row": 1
+      ]
     },
     {
       "key": "network",
-      "col": 1,
-      "colSpan": 12,
-      "label": "Phạm vi mạng bay",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
       "showInfo": true,
       "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
       "size": "sm",
       "options": [
         {
           "value": "total",
-          "label": "Tổng quan"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
@@ -279,13 +351,13 @@
           "value": "dom",
           "label": "Nội địa"
         }
-      ],
-      "row": 2
+      ]
     },
     {
       "key": "carrier",
-      "col": 13,
-      "colSpan": 15,
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
       "label": "Hãng vận chuyển",
       "showInfo": true,
       "infoTooltip": "Chọn hãng vận chuyển",
@@ -303,8 +375,7 @@
           "value": "bl",
           "label": "BL"
         }
-      ],
-      "row": 2
+      ]
     }
   ],
   "contentFilter": {
@@ -312,16 +383,17 @@
       "total": {
         "chartBoard": [
           {
-            "title": "PAX",
+            "title": "Khách vận chuyển",
             "items": [
               {
                 "id": "b_pax_total",
-                "title": "Khách tổng thị trường",
+                "title": "Khách vận chuyển",
                 "subTitle": "Đơn vị: Nghìn khách",
                 "col": 1,
-                "colSpan": 60,
+                "colSpan": 36,
                 "row": 1,
-                "height": 280,
+                "rowSpan": 2,
+                "height": 260,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_total_b_pax_total.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -330,12 +402,13 @@
               },
               {
                 "id": "b_pax_int",
-                "title": "PAX – INT",
+                "title": "Khách vận chuyển - Quốc tế",
                 "subTitle": "Đơn vị: Nghìn khách",
-                "col": 1,
-                "colSpan": 30,
-                "row": 2,
-                "height": 280,
+                "col": 37,
+                "colSpan": 24,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 200,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_total_b_pax_int.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -344,12 +417,13 @@
               },
               {
                 "id": "b_pax_dom",
-                "title": "PAX – DOM",
+                "title": "Khách vận chuyển - Nội địa",
                 "subTitle": "Đơn vị: Nghìn khách",
-                "col": 31,
-                "colSpan": 30,
+                "col": 37,
+                "colSpan": 24,
                 "row": 2,
-                "height": 280,
+                "rowSpan": 1,
+                "height": 200,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_total_b_pax_dom.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -359,72 +433,15 @@
             ]
           },
           {
-            "title": "Tương quan doanh thu",
             "items": [
               {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
+                "id": "b_market_structure",
+                "title": "Khách vận chuyển – Theo khu vực",
                 "col": 1,
-                "colSpan": 39,
+                "colSpan": 60,
                 "row": 1,
-                "height": 420,
-                "aiInsight": {
-                  "text": "Tương quan doanh thu và HQ VTHK tháng 7/2026: Hầu hết các khu vực có hiệu quả âm, ngoại trừ CLMV (+80 tỷ), SAS (+20 tỷ) và Du lịch (+60 tỷ). NEA (-220 tỷ) và NOA (-180 tỷ) là hai khu vực lỗ nặng nhất.",
-                  "severity": "crit",
-                  "status": 1
-                },
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_dt_hq_total.json"
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết PAX",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_detail_table_total.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
-              },
-              {
-                "id": "b_dom_ai_insight",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_total_b_market_structure.json"
               }
             ]
           }
@@ -433,43 +450,16 @@
       "int": {
         "chartBoard": [
           {
-            "title": "PAX",
+            "title": "Khách vận chuyển",
             "items": [
               {
-                "id": "b_int_eu",
-                "title": "EU",
+                "id": "b_int_clmv",
+                "title": "Khách vận chuyển – CLMV",
                 "col": 1,
                 "colSpan": 15,
                 "row": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_eu.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_au_us",
-                "title": "AU & US",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_au_us.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_clmv",
-                "title": "CLMV",
-                "col": 31,
-                "colSpan": 15,
-                "row": 1,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_clmv.json",
                 "headerAction": {
@@ -478,14 +468,15 @@
                 }
               },
               {
-                "id": "b_int_sea",
-                "title": "SEA (ĐNA)",
-                "col": 46,
+                "id": "b_int_nea",
+                "title": "Khách vận chuyển – NEA",
+                "col": 16,
                 "colSpan": 15,
                 "row": 1,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_sea.json",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_nea.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
@@ -493,11 +484,12 @@
               },
               {
                 "id": "b_int_mid",
-                "title": "MID (Trung Đông)",
-                "col": 1,
+                "title": "Khách vận chuyển – MID",
+                "col": 31,
                 "colSpan": 15,
-                "row": 2,
-                "height": 160,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_mid.json",
                 "headerAction": {
@@ -507,11 +499,12 @@
               },
               {
                 "id": "b_int_noa",
-                "title": "NOA (Bắc Á)",
-                "col": 16,
+                "title": "Khách vận chuyển – NOA",
+                "col": 46,
                 "colSpan": 15,
-                "row": 2,
-                "height": 160,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_noa.json",
                 "headerAction": {
@@ -520,14 +513,45 @@
                 }
               },
               {
-                "id": "b_int_nea",
-                "title": "NEA (ĐBA)",
+                "id": "b_int_au_us",
+                "title": "Khách vận chuyển – SWP",
+                "col": 1,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: Nghìn khách",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_au_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_int_sea",
+                "title": "Khách vận chuyển – SEA",
+                "col": 16,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: Nghìn khách",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_sea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_int_eu",
+                "title": "Khách vận chuyển – EUR",
                 "col": 31,
                 "colSpan": 15,
                 "row": 2,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_nea.json",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_eu.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
@@ -535,11 +559,12 @@
               },
               {
                 "id": "b_int_sas",
-                "title": "SAS (Nam Á)",
+                "title": "Khách vận chuyển – SAS",
                 "col": 46,
                 "colSpan": 15,
                 "row": 2,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: Nghìn khách",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_sas.json",
                 "headerAction": {
@@ -550,64 +575,26 @@
             ]
           },
           {
-            "title": "Tương quan doanh thu",
             "items": [
               {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
-                "col": 1,
-                "colSpan": 39,
-                "row": 1,
-                "height": 420,
-                "aiInsight": {
-                  "text": "Tương quan thị trường quốc tế: NEA (-220 tỷ), NOA (-180 tỷ) và EUR (-120 tỷ) có doanh thu cao nhưng hiệu quả âm nặng. CLMV (+80 tỷ) và SAS (+20 tỷ) là điểm sáng.",
-                  "severity": "crit",
-                  "status": 1
-                },
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_dt_hq_int.json"
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết PAX",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_detail_table_int.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_int_ai_insight",
+                "id": "b_int_treemap",
+                "title": "Khách vận chuyển – Theo khu vực",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 471 nghìn lượt, tăng 10% so với Cùng kỳ, tăng 21,3% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 2.716 nghìn lượt, tăng 14,6% so với Cùng kỳ, vượt 5% so với Kế hoạch."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_int_b_int_treemap.json"
               }
             ]
           }
         ],
         "metricCards": {
-          "accentClassName": "bg-primary",
+          "accentClassName": "bg-regal-blue",
           "items": [
             {
               "id": "pax",
               "status": "compact",
-              "title": "Pax",
+              "title": "Khách vận chuyển",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -624,12 +611,15 @@
                 }
               ],
               "defaultSelected": true,
-              "drillDownPath": null
+              "drillDownPath": null,
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "ask",
               "status": "compact",
-              "title": "ASK",
+              "title": "Ghế luân chuyển",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -645,12 +635,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "lf",
               "status": "compact",
-              "title": "LF",
+              "title": "Hệ số sử dụng ghế",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -666,33 +659,39 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
-              "id": "raskpax",
+              "id": "rtk",
               "status": "compact",
-              "title": "RASKpax",
-              "value": "2,850",
-              "unit": "VND/ghế.km",
+              "title": "Tấn luân chuyển",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
               "trend": [
                 {
                   "direction": "flat",
-                  "label": "102.6% với Kế hoạch",
-                  "tone": "positive",
+                  "label": "90.9% với Kế hoạch",
+                  "tone": "negative",
                   "status": 0
                 },
                 {
                   "direction": "up",
-                  "label": "4.2% với Cùng kỳ",
+                  "label": "8.2% với Cùng kỳ",
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rtk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "DT VTHK",
+              "title": "Doanh thu vận tải hàng không",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -708,12 +707,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "HQ SO CPBD",
+              "title": "Hiệu quả so với chi phí biến đổi",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -729,12 +731,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "HQ VTHK (*)",
+              "title": "Hiệu quả VTHK (*)",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -750,28 +755,55 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "Thu suất trên 1 ghế luân chuyển",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "102.6% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             }
           ],
           "layout": {
-            "columns": 4,
-            "gap": 12
+            "columns": 4
           }
         }
       },
       "dom": {
         "chartBoard": [
           {
-            "title": "PAX – DOM",
+            "title": "Khách vận chuyển - Nội địa",
             "items": [
               {
                 "id": "b_dom_hansgn",
-                "title": "HANSGN",
-                "col": 1,
-                "colSpan": 12,
-                "row": 1,
-                "height": 160,
+                "title": "Khách vận chuyển – HANSGN",
                 "subTitle": "Đơn vị: Nghìn khách",
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_hansgn.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -780,12 +812,13 @@
               },
               {
                 "id": "b_dom_handad",
-                "title": "HANDAD",
-                "col": 13,
-                "colSpan": 12,
-                "row": 1,
-                "height": 160,
+                "title": "Khách vận chuyển – HANDAD",
                 "subTitle": "Đơn vị: Nghìn khách",
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_handad.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -794,12 +827,13 @@
               },
               {
                 "id": "b_dom_sgndad",
-                "title": "SGNDAD",
-                "col": 25,
-                "colSpan": 12,
-                "row": 1,
-                "height": 160,
+                "title": "Khách vận chuyển – SGNDAD",
                 "subTitle": "Đơn vị: Nghìn khách",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_sgndad.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -808,12 +842,13 @@
               },
               {
                 "id": "b_dom_dulich",
-                "title": "Du lịch",
-                "col": 37,
-                "colSpan": 12,
-                "row": 1,
-                "height": 160,
+                "title": "Khách vận chuyển – Du lịch",
                 "subTitle": "Đơn vị: Nghìn khách",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_dulich.json",
                 "headerAction": {
                   "type": "cumulative",
@@ -822,13 +857,29 @@
               },
               {
                 "id": "b_dom_trucle",
-                "title": "Trục lẻ",
-                "col": 49,
-                "colSpan": 12,
-                "row": 1,
-                "height": 160,
+                "title": "Khách vận chuyển – Trục lẻ",
                 "subTitle": "Đơn vị: Nghìn khách",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_trucle.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_diaphuong",
+                "title": "Khách vận chuyển – Địa phương",
+                "subTitle": "Đơn vị: Nghìn khách",
+                "col": 41,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_diaphuong.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
@@ -837,43 +888,30 @@
             ]
           },
           {
+            "items": [
+              {
+                "id": "b_dom_treemap",
+                "title": "Khách vận chuyển – Theo khu vực",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_treemap.json"
+              }
+            ]
+          },
+          {
             "title": "Thị phần khách theo hãng bay",
             "items": [
               {
-                "id": "b_dom_vna",
-                "title": "VNA",
-                "col": 1,
-                "colSpan": 15,
-                "row": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_pa",
-                "title": "QH",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "height": 160,
-                "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_pa.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
                 "id": "b_dom_vna_group",
                 "title": "VNA Group",
-                "col": 31,
-                "colSpan": 15,
+                "col": 1,
+                "colSpan": 20,
                 "row": 1,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna_group.json",
                 "headerAction": {
@@ -882,14 +920,15 @@
                 }
               },
               {
-                "id": "b_dom_vj",
-                "title": "VJ",
-                "col": 46,
-                "colSpan": 15,
+                "id": "b_dom_vna",
+                "title": "VNA",
+                "col": 21,
+                "colSpan": 20,
                 "row": 1,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vj.json",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vna.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
@@ -898,10 +937,11 @@
               {
                 "id": "b_dom_ba",
                 "title": "BA",
-                "col": 1,
+                "col": 41,
                 "colSpan": 20,
-                "row": 2,
-                "height": 160,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_ba.json",
                 "headerAction": {
@@ -910,12 +950,43 @@
                 }
               },
               {
+                "id": "b_dom_pa",
+                "title": "QH",
+                "col": 1,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_pa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_dom_vj",
+                "title": "VJ",
+                "col": 16,
+                "colSpan": 15,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
                 "id": "b_dom_sun",
                 "title": "9G",
-                "col": 21,
-                "colSpan": 20,
+                "col": 31,
+                "colSpan": 15,
                 "row": 2,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_sun.json",
                 "headerAction": {
@@ -926,10 +997,11 @@
               {
                 "id": "b_dom_vu",
                 "title": "VU",
-                "col": 41,
-                "colSpan": 20,
+                "col": 46,
+                "colSpan": 15,
                 "row": 2,
-                "height": 160,
+                "rowSpan": 1,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
                 "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/cf_network_dom_b_dom_vu.json",
                 "headerAction": {
@@ -938,66 +1010,15 @@
                 }
               }
             ]
-          },
-          {
-            "title": "Tương quan doanh thu",
-            "items": [
-              {
-                "id": "b_corr_dt_hq",
-                "title": "Tương quan doanh thu và hiệu quả vận tải hàng không",
-                "col": 1,
-                "colSpan": 39,
-                "row": 1,
-                "height": 420,
-                "aiInsight": {
-                  "text": "Tương quan thị trường nội địa: HANSGN dẫn đầu doanh thu (1.400 tỷ) nhưng lỗ -90 tỷ. Du lịch (+60 tỷ) có hiệu quả tốt nhất.",
-                  "severity": "warn",
-                  "status": 1
-                },
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_dt_hq_dom.json"
-              },
-              {
-                "id": "b_corr_detail_table",
-                "title": "Chi tiết PAX",
-                "col": 40,
-                "colSpan": 21,
-                "row": 1,
-                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/chart/b_corr_detail_table_dom.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_dom_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "extraComponent": {
-                  "type": "insight-card",
-                  "config": {
-                    "title": "Nhận định",
-                    "variant": "info",
-                    "items": [
-                      "<strong>Khách tổng thị trường T7:</strong> đạt 758,7 nghìn lượt, tăng 8,9% so với Cùng kỳ, tăng 13,8% so với T6.",
-                      "<strong>Lũy kế T1–T7:</strong> đạt 4.799 nghìn lượt, tăng 5,3% so với Cùng kỳ."
-                    ],
-                    "showAiBadge": true,
-                    "aiBadgeLabel": "TRỢ LÝ AI"
-                  }
-                }
-              }
-            ]
           }
         ],
         "metricCards": {
-          "accentClassName": "bg-primary",
+          "accentClassName": "bg-regal-blue",
           "items": [
             {
               "id": "pax",
               "status": "compact",
-              "title": "Pax",
+              "title": "Khách vận chuyển",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -1014,12 +1035,15 @@
                 }
               ],
               "defaultSelected": true,
-              "drillDownPath": null
+              "drillDownPath": null,
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "ask",
               "status": "compact",
-              "title": "ASK",
+              "title": "Ghế luân chuyển",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -1035,12 +1059,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/ask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "lf",
               "status": "compact",
-              "title": "LF",
+              "title": "Hệ số sử dụng ghế",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -1056,33 +1083,39 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/lf/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
-              "id": "raskpax",
+              "id": "rtk",
               "status": "compact",
-              "title": "RASKpax",
-              "value": "2,850",
-              "unit": "VND/ghế.km",
+              "title": "Tấn luân chuyển",
+              "value": "1,280",
+              "unit": "tỷ tấn.km",
               "trend": [
                 {
                   "direction": "flat",
-                  "label": "102.6% với Kế hoạch",
-                  "tone": "positive",
+                  "label": "90.9% với Kế hoạch",
+                  "tone": "negative",
                   "status": 0
                 },
                 {
                   "direction": "up",
-                  "label": "4.2% với Cùng kỳ",
+                  "label": "8.2% với Cùng kỳ",
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rtk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "DT VTHK",
+              "title": "Doanh thu vận tải hàng không",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -1098,12 +1131,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/dt_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "HQ SO CPBD",
+              "title": "Hiệu quả so với chi phí biến đổi",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -1119,12 +1155,15 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_so_cpbd/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             },
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "HQ VTHK (*)",
+              "title": "Hiệu quả VTHK (*)",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -1140,19 +1179,68 @@
                   "tone": "positive"
                 }
               ],
-              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json"
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/hq_vthk/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
+            },
+            {
+              "id": "raskpax",
+              "status": "compact",
+              "title": "Thu suất trên 1 ghế luân chuyển",
+              "value": "2,850",
+              "unit": "VND/ghế.km",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "102.6% với Kế hoạch",
+                  "tone": "positive",
+                  "status": 0
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "tone": "positive"
+                }
+              ],
+              "drillDownPath": "apiV5/domain/ceo-command-center/commerce/2026/W30/passenger/vn/drilldown/rask/index.json",
+              "colorTokens": {
+                "visualization": "#22C55E"
+              }
             }
           ],
           "layout": {
-            "columns": 4,
-            "gap": 12
+            "columns": 4
           }
         }
       }
     }
   },
   "timeFrameHiddenModes": [
-    "quarter",
     "custom"
-  ]
+  ],
+  "filterColumns": 60,
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Thị trường quốc tế — Khách tổng T7:</strong> đạt <strong>471</strong> nghìn lượt, tăng <strong>10%</strong> so với Cùng kỳ, tăng <strong>21,3%</strong> so với T6.",
+        "<strong>Thị trường quốc tế — Lũy kế T1–T7:</strong> đạt <strong>2.716</strong> nghìn lượt, tăng <strong>14,6%</strong> so với Cùng kỳ, vượt <strong>5%</strong> so với Kế hoạch.",
+        "<strong>Thị trường nội địa — Khách tổng T7:</strong> đạt <strong>758,7</strong> nghìn lượt, tăng <strong>8,9%</strong> so với Cùng kỳ, tăng <strong>13,8%</strong> so với T6."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "items": [
+        "<strong>EUR:</strong> thị phần giảm 1.2% so với Cùng kỳ, cần rà soát tần suất khai thác đường bay châu Âu",
+        "<strong>NEA:</strong> thị phần giảm 2.1% so với Cùng kỳ, áp lực cạnh tranh từ các hãng Trung Quốc",
+        "<strong>SEA & CLMV:</strong> thị phần giảm 0.8%, đối thủ mở rộng đường bay nội khối ASEAN",
+        "<strong>Nội địa:</strong> ổn định, thị phần VNA group giữ 52% (+1% so với tháng trước)"
+      ],
+      "variant": "danger"
+    }
+  }
 }
