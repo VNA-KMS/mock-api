@@ -1,0 +1,87 @@
+{
+  "severity": {
+    "title": "Bảng phân loại sự cố",
+    "columns": [
+      { "id": "label", "label": "Phân loại sự cố", "type": "text", "align": "left" },
+      { "id": "thisMonth", "label": "Tháng này", "type": "number", "align": "center" },
+      { "id": "lastMonth", "label": "Tháng trước", "type": "number", "align": "center" },
+      { "id": "samePeriod", "label": "Cùng kỳ", "type": "number", "align": "center" },
+      { "id": "ytd", "label": "Luỹ kế từ đầu năm", "type": "number", "align": "center" },
+      { "id": "ytdSame", "label": "Cùng kỳ luỹ kế", "type": "number", "align": "center" }
+    ],
+    "rows": [
+      { "id": "a", "tone": "critical", "cells": { "label": "A (rất nặng)", "thisMonth": 0, "lastMonth": 0, "samePeriod": 0, "ytd": 0, "ytdSame": 0 } },
+      { "id": "b", "tone": "high", "cells": { "label": "B (nặng)", "thisMonth": 0, "lastMonth": 1, "samePeriod": 0, "ytd": 1, "ytdSame": 0 } },
+      { "id": "c", "tone": "medium", "cells": { "label": "C (trung bình)", "thisMonth": 0, "lastMonth": 1, "samePeriod": 1, "ytd": 2, "ytdSame": 1 } },
+      { "id": "d", "tone": "low", "cells": { "label": "D (nhẹ)", "thisMonth": 2, "lastMonth": 2, "samePeriod": 3, "ytd": 7, "ytdSame": 6 } },
+      { "id": "e", "tone": "other", "cells": { "label": "E (khác)", "thisMonth": 11, "lastMonth": 10, "samePeriod": 9, "ytd": 33, "ytdSame": 28 } },
+      { "id": "total", "tone": "total", "cells": { "label": "Tổng cộng", "thisMonth": 13, "lastMonth": 14, "samePeriod": 13, "ytd": 43, "ytdSame": 35 } }
+    ]
+  },
+  "incidents": {
+    "columns": [
+      { "id": "field", "label": "Lĩnh vực", "type": "text", "align": "left", "width": 120 },
+      { "id": "name", "label": "Tên sự cố", "type": "text", "align": "left" },
+      { "id": "date", "label": "Ngày xảy ra", "type": "text", "align": "left", "width": 120 },
+      { "id": "route", "label": "Chặng bay", "type": "flight-route", "align": "left", "width": 120 }
+    ],
+    "rows": [
+      { "id": "1", "cells": { "field": "Khai thác bay", "name": "Máy bay rẽ đường băng khi hạ cánh", "date": "12/05/2026", "route": { "from": "HAN", "to": "SGN", "direction": "outbound" } } },
+      { "id": "2", "cells": { "field": "Khai thác bay", "name": "Cảnh báo va chạm trên không (TCAS)", "date": "15/05/2026", "route": { "from": "DAD", "to": "HAN", "direction": "outbound" } } },
+      { "id": "3", "cells": { "field": "Kỹ thuật", "name": "Sự cố kỹ thuật động cơ trước chuyến bay", "date": "28/05/2026", "route": { "from": "SGN", "to": "HAN", "direction": "inbound" } } },
+      { "id": "4", "cells": { "field": "Kỹ thuật", "name": "Sự cố hệ thống thông tin liên lạc", "date": "02/06/2026", "route": { "from": "HAN", "to": "DAD", "direction": "inbound" } } },
+      { "id": "5", "cells": { "field": "Khai thác mặt đất", "name": "Chuyển hướng khẩn cấp do thời tiết", "date": "18/03/2026", "route": { "from": "HAN", "to": "DAD", "direction": "inbound" } } }
+    ]
+  },
+  "pax": {
+    "title": "Chi tiết PAX",
+    "columns": [
+      { "id": "area", "label": "Area", "type": "chip", "align": "left" },
+      { "id": "th", "label": "TH", "type": "number", "align": "center", "decimals": 1 },
+      { "id": "ck", "label": "CK", "type": "number", "align": "center", "decimals": 1 },
+      { "id": "kh", "label": "KH", "type": "number", "align": "center", "decimals": 1 },
+      { "id": "pctCk", "label": "%CK", "type": "trend", "align": "center" },
+      { "id": "pctKh", "label": "%KH", "type": "trend", "align": "center" },
+      { "id": "unit", "label": "Đơn vị", "type": "text", "align": "left" }
+    ],
+    "rows": [
+      { "id": "clmv", "cells": { "area": { "label": "CLMV", "color": "blue" }, "th": 342.6, "ck": 324.7, "kh": 335.6, "pctCk": { "direction": "up", "label": "+5,5%", "color": "green" }, "pctKh": { "direction": "up", "label": "+2,1%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "nea", "cells": { "area": { "label": "NEA", "color": "green" }, "th": 229.2, "ck": 214.3, "kh": 225.1, "pctCk": { "direction": "up", "label": "+7,0%", "color": "green" }, "pctKh": { "direction": "up", "label": "+1,8%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "mid", "cells": { "area": { "label": "MID", "color": "yellow" }, "th": 300.7, "ck": 286.1, "kh": 295.0, "pctCk": { "direction": "up", "label": "+5,1%", "color": "green" }, "pctKh": { "direction": "up", "label": "+1,9%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "noa", "cells": { "area": { "label": "NOA", "color": "yellow" }, "th": 64.8, "ck": 59.1, "kh": 62.0, "pctCk": { "direction": "up", "label": "+9,6%", "color": "green" }, "pctKh": { "direction": "up", "label": "+4,5%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "swp", "cells": { "area": { "label": "SWP", "color": "blue" }, "th": 156.3, "ck": 148.9, "kh": 152.0, "pctCk": { "direction": "up", "label": "+5,0%", "color": "green" }, "pctKh": { "direction": "up", "label": "+2,8%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "sea", "cells": { "area": { "label": "SEA", "color": "green" }, "th": 421.5, "ck": 398.2, "kh": 410.0, "pctCk": { "direction": "up", "label": "+5,8%", "color": "green" }, "pctKh": { "direction": "up", "label": "+2,8%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "eur", "cells": { "area": { "label": "EUR", "color": "blue" }, "th": 188.4, "ck": 175.6, "kh": 182.0, "pctCk": { "direction": "up", "label": "+7,3%", "color": "green" }, "pctKh": { "direction": "up", "label": "+2,8%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "sas", "cells": { "area": { "label": "SAS", "color": "yellow" }, "th": 95.2, "ck": 88.4, "kh": 92.0, "pctCk": { "direction": "up", "label": "+7,7%", "color": "green" }, "pctKh": { "direction": "up", "label": "+3,5%", "color": "green" }, "unit": "nghìn khách" } },
+      { "id": "hansgn", "cells": { "area": { "label": "HANSGN", "color": "red" }, "th": 512.0, "ck": 486.5, "kh": 500.0, "pctCk": { "direction": "up", "label": "+5,2%", "color": "green" }, "pctKh": { "direction": "up", "label": "+2,4%", "color": "green" }, "unit": "nghìn khách" } }
+    ]
+  },
+  "kpi": {
+    "density": "comfortable",
+    "columns": [
+      { "id": "stt", "label": "STT", "type": "text", "align": "center", "width": 44 },
+      { "id": "name", "label": "Tên KPI", "type": "text-stack", "align": "left", "width": 253 },
+      { "id": "unit", "label": "Đơn vị đo lường", "type": "number", "align": "left", "width": 154 },
+      { "id": "target", "label": "Mục tiêu", "type": "number", "align": "left", "width": 79 },
+      { "id": "actual", "label": "Thực hiện", "type": "number", "align": "left", "width": 84 },
+      { "id": "vsPrev", "label": "So với kỳ trước", "type": "progress", "align": "left", "width": 173 },
+      { "id": "vsCk", "label": "So với CK", "type": "trend", "align": "center", "width": 77 },
+      { "id": "eval", "label": "Đánh giá", "type": "status", "align": "center", "width": 78 },
+      { "id": "action", "label": "", "type": "action-button", "align": "center", "width": 124 }
+    ],
+    "rows": [
+      { "id": "hr-1", "kind": "group", "group": { "title": "Tổ chức nhân lực", "icon": "team", "badges": [{ "label": "3 ĐẠT", "tone": "success" }, { "label": "2 KHÔNG ĐẠT", "tone": "danger" }], "defaultExpanded": true } },
+      { "id": "01", "groupId": "hr-1", "cells": { "stt": "01", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 2, "target": 12, "actual": 13, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "02", "groupId": "hr-1", "cells": { "stt": "02", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 3, "target": 14, "actual": 15, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "03", "groupId": "hr-1", "cells": { "stt": "03", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 4, "target": 16, "actual": 17, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "04", "groupId": "hr-1", "cells": { "stt": "04", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 5, "target": 18, "actual": 19, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "down", "label": "2,5%", "color": "red" }, "eval": { "label": "K ĐẠT", "tone": "danger" }, "action": "Chi tiết" } },
+      { "id": "05", "groupId": "hr-1", "cells": { "stt": "05", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 6, "target": 20, "actual": 21, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "down", "label": "2,5%", "color": "red" }, "eval": { "label": "K ĐẠT", "tone": "danger" }, "action": "Chi tiết" } },
+      { "id": "hr-2", "kind": "group", "group": { "title": "Tổ chức nhân lực", "icon": "team", "badges": [{ "label": "3 ĐẠT", "tone": "success" }, { "label": "2 KHÔNG ĐẠT", "tone": "danger" }], "defaultExpanded": true } },
+      { "id": "06", "groupId": "hr-2", "cells": { "stt": "01", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 2, "target": 12, "actual": 13, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "07", "groupId": "hr-2", "cells": { "stt": "02", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 3, "target": 14, "actual": 15, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "08", "groupId": "hr-2", "cells": { "stt": "03", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 4, "target": 16, "actual": 17, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "up", "label": "13%", "color": "green" }, "eval": { "label": "ĐẠT", "tone": "success" }, "action": "Chi tiết" } },
+      { "id": "09", "groupId": "hr-2", "cells": { "stt": "04", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 5, "target": 18, "actual": 19, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "down", "label": "2,5%", "color": "red" }, "eval": { "label": "K ĐẠT", "tone": "danger" }, "action": "Chi tiết" } },
+      { "id": "10", "groupId": "hr-2", "cells": { "stt": "05", "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" }, "unit": 6, "target": 20, "actual": 21, "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" }, "vsCk": { "direction": "down", "label": "2,5%", "color": "red" }, "eval": { "label": "K ĐẠT", "tone": "danger" }, "action": "Chi tiết" } }
+    ]
+  }
+}

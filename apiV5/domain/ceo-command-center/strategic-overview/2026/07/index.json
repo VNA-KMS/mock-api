@@ -2,401 +2,437 @@
   "titleInfo": {
     "title": "Strategic Overview",
     "statusLabel": "REAL TIME",
-    "description": "Toàn cảnh sức khoẻ doanh nghiệp — 5 KPIs tiêu biểu mỗi nhóm"
+    "description": "Tổng quan KPIs — tỷ lệ đạt mục tiêu, hiệu suất theo khối và bảng chi tiết"
   },
-  
-  "groups": [
+  "chartBoard": [
     {
-      "label": "Finance",
-      "accentClassName": "bg-green-haze",
-      "accentColor": "#059669",
       "items": [
         {
-          "id": "so_fin_tri",
-          "status": "compact",
-          "title": "Tổng doanh thu và thu nhập",
-          "value": "21.500",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "1.2% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "9% so với Cùng kỳ", "tone": "positive" }
-          ]
+          "id": "so_donut_kpi",
+          "title": "TỔNG KPI THÁNG",
+          "titleClassName": "text-[#6F829B]",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "height": 156,
+          "autoChart": {
+            "chartType": "donut-kpi",
+            "dataset": {
+              "columns": [
+                { "id": "label", "type": "string" },
+                { "id": "value", "type": "number", "color": ["#22c55e", "#ef4444"] }
+              ],
+              "rows": [
+                ["ĐẠT", 48],
+                ["KHÔNG ĐẠT", 16]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "donut-kpi",
+                "xField": "label",
+                "series": [{ "field": "value", "chartType": "donut-kpi" }]
+              }
+            ]
+          },
+          "extraComponent": {
+            "type": "kpi-summary",
+            "position": "right",
+            "chartSpan": 4,
+            "extraSpan": 8,
+            "config": {
+              "total": 64,
+              "passed": 48,
+              "failed": 16,
+              "totalLabel": "TẤT CẢ CHỈ TIÊU",
+              "passedLabel": "ĐẠT",
+              "failedLabel": "KHÔNG ĐẠT"
+            }
+          }
         },
         {
-          "id": "so_fin_rev",
-          "status": "compact",
-          "title": "Doanh thu HĐKD",
-          "value": "20.100",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "0.8% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "8% so với Cùng kỳ", "tone": "positive" }
-          ]
+          "id": "so_bar_by_block",
+          "title": "TỶ LỆ ĐẠT MT THEO KHỐI",
+          "titleClassName": "text-[#6F829B]",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 2,
+          "autoChart": {
+            "chartType": "bar-h-stacked",
+            "dataset": {
+              "columns": [
+                { "id": "group", "type": "string", "label": "Khối" },
+                { "id": "dat", "type": "number", "label": "Đạt", "color": "#22C55E" },
+                { "id": "khongDat", "type": "number", "label": "Không đạt", "color": "#EF4444" }
+              ],
+              "rows": [
+                ["Khối thương mại", 124, 57],
+                ["Khối kỹ thuật", 109, 71],
+                ["Khối khai thác", 97, 87],
+                ["Khối tài chính", 90, 83],
+                ["Khối dịch vụ", 106, 82],
+                ["Khối an toàn", 124, 79],
+                ["Khối nhân sự", 117, 87],
+                ["Khối CNTT", 133, 73],
+                ["Khối pháp chế", 125, 81],
+                ["Khối khác", 133, 88]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "bar-h-stacked",
+                "xField": "group",
+                "stack": "total",
+                "labelInside": true,
+                "series": [
+                  { "field": "dat", "chartType": "bar" },
+                  { "field": "khongDat", "chartType": "bar" }
+                ]
+              }
+            ]
+          }
         },
         {
-          "id": "so_fin_lntt",
-          "status": "compact",
-          "title": "Lợi nhuận trước thuế",
-          "value": "1.820",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "4% so với Kế hoạch", "tone": "negative" },
-            { "direction": "up", "label": "7% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_fin_cash",
-          "status": "compact",
-          "title": "Dòng tiền",
-          "value": "4.250",
-          "unit": "tỷ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "2.1% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "15% so với Cùng kỳ", "tone": "positive" }
-          ]
+          "id": "so_kpi_distribution",
+          "title": "PHÂN BỔ KPI THEO KHỐI",
+          "titleClassName": "text-[#6F829B]",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "height": 156,
+          "autoChart": {
+            "chartType": "kpi-distribution",
+            "dataset": {
+              "columns": [
+                { "id": "label", "type": "string" },
+                { "id": "value", "type": "number" }
+              ],
+              "rows": [
+                ["Khối thương mại", 11],
+                ["Khối kỹ thuật", 9],
+                ["Khối khai thác", 8],
+                ["Khối tài chính", 7],
+                ["Khối dịch vụ", 6],
+                ["Khối an toàn", 5],
+                ["Khối nhân sự", 4],
+                ["Khối CNTT", 3],
+                ["Khối pháp chế", 2],
+                ["Khối khác", 9]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "kpi-distribution",
+                "xField": "label",
+                "series": [{ "field": "value", "chartType": "kpi-distribution" }]
+              }
+            ]
+          },
+          "extraComponent": {
+            "type": "kpi-distribution",
+            "position": "right",
+            "chartSpan": 4,
+            "extraSpan": 8,
+            "config": {
+              "items": [
+                { "label": "Khối thương mại", "color": "#5b9cf6" },
+                { "label": "Khối kỹ thuật", "color": "#7b3fe4" },
+                { "label": "Khối khai thác", "color": "#43b9e6" },
+                { "label": "Khối tài chính", "color": "#8f79f1" },
+                { "label": "Khối dịch vụ", "color": "#f7a213" },
+                { "label": "Khối an toàn", "color": "#f56f81" },
+                { "label": "Khối nhân sự", "color": "#35c76a" },
+                { "label": "Khối CNTT", "color": "#68a5f5" },
+                { "label": "Khối pháp chế", "color": "#3cd0a3" },
+                { "label": "Khối khác", "color": "#f4c628" }
+              ]
+            }
+          }
         }
       ]
     },
     {
-      "label": "Operation",
-      "accentColor": "#00558F",
       "items": [
         {
-          "id": "so_ops_flt",
-          "status": "compact",
-          "title": "Chuyến bay",
-          "value": "12.400",
-          "unit": "chuyến",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "0.8% so với Kế hoạch", "tone": "negative" },
-            { "direction": "up", "label": "2% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_ops_bh",
-          "status": "compact",
-          "title": "Giờ bay",
-          "value": "42.800",
-          "unit": "giờ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "0.5% so với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "3% so với Cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_ops_otpd",
-          "status": "compact",
-          "title": "OTP đi",
-          "value": "85.1",
-          "unit": "%",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "2% so với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% so với Cùng kỳ", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_ops_otpa",
-          "status": "compact",
-          "title": "OTP đến",
-          "value": "86.2",
-          "unit": "%",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "1.8% so với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% so với Cùng kỳ", "tone": "negative" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Technic",
-      "accentClassName": "bg-ecstasy",
-      "accentColor": "#F97316",
-      "items": [
-        {
-          "id": "so_tec_arl",
-          "status": "compact",
-          "title": "ARL - Độ sẵn sàng khai thác",
-          "value": "91.8",
-          "unit": "%",
-          "backgroundStatus": 3,
-          "trend": [
-            { "direction": "down", "label": "1.4% với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "1% với Cùng kỳ", "tone": "negative", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_tec_ocr",
-          "status": "compact",
-          "title": "OCR - Tỷ lệ quá hạn định kỳ",
-          "value": "1.2",
-          "unit": "%",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "0.2% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "0.1% với Cùng kỳ", "tone": "positive", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_tec_dr",
-          "status": "compact",
-          "title": "DR - Độ tin cậy cất cánh",
-          "value": "99.1",
-          "unit": "%",
-          "backgroundStatus": 3,
-          "trend": [
-            { "direction": "down", "label": "0.4% với Kế hoạch", "tone": "negative" },
-            { "direction": "down", "label": "0.1% với Cùng kỳ", "tone": "negative", "status": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Safety",
-      "accentClassName": "bg-watercourse",
-      "accentColor": "#10B981",
-      "items": [
-        {
-          "id": "so_saf_total",
-          "status": "compact",
-          "title": "Số vụ việc b/c Cục HK",
-          "value": "42",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "2 so với tháng trước", "tone": "positive" },
-            { "direction": "down", "label": "5 so với cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_rate",
-          "status": "compact",
-          "title": "Sự cố / 10.000 chuyến bay",
-          "value": "7,93",
-          "unit": "/10.000cb",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "đạt 97,7% mục tiêu (8,12)", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_human",
-          "status": "compact",
-          "title": "Sự cố yếu tố con người",
-          "value": "8",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "1 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "2 so với cùng kỳ", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_saf_flight",
-          "status": "compact",
-          "title": "Sự cố LV khai thác bay",
-          "value": "6",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "down", "label": "1 so với tháng trước", "tone": "positive" },
-            { "direction": "down", "label": "2 so với cùng kỳ", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_saf_tech",
-          "status": "compact",
-          "title": "Sự cố LV kỹ thuật",
-          "value": "5",
-          "unit": "số vụ",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "0 so với tháng trước", "tone": "neutral" },
-            { "direction": "down", "label": "1 so với cùng kỳ", "tone": "positive" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Service",
-      "accentColor": "#BE185D",
-      "items": [
-        {
-          "id": "so_svc_nps",
-          "status": "compact",
-          "title": "NPS",
-          "value": "72",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "1.2 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "3.5 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "2 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_nps_dom",
-          "status": "compact",
-          "title": "NPS DOM",
-          "value": "68",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "down", "label": "0.5 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "2.1 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "1 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_nps_int",
-          "status": "compact",
-          "title": "NPS INT",
-          "value": "76",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "2.0 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "4.8 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "3 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_csi",
-          "status": "compact",
-          "title": "CSI",
-          "value": "4.12",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "0.05 so với tháng trước", "tone": "positive" },
-            { "direction": "up", "label": "0.12 so với cùng kỳ", "tone": "positive" },
-            { "direction": "up", "label": "0.02 so với mục tiêu", "tone": "positive" }
-          ]
-        },
-        {
-          "id": "so_svc_csi_dom",
-          "status": "compact",
-          "title": "CSI DOM",
-          "value": "3.98",
-          "unit": "điểm",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "down", "label": "0.03 so với tháng trước", "tone": "negative" },
-            { "direction": "up", "label": "0.08 so với cùng kỳ", "tone": "positive" },
-            { "direction": "down", "label": "0.01 so với mục tiêu", "tone": "negative" }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Exchange Rate & Fuel",
-      "accentClassName": "bg-amber-light",
-      "accentColor": "#F59E0B",
-      "items": [
-        {
-          "id": "so_fx_jet",
-          "status": "compact",
-          "title": "Jet A1",
-          "value": "95.9",
-          "unit": "USD/bbl",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "3.1% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "6.6% với TB năm ngoái", "tone": "positive", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_fx_fuel",
-          "status": "compact",
-          "title": "Fuel Cost",
-          "value": "6800",
-          "unit": "tỷ",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "2.6% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "8% với Cùng kỳ", "tone": "positive", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_fx_rate",
-          "status": "compact",
-          "title": "VND/USD FX",
-          "value": "25400",
-          "unit": "đ",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "1.2% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "3% với Cùng kỳ", "tone": "positive", "status": 0 }
-          ]
-        },
-        {
-          "id": "so_fx_cash",
-          "status": "compact",
-          "title": "Dòng tiền",
-          "value": "4250",
-          "unit": "tỷ",
-          "backgroundStatus": 1,
-          "trend": [
-            { "direction": "up", "label": "2.1% với Kế hoạch", "tone": "positive" },
-            { "direction": "up", "label": "5.5% với Cùng kỳ", "tone": "positive", "status": 0 }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Market Share",
-      "accentClassName": "bg-red-dark",
-      "accentColor": "#DC2626",
-      "items": [
-        {
-          "id": "so_mkt_tot",
-          "status": "compact",
-          "title": "Khách tổng thị trường",
-          "value": "1095",
-          "unit": "nghìn",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "4% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "1% với Kế hoạch", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_mkt_int",
-          "status": "compact",
-          "title": "Khách QT",
-          "value": "420",
-          "unit": "nghìn",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "6% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "2% với Kế hoạch", "tone": "negative" }
-          ]
-        },
-        {
-          "id": "so_mkt_dom",
-          "status": "compact",
-          "title": "Khách Nội địa",
-          "value": "675",
-          "unit": "nghìn",
-          "backgroundStatus": 2,
-          "trend": [
-            { "direction": "up", "label": "2% với Cùng kỳ", "tone": "positive", "status": 0 },
-            { "direction": "down", "label": "3% với Kế hoạch", "tone": "negative" }
-          ]
+          "id": "so_kpi_table",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "table": {
+            "density": "comfortable",
+            "columns": [
+              { "id": "stt", "label": "STT", "type": "text", "align": "center", "width": 44 },
+              { "id": "name", "label": "Tên KPI", "type": "text-stack", "align": "left", "width": 253 },
+              { "id": "unit", "label": "Đơn vị đo lường", "type": "text", "align": "left", "width": 154 },
+              { "id": "target", "label": "Mục tiêu", "type": "number", "align": "left", "width": 79 },
+              { "id": "actual", "label": "Thực hiện", "type": "number", "align": "left", "width": 84 },
+              { "id": "vsPrev", "label": "So với kỳ trước", "type": "progress", "align": "left", "width": 173 },
+              { "id": "vsCk", "label": "So với CK", "type": "trend", "align": "center", "width": 77 },
+              { "id": "eval", "label": "Đánh giá", "type": "status", "align": "center", "width": 78 },
+              { "id": "action", "label": "", "type": "action-button", "align": "center", "width": 124 }
+            ],
+            "rows": [
+              {
+                "id": "grp-hr-1",
+                "kind": "group",
+                "group": {
+                  "title": "Tổ chức nhân lực",
+                  "icon": "team",
+                  "badges": [
+                    { "label": "5 ĐẠT", "tone": "success" },
+                    { "label": "2 KHÔNG ĐẠT", "tone": "danger" }
+                  ],
+                  "defaultExpanded": true
+                }
+              },
+              {
+                "id": "01",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "01",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": { "label": "113%", "fill": 0.95, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "02",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "02",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": { "label": "108%", "fill": 0.9, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "03",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "03",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "4",
+                  "target": 16,
+                  "actual": 17,
+                  "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "04",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "04",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "5",
+                  "target": 18,
+                  "actual": 16,
+                  "vsPrev": { "label": "87%", "fill": 0.72, "tone": "danger" },
+                  "vsCk": { "direction": "down", "label": "2,5%", "color": "red" },
+                  "eval": { "label": "K ĐẠT", "tone": "danger" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "05",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "05",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "6",
+                  "target": 20,
+                  "actual": 16,
+                  "vsPrev": { "label": "82%", "fill": 0.68, "tone": "danger" },
+                  "vsCk": { "direction": "down", "label": "2,5%", "color": "red" },
+                  "eval": { "label": "K ĐẠT", "tone": "danger" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "06",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "06",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": { "label": "113%", "fill": 0.95, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "07",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "07",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": { "label": "108%", "fill": 0.9, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "grp-hr-2",
+                "kind": "group",
+                "group": {
+                  "title": "Tổ chức nhân lực",
+                  "icon": "team",
+                  "badges": [
+                    { "label": "5 ĐẠT", "tone": "success" },
+                    { "label": "2 KHÔNG ĐẠT", "tone": "danger" }
+                  ],
+                  "defaultExpanded": true
+                }
+              },
+              {
+                "id": "08",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "01",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": { "label": "113%", "fill": 0.95, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "09",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "02",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": { "label": "108%", "fill": 0.9, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "10",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "03",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "4",
+                  "target": 16,
+                  "actual": 17,
+                  "vsPrev": { "label": "103%", "fill": 0.87, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "11",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "04",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "5",
+                  "target": 18,
+                  "actual": 16,
+                  "vsPrev": { "label": "87%", "fill": 0.72, "tone": "danger" },
+                  "vsCk": { "direction": "down", "label": "2,5%", "color": "red" },
+                  "eval": { "label": "K ĐẠT", "tone": "danger" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "12",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "05",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "6",
+                  "target": 20,
+                  "actual": 16,
+                  "vsPrev": { "label": "82%", "fill": 0.68, "tone": "danger" },
+                  "vsCk": { "direction": "down", "label": "2,5%", "color": "red" },
+                  "eval": { "label": "K ĐẠT", "tone": "danger" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "13",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "06",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": { "label": "113%", "fill": 0.95, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "14",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "07",
+                  "name": { "title": "Năng suất lao động", "subtitle": "Mã KPI" },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": { "label": "108%", "fill": 0.9, "tone": "success" },
+                  "vsCk": { "direction": "up", "label": "13%", "color": "green" },
+                  "eval": { "label": "ĐẠT", "tone": "success" },
+                  "action": "Chi tiết"
+                }
+              }
+            ]
+          }
         }
       ]
     }
   ],
-  "cardHtml": {
-    "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá chung</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Toàn TCT: 3/8 lĩnh vực không đạt KH (OTP, NPS, ARL) — tập trung khối Vận hành & Kỹ thuật.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Tài chính & thị trường giữ nhịp: TRI +1,2% KH, dòng tiền trên ngưỡng an toàn.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#004071\"></span>Hiển thị 5 KPIs tiêu biểu mỗi nhóm — đánh giá nhanh sức khoẻ toàn doanh nghiệp.</li></ul></div>",
-    "backgroundClassName": "bg-polar",
-    "borderClassName": "border-regal-blue"
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI",
+      "items": [
+        "<strong>OTP/OSP giảm mạnh:</strong> OTP đi -21.7%, OTP đến -30.1%; OSP đi -5.4%, OSP đến -16.6% so với MT",
+        "Thời tiết &amp; ATFM (mưa dông tại CXR, HAN, SGN, PQC) gây ảnh hưởng tổng cộng 174 chuyến bay trên toàn mạng, trong đó VN335 phải divert HPH và VN1835 tiếp cận hụt phải quay lại SGN",
+        "Sự cố kỹ thuật VNA612 (MEL \"stater vlv\") gây đổi tàu, delay VN641/640."
+      ]
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "items": [
+        "<strong>OTP/OSP giảm mạnh:</strong> OTP đi -21.7%, OTP đến -30.1%; OSP đi -5.4%, OSP đến -16.6% so với MT",
+        "Thời tiết &amp; ATFM (mưa dông tại CXR, HAN, SGN, PQC) gây ảnh hưởng tổng cộng 174 chuyến bay trên toàn mạng, trong đó VN335 phải divert HPH và VN1835 tiếp cận hụt phải quay lại SGN",
+        "<strong>Nguyên nhân delay</strong> lớn nhất là ảnh hưởng dây chuyền từ chặng trước, chiếm 34.4% — vượt trội so với traffic (7.6%), thời tiết (1.6%), kỹ thuật (0.2%)"
+      ]
+    }
   }
 }
