@@ -143,7 +143,7 @@
           "id": "chart_arl",
           "title": "Hệ số sẵn sàng khai thác tàu bay",
           "col": 1,
-          "colSpan": 40,
+          "colSpan": 23,
           "row": 1,
           "aspectRatio": 1.6,
           "unit": "%",
@@ -158,78 +158,12 @@
           }
         },
         {
-          "id": "arl_summary_table",
-          "title": "Bảng tổng hợp Hệ số sẵn sàng khai thác tàu bay (ARL) theo loại tàu bay",
-          "subTitle": "Đơn vị: %",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "table": {
-            "columns": [
-              {
-                "id": "fleet",
-                "type": "text",
-                "label": "Loại TB"
-              },
-              {
-                "id": "target",
-                "type": "number",
-                "label": "MT năm"
-              },
-              {
-                "id": "actual",
-                "type": "number",
-                "label": "Tháng này"
-              },
-              {
-                "id": "diff",
-                "type": "number",
-                "label": "VS MT"
-              }
-            ],
-            "rows": [
-              {
-                "cells": {
-                  "fleet": "B787",
-                  "target": 95.5,
-                  "actual": 95.1,
-                  "diff": -0.4
-                }
-              },
-              {
-                "cells": {
-                  "fleet": "A350",
-                  "target": 96,
-                  "actual": 96.4,
-                  "diff": 0.4
-                }
-              },
-              {
-                "cells": {
-                  "fleet": "A321",
-                  "target": 94.5,
-                  "actual": 93.6,
-                  "diff": -0.9
-                }
-              },
-              {
-                "cells": {
-                  "fleet": "ATR72",
-                  "target": 94,
-                  "actual": 93.8,
-                  "diff": -0.2
-                }
-              }
-            ]
-          }
-        },
-        {
           "id": "chart_dr_fleet",
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
           "subTitle": "12 tháng gần nhất",
-          "col": 1,
-          "colSpan": 40,
-          "row": 2,
+          "col": 24,
+          "colSpan": 22,
+          "row": 1,
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_dr.json",
@@ -246,9 +180,9 @@
           "id": "dr_summary_table",
           "title": "Bảng tổng hợp Chỉ số độ tin cậy cất cánh kỹ thuật (DR) theo loại tàu bay",
           "subTitle": "Đơn vị: %",
-          "col": 41,
-          "colSpan": 20,
-          "row": 2,
+          "col": 46,
+          "colSpan": 15,
+          "row": 1,
           "table": {
             "columns": [
               {
@@ -303,6 +237,279 @@
                   "target": 94.5,
                   "actual": 94.2,
                   "diff": -0.3
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "AOG",
+      "items": [
+        {
+          "id": "chart_aog_tech",
+          "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
+          "subTitle": "Kỹ thuật (đường cam) so với phi kỹ thuật (đường xám) · vụ/tháng",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
+          "aiInsight": {
+            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm mạnh so CK. Phi kỹ thuật ổn định ~0,48.",
+            "severity": "good"
+          },
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "chart_aog_fleet",
+          "title": "Số chuyến bay dừng bay theo từng loại tàu bay",
+          "subTitle": "Tháng này · nét đứt vàng: mục tiêu/loại",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_fleet.json",
+          "aiInsight": {
+            "text": "A321 có 2 vụ AOG — cao nhất đội. B787 và ATR72 đạt mục tiêu.",
+            "severity": "warn"
+          },
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "chart_aog_cause",
+          "title": "Phân tích theo nguyên nhân dừng bay",
+          "subTitle": "Cấp 1: kỹ thuật vs phi kỹ thuật · Cấp 2: chi tiết theo hệ thống",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_cause.json",
+          "rightTitle": "%",
+          "aiInsight": {
+            "text": "65% AOG do kỹ thuật, trong đó động cơ chiếm 25% — cần ưu tiên kiểm tra động cơ định kỳ.",
+            "severity": "warn"
+          }
+        },
+        {
+          "id": "bqdb_table",
+          "title": "Bảo quản dừng bay (BQDB)",
+          "subTitle": "Dừng bay vì lý do kỹ thuật",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "table": {
+            "columns": [
+              {
+                "id": "reg",
+                "type": "text",
+                "label": "Số hiệu"
+              },
+              {
+                "id": "reason",
+                "type": "text",
+                "label": "Lý do"
+              },
+              {
+                "id": "type",
+                "type": "text",
+                "label": "Loại"
+              },
+              {
+                "id": "status",
+                "type": "text",
+                "label": "Trạng thái"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "reg": "VN-A887",
+                  "reason": "A350 · chờ phụ tùng động cơ",
+                  "type": "A350",
+                  "status": "D-1"
+                }
+              },
+              {
+                "cells": {
+                  "reg": "VN-A621",
+                  "reason": "A321 · kiểm tra kết cấu định kỳ",
+                  "type": "A321",
+                  "status": "D-4"
+                }
+              },
+              {
+                "cells": {
+                  "reg": "VN-A879",
+                  "reason": "B787 · bảo dưỡng C-Check",
+                  "type": "B787",
+                  "status": "D-9"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "Delay",
+      "items": [
+        {
+          "id": "chart_delay_stats",
+          "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
+          "subTitle": "Theo tháng — cột số vụ N-Delay (trục trái) · đường liền thời gian chậm bình quân (trục phải) · đường nét đứt mục tiêu cả năm",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "aspectRatio": 2.2,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_stats.json",
+          "aiInsight": {
+            "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
+            "severity": "crit"
+          },
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "chart_delay_cause",
+          "title": "Nguyên nhân chậm chuyến",
+          "subTitle": "Theo mã nguyên nhân (root cause), % trên tổng số phút chậm",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "aspectRatio": 1.6,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_cause.json",
+          "aiInsight": {
+            "text": "34% delay do tàu bay đến muộn (Mã 71-77). Lỗi kỹ thuật (Mã 41-48) 26%.",
+            "severity": "warn"
+          },
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "chart_delay_breakdown",
+          "title": "Delay theo hãng bay / chặng bay / sân bay",
+          "subTitle": "Chọn cấp độ phân tích",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "aspectRatio": 1.6,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
+          "aiInsight": {
+            "text": "VN Airlines dẫn đầu số vụ delay. Tân Sơn Nhất là sân bay có nhiều delay nhất.",
+            "severity": "warn"
+          }
+        },
+        {
+          "id": "delay_flight_table",
+          "title": "Delay theo từng chuyến bay",
+          "subTitle": "Chi tiết theo chuyến bay · tháng hiện tại",
+          "col": 1,
+          "colSpan": 60,
+          "row": 3,
+          "table": {
+            "columns": [
+              {
+                "id": "flight",
+                "type": "text",
+                "label": "Chuyến bay"
+              },
+              {
+                "id": "route",
+                "type": "text",
+                "label": "Chặng bay"
+              },
+              {
+                "id": "time",
+                "type": "text",
+                "label": "Ngày/ETM/Trạng thái"
+              },
+              {
+                "id": "delay",
+                "type": "text",
+                "label": "Thời gian chậm"
+              },
+              {
+                "id": "cause",
+                "type": "text",
+                "label": "Nguyên nhân chính"
+              },
+              {
+                "id": "status",
+                "type": "text",
+                "label": "Trạng thái xử lý"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "flight": "VN2144",
+                  "route": "SGN → HAN",
+                  "time": "LATE 03:50",
+                  "delay": "+65 phút",
+                  "cause": "ATC Congestion BKK",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN2670",
+                  "route": "SGN → HAN",
+                  "time": "BOARDING 14:10",
+                  "delay": "+15 phút",
+                  "cause": "Late Connecting Pax",
+                  "status": "Chờ đón"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN154",
+                  "route": "DAD → SGN",
+                  "time": "LATE INC 04:30",
+                  "delay": "+50 phút",
+                  "cause": "P1 · Late Aircraft",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN318",
+                  "route": "HAN → SGN",
+                  "time": "ONTIME 16:20",
+                  "delay": "0 phút",
+                  "cause": "—",
+                  "status": "Đúng giờ"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN7192",
+                  "route": "SGN → DAD",
+                  "time": "DELAYED 08:45",
+                  "delay": "+35 phút",
+                  "cause": "Weather · Fog DAD",
+                  "status": "Đang xử lý"
+                }
+              },
+              {
+                "cells": {
+                  "flight": "VN815",
+                  "route": "HAN → ICN",
+                  "time": "LATE 22:10",
+                  "delay": "+20 phút",
+                  "cause": "Crew Scheduling",
+                  "status": "Chờ đón"
                 }
               }
             ]
@@ -686,279 +893,6 @@
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
-        }
-      ]
-    },
-    {
-      "title": "AOG",
-      "items": [
-        {
-          "id": "chart_aog_tech",
-          "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
-          "subTitle": "Kỹ thuật (đường cam) so với phi kỹ thuật (đường xám) · vụ/tháng",
-          "col": 1,
-          "colSpan": 30,
-          "row": 1,
-          "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
-          "aiInsight": {
-            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm mạnh so CK. Phi kỹ thuật ổn định ~0,48.",
-            "severity": "good"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        },
-        {
-          "id": "chart_aog_fleet",
-          "title": "Số chuyến bay dừng bay theo từng loại tàu bay",
-          "subTitle": "Tháng này · nét đứt vàng: mục tiêu/loại",
-          "col": 31,
-          "colSpan": 30,
-          "row": 1,
-          "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_fleet.json",
-          "aiInsight": {
-            "text": "A321 có 2 vụ AOG — cao nhất đội. B787 và ATR72 đạt mục tiêu.",
-            "severity": "warn"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        },
-        {
-          "id": "chart_aog_cause",
-          "title": "Phân tích theo nguyên nhân dừng bay",
-          "subTitle": "Cấp 1: kỹ thuật vs phi kỹ thuật · Cấp 2: chi tiết theo hệ thống",
-          "col": 1,
-          "colSpan": 30,
-          "row": 2,
-          "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_cause.json",
-          "rightTitle": "%",
-          "aiInsight": {
-            "text": "65% AOG do kỹ thuật, trong đó động cơ chiếm 25% — cần ưu tiên kiểm tra động cơ định kỳ.",
-            "severity": "warn"
-          }
-        },
-        {
-          "id": "bqdb_table",
-          "title": "Bảo quản dừng bay (BQDB)",
-          "subTitle": "Dừng bay vì lý do kỹ thuật",
-          "col": 31,
-          "colSpan": 30,
-          "row": 2,
-          "table": {
-            "columns": [
-              {
-                "id": "reg",
-                "type": "text",
-                "label": "Số hiệu"
-              },
-              {
-                "id": "reason",
-                "type": "text",
-                "label": "Lý do"
-              },
-              {
-                "id": "type",
-                "type": "text",
-                "label": "Loại"
-              },
-              {
-                "id": "status",
-                "type": "text",
-                "label": "Trạng thái"
-              }
-            ],
-            "rows": [
-              {
-                "cells": {
-                  "reg": "VN-A887",
-                  "reason": "A350 · chờ phụ tùng động cơ",
-                  "type": "A350",
-                  "status": "D-1"
-                }
-              },
-              {
-                "cells": {
-                  "reg": "VN-A621",
-                  "reason": "A321 · kiểm tra kết cấu định kỳ",
-                  "type": "A321",
-                  "status": "D-4"
-                }
-              },
-              {
-                "cells": {
-                  "reg": "VN-A879",
-                  "reason": "B787 · bảo dưỡng C-Check",
-                  "type": "B787",
-                  "status": "D-9"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "title": "Delay",
-      "items": [
-        {
-          "id": "chart_delay_stats",
-          "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
-          "subTitle": "Theo tháng — cột số vụ N-Delay (trục trái) · đường liền thời gian chậm bình quân (trục phải) · đường nét đứt mục tiêu cả năm",
-          "col": 1,
-          "colSpan": 60,
-          "row": 1,
-          "aspectRatio": 2.2,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_stats.json",
-          "aiInsight": {
-            "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
-            "severity": "crit"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        },
-        {
-          "id": "chart_delay_cause",
-          "title": "Nguyên nhân chậm chuyến",
-          "subTitle": "Theo mã nguyên nhân (root cause), % trên tổng số phút chậm",
-          "col": 1,
-          "colSpan": 30,
-          "row": 2,
-          "aspectRatio": 1.6,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_cause.json",
-          "aiInsight": {
-            "text": "34% delay do tàu bay đến muộn (Mã 71-77). Lỗi kỹ thuật (Mã 41-48) 26%.",
-            "severity": "warn"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        },
-        {
-          "id": "chart_delay_breakdown",
-          "title": "Delay theo hãng bay / chặng bay / sân bay",
-          "subTitle": "Chọn cấp độ phân tích",
-          "col": 31,
-          "colSpan": 30,
-          "row": 2,
-          "aspectRatio": 1.6,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
-          "aiInsight": {
-            "text": "VN Airlines dẫn đầu số vụ delay. Tân Sơn Nhất là sân bay có nhiều delay nhất.",
-            "severity": "warn"
-          }
-        },
-        {
-          "id": "delay_flight_table",
-          "title": "Delay theo từng chuyến bay",
-          "subTitle": "Chi tiết theo chuyến bay · tháng hiện tại",
-          "col": 1,
-          "colSpan": 60,
-          "row": 3,
-          "table": {
-            "columns": [
-              {
-                "id": "flight",
-                "type": "text",
-                "label": "Chuyến bay"
-              },
-              {
-                "id": "route",
-                "type": "text",
-                "label": "Chặng bay"
-              },
-              {
-                "id": "time",
-                "type": "text",
-                "label": "Ngày/ETM/Trạng thái"
-              },
-              {
-                "id": "delay",
-                "type": "text",
-                "label": "Thời gian chậm"
-              },
-              {
-                "id": "cause",
-                "type": "text",
-                "label": "Nguyên nhân chính"
-              },
-              {
-                "id": "status",
-                "type": "text",
-                "label": "Trạng thái xử lý"
-              }
-            ],
-            "rows": [
-              {
-                "cells": {
-                  "flight": "VN2144",
-                  "route": "SGN → HAN",
-                  "time": "LATE 03:50",
-                  "delay": "+65 phút",
-                  "cause": "ATC Congestion BKK",
-                  "status": "Đang xử lý"
-                }
-              },
-              {
-                "cells": {
-                  "flight": "VN2670",
-                  "route": "SGN → HAN",
-                  "time": "BOARDING 14:10",
-                  "delay": "+15 phút",
-                  "cause": "Late Connecting Pax",
-                  "status": "Chờ đón"
-                }
-              },
-              {
-                "cells": {
-                  "flight": "VN154",
-                  "route": "DAD → SGN",
-                  "time": "LATE INC 04:30",
-                  "delay": "+50 phút",
-                  "cause": "P1 · Late Aircraft",
-                  "status": "Đang xử lý"
-                }
-              },
-              {
-                "cells": {
-                  "flight": "VN318",
-                  "route": "HAN → SGN",
-                  "time": "ONTIME 16:20",
-                  "delay": "0 phút",
-                  "cause": "—",
-                  "status": "Đúng giờ"
-                }
-              },
-              {
-                "cells": {
-                  "flight": "VN7192",
-                  "route": "SGN → DAD",
-                  "time": "DELAYED 08:45",
-                  "delay": "+35 phút",
-                  "cause": "Weather · Fog DAD",
-                  "status": "Đang xử lý"
-                }
-              },
-              {
-                "cells": {
-                  "flight": "VN815",
-                  "route": "HAN → ICN",
-                  "time": "LATE 22:10",
-                  "delay": "+20 phút",
-                  "cause": "Crew Scheduling",
-                  "status": "Chờ đón"
-                }
-              }
-            ]
           }
         }
       ]
