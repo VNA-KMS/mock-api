@@ -1,0 +1,48 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "type",
+          "type": "string"
+        },
+        {
+          "id": "sl_pct",
+          "type": "number",
+          "label": "% dự án giải ngân",
+          "color": "#004071"
+        },
+        {
+          "id": "money_pct",
+          "type": "number",
+          "label": "% tiền giải ngân",
+          "color": "#B4901F"
+        }
+      ],
+      "rows": [
+        ["Tàu bay, động cơ", 92, 88],
+        ["TTB", 78, 72],
+        ["XDCB", 65, 58],
+        ["ĐTRNDN", 85, 81]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "type",
+        "series": [
+          {
+            "field": "sl_pct",
+            "chartType": "bar"
+          },
+          {
+            "field": "money_pct",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}
