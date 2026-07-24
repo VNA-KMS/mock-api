@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -16,19 +16,19 @@
         {
           "id": "uth",
           "type": "number",
-          "label": "Ước thực hiện 2026",
+          "label": "UTH 2026",
           "color": "#006D88"
         },
         {
           "id": "plan",
           "type": "number",
-          "label": "Kế hoạch 2026",
+          "label": "KH 2026",
           "color": "#D3AC2B"
         },
         {
           "id": "samePeriod",
           "type": "number",
-          "label": "Cùng kỳ 2025",
+          "label": "2025",
           "color": "#9AA0A6"
         }
       ],
@@ -122,24 +122,26 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "combo",
         "xField": "month",
         "series": [
           {
             "field": "actual",
-            "chartType": "line"
-          },
-          {
-            "field": "uth",
             "chartType": "bar"
           },
           {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
             "field": "plan",
-            "chartType": "line"
+            "chartType": "line",
+            "lineStyle": "dashed"
           },
           {
             "field": "samePeriod",
-            "chartType": "line"
+            "chartType": "bar"
           }
         ]
       }
