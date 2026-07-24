@@ -17,6 +17,22 @@
         "value": "91.8",
         "unit": "%",
         "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            89,
+            89.5,
+            90,
+            90.5,
+            91,
+            91.5,
+            91.2,
+            91.8
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -42,6 +58,22 @@
         "value": "99.1",
         "unit": "%",
         "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            98.5,
+            98.7,
+            98.9,
+            99,
+            99.1,
+            99.2,
+            99,
+            99.1
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -66,8 +98,24 @@
         "title": "MC/ASK",
         "period": "Tháng 03/2026",
         "value": "215",
-        "unit": "VNĐ/ASK",
+        "unit": "VND/ASK",
         "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            205,
+            207,
+            209,
+            211,
+            212,
+            213,
+            214,
+            215
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -89,9 +137,25 @@
         "id": "t_aog",
         "status": "compact",
         "title": "AOG",
-        "value": "1,36",
+        "value": "20",
         "unit": "vụ/10000 chuyến bay",
-        "backgroundStatus": 2,
+        "backgroundStatus": 1,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            22,
+            21,
+            21,
+            20,
+            19,
+            20,
+            19,
+            20
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#22C55E"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -110,12 +174,28 @@
         ]
       },
       {
-        "id": "t_aog",
+        "id": "t_ave_aog",
         "status": "compact",
         "title": "AVE AOG",
-        "value": "3,32",
+        "value": "3",
         "unit": "giờ/vụ",
-        "backgroundStatus": 2,
+        "backgroundStatus": 1,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            4,
+            3.5,
+            3.5,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#22C55E"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -137,9 +217,25 @@
         "id": "t_delay",
         "status": "compact",
         "title": "AVE DELAY",
-        "value": "61,44",
+        "value": "18",
         "unit": "phút/vụ",
         "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            15,
+            15.5,
+            16,
+            16.5,
+            17,
+            17.5,
+            18,
+            18
+          ]
+        },
+        "colorTokens": {
+          "visualization": "#EF4444"
+        },
         "trend": [
           {
             "direction": "flat",
@@ -173,13 +269,14 @@
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_arl.json",
           "aiInsight": {
-            "text": "ARL 94,87% thấp hơn MT 95,5% do B787 bảo dưỡng C-Check kéo dài. Cần theo dõi tiến độ bảo dưỡng đội B787.",
+            "text": "ARL 94,87% thấp hơn MT 95,5% do B787 bảo dưỡng C-Check kéo dài.",
             "severity": "warn"
           },
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "rowSpan": 2
         },
         {
           "id": "chart_dr_fleet",
@@ -197,14 +294,109 @@
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "rowSpan": 2
+        },
+        {
+          "id": "arl_summary_table",
+          "title": "Hệ số sẵn sàng khai thác tàu bay",
+          "col": 46,
+          "colSpan": 15,
+          "row": 1,
+          "table": {
+            "columns": [
+              {
+                "id": "fleet",
+                "type": "badge",
+                "label": "Đội bay"
+              },
+              {
+                "id": "target",
+                "type": "number",
+                "label": "MT năm",
+                "decimals": 1
+              },
+              {
+                "id": "actual",
+                "type": "number",
+                "label": "Thực tế",
+                "decimals": 1
+              },
+              {
+                "id": "diff",
+                "type": "tone-value",
+                "label": "VS MT"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "B787",
+                    "color": "blue"
+                  },
+                  "target": 95.5,
+                  "actual": 94.87,
+                  "diff": {
+                    "value": -0.63,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A350",
+                    "color": "purple"
+                  },
+                  "target": 96,
+                  "actual": 96.2,
+                  "diff": {
+                    "value": 0.2,
+                    "tone": "positive"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A321",
+                    "color": "orange"
+                  },
+                  "target": 95,
+                  "actual": 94.5,
+                  "diff": {
+                    "value": -0.5,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "ATR72",
+                    "color": "teal"
+                  },
+                  "target": 94,
+                  "actual": 93.8,
+                  "diff": {
+                    "value": -0.2,
+                    "tone": "negative"
+                  }
+                }
+              }
+            ],
+            "density": "compact",
+            "format3dec": false
+          },
+          "subTitle": "Đơn vị: %"
         },
         {
           "id": "dr_summary_table",
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
           "col": 46,
           "colSpan": 15,
-          "row": 1,
+          "row": 2,
           "table": {
             "columns": [
               {
@@ -300,7 +492,8 @@
       "items": [
         {
           "id": "chart_delay_stats",
-          "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
+          "title": "Số vụ N-Delay theo tháng",
+          "subTitle": "Đơn vị: Số vụ",
           "col": 21,
           "colSpan": 20,
           "row": 1,
@@ -317,7 +510,7 @@
         },
         {
           "id": "chart_delay_breakdown",
-          "title": "Delay theo hãng bay / chặng bay / sân bay",
+          "title": "Delay theo chặng bay / sân bay",
           "subTitle": "Chọn cấp độ phân tích",
           "col": 41,
           "colSpan": 20,
@@ -325,20 +518,149 @@
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
           "aiInsight": {
-            "text": "VN Airlines dẫn đầu số vụ delay. Tân Sơn Nhất là sân bay có nhiều delay nhất.",
+            "text": "HAN-SGN là chặng có nhiều delay nhất với 95 vụ, chiếm 30% tổng số vụ delay. Tân Sơn Nhất dẫn đầu sân bay với 140 vụ delay.",
             "severity": "warn"
-          }
+          },
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "chang",
+                "label": "Chặng bay"
+              },
+              {
+                "id": "sanbay",
+                "label": "Sân bay"
+              }
+            ],
+            "defaultValue": "chang"
+          },
+          "filterViews": [
+            {
+              "id": "chang",
+              "label": "Chặng bay",
+              "autoChart": {
+                "chartType": "bar-h",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "Số vụ delay",
+                      "color": "#006D88"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "HAN-SGN",
+                      95
+                    ],
+                    [
+                      "SGN-HAN",
+                      82
+                    ],
+                    [
+                      "SGN-DAD",
+                      58
+                    ],
+                    [
+                      "DAD-HAN",
+                      42
+                    ],
+                    [
+                      "HAN-DAD",
+                      36
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "sanbay",
+              "label": "Sân bay",
+              "autoChart": {
+                "chartType": "bar-h",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "Số vụ delay",
+                      "color": "#006D88"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "TSN - Tân Sơn Nhất",
+                      140
+                    ],
+                    [
+                      "NBT - Nội Bài",
+                      110
+                    ],
+                    [
+                      "DAD - Đà Nẵng",
+                      75
+                    ],
+                    [
+                      "CXR - Cam Ranh",
+                      45
+                    ],
+                    [
+                      "VII - Vinh",
+                      30
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_aog_tech",
           "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
+          "subTitle": "Đơn vị: Số chuyến",
           "col": 1,
           "colSpan": 20,
           "row": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
           "aiInsight": {
-            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm mạnh so CK. Phi kỹ thuật ổn định ~0,48.",
+            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm 12% so với cùng kỳ 2025. Phi kỹ thuật ổn định ~0,48 vụ/tháng. A321 ghi nhận 2 vụ AOG trong tháng — cao nhất đội bay.",
             "severity": "good"
           },
           "headerAction": {
@@ -359,16 +681,295 @@
           "colSpan": 20,
           "row": 1,
           "aspectRatio": 1.5,
-          "unit": "tỷ VNĐ",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_mc_ask_dept.json",
-          "aiInsight": {
-            "text": "Tổng MC/ASK ước 16.911 tỉ, vượt KH 1%. QLVT chiếm 73% tổng chi phí bảo dưỡng.",
-            "severity": "warn"
-          },
           "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+            "type": "segment",
+            "options": [
+              {
+                "id": "B787",
+                "label": "B787"
+              },
+              {
+                "id": "A350",
+                "label": "A350"
+              },
+              {
+                "id": "A321",
+                "label": "A321"
+              },
+              {
+                "id": "ATR72",
+                "label": "ATR72"
+              }
+            ],
+            "defaultValue": "B787"
+          },
+          "filterViews": [
+            {
+              "id": "B787",
+              "label": "B787",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "dept",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Tổng",
+                      4890,
+                      4840
+                    ],
+                    [
+                      "KT",
+                      760,
+                      740
+                    ],
+                    [
+                      "QLVT",
+                      3570,
+                      3540
+                    ],
+                    [
+                      "ĐTMS",
+                      560,
+                      560
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "dept",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A350",
+              "label": "A350",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "dept",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Tổng",
+                      3620,
+                      3580
+                    ],
+                    [
+                      "KT",
+                      560,
+                      550
+                    ],
+                    [
+                      "QLVT",
+                      2640,
+                      2620
+                    ],
+                    [
+                      "ĐTMS",
+                      420,
+                      410
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "dept",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A321",
+              "label": "A321",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "dept",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Tổng",
+                      7820,
+                      7740
+                    ],
+                    [
+                      "KT",
+                      1210,
+                      1190
+                    ],
+                    [
+                      "QLVT",
+                      5710,
+                      5650
+                    ],
+                    [
+                      "ĐTMS",
+                      900,
+                      900
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "dept",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ATR72",
+              "label": "ATR72",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "dept",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Tổng",
+                      530,
+                      510
+                    ],
+                    [
+                      "KT",
+                      80,
+                      80
+                    ],
+                    [
+                      "QLVT",
+                      390,
+                      380
+                    ],
+                    [
+                      "ĐTMS",
+                      60,
+                      50
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "dept",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_cost_pie",
@@ -378,7 +979,7 @@
           "row": 1,
           "aspectRatio": 1.5,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_pie.json",
-          "rightTitle": "VNĐ/ASK",
+          "subTitle": "Đơn vị: VND/ASK",
           "aiInsight": {
             "text": "Động cơ (ĐC) chiếm 59% cơ cấu chi phí ASK. PTVT và BDTX lần lượt 13,5% và 9,2%.",
             "severity": "good"
@@ -386,39 +987,1249 @@
         },
         {
           "id": "chart_mc_ask",
-          "title": "Chi phí bảo dưỡng theo ASK trong năm",
-          "subTitle": "Đơn vị: tỷ VNĐ",
+          "title": "Chi phí bảo dưỡng theo ASK",
+          "subTitle": "Đơn vị: VND",
           "col": 41,
           "colSpan": 20,
-          "row": 1,
+          "row": 2,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_mc_ask.json",
-          "aiInsight": {
-            "text": "MC/ASK T7: 215 VNĐ/ASK, tăng dần từ đầu năm. Cao hơn KH 2,4% và CK 3,4%.",
-            "severity": "warn"
-          },
           "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+            "type": "segment",
+            "options": [
+              {
+                "id": "B787",
+                "label": "B787"
+              },
+              {
+                "id": "A350",
+                "label": "A350"
+              },
+              {
+                "id": "A321",
+                "label": "A321"
+              },
+              {
+                "id": "ATR72",
+                "label": "ATR72"
+              }
+            ],
+            "defaultValue": "B787"
+          },
+          "filterViews": [
+            {
+              "id": "B787",
+              "label": "B787",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      208,
+                      215
+                    ],
+                    [
+                      "T2",
+                      210,
+                      216
+                    ],
+                    [
+                      "T3",
+                      212,
+                      218
+                    ],
+                    [
+                      "T4",
+                      213,
+                      219
+                    ],
+                    [
+                      "T5",
+                      214,
+                      220
+                    ],
+                    [
+                      "T6",
+                      215,
+                      220
+                    ],
+                    [
+                      "T7",
+                      215,
+                      221
+                    ],
+                    [
+                      "T8",
+                      null,
+                      221
+                    ],
+                    [
+                      "T9",
+                      null,
+                      222
+                    ],
+                    [
+                      "T10",
+                      null,
+                      222
+                    ],
+                    [
+                      "T11",
+                      null,
+                      223
+                    ],
+                    [
+                      "T12",
+                      null,
+                      223
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "combo",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "bar",
+                        "lineStyle": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A350",
+              "label": "A350",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      195,
+                      202
+                    ],
+                    [
+                      "T2",
+                      197,
+                      203
+                    ],
+                    [
+                      "T3",
+                      199,
+                      205
+                    ],
+                    [
+                      "T4",
+                      200,
+                      206
+                    ],
+                    [
+                      "T5",
+                      201,
+                      207
+                    ],
+                    [
+                      "T6",
+                      203,
+                      208
+                    ],
+                    [
+                      "T7",
+                      203,
+                      208
+                    ],
+                    [
+                      "T8",
+                      null,
+                      209
+                    ],
+                    [
+                      "T9",
+                      null,
+                      210
+                    ],
+                    [
+                      "T10",
+                      null,
+                      210
+                    ],
+                    [
+                      "T11",
+                      null,
+                      211
+                    ],
+                    [
+                      "T12",
+                      null,
+                      211
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "combo",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "bar",
+                        "lineStyle": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A321",
+              "label": "A321",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      218,
+                      226
+                    ],
+                    [
+                      "T2",
+                      220,
+                      227
+                    ],
+                    [
+                      "T3",
+                      222,
+                      229
+                    ],
+                    [
+                      "T4",
+                      223,
+                      230
+                    ],
+                    [
+                      "T5",
+                      225,
+                      231
+                    ],
+                    [
+                      "T6",
+                      226,
+                      232
+                    ],
+                    [
+                      "T7",
+                      227,
+                      233
+                    ],
+                    [
+                      "T8",
+                      null,
+                      233
+                    ],
+                    [
+                      "T9",
+                      null,
+                      234
+                    ],
+                    [
+                      "T10",
+                      null,
+                      234
+                    ],
+                    [
+                      "T11",
+                      null,
+                      235
+                    ],
+                    [
+                      "T12",
+                      null,
+                      235
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "combo",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "bar",
+                        "lineStyle": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ATR72",
+              "label": "ATR72",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "db",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      162,
+                      169
+                    ],
+                    [
+                      "T2",
+                      164,
+                      170
+                    ],
+                    [
+                      "T3",
+                      166,
+                      172
+                    ],
+                    [
+                      "T4",
+                      167,
+                      173
+                    ],
+                    [
+                      "T5",
+                      169,
+                      174
+                    ],
+                    [
+                      "T6",
+                      170,
+                      175
+                    ],
+                    [
+                      "T7",
+                      171,
+                      176
+                    ],
+                    [
+                      "T8",
+                      null,
+                      176
+                    ],
+                    [
+                      "T9",
+                      null,
+                      177
+                    ],
+                    [
+                      "T10",
+                      null,
+                      177
+                    ],
+                    [
+                      "T11",
+                      null,
+                      178
+                    ],
+                    [
+                      "T12",
+                      null,
+                      178
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "combo",
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "db",
+                        "chartType": "bar",
+                        "lineStyle": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_cost_bh",
           "title": "CP bảo dưỡng theo BH",
-          "subTitle": "Đơn vị: VNĐ/BH",
+          "subTitle": "Đơn vị: VND/BH",
           "col": 1,
-          "colSpan": 30,
+          "colSpan": 20,
           "row": 2,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_bh.json"
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_bh.json",
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "B787",
+                "label": "B787"
+              },
+              {
+                "id": "A350",
+                "label": "A350"
+              },
+              {
+                "id": "A321",
+                "label": "A321"
+              },
+              {
+                "id": "ATR72",
+                "label": "ATR72"
+              }
+            ],
+            "defaultValue": "B787"
+          },
+          "filterViews": [
+            {
+              "id": "B787",
+              "label": "B787",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      12100,
+                      11700
+                    ],
+                    [
+                      "DVMN",
+                      2700,
+                      2600
+                    ],
+                    [
+                      "BDTX",
+                      11800,
+                      11500
+                    ],
+                    [
+                      "BDDK",
+                      5800,
+                      5600
+                    ],
+                    [
+                      "PTVT",
+                      15800,
+                      15100
+                    ],
+                    [
+                      "Cảng",
+                      800,
+                      800
+                    ],
+                    [
+                      "APU",
+                      2200,
+                      2200
+                    ],
+                    [
+                      "ĐC",
+                      74800,
+                      75000
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A350",
+              "label": "A350",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      8200,
+                      7500
+                    ],
+                    [
+                      "DVMN",
+                      1800,
+                      1600
+                    ],
+                    [
+                      "BDTX",
+                      7900,
+                      7300
+                    ],
+                    [
+                      "BDDK",
+                      3900,
+                      3600
+                    ],
+                    [
+                      "PTVT",
+                      10800,
+                      9800
+                    ],
+                    [
+                      "Cảng",
+                      550,
+                      500
+                    ],
+                    [
+                      "APU",
+                      1500,
+                      1400
+                    ],
+                    [
+                      "ĐC",
+                      51200,
+                      52000
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A321",
+              "label": "A321",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      20500,
+                      19800
+                    ],
+                    [
+                      "DVMN",
+                      4600,
+                      4300
+                    ],
+                    [
+                      "BDTX",
+                      20100,
+                      19400
+                    ],
+                    [
+                      "BDDK",
+                      9900,
+                      9400
+                    ],
+                    [
+                      "PTVT",
+                      26800,
+                      25800
+                    ],
+                    [
+                      "Cảng",
+                      1400,
+                      1300
+                    ],
+                    [
+                      "APU",
+                      3800,
+                      3700
+                    ],
+                    [
+                      "ĐC",
+                      128000,
+                      126500
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ATR72",
+              "label": "ATR72",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      2200,
+                      1900
+                    ],
+                    [
+                      "DVMN",
+                      500,
+                      450
+                    ],
+                    [
+                      "BDTX",
+                      2100,
+                      1900
+                    ],
+                    [
+                      "BDDK",
+                      1000,
+                      950
+                    ],
+                    [
+                      "PTVT",
+                      2900,
+                      2600
+                    ],
+                    [
+                      "Cảng",
+                      150,
+                      150
+                    ],
+                    [
+                      "APU",
+                      400,
+                      400
+                    ],
+                    [
+                      "ĐC",
+                      13900,
+                      13800
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_cost_fh",
           "title": "CP bảo dưỡng theo FH",
-          "subTitle": "Đơn vị: VNĐ/FH",
-          "col": 31,
-          "colSpan": 30,
+          "subTitle": "Đơn vị: VND/FH",
+          "col": 21,
+          "colSpan": 20,
           "row": 2,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_fh.json"
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_cost_fh.json",
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "B787",
+                "label": "B787"
+              },
+              {
+                "id": "A350",
+                "label": "A350"
+              },
+              {
+                "id": "A321",
+                "label": "A321"
+              },
+              {
+                "id": "ATR72",
+                "label": "ATR72"
+              }
+            ],
+            "defaultValue": "B787"
+          },
+          "filterViews": [
+            {
+              "id": "B787",
+              "label": "B787",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      11200,
+                      10800
+                    ],
+                    [
+                      "DVMN",
+                      2500,
+                      2400
+                    ],
+                    [
+                      "BDTX",
+                      10900,
+                      10600
+                    ],
+                    [
+                      "BDDK",
+                      5400,
+                      5200
+                    ],
+                    [
+                      "PTVT",
+                      14600,
+                      13900
+                    ],
+                    [
+                      "Cảng",
+                      750,
+                      700
+                    ],
+                    [
+                      "APU",
+                      2100,
+                      2000
+                    ],
+                    [
+                      "ĐC",
+                      69000,
+                      69000
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A350",
+              "label": "A350",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      7500,
+                      6900
+                    ],
+                    [
+                      "DVMN",
+                      1700,
+                      1500
+                    ],
+                    [
+                      "BDTX",
+                      7200,
+                      6700
+                    ],
+                    [
+                      "BDDK",
+                      3600,
+                      3300
+                    ],
+                    [
+                      "PTVT",
+                      9900,
+                      9000
+                    ],
+                    [
+                      "Cảng",
+                      500,
+                      500
+                    ],
+                    [
+                      "APU",
+                      1400,
+                      1300
+                    ],
+                    [
+                      "ĐC",
+                      47000,
+                      48000
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "A321",
+              "label": "A321",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      19000,
+                      18300
+                    ],
+                    [
+                      "DVMN",
+                      4200,
+                      4000
+                    ],
+                    [
+                      "BDTX",
+                      18600,
+                      17900
+                    ],
+                    [
+                      "BDDK",
+                      9100,
+                      8600
+                    ],
+                    [
+                      "PTVT",
+                      24700,
+                      23800
+                    ],
+                    [
+                      "Cảng",
+                      1300,
+                      1200
+                    ],
+                    [
+                      "APU",
+                      3500,
+                      3400
+                    ],
+                    [
+                      "ĐC",
+                      118000,
+                      117000
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ATR72",
+              "label": "ATR72",
+              "autoChart": {
+                "chartType": "bar",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "th",
+                      "type": "number",
+                      "label": "2026",
+                      "color": "#006D88"
+                    },
+                    {
+                      "id": "kh",
+                      "type": "number",
+                      "label": "KH 2026",
+                      "color": "#D3AC2B"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "QĐT",
+                      2000,
+                      1700
+                    ],
+                    [
+                      "DVMN",
+                      450,
+                      400
+                    ],
+                    [
+                      "BDTX",
+                      1900,
+                      1700
+                    ],
+                    [
+                      "BDDK",
+                      900,
+                      850
+                    ],
+                    [
+                      "PTVT",
+                      2600,
+                      2400
+                    ],
+                    [
+                      "Cảng",
+                      140,
+                      130
+                    ],
+                    [
+                      "APU",
+                      350,
+                      350
+                    ],
+                    [
+                      "ĐC",
+                      12800,
+                      12700
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "bar",
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "th",
+                        "chartType": "bar"
+                      },
+                      {
+                        "field": "kh",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "cost_pie_table",
+          "title": "Bảng cơ cấu chi phí bảo dưỡng theo ASK",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "table": {
+            "columns": [
+              { "id": "category", "type": "string", "label": "Khoản mục" },
+              { "id": "target", "type": "number", "label": "KH 2026", "decimals": 1 },
+              { "id": "actual", "type": "number", "label": "2026", "decimals": 1 },
+              { "id": "diff", "type": "tone-value", "label": "VS KH" },
+              { "id": "pct", "type": "number", "label": "Tỷ trọng", "decimals": 1 }
+            ],
+            "rows": [
+              { "cells": { "category": "Động cơ (ĐC)", "target": 3.2, "actual": 3.035, "diff": { "value": -0.165, "tone": "positive" }, "pct": 59.1 } },
+              { "cells": { "category": "Phụ tùng vật tư (PTVT)", "target": 0.72, "actual": 0.695, "diff": { "value": -0.025, "tone": "positive" }, "pct": 13.5 } },
+              { "cells": { "category": "Bảo dưỡng thường xuyên (BDTX)", "target": 0.49, "actual": 0.471, "diff": { "value": -0.019, "tone": "positive" }, "pct": 9.2 } },
+              { "cells": { "category": "Quản lý điều hành (QĐT)", "target": 0.48, "actual": 0.459, "diff": { "value": -0.021, "tone": "positive" }, "pct": 8.9 } },
+              { "cells": { "category": "Bảo dưỡng định kỳ (BDDK)", "target": 0.25, "actual": 0.238, "diff": { "value": -0.012, "tone": "positive" }, "pct": 4.6 } },
+              { "cells": { "category": "Dịch vụ mặt đất (DVMN)", "target": 0.12, "actual": 0.111, "diff": { "value": -0.009, "tone": "positive" }, "pct": 2.2 } },
+              { "cells": { "category": "APU", "target": 0.10, "actual": 0.091, "diff": { "value": -0.009, "tone": "positive" }, "pct": 1.8 } },
+              { "cells": { "category": "Cảng", "target": 0.04, "actual": 0.034, "diff": { "value": -0.006, "tone": "positive" }, "pct": 0.7 } }
+            ],
+            "density": "compact",
+            "format3dec": false
+          },
+          "subTitle": "Đơn vị: VNĐ/ASK"
         }
       ]
     }
