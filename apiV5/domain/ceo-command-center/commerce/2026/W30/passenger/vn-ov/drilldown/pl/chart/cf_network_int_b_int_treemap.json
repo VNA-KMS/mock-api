@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "treemap",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -9,78 +9,58 @@
         },
         {
           "id": "value",
-          "type": "number"
-        },
-        {
-          "id": "parent",
-          "type": "string"
-        },
-        {
-          "id": "color",
-          "type": "string"
+          "type": "number",
+          "label": "Quốc tế",
+          "color": "#C4A83A"
         }
       ],
       "rows": [
         [
-          "Quốc tế",
-          90,
-          "",
-          "#00558F"
-        ],
-        [
           "SWP",
-          18630,
-          "Quốc tế",
-          "#004071"
+          18630
         ],
         [
           "CLMV",
-          12960,
-          "Quốc tế",
-          ""
+          12960
         ],
         [
           "NEA",
-          4770,
-          "Quốc tế",
-          ""
+          4770
         ],
         [
           "MID",
-          2520,
-          "Quốc tế",
-          "#EF4444"
+          2520
         ],
         [
           "SEA",
-          2430,
-          "Quốc tế",
-          "#EF4444"
+          2430
         ],
         [
           "NOA",
-          2250,
-          "Quốc tế",
-          "#EF4444"
+          2250
         ],
         [
           "EUR",
-          1080,
-          "Quốc tế",
-          "#EF4444"
+          1080
         ],
         [
           "SAS",
-          360,
-          "Quốc tế",
-          "#EF4444"
+          360
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "treemap"
+        "chartType": "bar",
+        "labelInside": true,
+        "xField": "name",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },

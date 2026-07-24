@@ -18,100 +18,62 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
+              "EU",
+              "INT (8 areas)",
+              980,
+              -120
+            ],
+            [
+              "AU & US",
+              "INT (8 areas)",
+              720,
+              40
+            ],
+            [
               "CLMV",
-              "CLMV",
+              "INT (8 areas)",
               450,
               80
             ],
             [
-              "NEA",
-              "NEA",
-              1250,
-              -220
+              "SEA",
+              "INT (8 areas)",
+              1100,
+              -80
             ],
             [
               "MID",
-              "MID",
+              "INT (8 areas)",
               380,
               -40
             ],
             [
               "NOA",
-              "NOA",
+              "INT (8 areas)",
               860,
               -180
             ],
             [
-              "SWP",
-              "SWP",
-              620,
-              -90
-            ],
-            [
-              "SEA",
-              "SEA",
-              1100,
-              -80
-            ],
-            [
-              "EUR",
-              "EUR",
-              980,
-              -120
+              "NEA",
+              "INT (8 areas)",
+              1250,
+              -220
             ],
             [
               "SAS",
-              "SAS",
+              "INT (8 areas)",
               560,
               20
-            ],
-            [
-              "HANSGN",
-              "HANSGN",
-              1400,
-              -90
-            ],
-            [
-              "HANDAD",
-              "HANDAD",
-              780,
-              -40
-            ],
-            [
-              "SGNDAD",
-              "SGNDAD",
-              720,
-              -30
-            ],
-            [
-              "Trục lẻ",
-              "Trục lẻ",
-              520,
-              -20
-            ],
-            [
-              "Du lịch",
-              "Du lịch",
-              480,
-              60
-            ],
-            [
-              "Địa phương",
-              "Địa phương",
-              350,
-              -50
             ]
           ]
         },
@@ -128,11 +90,56 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Tương quan thị trường quốc tế: NEA (-220 tỷ), NOA (-180 tỷ) và EUR (-120 tỷ) có doanh thu cao nhưng hiệu quả âm nặng. CLMV (+80 tỷ) và SAS (+20 tỷ) là điểm sáng hiếm hoi.",
-        "severity": "crit",
-        "status": 1
+      }
+    },
+    {
+      "label": "Network",
+      "autoChart": {
+        "chartType": "scatter",
+        "aspectRatio": 2.2,
+        "dataset": {
+          "columns": [
+            {
+              "id": "name",
+              "type": "string"
+            },
+            {
+              "id": "segment",
+              "type": "string"
+            },
+            {
+              "id": "dt",
+              "type": "number",
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
+            },
+            {
+              "id": "hq",
+              "type": "number",
+              "label": "Hiệu quả VTHK (tỷ VND)"
+            }
+          ],
+          "rows": [
+            [
+              "INT",
+              "INT (1)",
+              5200,
+              -950
+            ]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "scatter",
+            "xField": "dt",
+            "series": [
+              {
+                "field": "hq",
+                "chartType": "scatter"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -153,58 +160,62 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
-              "Vietnam",
-              "Vietnam",
-              980,
-              -70
-            ],
-            [
-              "Korea",
-              "Korea",
-              880,
-              -110
-            ],
-            [
-              "Japan",
-              "Japan",
+              "Nhật Bản",
+              "INT (8 countries)",
               920,
               -140
             ],
             [
-              "Australia",
-              "Australia",
+              "Hàn Quốc",
+              "INT (8 countries)",
+              880,
+              -110
+            ],
+            [
+              "Trung Quốc",
+              "INT (8 countries)",
+              760,
+              -200
+            ],
+            [
+              "Úc",
+              "INT (8 countries)",
               540,
               30
             ],
             [
-              "France",
-              "France",
+              "Mỹ",
+              "INT (8 countries)",
+              480,
+              -60
+            ],
+            [
+              "Pháp",
+              "INT (8 countries)",
               410,
               -90
             ],
             [
-              "Germany",
-              "Germany",
+              "Thái Lan",
+              "INT (8 countries)",
               350,
-              -60
+              50
             ],
             [
-              "Thailand",
-              "Thailand",
-              280,
-              -120
+              "Singapore",
+              "INT (8 countries)",
+              320,
+              70
             ]
           ]
         },
@@ -221,11 +232,6 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Quốc tế theo quốc gia: Japan (-140 tỷ) và Korea (-110 tỷ) lỗ nặng nhất. Australia (+30 tỷ) duy trì hiệu quả dương nhờ khai thác tối ưu.",
-        "severity": "crit",
-        "status": 1
       }
     },
     {
@@ -246,112 +252,62 @@
             {
               "id": "dt",
               "type": "number",
-              "label": "Doanh thu VTHK (tỷ VND)",
-              "color": "#22C55E"
+              "label": "Doanh thu vận tải hàng không (tỷ VND)"
             },
             {
               "id": "hq",
               "type": "number",
-              "label": "HQ VTHK (tỷ VND)",
-              "color": "#006D88"
+              "label": "Hiệu quả VTHK (tỷ VND)"
             }
           ],
           "rows": [
             [
-              "HAN-SGN",
-              "HAN-SGN",
-              480,
-              -20
+              "SGN–NRT",
+              "INT (8 routes)",
+              420,
+              -80
             ],
             [
-              "HPH-SGN",
-              "HPH-SGN",
-              320,
-              -10
+              "HAN–ICN",
+              "INT (8 routes)",
+              380,
+              -60
             ],
             [
-              "HAN-DAD",
-              "HAN-DAD",
-              210,
-              25
+              "SGN–ICN",
+              "INT (8 routes)",
+              360,
+              -50
             ],
             [
-              "THD-SGN",
-              "THD-SGN",
-              180,
-              15
+              "HAN–NRT",
+              "INT (8 routes)",
+              340,
+              -90
             ],
             [
-              "HAN-VCA",
-              "HAN-VCA",
-              150,
-              -5
+              "SGN–SYD",
+              "INT (8 routes)",
+              310,
+              20
             ],
             [
-              "HAN-CXR",
-              "HAN-CXR",
-              130,
-              8
+              "SGN–LAX",
+              "INT (8 routes)",
+              290,
+              -40
             ],
             [
-              "VII-SGN",
-              "VII-SGN",
-              110,
-              3
+              "HAN–CDG",
+              "INT (8 routes)",
+              270,
+              -70
             ],
             [
-              "HAN-DLI",
-              "HAN-DLI",
-              95,
-              -12
-            ],
-            [
-              "HAN-BMV",
-              "HAN-BMV",
-              85,
-              6
-            ],
-            [
-              "HAN-PQC",
-              "HAN-PQC",
-              75,
-              -8
-            ],
-            [
-              "HAN-PXU",
-              "HAN-PXU",
-              65,
-              4
-            ],
-            [
-              "HAN-HUI",
-              "HAN-HUI",
-              55,
-              -3
-            ],
-            [
-              "HAN-TBB",
-              "HAN-TBB",
-              50,
-              2
-            ],
-            [
-              "HAN-UIH",
-              "HAN-UIH",
-              45,
-              -6
-            ],
-            [
-              "HAN-DIN",
-              "HAN-DIN",
-              40,
-              1
-            ],
-            [
-              "HAN-VCL",
-              "HAN-VCL",
-              35,
-              -15
+              "SGN–FRA",
+              "INT (8 routes)",
+              250,
+              -30
             ]
           ]
         },
@@ -368,11 +324,6 @@
             ]
           }
         ]
-      },
-      "aiInsight": {
-        "text": "Đường bay quốc tế: Các đường bay dài đến châu Âu và Đông Bắc Á có doanh thu cao nhưng chi phí khai thác lớn dẫn đến hiệu quả âm trên diện rộng.",
-        "severity": "warn",
-        "status": 1
       }
     }
   ]
