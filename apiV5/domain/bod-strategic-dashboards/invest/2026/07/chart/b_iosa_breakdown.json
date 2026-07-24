@@ -1,0 +1,59 @@
+{
+ "autoChart": {
+  "chartType": "bar",
+  "dataset": {
+   "columns": [
+    {
+     "id": "section",
+     "type": "string"
+    },
+    {
+     "id": "findings",
+     "type": "number",
+     "label": "Findings",
+     "color": "#1D4857"
+    },
+    {
+     "id": "observations",
+     "type": "number",
+     "label": "Observations",
+     "color": "#479EB3"
+    }
+   ],
+   "rows": [
+    [
+     "FLT — Flight Operations",
+     3,
+     2
+    ],
+    [
+     "DSP — Operations Control & Dispatch",
+     3,
+     1
+    ],
+    [
+     "CAB — Cabin Operations",
+     2,
+     1
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar",
+    "xField": "section",
+    "series": [
+     {
+      "field": "findings",
+      "chartType": "bar"
+     },
+     {
+      "field": "observations",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ }
+}

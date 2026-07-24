@@ -1,0 +1,74 @@
+{
+ "autoChart": {
+  "chartType": "bar-h",
+  "dataset": {
+   "columns": [
+    {
+     "id": "indicator",
+     "type": "string"
+    },
+    {
+     "id": "actual",
+     "type": "number",
+     "label": "Thực tế",
+     "color": "#006D88"
+    },
+    {
+     "id": "target",
+     "type": "number",
+     "label": "Mục tiêu",
+     "color": "#D3AC2B"
+    }
+   ],
+   "rows": [
+    [
+     "A321 — LV1 (/10kcb)",
+     918,
+     837
+    ],
+    [
+     "A321 — LV2 (/10kcb)",
+     289,
+     173.41
+    ],
+    [
+     "A321 — LV3 (/10kcb)",
+     3.61,
+     2.18
+    ],
+    [
+     "A321 — Tiếp cận LV1",
+     1142,
+     837
+    ],
+    [
+     "A321 — Tiếp cận LV2",
+     240,
+     173.41
+    ],
+    [
+     "A321 — Tiếp cận LV3",
+     3,
+     2.18
+    ]
+   ]
+  },
+  "views": [
+   {
+    "id": "main",
+    "chartType": "bar-h",
+    "xField": "indicator",
+    "series": [
+     {
+      "field": "actual",
+      "chartType": "bar"
+     },
+     {
+      "field": "target",
+      "chartType": "bar"
+     }
+    ]
+   }
+  ]
+ }
+}
