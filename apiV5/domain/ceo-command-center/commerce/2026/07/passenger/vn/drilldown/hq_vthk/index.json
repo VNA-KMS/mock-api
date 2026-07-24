@@ -1,7 +1,7 @@
 {
   "chartBoard": [
     {
-      "title": "Hiệu quả VTHK",
+      "title": "P/L",
       "items": [
         {
           "id": "b_hq_vthk_total",
@@ -54,7 +54,7 @@
       "items": [
         {
           "id": "b_market_structure",
-          "title": "P/L - Area",
+          "title": "P/L - AREA",
           "col": 1,
           "colSpan": 60,
           "row": 1,
@@ -70,7 +70,7 @@
       "total": {
         "chartBoard": [
           {
-            "title": "Hiệu quả VTHK",
+            "title": "P/L",
             "items": [
               {
                 "id": "b_hq_vthk_total",
@@ -123,7 +123,7 @@
             "items": [
               {
                 "id": "b_market_structure",
-                "title": "P/L - Area",
+                "title": "P/L - AREA",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -138,11 +138,11 @@
       "int": {
         "chartBoard": [
           {
-            "title": "Hiệu quả VTHK",
+            "title": "P/L",
             "items": [
               {
                 "id": "b_int_hq_vthk_clmv",
-                "title": "Hiệu quả VTHK (*) – CLMV",
+                "title": "P/L – CLMV",
                 "col": 1,
                 "colSpan": 15,
                 "row": 1,
@@ -157,7 +157,7 @@
               },
               {
                 "id": "b_int_hq_vthk_nea",
-                "title": "Hiệu quả VTHK (*) – NEA",
+                "title": "P/L – NEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 1,
@@ -172,7 +172,7 @@
               },
               {
                 "id": "b_int_hq_vthk_mid",
-                "title": "Hiệu quả VTHK (*) – MID",
+                "title": "P/L – MID",
                 "col": 31,
                 "colSpan": 15,
                 "row": 1,
@@ -187,7 +187,7 @@
               },
               {
                 "id": "b_int_hq_vthk_noa",
-                "title": "Hiệu quả VTHK (*) – NOA",
+                "title": "P/L – NOA",
                 "col": 46,
                 "colSpan": 15,
                 "row": 1,
@@ -202,7 +202,7 @@
               },
               {
                 "id": "b_int_hq_vthk_au_us",
-                "title": "Hiệu quả VTHK (*) – SWP",
+                "title": "P/L – SWP",
                 "col": 1,
                 "colSpan": 15,
                 "row": 2,
@@ -217,7 +217,7 @@
               },
               {
                 "id": "b_int_hq_vthk_sea",
-                "title": "Hiệu quả VTHK (*) – SEA",
+                "title": "P/L – SEA",
                 "col": 16,
                 "colSpan": 15,
                 "row": 2,
@@ -232,7 +232,7 @@
               },
               {
                 "id": "b_int_hq_vthk_eu",
-                "title": "Hiệu quả VTHK (*) – EUR",
+                "title": "P/L – EUR",
                 "col": 31,
                 "colSpan": 15,
                 "row": 2,
@@ -247,7 +247,7 @@
               },
               {
                 "id": "b_int_hq_vthk_sas",
-                "title": "Hiệu quả VTHK (*) – SAS",
+                "title": "P/L – SAS",
                 "col": 46,
                 "colSpan": 15,
                 "row": 2,
@@ -266,7 +266,7 @@
             "items": [
               {
                 "id": "b_int_treemap",
-                "title": "P/L - Area",
+                "title": "P/L - AREA",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -283,7 +283,7 @@
             {
               "id": "pax",
               "status": "compact",
-              "title": "Khách vận chuyển",
+              "title": "PAX",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -312,7 +312,7 @@
             {
               "id": "ask",
               "status": "compact",
-              "title": "Ghế luân chuyển",
+              "title": "ASK",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -340,7 +340,7 @@
             {
               "id": "lf",
               "status": "compact",
-              "title": "Hệ số sử dụng ghế",
+              "title": "LF",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -366,9 +366,37 @@
               }
             },
             {
+              "id": "dt_pax",
+              "status": "compact",
+              "title": "PAX REV",
+              "value": "4,433",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "10.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "10.5%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "#22C55E"
+              },
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_pax/index.json"
+            },
+            {
               "id": "rtk",
               "status": "compact",
-              "title": "Tấn luân chuyển",
+              "title": "RTK",
               "value": "1,280",
               "unit": "tỷ tấn.km",
               "trend": [
@@ -396,7 +424,7 @@
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "Doanh thu vận tải hàng không",
+              "title": "DT VTHK",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -424,7 +452,7 @@
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "Hiệu quả so với chi phí biến đổi",
+              "title": "P/L VAR",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -452,7 +480,7 @@
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "Hiệu quả VTHK (*)",
+              "title": "P/L",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -480,7 +508,7 @@
             {
               "id": "raskpax",
               "status": "compact",
-              "title": "Thu suất trên 1 ghế luân chuyển",
+              "title": "RASK",
               "value": "2,850",
               "unit": "VND/ghế.km",
               "trend": [
@@ -514,11 +542,11 @@
       "dom": {
         "chartBoard": [
           {
-            "title": "Hiệu quả VTHK",
+            "title": "P/L",
             "items": [
               {
                 "id": "b_dom_hq_vthk_hansgn",
-                "title": "Hiệu quả VTHK (*) – HANSGN",
+                "title": "P/L – HANSGN",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
@@ -533,7 +561,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_handad",
-                "title": "Hiệu quả VTHK (*) – HANDAD",
+                "title": "P/L – HANDAD",
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
@@ -548,7 +576,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_sgndad",
-                "title": "Hiệu quả VTHK (*) – SGNDAD",
+                "title": "P/L – SGNDAD",
                 "col": 41,
                 "colSpan": 20,
                 "row": 1,
@@ -563,7 +591,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_dulich",
-                "title": "Hiệu quả VTHK (*) – Du lịch",
+                "title": "P/L – Du lịch",
                 "col": 1,
                 "colSpan": 20,
                 "row": 2,
@@ -578,7 +606,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_trucle",
-                "title": "Hiệu quả VTHK (*) – Trục lẻ",
+                "title": "P/L – Trục lẻ",
                 "col": 21,
                 "colSpan": 20,
                 "row": 2,
@@ -593,7 +621,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_diaphuong",
-                "title": "Hiệu quả VTHK (*) – Địa phương",
+                "title": "P/L – Địa phương",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
@@ -612,7 +640,7 @@
             "items": [
               {
                 "id": "b_dom_treemap",
-                "title": "P/L - Area",
+                "title": "P/L - AREA",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
@@ -627,7 +655,7 @@
             "items": [
               {
                 "id": "b_dom_hq_vthk_vna_group",
-                "title": "Hiệu quả VTHK (*) – VNA Group",
+                "title": "P/L – VNA Group",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
@@ -642,7 +670,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_vna",
-                "title": "Hiệu quả VTHK (*) – VNA",
+                "title": "P/L – VNA",
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
@@ -657,7 +685,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_ba",
-                "title": "Hiệu quả VTHK (*) – BA",
+                "title": "P/L – BA",
                 "col": 41,
                 "colSpan": 20,
                 "row": 1,
@@ -672,7 +700,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_pa",
-                "title": "Hiệu quả VTHK (*) – PA",
+                "title": "P/L – PA",
                 "col": 1,
                 "colSpan": 20,
                 "row": 2,
@@ -687,7 +715,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_vj",
-                "title": "Hiệu quả VTHK (*) – VJ",
+                "title": "P/L – VJ",
                 "col": 21,
                 "colSpan": 20,
                 "row": 2,
@@ -702,7 +730,7 @@
               },
               {
                 "id": "b_dom_hq_vthk_sun",
-                "title": "Hiệu quả VTHK (*) – Sun",
+                "title": "P/L – Sun",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
@@ -724,7 +752,7 @@
             {
               "id": "pax",
               "status": "compact",
-              "title": "Khách vận chuyển",
+              "title": "PAX",
               "value": "985",
               "unit": "nghìn khách",
               "trend": [
@@ -753,7 +781,7 @@
             {
               "id": "ask",
               "status": "compact",
-              "title": "Ghế luân chuyển",
+              "title": "ASK",
               "value": "2,150",
               "unit": "tỷ ghế.km",
               "trend": [
@@ -781,7 +809,7 @@
             {
               "id": "lf",
               "status": "compact",
-              "title": "Hệ số sử dụng ghế",
+              "title": "LF",
               "value": "82.5",
               "unit": "%",
               "trend": [
@@ -807,9 +835,37 @@
               }
             },
             {
+              "id": "dt_pax",
+              "status": "compact",
+              "title": "PAX REV",
+              "value": "4,433",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "10.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "10.5%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "#22C55E"
+              },
+              "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/drilldown/dt_pax/index.json"
+            },
+            {
               "id": "rtk",
               "status": "compact",
-              "title": "Tấn luân chuyển",
+              "title": "RTK",
               "value": "1,280",
               "unit": "tỷ tấn.km",
               "trend": [
@@ -837,7 +893,7 @@
             {
               "id": "dt_vthk",
               "status": "compact",
-              "title": "Doanh thu vận tải hàng không",
+              "title": "DT VTHK",
               "value": "+4,850",
               "unit": "tỷ VND",
               "trend": [
@@ -865,7 +921,7 @@
             {
               "id": "hq_so_cpbd",
               "status": "compact",
-              "title": "Hiệu quả so với chi phí biến đổi",
+              "title": "P/L VAR",
               "value": "+320",
               "unit": "tỷ VND",
               "trend": [
@@ -893,7 +949,7 @@
             {
               "id": "hq_vthk",
               "status": "compact",
-              "title": "Hiệu quả VTHK (*)",
+              "title": "P/L",
               "value": "+185",
               "unit": "tỷ VND",
               "trend": [
@@ -921,7 +977,7 @@
             {
               "id": "raskpax",
               "status": "compact",
-              "title": "Thu suất trên 1 ghế luân chuyển",
+              "title": "RASK",
               "value": "2,850",
               "unit": "VND/ghế.km",
               "trend": [
@@ -1148,7 +1204,7 @@
       {
         "id": "hq_so_cpbd",
         "status": "compact",
-        "title": "P/L Var",
+        "title": "P/L VAR",
         "value": "+320",
         "unit": "tỷ VND",
         "trend": [

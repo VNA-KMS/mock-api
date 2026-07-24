@@ -38,23 +38,22 @@
         "id": "m_rate",
         "status": "compact",
         "title": "Sự cố, vụ việc / 10.000 chuyến bay",
-        "period": "Tháng 03/2026",
-        "value": "7,93",
-        "unit": "/10.000cb",
+        "value": "59",
+        "unit": "/10.000 cb",
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "flat",
-            "label": "0,12 so với kế hoạch",
-            "type": "plan",
-            "value": "0,12",
+            "direction": "down",
+            "label": "2,5 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "2,5",
             "tone": "positive"
           },
           {
             "direction": "down",
-            "label": "Đạt so mục tiêu (MT 8,12)",
+            "label": "97,7% so với mục tiêu",
             "type": "plan",
-            "value": "Đạt",
+            "value": "97,7%",
             "tone": "positive"
           }
         ]
@@ -88,14 +87,21 @@
         "status": "compact",
         "title": "Sự cố liên quan yếu tố con người / 10.000 chuyến bay",
         "value": "1.71",
-        "unit": "/10.000cb",
+        "unit": "/10.000 cb",
         "backgroundStatus": 2,
         "trend": [
           {
             "direction": "down",
-            "label": "1.71 so với mục tiêu",
+            "label": "0,8 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "0,8",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "85,5% so với mục tiêu",
             "type": "plan",
-            "value": "1.71",
+            "value": "85,5%",
             "tone": "positive"
           }
         ]
@@ -171,6 +177,30 @@
             "tone": "positive"
           }
         ]
+      },
+      {
+        "id": "m_avsec",
+        "status": "compact",
+        "title": "Vi phạm an ninh hàng không",
+        "value": "2",
+        "unit": "số vụ",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "1 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "1",
+            "tone": "positive"
+          },
+          {
+            "direction": "flat",
+            "label": "0 so với tháng trước",
+            "type": "lastMonth",
+            "value": "0",
+            "tone": "neutral"
+          }
+        ]
       }
     ]
   },
@@ -181,7 +211,7 @@
         {
           "id": "b_trend",
           "col": 1,
-          "colSpan": 15,
+          "colSpan": 40,
           "row": 1,
           "rowSpan": 1,
           "title": "Số lượng sự cố, vụ việc",
@@ -198,10 +228,26 @@
           }
         },
         {
-          "id": "b_class",
-          "col": 16,
-          "colSpan": 15,
+          "id": "b_ratio",
+          "col": 41,
+          "colSpan": 20,
           "row": 1,
+          "rowSpan": 1,
+          "title": "Tỷ lệ sự cố, vụ việc theo lĩnh vực",
+          "subTitle": "Đơn vị: %",
+          "height": 280,
+          "aiInsight": {
+            "text": "Khai thác bay chiếm 60% tổng số sự cố, chủ yếu liên quan đến approach hạ cánh và cảnh báo TCAS. Kỹ thuật chiếm 30% với các sự cố động cơ và hệ thống. Cần tập trung giảng bình approach và bảo dưỡng phòng ngừa.",
+            "severity": "warn",
+            "status": 1
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_ratio.json"
+        },
+        {
+          "id": "b_class",
+          "col": 1,
+          "colSpan": 40,
+          "row": 2,
           "rowSpan": 1,
           "title": "Bảng phân loại sự cố, vụ việc",
           "aiInsight": {
@@ -217,32 +263,38 @@
                   {
                     "id": "cat",
                     "type": "string",
-                    "label": "Phân loại sự cố"
+                    "label": "Phân loại sự cố",
+                    "align": "center"
                   },
                   {
                     "id": "thang_nay",
                     "type": "number",
-                    "label": "T7.2026"
+                    "label": "T7.2026",
+                    "align": "center"
                   },
                   {
                     "id": "thang_truoc",
                     "type": "number",
-                    "label": "T6.2026"
+                    "label": "T6.2026",
+                    "align": "center"
                   },
                   {
                     "id": "cung_ky",
                     "type": "number",
-                    "label": "2025"
+                    "label": "2025",
+                    "align": "center"
                   },
                   {
                     "id": "luy_ke",
                     "type": "number",
-                    "label": "7T.2026"
+                    "label": "7T.2026",
+                    "align": "center"
                   },
                   {
                     "id": "cung_ky_luy_ke",
                     "type": "number",
-                    "label": "7T.2025"
+                    "label": "7T.2025",
+                    "align": "center"
                   }
                 ],
                 "rows": [
@@ -326,27 +378,62 @@
           }
         },
         {
-          "id": "b_ratio",
-          "col": 31,
-          "colSpan": 15,
-          "row": 1,
-          "rowSpan": 1,
-          "title": "Tỷ lệ sự cố, vụ việc theo lĩnh vực",
-          "aiInsight": {
-            "text": "Khai thác bay chiếm 60% tổng số sự cố, chủ yếu liên quan đến approach hạ cánh và cảnh báo TCAS. Kỹ thuật chiếm 30% với các sự cố động cơ và hệ thống. Cần tập trung giảng bình approach và bảo dưỡng phòng ngừa.",
-            "severity": "warn",
-            "status": 1
-          },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_ratio.json",
-          "rightTitle": "%"
-        },
-        {
           "id": "b_cause_pie",
           "title": "Tỷ lệ sự cố, vụ việc theo nguyên nhân",
-          "col": 46,
-          "colSpan": 15,
-          "row": 1,
+          "col": 41,
+          "colSpan": 20,
+          "row": 2,
+          "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_cause_pie.json"
+        },
+        {
+          "id": "b_avsec",
+          "title": "Vi phạm an ninh hàng không",
+          "col": 1,
+          "colSpan": 40,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_avsec.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_avsec_table",
+          "title": "Bảng vi phạm an ninh hàng không",
+          "col": 41,
+          "colSpan": 20,
+          "row": 3,
+          "rowSpan": 1,
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "loai_vi_pham",
+                    "type": "string",
+                    "label": "Loại vi phạm"
+                  },
+                  {
+                    "id": "so_vu",
+                    "type": "string",
+                    "label": "Số vụ việc"
+                  }
+                ],
+                "rows": [
+                  ["Khách mang vật cấm lên tàu bay", "4 vụ"],
+                  ["Khách hút thuốc trên chuyến bay", "1 vụ"],
+                  ["Khách gây rối, không chấp hành hướng dẫn", "1 vụ"],
+                  ["Khách trộm cắp trên tàu bay", "2 vụ"],
+                  ["Khách lên nhầm chuyến bay", "1 vụ"],
+                  ["Vi phạm an ninh khác (phát hiện drone)", "3 vụ"]
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -593,6 +680,29 @@
       ]
     }
   ],
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "variant": "info",
+      "items": [
+        "Tổng số vụ việc tháng 7: <strong>13 vụ</strong>, giảm <strong>1 vụ (7,1%)</strong> so với tháng trước và giảm <strong>2 vụ (13,3%)</strong> so với cùng kỳ 2025. Lũy kế 7 tháng: <strong>43 vụ</strong>, tăng <strong>8 vụ (22,9%)</strong> so với cùng kỳ 35 vụ.",
+        "Phân loại mức độ: <strong>0 vụ mức A và B</strong> (rất nặng & nặng), <strong>2 vụ mức D</strong> (nhẹ), <strong>11 vụ mức E</strong> (khác). Không ghi nhận sự cố nghiêm trọng trong tháng.",
+        "Sự cố liên quan yếu tố con người: <strong>8 vụ</strong>, giảm <strong>2 vụ (20%)</strong> so với CK. Tỷ lệ sự cố con người/10.000 chuyến bay đạt <strong>1,71</strong>, đạt <strong>85,5%</strong> so với mục tiêu.",
+        "Vi phạm an ninh hàng không ghi nhận <strong>2 vụ</strong>, trong đó <strong>4 trường hợp</strong> khách mang vật cấm lên tàu bay và <strong>3 vụ</strong> vi phạm an ninh khác (phát hiện drone).",
+        "KPI an toàn đạt <strong>7/12 chỉ số</strong> theo mục tiêu năm 2026. Các chỉ số SQD-001, 002, 003, 005, 006, 007, 008 đạt chỉ tiêu; SQD-004, 009, 010, 011, 012 cần cải thiện."
+      ]
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "variant": "danger",
+      "items": [
+        "Khai thác bay chiếm <b style=\"color:#DC2626;\">60%</b> tổng sự cố, chủ yếu liên quan approach hạ cánh và cảnh báo TCAS — cần tăng cường giảng bình và mô phỏng tình huống.",
+        "Sự cố do hệ thống kỹ thuật tàu bay chiếm <b style=\"color:#DC2626;\">7,88/9,00 vụ</b> (87,6%) — tập trung bảo dưỡng phòng ngừa động cơ và hệ thống điện tử hàng không.",
+        "Tỷ lệ sự cố/10.000 chuyến bay đạt <strong>59/10.000cb</strong>, chỉ đạt <strong>97,7%</strong> mục tiêu — cần theo dõi sát diễn biến các tháng cuối năm.",
+        "Sân bay Tân Sơn Nhất và Nội Bài có số vụ delay cao nhất — cần rà soát quy trình mặt đất và phối hợp kiểm soát không lưu."
+      ]
+    }
+  },
   "timeFrameHiddenModes": [
     "day",
     "week",

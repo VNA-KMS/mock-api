@@ -1,0 +1,61 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "yoy",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        }
+      ],
+      "rows": [
+        ["T1", 2, 3],
+        ["T2", 1, 2],
+        ["T3", 2, 3],
+        ["T4", 1, 2],
+        ["T5", 0, 2],
+        ["T6", 2, 3],
+        ["T7", 2, 3],
+        ["T8", null, 2],
+        ["T9", null, 2],
+        ["T10", null, 1],
+        ["T11", null, 2],
+        ["T12", null, 2]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "line",
+        "xField": "month",
+        "yMin": 0,
+        "yMax": 5,
+        "series": [
+          {
+            "field": "actual",
+            "chartType": "line",
+            "AREAStyle": {},
+            "showSymbol": true
+          },
+          {
+            "field": "yoy",
+            "chartType": "line",
+            "showSymbol": true
+          }
+        ]
+      }
+    ]
+  }
+}
