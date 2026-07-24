@@ -1,0 +1,80 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          1077,
+          1035,
+          1071
+        ],
+        [
+          "Q2",
+          1120,
+          1080,
+          1122
+        ],
+        [
+          "Q3",
+          383,
+          1015,
+          1170
+        ],
+        [
+          "Q4",
+          null,
+          1005,
+          1215
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}
