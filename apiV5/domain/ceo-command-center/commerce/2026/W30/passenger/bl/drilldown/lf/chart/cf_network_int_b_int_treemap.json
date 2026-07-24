@@ -1,37 +1,51 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
           "id": "name",
           "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Quốc tế",
+          "color": "#C4A83A"
         }
       ],
       "rows": [
         [
-          "SWP"
+          "SWP",
+          18629.2
         ],
         [
-          "CLMV"
+          "CLMV",
+          12960.9
         ],
         [
-          "NEA"
+          "NEA",
+          4771.8
         ],
         [
-          "MID"
+          "MID",
+          2519.1
         ],
         [
-          "SEA"
+          "SEA",
+          2431
         ],
         [
-          "NOA"
+          "NOA",
+          2248.9
         ],
         [
-          "EUR"
+          "EUR",
+          1082.2
         ],
         [
-          "SAS"
+          "SAS",
+          361.6
         ]
       ]
     },
@@ -41,7 +55,12 @@
         "chartType": "bar",
         "labelInside": true,
         "xField": "name",
-        "series": []
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },

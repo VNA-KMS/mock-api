@@ -1,40 +1,55 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
           "id": "region",
           "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Share Difference (%)",
+          "color": "#006D88"
         }
       ],
       "rows": [
         [
-          "EU"
+          "EU",
+          -1.2
         ],
         [
-          "NEA"
+          "NEA",
+          -1.5
         ],
         [
-          "SEA"
+          "SEA",
+          0.3
         ],
         [
-          "CLMV"
+          "CLMV",
+          0.8
         ],
         [
-          "NOA"
+          "NOA",
+          -0.6
         ],
         [
-          "SAS"
+          "SAS",
+          0.2
         ],
         [
-          "SWP"
+          "SWP",
+          -0.4
         ],
         [
-          "DOM"
+          "DOM",
+          1.1
         ],
         [
-          "MID"
+          "MID",
+          0.1
         ]
       ]
     },
@@ -43,7 +58,12 @@
         "id": "main",
         "chartType": "bar",
         "xField": "region",
-        "series": []
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },

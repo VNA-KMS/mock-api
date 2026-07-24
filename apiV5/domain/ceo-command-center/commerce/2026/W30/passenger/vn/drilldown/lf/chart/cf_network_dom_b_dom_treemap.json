@@ -1,31 +1,43 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
           "id": "name",
           "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Nội địa",
+          "color": "#479EB3"
         }
       ],
       "rows": [
         [
-          "Trục lẻ"
+          "Trục lẻ",
+          12601.8
         ],
         [
-          "HANDAD"
+          "HANDAD",
+          10352.3
         ],
         [
-          "Du lịch"
+          "Du lịch",
+          7559.6
         ],
         [
-          "HANSGN"
+          "HANSGN",
+          5221.2
         ],
         [
-          "SGNDAD"
+          "SGNDAD",
+          4770.2
         ],
         [
-          "Địa phương"
+          "Địa phương",
+          4500.5
         ]
       ]
     },
@@ -35,7 +47,12 @@
         "chartType": "bar",
         "labelInside": true,
         "xField": "name",
-        "series": []
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
