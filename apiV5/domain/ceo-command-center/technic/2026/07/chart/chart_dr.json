@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -8,145 +8,63 @@
           "type": "string"
         },
         {
-          "id": "b787",
+          "id": "actual",
           "type": "number",
-          "label": "B787",
+          "label": "2026",
           "color": "#006D88"
         },
         {
-          "id": "a350",
+          "id": "samePeriod",
           "type": "number",
-          "label": "A350",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [5, 5],
           "color": "#C76449"
-        },
-        {
-          "id": "a321",
-          "type": "number",
-          "label": "A321",
-          "color": "#889941"
-        },
-        {
-          "id": "atr72",
-          "type": "number",
-          "label": "ATR72",
-          "lineDash": [
-            3,
-            3
-          ],
-          "color": "#479EB3"
         }
       ],
       "rows": [
-        [
-          "T8",
-          95.8,
-          96,
-          94.5,
-          94.8
-        ],
-        [
-          "T9",
-          95.6,
-          96.1,
-          94.2,
-          94.5
-        ],
-        [
-          "T10",
-          95.9,
-          96,
-          94.6,
-          94.7
-        ],
-        [
-          "T11",
-          96.2,
-          96.3,
-          94.9,
-          95
-        ],
-        [
-          "T12",
-          96,
-          96.2,
-          94.7,
-          94.8
-        ],
-        [
-          "T1",
-          95.5,
-          95.9,
-          94,
-          94.2
-        ],
-        [
-          "T2",
-          95.7,
-          96,
-          94.3,
-          94.4
-        ],
-        [
-          "T3",
-          96.1,
-          96.2,
-          94.6,
-          94.6
-        ],
-        [
-          "T4",
-          96.3,
-          96.4,
-          94.9,
-          94.7
-        ],
-        [
-          "T5",
-          95.9,
-          96.1,
-          94.5,
-          94.5
-        ],
-        [
-          "T6",
-          95.6,
-          95.9,
-          94.1,
-          94.3
-        ],
-        [
-          "T7",
-          95.4,
-          96.1,
-          93.8,
-          94.2
-        ]
+        ["T1", 99.6, 99.4, 99.9],
+        ["T2", 99.5, 99.35, 99.9],
+        ["T3", 99.4, 99.3, 99.9],
+        ["T4", 99.3, 99.25, 99.9],
+        ["T5", 99.2, 99.2, 99.9],
+        ["T6", 99.15, 99.2, 99.9],
+        ["T7", 99.1, 99.2, 99.9],
+        ["T8", null, 99.3, 99.9],
+        ["T9", null, 99.35, 99.9],
+        ["T10", null, 99.4, 99.9],
+        ["T11", null, 99.45, 99.9],
+        ["T12", null, 99.5, 99.9]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "combo",
         "xField": "month",
         "series": [
           {
-            "field": "b787",
-            "chartType": "line"
+            "field": "actual",
+            "chartType": "bar"
           },
           {
-            "field": "a350",
-            "chartType": "line"
+            "field": "samePeriod",
+            "chartType": "bar"
           },
           {
-            "field": "a321",
-            "chartType": "line"
-          },
-          {
-            "field": "atr72",
+            "field": "target",
             "chartType": "line"
           }
         ]
       }
     ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
   }
 }

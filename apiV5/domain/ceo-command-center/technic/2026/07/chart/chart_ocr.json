@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "line",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -10,25 +10,19 @@
         {
           "id": "actual",
           "type": "number",
-          "label": "Thực hiện 2026",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "Ước thực hiện 2026",
+          "label": "2026",
           "color": "#006D88"
         },
         {
           "id": "plan",
           "type": "number",
-          "label": "Kế hoạch 2026",
+          "label": "KH 2026",
           "color": "#D3AC2B"
         },
         {
           "id": "samePeriod",
           "type": "number",
-          "label": "Cùng kỳ 2025",
+          "label": "2025",
           "color": "#9AA0A6"
         }
       ],
@@ -36,84 +30,72 @@
         [
           "T1",
           1,
-          null,
           1,
           1
         ],
         [
           "T2",
           1.05,
-          null,
           1,
           1.05
         ],
         [
           "T3",
           1.1,
-          null,
           1,
           1.1
         ],
         [
           "T4",
           1.15,
-          null,
           1,
           1.12
         ],
         [
           "T5",
           1.18,
-          null,
           1,
           1.1
         ],
         [
           "T6",
           1.2,
-          null,
           1,
           1.1
         ],
         [
           "T7",
           1.2,
-          null,
           1,
           1.1
         ],
         [
           "T8",
           null,
-          1.1,
           1,
           1.05
         ],
         [
           "T9",
           null,
-          1.1,
           1,
           1
         ],
         [
           "T10",
           null,
-          1.1,
           1,
           0.95
         ],
         [
           "T11",
           null,
-          1.1,
           1,
           0.9
         ],
         [
           "T12",
           null,
-          1.1,
           1,
           0.85
         ]
@@ -122,15 +104,11 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "combo",
         "xField": "month",
         "series": [
           {
             "field": "actual",
-            "chartType": "line"
-          },
-          {
-            "field": "uth",
             "chartType": "bar"
           },
           {
@@ -139,7 +117,7 @@
           },
           {
             "field": "samePeriod",
-            "chartType": "line"
+            "chartType": "bar"
           }
         ]
       }
