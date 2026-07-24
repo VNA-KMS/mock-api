@@ -1,17 +1,18 @@
 {
  "autoChart": {
-  "chartType": "pie-simple",
+  "chartType": "donut-pct",
   "dataset": {
    "columns": [
     {
      "id": "field",
      "type": "string"
     },
-    {
-     "id": "ratio",
-     "type": "number",
-     "label": "Tỷ lệ",
-     "color": [
+  {
+   "id": "ratio",
+   "type": "number",
+   "label": "Tỷ lệ",
+   "unit": "%",
+   "color": [
       "#1D4857",
       "#D3AC2B",
       "#3D879B"
@@ -36,8 +37,9 @@
   "views": [
    {
     "id": "main",
-    "chartType": "pie-simple",
+    "chartType": "donut-pct",
     "xField": "field",
+    "showCenterValue": false,
     "series": [
      {
       "field": "ratio",
