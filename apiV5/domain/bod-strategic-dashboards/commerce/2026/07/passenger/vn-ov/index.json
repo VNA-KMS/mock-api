@@ -93,6 +93,34 @@
         }
       },
       {
+        "id": "dt_pax",
+        "status": "compact",
+        "title": "PAX REV",
+        "value": "4,433",
+        "unit": "tỷ VND",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "96.2% với Kế hoạch",
+            "type": "plan",
+            "value": "96.2%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "10.5% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "10.5%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "#22C55E"
+        },
+        "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/dt_pax/index.json"
+      },
+      {
         "id": "rtk",
         "status": "compact",
         "title": "RTK",
@@ -522,129 +550,6 @@
                 }
               }
             ]
-          },
-          {
-            "title": "PaxTT",
-            "items": [
-              {
-                "id": "b_pax_tt_od",
-                "title": "PaxTT O&D",
-                "subTitle": "Đơn vị: Nghìn khách",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_tt_od.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Tổng thị trường O&D đạt 776 nghìn lượt khách, tăng 2.1% so với CK. Mức tăng thấp hơn kỳ vọng do hạn chế đường bay NEA.",
-                  "severity": "warn",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_pax_tt_ofod",
-                "title": "PaxTT OFOD",
-                "subTitle": "Đơn vị: Nghìn khách",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/cf_network_total_b_pax_tt_ofod.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Tổng thị trường OFOD đạt 1.194 nghìn khách (+3.7% CK). Thị trường quốc tế phục hồi chậm hơn kỳ vọng.",
-                  "severity": "warn",
-                  "recommendation": "Theo dõi sát diễn biến thị trường các tháng tới để điều chỉnh kế hoạch.",
-                  "status": 1
-                }
-              }
-            ]
-          },
-          {
-            "title": "PAX REV",
-            "items": [
-              {
-                "id": "b_pr_total",
-                "title": "PAX REV - TOTAL",
-                "subTitle": "Đơn vị: tỷ VND",
-                "col": 1,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/b_cf_network_total_b_pr.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Doanh thu hành khách đạt 4.433 tỷ VND (96.2% KH, +10.5% CK). RASK cải thiện nhẹ nhờ cơ cấu đường bay.",
-                  "severity": "good",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_pr_int",
-                "title": "PAX REV - INT",
-                "subTitle": "Đơn vị: tỷ VND",
-                "col": 21,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/b_cf_network_int_b_pr.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_pr_dom",
-                "title": "PAX REV - DOM",
-                "subTitle": "Đơn vị: tỷ VND",
-                "col": 41,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/b_cf_network_dom_b_pr.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              }
-            ]
-          },
-          {
-            "title": "Share Pax - Share Cap",
-            "items": [
-              {
-                "id": "b_share_pax_cap",
-                "title": "Chênh lệch thị phần khách và thị phần tải",
-                "subTitle": "Đơn vị: %",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 350,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/chart/b_share_pax_cap.json",
-                "aiInsight": {
-                  "text": "Chênh lệch thị phần khách và tải: DOM (+1.1%) và CLMV (+0.8%) là điểm sáng. NEA (-1.5%) và EU (-1.2%) cần cải thiện.",
-                  "severity": "warn",
-                  "recommendation": "Cân đối năng lực cung ứng với nhu cầu thị trường NEA và EU.",
-                  "status": 1
-                }
-              }
-            ]
           }
         ],
         "metricCards": {
@@ -850,18 +755,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "97.1% với Kế hoạch",
-            "type": "plan",
-            "value": "97.1%",
+                  "label": "97.1% với Kế hoạch",
+                  "type": "plan",
+                  "value": "97.1%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "5.4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "5.4%",
-            "tone": "positive"
+                  "label": "5.4% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "5.4%",
+                  "tone": "positive"
                 }
               ],
               "defaultSelected": true,
@@ -879,18 +784,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.7% với Kế hoạch",
-            "type": "plan",
-            "value": "90.7%",
+                  "label": "90.7% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.7%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "6.8% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "6.8%",
-            "tone": "positive"
+                  "label": "6.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "6.8%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/ask/index.json",
@@ -907,18 +812,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "98.4% với Kế hoạch",
-            "type": "plan",
-            "value": "98.4%",
+                  "label": "98.4% với Kế hoạch",
+                  "type": "plan",
+                  "value": "98.4%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "3.8% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "3.8%",
-            "tone": "positive"
+                  "label": "3.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.8%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/lf/index.json",
@@ -935,18 +840,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.9% với Kế hoạch",
-            "type": "plan",
-            "value": "90.9%",
+                  "label": "90.9% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.9%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "8.2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "8.2%",
-            "tone": "positive"
+                  "label": "8.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "8.2%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rtk/index.json",
@@ -963,18 +868,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "94.9% với Kế hoạch",
-            "type": "plan",
-            "value": "94.9%",
+                  "label": "94.9% với Kế hoạch",
+                  "type": "plan",
+                  "value": "94.9%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "12.5% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "12.5%",
-            "tone": "positive"
+                  "label": "12.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "12.5%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/dt_vthk/index.json",
@@ -991,18 +896,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "96.6% với Kế hoạch",
-            "type": "plan",
-            "value": "96.6%",
+                  "label": "96.6% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.6%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "15.3% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "15.3%",
-            "tone": "positive"
+                  "label": "15.3% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "15.3%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_so_cpbd/index.json",
@@ -1019,18 +924,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.2% với Kế hoạch",
-            "type": "plan",
-            "value": "90.2%",
+                  "label": "90.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.2%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "25.0% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "25.0%",
-            "tone": "positive"
+                  "label": "25.0% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "25.0%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_vthk/index.json",
@@ -1047,18 +952,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "102.6% với Kế hoạch",
-            "type": "plan",
-            "value": "102.6%",
+                  "label": "102.6% với Kế hoạch",
+                  "type": "plan",
+                  "value": "102.6%",
                   "status": 0,
-            "tone": "positive"
+                  "tone": "positive"
                 },
                 {
                   "direction": "up",
-            "label": "4.2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "4.2%",
-            "tone": "positive"
+                  "label": "4.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "4.2%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json",
@@ -1372,18 +1277,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "97.1% với Kế hoạch",
-            "type": "plan",
-            "value": "97.1%",
+                  "label": "97.1% với Kế hoạch",
+                  "type": "plan",
+                  "value": "97.1%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "5.4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "5.4%",
-            "tone": "positive"
+                  "label": "5.4% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "5.4%",
+                  "tone": "positive"
                 }
               ],
               "defaultSelected": true,
@@ -1401,18 +1306,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.7% với Kế hoạch",
-            "type": "plan",
-            "value": "90.7%",
+                  "label": "90.7% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.7%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "6.8% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "6.8%",
-            "tone": "positive"
+                  "label": "6.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "6.8%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/ask/index.json",
@@ -1429,18 +1334,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "98.4% với Kế hoạch",
-            "type": "plan",
-            "value": "98.4%",
+                  "label": "98.4% với Kế hoạch",
+                  "type": "plan",
+                  "value": "98.4%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "3.8% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "3.8%",
-            "tone": "positive"
+                  "label": "3.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.8%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/lf/index.json",
@@ -1457,18 +1362,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.9% với Kế hoạch",
-            "type": "plan",
-            "value": "90.9%",
+                  "label": "90.9% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.9%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "8.2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "8.2%",
-            "tone": "positive"
+                  "label": "8.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "8.2%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rtk/index.json",
@@ -1485,18 +1390,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "94.9% với Kế hoạch",
-            "type": "plan",
-            "value": "94.9%",
+                  "label": "94.9% với Kế hoạch",
+                  "type": "plan",
+                  "value": "94.9%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "12.5% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "12.5%",
-            "tone": "positive"
+                  "label": "12.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "12.5%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/dt_vthk/index.json",
@@ -1513,18 +1418,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "96.6% với Kế hoạch",
-            "type": "plan",
-            "value": "96.6%",
+                  "label": "96.6% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.6%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "15.3% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "15.3%",
-            "tone": "positive"
+                  "label": "15.3% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "15.3%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_so_cpbd/index.json",
@@ -1541,18 +1446,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "90.2% với Kế hoạch",
-            "type": "plan",
-            "value": "90.2%",
+                  "label": "90.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "90.2%",
                   "status": 0,
-            "tone": "negative"
+                  "tone": "negative"
                 },
                 {
                   "direction": "up",
-            "label": "25.0% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "25.0%",
-            "tone": "positive"
+                  "label": "25.0% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "25.0%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/hq_vthk/index.json",
@@ -1569,18 +1474,18 @@
               "trend": [
                 {
                   "direction": "flat",
-            "label": "102.6% với Kế hoạch",
-            "type": "plan",
-            "value": "102.6%",
+                  "label": "102.6% với Kế hoạch",
+                  "type": "plan",
+                  "value": "102.6%",
                   "status": 0,
-            "tone": "positive"
+                  "tone": "positive"
                 },
                 {
                   "direction": "up",
-            "label": "4.2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "4.2%",
-            "tone": "positive"
+                  "label": "4.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "4.2%",
+                  "tone": "positive"
                 }
               ],
               "drillDownPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn-ov/drilldown/rask/index.json",
@@ -1599,7 +1504,7 @@
   "timeFrameHiddenModes": [
     "day",
     "week",
-    "quarter",
+    "year",
     "custom"
   ],
   "filterColumns": 60,
