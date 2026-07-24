@@ -7,13 +7,13 @@
   "metricCards": {
     "accentClassName": "bg-primary",
     "layout": {
-      "columns": 6
+      "columns": 4
     },
     "items": [
       {
         "id": "m_flt",
         "status": "compact",
-        "title": "Tổng số chuyến bay",
+        "title": "FLS",
         "value": "14.038",
         "unit": "chuyến",
         "backgroundStatus": 1,
@@ -35,7 +35,7 @@
       {
         "id": "m_bh",
         "status": "compact",
-        "title": "Tổng số giờ bay khai thác",
+        "title": "Tổng giờ bay",
         "value": "46,3",
         "unit": "nghìn BH",
         "backgroundStatus": 1,
@@ -57,7 +57,7 @@
       {
         "id": "m_bh_daily",
         "status": "compact",
-        "title": "Giờ bay/tàu (toàn đội)/ngày",
+        "title": "Giờ bay TB/tàu/ngày",
         "value": "14,6",
         "unit": "giờ/ngày",
         "backgroundStatus": 1,
@@ -77,10 +77,54 @@
         ]
       },
       {
+        "id": "m_fuel",
+        "status": "compact",
+        "title": "Fuel burn/BH",
+        "value": "2.845",
+        "unit": "kg/h",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "90.5% với Kế hoạch",
+            "tone": "negative",
+            "status": 1
+          },
+          {
+            "direction": "down",
+            "label": "3,2% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
         "id": "m_otp",
         "status": "compact",
-        "title": "Chỉ số đúng giờ",
+        "title": "OTP đi",
         "value": "79,82",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "102.1% với Kế hoạch",
+            "tone": "positive",
+            "status": 1
+          },
+          {
+            "direction": "up",
+            "label": "12,12% so với Cùng kỳ",
+            "tone": "positive",
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": "m_otp_den",
+        "status": "compact",
+        "title": "OTP đến",
+        "value": "76,45",
         "unit": "%",
         "backgroundStatus": 1,
         "trend": [
@@ -101,7 +145,7 @@
       {
         "id": "m_osp",
         "status": "compact",
-        "title": "Chỉ số đúng giờ tuyệt đối",
+        "title": "OSP đi",
         "value": "96,13",
         "unit": "%",
         "backgroundStatus": 1,
@@ -121,22 +165,22 @@
         ]
       },
       {
-        "id": "m_fuel",
+        "id": "m_osp_den",
         "status": "compact",
-        "title": "Tổng nhiên liệu tiêu thụ/Tổng BH",
-        "value": "2.845",
-        "unit": "kg/h",
+        "title": "OSP đến",
+        "value": "95,28",
+        "unit": "%",
         "backgroundStatus": 1,
         "trend": [
           {
             "direction": "flat",
-            "label": "90.5% với Kế hoạch",
+            "label": "96.6% với Kế hoạch",
             "tone": "negative",
             "status": 1
           },
           {
-            "direction": "down",
-            "label": "3,2% so với Cùng kỳ",
+            "direction": "up",
+            "label": "69,36% so với Cùng kỳ",
             "tone": "positive",
             "status": 0
           }

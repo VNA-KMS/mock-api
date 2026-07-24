@@ -272,52 +272,13 @@
       ]
     },
     {
-      "title": "AOG",
-      "items": [
-        {
-          "id": "chart_aog_tech",
-          "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
-          "col": 1,
-          "colSpan": 30,
-          "row": 1,
-          "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
-          "aiInsight": {
-            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm mạnh so CK. Phi kỹ thuật ổn định ~0,48.",
-            "severity": "good"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        },
-        {
-          "id": "chart_aog_fleet",
-          "title": "Số chuyến bay dừng bay theo từng loại tàu bay",
-          "col": 31,
-          "colSpan": 30,
-          "row": 1,
-          "aspectRatio": 1.8,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_fleet.json",
-          "aiInsight": {
-            "text": "A321 có 2 vụ AOG — cao nhất đội. B787 và ATR72 đạt mục tiêu.",
-            "severity": "warn"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
-        }
-      ]
-    },
-    {
-      "title": "Delay",
+      "title": "AOG & Delay",
       "items": [
         {
           "id": "chart_delay_stats",
           "title": "Số vụ N-Delay & thời gian chậm bình quân (AVG)",
-          "col": 1,
-          "colSpan": 30,
+          "col": 21,
+          "colSpan": 20,
           "row": 1,
           "aspectRatio": 2.2,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_stats.json",
@@ -334,14 +295,31 @@
           "id": "chart_delay_breakdown",
           "title": "Delay theo hãng bay / chặng bay / sân bay",
           "subTitle": "Chọn cấp độ phân tích",
-          "col": 31,
-          "colSpan": 30,
+          "col": 41,
+          "colSpan": 20,
           "row": 1,
           "aspectRatio": 1.6,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
           "aiInsight": {
             "text": "VN Airlines dẫn đầu số vụ delay. Tân Sơn Nhất là sân bay có nhiều delay nhất.",
             "severity": "warn"
+          }
+        },
+        {
+          "id": "chart_aog_tech",
+          "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
+          "aiInsight": {
+            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm mạnh so CK. Phi kỹ thuật ổn định ~0,48.",
+            "severity": "good"
+          },
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
           }
         }
       ]
@@ -403,15 +381,15 @@
       ]
     }
   ],
-  "cardHtml": {
-    "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá tổng quan Kỹ thuật &amp; Khai thác</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>ARL 94,87% thấp hơn MT 95,5% — B787 bảo dưỡng C-Check kéo dài ảnh hưởng độ sẵn sàng khai thác. DR 99,65% đạt MT, A321 cần theo dõi.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>AOG kỹ thuật giảm 12% CK, nhưng A321 ghi nhận 2 vụ AOG vượt MT. Delay 61,44 phút/vụ vượt xa MT 52 phút — cần rà soát quy trình mặt đất.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>MC/ASK 215 VNĐ/ASK tăng 3,4% CK. Chi phí động cơ chiếm 59% cơ cấu. QLVT quản lý 73% tổng chi phí bảo dưỡng.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>Khuyến nghị: (1) Rà soát lịch bảo dưỡng đội B787, (2) Kiểm soát chặt A321 AOG, (3) Tối ưu hóa quy trình mặt đất giảm delay.</li></ul></div>",
-    "backgroundClassName": "bg-polar",
-    "borderClassName": "border-regal-blue"
-  },
   "timeFrameHiddenModes": [
     "day",
     "week",
     "quarter",
     "custom"
-  ]
+  ],
+  "cardHtml": {
+    "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>ARL 94,87% thấp hơn MT 95,5% — B787 bảo dưỡng C-Check kéo dài ảnh hưởng độ sẵn sàng khai thác. DR 99,65% đạt MT, A321 cần theo dõi.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>AOG kỹ thuật giảm 12% CK, nhưng A321 ghi nhận 2 vụ AOG vượt MT. Delay 61,44 phút/vụ vượt xa MT 52 phút — cần rà soát quy trình mặt đất.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>MC/ASK 215 VNĐ/ASK tăng 3,4% CK. Chi phí động cơ chiếm 59% cơ cấu. QLVT quản lý 73% tổng chi phí bảo dưỡng.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>Khuyến nghị: (1) Rà soát lịch bảo dưỡng đội B787, (2) Kiểm soát chặt A321 AOG, (3) Tối ưu hóa quy trình mặt đất giảm delay.</li></ul></div>",
+    "backgroundClassName": "bg-polar",
+    "borderClassName": "border-regal-blue"
+  }
 }
