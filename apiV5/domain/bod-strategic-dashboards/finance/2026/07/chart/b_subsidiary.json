@@ -1,137 +1,65 @@
 {
-  "autoChart": {
-    "chartType": "bar",
-    "dataset": {
-      "columns": [
-        {
-          "id": "company",
-          "type": "string"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "2026",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "UTH",
-          "color": "#006D88"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "2025",
-          "color": "#9AA0A6"
-        },
-        {
-          "id": "kh",
-          "type": "number",
-          "label": "KH 2026",
-          "color": "#D3AC2B"
-        }
-      ],
-      "rows": [
-        [
-          "SKYPEC",
-          1200,
-          null,
-          1100,
-          1150
-        ],
-        [
-          "NCTS",
-          950,
-          null,
-          880,
-          920
-        ],
-        [
-          "TCS",
-          850,
-          null,
-          800,
-          830
-        ],
-        [
-          "VAECO",
-          1500,
-          null,
-          1400,
-          1450
-        ],
-        [
-          "VIAGS",
-          700,
-          null,
-          650,
-          680
-        ],
-        [
-          "VACS",
-          450,
-          null,
-          400,
-          430
-        ],
-        [
-          "TECS",
-          350,
-          null,
-          320,
-          340
-        ],
-        [
-          "NCS",
-          280,
-          null,
-          250,
-          270
-        ],
-        [
-          "VINAKO",
-          200,
-          null,
-          180,
-          190
-        ],
-        [
-          "PA",
-          150,
-          null,
-          140,
-          145
-        ]
-      ]
-    },
-    "views": [
+  "table": {
+    "columns": [
       {
-        "id": "main",
-        "chartType": "bar",
-        "xField": "company",
-        "series": [
-          {
-            "field": "th",
-            "chartType": "bar"
-          },
-          {
-            "field": "uth",
-            "chartType": "bar"
-          },
-          {
-            "field": "ck",
-            "chartType": "bar"
-          },
-          {
-            "field": "kh",
-            "chartType": "bar"
-          }
-        ]
+        "id": "company",
+        "type": "text",
+        "label": "Đơn vị"
+      },
+      {
+        "id": "t7_lntt",
+        "type": "number",
+        "label": "T7 LNTT (tỷ)"
+      },
+      {
+        "id": "t7_pct",
+        "type": "number",
+        "label": "T7 % KH"
+      },
+      {
+        "id": "cum_lntt",
+        "type": "number",
+        "label": "7T LNTT (tỷ)"
+      },
+      {
+        "id": "cum_pct",
+        "type": "number",
+        "label": "7T % KH"
+      }
+    ],
+    "rows": [
+      {
+        "cells": { "company": "SKYPEC", "t7_lntt": 288, "t7_pct": 52.9, "cum_lntt": 1200, "cum_pct": 104.3 },
+        "tone": "warning"
+      },
+      {
+        "cells": { "company": "NCTS", "t7_lntt": 158, "t7_pct": 113.2, "cum_lntt": 950, "cum_pct": 103.3 }
+      },
+      {
+        "cells": { "company": "TCS", "t7_lntt": 212, "t7_pct": 164.1, "cum_lntt": 850, "cum_pct": 102.4 }
+      },
+      {
+        "cells": { "company": "VAECO", "t7_lntt": 209, "t7_pct": 110.1, "cum_lntt": 1500, "cum_pct": 103.4 }
+      },
+      {
+        "cells": { "company": "VIAGS", "t7_lntt": 189, "t7_pct": 116.2, "cum_lntt": 700, "cum_pct": 102.9 }
+      },
+      {
+        "cells": { "company": "VACS", "t7_lntt": 110, "t7_pct": 154.6, "cum_lntt": 450, "cum_pct": 104.7 }
+      },
+      {
+        "cells": { "company": "TECS", "t7_lntt": 37, "t7_pct": 107.4, "cum_lntt": 350, "cum_pct": 102.9 }
+      },
+      {
+        "cells": { "company": "NCS", "t7_lntt": 34, "t7_pct": 104.0, "cum_lntt": 280, "cum_pct": 103.7 }
+      },
+      {
+        "cells": { "company": "VINAKO", "t7_lntt": 25, "t7_pct": 101.2, "cum_lntt": 200, "cum_pct": 105.3 }
+      },
+      {
+        "cells": { "company": "PA", "t7_lntt": -138, "t7_pct": 0, "cum_lntt": 150, "cum_pct": 103.4 },
+        "tone": "critical"
       }
     ]
-  },
-  "metadata": {
-    "forecastStartIndex": 8
   }
 }
