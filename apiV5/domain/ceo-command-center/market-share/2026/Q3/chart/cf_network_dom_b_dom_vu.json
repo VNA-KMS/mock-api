@@ -1,0 +1,78 @@
+{
+  "autoChart": {
+    "chartType": "actual-plan-combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          27,
+          37,
+          30
+        ],
+        [
+          "Q2",
+          33,
+          41,
+          39
+        ],
+        [
+          "Q3",
+          40,
+          46,
+          15
+        ],
+        [
+          "Q4",
+          48,
+          50,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line"
+          },
+          {
+            "field": "th",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}
