@@ -3,155 +3,34 @@
     "chartType": "combo",
     "dataset": {
       "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "actual",
-          "type": "number",
-          "label": "2026",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "UTH 2026",
-          "color": "#006D88"
-        },
-        {
-          "id": "samePeriod",
-          "type": "number",
-          "label": "2025",
-          "color": "#9AA0A6"
-        },
-        {
-          "id": "plan",
-          "type": "number",
-          "label": "KH 2026",
-          "lineDash": [
-            6,
-            4
-          ],
-          "color": "#D3AC2B"
-        }
+        { "id": "month", "type": "string" },
+        { "id": "th", "type": "number", "label": "2026", "color": "#006D88" },
+        { "id": "db", "type": "number", "label": "KH 2026", "color": "#D3AC2B" }
       ],
       "rows": [
-        [
-          "T1",
-          200,
-          null,
-          192,
-          196
-        ],
-        [
-          "T2",
-          203,
-          null,
-          195,
-          198
-        ],
-        [
-          "T3",
-          205,
-          null,
-          198,
-          201
-        ],
-        [
-          "T4",
-          208,
-          null,
-          200,
-          204
-        ],
-        [
-          "T5",
-          210,
-          null,
-          203,
-          207
-        ],
-        [
-          "T6",
-          213,
-          null,
-          206,
-          209
-        ],
-        [
-          "T7",
-          215,
-          null,
-          208,
-          210
-        ],
-        [
-          "T8",
-          null,
-          215.3,
-          210,
-          211
-        ],
-        [
-          "T9",
-          null,
-          212.2,
-          207,
-          208
-        ],
-        [
-          "T10",
-          null,
-          209.2,
-          204,
-          205
-        ],
-        [
-          "T11",
-          null,
-          205.1,
-          200,
-          201
-        ],
-        [
-          "T12",
-          null,
-          202.0,
-          197,
-          198
-        ]
+        ["T1", 208, 215],
+        ["T2", 210, 216],
+        ["T3", 212, 218],
+        ["T4", 213, 219],
+        ["T5", 214, 220],
+        ["T6", 215, 220],
+        ["T7", 215, 221],
+        ["T8", null, 221],
+        ["T9", null, 222],
+        ["T10", null, 222],
+        ["T11", null, 223],
+        ["T12", null, 223]
       ]
     },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "combo",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual",
-            "chartType": "bar"
-          },
-          {
-            "field": "uth",
-            "chartType": "bar",
-            "lineStyle": "dashed"
-          },
-          {
-            "field": "samePeriod",
-            "chartType": "bar"
-          },
-          {
-            "field": "plan",
-            "chartType": "line",
-            "lineStyle": "dashed"
-          }
-        ]
-      }
-    ]
+    "views": [{
+      "id": "main",
+      "chartType": "combo",
+      "xField": "month",
+      "series": [
+        { "field": "th", "chartType": "bar" },
+        { "field": "db", "chartType": "bar", "lineStyle": "dashed" }
+      ]
+    }]
   },
-  "metadata": {
-    "forecastStartIndex": 8
-  }
+  "metadata": { "forecastStartIndex": 8 }
 }
