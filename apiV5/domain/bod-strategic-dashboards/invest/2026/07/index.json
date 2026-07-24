@@ -13,9 +13,9 @@
       {
         "id": "m_total",
         "status": "compact",
-        "title": "Tổng vốn đầu tư",
-        "value": "1.250",
-        "unit": "tỷ đồng",
+        "title": "Chuẩn bị đầu tư",
+        "value": "60",
+        "unit": "%",
         "backgroundStatus": 2,
         "trend": [
           {
@@ -35,34 +35,9 @@
         ]
       },
       {
-        "id": "m_rate",
-        "status": "compact",
-        "title": "Giải ngân",
-        
-        "value": "78,5",
-        "unit": "%",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "5,2 so với kế hoạch",
-            "type": "plan",
-            "value": "5,2",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "Vượt so mục tiêu (MT 75%)",
-            "type": "plan",
-            "value": "Vượt",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
         "id": "m_human",
         "status": "compact",
-        "title": "Số dự án đầu tư",
+        "title": "Số dự án đang đầu tư",
         "value": "24",
         "unit": "dự án",
         "backgroundStatus": 2,
@@ -86,88 +61,43 @@
       {
         "id": "m_human_rate",
         "status": "compact",
-        "title": "Tỷ suất lợi nhuận đầu tư",
-        "value": "12,4",
+        "title": "Giá trị thực hiện đầu tư",
+        "value": "48,44",
         "unit": "%",
         "backgroundStatus": 2,
         "trend": [
           {
             "direction": "up",
-            "label": "1,2 so với mục tiêu",
+            "label": "12,4% so với KH",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "Vs cùng kỳ: +8,2%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rate",
+        "status": "compact",
+        "title": "Giải ngân",
+        "value": "78,5",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "5,2 so với kế hoạch",
             "type": "plan",
-            "value": "1,2",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "m_flight",
-        "status": "compact",
-        "title": "Vốn chủ sở hữu",
-        "value": "8.450",
-        "unit": "tỷ đồng",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "down",
-            "label": "2 so với cùng kỳ",
-            "type": "samePeriod",
-            "value": "2",
+            "value": "5,2",
             "tone": "positive"
           },
           {
             "direction": "up",
-            "label": "3,2 so với tháng trước",
-            "type": "lastMonth",
-            "value": "3,2",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
-        "id": "m_tech",
-        "status": "compact",
-        "title": "Nợ vay đầu tư",
-        "value": "3.200",
-        "unit": "tỷ đồng",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "down",
-            "label": "1 so với cùng kỳ",
-            "type": "samePeriod",
-            "value": "1",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "0 so với tháng trước",
-            "type": "lastMonth",
-            "value": "0",
-            "tone": "neutral"
-          }
-        ]
-      },
-      {
-        "id": "m_wx",
-        "status": "compact",
-        "title": "Tỷ lệ nợ/vốn",
-        "value": "0,38",
-        "unit": "%",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "5,6 so với cùng kỳ",
-            "type": "samePeriod",
-            "value": "5,6",
-            "tone": "positive"
-          },
-          {
-            "direction": "down",
-            "label": "1 so với tháng trước",
-            "type": "lastMonth",
-            "value": "1",
+            "label": "Vượt so mục tiêu (MT 75%)",
+            "type": "plan",
+            "value": "Vượt",
             "tone": "positive"
           }
         ]
@@ -181,10 +111,10 @@
         {
           "id": "b_trend",
           "col": 1,
-          "colSpan": 15,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "title": "Tổng vốn đầu tư theo tháng",
+          "title": "Giá trị thực hiện đầu tư",
           "height": 280,
           "aiInsight": {
             "text": "Tổng vốn đầu tư tháng 7 đạt 1.250 tỷ đồng, tăng 8,5% so với tháng trước và 12,3% so với cùng kỳ. Giải ngân đạt 78,5% kế hoạch, cao hơn 5,2 điểm phần trăm so với cùng kỳ 2025.",
@@ -198,12 +128,21 @@
           }
         },
         {
+          "id": "b_disburse",
+          "title": "Tình hình giải ngân theo loại dự án",
+          "subTitle": "SL dự án giải ngân / SL dự án KH · Số tiền giải ngân / Số tiền KH",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/07/chart/b_disburse.json"
+        },
+        {
           "id": "b_class",
-          "col": 16,
-          "colSpan": 15,
+          "col": 41,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "title": "Danh mục đầu tư theo ngành",
+          "title": "Danh mục đầu tư theo loại dự án",
           "aiInsight": {
             "text": "Danh mục đầu tư tập trung vào hạ tầng sân bay (35%), đội tàu bay (30%) và công nghệ thông tin (20%). Ngành hàng không chiếm 75% tổng vốn, dịch vụ phụ trợ chiếm 25%. Tỷ trọng đầu tư ngoài ngành đang được điều chỉnh giảm.",
             "severity": "good",
@@ -215,375 +154,77 @@
               "dataset": {
                 "columns": [
                   {
-                    "id": "cat",
+                    "id": "type",
                     "type": "string",
-                    "label": "Phân loại sự cố"
+                    "label": "Loại dự án"
                   },
                   {
-                    "id": "thang_nay",
+                    "id": "count",
                     "type": "number",
-                    "label": "T7.2026"
+                    "label": "Số dự án"
                   },
                   {
-                    "id": "thang_truoc",
+                    "id": "plan",
                     "type": "number",
-                    "label": "T6.2026"
+                    "label": "Tổng mức đầu tư KH"
                   },
                   {
-                    "id": "cung_ky",
+                    "id": "actual",
                     "type": "number",
-                    "label": "2025"
+                    "label": "Giá trị thực hiện"
                   },
                   {
-                    "id": "luy_ke",
+                    "id": "disburse",
                     "type": "number",
-                    "label": "7T.2026"
+                    "label": "Giá trị giải ngân"
                   },
                   {
-                    "id": "cung_ky_luy_ke",
+                    "id": "pct_actual",
                     "type": "number",
-                    "label": "7T.2025"
+                    "label": "% thực hiện đầu tư"
+                  },
+                  {
+                    "id": "pct_disburse",
+                    "type": "number",
+                    "label": "% giải ngân"
                   }
                 ],
                 "rows": [
                   [
-                    "A",
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
+                    "Tàu bay, động cơ",
+                    8,
+                    3200,
+                    2816,
+                    2508,
+                    88,
+                    78
                   ],
                   [
-                    "B",
-                    0,
-                    1,
-                    0,
-                    1,
-                    0
+                    "TTB",
+                    6,
+                    1450,
+                    1044,
+                    864,
+                    72,
+                    60
                   ],
                   [
-                    "C",
-                    0,
-                    1,
-                    1,
-                    2,
-                    1
+                    "XDCB",
+                    5,
+                    1100,
+                    638,
+                    568,
+                    58,
+                    52
                   ],
                   [
-                    "D",
-                    2,
-                    2,
-                    3,
-                    7,
-                    6
-                  ],
-                  [
-                    "E",
-                    11,
-                    10,
-                    9,
-                    33,
-                    28
-                  ],
-                  [
-                    "Tổng cộng",
-                    13,
-                    14,
-                    13,
-                    43,
-                    35
-                  ]
-                ]
-              },
-              "rowStyle": {
-                "A": {
-                  "backgroundColor": "#FDECEC",
-                  "textColor": "#C62828"
-                },
-                "B": {
-                  "backgroundColor": "#FFF4E5",
-                  "textColor": "#E65100"
-                },
-                "C": {
-                  "backgroundColor": "#FFFBE6",
-                  "textColor": "#B28704"
-                },
-                "D": {
-                  "backgroundColor": "#EAF7EF",
-                  "textColor": "#2E7D32"
-                },
-                "E": {
-                  "backgroundColor": "#EEF4FF",
-                  "textColor": "#00558F"
-                },
-                "Tổng cộng": {
-                  "textColor": "#000000",
-                  "fontWeight": "bold"
-                }
-              }
-            }
-          }
-        },
-        {
-          "id": "b_ratio",
-          "col": 31,
-          "colSpan": 15,
-          "row": 1,
-          "rowSpan": 1,
-          "title": "Cơ cấu vốn đầu tư",
-          "aiInsight": {
-            "text": "Cơ cấu vốn đầu tư: vốn chủ sở hữu chiếm 45%, vốn vay 35%, vốn hỗ trợ phát triển 15%, khác 5%. Tỷ lệ nợ/vốn chủ sở hữu ở mức 0,38, thấp hơn ngưỡng cho phép 0,5, cho thấy cấu trúc tài chính lành mạnh.",
-            "severity": "warn",
-            "status": 1
-          },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/07/chart/b_ratio.json",
-          "rightTitle": "%"
-        },
-        {
-          "id": "b_cause_pie",
-          "title": "Hiệu quả đầu tư theo dự án",
-          "col": 46,
-          "colSpan": 15,
-          "row": 1,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/07/chart/b_cause_pie.json"
-        }
-      ]
-    },
-    {
-      "title": "",
-      "items": [
-        {
-          "id": "b_ssp_table",
-          "col": 1,
-          "colSpan": 60,
-          "row": 1,
-          "rowSpan": 1,
-          "title": "Bảng chỉ số đầu tư KPI",
-          "aiInsight": {
-            "text": "KPI đầu tư gồm: Tỷ suất lợi nhuận (ROI), Thời gian thu hồi vốn (payback), Giá trị hiện tại ròng (NPV), và Tỷ lệ hoàn vốn nội bộ (IRR). Tất cả các dự án trọng điểm đều đạt chỉ tiêu giải ngân.",
-            "viewpoint": "neutral",
-            "status": 1
-          },
-          "extraComponent": {
-            "type": "table",
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "code",
-                    "type": "string",
-                    "label": "Mã KPI"
-                  },
-                  {
-                    "id": "name",
-                    "type": "string",
-                    "label": "Tên KPI"
-                  },
-                  {
-                    "id": "abbr",
-                    "type": "string",
-                    "label": "Viết tắt"
-                  },
-                  {
-                    "id": "unit",
-                    "type": "string",
-                    "label": "Đơn vị tính"
-                  },
-                  {
-                    "id": "t7_26",
-                    "type": "string",
-                    "label": "T7.2026"
-                  },
-                  {
-                    "id": "t7_25",
-                    "type": "string",
-                    "label": "T7.2025"
-                  },
-                  {
-                    "id": "cum_26",
-                    "type": "string",
-                    "label": "7T.2026"
-                  },
-                  {
-                    "id": "cum_25",
-                    "type": "string",
-                    "label": "7T.2025"
-                  },
-                  {
-                    "id": "mt",
-                    "type": "string",
-                    "label": "MT 2026"
-                  }
-                ],
-                "rows": [
-                  [
-                    "SQD-001",
-                    {
-                      "text": "Sự cố bắt buộc phải báo cáo",
-                      "dot": "#C62828"
-                    },
-                    "MOR",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-002",
-                    {
-                      "text": "Tai nạn mức A",
-                      "dot": "#C62828"
-                    },
-                    "MOR (A)",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-003",
-                    {
-                      "text": "Sự cố mức B",
-                      "dot": "#E65100"
-                    },
-                    "MOR (B)",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "1",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-004",
-                    {
-                      "text": "Sự cố mức C",
-                      "dot": "#B28704"
-                    },
-                    "MOR (C)",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "1",
-                    "2",
-                    "1",
-                    "1"
-                  ],
-                  [
-                    "SQD-005",
-                    {
-                      "text": "Sự cố mức D",
-                      "dot": "#2E7D32"
-                    },
-                    "MOR (D)",
-                    "Số vụ việc/10.000 CB",
-                    "2",
-                    "3",
-                    "7",
-                    "6",
-                    "5"
-                  ],
-                  [
-                    "SQD-006",
-                    {
-                      "text": "Vụ việc mức E",
-                      "dot": "#00558F"
-                    },
-                    "MOR (E)",
-                    "Số vụ việc/10.000 CB",
-                    "11",
-                    "9",
-                    "33",
-                    "28",
-                    "25"
-                  ],
-                  [
-                    "SQD-007",
-                    {
-                      "text": "Sự cố tắt động cơ trên không",
-                      "dot": "#C62828"
-                    },
-                    "IFSD",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-008",
-                    {
-                      "text": "Sự cố tàu bay va chạm với phương tiện mặt đất",
-                      "dot": "#E65100"
-                    },
-                    "GCOL",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-009",
-                    {
-                      "text": "Nhân viên bị thương khi làm nhiệm vụ",
-                      "dot": "#B28704"
-                    },
-                    "OI",
-                    "Số NV/100 NV/năm",
-                    "0",
-                    "1",
-                    "2",
-                    "3",
-                    "2"
-                  ],
-                  [
-                    "SQD-010",
-                    {
-                      "text": "Vi phạm an ninh hàng không",
-                      "dot": "#2E7D32"
-                    },
-                    "AVSEC",
-                    "Số vụ việc/10.000 CB",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                  ],
-                  [
-                    "SQD-011",
-                    {
-                      "text": "Tiếp cận không ổn định",
-                      "dot": "#00558F"
-                    },
-                    "UA",
-                    "Số vụ việc/10.000 CB phân tích",
-                    "7",
-                    "9",
-                    "48",
-                    "52",
-                    "42"
-                  ],
-                  [
-                    "SQD-012",
-                    {
-                      "text": "Chỉ số các điểm không phù hợp",
-                      "dot": "#B28704"
-                    },
-                    "NC",
-                    "Số finding/tổng số cuộc ĐG",
-                    "3",
-                    "5",
-                    "18",
-                    "22",
-                    "15"
+                    "ĐTRNDN",
+                    5,
+                    850,
+                    722,
+                    616,
+                    85,
+                    72
                   ]
                 ]
               }
