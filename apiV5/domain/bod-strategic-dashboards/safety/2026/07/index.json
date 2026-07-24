@@ -155,7 +155,7 @@
         {
           "id": "b_trend",
           "col": 1,
-          "colSpan": 30,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
           "title": "Số lượng sự cố",
@@ -173,8 +173,8 @@
         },
         {
           "id": "b_class",
-          "col": 31,
-          "colSpan": 30,
+          "col": 21,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
           "title": "Bảng phân loại sự cố",
@@ -196,27 +196,27 @@
                   {
                     "id": "thang_nay",
                     "type": "number",
-                    "label": "Tháng này"
+                    "label": "T7.2026"
                   },
                   {
                     "id": "thang_truoc",
                     "type": "number",
-                    "label": "Tháng trước"
+                    "label": "T6.2026"
                   },
                   {
                     "id": "cung_ky",
                     "type": "number",
-                    "label": "Cùng kỳ 2025"
+                    "label": "2025"
                   },
                   {
                     "id": "luy_ke",
                     "type": "number",
-                    "label": "Lũy kế từ đầu năm"
+                    "label": "7T.2026"
                   },
                   {
                     "id": "cung_ky_luy_ke",
                     "type": "number",
-                    "label": "Cùng kỳ lũy kế"
+                    "label": "7T.2025"
                   }
                 ],
                 "rows": [
@@ -298,16 +298,11 @@
               }
             }
           }
-        }
-      ]
-    },
-    {
-      "title": "Chi tiết các sự cố điển hình theo lĩnh vực được chọn",
-      "items": [
+        },
         {
           "id": "b_ratio",
-          "col": 1,
-          "colSpan": 16,
+          "col": 41,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
           "title": "Tỷ lệ sự cố theo lĩnh vực",
@@ -318,99 +313,6 @@
           },
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_ratio.json",
           "rightTitle": "%"
-        },
-        {
-          "id": "b_detail",
-          "col": 17,
-          "colSpan": 44,
-          "row": 1,
-          "rowSpan": 1,
-          "aiInsight": {
-            "text": "Sự cố điển hình: máy bay trệ đường băng khi hạ cánh tại HAN-SGN (12/06), cảnh báo TCAS DAD-HAN (15/05), sự cố động cơ SGN-DAD (28/05). Các sự cố đều đã được xử lý và có báo cáo gửi Cục HK.",
-            "severity": "warn",
-            "status": 1
-          },
-          "extraComponent": {
-            "type": "table",
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "field",
-                    "type": "string",
-                    "label": "Lĩnh vực"
-                  },
-                  {
-                    "id": "name",
-                    "type": "string",
-                    "label": "Tên sự cố"
-                  },
-                  {
-                    "id": "date",
-                    "type": "string",
-                    "label": "Ngày xảy ra"
-                  },
-                  {
-                    "id": "route",
-                    "type": "string",
-                    "label": "Chặng bay"
-                  }
-                ],
-                "rows": [
-                  [
-                    "Khai thác bay",
-                    "Máy bay trệ đường băng khi hạ cánh",
-                    "12/06/2026",
-                    "✈ HAN → SGN"
-                  ],
-                  [
-                    "Khai thác bay",
-                    "Cảnh báo va chạm trên không (TCAS)",
-                    "15/05/2026",
-                    "✈ DAD → HAN"
-                  ],
-                  [
-                    "Kỹ thuật",
-                    "Sự cố kỹ thuật động cơ trước chuyến bay",
-                    "28/05/2026",
-                    "✈ SGN → DAD"
-                  ],
-                  [
-                    "Kỹ thuật",
-                    "Sự cố hệ thống thông tin liên lạc",
-                    "02/04/2026",
-                    "✈ SGN → HAN"
-                  ],
-                  [
-                    "Khai thác mặt đất",
-                    "Chuyển hướng khẩn cấp do thời tiết",
-                    "18/03/2026",
-                    "✈ HAN → DAD"
-                  ]
-                ]
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "items": [
-        {
-          "id": "b_fleet_risk",
-          "title": "Risk Index 4 đội bay — Unstable Approach",
-          "col": 1,
-          "colSpan": 60,
-          "row": 1,
-          "rowSpan": 1,
-          "height": 260,
-          "aiInsight": {
-            "text": "B787 T6 tăng lên 3E, T7 duy trì 3E — bounce landing NRT, GPWS HND. A321 Tăng từ 3E (T4) lên 4E (T6-T7) — 3 sự cố LV3 tại BKK. ATR72 dừng khai thác từ T6. A350 ổn định ở 2E-3E.",
-            "severity": "warn",
-            "recommendation": "A321 cần giảng bình chuyên đề approach BKK. B787 tăng cường briefing GPWS & flare technique trước khai thác sân bay Nhật/Hàn.",
-            "status": 1
-          },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_fleet_risk.json"
         }
       ]
     }
