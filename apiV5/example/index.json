@@ -3,7 +3,11 @@
     "title": "Flights Departed Today",
     "value": 486,
     "unit": "chuyến",
-    "trend": [{ "direction": "up", "label": "13% vs hôm qua", "tone": "positive" }],
+    "trend": [{ "direction": "up",
+            "label": "13% vs hôm qua",
+            "type": "lastMonth",
+            "value": "13%",
+            "tone": "positive" }],
     "visualization": { "type": "sparkline", "data": [320, 380, 410, 390, 450, 470, 486] },
     "accentClassName": "#006D88"
   },
@@ -14,8 +18,16 @@
     "variant": "danger",
     "warning": true,
     "trend": [
-      { "direction": "down", "label": "4% vs KH", "tone": "negative" },
-      { "direction": "up", "label": "7% vs CK", "tone": "positive" }
+      { "direction": "down",
+            "label": "4% vs KH",
+            "type": "plan",
+            "value": "4%",
+            "tone": "negative" },
+      { "direction": "up",
+            "label": "7% vs CK",
+            "type": "samePeriod",
+            "value": "7%",
+            "tone": "positive" }
     ],
     "visualization": { "type": "sparkline", "data": [88, 68, 75, 48, 55, 32, 22] },
     "accentClassName": "#006D88",
@@ -26,8 +38,16 @@
     "value": 21500,
     "unit": "tỷ",
     "trend": [
-      { "direction": "up", "label": "1,2% vs KH", "tone": "positive" },
-      { "direction": "up", "label": "9% vs CK", "tone": "positive" }
+      { "direction": "up",
+            "label": "1,2% vs KH",
+            "type": "plan",
+            "value": "1,2%",
+            "tone": "positive" },
+      { "direction": "up",
+            "label": "9% vs CK",
+            "type": "samePeriod",
+            "value": "9%",
+            "tone": "positive" }
     ],
     "visualization": { "type": "sparkline", "data": [18, 42, 30, 52, 36, 68, 88] },
     "accentClassName": "#D3AC2B",
@@ -42,19 +62,31 @@
     "title": "Pax Load Factor",
     "value": 78,
     "unit": "%",
-    "trend": [{ "direction": "up", "label": "5% vs KH", "tone": "positive" }]
+    "trend": [{ "direction": "up",
+            "label": "5% vs KH",
+            "type": "plan",
+            "value": "5%",
+            "tone": "positive" }]
   },
   {
     "title": "Cargo Tons YTD",
     "value": 241,
     "unit": "K",
-    "trend": [{ "direction": "up", "label": "13% YoY", "tone": "positive" }],
+    "trend": [{ "direction": "up",
+            "label": "13% YoY",
+            "type": "samePeriod",
+            "value": "13%",
+            "tone": "positive" }],
     "summary": { "ytd": 241 }
   },
   {
     "title": "Aircraft Hours",
     "value": 9.7,
     "unit": "giờ",
-    "trend": [{ "direction": "up", "label": "+0.4h YoY", "tone": "positive" }]
+    "trend": [{ "direction": "up",
+            "label": "+0.4h YoY",
+            "type": "samePeriod",
+            "value": "+0.4h",
+            "tone": "positive" }]
   }
 ]
