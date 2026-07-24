@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "center-donut",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -8,41 +8,74 @@
           "type": "string"
         },
         {
-          "id": "value",
+          "id": "kh",
           "type": "number",
-          "label": "VNĐ/FH",
-          "color": [
-            "#1D4857",
-            "#479EB3",
-            "#3D879B",
-            "#C4A83A",
-            "#889941",
-            "#5E793D",
-            "#C76449",
-            "#006D88"
-          ]
+          "label": "KH 2026",
+          "color": "#004071"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "2026",
+          "color": "#B4901F"
         }
       ],
       "rows": [
-        ["QĐT", 39800],
-        ["DVMN", 9200],
-        ["BDTX", 39100],
-        ["BDDK", 19500],
-        ["PTVT", 52300],
-        ["Cảng", 2800],
-        ["APU", 7600],
-        ["ĐC", 253000]
+        [
+          "QĐT",
+          38500,
+          39800
+        ],
+        [
+          "DVMN",
+          8500,
+          9200
+        ],
+        [
+          "BDTX",
+          37800,
+          39100
+        ],
+        [
+          "BDDK",
+          18500,
+          19500
+        ],
+        [
+          "PTVT",
+          49800,
+          52300
+        ],
+        [
+          "Cảng",
+          2600,
+          2800
+        ],
+        [
+          "APU",
+          7200,
+          7600
+        ],
+        [
+          "ĐC",
+          248000,
+          253000
+        ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "center-donut",
+        "chartType": "bar",
         "xField": "item",
         "series": [
           {
-            "field": "value",
-            "chartType": "center-donut"
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
           }
         ]
       }
