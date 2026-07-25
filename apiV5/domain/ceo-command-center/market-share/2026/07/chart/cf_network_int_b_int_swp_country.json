@@ -1,0 +1,59 @@
+{
+  "autoChart": {
+    "chartType": "actual-plan-combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "color": "#cbcfd0"
+        }
+      ],
+      "rows": [
+        [
+          "Australia",
+          55,
+          52
+        ],
+        [
+          "New Zealand",
+          30,
+          32
+        ],
+        [
+          "Others",
+          15,
+          16
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

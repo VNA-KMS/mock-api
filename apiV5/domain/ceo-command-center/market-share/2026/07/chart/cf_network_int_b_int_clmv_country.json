@@ -1,0 +1,64 @@
+{
+  "autoChart": {
+    "chartType": "actual-plan-combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "color": "#cbcfd0"
+        }
+      ],
+      "rows": [
+        [
+          "Cambodia",
+          40,
+          38
+        ],
+        [
+          "Laos",
+          30,
+          32
+        ],
+        [
+          "Myanmar",
+          20,
+          18
+        ],
+        [
+          "Others",
+          10,
+          12
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

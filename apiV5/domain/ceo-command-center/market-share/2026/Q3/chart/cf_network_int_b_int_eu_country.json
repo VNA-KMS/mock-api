@@ -1,0 +1,64 @@
+{
+  "autoChart": {
+    "chartType": "actual-plan-combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "color": "#cbcfd0"
+        }
+      ],
+      "rows": [
+        [
+          "France",
+          31,
+          36
+        ],
+        [
+          "Germany",
+          29,
+          27
+        ],
+        [
+          "UK",
+          21,
+          19
+        ],
+        [
+          "Others",
+          19,
+          18
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}
