@@ -16,34 +16,40 @@
               "type": "string"
             },
             {
-              "id": "dt",
+              "id": "cash",
               "type": "number",
-              "label": "Doanh thu vận tải hàng không (tỷ VND)"
+              "label": "Cash (VND/ghế.km)"
             },
             {
-              "id": "hq",
+              "id": "rask",
               "type": "number",
-              "label": "Hiệu quả VTHK (tỷ VND)"
+              "label": "RASK (VND/ghế.km)"
             }
           ],
           "rows": [
             [
+              "Toàn mạng VNA",
+              "Toàn mạng VNA",
+              3850,
+              2850
+            ],
+            [
               "Trục chính",
-              "DOM (3 AREAs)",
-              1400,
-              -90
+              "Xem xét",
+              3800,
+              3100
             ],
             [
               "Du lịch",
-              "DOM (3 AREAs)",
-              780,
-              60
+              "Mạnh",
+              2500,
+              3400
             ],
             [
               "Địa phương",
-              "DOM (3 AREAs)",
-              520,
-              -30
+              "Duy trì",
+              3100,
+              2600
             ]
           ]
         },
@@ -51,184 +57,10 @@
           {
             "id": "main",
             "chartType": "scatter",
-            "xField": "dt",
+            "xField": "cash",
             "series": [
               {
-                "field": "hq",
-                "chartType": "scatter"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "label": "Network",
-      "autoChart": {
-        "chartType": "scatter",
-        "aspectRatio": 2.2,
-        "dataset": {
-          "columns": [
-            {
-              "id": "name",
-              "type": "string"
-            },
-            {
-              "id": "segment",
-              "type": "string"
-            },
-            {
-              "id": "dt",
-              "type": "number",
-              "label": "Doanh thu vận tải hàng không (tỷ VND)"
-            },
-            {
-              "id": "hq",
-              "type": "number",
-              "label": "Hiệu quả VTHK (tỷ VND)"
-            }
-          ],
-          "rows": [
-            [
-              "DOM",
-              "DOM (1)",
-              3400,
-              -650
-            ]
-          ]
-        },
-        "views": [
-          {
-            "id": "main",
-            "chartType": "scatter",
-            "xField": "dt",
-            "series": [
-              {
-                "field": "hq",
-                "chartType": "scatter"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "label": "Country",
-      "autoChart": {
-        "chartType": "scatter",
-        "aspectRatio": 2.2,
-        "dataset": {
-          "columns": [
-            {
-              "id": "name",
-              "type": "string"
-            },
-            {
-              "id": "segment",
-              "type": "string"
-            },
-            {
-              "id": "dt",
-              "type": "number",
-              "label": "Doanh thu vận tải hàng không (tỷ VND)"
-            },
-            {
-              "id": "hq",
-              "type": "number",
-              "label": "Hiệu quả VTHK (tỷ VND)"
-            }
-          ],
-          "rows": [
-            [
-              "Hà Nội",
-              "DOM (3 countries)",
-              980,
-              -70
-            ],
-            [
-              "TP.HCM",
-              "DOM (3 countries)",
-              1100,
-              -100
-            ],
-            [
-              "Đà Nẵng",
-              "DOM (3 countries)",
-              640,
-              40
-            ]
-          ]
-        },
-        "views": [
-          {
-            "id": "main",
-            "chartType": "scatter",
-            "xField": "dt",
-            "series": [
-              {
-                "field": "hq",
-                "chartType": "scatter"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "label": "Route",
-      "autoChart": {
-        "chartType": "scatter",
-        "aspectRatio": 2.2,
-        "dataset": {
-          "columns": [
-            {
-              "id": "name",
-              "type": "string"
-            },
-            {
-              "id": "segment",
-              "type": "string"
-            },
-            {
-              "id": "dt",
-              "type": "number",
-              "label": "Doanh thu vận tải hàng không (tỷ VND)"
-            },
-            {
-              "id": "hq",
-              "type": "number",
-              "label": "Hiệu quả VTHK (tỷ VND)"
-            }
-          ],
-          "rows": [
-            [
-              "SGN–HAN",
-              "DOM (3 routes)",
-              480,
-              -20
-            ],
-            [
-              "HAN–SGN",
-              "DOM (3 routes)",
-              470,
-              -15
-            ],
-            [
-              "SGN–DAD",
-              "DOM (3 routes)",
-              210,
-              25
-            ]
-          ]
-        },
-        "views": [
-          {
-            "id": "main",
-            "chartType": "scatter",
-            "xField": "dt",
-            "series": [
-              {
-                "field": "hq",
+                "field": "rask",
                 "chartType": "scatter"
               }
             ]
