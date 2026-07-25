@@ -14,9 +14,21 @@
           "color": "#006D88"
         },
         {
-          "id": "kh",
+          "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
           "color": "#D3AC2B"
         }
       ],
@@ -24,17 +36,23 @@
         [
           "Hành khách",
           101262.2,
+          88637.5,
+          101262.2,
           88637.5
         ],
         [
           "Hàng hoá, bưu kiện",
           10743,
-          8166
+          8166,
+          112005.2,
+          96803.5
         ],
         [
           "Hoạt động gia tăng",
           4344.6,
-          4617.7
+          4617.7,
+          116349.8,
+          101421.2
         ]
       ]
     },
@@ -47,11 +65,12 @@
         "series": [
           {
             "field": "th",
-            "chartType": "bar"
+            "chartType": "line"
           },
           {
-            "field": "kh",
-            "chartType": "bar"
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
           }
         ]
       }

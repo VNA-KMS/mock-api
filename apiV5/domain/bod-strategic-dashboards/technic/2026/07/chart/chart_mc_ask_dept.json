@@ -3,25 +3,83 @@
     "chartType": "bar",
     "dataset": {
       "columns": [
-        { "id": "dept", "type": "string" },
-        { "id": "th", "type": "number", "label": "2026", "color": "#006D88" },
-        { "id": "kh", "type": "number", "label": "KH 2026", "color": "#D3AC2B" }
+        {
+          "id": "dept",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "color": "#D3AC2B"
+        }
       ],
       "rows": [
-        ["Tổng", 16911, 16735],
-        ["KT", 2625, 2569],
-        ["QLVT", 12313, 12230],
-        ["ĐTMS", 1972, 1937]
+        [
+          "Tổng",
+          16911,
+          16735,
+          16911,
+          16735
+        ],
+        [
+          "KT",
+          2625,
+          2569,
+          19536,
+          19304
+        ],
+        [
+          "QLVT",
+          12313,
+          12230,
+          31849,
+          31534
+        ],
+        [
+          "ĐTMS",
+          1972,
+          1937,
+          33821,
+          33471
+        ]
       ]
     },
-    "views": [{
-      "id": "main",
-      "chartType": "bar",
-      "xField": "dept",
-      "series": [
-        { "field": "th", "chartType": "bar" },
-        { "field": "kh", "chartType": "bar" }
-      ]
-    }]
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "dept",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
   }
 }

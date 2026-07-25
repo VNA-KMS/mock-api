@@ -7,7 +7,7 @@
           "type": "string"
         },
         {
-          "id": "cur",
+          "id": "th",
           "type": "number",
           "label": "Thực hiện 2026",
           "color": "#006D88"
@@ -25,9 +25,27 @@
           "color": "#9AA0A6"
         },
         {
-          "id": "kh",
+          "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế Cùng kỳ 2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
           "color": "#D3AC2B"
         }
       ],
@@ -37,6 +55,9 @@
           11800,
           null,
           11500,
+          12000,
+          11800,
+          11500,
           12000
         ],
         [
@@ -44,42 +65,60 @@
           11900,
           null,
           11600,
-          12100
+          12100,
+          23700,
+          23100,
+          24100
         ],
         [
           "T3",
           12100,
           null,
           11700,
-          12200
+          12200,
+          35800,
+          34800,
+          36300
         ],
         [
           "T4",
           12200,
           null,
           11800,
-          12300
+          12300,
+          48000,
+          46600,
+          48600
         ],
         [
           "T5",
           12300,
           null,
           11900,
-          12400
+          12400,
+          60300,
+          58500,
+          61000
         ],
         [
           "T6",
           12400,
           null,
           12000,
-          12500
+          12500,
+          72700,
+          70500,
+          73500
         ],
         [
           "T7",
           12400,
           null,
           12100,
-          12500
+          12500,
+          85100,
+          82600,
+          86000
         ]
       ]
     },
@@ -90,8 +129,8 @@
         "xField": "month",
         "series": [
           {
-            "field": "cur",
-            "chartType": "bar"
+            "field": "th",
+            "chartType": "line"
           },
           {
             "field": "uth",
@@ -99,12 +138,12 @@
           },
           {
             "field": "ck",
-            "chartType": "bar"
+            "chartType": "line"
           },
           {
-            "field": "kh",
-            "chartType": "bar",
-            "lineType": "dashed"
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
           }
         ]
       }

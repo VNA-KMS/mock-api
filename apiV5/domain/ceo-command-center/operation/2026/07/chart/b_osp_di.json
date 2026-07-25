@@ -8,7 +8,7 @@
           "type": "string"
         },
         {
-          "id": "actual",
+          "id": "th",
           "type": "number",
           "label": "2026",
           "color": "#004071"
@@ -20,25 +20,121 @@
           "color": "#64748B"
         },
         {
-          "id": "plan",
+          "id": "db",
           "type": "number",
           "label": "MT 2026",
+          "color": "#B4901F"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "color": "#004071"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế MT 2026",
           "color": "#B4901F"
         }
       ],
       "rows": [
-        ["T1", 42, 40, 48],
-        ["T2", 44, 41, 49],
-        ["T3", 47, 43, 50],
-        ["T4", 49, 45, 50],
-        ["T5", 48, 46, 51],
-        ["T6", 46, 47, 52],
-        ["T7", 48, 48, 53],
-        ["T8", null, 47, 52],
-        ["T9", null, 45, 52],
-        ["T10", null, 44, 51],
-        ["T11", null, 46, 50],
-        ["T12", null, 47, 50]
+        [
+          "T1",
+          42,
+          40,
+          48,
+          42,
+          48
+        ],
+        [
+          "T2",
+          44,
+          41,
+          49,
+          86,
+          97
+        ],
+        [
+          "T3",
+          47,
+          43,
+          50,
+          133,
+          147
+        ],
+        [
+          "T4",
+          49,
+          45,
+          50,
+          182,
+          197
+        ],
+        [
+          "T5",
+          48,
+          46,
+          51,
+          230,
+          248
+        ],
+        [
+          "T6",
+          46,
+          47,
+          52,
+          276,
+          300
+        ],
+        [
+          "T7",
+          48,
+          48,
+          53,
+          324,
+          353
+        ],
+        [
+          "T8",
+          null,
+          47,
+          52,
+          null,
+          405
+        ],
+        [
+          "T9",
+          null,
+          45,
+          52,
+          null,
+          457
+        ],
+        [
+          "T10",
+          null,
+          44,
+          51,
+          null,
+          508
+        ],
+        [
+          "T11",
+          null,
+          46,
+          50,
+          null,
+          558
+        ],
+        [
+          "T12",
+          null,
+          47,
+          50,
+          null,
+          608
+        ]
       ]
     },
     "views": [
@@ -50,7 +146,7 @@
         "yMax": 60,
         "series": [
           {
-            "field": "actual",
+            "field": "th",
             "chartType": "line",
             "showSymbol": true
           },
@@ -61,10 +157,10 @@
             "showSymbol": true
           },
           {
-            "field": "plan",
+            "field": "db",
             "chartType": "line",
-            "lineType": "dashed",
-            "showSymbol": true
+            "showSymbol": true,
+            "lineStyle": "dashed"
           }
         ]
       }

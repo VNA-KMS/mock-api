@@ -8,7 +8,7 @@
           "type": "string"
         },
         {
-          "id": "actual",
+          "id": "th",
           "type": "number",
           "label": "Thực hiện 2026",
           "color": "#006D88"
@@ -20,15 +20,33 @@
           "color": "#006D88"
         },
         {
-          "id": "plan",
+          "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
           "color": "#D3AC2B"
         },
         {
-          "id": "samePeriod",
+          "id": "ck",
           "type": "number",
           "label": "Cùng kỳ 2025",
+          "color": "#9AA0A6"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "color": "#006D88"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế Cùng kỳ 2025",
           "color": "#9AA0A6"
         }
       ],
@@ -38,6 +56,9 @@
           99.6,
           null,
           99.5,
+          99.4,
+          99.6,
+          99.5,
           99.4
         ],
         [
@@ -45,42 +66,60 @@
           99.5,
           null,
           99.5,
-          99.35
+          99.35,
+          199.1,
+          199,
+          198.75
         ],
         [
           "T3",
           99.4,
           null,
           99.5,
-          99.3
+          99.3,
+          298.5,
+          298.5,
+          298.05
         ],
         [
           "T4",
           99.3,
           null,
           99.5,
-          99.25
+          99.25,
+          397.8,
+          398,
+          397.3
         ],
         [
           "T5",
           99.2,
           null,
           99.5,
-          99.2
+          99.2,
+          497,
+          497.5,
+          496.5
         ],
         [
           "T6",
           99.15,
           null,
           99.5,
-          99.2
+          99.2,
+          596.15,
+          597,
+          595.7
         ],
         [
           "T7",
           99.1,
           null,
           99.5,
-          99.2
+          99.2,
+          695.25,
+          696.5,
+          694.9
         ]
       ]
     },
@@ -91,7 +130,7 @@
         "xField": "month",
         "series": [
           {
-            "field": "actual",
+            "field": "th",
             "chartType": "line"
           },
           {
@@ -99,12 +138,12 @@
             "chartType": "bar"
           },
           {
-            "field": "plan",
+            "field": "db",
             "chartType": "line",
-            "lineType": "dashed"
+            "lineStyle": "dashed"
           },
           {
-            "field": "samePeriod",
+            "field": "ck",
             "chartType": "line",
             "lineType": "dashed"
           }

@@ -8,7 +8,7 @@
           "type": "string"
         },
         {
-          "id": "kh",
+          "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
           "color": "#D3AC2B"
@@ -18,23 +18,41 @@
           "type": "number",
           "label": "Thực hiện / Ước TH",
           "color": "#006D88"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "color": "#D3AC2B"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện / Ước TH",
+          "color": "#006D88"
         }
       ],
       "rows": [
         [
           "Tháng",
           382.9,
+          384.1,
+          382.9,
           384.1
         ],
         [
           "Luỹ kế kỳ",
           4631.1,
-          4872.6
+          4872.6,
+          5014,
+          5256.7
         ],
         [
           "Dự báo tháng sau",
           385.2,
-          384.6
+          384.6,
+          5399.2,
+          5641.3
         ]
       ]
     },
@@ -45,12 +63,13 @@
         "xField": "ky",
         "series": [
           {
-            "field": "kh",
-            "chartType": "bar"
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
           },
           {
             "field": "th",
-            "chartType": "bar"
+            "chartType": "line"
           }
         ]
       }
