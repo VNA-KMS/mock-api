@@ -11,9 +11,8 @@
     },
     "items": [
       {
-        "status": "featured",
-        "id": "t_tot",
         "status": "compact",
+        "id": "t_tot",
         "title": "Khách tổng thị trường",
         "value": "1095",
         "unit": "nghìn",
@@ -53,9 +52,8 @@
         }
       },
       {
-        "status": "featured",
-        "id": "t_int",
         "status": "compact",
+        "id": "t_int",
         "title": "Khách tổng thị trường - Quốc tế",
         "value": "420",
         "unit": "nghìn",
@@ -95,9 +93,8 @@
         }
       },
       {
-        "status": "featured",
-        "id": "t_dom",
         "status": "compact",
+        "id": "t_dom",
         "title": "Khách tổng thị trường - Nội địa",
         "value": "675",
         "unit": "nghìn",
@@ -281,7 +278,7 @@
                 "title": "Thị phần VNA Group - Quốc tế",
                 "subTitle": "ĐVT: %",
                 "col": 1,
-                "colSpan": 60,
+                "colSpan": 30,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
@@ -290,12 +287,13 @@
                   "type": "cumulative",
                   "defaultChecked": false
                 }
-              },{
+              },
+              {
                 "id": "b_share_dom",
                 "title": "Thị phần VNA Group - Nội địa",
                 "subTitle": "ĐVT: %",
-                "col": 1,
-                "colSpan": 60,
+                "col": 31,
+                "colSpan": 30,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
@@ -329,80 +327,86 @@
             "title": "Khách tổng thị trường",
             "items": [
               {
-                "id": "b_int_clmv",
-                "title": "CLMV",
+                "id": "b_int_eu",
+                "title": "EU",
                 "col": 1,
-                "colSpan": 15,
+                "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_clmv.json",
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_eu.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_nea",
-                "title": "NEA",
-                "col": 16,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_nea.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_mid",
-                "title": "MID",
-                "col": 31,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_mid.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_noa",
-                "title": "NOA",
-                "col": 46,
-                "colSpan": 15,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_noa.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực EU: Số thực hiện T7: 95.2K, tăng 8.3% so với CK, dự báo T8: 95.8K. Quý 3: 285.6K, luỹ kế 7T: 650.2K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
                 "id": "b_int_au_us",
                 "title": "SWP",
-                "col": 1,
-                "colSpan": 15,
-                "row": 2,
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_au_us.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực SWP: Số thực hiện T7: 45.8K, tăng 5.2% so với CK, dự báo T8: 46.2K. Quý 3: 137.4K, luỹ kế 7T: 312.5K.",
+                  "tone": "info",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_int_us",
+                "title": "US",
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực US: Số thực hiện T7: 6.7K, giảm 9.7% so với CK, dự báo T8: 5.0K. Quý 3: 20.2K, luỹ kế 7T: 60.1K.",
+                  "tone": "info",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_int_nea",
+                "title": "NEA",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_nea.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực NEA: Số thực hiện T7: 128.5K, tăng 12.1% so với CK, dự báo T8: 130.2K. Quý 3: 385.5K, luỹ kế 7T: 875.3K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
                 "id": "b_int_sea",
                 "title": "SEA",
-                "col": 16,
-                "colSpan": 15,
+                "col": 21,
+                "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
@@ -410,34 +414,30 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực SEA: Số thực hiện T7: 156.8K, tăng 15.4% so với CK, dự báo T8: 158.5K. Quý 3: 470.4K, luỹ kế 7T: 1068.2K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
-                "id": "b_int_eu",
-                "title": "EUR",
-                "col": 31,
-                "colSpan": 15,
+                "id": "b_int_clmv",
+                "title": "CLMV",
+                "col": 41,
+                "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_eu.json",
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_clmv.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_int_sas",
-                "title": "SAS",
-                "col": 46,
-                "colSpan": 15,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_sas.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực CLMV: Số thực hiện T7: 38.2K, tăng 6.8% so với CK, dự báo T8: 38.9K. Quý 3: 114.6K, luỹ kế 7T: 260.1K.",
+                  "tone": "info",
+                  "status": 1
                 }
               }
             ]
@@ -495,6 +495,11 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực HANSGN: Số thực hiện T7: 182.5K, tăng 6.2% so với CK, dự báo T8: 184.0K. Quý 3: 547.5K, luỹ kế 7T: 1245.3K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
@@ -509,6 +514,11 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực HANDAD: Số thực hiện T7: 95.8K, tăng 4.5% so với CK, dự báo T8: 96.5K. Quý 3: 287.4K, luỹ kế 7T: 652.8K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
@@ -523,26 +533,17 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
-                }
-              },
-              {
-                "id": "b_dom_dulich",
-                "title": "Du lịch",
-                "col": 1,
-                "colSpan": 20,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_dulich.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực SGNDAD: Số thực hiện T7: 88.3K, tăng 3.8% so với CK, dự báo T8: 89.1K. Quý 3: 264.9K, luỹ kế 7T: 601.7K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
                 "id": "b_dom_trucle",
-                "title": "Trục lẻ",
-                "col": 21,
+                "title": "Local Trunk",
+                "col": 1,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
@@ -551,11 +552,35 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực Local Trunk: Số thực hiện T7: 42.6K, tăng 2.1% so với CK, dự báo T8: 43.0K. Quý 3: 127.8K, luỹ kế 7T: 290.4K.",
+                  "tone": "info",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_dom_dulich",
+                "title": "Tour",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_dulich.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực Tour: Số thực hiện T7: 28.4K, tăng 7.5% so với CK, dự báo T8: 28.9K. Quý 3: 85.2K, luỹ kế 7T: 193.6K.",
+                  "tone": "info",
+                  "status": 1
                 }
               },
               {
                 "id": "b_dom_diaphuong",
-                "title": "Địa phương",
+                "title": "Local",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
@@ -565,6 +590,11 @@
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khu vực Local: Số thực hiện T7: 35.1K, tăng 1.8% so với CK, dự báo T8: 35.5K. Quý 3: 105.3K, luỹ kế 7T: 239.2K.",
+                  "tone": "info",
+                  "status": 1
                 }
               }
             ]

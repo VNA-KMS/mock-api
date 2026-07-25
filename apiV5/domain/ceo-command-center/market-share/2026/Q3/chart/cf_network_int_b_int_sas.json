@@ -8,9 +8,15 @@
           "type": "string"
         },
         {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
           "id": "ck",
           "type": "number",
-          "label": "2025",
+          "label": "TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -20,15 +26,15 @@
           "color": "#D3AC2B"
         },
         {
-          "id": "th",
+          "id": "th_lk",
           "type": "number",
-          "label": "2026",
+          "label": "Luỹ kế TH 2026",
           "color": "#006D88"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế 2025",
+          "label": "Luỹ kế TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -36,50 +42,44 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "color": "#D3AC2B"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế 2026",
-          "color": "#006D88"
         }
       ],
       "rows": [
         [
           "Q1",
+          5.9,
           5.5,
           13.299999999999999,
           5.9,
           5.5,
-          13.3,
-          5.9
+          13.3
         ],
         [
           "Q2",
+          3.6999999999999997,
           0.8,
           10.7,
-          3.6999999999999997,
+          9.6,
           6.3,
-          24,
-          9.6
+          24
         ],
         [
           "Q3",
+          0.4,
           -4.800000000000001,
           8.3,
-          0.4,
+          10,
           1.5,
-          32.3,
-          10
+          32.3
         ],
         [
           "Q4",
+          null,
           -8.3,
           3.8,
           null,
           -6.8,
-          36.1,
-          null
+          36.1
         ]
       ]
     },
@@ -90,6 +90,10 @@
         "xField": "year",
         "series": [
           {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -97,10 +101,6 @@
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
-          },
-          {
-            "field": "th",
-            "chartType": "line"
           }
         ]
       }

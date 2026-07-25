@@ -8,9 +8,15 @@
           "type": "string"
         },
         {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
           "id": "ck",
           "type": "number",
-          "label": "2025",
+          "label": "TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -20,15 +26,15 @@
           "color": "#D3AC2B"
         },
         {
-          "id": "th",
+          "id": "th_lk",
           "type": "number",
-          "label": "2026",
+          "label": "Luỹ kế TH 2026",
           "color": "#006D88"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế 2025",
+          "label": "Luỹ kế TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -36,122 +42,116 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "color": "#D3AC2B"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế 2026",
-          "color": "#006D88"
         }
       ],
       "rows": [
         [
           "T1",
+          67,
           70,
           78,
           67,
           70,
-          78,
-          67
+          78
         ],
         [
           "T2",
+          65,
           68,
           76,
-          65,
+          132,
           138,
-          154,
-          132
+          154
         ],
         [
           "T3",
+          63,
           66,
           80,
-          63,
+          195,
           204,
-          234,
-          195
+          234
         ],
         [
           "T4",
+          67,
           70,
           82,
-          67,
+          262,
           274,
-          316,
-          262
+          316
         ],
         [
           "T5",
+          69,
           72,
           84,
-          69,
+          331,
           346,
-          400,
-          331
+          400
         ],
         [
           "T6",
+          70,
           74,
           86,
-          70,
+          401,
           420,
-          486,
-          401
+          486
         ],
         [
           "T7",
+          72,
           76,
           88,
-          72,
+          473,
           496,
-          574,
-          473
+          574
         ],
         [
           "T8",
+          null,
           62,
           70,
           null,
           558,
-          644,
-          null
+          644
         ],
         [
           "T9",
+          null,
           60,
           72,
           null,
           618,
-          716,
-          null
+          716
         ],
         [
           "T10",
+          null,
           64,
           74,
           null,
           682,
-          790,
-          null
+          790
         ],
         [
           "T11",
+          null,
           66,
           72,
           null,
           748,
-          862,
-          null
+          862
         ],
         [
           "T12",
+          null,
           68,
           76,
           null,
           816,
-          938,
-          null
+          938
         ]
       ]
     },
@@ -162,6 +162,10 @@
         "xField": "month",
         "series": [
           {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -169,10 +173,6 @@
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
-          },
-          {
-            "field": "th",
-            "chartType": "line"
           }
         ]
       }
