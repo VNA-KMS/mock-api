@@ -8,9 +8,15 @@
           "type": "string"
         },
         {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#006D88"
+        },
+        {
           "id": "ck",
           "type": "number",
-          "label": "2025",
+          "label": "TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -20,15 +26,21 @@
           "color": "#D3AC2B"
         },
         {
-          "id": "th",
+          "id": "fct",
           "type": "number",
-          "label": "2026",
+          "label": "FCT 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế TH 2026",
           "color": "#006D88"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế 2025",
+          "label": "Luỹ kế TH 2025",
           "color": "#cbcfd0"
         },
         {
@@ -38,48 +50,56 @@
           "color": "#D3AC2B"
         },
         {
-          "id": "th_lk",
+          "id": "fct_lk",
           "type": "number",
-          "label": "Luỹ kế 2026",
-          "color": "#006D88"
+          "label": "Luỹ kế FCT 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
         [
           "Q1",
-          1203.9,
-          1367.8000000000002,
           1225.1999999999998,
           1203.9,
+          1367.8000000000002,
+          1200.7,
+          1225.2,
+          1203.9,
           1367.8,
-          1225.2
+          1200.7
         ],
         [
           "Q2",
+          1020.5,
           1076.4,
           1151.1,
-          1020.5,
+          1000.1,
+          2245.7,
           2280.3,
           2518.9,
-          2245.7
+          2200.8
         ],
         [
           "Q3",
+          471,
           1166.2,
           1338.5,
-          471,
+          461.6,
+          2716.7,
           3446.5,
           3857.4,
-          2716.7
+          2662.4
         ],
         [
           "Q4",
+          null,
           1051.5,
           1113.6999999999998,
+          1102.6,
           null,
           4498,
           4971.1,
-          null
+          4921.4
         ]
       ]
     },
@@ -90,6 +110,10 @@
         "xField": "year",
         "series": [
           {
+            "field": "th",
+            "chartType": "line"
+          },
+          {
             "field": "ck",
             "chartType": "line"
           },
@@ -99,10 +123,12 @@
             "lineStyle": "dashed"
           },
           {
-            "field": "th",
-            "chartType": "line"
+            "field": "fct",
+            "chartType": "line",
+            "lineStyle": "dotted"
           }
-        ]
+        ],
+        "labelShow": "all"
       }
     ]
   }
