@@ -1,0 +1,46 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Thị phần",
+          "color": [
+            "#006D88",
+            "#E6B441"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Quốc tế",
+          60
+        ],
+        [
+          "Nội địa",
+          40
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "donut-pct",
+        "xField": "label",
+        "showCenterValue": true,
+        "series": [
+          {
+            "field": "value",
+            "chartType": "pie"
+          }
+        ]
+      }
+    ]
+  }
+}
