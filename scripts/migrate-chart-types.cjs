@@ -5,7 +5,7 @@
  *   V = auto | engine (auto = kế thừa R)
  *   S = line|bar|area (+ lineStyle / showSymbol)
  *
- * - actual-plan-combo → combo + series tường minh (geom theo field convention một lần)
+ * - legacy actual-plan-combo (nếu còn) → combo + series tường minh
  * - pie/donut/… trên series → promote lên R/V
  * - R=auto → suy từ view/series (một lần), ghi cứng
  *

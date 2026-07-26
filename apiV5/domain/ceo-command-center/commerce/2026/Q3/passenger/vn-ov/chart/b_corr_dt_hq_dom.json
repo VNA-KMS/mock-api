@@ -1,89 +1,84 @@
 {
-  "filterViews": [
-    {
-      "label": "AREA",
-      "autoChart": {
-        "chartType": "scatter",
-        "aspectRatio": 2.2,
-        "dataset": {
-          "columns": [
-            {
-              "id": "name",
-              "type": "string"
-            },
-            {
-              "id": "segment",
-              "type": "string"
-            },
-            {
-              "id": "Cask",
-              "type": "number",
-              "label": "Cask (VND/ghế.km)"
-            },
-            {
-              "id": "rask",
-              "type": "number",
-              "label": "RASK (VND/ghế.km)"
-            }
-          ],
-          "rows": [
-            [
-              "Toàn mạng VNA",
-              "Toàn mạng VNA",
-              3850,
-              2850
-            ],
-            [
-              "HANSGN",
-              "HANSGN",
-              3800,
-              3100
-            ],
-            [
-              "HANDAD",
-              "HANDAD",
-              3500,
-              2800
-            ],
-            [
-              "SGNDAD",
-              "SGNDAD",
-              3600,
-              2900
-            ],
-            [
-              "Local Trunk",
-              "Local Trunk",
-              3100,
-              2700
-            ],
-            [
-              "Tour",
-              "Tour",
-              2500,
-              3400
-            ],
-            [
-              "Local",
-              "Local",
-              2900,
-              2500
-            ]
-          ]
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
         },
-        "views": [
+        {
+          "id": "segment",
+          "type": "string"
+        },
+        {
+          "id": "Cask",
+          "type": "number",
+          "label": "Cask (VND/ghế.km)"
+        },
+        {
+          "id": "rask",
+          "type": "number",
+          "label": "RASK (VND/ghế.km)"
+        }
+      ],
+      "rows": [
+        [
+          "Toàn mạng VNA",
+          "Toàn mạng VNA",
+          3850,
+          2850
+        ],
+        [
+          "HANSGN",
+          "HANSGN",
+          3800,
+          3100
+        ],
+        [
+          "HANDAD",
+          "HANDAD",
+          3500,
+          2800
+        ],
+        [
+          "SGNDAD",
+          "SGNDAD",
+          3600,
+          2900
+        ],
+        [
+          "Local Trunk",
+          "Local Trunk",
+          3100,
+          2700
+        ],
+        [
+          "Tour",
+          "Tour",
+          2500,
+          3400
+        ],
+        [
+          "Local",
+          "Local",
+          2900,
+          2500
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "Cask",
+        "series": [
           {
-            "id": "main",
-            "chartType": "auto",
-            "xField": "Cask",
-            "series": [
-              {
-                "field": "rask"
-              }
-            ]
+            "field": "rask"
           }
         ]
       }
-    }
-  ]
+    ]
+  }
 }

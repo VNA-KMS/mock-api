@@ -2,9 +2,6 @@ const fs = require('fs');
 const p = 'D:/Project/VNA/Git/mock-api/apiV5/domain/bod-strategic-dashboards/operation/2026/07/index.json';
 let text = fs.readFileSync(p, 'utf8');
 
-// Remove rightTitle "%" lines
-text = text.replace(/\s+\"rightTitle\": \"%\"/g, '');
-
 // Find the delay/otp section and top5 section, replace with merged
 const old1 = text.indexOf('"id": "b_delay_heatmap"');
 const sectionStart = text.lastIndexOf('{', old1);

@@ -425,13 +425,12 @@
         {
           "id": "chart_cost_pie",
           "title": "Cơ cấu chi phí bảo dưỡng theo ASK",
-          "subTitle": "Theo hạng mục chi phí · Toàn đội bay",
+          "subTitle": "Đơn vị: VNĐ/ASK",
           "col": 1,
           "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.5,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_cost_pie.json",
-          "rightTitle": "VNĐ/ASK",
           "aiInsight": {
             "text": "Động cơ (ĐC) chiếm 59% cơ cấu chi phí ASK. PTVT và BDTX lần lượt 13,5% và 9,2%.",
             "severity": "good"
@@ -756,13 +755,12 @@
         {
           "id": "chart_aog_cause",
           "title": "Phân tích theo nguyên nhân dừng bay",
-          "subTitle": "Cấp 1: kỹ thuật vs phi kỹ thuật · Cấp 2: chi tiết theo hệ thống",
+          "subTitle": "Đơn vị: %",
           "col": 1,
           "colSpan": 30,
           "row": 2,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/06/chart/chart_aog_cause.json",
-          "rightTitle": "%",
           "aiInsight": {
             "text": "65% AOG do kỹ thuật, trong đó động cơ chiếm 25% — cần ưu tiên kiểm tra động cơ định kỳ.",
             "severity": "warn"
@@ -879,6 +877,24 @@
           "aiInsight": {
             "text": "VN Airlines dẫn đầu số vụ delay. Tân Sơn Nhất là sân bay có nhiều delay nhất.",
             "severity": "warn"
+          },
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "hangbay",
+                "label": "Hãng bay"
+              },
+              {
+                "id": "chang",
+                "label": "Chặng bay"
+              },
+              {
+                "id": "sanbay",
+                "label": "Sân bay"
+              }
+            ],
+            "defaultValue": "hangbay"
           }
         },
         {
