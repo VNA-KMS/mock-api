@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "waterfall",
     "dataset": {
       "columns": [
         {
@@ -11,7 +11,7 @@
           "id": "value",
           "type": "number",
           "label": "Nghìn tỷ VND",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
@@ -76,12 +76,11 @@
     "views": [
       {
         "id": "main",
-        "chartType": "waterfall",
+        "chartType": "auto",
         "xField": "step",
         "series": [
           {
-            "field": "value",
-            "chartType": "waterfall"
+            "field": "value"
           }
         ],
         "showLegend": false

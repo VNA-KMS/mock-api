@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -10,7 +10,8 @@
         {
           "label": "2026",
           "id": "th",
-          "type": "number"
+          "type": "number",
+          "colorToken": "series.actual"
         },
         {
           "label": "Kế hoạch 2026",
@@ -71,8 +72,10 @@
         "xField": "reason",
         "series": [
           {
-            "chartType": "line",
-            "field": "th"
+            "chartType": "bar",
+            "field": "th",
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "chartType": "line",

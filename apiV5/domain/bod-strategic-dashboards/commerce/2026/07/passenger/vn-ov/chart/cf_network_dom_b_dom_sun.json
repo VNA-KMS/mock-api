@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -11,43 +11,43 @@
           "id": "th",
           "type": "number",
           "label": "2026",
-          "color": "#A55C3E"
+          "colorToken": "data.terracotta"
         },
         {
           "id": "ck",
           "type": "number",
           "label": "2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         },
         {
           "id": "db",
           "type": "number",
           "label": "KH 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         },
         {
           "id": "uth",
           "type": "number",
           "label": "Dự báo",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
-          "color": "#A55C3E"
+          "colorToken": "data.terracotta"
         },
         {
           "id": "ck_lk",
           "type": "number",
           "label": "Luỹ kế 2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         },
         {
           "id": "db_lk",
           "type": "number",
           "label": "Luỹ kế KH 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         }
       ],
       "rows": [
@@ -181,11 +181,13 @@
         "series": [
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
-            "chartType": "line"
+            "chartType": "bar"
           },
           {
             "field": "db",
@@ -194,7 +196,8 @@
           },
           {
             "field": "uth",
-            "chartType": "bar"
+            "chartType": "bar",
+            "lineStyle": "dashed"
           }
         ]
       }

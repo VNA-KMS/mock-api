@@ -11,31 +11,31 @@
           "id": "th",
           "type": "number",
           "label": "2026",
-          "color": "#004071"
+          "colorToken": "series.actual"
         },
         {
           "id": "yoy",
           "type": "number",
           "label": "2025",
-          "color": "#64748B"
+          "colorToken": "series.forecast"
         },
         {
           "id": "db",
           "type": "number",
           "label": "MT 2026",
-          "color": "#B4901F"
+          "colorToken": "series.target"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
-          "color": "#004071"
+          "colorToken": "series.actual"
         },
         {
           "id": "db_lk",
           "type": "number",
           "label": "Luỹ kế MT 2026",
-          "color": "#B4901F"
+          "colorToken": "series.target"
         }
       ],
       "rows": [
@@ -140,7 +140,7 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "yMin": 70,
         "yMax": 100,
@@ -148,19 +148,24 @@
           {
             "field": "th",
             "chartType": "line",
-            "showSymbol": true
+            "showSymbol": true,
+            "showLabel": "end",
+            "symbolFilled": true,
+            "areaStyle": {}
           },
           {
             "field": "yoy",
             "chartType": "line",
             "lineType": "dashed",
-            "showSymbol": true
+            "showSymbol": true,
+            "symbolFilled": true
           },
           {
             "field": "db",
             "chartType": "line",
             "showSymbol": true,
-            "lineStyle": "dashed"
+            "lineStyle": "dashed",
+            "symbolFilled": true
           }
         ]
       }

@@ -11,13 +11,13 @@
           "id": "du_tien_ck",
           "type": "number",
           "label": "Dư tiền cuối kỳ",
-          "color": "#1D4857"
+          "colorToken": "data.deep-teal"
         },
         {
           "id": "du_no_vay_nh_ck",
           "type": "number",
           "label": "Dư nợ vay NH cuối kỳ",
-          "color": "#479EB3"
+          "colorToken": "data.jade-blue"
         }
       ],
       "rows": [
@@ -86,12 +86,15 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
             "field": "du_tien_ck",
-            "chartType": "AREA"
+            "chartType": "AREA",
+            "showSymbol": true,
+            "symbolFilled": true,
+            "areaStyle": {}
           },
           {
             "field": "du_no_vay_nh_ck",

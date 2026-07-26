@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -11,25 +11,25 @@
           "id": "th",
           "type": "number",
           "label": "2026",
-          "color": "#479EB3"
+          "colorToken": "data.jade-blue"
         },
         {
           "id": "ck",
           "type": "number",
           "label": "2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
-          "color": "#479EB3"
+          "colorToken": "data.jade-blue"
         },
         {
           "id": "ck_lk",
           "type": "number",
           "label": "Luỹ kế 2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         }
       ],
       "rows": [
@@ -148,11 +148,13 @@
         "series": [
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
-            "chartType": "line"
+            "chartType": "bar"
           }
         ]
       }

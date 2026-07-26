@@ -115,8 +115,8 @@ function processFile(absPath) {
     }
 
     processColumns(j.autoChart?.dataset?.columns)
-    if (j.filterViews) {
-      for (const fv of j.filterViews) {
+    if (j.views) {
+      for (const fv of j.views) {
         processColumns(fv.autoChart?.dataset?.columns)
       }
     }

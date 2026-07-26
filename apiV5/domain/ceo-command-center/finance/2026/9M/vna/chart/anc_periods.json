@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -11,25 +11,25 @@
           "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         },
         {
           "id": "th",
           "type": "number",
           "label": "Thực hiện / Ước TH",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "db_lk",
           "type": "number",
           "label": "Luỹ kế Kế hoạch 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế Thực hiện / Ước TH",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
@@ -69,7 +69,8 @@
           },
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "bar",
+            "showSymbol": true
           }
         ]
       }

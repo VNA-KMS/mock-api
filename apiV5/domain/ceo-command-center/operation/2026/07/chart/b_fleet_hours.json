@@ -11,13 +11,13 @@
           "id": "th",
           "type": "number",
           "label": "Nghìn BH",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế Nghìn BH",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
@@ -46,12 +46,13 @@
     "views": [
       {
         "id": "main",
-        "chartType": "bar-h",
+        "chartType": "auto",
         "xField": "fleet",
         "series": [
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "line",
+            "showLabel": "end"
           }
         ]
       }

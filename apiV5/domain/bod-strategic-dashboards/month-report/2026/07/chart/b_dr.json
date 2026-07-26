@@ -10,43 +10,43 @@
           "id": "th",
           "type": "number",
           "label": "Thực hiện 2026",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "uth",
           "type": "number",
           "label": "Ước thực hiện 2026",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "db",
           "type": "number",
           "label": "Kế hoạch 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         },
         {
           "id": "ck",
           "type": "number",
           "label": "Cùng kỳ 2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         },
         {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế Thực hiện 2026",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "db_lk",
           "type": "number",
           "label": "Luỹ kế Kế hoạch 2026",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         },
         {
           "id": "ck_lk",
           "type": "number",
           "label": "Luỹ kế Cùng kỳ 2025",
-          "color": "#9AA0A6"
+          "colorToken": "series.previous"
         }
       ],
       "rows": [
@@ -175,16 +175,19 @@
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "uth",
-            "chartType": "bar"
+            "chartType": "bar",
+            "lineStyle": "dashed"
           },
           {
             "field": "db",
@@ -193,13 +196,12 @@
           },
           {
             "field": "ck",
-            "chartType": "line",
-            "lineType": "dashed"
+            "chartType": "bar"
           }
         ]
       }
     ],
-    "chartType": "bar"
+    "chartType": "combo"
   },
   "metadata": {
     "forecastStartIndex": 8
