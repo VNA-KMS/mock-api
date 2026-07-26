@@ -3,17 +3,55 @@
     "chartType": "line",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string", "label": "Tháng" },
-        { "id": "actual", "type": "number", "label": "Thực hiện", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "Kế hoạch", "colorToken": "series.target" }
+        {
+          "id": "month",
+          "type": "string",
+          "label": "Tháng"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        }
       ],
       "rows": [
-        ["T1", 118, 110],
-        ["T2", 132, 120],
-        ["T3", 125, 128],
-        ["T4", 148, 135],
-        ["T5", 160, 145],
-        ["T6", 155, 150]
+        [
+          "T1",
+          118,
+          110
+        ],
+        [
+          "T2",
+          132,
+          120
+        ],
+        [
+          "T3",
+          125,
+          128
+        ],
+        [
+          "T4",
+          148,
+          135
+        ],
+        [
+          "T5",
+          160,
+          145
+        ],
+        [
+          "T6",
+          155,
+          150
+        ]
       ]
     },
     "views": [
@@ -21,8 +59,15 @@
         "chartType": "line",
         "xField": "month",
         "series": [
-          { "field": "actual", "chartType": "line" },
-          { "field": "plan", "chartType": "line", "lineType": "dashed" }
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
         ]
       }
     ]
@@ -31,19 +76,40 @@
     "chartType": "donut-kpi",
     "dataset": {
       "columns": [
-        { "id": "label", "type": "string" },
-        { "id": "value", "type": "number", "color": ["#22c55e", "#ef4444"] }
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "color": [
+            "semantic.positive",
+            "semantic.negative"
+          ]
+        }
       ],
       "rows": [
-        ["ĐẠT", 48],
-        ["KHÔNG ĐẠT", 16]
+        [
+          "ĐẠT",
+          48
+        ],
+        [
+          "KHÔNG ĐẠT",
+          16
+        ]
       ]
     },
     "views": [
       {
         "chartType": "donut-kpi",
         "xField": "label",
-        "series": [{ "field": "value", "chartType": "donut-kpi" }]
+        "series": [
+          {
+            "field": "value",
+            "chartType": "donut-kpi"
+          }
+        ]
       }
     ]
   },
@@ -51,27 +117,68 @@
     "chartType": "kpi-distribution",
     "dataset": {
       "columns": [
-        { "id": "label", "type": "string" },
-        { "id": "value", "type": "number" }
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number"
+        }
       ],
       "rows": [
-        ["Khối thương mại", 11],
-        ["Khối kỹ thuật", 9],
-        ["Khối khai thác", 8],
-        ["Khối ...", 7],
-        ["Khối ...", 6],
-        ["Khối ...", 5],
-        ["Khối ...", 4],
-        ["Khối ...", 3],
-        ["Khối ...", 2],
-        ["Khối ...", 9]
+        [
+          "Khối thương mại",
+          11
+        ],
+        [
+          "Khối kỹ thuật",
+          9
+        ],
+        [
+          "Khối khai thác",
+          8
+        ],
+        [
+          "Khối ...",
+          7
+        ],
+        [
+          "Khối ...",
+          6
+        ],
+        [
+          "Khối ...",
+          5
+        ],
+        [
+          "Khối ...",
+          4
+        ],
+        [
+          "Khối ...",
+          3
+        ],
+        [
+          "Khối ...",
+          2
+        ],
+        [
+          "Khối ...",
+          9
+        ]
       ]
     },
     "views": [
       {
         "chartType": "kpi-distribution",
         "xField": "label",
-        "series": [{ "field": "value", "chartType": "kpi-distribution" }]
+        "series": [
+          {
+            "field": "value",
+            "chartType": "kpi-distribution"
+          }
+        ]
       }
     ]
   },
@@ -79,23 +186,55 @@
     "chartType": "bar",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string", "label": "Tháng" },
-        { "id": "pax", "type": "number", "label": "Hành khách", "colorToken": "series.actual" }
+        {
+          "id": "month",
+          "type": "string",
+          "label": "Tháng"
+        },
+        {
+          "id": "pax",
+          "type": "number",
+          "label": "Hành khách",
+          "colorToken": "series.actual"
+        }
       ],
       "rows": [
-        ["T1", 820],
-        ["T2", 910],
-        ["T3", 880],
-        ["T4", 1020],
-        ["T5", 1150],
-        ["T6", 1080]
+        [
+          "T1",
+          820
+        ],
+        [
+          "T2",
+          910
+        ],
+        [
+          "T3",
+          880
+        ],
+        [
+          "T4",
+          1020
+        ],
+        [
+          "T5",
+          1150
+        ],
+        [
+          "T6",
+          1080
+        ]
       ]
     },
     "views": [
       {
         "chartType": "bar",
         "xField": "month",
-        "series": [{ "field": "pax", "chartType": "bar" }]
+        "series": [
+          {
+            "field": "pax",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
@@ -103,21 +242,75 @@
     "chartType": "bar-h-stacked",
     "dataset": {
       "columns": [
-        { "id": "group", "type": "string", "label": "Khối" },
-        { "id": "dat", "type": "number", "label": "Đạt", "color": "#22C55E" },
-        { "id": "khongDat", "type": "number", "label": "Không đạt", "color": "#EF4444" }
+        {
+          "id": "group",
+          "type": "string",
+          "label": "Khối"
+        },
+        {
+          "id": "dat",
+          "type": "number",
+          "label": "Đạt",
+          "colorToken": "semantic.positive"
+        },
+        {
+          "id": "khongDat",
+          "type": "number",
+          "label": "Không đạt",
+          "colorToken": "semantic.negative"
+        }
       ],
       "rows": [
-        ["Khối thương mại", 124, 57],
-        ["Khối ...", 109, 71],
-        ["Khối ...", 97, 87],
-        ["Khối ...", 90, 83],
-        ["Khối ...", 106, 82],
-        ["Khối ...", 124, 79],
-        ["Khối ...", 117, 87],
-        ["Khối ...", 133, 73],
-        ["Khối ...", 125, 81],
-        ["Khối ...", 133, 88]
+        [
+          "Khối thương mại",
+          124,
+          57
+        ],
+        [
+          "Khối ...",
+          109,
+          71
+        ],
+        [
+          "Khối ...",
+          97,
+          87
+        ],
+        [
+          "Khối ...",
+          90,
+          83
+        ],
+        [
+          "Khối ...",
+          106,
+          82
+        ],
+        [
+          "Khối ...",
+          124,
+          79
+        ],
+        [
+          "Khối ...",
+          117,
+          87
+        ],
+        [
+          "Khối ...",
+          133,
+          73
+        ],
+        [
+          "Khối ...",
+          125,
+          81
+        ],
+        [
+          "Khối ...",
+          133,
+          88
+        ]
       ]
     },
     "views": [
@@ -127,8 +320,14 @@
         "stack": "total",
         "labelInside": true,
         "series": [
-          { "field": "dat", "chartType": "bar" },
-          { "field": "khongDat", "chartType": "bar" }
+          {
+            "field": "dat",
+            "chartType": "bar"
+          },
+          {
+            "field": "khongDat",
+            "chartType": "bar"
+          }
         ]
       }
     ]
@@ -137,17 +336,55 @@
     "chartType": "line",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string", "label": "Tháng" },
-        { "id": "actual", "type": "number", "label": "Thực hiện", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "Kế hoạch", "colorToken": "series.target" }
+        {
+          "id": "month",
+          "type": "string",
+          "label": "Tháng"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        }
       ],
       "rows": [
-        ["T1", 118, 110],
-        ["T2", 132, 120],
-        ["T3", 125, 128],
-        ["T4", 148, 135],
-        ["T5", 160, 145],
-        ["T6", 155, 150]
+        [
+          "T1",
+          118,
+          110
+        ],
+        [
+          "T2",
+          132,
+          120
+        ],
+        [
+          "T3",
+          125,
+          128
+        ],
+        [
+          "T4",
+          148,
+          135
+        ],
+        [
+          "T5",
+          160,
+          145
+        ],
+        [
+          "T6",
+          155,
+          150
+        ]
       ]
     },
     "views": [
@@ -155,8 +392,15 @@
         "chartType": "line",
         "xField": "month",
         "series": [
-          { "field": "actual", "chartType": "line" },
-          { "field": "plan", "chartType": "line", "lineType": "dashed" }
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
         ]
       }
     ]
@@ -165,17 +409,55 @@
     "chartType": "line",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string", "label": "Tháng" },
-        { "id": "actual", "type": "number", "label": "Thực hiện", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "Kế hoạch", "colorToken": "series.target" }
+        {
+          "id": "month",
+          "type": "string",
+          "label": "Tháng"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "Thực hiện",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "Kế hoạch",
+          "colorToken": "series.target"
+        }
       ],
       "rows": [
-        ["T1", 90, 100],
-        ["T2", 105, 110],
-        ["T3", 98, 115],
-        ["T4", 120, 120],
-        ["T5", 135, 130],
-        ["T6", 128, 140]
+        [
+          "T1",
+          90,
+          100
+        ],
+        [
+          "T2",
+          105,
+          110
+        ],
+        [
+          "T3",
+          98,
+          115
+        ],
+        [
+          "T4",
+          120,
+          120
+        ],
+        [
+          "T5",
+          135,
+          130
+        ],
+        [
+          "T6",
+          128,
+          140
+        ]
       ]
     },
     "views": [
@@ -183,8 +465,15 @@
         "chartType": "line",
         "xField": "month",
         "series": [
-          { "field": "actual", "chartType": "line" },
-          { "field": "plan", "chartType": "line", "lineType": "dashed" }
+          {
+            "field": "actual",
+            "chartType": "line"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
         ]
       }
     ]
@@ -193,23 +482,55 @@
     "chartType": "bar",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string", "label": "Tháng" },
-        { "id": "pax", "type": "number", "label": "Hành khách", "colorToken": "series.actual" }
+        {
+          "id": "month",
+          "type": "string",
+          "label": "Tháng"
+        },
+        {
+          "id": "pax",
+          "type": "number",
+          "label": "Hành khách",
+          "colorToken": "series.actual"
+        }
       ],
       "rows": [
-        ["T1", 420],
-        ["T2", 480],
-        ["T3", 455],
-        ["T4", 510],
-        ["T5", 560],
-        ["T6", 530]
+        [
+          "T1",
+          420
+        ],
+        [
+          "T2",
+          480
+        ],
+        [
+          "T3",
+          455
+        ],
+        [
+          "T4",
+          510
+        ],
+        [
+          "T5",
+          560
+        ],
+        [
+          "T6",
+          530
+        ]
       ]
     },
     "views": [
       {
         "chartType": "bar",
         "xField": "month",
-        "series": [{ "field": "pax", "chartType": "bar" }]
+        "series": [
+          {
+            "field": "pax",
+            "chartType": "bar"
+          }
+        ]
       }
     ]
   },
@@ -220,7 +541,11 @@
       "subTitle": "Đơn vị: <value>",
       "height": 189,
       "autoChart": "demoChart",
-      "aiInsight": { "text": "Secondary text display here", "tone": "info", "status": 1 }
+      "aiInsight": {
+        "text": "Secondary text display here",
+        "tone": "info",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-cumulative",
@@ -228,8 +553,15 @@
       "subTitle": "Đơn vị: <value>",
       "height": 189,
       "autoChart": "demoChart",
-      "headerAction": { "type": "cumulative", "defaultChecked": true },
-      "aiInsight": { "text": "Bật Luỹ kế để xem tổng tích luỹ theo tháng.", "tone": "info", "status": 1 }
+      "headerAction": {
+        "type": "cumulative",
+        "defaultChecked": true
+      },
+      "aiInsight": {
+        "text": "Bật Luỹ kế để xem tổng tích luỹ theo tháng.",
+        "tone": "info",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-cumulative-off",
@@ -237,7 +569,10 @@
       "subTitle": "Đơn vị: tỷ VND",
       "height": 189,
       "autoChart": "demoChart",
-      "headerAction": { "type": "cumulative", "defaultChecked": false }
+      "headerAction": {
+        "type": "cumulative",
+        "defaultChecked": false
+      }
     },
     {
       "id": "chart-v2-header-segment",
@@ -247,27 +582,51 @@
       "headerAction": {
         "type": "segment",
         "options": [
-          { "id": "area", "label": "Area" },
-          { "id": "country", "label": "Country" },
-          { "id": "route", "label": "Route" }
+          {
+            "id": "area",
+            "label": "Area"
+          },
+          {
+            "id": "country",
+            "label": "Country"
+          },
+          {
+            "id": "route",
+            "label": "Route"
+          }
         ],
         "defaultValue": "area"
       },
       "filterViews": [
         {
-          "id": "area", "label": "Area",
+          "id": "area",
+          "label": "Area",
           "autoChart": "segmentArea",
-          "aiInsight": { "text": "View Area — doanh thu theo khu vực.", "tone": "info", "status": 1 }
+          "aiInsight": {
+            "text": "View Area — doanh thu theo khu vực.",
+            "tone": "info",
+            "status": 1
+          }
         },
         {
-          "id": "country", "label": "Country",
+          "id": "country",
+          "label": "Country",
           "autoChart": "segmentCountry",
-          "aiInsight": { "text": "View Country — thực hiện dưới kế hoạch T6.", "tone": "warning", "status": 1 }
+          "aiInsight": {
+            "text": "View Country — thực hiện dưới kế hoạch T6.",
+            "tone": "warning",
+            "status": 1
+          }
         },
         {
-          "id": "route", "label": "Route",
+          "id": "route",
+          "label": "Route",
           "autoChart": "segmentRoute",
-          "aiInsight": { "text": "View Route — sản lượng T5 cao nhất.", "tone": "success", "status": 1 }
+          "aiInsight": {
+            "text": "View Route — sản lượng T5 cao nhất.",
+            "tone": "success",
+            "status": 1
+          }
         }
       ]
     },
@@ -284,7 +643,11 @@
       "subTitle": "Đơn vị: nghìn HK",
       "height": 189,
       "autoChart": "barChart",
-      "aiInsight": { "text": "Sản lượng T5 cao nhất quý, tăng 12% so với T4.", "tone": "success", "status": 1 }
+      "aiInsight": {
+        "text": "Sản lượng T5 cao nhất quý, tăng 12% so với T4.",
+        "tone": "success",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-horizontal-stacked-bar",
@@ -298,7 +661,11 @@
       "subTitle": "Đơn vị: tỷ VND",
       "height": 189,
       "autoChart": "demoChart",
-      "aiInsight": { "text": "Secondary text display here Secondary text display hereSecondary text display here", "tone": "info", "status": 1 }
+      "aiInsight": {
+        "text": "Secondary text display here Secondary text display hereSecondary text display here",
+        "tone": "info",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-tone-danger",
@@ -306,7 +673,11 @@
       "subTitle": "Đơn vị: tỷ VND",
       "height": 189,
       "autoChart": "demoChart",
-      "aiInsight": { "text": "Secondary text display here Secondary text display hereSecondary text display here", "tone": "danger", "status": 1 }
+      "aiInsight": {
+        "text": "Secondary text display here Secondary text display hereSecondary text display here",
+        "tone": "danger",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-tone-success",
@@ -314,7 +685,11 @@
       "subTitle": "Đơn vị: nghìn HK",
       "height": 189,
       "autoChart": "demoChart",
-      "aiInsight": { "text": "Secondary text display here Secondary text display hereSecondary text display here", "tone": "success", "status": 1 }
+      "aiInsight": {
+        "text": "Secondary text display here Secondary text display hereSecondary text display here",
+        "tone": "success",
+        "status": 1
+      }
     },
     {
       "id": "chart-v2-donut-kpi",
@@ -348,16 +723,46 @@
         "extraSpan": 8,
         "config": {
           "items": [
-            { "label": "Khối thương mại", "color": "#5b9cf6" },
-            { "label": "Khối kỹ thuật", "color": "#7b3fe4" },
-            { "label": "Khối khai thác", "color": "#43b9e6" },
-            { "label": "Khối ...", "color": "#8f79f1" },
-            { "label": "Khối ...", "color": "#f7a213" },
-            { "label": "Khối ...", "color": "#f56f81" },
-            { "label": "Khối ...", "color": "#35c76a" },
-            { "label": "Khối ...", "color": "#68a5f5" },
-            { "label": "Khối ...", "color": "#3cd0a3" },
-            { "label": "Khối ...", "color": "#f4c628" }
+            {
+              "label": "Khối thương mại",
+              "colorToken": "data.sea-blue"
+            },
+            {
+              "label": "Khối kỹ thuật",
+              "colorToken": "data.plum"
+            },
+            {
+              "label": "Khối khai thác",
+              "colorToken": "data.jade-blue"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "data.plum"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "data.olive-gold"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "data.coral"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "semantic.positive"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "data.sea-blue"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "data.jade-blue"
+            },
+            {
+              "label": "Khối ...",
+              "colorToken": "rag.warning"
+            }
           ]
         }
       }
@@ -368,7 +773,11 @@
       "subTitle": "Đơn vị: nghìn HK",
       "height": 189,
       "autoChart": "demoChart",
-      "aiInsight": { "text": "Secondary text display here Secondary text display hereSecondary text display here", "tone": "warning", "status": 1 }
+      "aiInsight": {
+        "text": "Secondary text display here Secondary text display hereSecondary text display here",
+        "tone": "warning",
+        "status": 1
+      }
     }
   ]
 }
