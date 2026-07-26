@@ -10,7 +10,7 @@
         {
           "id": "ck",
           "type": "number",
-          "label": "2025",
+          "label": "TH 2025",
           "colorToken": "series.previous"
         },
         {
@@ -22,13 +22,19 @@
         {
           "id": "th",
           "type": "number",
-          "label": "2026",
-          "colorToken": "carrier.qh"
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "FCT 2026",
+          "color": "#8B5CF6"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế 2025",
+          "label": "Lũy kế TH 2025",
           "colorToken": "series.previous"
         },
         {
@@ -40,8 +46,14 @@
         {
           "id": "th_lk",
           "type": "number",
-          "label": "Luỹ kế 2026",
-          "colorToken": "carrier.qh"
+          "label": "Lũy kế TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Lũy kế FCT 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
@@ -50,36 +62,44 @@
           59.1,
           66.6,
           57.5,
+          null,
           59.1,
           66.6,
-          57.5
+          57.5,
+          null
         ],
         [
           "Q2",
           61,
           83.6,
           59.5,
+          null,
           120.1,
           150.2,
-          117
+          117,
+          null
         ],
         [
           "Q3",
           53.699999999999996,
           66.5,
           20.2,
+          null,
           173.8,
           216.7,
-          137.2
+          137.2,
+          null
         ],
         [
           "Q4",
           46.599999999999994,
           57.3,
           null,
+          58.1,
           220.4,
           274,
-          null
+          null,
+          58.1
         ]
       ]
     },
@@ -103,6 +123,12 @@
             "field": "th",
             "chartType": "bar",
             "showSymbol": true
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "barOpacity": 0.3,
+            "lineStyle": "dashed"
           }
         ]
       }
