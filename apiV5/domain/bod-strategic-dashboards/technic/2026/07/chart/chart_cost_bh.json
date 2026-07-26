@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
@@ -14,21 +14,9 @@
           "colorToken": "series.actual"
         },
         {
-          "id": "db",
+          "id": "kh",
           "type": "number",
           "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "db_lk",
-          "type": "number",
-          "label": "Luỹ kế KH 2026",
           "colorToken": "series.target"
         }
       ],
@@ -36,75 +24,59 @@
         [
           "QĐT",
           43200,
-          41800,
-          43200,
           41800
         ],
         [
           "DVMN",
           9800,
-          9200,
-          53000,
-          51000
+          9200
         ],
         [
           "BDTX",
           42500,
-          41000,
-          95500,
-          92000
+          41000
         ],
         [
           "BDDK",
           21200,
-          20000,
-          116700,
-          112000
+          20000
         ],
         [
           "PTVT",
           56800,
-          54000,
-          173500,
-          166000
+          54000
         ],
         [
           "Cảng",
           3100,
-          2900,
-          176600,
-          168900
+          2900
         ],
         [
           "APU",
           8200,
-          7800,
-          184800,
-          176700
+          7800
         ],
         [
           "ĐC",
           275000,
-          268000,
-          459800,
-          444700
+          268000
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "auto",
         "xField": "item",
         "series": [
           {
             "field": "th",
             "chartType": "bar",
-            "showSymbol": true
+            "showLabel": "end"
           },
           {
-            "field": "db",
-            "chartType": "line",
+            "field": "kh",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ]
