@@ -7,7 +7,7 @@
   "metricCards": {
     "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 3
+      "columns": 4
     },
     "items": [
       {
@@ -93,6 +93,32 @@
         ]
       },
       {
+        "id": "t_total_mc",
+        "status": "compact",
+        "title": "Total MC",
+        "value": "5.134",
+        "unit": "VND/ASK",
+        "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            1.11,
+            1.176,
+            1.11,
+            1.093,
+            1.494,
+            1.518,
+            1.428,
+            1.347,
+            5.142,
+            5.134
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.negative"
+        }
+      },
+      {
         "id": "t_mc_ask",
         "status": "compact",
         "title": "MC/ASK",
@@ -176,7 +202,7 @@
       {
         "id": "t_ave_aog",
         "status": "compact",
-        "title": "AVE AOG",
+        "title": "AVE-AOG",
         "value": "3",
         "unit": "giờ/vụ",
         "backgroundStatus": 1,
@@ -212,6 +238,34 @@
             "tone": "positive"
           }
         ]
+      },
+      {
+        "id": "t_ndelay",
+        "status": "compact",
+        "title": "N DELAY",
+        "value": "9.96",
+        "unit": "vụ",
+        "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            12,
+            9,
+            10,
+            11,
+            10,
+            9,
+            9.96,
+            9,
+            11,
+            8,
+            10,
+            13
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.negative"
+        }
       },
       {
         "id": "t_delay",
@@ -496,7 +550,151 @@
           "aiInsight": {
             "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
             "severity": "crit"
-          }
+          },
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "n-delay",
+                "label": "N-DELAY"
+              },
+              {
+                "id": "ave-delay",
+                "label": "AVE DELAY"
+              }
+            ],
+            "defaultValue": "n-delay"
+          },
+          "views": [
+            {
+              "id": "n-delay",
+              "label": "N-DELAY",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "N-DELAY (Đơn vị: Số vụ)",
+                      "colorToken": "series.actual"
+                    },
+                    {
+                      "id": "target",
+                      "type": "number",
+                      "label": "MT 2026",
+                      "lineDash": [
+                        6,
+                        4
+                      ],
+                      "colorToken": "data.olive-gold"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Q1",
+                      31,
+                      156
+                    ],
+                    [
+                      "Q2",
+                      30,
+                      156
+                    ],
+                    [
+                      "Q3",
+                      9.96,
+                      156
+                    ],
+                    [
+                      "Q4",
+                      null,
+                      156
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "nameAxis": "N-DELAY (Đơn vị: Số vụ)",
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar",
+                        "showLabel": "end"
+                      },
+                      {
+                        "field": "target",
+                        "chartType": "line",
+                        "lineType": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ave-delay",
+              "label": "AVE DELAY",
+              "autoChart": {
+                "chartType": "line",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "AVE-DELAY (Đơn vị: phút/vụ)",
+                      "colorToken": "data.brick"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "Q1",
+                      15.17
+                    ],
+                    [
+                      "Q2",
+                      16.83
+                    ],
+                    [
+                      "Q3",
+                      18.17
+                    ],
+                    [
+                      "Q4",
+                      19
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "month",
+                    "nameAxis": "AVE-DELAY (Đơn vị: phút/vụ)",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "area",
+                        "areaStyle": {}
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_delay_breakdown",
@@ -683,19 +881,19 @@
                   "rows": [
                     [
                       "Q1",
-                      18
+                      6
                     ],
                     [
                       "Q2",
-                      24
+                      8
                     ],
                     [
                       "Q3",
-                      34
+                      5
                     ],
                     [
                       "Q4",
-                      28
+                      null
                     ]
                   ]
                 },
@@ -709,7 +907,8 @@
                       {
                         "field": "value",
                         "chartType": "area",
-                        "areaStyle": {}
+                        "areaStyle": {},
+                        "showLabel": "end"
                       }
                     ],
                     "nameAxis": "N-AOG (Đơn vị: Số chuyến)"
@@ -746,11 +945,11 @@
                     ],
                     [
                       "Q3",
-                      2.73
+                      2.9
                     ],
                     [
                       "Q4",
-                      3.23
+                      null
                     ]
                   ]
                 },
@@ -764,7 +963,8 @@
                       {
                         "field": "value",
                         "chartType": "area",
-                        "areaStyle": {}
+                        "areaStyle": {},
+                        "showLabel": "end"
                       }
                     ],
                     "nameAxis": "AVE-AOG (Đơn vị: giờ/vụ)"
@@ -785,35 +985,13 @@
       "items": [
         {
           "id": "chart_mc_ask_dept",
-          "title": "Chi phí bảo dưỡng theo phòng ban",
+          "title": "Chi phí bảo dưỡng theo CQDV",
           "subTitle": "Đơn vị: tỷ VND",
           "col": 1,
           "colSpan": 20,
           "row": 1,
           "aspectRatio": 1.5,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/Q2/chart/chart_mc_ask_dept.json",
-          "headerAction": {
-            "type": "segment",
-            "options": [
-              {
-                "id": "B787",
-                "label": "B787"
-              },
-              {
-                "id": "A350",
-                "label": "A350"
-              },
-              {
-                "id": "A321",
-                "label": "A321"
-              },
-              {
-                "id": "ATR72",
-                "label": "ATR72"
-              }
-            ],
-            "defaultValue": "B787"
-          },
           "views": [
             {
               "id": "B787",
@@ -2543,7 +2721,7 @@
               },
               {
                 "cells": {
-                  "category": "APU",
+                  "category": "Động cơ phụ (APU)",
                   "target": 0.1,
                   "actual": 0.091,
                   "diff": {
@@ -2555,7 +2733,7 @@
               },
               {
                 "cells": {
-                  "category": "Cảng",
+                  "category": "Càng (LDG)",
                   "target": 0.04,
                   "actual": 0.034,
                   "diff": {
