@@ -28,20 +28,32 @@
         {
           "id": "th_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2026",
+          "label": "TH 2026",
           "colorToken": "series.actual"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2025",
+          "label": "TH 2025",
           "colorToken": "series.previous"
         },
         {
           "id": "db_lk",
           "type": "number",
-          "label": "Luỹ kế KH 2026",
+          "label": "KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
@@ -52,61 +64,75 @@
           45.8,
           45.2,
           46,
-          45.8
+          45.8,
+          null,
+          null
         ],
         [
           "T2",
           44.6,
           45.4,
           45.2,
-          89.8,
-          91.4,
-          91
+          44.6,
+          45.4,
+          45.2,
+          null,
+          null
         ],
         [
           "T3",
           43.8,
           44.8,
           44.6,
-          133.6,
-          136.2,
-          135.6
+          43.8,
+          44.8,
+          44.6,
+          null,
+          null
         ],
         [
           "T4",
           44,
           45,
           44.8,
-          177.6,
-          181.2,
-          180.4
+          44,
+          45,
+          44.8,
+          null,
+          null
         ],
         [
           "T5",
           44.4,
           45.1,
           45,
-          222,
-          226.3,
-          225.4
+          44.4,
+          45.1,
+          45,
+          null,
+          null
         ],
         [
           "T6",
           45,
           45.6,
           45.4,
-          267,
-          271.9,
-          270.8
+          45,
+          45.6,
+          45.4,
+          null,
+          null
         ],
         [
           "T7",
           45.4,
           46,
           45.8,
-          312.4,
-          317.9,
-          316.6
+          45.4,
+          46,
+          45.8,
+          null,
+          null
         ],
         [
           "T8",
@@ -114,8 +140,10 @@
           45.5,
           45.4,
           null,
-          363.4,
-          362
+          45.5,
+          45.4,
+          44.5,
+          44.5
         ],
         [
           "T9",
@@ -123,8 +151,10 @@
           44.8,
           45,
           null,
-          408.2,
-          407
+          44.8,
+          45,
+          44.1,
+          44.1
         ],
         [
           "T10",
@@ -132,8 +162,10 @@
           44.5,
           44.6,
           null,
-          452.7,
-          451.6
+          44.5,
+          44.6,
+          null,
+          null
         ],
         [
           "T11",
@@ -141,8 +173,10 @@
           45,
           45,
           null,
-          497.7,
-          496.6
+          45,
+          45,
+          null,
+          null
         ],
         [
           "T12",
@@ -150,8 +184,10 @@
           45.4,
           45.6,
           null,
-          543.1,
-          542.2
+          45.4,
+          45.6,
+          null,
+          null
         ]
       ]
     },
@@ -160,12 +196,12 @@
         "id": "main",
         "chartType": "auto",
         "xField": "month",
-        "labelShow": "all",
         "series": [
           {
             "field": "th",
             "chartType": "bar",
-            "showSymbol": true
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
@@ -175,6 +211,11 @@
           {
             "field": "db",
             "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ],

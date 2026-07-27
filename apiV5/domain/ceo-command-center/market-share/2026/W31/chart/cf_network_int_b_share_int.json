@@ -1,0 +1,109 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        }
+      ],
+      "rows": [
+        ["W20", 582, 599.9, 608.9, 582, 599.9, 608.9, null, null],
+        ["W21", 573, 590.8, 590.8, 573, 590.8, 590.8, null, null],
+        ["W22", 555.1, 573, 582, 555.1, 573, 582, null, null],
+        ["W23", 564.2, 582, 590.8, 564.2, 582, 590.8, null, null],
+        ["W24", 564.2, 573, 590.8, 564.2, 573, 590.8, null, null],
+        ["W25", 573, 582, 599.9, 573, 582, 599.9, null, null],
+        ["W26", 582, 590.8, 599.9, 582, 590.8, 599.9, null, null],
+        ["W27", 922.1, 590.8, 590.8, 922.1, 590.8, 590.8, null, null],
+        ["W28", 2014.5, 573, 582, 2014.5, 573, 582, null, null],
+        ["W29", 564.2, 573, 573, 564.2, 573, 573, null, null],
+        ["W30", 2014.5, 573, 582, 2014.5, 573, 582, null, null],
+        ["W31", 1387.8, 582, 590.8, 1387.8, 582, 590.8, null, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  },
+  "metadata": {
+    "unit": "%"
+  }
+}

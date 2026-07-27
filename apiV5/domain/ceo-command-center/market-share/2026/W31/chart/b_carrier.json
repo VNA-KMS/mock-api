@@ -1,0 +1,89 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "carrier.vna"
+        }
+      ],
+      "rows": [
+        ["W20", 670.2, 659.4, 659.4, 4021.4, 3956.6, 3956.6],
+        ["W21", 670.2, 659.4, 654, 4021.4, 3956.6, 3924.1],
+        ["W22", 670.2, 654, 654, 4021.4, 3924.1, 3924.1],
+        ["W23", 664.8, 648.5, 648.5, 3988.8, 3891.6, 3891.6],
+        ["W24", 659.4, 648.5, 648.5, 3956.6, 3891.6, 3891.6],
+        ["W25", 659.4, 648.5, 648.5, 3956.6, 3891.6, 3891.6],
+        ["W26", 659.4, 643.3, 648.5, 3956.6, 3859.5, 3891.6],
+        ["W27", 686.4, 643.3, 929.7, 4118.5, 3859.5, 3718.9],
+        ["W28", 675.6, 637.9, 1118.8, 4053.8, 3826.9, 4475.3],
+        ["W29", 670.2, 632.4, 735.1, 4021.4, 3794.4, 2940.4],
+        ["W30", 664.8, 632.4, 1086.4, 3988.8, 3794.4, 4345.7],
+        ["W31", 659.4, 627, 1329.6, 3956.6, 3761.9, 5318.5]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}
