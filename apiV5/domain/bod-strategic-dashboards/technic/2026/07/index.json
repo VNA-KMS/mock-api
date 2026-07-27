@@ -268,13 +268,10 @@
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_arl.json",
+          "subTitle": "Đơn vị: %",
           "aiInsight": {
             "text": "ARL 94,87% thấp hơn MT 95,5% do B787 bảo dưỡng C-Check kéo dài.",
             "severity": "warn"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
           },
           "rowSpan": 2
         },
@@ -287,13 +284,10 @@
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_dr.json",
+          "subTitle": "Đơn vị: %",
           "aiInsight": {
             "text": "DR 99,65% đạt MT 99,9%. A321 thấp nhất (93,8%), B787 ổn định 95,4%. Cần theo dõi đội A321.",
             "severity": "good"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
           },
           "rowSpan": 2
         },
@@ -338,7 +332,7 @@
                   "target": 95.5,
                   "actual": 94.87,
                   "diff": {
-                    "value": -0.63,
+                    "value": "99.4%",
                     "tone": "negative"
                   }
                 }
@@ -352,7 +346,7 @@
                   "target": 96,
                   "actual": 96.2,
                   "diff": {
-                    "value": 0.2,
+                    "value": "100.2%",
                     "tone": "positive"
                   }
                 }
@@ -366,7 +360,7 @@
                   "target": 95,
                   "actual": 94.5,
                   "diff": {
-                    "value": -0.5,
+                    "value": "99.5%",
                     "tone": "negative"
                   }
                 }
@@ -380,7 +374,7 @@
                   "target": 94,
                   "actual": 93.8,
                   "diff": {
-                    "value": -0.2,
+                    "value": "99.8%",
                     "tone": "negative"
                   }
                 }
@@ -432,7 +426,7 @@
                   "target": 96,
                   "actual": 95.4,
                   "diff": {
-                    "value": -0.6,
+                    "value": "99.4%",
                     "tone": "negative"
                   }
                 }
@@ -446,7 +440,7 @@
                   "target": 95.5,
                   "actual": 96.1,
                   "diff": {
-                    "value": 0.6,
+                    "value": "100.6%",
                     "tone": "positive"
                   }
                 }
@@ -460,7 +454,7 @@
                   "target": 95,
                   "actual": 93.8,
                   "diff": {
-                    "value": -1.2,
+                    "value": "98.7%",
                     "tone": "negative"
                   }
                 }
@@ -474,7 +468,7 @@
                   "target": 94.5,
                   "actual": 94.2,
                   "diff": {
-                    "value": -0.3,
+                    "value": "99.7%",
                     "tone": "negative"
                   }
                 }
@@ -502,10 +496,6 @@
           "aiInsight": {
             "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
             "severity": "crit"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
           }
         },
         {
@@ -664,10 +654,6 @@
           "aiInsight": {
             "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm 12% so với cùng kỳ 2025. Phi kỹ thuật ổn định ~0,48 vụ/tháng. A321 ghi nhận 2 vụ AOG trong tháng — cao nhất đội bay.",
             "severity": "good"
-          },
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
           }
         }
       ]
@@ -998,7 +984,7 @@
         },
         {
           "id": "chart_mc_ask",
-          "title": "Chi phí bảo dưỡng theo ASK trong năm",
+          "title": "Chi phí bảo dưỡng theo ASK",
           "subTitle": "Đơn vị: VND",
           "col": 1,
           "colSpan": 20,
@@ -2561,9 +2547,8 @@
               },
               {
                 "id": "pct",
-                "type": "number",
-                "label": "Tỷ trọng",
-                "decimals": 1
+                "type": "tone-value",
+                "label": "Tỷ trọng"
               }
             ],
             "rows": [
@@ -2573,10 +2558,10 @@
                   "target": 3.2,
                   "actual": 3.035,
                   "diff": {
-                    "value": -0.165,
+                    "value": "16.5%",
                     "tone": "positive"
                   },
-                  "pct": 59.1
+                  "pct": "59.1%"
                 }
               },
               {
@@ -2585,10 +2570,10 @@
                   "target": 0.72,
                   "actual": 0.695,
                   "diff": {
-                    "value": -0.025,
+                    "value": "2.5%",
                     "tone": "positive"
                   },
-                  "pct": 13.5
+                  "pct": "13.5%"
                 }
               },
               {
@@ -2597,10 +2582,10 @@
                   "target": 0.49,
                   "actual": 0.471,
                   "diff": {
-                    "value": -0.019,
+                    "value": "1.9%",
                     "tone": "positive"
                   },
-                  "pct": 9.2
+                  "pct": "9.2%"
                 }
               },
               {
@@ -2609,10 +2594,10 @@
                   "target": 0.48,
                   "actual": 0.459,
                   "diff": {
-                    "value": -0.021,
+                    "value": "2.1%",
                     "tone": "positive"
                   },
-                  "pct": 8.9
+                  "pct": "8.9%"
                 }
               },
               {
@@ -2621,10 +2606,10 @@
                   "target": 0.25,
                   "actual": 0.238,
                   "diff": {
-                    "value": -0.012,
+                    "value": "1.2%",
                     "tone": "positive"
                   },
-                  "pct": 4.6
+                  "pct": "4.6%"
                 }
               },
               {
@@ -2633,10 +2618,10 @@
                   "target": 0.12,
                   "actual": 0.111,
                   "diff": {
-                    "value": -0.009,
+                    "value": "0.9%",
                     "tone": "positive"
                   },
-                  "pct": 2.2
+                  "pct": "2.2%"
                 }
               },
               {
@@ -2645,10 +2630,10 @@
                   "target": 0.1,
                   "actual": 0.091,
                   "diff": {
-                    "value": -0.009,
+                    "value": "0.9%",
                     "tone": "positive"
                   },
-                  "pct": 1.8
+                  "pct": "1.8%"
                 }
               },
               {
@@ -2657,10 +2642,10 @@
                   "target": 0.04,
                   "actual": 0.034,
                   "diff": {
-                    "value": -0.006,
+                    "value": "0.6%",
                     "tone": "positive"
                   },
-                  "pct": 0.7
+                  "pct": "0.7%"
                 }
               }
             ],
@@ -2678,11 +2663,6 @@
     "year",
     "custom"
   ],
-  "cardHtml": {
-    "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:13px;color:#1e293b\"><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>ARL 94,87% thấp hơn MT 95,5% — B787 bảo dưỡng C-Check kéo dài ảnh hưởng độ sẵn sàng khai thác. DR 99,65% đạt MT, A321 cần theo dõi.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>AOG kỹ thuật giảm 12% CK, nhưng A321 ghi nhận 2 vụ AOG vượt MT. Delay 61,44 phút/vụ vượt xa MT 52 phút — cần rà soát quy trình mặt đất.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>MC/ASK 215 VNĐ/ASK tăng 3,4% CK. Chi phí động cơ chiếm 59% cơ cấu. QLVT quản lý 73% tổng chi phí bảo dưỡng.</li><li style=\"padding:6px 0 6px 16px;position:relative\"><span style=\"position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#F97316\"></span>Khuyến nghị: (1) Rà soát lịch bảo dưỡng đội B787, (2) Kiểm soát chặt A321 AOG, (3) Tối ưu hóa quy trình mặt đất giảm delay.</li></ul></div>",
-    "backgroundClassName": "bg-polar",
-    "borderClassName": "border-regal-blue"
-  },
   "insightCards": {
     "insight": {
       "title": "Nhận định",
