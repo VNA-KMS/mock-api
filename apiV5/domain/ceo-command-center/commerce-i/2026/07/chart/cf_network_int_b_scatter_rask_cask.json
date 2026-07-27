@@ -1,0 +1,67 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        { "id": "route", "type": "string" },
+        { "id": "area", "type": "string" },
+        { "id": "rask", "type": "number", "label": "RASK (VND/ghế.km)" },
+        { "id": "cask", "type": "number", "label": "CASK (VND/ghế.km)" }
+      ],
+      "rows": [
+        ["DADNRT", "NEA", 9654, 8200],
+        ["HANKIX", "NEA", 6627, 5800],
+        ["HANNRT", "NEA", 6718, 5900],
+        ["SGNNRT", "NEA", 7163, 6200],
+        ["SGNKIX", "NEA", 6818, 6000],
+        ["HANICN", "NEA", 4480, 5200],
+        ["SGNICN", "NEA", 4650, 5400],
+        ["HANPUS", "NEA", 4941, 4800],
+        ["SGNPVG", "NEA", 5757, 5100],
+        ["HANPVG", "NEA", 5374, 4900],
+        ["HANTPE", "NEA", 3521, 4200],
+        ["SGNKHH", "NEA", 4455, 4600],
+        ["HANHND", "NEA", 6825, 6100],
+        ["HANSIN", "SEA", 4092, 3500],
+        ["SGNSIN", "SEA", 3131, 2900],
+        ["SGNBKK", "SEA", 2827, 2600],
+        ["HANBKK", "SEA", 2567, 2700],
+        ["SGNCGK", "SEA", 4974, 3900],
+        ["SGNKUL", "SEA", 2816, 2500],
+        ["HANKUL", "SEA", 3022, 2700],
+        ["HANCDG", "EUR", 14164, 15500],
+        ["SGNCDG", "EUR", 14214, 15600],
+        ["HANFRA", "EUR", 14087, 15500],
+        ["SGNFRA", "EUR", 14875, 16200],
+        ["HANLHR", "EUR", 14914, 16200],
+        ["SGNLHR", "EUR", 14829, 16300],
+        ["SGNMEL", "SWP", 10919, 11800],
+        ["SGNSYD", "SWP", 10786, 11600],
+        ["HANMEL", "SWP", 10591, 11800],
+        ["HANSYD", "SWP", 10703, 11700],
+        ["SGNPER", "SWP", 7196, 8400],
+        ["SGNSFO", "NOA", 20869, 23000],
+        ["HANDEL", "SAS", 5270, 4600],
+        ["HANBOM", "SAS", 5027, 4500],
+        ["SGNDEL", "SAS", 5620, 5100],
+        ["SGNBOM", "SAS", 5280, 4800],
+        ["HANVTE", "CLMV", 3038, 3200],
+        ["SGNKTI", "CLMV", 2488, 2700],
+        ["HANSAI", "CLMV", 2528, 2900]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cask",
+        "yField": "rask",
+        "colorBy": "area",
+        "series": [
+          { "field": "rask", "chartType": "scatter" }
+        ]
+      }
+    ]
+  }
+}

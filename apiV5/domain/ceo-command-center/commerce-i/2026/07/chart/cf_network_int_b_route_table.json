@@ -1,94 +1,816 @@
 {
   "table": {
     "columns": [
-      { "id": "stt", "label": "STT", "type": "text", "align": "center" },
-      { "id": "rt", "label": "RT", "type": "text", "align": "left" },
-      { "id": "area", "label": "Area", "type": "chip", "align": "left" },
-      { "id": "ts", "label": "TS", "type": "text", "align": "center" },
-      { "id": "lf", "label": "LF", "type": "text", "align": "right" },
-      { "id": "ss_lf", "label": "SS LF", "type": "trend", "align": "right" },
-      { "id": "gbq", "label": "GBQ", "type": "number", "align": "right" },
-      { "id": "ss_gbq", "label": "SS GBQ", "type": "trend", "align": "right" },
-      { "id": "pl_var", "label": "P/L Var", "type": "number", "align": "right" },
-      { "id": "pl_cost", "label": "P/L Cost", "type": "number", "align": "right" },
-      { "id": "cont_fix", "label": "Cont Fix", "type": "text", "align": "right" }
+      {
+        "id": "stt",
+        "label": "STT",
+        "type": "text",
+        "align": "center",
+        "width": 52
+      },
+      {
+        "id": "rt",
+        "label": "RT",
+        "type": "text",
+        "align": "left",
+        "width": 92
+      },
+      {
+        "id": "ts",
+        "label": "TS",
+        "type": "text",
+        "align": "center",
+        "width": 66
+      },
+      {
+        "id": "lf",
+        "label": "LF",
+        "type": "text",
+        "align": "right",
+        "width": 72
+      },
+      {
+        "id": "ss_lf",
+        "label": "SS LF",
+        "type": "trend",
+        "align": "right",
+        "width": 92
+      },
+      {
+        "id": "gbq",
+        "label": "GBQ",
+        "type": "number",
+        "align": "right",
+        "width": 88
+      },
+      {
+        "id": "ss_gbq",
+        "label": "SS GBQ",
+        "type": "trend",
+        "align": "right",
+        "width": 92
+      },
+      {
+        "id": "pl_var",
+        "label": "P/L Var",
+        "type": "signed-number",
+        "align": "right",
+        "width": 104
+      },
+      {
+        "id": "pl_cost",
+        "label": "P/L Cost",
+        "type": "signed-number",
+        "align": "right",
+        "width": 104
+      },
+      {
+        "id": "cont_fix",
+        "label": "Cont Fix",
+        "type": "threshold",
+        "align": "right",
+        "width": 88,
+        "thresholds": {
+          "good": 100,
+          "warn": 50,
+          "suffix": "%"
+        }
+      }
     ],
     "rows": [
       {
-        "id": "r1", "cells": { "stt": "1", "rt": "DADNRT", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "89,7%", "ss_lf": { "direction": "up", "label": "+5,6%", "color": "green" }, "gbq": 9654, "ss_gbq": { "direction": "up", "label": "+2,8%", "color": "green" }, "pl_var": 11830, "pl_cost": 6280, "cont_fix": "213%" }
+        "id": "grp_sea",
+        "kind": "group",
+        "group": {
+          "title": "SEA — Đông Nam Á",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "6 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L +16.281 trđ",
+              "tone": "success"
+            },
+            {
+              "label": "HQ so CPBĐ 45.339 trđ",
+              "tone": "success"
+            }
+          ]
+        }
       },
       {
-        "id": "r2", "cells": { "stt": "2", "rt": "SGNCGK", "area": { "label": "SEA", "color": "green" }, "ts": "1", "lf": "93,7%", "ss_lf": { "direction": "down", "label": "-0,3%", "color": "red" }, "gbq": 4974, "ss_gbq": { "direction": "up", "label": "+4,5%", "color": "green" }, "pl_var": 6537, "pl_cost": 3479, "cont_fix": "214%" }
+        "id": "r2",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "2",
+          "rt": "SGNCGK",
+          "ts": "1",
+          "lf": "93,7%",
+          "ss_lf": {
+            "direction": "down",
+            "label": "-0,3%",
+            "color": "red"
+          },
+          "gbq": 4974,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+4,5%",
+            "color": "green"
+          },
+          "pl_var": 6537,
+          "pl_cost": 3479,
+          "cont_fix": "214%"
+        }
       },
       {
-        "id": "r3", "cells": { "stt": "3", "rt": "SGNBKK", "area": { "label": "SEA", "color": "green" }, "ts": "4", "lf": "84,2%", "ss_lf": { "direction": "up", "label": "+1,3%", "color": "green" }, "gbq": 2827, "ss_gbq": { "direction": "flat", "label": "0,0%", "color": "gray" }, "pl_var": 10099, "pl_cost": 3397, "cont_fix": "151%" }
+        "id": "r3",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "3",
+          "rt": "SGNBKK",
+          "ts": "4",
+          "lf": "84,2%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,3%",
+            "color": "green"
+          },
+          "gbq": 2827,
+          "ss_gbq": {
+            "direction": "flat",
+            "label": "0,0%",
+            "color": "gray"
+          },
+          "pl_var": 10099,
+          "pl_cost": 3397,
+          "cont_fix": "151%"
+        }
       },
       {
-        "id": "r4", "cells": { "stt": "4", "rt": "SGNSIN", "area": { "label": "SEA", "color": "green" }, "ts": "2 6/7", "lf": "88,3%", "ss_lf": { "direction": "up", "label": "+3,1%", "color": "green" }, "gbq": 3131, "ss_gbq": { "direction": "up", "label": "+11,2%", "color": "green" }, "pl_var": 8756, "pl_cost": 2950, "cont_fix": "151%" }
+        "id": "r4",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "4",
+          "rt": "SGNSIN",
+          "ts": "2 6/7",
+          "lf": "88,3%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+3,1%",
+            "color": "green"
+          },
+          "gbq": 3131,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+11,2%",
+            "color": "green"
+          },
+          "pl_var": 8756,
+          "pl_cost": 2950,
+          "cont_fix": "151%"
+        }
       },
       {
-        "id": "r5", "cells": { "stt": "5", "rt": "HANSIN", "area": { "label": "SEA", "color": "green" }, "ts": "1 1/7", "lf": "90,9%", "ss_lf": { "direction": "up", "label": "+0,5%", "color": "green" }, "gbq": 4092, "ss_gbq": { "direction": "up", "label": "+15,9%", "color": "green" }, "pl_var": 7272, "pl_cost": 2583, "cont_fix": "155%" }
+        "id": "r5",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "5",
+          "rt": "HANSIN",
+          "ts": "1 1/7",
+          "lf": "90,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+0,5%",
+            "color": "green"
+          },
+          "gbq": 4092,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+15,9%",
+            "color": "green"
+          },
+          "pl_var": 7272,
+          "pl_cost": 2583,
+          "cont_fix": "155%"
+        }
       },
       {
-        "id": "r6", "cells": { "stt": "6", "rt": "HANNRT", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "82,7%", "ss_lf": { "direction": "down", "label": "-0,1%", "color": "red" }, "gbq": 6718, "ss_gbq": { "direction": "up", "label": "+3,6%", "color": "green" }, "pl_var": 12751, "pl_cost": 2012, "cont_fix": "119%" }
+        "id": "r17",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "17",
+          "rt": "SGNKUL",
+          "ts": "1",
+          "lf": "94,5%",
+          "ss_lf": {
+            "direction": "flat",
+            "label": "0,0%",
+            "color": "gray"
+          },
+          "gbq": 2816,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+10,2%",
+            "color": "green"
+          },
+          "pl_var": 2576,
+          "pl_cost": 475,
+          "cont_fix": "123%"
+        }
       },
       {
-        "id": "r7", "cells": { "stt": "7", "rt": "HANPVG", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "79,9%", "ss_lf": { "direction": "up", "label": "+1,4%", "color": "green" }, "gbq": 5374, "ss_gbq": { "direction": "up", "label": "+2,9%", "color": "green" }, "pl_var": 5384, "pl_cost": 1894, "cont_fix": "154%" }
+        "id": "r22",
+        "groupId": "grp_sea",
+        "cells": {
+          "stt": "22",
+          "rt": "SGNBKK",
+          "ts": "4",
+          "lf": "84,2%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,3%",
+            "color": "green"
+          },
+          "gbq": 2827,
+          "ss_gbq": {
+            "direction": "flat",
+            "label": "0,0%",
+            "color": "gray"
+          },
+          "pl_var": 10099,
+          "pl_cost": 3397,
+          "cont_fix": "151%"
+        }
       },
       {
-        "id": "r8", "cells": { "stt": "8", "rt": "SGNPVG", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "93,5%", "ss_lf": { "direction": "up", "label": "+1,8%", "color": "green" }, "gbq": 5757, "ss_gbq": { "direction": "up", "label": "+3,1%", "color": "green" }, "pl_var": 9566, "pl_cost": 1741, "cont_fix": "122%" }
+        "id": "grp_nea",
+        "kind": "group",
+        "group": {
+          "title": "NEA — Đông Bắc Á",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "13 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L +2.522 trđ",
+              "tone": "success"
+            },
+            {
+              "label": "HQ so CPBĐ 98.209 trđ",
+              "tone": "success"
+            }
+          ]
+        }
       },
       {
-        "id": "r9", "cells": { "stt": "9", "rt": "SGNNRT", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "80,9%", "ss_lf": { "direction": "up", "label": "+5,7%", "color": "green" }, "gbq": 7163, "ss_gbq": { "direction": "up", "label": "+14,0%", "color": "green" }, "pl_var": 13132, "pl_cost": 1216, "cont_fix": "110%" }
+        "id": "r1",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "1",
+          "rt": "DADNRT",
+          "ts": "1",
+          "lf": "89,7%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+5,6%",
+            "color": "green"
+          },
+          "gbq": 9654,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+2,8%",
+            "color": "green"
+          },
+          "pl_var": 11830,
+          "pl_cost": 6280,
+          "cont_fix": "213%"
+        }
       },
       {
-        "id": "r10", "cells": { "stt": "10", "rt": "HANPUS", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "92,6%", "ss_lf": { "direction": "up", "label": "+3,5%", "color": "green" }, "gbq": 4941, "ss_gbq": { "direction": "up", "label": "+6,6%", "color": "green" }, "pl_var": 9309, "pl_cost": 1086, "cont_fix": "113%" }
+        "id": "r6",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "6",
+          "rt": "HANNRT",
+          "ts": "1",
+          "lf": "82,7%",
+          "ss_lf": {
+            "direction": "down",
+            "label": "-0,1%",
+            "color": "red"
+          },
+          "gbq": 6718,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+3,6%",
+            "color": "green"
+          },
+          "pl_var": 12751,
+          "pl_cost": 2012,
+          "cont_fix": "119%"
+        }
       },
       {
-        "id": "r11", "cells": { "stt": "11", "rt": "SGNKHH", "area": { "label": "NEA", "color": "blue" }, "ts": "1 4/7", "lf": "85,5%", "ss_lf": { "direction": "up", "label": "+1,8%", "color": "green" }, "gbq": 4455, "ss_gbq": { "direction": "up", "label": "+9,3%", "color": "green" }, "pl_var": 5395, "pl_cost": 808, "cont_fix": "118%" }
+        "id": "r7",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "7",
+          "rt": "HANPVG",
+          "ts": "1",
+          "lf": "79,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,4%",
+            "color": "green"
+          },
+          "gbq": 5374,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+2,9%",
+            "color": "green"
+          },
+          "pl_var": 5384,
+          "pl_cost": 1894,
+          "cont_fix": "154%"
+        }
       },
       {
-        "id": "r12", "cells": { "stt": "12", "rt": "HANDEL", "area": { "label": "SAS", "color": "purple" }, "ts": "4/7", "lf": "94,5%", "ss_lf": { "direction": "up", "label": "+1,2%", "color": "green" }, "gbq": 5270, "ss_gbq": { "direction": "up", "label": "+1,8%", "color": "green" }, "pl_var": 6259, "pl_cost": 837, "cont_fix": "115%" }
+        "id": "r8",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "8",
+          "rt": "SGNPVG",
+          "ts": "1",
+          "lf": "93,5%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,8%",
+            "color": "green"
+          },
+          "gbq": 5757,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+3,1%",
+            "color": "green"
+          },
+          "pl_var": 9566,
+          "pl_cost": 1741,
+          "cont_fix": "122%"
+        }
       },
       {
-        "id": "r13", "cells": { "stt": "13", "rt": "HANKIX", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "78,9%", "ss_lf": { "direction": "up", "label": "+0,3%", "color": "green" }, "gbq": 6627, "ss_gbq": { "direction": "up", "label": "+5,8%", "color": "green" }, "pl_var": 8737, "pl_cost": 791, "cont_fix": "110%" }
+        "id": "r9",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "9",
+          "rt": "SGNNRT",
+          "ts": "1",
+          "lf": "80,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+5,7%",
+            "color": "green"
+          },
+          "gbq": 7163,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+14,0%",
+            "color": "green"
+          },
+          "pl_var": 13132,
+          "pl_cost": 1216,
+          "cont_fix": "110%"
+        }
       },
       {
-        "id": "r14", "cells": { "stt": "14", "rt": "SGNCAN", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "75,2%", "ss_lf": { "direction": "down", "label": "-0,1%", "color": "red" }, "gbq": 4675, "ss_gbq": { "direction": "down", "label": "-1,5%", "color": "red" }, "pl_var": 3607, "pl_cost": 748, "cont_fix": "126%" }
+        "id": "r10",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "10",
+          "rt": "HANPUS",
+          "ts": "1",
+          "lf": "92,6%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+3,5%",
+            "color": "green"
+          },
+          "gbq": 4941,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+6,6%",
+            "color": "green"
+          },
+          "pl_var": 9309,
+          "pl_cost": 1086,
+          "cont_fix": "113%"
+        }
       },
       {
-        "id": "r15", "cells": { "stt": "15", "rt": "DADKIX", "area": { "label": "NEA", "color": "blue" }, "ts": "4/7", "lf": "81,3%", "ss_lf": { "direction": "up", "label": "+4,4%", "color": "green" }, "gbq": 7833, "ss_gbq": { "direction": "up", "label": "+3,7%", "color": "green" }, "pl_var": 3164, "pl_cost": 609, "cont_fix": "124%" }
+        "id": "r11",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "11",
+          "rt": "SGNKHH",
+          "ts": "1 4/7",
+          "lf": "85,5%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,8%",
+            "color": "green"
+          },
+          "gbq": 4455,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+9,3%",
+            "color": "green"
+          },
+          "pl_var": 5395,
+          "pl_cost": 808,
+          "cont_fix": "118%"
+        }
       },
       {
-        "id": "r16", "cells": { "stt": "16", "rt": "HANCAN", "area": { "label": "NEA", "color": "blue" }, "ts": "1", "lf": "64,6%", "ss_lf": { "direction": "up", "label": "+8,2%", "color": "green" }, "gbq": 3982, "ss_gbq": { "direction": "up", "label": "+3,6%", "color": "green" }, "pl_var": 2471, "pl_cost": 575, "cont_fix": "130%" }
+        "id": "r13",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "13",
+          "rt": "HANKIX",
+          "ts": "1",
+          "lf": "78,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+0,3%",
+            "color": "green"
+          },
+          "gbq": 6627,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+5,8%",
+            "color": "green"
+          },
+          "pl_var": 8737,
+          "pl_cost": 791,
+          "cont_fix": "110%"
+        }
       },
       {
-        "id": "r17", "cells": { "stt": "17", "rt": "SGNKUL", "area": { "label": "SEA", "color": "green" }, "ts": "1", "lf": "94,5%", "ss_lf": { "direction": "flat", "label": "0,0%", "color": "gray" }, "gbq": 2816, "ss_gbq": { "direction": "up", "label": "+10,2%", "color": "green" }, "pl_var": 2576, "pl_cost": 475, "cont_fix": "123%" }
+        "id": "r14",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "14",
+          "rt": "SGNCAN",
+          "ts": "1",
+          "lf": "75,2%",
+          "ss_lf": {
+            "direction": "down",
+            "label": "-0,1%",
+            "color": "red"
+          },
+          "gbq": 4675,
+          "ss_gbq": {
+            "direction": "down",
+            "label": "-1,5%",
+            "color": "red"
+          },
+          "pl_var": 3607,
+          "pl_cost": 748,
+          "cont_fix": "126%"
+        }
       },
       {
-        "id": "r18", "cells": { "stt": "18", "rt": "HANFRA", "area": { "label": "EUR", "color": "orange" }, "ts": "1", "lf": "81,9%", "ss_lf": { "direction": "up", "label": "+3,3%", "color": "green" }, "gbq": 14087, "ss_gbq": { "direction": "down", "label": "-1,4%", "color": "red" }, "pl_var": 15036, "pl_cost": -7373, "cont_fix": "67%" }
+        "id": "r15",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "15",
+          "rt": "DADKIX",
+          "ts": "4/7",
+          "lf": "81,3%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+4,4%",
+            "color": "green"
+          },
+          "gbq": 7833,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+3,7%",
+            "color": "green"
+          },
+          "pl_var": 3164,
+          "pl_cost": 609,
+          "cont_fix": "124%"
+        }
       },
       {
-        "id": "r19", "cells": { "stt": "19", "rt": "SGNSFO", "area": { "label": "NOA", "color": "red" }, "ts": "3/7", "lf": "81,9%", "ss_lf": { "direction": "up", "label": "+6,9%", "color": "green" }, "gbq": 20869, "ss_gbq": { "direction": "down", "label": "-1,9%", "color": "red" }, "pl_var": 6581, "pl_cost": -6432, "cont_fix": "51%" }
+        "id": "r16",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "16",
+          "rt": "HANCAN",
+          "ts": "1",
+          "lf": "64,6%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+8,2%",
+            "color": "green"
+          },
+          "gbq": 3982,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+3,6%",
+            "color": "green"
+          },
+          "pl_var": 2471,
+          "pl_cost": 575,
+          "cont_fix": "130%"
+        }
       },
       {
-        "id": "r20", "cells": { "stt": "20", "rt": "SGNMEL", "area": { "label": "SWP", "color": "teal" }, "ts": "1", "lf": "86,6%", "ss_lf": { "direction": "up", "label": "+4,6%", "color": "green" }, "gbq": 10919, "ss_gbq": { "direction": "up", "label": "+11,3%", "color": "green" }, "pl_var": 9960, "pl_cost": -7488, "cont_fix": "57%" }
+        "id": "r23",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "23",
+          "rt": "HANICN",
+          "ts": "1 4/7",
+          "lf": "81,3%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+0,4%",
+            "color": "green"
+          },
+          "gbq": 4480,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+1,8%",
+            "color": "green"
+          },
+          "pl_var": 9111,
+          "pl_cost": -4683,
+          "cont_fix": "66%"
+        }
       },
       {
-        "id": "r21", "cells": { "stt": "21", "rt": "HANCDG", "area": { "label": "EUR", "color": "orange" }, "ts": "1", "lf": "88,8%", "ss_lf": { "direction": "up", "label": "+2,8%", "color": "green" }, "gbq": 14164, "ss_gbq": { "direction": "down", "label": "-1,9%", "color": "red" }, "pl_var": 10895, "pl_cost": -14192, "cont_fix": "43%" }
+        "id": "r24",
+        "groupId": "grp_nea",
+        "cells": {
+          "stt": "24",
+          "rt": "SGNICN",
+          "ts": "2",
+          "lf": "78,8%",
+          "ss_lf": {
+            "direction": "down",
+            "label": "-1,6%",
+            "color": "red"
+          },
+          "gbq": 4650,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+6,7%",
+            "color": "green"
+          },
+          "pl_var": 3752,
+          "pl_cost": -10555,
+          "cont_fix": "26%"
+        }
       },
       {
-        "id": "r22", "cells": { "stt": "22", "rt": "SGNBKK", "area": { "label": "SEA", "color": "green" }, "ts": "4", "lf": "84,2%", "ss_lf": { "direction": "up", "label": "+1,3%", "color": "green" }, "gbq": 2827, "ss_gbq": { "direction": "flat", "label": "0,0%", "color": "gray" }, "pl_var": 10099, "pl_cost": 3397, "cont_fix": "151%" }
+        "id": "grp_sas",
+        "kind": "group",
+        "group": {
+          "title": "SAS — Nam Á",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "1 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L +837 trđ",
+              "tone": "success"
+            },
+            {
+              "label": "HQ so CPBĐ 6.259 trđ",
+              "tone": "success"
+            }
+          ]
+        }
       },
       {
-        "id": "r23", "cells": { "stt": "23", "rt": "HANICN", "area": { "label": "NEA", "color": "blue" }, "ts": "1 4/7", "lf": "81,3%", "ss_lf": { "direction": "up", "label": "+0,4%", "color": "green" }, "gbq": 4480, "ss_gbq": { "direction": "up", "label": "+1,8%", "color": "green" }, "pl_var": 9111, "pl_cost": -4683, "cont_fix": "66%" }
+        "id": "r12",
+        "groupId": "grp_sas",
+        "cells": {
+          "stt": "12",
+          "rt": "HANDEL",
+          "ts": "4/7",
+          "lf": "94,5%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,2%",
+            "color": "green"
+          },
+          "gbq": 5270,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+1,8%",
+            "color": "green"
+          },
+          "pl_var": 6259,
+          "pl_cost": 837,
+          "cont_fix": "115%"
+        }
       },
       {
-        "id": "r24", "cells": { "stt": "24", "rt": "SGNICN", "area": { "label": "NEA", "color": "blue" }, "ts": "2", "lf": "78,8%", "ss_lf": { "direction": "down", "label": "-1,6%", "color": "red" }, "gbq": 4650, "ss_gbq": { "direction": "up", "label": "+6,7%", "color": "green" }, "pl_var": 3752, "pl_cost": -10555, "cont_fix": "26%" }
+        "id": "grp_noa",
+        "kind": "group",
+        "group": {
+          "title": "NOA — Bắc Mỹ",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "1 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L -6.432 trđ",
+              "tone": "danger"
+            },
+            {
+              "label": "HQ so CPBĐ 6.581 trđ",
+              "tone": "success"
+            }
+          ]
+        }
       },
       {
-        "id": "r25", "cells": { "stt": "25", "rt": "HANMUC", "area": { "label": "EUR", "color": "orange" }, "ts": "2/7", "lf": "76,2%", "ss_lf": { "direction": "up", "label": "+1,3%", "color": "green" }, "gbq": 13339, "ss_gbq": { "direction": "up", "label": "+2,3%", "color": "green" }, "pl_var": 2434, "pl_cost": -3524, "cont_fix": "41%" }
+        "id": "r19",
+        "groupId": "grp_noa",
+        "cells": {
+          "stt": "19",
+          "rt": "SGNSFO",
+          "ts": "3/7",
+          "lf": "81,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+6,9%",
+            "color": "green"
+          },
+          "gbq": 20869,
+          "ss_gbq": {
+            "direction": "down",
+            "label": "-1,9%",
+            "color": "red"
+          },
+          "pl_var": 6581,
+          "pl_cost": -6432,
+          "cont_fix": "51%"
+        }
+      },
+      {
+        "id": "grp_swp",
+        "kind": "group",
+        "group": {
+          "title": "SWP — Tây Nam Thái Bình Dương",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "1 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L -7.488 trđ",
+              "tone": "danger"
+            },
+            {
+              "label": "HQ so CPBĐ 9.960 trđ",
+              "tone": "success"
+            }
+          ]
+        }
+      },
+      {
+        "id": "r20",
+        "groupId": "grp_swp",
+        "cells": {
+          "stt": "20",
+          "rt": "SGNMEL",
+          "ts": "1",
+          "lf": "86,6%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+4,6%",
+            "color": "green"
+          },
+          "gbq": 10919,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+11,3%",
+            "color": "green"
+          },
+          "pl_var": 9960,
+          "pl_cost": -7488,
+          "cont_fix": "57%"
+        }
+      },
+      {
+        "id": "grp_eur",
+        "kind": "group",
+        "group": {
+          "title": "EUR — Châu Âu",
+          "defaultExpanded": true,
+          "badges": [
+            {
+              "label": "3 đường bay",
+              "tone": "neutral"
+            },
+            {
+              "label": "P/L -25.089 trđ",
+              "tone": "danger"
+            },
+            {
+              "label": "HQ so CPBĐ 28.365 trđ",
+              "tone": "success"
+            }
+          ]
+        }
+      },
+      {
+        "id": "r18",
+        "groupId": "grp_eur",
+        "cells": {
+          "stt": "18",
+          "rt": "HANFRA",
+          "ts": "1",
+          "lf": "81,9%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+3,3%",
+            "color": "green"
+          },
+          "gbq": 14087,
+          "ss_gbq": {
+            "direction": "down",
+            "label": "-1,4%",
+            "color": "red"
+          },
+          "pl_var": 15036,
+          "pl_cost": -7373,
+          "cont_fix": "67%"
+        }
+      },
+      {
+        "id": "r21",
+        "groupId": "grp_eur",
+        "cells": {
+          "stt": "21",
+          "rt": "HANCDG",
+          "ts": "1",
+          "lf": "88,8%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+2,8%",
+            "color": "green"
+          },
+          "gbq": 14164,
+          "ss_gbq": {
+            "direction": "down",
+            "label": "-1,9%",
+            "color": "red"
+          },
+          "pl_var": 10895,
+          "pl_cost": -14192,
+          "cont_fix": "43%"
+        }
+      },
+      {
+        "id": "r25",
+        "groupId": "grp_eur",
+        "cells": {
+          "stt": "25",
+          "rt": "HANMUC",
+          "ts": "2/7",
+          "lf": "76,2%",
+          "ss_lf": {
+            "direction": "up",
+            "label": "+1,3%",
+            "color": "green"
+          },
+          "gbq": 13339,
+          "ss_gbq": {
+            "direction": "up",
+            "label": "+2,3%",
+            "color": "green"
+          },
+          "pl_var": 2434,
+          "pl_cost": -3524,
+          "cont_fix": "41%"
+        }
       }
-    ]
+    ],
+    "maxHeight": 520
   }
 }

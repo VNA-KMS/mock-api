@@ -6,21 +6,23 @@
         { "id": "month", "type": "string" },
         { "id": "th", "type": "number", "label": "TH 2026", "colorToken": "series.actual" },
         { "id": "ck", "type": "number", "label": "TH 2025", "colorToken": "series.previous" },
-        { "id": "db", "type": "number", "label": "KH 2026", "colorToken": "series.target" }
+        { "id": "db", "type": "number", "label": "KH 2026", "colorToken": "series.target" },
+        { "id": "fct", "type": "number", "label": "Dự báo 2026", "color": "#8B5CF6" },
+        { "id": "th_lk", "type": "number", "label": "TH 2026", "colorToken": "series.actual" },
+        { "id": "ck_lk", "type": "number", "label": "TH 2025", "colorToken": "series.previous" },
+        { "id": "db_lk", "type": "number", "label": "KH 2026", "colorToken": "series.target" },
+        { "id": "fct_lk", "type": "number", "label": "Dự báo 2026", "color": "#8B5CF6" }
       ],
       "rows": [
-        ["T1", 82, 68, 85],
-        ["T2", 75, 62, 78],
-        ["T3", 80, 65, 82],
-        ["T4", 88, 72, 90],
-        ["T5", 95, 78, 96],
-        ["T6", 102, 82, 103],
-        ["T7", 110, 87, 112],
-        ["T8", 105, 85, 108],
-        ["T9", 98, 80, 102],
-        ["T10", 92, 75, 95],
-        ["T11", 85, 70, 88],
-        ["T12", 78, 65, 82]
+        ["T1", 82, 68, 85, null, 82, 68, 85, null],
+        ["T2", 75, 62, 78, null, 157, 130, 163, null],
+        ["T3", 80, 65, 82, null, 237, 195, 245, null],
+        ["T4", 88, 72, 90, null, 325, 267, 335, null],
+        ["T5", 95, 78, 96, null, 420, 345, 431, null],
+        ["T6", 102, 82, 103, null, 522, 427, 534, null],
+        ["T7", 110, 87, 112, null, 632, 514, 646, null],
+        ["T8", null, 85, 108, 105, 632, 599, 754, 105],
+        ["T9", null, 80, 102, 98, 632, 679, 856, 203]
       ]
     },
     "views": [
@@ -29,9 +31,10 @@
         "chartType": "auto",
         "xField": "month",
         "series": [
+          { "field": "th", "chartType": "bar", "showSymbol": true, "showLabel": "all" },
           { "field": "ck", "chartType": "bar", "isBlur": true },
           { "field": "db", "chartType": "line", "lineStyle": "dashed" },
-          { "field": "th", "chartType": "bar" }
+          { "field": "fct", "chartType": "bar", "lineStyle": "dashed" }
         ]
       }
     ]
