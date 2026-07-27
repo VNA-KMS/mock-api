@@ -1,0 +1,39 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "month", "type": "string" },
+        { "id": "th", "type": "number", "label": "TH 2026", "colorToken": "series.actual" },
+        { "id": "ck", "type": "number", "label": "TH 2025", "colorToken": "series.previous" },
+        { "id": "db", "type": "number", "label": "KH 2026", "colorToken": "series.target" }
+      ],
+      "rows": [
+        ["T1", 520, 487, 540],
+        ["T2", 472, 445, 498],
+        ["T3", 510, 468, 525],
+        ["T4", 548, 502, 558],
+        ["T5", 590, 535, 600],
+        ["T6", 635, 568, 640],
+        ["T7", 690, 602, 695],
+        ["T8", 605, 560, 625],
+        ["T9", 565, 520, 590],
+        ["T10", 540, 498, 565],
+        ["T11", 510, 475, 535],
+        ["T12", 485, 452, 510]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          { "field": "ck", "chartType": "bar", "isBlur": true },
+          { "field": "db", "chartType": "line", "lineStyle": "dashed" },
+          { "field": "th", "chartType": "bar" }
+        ]
+      }
+    ]
+  }
+}

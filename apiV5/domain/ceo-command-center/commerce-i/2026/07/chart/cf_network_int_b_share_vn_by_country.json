@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        { "id": "label", "type": "string" },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Thị phần VNA",
+          "color": [
+            "data.deep-teal", "data.blue-stone", "data.jade-blue",
+            "data.sea-blue", "data.sky-blue", "data.olive-gold",
+            "data.olive", "data.sea-grass", "data.coral",
+            "data.rose", "data.salmon", "data.brick",
+            "data.plum", "data.lavender", "data.slate",
+            "data.charcoal"
+          ]
+        }
+      ],
+      "rows": [
+        ["JP", 18.0],
+        ["KR", 16.9],
+        ["TH", 11.7],
+        ["AU", 7.0],
+        ["CN", 7.0],
+        ["IN", 6.2],
+        ["SG", 6.0],
+        ["TW", 5.6],
+        ["DE", 4.6],
+        ["ID", 3.9],
+        ["FR", 3.5],
+        ["MY", 2.9],
+        ["PH", 2.7],
+        ["GB", 1.5],
+        ["HK", 1.4],
+        ["US", 1.0]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "label",
+        "series": [{ "field": "value" }]
+      }
+    ]
+  }
+}
