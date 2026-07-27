@@ -132,6 +132,126 @@
             "tone": "negative"
           }
         ]
+      },
+      {
+        "id": "t_aog",
+        "status": "compact",
+        "title": "AOG",
+        "value": "20",
+        "unit": "vụ/10000 chuyến bay",
+        "backgroundStatus": 1,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            22,
+            21,
+            21,
+            20,
+            19,
+            20,
+            19,
+            20
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        },
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.8% so với Kế hoạch",
+            "type": "plan",
+            "value": "98.8%",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "4% so với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "4%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_ave_aog",
+        "status": "compact",
+        "title": "AVE-AOG",
+        "value": "3",
+        "unit": "giờ/vụ",
+        "backgroundStatus": 1,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            4,
+            3.5,
+            3.5,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        },
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.8% so với Kế hoạch",
+            "type": "plan",
+            "value": "98.8%",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "4% so với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "4%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_delay",
+        "status": "compact",
+        "title": "AVE DELAY",
+        "value": "18",
+        "unit": "phút/vụ",
+        "backgroundStatus": 3,
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            15,
+            15.5,
+            16,
+            16.5,
+            17,
+            17.5,
+            18,
+            18
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.negative"
+        },
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "92.2% so với Kế hoạch",
+            "type": "plan",
+            "value": "92.2%",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "9,1% so với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "9,1%",
+            "tone": "negative"
+          }
+        ]
       }
     ]
   },
@@ -361,7 +481,373 @@
         }
       ]
     },
-
+    {
+      "title": "AOG & Delay",
+      "items": [
+        {
+          "id": "chart_delay_stats",
+          "title": "Số vụ N-Delay theo tháng",
+          "subTitle": "Đơn vị: Số vụ",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "aspectRatio": 2.2,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_stats.json",
+          "aiInsight": {
+            "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
+            "severity": "crit"
+          }
+        },
+        {
+          "id": "chart_delay_breakdown",
+          "title": "Delay theo chặng bay / sân bay",
+          "subTitle": "Đơn vị: Số vụ",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "aspectRatio": 1.6,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_delay_breakdown.json",
+          "aiInsight": {
+            "text": "HAN-SGN là chặng có nhiều delay nhất với 95 vụ, chiếm 30% tổng số vụ delay. Tân Sơn Nhất dẫn đầu sân bay với 140 vụ delay.",
+            "severity": "warn"
+          },
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "chang",
+                "label": "Chặng bay"
+              },
+              {
+                "id": "sanbay",
+                "label": "Sân bay"
+              }
+            ],
+            "defaultValue": "chang"
+          },
+          "views": [
+            {
+              "id": "chang",
+              "label": "Chặng bay",
+              "autoChart": {
+                "chartType": "bar-h",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "Số vụ delay",
+                      "colorToken": "series.actual"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "HAN-SGN",
+                      95
+                    ],
+                    [
+                      "SGN-HAN",
+                      82
+                    ],
+                    [
+                      "SGN-DAD",
+                      58
+                    ],
+                    [
+                      "DAD-HAN",
+                      42
+                    ],
+                    [
+                      "HAN-DAD",
+                      36
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "sanbay",
+              "label": "Sân bay",
+              "autoChart": {
+                "chartType": "bar-h",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "item",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "Số vụ delay",
+                      "colorToken": "series.actual"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "TSN",
+                      140
+                    ],
+                    [
+                      "NBT",
+                      110
+                    ],
+                    [
+                      "DAD",
+                      75
+                    ],
+                    [
+                      "CXR",
+                      45
+                    ],
+                    [
+                      "VII",
+                      30
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "item",
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "chart_aog_tech",
+          "title": "Số lượng chuyến bay dừng bay (N-AOG) theo tháng",
+          "subTitle": "Đơn vị: Số chuyến",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/07/chart/chart_aog_tech.json",
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "n-aog",
+                "label": "N-AOG"
+              },
+              {
+                "id": "ave-aog",
+                "label": "AVE AOG"
+              }
+            ],
+            "defaultValue": "n-aog"
+          },
+          "views": [
+            {
+              "id": "n-aog",
+              "label": "N-AOG",
+              "autoChart": {
+                "chartType": "line",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "N-AOG (Đơn vị: Số chuyến)",
+                      "colorToken": "series.actual"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      8
+                    ],
+                    [
+                      "T2",
+                      6
+                    ],
+                    [
+                      "T3",
+                      4
+                    ],
+                    [
+                      "T4",
+                      8
+                    ],
+                    [
+                      "T5",
+                      10
+                    ],
+                    [
+                      "T6",
+                      6
+                    ],
+                    [
+                      "T7",
+                      5
+                    ],
+                    [
+                      "T8",
+                      16
+                    ],
+                    [
+                      "T9",
+                      13
+                    ],
+                    [
+                      "T10",
+                      12
+                    ],
+                    [
+                      "T11",
+                      9
+                    ],
+                    [
+                      "T12",
+                      7
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "area",
+                        "areaStyle": {}
+                      }
+                    ],
+                    "nameAxis": "N-AOG (Đơn vị: Số chuyến)"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ave-aog",
+              "label": "AVE AOG",
+              "autoChart": {
+                "chartType": "line",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "AVE-AOG (Đơn vị: giờ/vụ)",
+                      "colorToken": "data.brick"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      3.5
+                    ],
+                    [
+                      "T2",
+                      3.2
+                    ],
+                    [
+                      "T3",
+                      3
+                    ],
+                    [
+                      "T4",
+                      2.8
+                    ],
+                    [
+                      "T5",
+                      3
+                    ],
+                    [
+                      "T6",
+                      3.1
+                    ],
+                    [
+                      "T7",
+                      2.9
+                    ],
+                    [
+                      "T8",
+                      2.5
+                    ],
+                    [
+                      "T9",
+                      2.8
+                    ],
+                    [
+                      "T10",
+                      3.2
+                    ],
+                    [
+                      "T11",
+                      3.5
+                    ],
+                    [
+                      "T12",
+                      3
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "month",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "area",
+                        "areaStyle": {}
+                      }
+                    ],
+                    "nameAxis": "AVE-AOG (Đơn vị: giờ/vụ)"
+                  }
+                ]
+              }
+            }
+          ],
+          "aiInsight": {
+            "text": "AOG kỹ thuật 0,88 vụ/tháng, giảm 12% so với cùng kỳ 2025. Phi kỹ thuật ổn định ~0,48 vụ/tháng. A321 ghi nhận 2 vụ AOG trong tháng — cao nhất đội bay.",
+            "severity": "good"
+          }
+        }
+      ]
+    },
     {
       "title": "Chi phí bảo dưỡng",
       "items": [
