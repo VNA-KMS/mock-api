@@ -1,0 +1,143 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            5,
+            5
+          ],
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          99.7,
+          99.5,
+          99.5
+        ],
+        [
+          "T2",
+          99.5,
+          99.3,
+          99.5
+        ],
+        [
+          "T3",
+          99.3,
+          99.1,
+          99.5
+        ],
+        [
+          "T4",
+          99.1,
+          99,
+          99.5
+        ],
+        [
+          "T5",
+          98.9,
+          98.8,
+          99.5
+        ],
+        [
+          "T6",
+          98.7,
+          98.7,
+          99.5
+        ],
+        [
+          "T7",
+          98.6,
+          98.5,
+          99.5
+        ],
+        [
+          "T8",
+          null,
+          98.6,
+          99.5
+        ],
+        [
+          "T9",
+          null,
+          98.7,
+          99.5
+        ],
+        [
+          "T10",
+          null,
+          98.8,
+          99.5
+        ],
+        [
+          "T11",
+          null,
+          98.9,
+          99.5
+        ],
+        [
+          "T12",
+          null,
+          99,
+          99.5
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 90,
+        "yMax": 100,
+        "yInterval": 2,
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "barMaxWidth": 32,
+            "showSymbol": true,
+            "areaStyle": {},
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "barMaxWidth": 32
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}
