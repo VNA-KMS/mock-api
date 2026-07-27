@@ -8,131 +8,94 @@
           "type": "string"
         },
         {
-          "id": "th",
+          "id": "actual",
+          "type": "number",
+          "label": "2026",
+          "color": "#004071"
+        },
+        {
+          "id": "plan",
           "type": "number",
           "label": "KH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế KH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "ck_lk",
-          "type": "number",
-          "label": "Luỹ kế 2025",
-          "colorToken": "series.previous"
+          "color": "#B4901F"
         }
       ],
       "rows": [
         [
           "T1",
-          37,
-          40,
-          37,
-          40
+          820,
+          900
         ],
         [
           "T2",
-          36,
-          39,
-          73,
-          79
+          730,
+          800
         ],
         [
           "T3",
-          35,
-          38,
-          108,
-          117
+          3136,
+          3200
         ],
         [
           "T4",
-          34,
-          37,
-          142,
-          154
+          312,
+          350
         ],
         [
           "T5",
-          33,
-          36,
-          175,
-          190
+          620,
+          650
         ],
         [
           "T6",
-          32,
-          35,
-          207,
-          225
+          850,
+          880
         ],
         [
           "T7",
-          42,
-          47,
-          249,
-          272
+          945,
+          980
         ],
         [
           "T8",
           null,
-          42,
-          null,
-          314
+          950
         ],
         [
           "T9",
           null,
-          40,
-          null,
-          354
+          920
         ],
         [
           "T10",
           null,
-          38,
-          null,
-          392
+          980
         ],
         [
           "T11",
           null,
-          41,
-          null,
-          433
+          940
         ],
         [
           "T12",
           null,
-          39,
-          null,
-          472
+          900
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "combo",
         "xField": "month",
         "series": [
           {
-            "field": "th",
-            "chartType": "bar",
-            "showSymbol": true
+            "field": "actual",
+            "chartType": "bar"
           },
           {
-            "field": "ck",
-            "chartType": "bar"
+            "field": "plan",
+            "chartType": "line"
           }
         ]
       }
