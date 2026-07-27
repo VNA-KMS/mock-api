@@ -550,7 +550,251 @@
           "aiInsight": {
             "text": "N-Delay 9,96 vụ, AVG 61,44 phút — vượt MT 52 phút 18%. Nguyên nhân chính: tàu bay đến muộn.",
             "severity": "crit"
-          }
+          },
+          "headerAction": {
+            "type": "segment",
+            "options": [
+              {
+                "id": "n-delay",
+                "label": "N-DELAY"
+              },
+              {
+                "id": "ave-delay",
+                "label": "AVE DELAY"
+              }
+            ],
+            "defaultValue": "n-delay"
+          },
+          "views": [
+            {
+              "id": "n-delay",
+              "label": "N-DELAY",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "count",
+                      "type": "number",
+                      "label": "N-DELAY (Đơn vị: Số vụ)",
+                      "colorToken": "series.actual"
+                    },
+                    {
+                      "id": "target",
+                      "type": "number",
+                      "label": "MT 2026",
+                      "lineDash": [
+                        6,
+                        4
+                      ],
+                      "colorToken": "data.olive-gold"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      12,
+                      52
+                    ],
+                    [
+                      "T2",
+                      9,
+                      52
+                    ],
+                    [
+                      "T3",
+                      10,
+                      52
+                    ],
+                    [
+                      "T4",
+                      11,
+                      52
+                    ],
+                    [
+                      "T5",
+                      10,
+                      52
+                    ],
+                    [
+                      "T6",
+                      9,
+                      52
+                    ],
+                    [
+                      "T7",
+                      9.96,
+                      52
+                    ],
+                    [
+                      "T8",
+                      null,
+                      52
+                    ],
+                    [
+                      "T9",
+                      null,
+                      52
+                    ],
+                    [
+                      "T10",
+                      null,
+                      52
+                    ],
+                    [
+                      "T11",
+                      null,
+                      52
+                    ],
+                    [
+                      "T12",
+                      null,
+                      52
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "xField": "month",
+                    "nameAxis": "N-DELAY (Đơn vị: Số vụ)",
+                    "showLegend": false,
+                    "series": [
+                      {
+                        "field": "count",
+                        "chartType": "bar",
+                        "showLabel": "all"
+                      },
+                      {
+                        "field": "target",
+                        "chartType": "line",
+                        "lineType": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "ave-delay",
+              "label": "AVE DELAY",
+              "autoChart": {
+                "chartType": "combo",
+                "dataset": {
+                  "columns": [
+                    {
+                      "id": "month",
+                      "type": "string"
+                    },
+                    {
+                      "id": "value",
+                      "type": "number",
+                      "label": "AVE-DELAY (Đơn vị: phút/vụ)",
+                      "colorToken": "data.brick"
+                    },
+                    {
+                      "id": "target",
+                      "type": "number",
+                      "label": "MT 2026",
+                      "lineDash": [
+                        6,
+                        4
+                      ],
+                      "colorToken": "data.olive-gold"
+                    }
+                  ],
+                  "rows": [
+                    [
+                      "T1",
+                      15,
+                      18
+                    ],
+                    [
+                      "T2",
+                      14.5,
+                      18
+                    ],
+                    [
+                      "T3",
+                      16,
+                      18
+                    ],
+                    [
+                      "T4",
+                      15.5,
+                      18
+                    ],
+                    [
+                      "T5",
+                      17,
+                      18
+                    ],
+                    [
+                      "T6",
+                      18,
+                      18
+                    ],
+                    [
+                      "T7",
+                      18.5,
+                      18
+                    ],
+                    [
+                      "T8",
+                      17,
+                      18
+                    ],
+                    [
+                      "T9",
+                      19,
+                      18
+                    ],
+                    [
+                      "T10",
+                      20,
+                      18
+                    ],
+                    [
+                      "T11",
+                      19,
+                      18
+                    ],
+                    [
+                      "T12",
+                      18,
+                      18
+                    ]
+                  ]
+                },
+                "views": [
+                  {
+                    "id": "main",
+                    "chartType": "auto",
+                    "showLegend": false,
+                    "xField": "month",
+                    "nameAxis": "AVE-DELAY (Đơn vị: phút/vụ)",
+                    "series": [
+                      {
+                        "field": "value",
+                        "chartType": "bar",
+                        "showLabel": "all"
+                      },
+                      {
+                        "field": "target",
+                        "chartType": "line",
+                        "lineType": "dashed"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "chart_delay_breakdown",
@@ -800,7 +1044,7 @@
                         "field": "value",
                         "chartType": "area",
                         "areaStyle": {},
-                        "showLabel": "end"
+                        "showLabel": "all"
                       }
                     ],
                     "nameAxis": "N-AOG (Đơn vị: Số chuyến)"
@@ -888,7 +1132,7 @@
                         "field": "value",
                         "chartType": "area",
                         "areaStyle": {},
-                        "showLabel": "end"
+                        "showLabel": "all"
                       }
                     ],
                     "nameAxis": "AVE-AOG (Đơn vị: giờ/vụ)"
@@ -909,7 +1153,7 @@
       "items": [
         {
           "id": "chart_mc_ask_dept",
-          "title": "Chi phí bảo dưỡng theo phòng ban",
+          "title": "Chi phí bảo dưỡng theo CQDV",
           "subTitle": "Đơn vị: tỷ VND",
           "col": 1,
           "colSpan": 20,
@@ -973,7 +1217,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1041,7 +1285,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1109,7 +1353,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1177,7 +1421,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1333,7 +1577,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1441,7 +1685,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1549,7 +1793,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1657,7 +1901,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1765,7 +2009,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1782,7 +2026,7 @@
         {
           "id": "chart_cost_bh",
           "title": "CP bảo dưỡng theo BH",
-          "subTitle": "Đơn vị: VND/BH",
+          "subTitle": "Đơn vị: Triệu VND/BH",
           "col": 21,
           "colSpan": 20,
           "row": 2,
@@ -1876,7 +2120,7 @@
                     ],
                     [
                       "ĐC",
-                      267900,
+                      267.900,
                       267300
                     ]
                   ]
@@ -1890,7 +2134,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -1978,7 +2222,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2066,7 +2310,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2154,7 +2398,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2242,7 +2486,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2259,7 +2503,7 @@
         {
           "id": "chart_cost_fh",
           "title": "CP bảo dưỡng theo FH",
-          "subTitle": "Đơn vị: VND/FH",
+          "subTitle": "Đơn vị: Triệu VND/FH",
           "col": 41,
           "colSpan": 20,
           "row": 2,
@@ -2367,7 +2611,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2455,7 +2699,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2543,7 +2787,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2631,7 +2875,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
@@ -2719,7 +2963,7 @@
                       {
                         "field": "th",
                         "chartType": "bar",
-                        "showLabel": "end"
+                        "showLabel": "all"
                       },
                       {
                         "field": "kh",
