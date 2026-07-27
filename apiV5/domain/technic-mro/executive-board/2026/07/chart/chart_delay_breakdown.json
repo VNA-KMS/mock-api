@@ -1,0 +1,40 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "item",
+          "type": "string"
+        },
+        {
+          "id": "count",
+          "type": "number",
+          "label": "Số vụ delay",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        ["HAN-SGN", 72],
+        ["SGN-HAN", 64],
+        ["SGN-DAD", 40],
+        ["DAD-HAN", 31],
+        ["HAN-DAD", 28]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "showLegend": false,
+        "xField": "item",
+        "series": [
+          {
+            "field": "count",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}
