@@ -1,0 +1,66 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          210,
+          216.33
+        ],
+        [
+          "Q2",
+          214,
+          219.67
+        ],
+        [
+          "Q3",
+          215,
+          221.33
+        ],
+        [
+          "Q4",
+          null,
+          222.67
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "kh",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}
