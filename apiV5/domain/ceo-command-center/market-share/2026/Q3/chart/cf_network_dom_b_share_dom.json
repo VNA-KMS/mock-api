@@ -28,20 +28,32 @@
         {
           "id": "th_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2026",
+          "label": "TH 2026",
           "colorToken": "series.actual"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2025",
+          "label": "TH 2025",
           "colorToken": "series.previous"
         },
         {
           "id": "db_lk",
           "type": "number",
-          "label": "Luỹ kế KH 2026",
+          "label": "KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
@@ -50,27 +62,33 @@
           133.60000000000002,
           136.2,
           135.6,
-          133.6,
+          133.60000000000002,
           136.2,
-          135.6
+          135.6,
+          null,
+          null
         ],
         [
           "Q2",
           133.4,
           135.7,
           135.2,
-          267,
-          271.9,
-          270.8
+          133.4,
+          135.7,
+          135.2,
+          null,
+          null
         ],
         [
           "Q3",
           45.4,
           136.3,
           136.2,
-          312.4,
-          408.2,
-          407
+          45.4,
+          136.3,
+          136.2,
+          null,
+          null
         ],
         [
           "Q4",
@@ -78,8 +96,10 @@
           134.9,
           135.2,
           null,
-          543.1,
-          542.2
+          134.9,
+          135.2,
+          45.5,
+          45.5
         ]
       ]
     },
@@ -88,12 +108,12 @@
         "id": "main",
         "chartType": "auto",
         "xField": "year",
-        "labelShow": "all",
         "series": [
           {
             "field": "th",
             "chartType": "bar",
-            "showSymbol": true
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
@@ -103,6 +123,11 @@
           {
             "field": "db",
             "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ],

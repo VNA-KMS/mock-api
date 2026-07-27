@@ -26,132 +26,168 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2026",
+          "label": "TH 2026",
           "colorToken": "series.actual"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế TH 2025",
+          "label": "TH 2025",
           "colorToken": "series.previous"
         },
         {
           "id": "db_lk",
           "type": "number",
-          "label": "Luỹ kế KH 2026",
+          "label": "KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
         [
           "T1",
-          86,
-          91,
-          104,
-          86,
-          91,
-          104
+          0.2,
+          0.21,
+          0.24,
+          null,
+          0.2,
+          0.21,
+          0.24,
+          null
         ],
         [
           "T2",
-          86,
-          91,
-          95,
-          172,
-          182,
-          199
+          0.2,
+          0.21,
+          0.22,
+          null,
+          0.4,
+          0.42,
+          0.46,
+          null
         ],
         [
           "T3",
-          82,
-          87,
-          104,
-          254,
-          269,
-          303
+          0.19,
+          0.2,
+          0.24,
+          null,
+          0.59,
+          0.62,
+          0.7,
+          null
         ],
         [
           "T4",
-          88,
-          92,
-          112,
-          342,
-          361,
-          415
+          0.2,
+          0.21,
+          0.26,
+          null,
+          0.79,
+          0.83,
+          0.96,
+          null
         ],
         [
           "T5",
-          84,
-          89,
-          101,
-          426,
-          450,
-          516
+          0.19,
+          0.2,
+          0.23,
+          null,
+          0.98,
+          1.03,
+          1.19,
+          null
         ],
         [
           "T6",
-          92,
-          96,
-          108,
-          518,
-          546,
-          624
+          0.21,
+          0.22,
+          0.25,
+          null,
+          1.19,
+          1.25,
+          1.44,
+          null
         ],
         [
           "T7",
-          96,
-          101,
-          103,
-          614,
-          647,
-          727
+          0.22,
+          0.23,
+          0.24,
+          null,
+          1.41,
+          1.48,
+          1.68,
+          null
         ],
         [
           "T8",
           null,
-          83,
-          91,
+          0.19,
+          0.21,
+          0.22,
           null,
-          730,
-          818
+          1.67,
+          1.89,
+          0.22
         ],
         [
           "T9",
           null,
-          83,
-          92,
+          0.19,
+          0.21,
+          0.17,
           null,
-          813,
-          910
+          1.86,
+          2.1,
+          0.39
         ],
         [
           "T10",
           null,
-          88,
-          98,
+          0.2,
+          0.22,
           null,
-          901,
-          1008
+          null,
+          2.06,
+          2.32,
+          null
         ],
         [
           "T11",
           null,
-          89,
-          94,
+          0.2,
+          0.22,
           null,
-          990,
-          1102
+          null,
+          2.26,
+          2.54,
+          null
         ],
         [
           "T12",
           null,
-          93,
-          91,
+          0.21,
+          0.21,
           null,
-          1083,
-          1193
+          null,
+          2.47,
+          2.75,
+          null
         ]
       ]
     },
@@ -164,7 +200,8 @@
           {
             "field": "th",
             "chartType": "bar",
-            "showSymbol": true
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
@@ -175,10 +212,14 @@
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
           }
         ],
-        "labelShow": "all",
-        "tooltipUnit": "Nghìn lượt"
+        "tooltipUnit": "Triệu khách"
       }
     ]
   }

@@ -1,0 +1,89 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        ["W20", 1257.8, 1331.8, 1501.9, 7546.8, 7990.7, 9011.5],
+        ["W21", 1228.3, 1294.8, 1464.9, 7369.4, 7768.8, 8789.6],
+        ["W22", 1191.1, 1257.8, 1531.5, 7146.9, 7546.8, 9189.1],
+        ["W23", 1243, 1309.6, 1568.6, 7458, 7857.4, 9411.4],
+        ["W24", 1294.8, 1361.4, 1598.1, 7768.8, 8168.3, 9588.8],
+        ["W25", 1331.8, 1398.3, 1635.2, 7990.7, 8390.1, 9810.8],
+        ["W26", 1376.1, 1450.2, 1672.1, 8256.9, 8701, 10032.7],
+        ["W27", 2130.8, 1161.6, 1294.8, 8523.3, 6969.6, 7768.8],
+        ["W28", 1731.3, 1124.6, 1331.8, 6925.2, 6747.6, 7990.7],
+        ["W29", 2426.8, 1191.1, 1398.3, 9707.1, 7146.9, 8390.1],
+        ["W30", 2315.8, 1228.3, 1361.4, 9263.3, 7369.4, 8168.3],
+        ["W31", 1398.3, 1280, 1428, 5593.3, 7680, 8567.7]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ],
+        "tooltipUnit": "Nghìn lượt"
+      }
+    ]
+  }
+}

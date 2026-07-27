@@ -1,0 +1,75 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "th_2026",
+          "type": "number",
+          "label": "TH 2026",
+          "color": "#007C89"
+        },
+        {
+          "id": "th_2025",
+          "type": "number",
+          "label": "TH 2025",
+          "color": "#EF4444"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          61.0,
+          60.3
+        ],
+        [
+          "Q2",
+          63.5,
+          56.0
+        ],
+        [
+          "Q3",
+          61.0,
+          56.9
+        ],
+        [
+          "Q4",
+          null,
+          57.5
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          {
+            "field": "th_2026",
+            "chartType": "line",
+            "showSymbol": true,
+            "symbolFilled": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "th_2025",
+            "chartType": "line",
+            "showSymbol": true,
+            "symbolFilled": true
+          }
+        ],
+        "tooltipUnit": "%",
+        "yAxis": {
+          "min": 30,
+          "max": 70,
+          "interval": 5
+        }
+      }
+    ]
+  }
+}

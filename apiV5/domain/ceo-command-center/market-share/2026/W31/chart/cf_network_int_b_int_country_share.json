@@ -1,0 +1,56 @@
+{
+  "autoChart": {
+    "chartType": "sunburst",
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number"
+        },
+        {
+          "id": "parent",
+          "type": "string"
+        },
+        {
+          "id": "color",
+          "type": "string"
+        }
+      ],
+      "rows": [
+        ["Quốc tế", 100, "", "#004071"],
+        ["SWP", 44, "Quốc tế", "#1c7d95"],
+        ["AU", 44, "SWP", "#6a3d9a"],
+        ["CLMV", 31, "Quốc tế", "#398da2"],
+        ["KH", 31, "CLMV", "#e31a1c"],
+        ["NEA", 11, "Quốc tế", "#559eb0"],
+        ["JP", 4, "NEA", "#ff7f00"],
+        ["KR", 4, "NEA", "#33a02c"],
+        ["CN", 3, "NEA", "#fb9a99"],
+        ["SEA", 6, "Quốc tế", "#71aebd"],
+        ["VN", 3, "SEA", "#1f78b4"],
+        ["SG", 2, "SEA", "#b2df8a"],
+        ["TH", 1, "SEA", "#fdbf6f"],
+        ["US", 5, "Quốc tế", "#8ebeca"],
+        ["US", 5, "US", "#a6cee3"],
+        ["EU", 3, "Quốc tế", "#abc3d5"],
+        ["FR", 2, "EU", "#cab2d6"],
+        ["GB", 1, "EU", "#ffff99"]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "series": [
+          {
+            "field": "value"
+          }
+        ]
+      }
+    ]
+  }
+}
