@@ -207,7 +207,7 @@ for (const chartFile of chartFiles) {
 }
 
 // Reusable function to process inline datasets (not tied to chartFile context)
-function processInlineDataset(dataset) {
+function processInlineDataset(dataset, useSum = false) {
   if (!dataset || !dataset.rows || !dataset.columns) return false;
   const monthCol = dataset.columns.findIndex(c => c.id === 'month');
   if (monthCol === -1) return false;
@@ -221,7 +221,7 @@ function processInlineDataset(dataset) {
     }
   });
 
-  // Determine agg function based on column count/type
+  const aggFn = useSum ? sum : avg;
   const newRows = [];
   for (const qKey of Object.keys(monthRanges)) {
     const { months, rowLabel } = monthRanges[qKey];
@@ -236,7 +236,7 @@ function processInlineDataset(dataset) {
       if (cumulativeCols.has(i)) {
         val = last(values);
       } else {
-        val = avg(values);
+        val = aggFn(values);
       }
       newRow.push(val !== null && val !== undefined ? Math.round(val * 100) / 100 : null);
     }
@@ -269,14 +269,14 @@ for (const q of QUARTERS) {
   }
   updateChartPaths(indexData);
 
-  // Process inline datasets in chartBoard views (e.g., mc_ask fleet views, mc_ask_dept)
+  // Process inline datasets in chartBoard views (e.g., mc_ask fleet views, mc_ask_dept, aog_tech)
   for (const section of indexData.chartBoard || []) {
     for (const item of section.items || []) {
-      // Process views at item level (like chart_mc_ask fleet views)
       if (item.views) {
         for (const view of item.views) {
           if (view.autoChart?.dataset) {
-            processInlineDataset(view.autoChart.dataset);
+            const isSumView = item.id === 'chart_aog_tech' && view.id === 'n-aog';
+            processInlineDataset(view.autoChart.dataset, isSumView);
           }
         }
       }
