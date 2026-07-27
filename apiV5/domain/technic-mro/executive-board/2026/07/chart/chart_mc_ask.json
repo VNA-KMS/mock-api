@@ -1,0 +1,58 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        ["T1", 760, 790],
+        ["T2", 772, 796],
+        ["T3", 781, 805],
+        ["T4", 789, 812],
+        ["T5", 798, 820],
+        ["T6", 806, 826],
+        ["T7", 813, 832],
+        ["T8", null, 834],
+        ["T9", null, 836],
+        ["T10", null, 838],
+        ["T11", null, 841],
+        ["T12", null, 844]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "kh",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}
