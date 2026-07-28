@@ -10,45 +10,57 @@
         {
           "id": "ck",
           "type": "number",
-          "label": "2025",
+          "label": "TH 2025",
           "colorToken": "series.previous"
-        },
-        {
-          "id": "db",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
         },
         {
           "id": "th",
           "type": "number",
-          "label": "2026",
+          "label": "TH 2026",
           "colorToken": "carrier.vna"
         },
         {
           "id": "ck_lk",
           "type": "number",
-          "label": "Luỹ kế 2025",
+          "label": "Lũy kế TH 2025",
           "colorToken": "series.previous"
-        },
-        {
-          "id": "db_lk",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
         },
         {
           "id": "th_lk",
           "type": "number",
-          "label": "Luỹ kế 2026",
+          "label": "Lũy kế TH 2026",
           "colorToken": "carrier.vna"
         }
       ],
       "rows": [
-        ["Q1", 67.6, 88.4, 66, 67.6, 88.4, 66],
-        ["Q2", 75, 87.1, 73.4, 142.6, 175.5, 139.4],
-        ["Q3", 64.5, 77.60000000000001, 26.2, 207.1, 253.1, 165.6],
-        ["Q4", 65.7, 76.1, null, 272.8, 329.2, null]
+        [
+          "Q1",
+          67.6,
+          66,
+          67.6,
+          66.0
+        ],
+        [
+          "Q2",
+          74.9,
+          72.4,
+          71.2,
+          69.2
+        ],
+        [
+          "Q3",
+          64.5,
+          26.2,
+          69.0,
+          54.9
+        ],
+        [
+          "Q4",
+          65.7,
+          null,
+          68.2,
+          null
+        ]
       ]
     },
     "views": [
@@ -59,19 +71,14 @@
         "series": [
           {
             "field": "ck",
-            "chartType": "bar",
+            "chartType": "line",
             "isBlur": true
           },
           {
-            "field": "db",
-            "chartType": "line",
-            "lineStyle": "dashed"
-          },
-          {
             "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "end"
+            "chartType": "line",
+            "showLabel": "end",
+            "colorToken": "carrier.vna"
           }
         ]
       }

@@ -1,7 +1,6 @@
 {
   "autoChart": {
     "chartType": "combo",
-    "aspectRatio": 1.8,
     "dataset": {
       "columns": [
         {
@@ -27,6 +26,12 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
@@ -43,6 +48,12 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
@@ -51,36 +62,44 @@
           157.7,
           161.8,
           158.3,
+          null,
           157.7,
           161.8,
-          158.3
+          158.3,
+          null
         ],
         [
           "Q2",
           156.6,
           159.7,
           156.5,
+          null,
           314.3,
           321.5,
-          314.8
+          314.8,
+          null
         ],
         [
           "Q3",
           52,
           162.3,
           154.5,
+          null,
           366.3,
           483.8,
-          469.3
+          469.3,
+          null
         ],
         [
           "Q4",
           null,
           160.5,
           152.3,
+          152.3,
           null,
           644.3,
-          621.6
+          621.6,
+          152.3
         ]
       ]
     },
@@ -103,6 +122,11 @@
           {
             "field": "db",
             "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ]
