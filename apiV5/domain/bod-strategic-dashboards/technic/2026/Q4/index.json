@@ -466,14 +466,181 @@
       ]
     },
     {
-      "title": "DR theo đội bay",
+      "title": "DR",
       "items": [
+        {
+          "id": "chart_dr",
+          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "aspectRatio": 1.6,
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/Q4/chart/chart_dr.json",
+          "subTitle": "Đơn vị: %",
+          "aiInsight": {
+            "text": "DR All Fleet đạt tốt so với Target 2026. ATR72 cao nhất, B787 cần theo dõi.",
+            "severity": "good"
+          }
+        },
+        {
+          "id": "dr_summary_table",
+          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "table": {
+            "columns": [
+              {
+                "id": "fleet",
+                "type": "badge",
+                "label": "Đội bay"
+              },
+              {
+                "id": "t7_2025",
+                "type": "number",
+                "label": "T7.2025",
+                "decimals": 2
+              },
+              {
+                "id": "7t_2025",
+                "type": "number",
+                "label": "7T.2025",
+                "decimals": 2
+              },
+              {
+                "id": "mt_2026",
+                "type": "number",
+                "label": "MT.2026",
+                "decimals": 2
+              },
+              {
+                "id": "kh_t7_2026",
+                "type": "number",
+                "label": "KH T7.2026",
+                "decimals": 2
+              },
+              {
+                "id": "t7_2026",
+                "type": "number",
+                "label": "T7.2026",
+                "decimals": 2
+              },
+              {
+                "id": "7t_2026",
+                "type": "number",
+                "label": "7T.2026",
+                "decimals": 2
+              },
+              {
+                "id": "vs_mt_2026",
+                "type": "tone-value",
+                "label": "vs MT.2026"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "B787",
+                    "color": "blue"
+                  },
+                  "t7_2025": 98.5,
+                  "7t_2025": 98.7,
+                  "mt_2026": 99.36,
+                  "kh_t7_2026": 99.4,
+                  "t7_2026": 98.6,
+                  "7t_2026": 99.54,
+                  "vs_mt_2026": {
+                    "value": -0.76,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A350",
+                    "color": "purple"
+                  },
+                  "t7_2025": 99.0,
+                  "7t_2025": 99.2,
+                  "mt_2026": 99.44,
+                  "kh_t7_2026": 99.5,
+                  "t7_2026": 99.2,
+                  "7t_2026": 99.48,
+                  "vs_mt_2026": {
+                    "value": -0.24,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A321",
+                    "color": "orange"
+                  },
+                  "t7_2025": 99.2,
+                  "7t_2025": 99.4,
+                  "mt_2026": 99.63,
+                  "kh_t7_2026": 99.7,
+                  "t7_2026": 99.4,
+                  "7t_2026": 99.72,
+                  "vs_mt_2026": {
+                    "value": -0.23,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "ATR72",
+                    "color": "teal"
+                  },
+                  "t7_2025": 99.3,
+                  "7t_2025": 99.5,
+                  "mt_2026": 99.65,
+                  "kh_t7_2026": 99.7,
+                  "t7_2026": 99.5,
+                  "7t_2026": 99.78,
+                  "vs_mt_2026": {
+                    "value": -0.15,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "All Fleet (total)",
+                    "color": "slate"
+                  },
+                  "t7_2025": 99.0,
+                  "7t_2025": 99.2,
+                  "mt_2026": 99.52,
+                  "kh_t7_2026": 99.58,
+                  "t7_2026": 99.18,
+                  "7t_2026": 99.63,
+                  "vs_mt_2026": {
+                    "value": -0.34,
+                    "tone": "negative"
+                  }
+                }
+              }
+            ],
+            "density": "compact",
+            "format3dec": false
+          },
+          "subTitle": "Đơn vị: %"
+        },
         {
           "id": "chart_dr_b787",
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR-B787)",
           "col": 1,
           "colSpan": 30,
-          "row": 1,
+          "row": 2,
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/Q4/chart/chart_dr_b787.json",
@@ -489,7 +656,7 @@
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR-A350)",
           "col": 31,
           "colSpan": 30,
-          "row": 1,
+          "row": 2,
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/Q4/chart/chart_dr_a350.json",
@@ -505,7 +672,7 @@
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR-A321)",
           "col": 1,
           "colSpan": 30,
-          "row": 2,
+          "row": 3,
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/Q4/chart/chart_dr_a321.json",
@@ -521,7 +688,7 @@
           "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR-ATR72)",
           "col": 31,
           "colSpan": 30,
-          "row": 2,
+          "row": 3,
           "aspectRatio": 1.6,
           "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/technic/2026/Q4/chart/chart_dr_atr72.json",
