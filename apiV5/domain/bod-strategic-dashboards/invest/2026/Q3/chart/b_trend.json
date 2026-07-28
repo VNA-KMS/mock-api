@@ -4,18 +4,17 @@
     "dataset": {
       "columns": [
         { "id": "quarter", "type": "string" },
-        { "id": "actual", "type": "number", "label": "Thực hiện", "colorToken": "series.actual" },
-        { "id": "actual_lk", "type": "number", "label": "Thực hiện (LK)", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "Kế hoạch", "colorToken": "series.target" },
-        { "id": "plan_lk", "type": "number", "label": "Kế hoạch (LK)", "colorToken": "series.target" },
-        { "id": "actual_cum", "type": "number", "label": "Thực hiện (LK)", "colorToken": "series.actual" },
-        { "id": "plan_cum", "type": "number", "label": "Kế hoạch (LK)", "colorToken": "series.target" }
+        { "id": "actual", "type": "number", "label": "2026", "colorToken": "series.actual" },
+        { "id": "actual_lk", "type": "number", "label": "2026 (LK)", "colorToken": "series.actual" },
+        { "id": "plan", "type": "number", "label": "KH 2026", "colorToken": "series.target" },
+        { "id": "plan_lk", "type": "number", "label": "KH 2026 (LK)", "colorToken": "series.target" },
+        { "id": "actual_cum", "type": "number", "label": "2026 (LK)", "colorToken": "series.actual" },
+        { "id": "plan_cum", "type": "number", "label": "KH 2026 (LK)", "colorToken": "series.target" }
       ],
       "rows": [
-        ["Q1", 20, 20, 22, 22, 20, 22],
-        ["Q2", 22, 42, 24, 24, 42, 46],
-        ["Q3", 25, 67, 26, 26, 67, 72],
-        ["Q4", 28, 95, 28, 28, 95, 100]
+        ["Q1", 22, 22, 20, 20, 22, 20],
+        ["Q2", 25.5, 47.5, 24, 44, 47.5, 44],
+        ["Q3", 25.5, 73, 26, 70, 73, 70]
       ]
     },
     "views": [
@@ -24,7 +23,7 @@
         "chartType": "combo",
         "xField": "quarter",
         "label": "Theo quý 2026",
-        "yAxis": { "min": 0, "max": 35, "interval": 5 },
+        "yAxis": { "min": 0, "max": 30, "interval": 5 },
         "series": [
           { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
           { "field": "plan", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
@@ -34,8 +33,8 @@
         "id": "main_cum",
         "chartType": "combo",
         "xField": "quarter",
-        "label": "LK: 67",
-        "yAxis": { "min": 0, "max": 100, "interval": 10 },
+        "label": "LK: 73",
+        "yAxis": { "min": 0, "max": 80, "interval": 10 },
         "series": [
           { "field": "actual_cum", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
           { "field": "plan_cum", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
