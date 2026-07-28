@@ -1,0 +1,32 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "year", "type": "string" },
+        { "id": "actual", "type": "number", "label": "Thực hiện", "colorToken": "series.actual" },
+        { "id": "plan", "type": "number", "label": "Kế hoạch", "colorToken": "series.target" }
+      ],
+      "rows": [
+        ["2021", 58, 55],
+        ["2022", 62, 60],
+        ["2023", 68, 65],
+        ["2024", 75, 72],
+        ["2025", 88, 85]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "year",
+        "label": "Theo năm",
+        "yAxis": { "min": 0, "max": 100, "interval": 10 },
+        "series": [
+          { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
+          { "field": "plan", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
+        ]
+      }
+    ]
+  }
+}
