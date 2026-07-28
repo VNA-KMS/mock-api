@@ -1,0 +1,31 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        { "id": "year", "type": "string" },
+        { "id": "actual", "type": "number", "label": "ROI thực tế", "colorToken": "series.actual" }
+      ],
+      "rows": [
+        ["2023", 88],
+        ["2024", 95],
+        ["2025", 102],
+        ["2026", 112],
+        ["2027", 125]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "label": "ROI theo năm",
+        "showLegend": false,
+        "yAxis": { "min": 0, "max": 140, "interval": 10 },
+        "series": [
+          { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" }
+        ]
+      }
+    ]
+  }
+}

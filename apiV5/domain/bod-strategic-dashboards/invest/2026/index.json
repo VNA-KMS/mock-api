@@ -7,7 +7,7 @@
   "metricCards": {
     "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 4
+      "columns": 5
     },
     "items": [
       {
@@ -93,6 +93,23 @@
             "label": "6,8 so với cùng kỳ",
             "type": "samePeriod",
             "value": "6,8%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_roi",
+        "status": "compact",
+        "title": "ROI",
+        "value": "112",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "12% so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "12%",
             "tone": "positive"
           }
         ]
@@ -235,6 +252,62 @@
               },
               "maxHeight": 260
             }
+          }
+        },
+        {
+          "id": "b_roi_trend",
+          "title": "ROI theo năm",
+          "col": 1,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/chart/b_roi_trend.json",
+          "subTitle": "Đơn vị: %"
+        },
+        {
+          "id": "b_roi_category",
+          "title": "ROI 2026 theo loại danh mục",
+          "col": 31,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/chart/b_roi_category.json",
+"subTitle": "Đơn vị: %"
+        },
+        {
+          "id": "b_roi_company",
+          "title": "ROI theo công ty",
+          "subTitle": "Đơn vị: nghìn tỷ VNĐ",
+          "col": 1,
+          "colSpan": 60,
+          "row": 4,
+          "rowSpan": 1,
+          "table": {
+            "columns": [
+              { "id": "category", "type": "string", "label": "Loại danh mục" },
+              { "id": "company", "type": "string", "label": "Tên công ty" },
+              { "id": "charter_capital", "type": "number", "label": "Vốn điều lệ", "align": "right" },
+              { "id": "investment", "type": "number", "label": "Vốn đầu tư CSH", "align": "right" },
+              { "id": "ownership", "type": "chip", "label": "Tỷ lệ góp vốn", "align": "center" },
+              { "id": "dividend", "type": "number", "label": "Cổ tức/lãi", "align": "right" },
+              { "id": "roi", "type": "chip", "label": "ROI", "align": "center", "variant": "square" }
+            ],
+            "rows": [
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Kỹ thuật máy bay (VAECO)", "charter_capital": 1200, "investment": 1200, "ownership": { "label": "100%", "color": "green" }, "dividend": 85, "roi": { "label": "7,1%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Nhiên liệu Hàng không Việt Nam (SKYPEC)", "charter_capital": 800, "investment": 800, "ownership": { "label": "100%", "color": "green" }, "dividend": 120, "roi": { "label": "15%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH Suất ăn hàng không Việt Nam (VACS)", "charter_capital": 500, "investment": 500, "ownership": { "label": "100%", "color": "green" }, "dividend": 45, "roi": { "label": "9%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Dịch vụ mặt đất sân bay (VIAGS)", "charter_capital": 600, "investment": 600, "ownership": { "label": "100%", "color": "green" }, "dividend": 62, "roi": { "label": "10,3%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH dịch vụ giao nhận hàng hóa Tân Sơn Nhất (TECS)", "charter_capital": 200, "investment": 102, "ownership": { "label": "51%", "color": "green" }, "dividend": 18, "roi": { "label": "17,6%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty CP dịch vụ hàng hoá Tân sơn nhất (TCS)", "charter_capital": 150, "investment": 76.5, "ownership": { "label": "51%", "color": "green" }, "dividend": 12, "roi": { "label": "15,7%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần cho thuê máy bay Việt Nam (VALC)", "charter_capital": 3500, "investment": 1050, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 95, "roi": { "label": "9%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần XNK hàng không (Airimex)", "charter_capital": 300, "investment": 90, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 8, "roi": { "label": "8,9%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần Nhựa cao cấp hàng không (APLACO)", "charter_capital": 250, "investment": 62.5, "ownership": { "label": "25%", "color": "yellow" }, "dividend": 5, "roi": { "label": "8%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần Dịch vụ hàng không SB Đà Nẵng (MASCO)", "charter_capital": 180, "investment": 54, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 7, "roi": { "label": "13%", "color": "green" } } },
+              { "cells": { "category": "ĐẦU TƯ DÀI HẠN KHÁC", "company": "Công ty CP Bưu chính VTSGN (SPT)", "charter_capital": 400, "investment": 60, "ownership": { "label": "15%", "color": "yellow" }, "dividend": 4, "roi": { "label": "6,7%", "color": "yellow" } } },
+              { "cells": { "category": "ĐẦU TƯ DÀI HẠN KHÁC", "company": "Hãng Hàng không Cambodia Angkor Air (K6)", "charter_capital": 600, "investment": 294, "ownership": { "label": "49%", "color": "yellow" }, "dividend": 0, "roi": { "label": "0%", "color": "red" } } }
+            ]
           }
         }
       ]
