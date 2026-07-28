@@ -1,107 +1,55 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
-          "id": "month",
+          "id": "fleet",
           "type": "string"
         },
         {
-          "id": "th",
+          "id": "t7_2025",
           "type": "number",
-          "label": "2026",
+          "label": "T7.2025",
+          "color": "#CBCFD4"
+        },
+        {
+          "id": "t6_2026",
+          "type": "number",
+          "label": "T6.2026",
+          "color": "#E6B441"
+        },
+        {
+          "id": "t7_2026",
+          "type": "number",
+          "label": "T7.2026",
           "colorToken": "series.actual"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "target",
-          "type": "number",
-          "label": "MT 2026",
-          "lineDash": [
-            5,
-            5
-          ],
-          "colorToken": "data.brick"
         }
       ],
       "rows": [
         [
-          "T1",
-          99.6,
+          "A321",
+          99.2,
           99.4,
-          99.7
+          99.4
         ],
         [
-          "T2",
+          "A350",
+          99.0,
+          99.3,
+          99.2
+        ],
+        [
+          "B787",
+          98.5,
+          98.7,
+          98.6
+        ],
+        [
+          "ATR72",
+          99.3,
           99.5,
-          99.35,
-          99.7
-        ],
-        [
-          "T3",
-          99.4,
-          99.3,
-          99.7
-        ],
-        [
-          "T4",
-          99.3,
-          99.25,
-          99.7
-        ],
-        [
-          "T5",
-          99.2,
-          99.2,
-          99.7
-        ],
-        [
-          "T6",
-          99.15,
-          99.2,
-          99.7
-        ],
-        [
-          "T7",
-          99.1,
-          99.2,
-          99.7
-        ],
-        [
-          "T8",
-          null,
-          99.3,
-          99.7
-        ],
-        [
-          "T9",
-          null,
-          99.35,
-          99.7
-        ],
-        [
-          "T10",
-          null,
-          99.4,
-          99.7
-        ],
-        [
-          "T11",
-          null,
-          99.45,
-          99.7
-        ],
-        [
-          "T12",
-          null,
-          99.5,
-          99.7
+          99.5
         ]
       ]
     },
@@ -109,35 +57,25 @@
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "month",
-        "yMin": 90,
+        "xField": "fleet",
+        "yMin": 98.0,
         "yMax": 100,
-        "yInterval": 2,
         "series": [
           {
-            "field": "th",
-            "chartType": "bar",
-            "barMaxWidth": 32,
-            "showSymbol": true,
-            "areaStyle": {},
-            "showLabel": "end"
+            "field": "t7_2025",
+            "chartType": "bar"
           },
           {
-            "field": "ck",
-            "chartType": "bar",
-            "barMaxWidth": 32
+            "field": "t6_2026",
+            "chartType": "bar"
           },
           {
-            "field": "target",
-            "chartType": "line",
-            "showSymbol": true,
-            "showLabel": "end"
+            "field": "t7_2026",
+            "chartType": "bar",
+            "showLabel": "all"
           }
         ]
       }
     ]
-  },
-  "metadata": {
-    "forecastStartIndex": 8
   }
 }

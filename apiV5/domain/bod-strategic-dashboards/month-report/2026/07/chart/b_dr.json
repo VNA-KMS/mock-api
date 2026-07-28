@@ -1,209 +1,51 @@
 {
   "autoChart": {
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
-          "id": "month",
+          "id": "fleet",
           "type": "string"
         },
         {
-          "id": "th",
+          "id": "t7_2025",
           "type": "number",
-          "label": "Thực hiện 2026",
+          "label": "T7.2025",
+          "color": "#CBCFD4"
+        },
+        {
+          "id": "t6_2026",
+          "type": "number",
+          "label": "T6.2026",
+          "color": "#E6B441"
+        },
+        {
+          "id": "t7_2026",
+          "type": "number",
+          "label": "T7.2026",
           "colorToken": "series.actual"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "Ước thực hiện 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "db",
-          "type": "number",
-          "label": "Kế hoạch 2026",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "Cùng kỳ 2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế Thực hiện 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "db_lk",
-          "type": "number",
-          "label": "Luỹ kế Kế hoạch 2026",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "ck_lk",
-          "type": "number",
-          "label": "Luỹ kế Cùng kỳ 2025",
-          "colorToken": "series.previous"
         }
       ],
       "rows": [
-        [
-          "T1",
-          99.6,
-          null,
-          99.5,
-          99.4,
-          99.6,
-          99.5,
-          99.4
-        ],
-        [
-          "T2",
-          99.5,
-          null,
-          99.5,
-          99.35,
-          199.1,
-          199,
-          198.75
-        ],
-        [
-          "T3",
-          99.4,
-          null,
-          99.5,
-          99.3,
-          298.5,
-          298.5,
-          298.05
-        ],
-        [
-          "T4",
-          99.3,
-          null,
-          99.5,
-          99.25,
-          397.8,
-          398,
-          397.3
-        ],
-        [
-          "T5",
-          99.2,
-          null,
-          99.5,
-          99.2,
-          497,
-          497.5,
-          496.5
-        ],
-        [
-          "T6",
-          99.15,
-          null,
-          99.5,
-          99.2,
-          596.15,
-          597,
-          595.7
-        ],
-        [
-          "T7",
-          99.1,
-          null,
-          99.5,
-          99.2,
-          695.25,
-          696.5,
-          694.9
-        ],
-        [
-          "T8",
-          null,
-          99,
-          99.5,
-          99.15,
-          null,
-          796,
-          794.05
-        ],
-        [
-          "T9",
-          null,
-          98.9,
-          99.5,
-          99.1,
-          null,
-          895.5,
-          893.15
-        ],
-        [
-          "T10",
-          null,
-          98.8,
-          99.5,
-          99.05,
-          null,
-          995,
-          992.2
-        ],
-        [
-          "T11",
-          null,
-          98.7,
-          99.5,
-          99,
-          null,
-          1094.5,
-          1091.2
-        ],
-        [
-          "T12",
-          null,
-          98.6,
-          99.5,
-          98.95,
-          null,
-          1194,
-          1190.15
-        ]
+        ["A321", 99.2, 99.4, 99.4],
+        ["A350", 99.0, 99.3, 99.2],
+        ["B787", 98.5, 98.7, 98.6],
+        ["ATR72", 99.3, 99.5, 99.5]
       ]
     },
     "views": [
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "month",
+        "xField": "fleet",
+        "yMin": 98.0,
+        "yMax": 100,
         "series": [
-          {
-            "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "end"
-          },
-          {
-            "field": "uth",
-            "chartType": "bar",
-            "lineStyle": "dashed"
-          },
-          {
-            "field": "db",
-            "chartType": "line",
-            "lineStyle": "dashed"
-          },
-          {
-            "field": "ck",
-            "chartType": "bar"
-          }
+          { "field": "t7_2025", "chartType": "bar" },
+          { "field": "t6_2026", "chartType": "bar" },
+          { "field": "t7_2026", "chartType": "bar", "showLabel": "all" }
         ]
       }
-    ],
-    "chartType": "combo"
-  },
-  "metadata": {
-    "forecastStartIndex": 8
+    ]
   }
 }

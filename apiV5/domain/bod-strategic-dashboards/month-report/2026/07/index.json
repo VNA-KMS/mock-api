@@ -446,66 +446,341 @@
     },
     {
       "title": "Kỹ thuật",
-      "subTitle": "ARL · OCR · DR",
+      "subTitle": "ARL · DR",
       "items": [
         {
           "id": "b_arl",
-          "title": "ARL — Độ sẵn sàng",
+          "title": "Hệ số sẵn sàng khai thác tàu bay (ARL)",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 30,
           "row": 1,
-          "rowSpan": 1,
           "aspectRatio": 1.6,
-          "aiInsight": {
-            "text": "ARL T4 đạt 94,87% (MT 94,39%) — vượt mục tiêu 0,48 điểm %. Xu hướng giảm dần từ T1 (93,5%) xuống T7 (91,8%) cần theo dõi, đặc biệt đội B787 chỉ đạt 88%.",
-            "severity": "warn",
-            "recommendation": "Đội B787 ARL thấp (88%) — cần tăng cường bảo dưỡng dự phòng và xem xét tàu thay thế trong cao điểm Hè.",
-            "status": 1
-          },
+          "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/month-report/2026/07/chart/b_arl.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
+          "subTitle": "Đơn vị: %",
+          "aiInsight": {
+            "text": "ARL 94,87% thấp hơn MT 95,5% do B787 bảo dưỡng C-Check kéo dài.",
+            "severity": "warn",
+            "status": 1
           }
         },
         {
-          "id": "b_ocr",
-          "title": "OCR — Tỷ lệ quá hạn",
-          "col": 21,
-          "colSpan": 20,
+          "id": "b_arl_table",
+          "title": "Hệ số sẵn sàng khai thác tàu bay (ARL)",
+          "col": 31,
+          "colSpan": 30,
           "row": 1,
-          "rowSpan": 1,
-          "aspectRatio": 1.6,
-          "aiInsight": {
-            "text": "OCR T4: -2,41% (MT 1,8%) — đạt mục tiêu, giảm 2,41 điểm % so với kế hoạch. Xu hướng tăng nhẹ từ T1 (1,0%) lên T7 (1,2%) nhưng vẫn trong ngưỡng kiểm soát.",
-            "severity": "good",
-            "status": 1
+          "table": {
+            "columns": [
+              {
+                "id": "fleet",
+                "type": "badge",
+                "label": "Đội bay"
+              },
+              {
+                "id": "t7_2025",
+                "type": "number",
+                "label": "T7.2025",
+                "decimals": 1
+              },
+              {
+                "id": "7t_2025",
+                "type": "number",
+                "label": "7T.2025",
+                "decimals": 1
+              },
+              {
+                "id": "mt_2026",
+                "type": "number",
+                "label": "MT.2026",
+                "decimals": 1
+              },
+              {
+                "id": "kh_t7_2026",
+                "type": "number",
+                "label": "KH T7.2026",
+                "decimals": 1
+              },
+              {
+                "id": "t7_2026",
+                "type": "number",
+                "label": "T7.2026",
+                "decimals": 1
+              },
+              {
+                "id": "7t_2026",
+                "type": "number",
+                "label": "7T.2026",
+                "decimals": 1
+              },
+              {
+                "id": "vs_mt_2026",
+                "type": "tone-value",
+                "label": "vs MT.2026"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "B787",
+                    "color": "blue"
+                  },
+                  "t7_2025": 94.6,
+                  "7t_2025": 94.8,
+                  "mt_2026": 95.5,
+                  "kh_t7_2026": 95.0,
+                  "t7_2026": 94.9,
+                  "7t_2026": 94.8,
+                  "vs_mt_2026": {
+                    "value": -0.6,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A350",
+                    "color": "purple"
+                  },
+                  "t7_2025": 95.7,
+                  "7t_2025": 95.9,
+                  "mt_2026": 96.0,
+                  "kh_t7_2026": 96.1,
+                  "t7_2026": 96.2,
+                  "7t_2026": 96.0,
+                  "vs_mt_2026": {
+                    "value": 0.2,
+                    "tone": "positive"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A321",
+                    "color": "orange"
+                  },
+                  "t7_2025": 94.2,
+                  "7t_2025": 94.4,
+                  "mt_2026": 95.0,
+                  "kh_t7_2026": 94.7,
+                  "t7_2026": 94.6,
+                  "7t_2026": 94.5,
+                  "vs_mt_2026": {
+                    "value": -0.4,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "ATR72",
+                    "color": "teal"
+                  },
+                  "t7_2025": 93.7,
+                  "7t_2025": 93.9,
+                  "mt_2026": 94.0,
+                  "kh_t7_2026": 93.8,
+                  "t7_2026": 93.8,
+                  "7t_2026": 93.9,
+                  "vs_mt_2026": {
+                    "value": -0.2,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "All Fleet (total)",
+                    "color": "slate"
+                  },
+                  "t7_2025": 94.6,
+                  "7t_2025": 94.8,
+                  "mt_2026": 95.1,
+                  "kh_t7_2026": 94.9,
+                  "t7_2026": 94.9,
+                  "7t_2026": 94.7,
+                  "vs_mt_2026": {
+                    "value": -0.6,
+                    "tone": "negative"
+                  }
+                }
+              }
+            ],
+            "density": "compact",
+            "format3dec": false
           },
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/month-report/2026/07/chart/b_ocr.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
-          }
+          "subTitle": "Đơn vị: %"
         },
         {
           "id": "b_dr",
-          "title": "DR — Độ tin cậy",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "rowSpan": 1,
+          "title": "DR - Theo tháng",
+          "col": 1,
+          "colSpan": 17,
+          "row": 2,
           "aspectRatio": 1.6,
-          "aiInsight": {
-            "text": "DR T4 đạt 99,1% (MT 99,5%) — thấp hơn mục tiêu 0,4 điểm %. Xu hướng giảm dần từ T1 (99,6%) xuống T7 (99,1%). Đội B787 có DR thấp nhất (98,6%) — cần ưu tiên xử lý.",
-            "severity": "crit",
-            "recommendation": "DR liên tục giảm và dưới mục tiêu — cần rà soát quy trình bảo dưỡng phòng ngừa, đặc biệt đội B787.",
-            "status": 1
-          },
+          "unit": "%",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/month-report/2026/07/chart/b_dr.json",
-          "headerAction": {
-            "type": "cumulative",
-            "defaultChecked": false
+          "subTitle": "Đơn vị: %",
+          "aiInsight": {
+            "text": "DR All Fleet đạt tốt so với Target 2026. ATR72 cao nhất, B787 cần theo dõi.",
+            "severity": "good",
+            "status": 1
           }
+        },
+        {
+          "id": "b_dr_cumulative",
+          "title": "DR - Lũy kế",
+          "col": 18,
+          "colSpan": 17,
+          "row": 2,
+          "aspectRatio": 1.6,
+          "unit": "%",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/month-report/2026/07/chart/b_dr_cumulative.json",
+          "subTitle": "Đơn vị: %",
+          "aiInsight": {
+            "text": "DR lũy kế 7T.2026 cải thiện so với 7T.2025 ở hầu hết đội bay.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_dr_table",
+          "title": "Chỉ số độ tin cậy cất cánh kỹ thuật (DR)",
+          "col": 35,
+          "colSpan": 26,
+          "row": 2,
+          "table": {
+            "columns": [
+              {
+                "id": "fleet",
+                "type": "badge",
+                "label": "Đội bay"
+              },
+              {
+                "id": "t7_2025",
+                "type": "number",
+                "label": "T7.2025",
+                "decimals": 2
+              },
+              {
+                "id": "7t_2025",
+                "type": "number",
+                "label": "7T.2025",
+                "decimals": 2
+              },
+              {
+                "id": "mt_2026",
+                "type": "number",
+                "label": "MT.2026",
+                "decimals": 2
+              },
+              {
+                "id": "kh_t7_2026",
+                "type": "number",
+                "label": "KH T7.2026",
+                "decimals": 2
+              },
+              {
+                "id": "t7_2026",
+                "type": "number",
+                "label": "T7.2026",
+                "decimals": 2
+              },
+              {
+                "id": "7t_2026",
+                "type": "number",
+                "label": "7T.2026",
+                "decimals": 2
+              },
+              {
+                "id": "vs_mt_2026",
+                "type": "tone-value",
+                "label": "vs MT.2026"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "B787",
+                    "color": "blue"
+                  },
+                  "t7_2025": 98.5,
+                  "7t_2025": 98.7,
+                  "mt_2026": 99.36,
+                  "kh_t7_2026": 99.4,
+                  "t7_2026": 98.6,
+                  "7t_2026": 99.54,
+                  "vs_mt_2026": {
+                    "value": -0.76,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A350",
+                    "color": "purple"
+                  },
+                  "t7_2025": 99.0,
+                  "7t_2025": 99.2,
+                  "mt_2026": 99.44,
+                  "kh_t7_2026": 99.5,
+                  "t7_2026": 99.2,
+                  "7t_2026": 99.48,
+                  "vs_mt_2026": {
+                    "value": -0.24,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "A321",
+                    "color": "orange"
+                  },
+                  "t7_2025": 99.2,
+                  "7t_2025": 99.4,
+                  "mt_2026": 99.63,
+                  "kh_t7_2026": 99.7,
+                  "t7_2026": 99.4,
+                  "7t_2026": 99.72,
+                  "vs_mt_2026": {
+                    "value": -0.23,
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "fleet": {
+                    "label": "ATR72",
+                    "color": "teal"
+                  },
+                  "t7_2025": 99.3,
+                  "7t_2025": 99.5,
+                  "mt_2026": 99.65,
+                  "kh_t7_2026": 99.7,
+                  "t7_2026": 99.5,
+                  "7t_2026": 99.78,
+                  "vs_mt_2026": {
+                    "value": -0.15,
+                    "tone": "negative"
+                  }
+                }
+              }
+            ],
+            "density": "compact",
+            "format3dec": false
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
