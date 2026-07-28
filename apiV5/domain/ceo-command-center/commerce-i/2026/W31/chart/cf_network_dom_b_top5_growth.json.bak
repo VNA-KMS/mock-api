@@ -1,40 +1,26 @@
 {
   "autoChart": {
     "chartType": "bar-h",
-    "aspectRatio": 2.2,
     "dataset": {
       "columns": [
         {
           "id": "route",
-          "type": "string"
+          "type": "string",
+          "label": "Đường bay"
         },
         {
           "id": "value",
           "type": "number",
-          "label": "Thay đổi LF so W23 (điểm)"
+          "label": "Tăng trưởng (%)",
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
-        [
-          "HANPXU",
-          8.8
-        ],
-        [
-          "HANDIN",
-          7.3
-        ],
-        [
-          "DADCXR",
-          7.1
-        ],
-        [
-          "HANVCL",
-          5.7
-        ],
-        [
-          "SGNCXR",
-          5.5
-        ]
+        ["Tour", 7.5],
+        ["HANSGN", 6.2],
+        ["HANDAD", 4.5],
+        ["SGNDAD", 3.8],
+        ["Local Trunk", 2.1]
       ]
     },
     "views": [
@@ -45,7 +31,7 @@
         "series": [
           {
             "field": "value",
-            "chartType": "bar-h"
+            "chartType": "bar"
           }
         ]
       }

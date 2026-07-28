@@ -1,0 +1,42 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.6,
+    "dataset": {
+      "columns": [
+        { "id": "country", "type": "string" },
+        { "id": "vn", "type": "number", "label": "VN · PAX", "colorToken": "carrier.vna" },
+        { "id": "vj", "type": "number", "label": "VJ · PAX", "colorToken": "carrier.vj" }
+      ],
+      "rows": [
+        ["JP", 29959, 15152],
+        ["KR", 28077, 23598],
+        ["TW", 9346, 10669],
+        ["CN", 11693, 7435],
+        ["HK", 2385, 2342],
+        ["MY", 4783, 4516],
+        ["TH", 19449, 12954],
+        ["ID", 6458, 7215],
+        ["SG", 9899, 14153],
+        ["PH", 4488, 1395],
+        ["IN", 10317, 12063],
+        ["DE", 7724, 0],
+        ["FR", 5874, 0],
+        ["GB", 2507, 0],
+        ["AU", 11616, 10504],
+        ["US", 1693, 0]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          { "field": "vn", "chartType": "bar" },
+          { "field": "vj", "chartType": "bar" }
+        ]
+      }
+    ]
+  }
+}
