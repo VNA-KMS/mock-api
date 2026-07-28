@@ -26,6 +26,12 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
@@ -42,44 +48,58 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
         [
           "Q1",
-          254,
-          269,
-          303,
-          254,
-          269,
-          303
+          0.69,
+          0.73,
+          0.82,
+          null,
+          0.69,
+          0.73,
+          0.82,
+          null
         ],
         [
           "Q2",
-          264,
-          277,
-          321,
-          518,
-          546,
-          624
+          0.72,
+          0.75,
+          0.87,
+          null,
+          1.41,
+          1.48,
+          1.69,
+          null
         ],
         [
           "Q3",
-          96,
-          267,
-          286,
-          614,
-          813,
-          910
+          0.26,
+          0.72,
+          0.77,
+          null,
+          1.67,
+          2.2,
+          2.46,
+          null
         ],
         [
           "Q4",
           null,
-          270,
-          283,
+          0.73,
+          0.77,
+          0.62,
           null,
-          1083,
-          1193
+          2.93,
+          3.23,
+          0.62
         ]
       ]
     },
@@ -102,6 +122,11 @@
           {
             "field": "db",
             "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ]
