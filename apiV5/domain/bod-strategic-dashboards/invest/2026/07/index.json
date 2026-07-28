@@ -54,7 +54,7 @@
       {
         "id": "m_human_rate",
         "status": "compact",
-        "title": "Giá trị thực hiện đầu tư",
+        "title": "Thực hiện đầu tư",
         "value": "48.44",
         "unit": "%",
         "backgroundStatus": 2,
@@ -109,7 +109,7 @@
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "title": "Giá trị thực hiện đầu tư",
+          "title": "Thực hiện đầu tư",
           "height": 280,
           "aiInsight": {
             "text": "Tổng vốn đầu tư tháng 7 đạt 1.250 tỷ đồng, tăng 8,5% so với tháng trước và 12,3% so với cùng kỳ. Giải ngân đạt 78,5% kế hoạch, cao hơn 5,2 điểm phần trăm so với cùng kỳ 2025.",
@@ -190,117 +190,22 @@
             "severity": "good",
             "status": 1
           },
-          "extraComponent": {
-            "type": "table",
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "type",
-                    "type": "string",
-                    "label": "Loại dự án"
-                  },
-                  {
-                    "id": "count",
-                    "type": "number",
-                    "label": "Số dự án",
-                    "align": "center"
-                  },
-                  {
-                    "id": "plan",
-                    "type": "number",
-                    "label": "Tổng mức đầu tư KH",
-                    "align": "center"
-                  },
-                  {
-                    "id": "actual",
-                    "type": "number",
-                    "label": "Giá trị thực hiện",
-                    "align": "center"
-                  },
-                  {
-                    "id": "disburse",
-                    "type": "number",
-                    "label": "Giá trị giải ngân",
-                    "align": "center"
-                  },
-                  {
-                    "id": "pct_actual",
-                    "type": "tone-value",
-                    "label": "% thực hiện đầu tư",
-                    "align": "center"
-                  },
-                  {
-                    "id": "pct_disburse",
-                    "type": "tone-value",
-                    "label": "% giải ngân",
-                    "align": "center"
-                  }
-                ],
-                "rows": [
-                  [
-                    "Tàu bay, động cơ",
-                    8,
-                    3200,
-                    2816,
-                    2508,
-                    {
-                      "value": 88,
-                      "tone": "positive"
-                    },
-                    {
-                      "value": 78,
-                      "tone": "warning"
-                    }
-                  ],
-                  [
-                    "TTB",
-                    6,
-                    1450,
-                    1044,
-                    864,
-                    {
-                      "value": 72,
-                      "tone": "warning"
-                    },
-                    {
-                      "value": 60,
-                      "tone": "warning"
-                    }
-                  ],
-                  [
-                    "XDCB",
-                    5,
-                    1100,
-                    638,
-                    568,
-                    {
-                      "value": 58,
-                      "tone": "negative"
-                    },
-                    {
-                      "value": 52,
-                      "tone": "negative"
-                    }
-                  ],
-                  [
-                    "ĐTRNDN",
-                    5,
-                    850,
-                    722,
-                    616,
-                    {
-                      "value": 85,
-                      "tone": "positive"
-                    },
-                    {
-                      "value": 72,
-                      "tone": "warning"
-                    }
-                  ]
-                ]
-              }
-            }
+          "table": {
+            "columns": [
+              { "id": "type", "type": "string", "label": "Loại dự án" },
+              { "id": "count", "type": "number", "label": "Số dự án", "align": "center" },
+              { "id": "plan", "type": "number", "label": "Tổng mức đầu tư KH", "align": "center" },
+              { "id": "actual", "type": "number", "label": "Giá trị thực hiện", "align": "center" },
+              { "id": "disburse", "type": "number", "label": "Giá trị giải ngân", "align": "center" },
+              { "id": "pct_actual", "type": "chip", "label": "% thực hiện đầu tư", "align": "center", "variant": "square" },
+              { "id": "pct_disburse", "type": "chip", "label": "% giải ngân", "align": "center", "variant": "square" }
+            ],
+            "rows": [
+              { "cells": { "type": "Tàu bay, động cơ", "count": 8, "plan": 3200, "actual": 2816, "disburse": 2508, "pct_actual": { "label": "88%", "color": "green" }, "pct_disburse": { "label": "78%", "color": "yellow" } } },
+              { "cells": { "type": "TTB", "count": 6, "plan": 1450, "actual": 1044, "disburse": 864, "pct_actual": { "label": "72%", "color": "yellow" }, "pct_disburse": { "label": "60%", "color": "yellow" } } },
+              { "cells": { "type": "XDCB", "count": 5, "plan": 1100, "actual": 638, "disburse": 568, "pct_actual": { "label": "58%", "color": "red" }, "pct_disburse": { "label": "52%", "color": "red" } } },
+              { "cells": { "type": "ĐTRNDN", "count": 5, "plan": 850, "actual": 722, "disburse": 616, "pct_actual": { "label": "85%", "color": "green" }, "pct_disburse": { "label": "72%", "color": "yellow" } } }
+            ]
           }
         },
         {
