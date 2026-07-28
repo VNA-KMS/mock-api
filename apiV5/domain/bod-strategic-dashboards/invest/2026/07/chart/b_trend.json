@@ -18,69 +18,33 @@
           "type": "number",
           "label": "KH 2026",
           "color": "#B4901F"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "2026 (LK)",
+          "color": "#004071"
+        },
+        {
+          "id": "plan_cum",
+          "type": "number",
+          "label": "KH 2026 (LK)",
+          "color": "#B4901F"
         }
       ],
       "rows": [
-        [
-          "T1",
-          820,
-          900
-        ],
-        [
-          "T2",
-          730,
-          800
-        ],
-        [
-          "T3",
-          3136,
-          3200
-        ],
-        [
-          "T4",
-          312,
-          350
-        ],
-        [
-          "T5",
-          620,
-          650
-        ],
-        [
-          "T6",
-          850,
-          880
-        ],
-        [
-          "T7",
-          945,
-          980
-        ],
-        [
-          "T8",
-          null,
-          950
-        ],
-        [
-          "T9",
-          null,
-          920
-        ],
-        [
-          "T10",
-          null,
-          980
-        ],
-        [
-          "T11",
-          null,
-          940
-        ],
-        [
-          "T12",
-          null,
-          900
-        ]
+        ["T1", 820, 900, 820, 900],
+        ["T2", 730, 800, 1550, 1700],
+        ["T3", 3136, 3200, 4686, 4900],
+        ["T4", 312, 350, 4998, 5250],
+        ["T5", 620, 650, 5618, 5900],
+        ["T6", 850, 880, 6468, 6780],
+        ["T7", 945, 980, 7413, 7760],
+        ["T8", null, 950, null, 8710],
+        ["T9", null, 920, null, 9630],
+        ["T10", null, 980, null, 10610],
+        ["T11", null, 940, null, 11550],
+        ["T12", null, 900, null, 12450]
       ]
     },
     "views": [
@@ -88,6 +52,7 @@
         "id": "main",
         "chartType": "combo",
         "xField": "month",
+        "label": "Theo th\u00e1ng",
         "series": [
           {
             "field": "actual",
@@ -95,6 +60,22 @@
           },
           {
             "field": "plan",
+            "chartType": "line"
+          }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "combo",
+        "xField": "month",
+        "label": "LK: 7.413",
+        "series": [
+          {
+            "field": "actual_cum",
+            "chartType": "bar"
+          },
+          {
+            "field": "plan_cum",
             "chartType": "line"
           }
         ]
