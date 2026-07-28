@@ -1,6 +1,7 @@
 {
   "autoChart": {
     "chartType": "waterfall",
+    "aspectRatio": 2.2,
     "dataset": {
       "columns": [
         {
@@ -10,8 +11,7 @@
         {
           "id": "value",
           "type": "number",
-          "label": "P/L (triệu VNĐ)",
-          "colorToken": "series.actual"
+          "label": "P/L tổng chi phí (trđ)"
         }
       ],
       "rows": [
@@ -32,24 +32,28 @@
           -6326
         ],
         [
-          "NOA (US)",
+          "NOA",
           -6432
         ],
         [
-          "SWP (AU)",
+          "SWP",
           -33900
         ],
         [
           "NEA",
-          -42027
+          -42026
         ],
         [
           "EUR",
           -70253
         ],
         [
+          "Chưa phân bổ",
+          -13769
+        ],
+        [
           "TOTAL",
-          -158044
+          -171812
         ]
       ]
     },
@@ -60,10 +64,10 @@
         "xField": "step",
         "series": [
           {
-            "field": "value"
+            "field": "value",
+            "chartType": "waterfall"
           }
-        ],
-        "showLegend": false
+        ]
       }
     ]
   }

@@ -4,21 +4,74 @@
     "aspectRatio": 2.5,
     "dataset": {
       "columns": [
-        { "id": "country", "type": "string" },
-        { "id": "w31", "type": "number", "label": "W31 · Pax Rev", "colorToken": "series.actual" },
-        { "id": "w30", "type": "number", "label": "W30 · Pax Rev", "colorToken": "series.previous" }
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "w25",
+          "type": "number",
+          "label": "W25 · Pax Rev",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "w23",
+          "type": "number",
+          "label": "W23 · Pax Rev",
+          "colorToken": "series.previous"
+        }
       ],
       "rows": [
-        ["SEA-ID", 26476, 25453],
-        ["SEA-MY", 13286, 11179],
-        ["SEA-SG", 35216, 32120],
-        ["SEA-TH", 49840, 53019],
-        ["SEA-PH", 13665, 15516],
-        ["CLMV-LA", 17983, 16270],
-        ["CLMV-KH", 4977, 5085],
-        ["SAS-IN", 50883, 51991],
-        ["NOA-US", 30010, 34863],
-        ["SWP-AU", 112207, 110382]
+        [
+          "SEA-ID",
+          26476,
+          25473
+        ],
+        [
+          "SEA-MY",
+          13286,
+          11179
+        ],
+        [
+          "SEA-SG",
+          35216,
+          32120
+        ],
+        [
+          "SEA-TH",
+          49840,
+          53019
+        ],
+        [
+          "SEA-PH",
+          13665,
+          15516
+        ],
+        [
+          "CLMV-LA",
+          17983,
+          16270
+        ],
+        [
+          "CLMV-KH",
+          4977,
+          5085
+        ],
+        [
+          "SAS-IN",
+          50825,
+          51991
+        ],
+        [
+          "NOA-US",
+          30010,
+          34863
+        ],
+        [
+          "SWP-AU",
+          112207,
+          110382
+        ]
       ]
     },
     "views": [
@@ -27,8 +80,15 @@
         "chartType": "auto",
         "xField": "country",
         "series": [
-          { "field": "w30", "chartType": "bar", "isBlur": true },
-          { "field": "w31", "chartType": "bar" }
+          {
+            "field": "w23",
+            "chartType": "bar",
+            "isBlur": true
+          },
+          {
+            "field": "w25",
+            "chartType": "bar"
+          }
         ]
       }
     ]

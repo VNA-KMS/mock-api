@@ -14,22 +14,10 @@
           "colorToken": "series.previous"
         },
         {
-          "id": "db",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
           "id": "th",
           "type": "number",
           "label": "TH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "fct",
-          "type": "number",
-          "label": "Dự báo 2026",
-          "color": "#8B5CF6"
+          "colorToken": "carrier.vj"
         },
         {
           "id": "ck_lk",
@@ -38,29 +26,41 @@
           "colorToken": "series.previous"
         },
         {
-          "id": "db_lk",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
           "id": "th_lk",
           "type": "number",
           "label": "Lũy kế TH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "fct_lk",
-          "type": "number",
-          "label": "Lũy kế FCT 2026",
-          "color": "#8B5CF6"
+          "colorToken": "carrier.vj"
         }
       ],
       "rows": [
-        ["Q1", 81.6, 99.3, 80, null, 81.6, 99.3, 80, null],
-        ["Q2", 81.3, 101.1, 79.6, null, 162.9, 200.4, 159.6, null],
-        ["Q3", 76.8, 96.9, 28, null, 239.7, 297.3, 187.6, null],
-        ["Q4", 78.5, 90.8, null, 90.4, 318.2, 388.1, null, 90.4]
+        [
+          "Q1",
+          81.6,
+          80,
+          81.6,
+          80
+        ],
+        [
+          "Q2",
+          81.3,
+          79.6,
+          81.4,
+          79.8
+        ],
+        [
+          "Q3",
+          76.8,
+          28,
+          79.9,
+          62.5
+        ],
+        [
+          "Q4",
+          78.5,
+          null,
+          79.5,
+          null
+        ]
       ]
     },
     "views": [
@@ -71,25 +71,14 @@
         "series": [
           {
             "field": "ck",
-            "chartType": "bar",
-            "isBlur": true
-          },
-          {
-            "field": "db",
             "chartType": "line",
-            "lineStyle": "dashed"
+            "isBlur": false
           },
           {
             "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "end"
-          },
-          {
-            "field": "fct",
-            "chartType": "bar",
-            "barOpacity": 0.3,
-            "lineStyle": "dashed"
+            "chartType": "line",
+            "showLabel": "end",
+            "colorToken": "carrier.vj"
           }
         ]
       }

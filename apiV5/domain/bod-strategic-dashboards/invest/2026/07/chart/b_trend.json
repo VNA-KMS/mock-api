@@ -11,40 +11,52 @@
           "id": "actual",
           "type": "number",
           "label": "2026",
-          "color": "#004071"
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "actual_lk",
+          "type": "number",
+          "label": "2026 (LK)",
+          "colorToken": "series.actual"
         },
         {
           "id": "plan",
           "type": "number",
           "label": "KH 2026",
-          "color": "#B4901F"
+          "colorToken": "series.target"
+        },
+        {
+          "id": "plan_lk",
+          "type": "number",
+          "label": "KH 2026 (LK)",
+          "colorToken": "series.target"
         },
         {
           "id": "actual_cum",
           "type": "number",
           "label": "2026 (LK)",
-          "color": "#004071"
+          "colorToken": "series.actual"
         },
         {
           "id": "plan_cum",
           "type": "number",
           "label": "KH 2026 (LK)",
-          "color": "#B4901F"
+          "colorToken": "series.target"
         }
       ],
       "rows": [
-        ["T1", 820, 900, 820, 900],
-        ["T2", 730, 800, 1550, 1700],
-        ["T3", 3136, 3200, 4686, 4900],
-        ["T4", 312, 350, 4998, 5250],
-        ["T5", 620, 650, 5618, 5900],
-        ["T6", 850, 880, 6468, 6780],
-        ["T7", 945, 980, 7413, 7760],
-        ["T8", null, 950, null, 8710],
-        ["T9", null, 920, null, 9630],
-        ["T10", null, 980, null, 10610],
-        ["T11", null, 940, null, 11550],
-        ["T12", null, 900, null, 12450]
+        ["T1", 900, 900, 8200, 6000, 900, 6000],
+        ["T2", 980, 1880, 9800, 9000, 1880, 9000],
+        ["T3", 1050, 2930, 9200, 12000, 2930, 12000],
+        ["T4", 1120, 4050, 11200, 15000, 4050, 15000],
+        ["T5", 1200, 5250, 10600, 17000, 5250, 17000],
+        ["T6", 1280, 6530, 12600, 19000, 6530, 19000],
+        ["T7", 1360, 7890, 12000, 21000, 7890, 21000],
+        ["T8", 1440, 9330, 13900, 22000, 9330, 22000],
+        ["T9", 1520, 10850, 13300, 23000, 10850, 23000],
+        ["T10", 1600, 12450, 15300, 23500, 12450, 23500],
+        ["T11", 1680, 14130, 14700, 24000, 14130, 24000],
+        ["T12", 1760, 15890, 22000, 24500, 15890, 24500]
       ]
     },
     "views": [
@@ -53,14 +65,23 @@
         "chartType": "combo",
         "xField": "month",
         "label": "Theo th\u00e1ng",
+        "yMin": 5000,
+        "yMax": 25000,
+        "yInterval": 5000,
         "series": [
           {
             "field": "actual",
-            "chartType": "bar"
+            "chartType": "bar",
+            "yAxis": "right",
+            "showLabel": "all"
           },
           {
             "field": "plan",
-            "chartType": "line"
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": false,
+            "showLabel": "end"
           }
         ]
       },
@@ -68,15 +89,24 @@
         "id": "main_cum",
         "chartType": "combo",
         "xField": "month",
-        "label": "LK: 7.413",
+        "label": "LK: 9.960",
+        "yMin": 5000,
+        "yMax": 25000,
+        "yInterval": 5000,
         "series": [
           {
             "field": "actual_cum",
-            "chartType": "bar"
+            "chartType": "bar",
+            "yAxis": "right",
+            "showLabel": "all"
           },
           {
             "field": "plan_cum",
-            "chartType": "line"
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": false,
+            "showLabel": "end"
           }
         ]
       }

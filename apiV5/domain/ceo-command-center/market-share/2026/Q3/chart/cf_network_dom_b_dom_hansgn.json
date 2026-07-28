@@ -26,6 +26,12 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
           "label": "TH 2026",
@@ -42,13 +48,59 @@
           "type": "number",
           "label": "KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
-        ["Q1", 216, 228, 264, 216, 228, 264],
-        ["Q2", 227, 239, 282, 443, 467, 546],
-        ["Q3", 81, 219, 252, 524, 686, 798],
-        ["Q4", null, 217, 246, null, 903, 1044]
+        [
+          "Q1",
+          5.4,
+          5.7,
+          6.6,
+          null,
+          5.4,
+          5.7,
+          6.6,
+          null
+        ],
+        [
+          "Q2",
+          5.7,
+          6,
+          6.45,
+          null,
+          11.1,
+          11.7,
+          13.05,
+          null
+        ],
+        [
+          "Q3",
+          6.6,
+          6.3,
+          6.75,
+          null,
+          17.7,
+          18,
+          19.8,
+          null
+        ],
+        [
+          "Q4",
+          null,
+          5.25,
+          6,
+          6,
+          null,
+          23.25,
+          25.8,
+          6
+        ]
       ]
     },
     "views": [
@@ -66,15 +118,20 @@
           {
             "field": "ck",
             "chartType": "bar",
-            "isBlur": true
+            "isBlur": false
           },
           {
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
           }
         ],
-        "tooltipUnit": "Nghìn lượt"
+        "tooltipUnit": "Triệu khách"
       }
     ]
   }

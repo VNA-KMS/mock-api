@@ -14,22 +14,10 @@
           "colorToken": "series.previous"
         },
         {
-          "id": "db",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
           "id": "th",
           "type": "number",
           "label": "TH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "fct",
-          "type": "number",
-          "label": "Dự báo 2026",
-          "color": "#8B5CF6"
+          "colorToken": "carrier.vu"
         },
         {
           "id": "ck_lk",
@@ -38,29 +26,41 @@
           "colorToken": "series.previous"
         },
         {
-          "id": "db_lk",
-          "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
           "id": "th_lk",
           "type": "number",
           "label": "Lũy kế TH 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "fct_lk",
-          "type": "number",
-          "label": "Lũy kế FCT 2026",
-          "color": "#8B5CF6"
+          "colorToken": "carrier.vu"
         }
       ],
       "rows": [
-        ["Q1", 27, 37, 30, null, 27, 37, 30, null],
-        ["Q2", 33, 41, 39, null, 60, 78, 69, null],
-        ["Q3", 40, 46, 15, null, 100, 124, 84, null],
-        ["Q4", 48, 50, null, 51.5, 148, 174, null, 51.5]
+        [
+          "Q1",
+          24,
+          23,
+          24,
+          23
+        ],
+        [
+          "Q2",
+          25,
+          24,
+          24.5,
+          23.5
+        ],
+        [
+          "Q3",
+          22,
+          8,
+          23.7,
+          18.3
+        ],
+        [
+          "Q4",
+          21,
+          null,
+          23,
+          null
+        ]
       ]
     },
     "views": [
@@ -71,25 +71,14 @@
         "series": [
           {
             "field": "ck",
-            "chartType": "bar",
-            "isBlur": true
-          },
-          {
-            "field": "db",
             "chartType": "line",
-            "lineStyle": "dashed"
+            "isBlur": false
           },
           {
             "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "end"
-          },
-          {
-            "field": "fct",
-            "chartType": "bar",
-            "barOpacity": 0.3,
-            "lineStyle": "dashed"
+            "chartType": "line",
+            "showLabel": "end",
+            "colorToken": "carrier.vu"
           }
         ]
       }

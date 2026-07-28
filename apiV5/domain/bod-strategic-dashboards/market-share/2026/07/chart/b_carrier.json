@@ -1,7 +1,6 @@
 {
   "autoChart": {
     "chartType": "combo",
-    "aspectRatio": 1.8,
     "dataset": {
       "columns": [
         {
@@ -27,6 +26,12 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
           "label": "Luỹ kế 2026",
@@ -43,6 +48,12 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
@@ -51,81 +62,99 @@
           52.8,
           54,
           53,
+          null,
           52.8,
           54,
-          53
+          53,
+          null
         ],
         [
           "T2",
           52.5,
           54,
           52.8,
+          null,
           105.3,
           108,
-          105.8
+          105.8,
+          null
         ],
         [
           "T3",
           52.4,
           53.8,
           52.5,
+          null,
           157.7,
           161.8,
-          158.3
+          158.3,
+          null
         ],
         [
           "T4",
           52.3,
           53.5,
           52.3,
+          null,
           210,
           215.3,
-          210.6
+          210.6,
+          null
         ],
         [
           "T5",
           52.2,
           53.2,
           52.2,
+          null,
           262.2,
           268.5,
-          262.8
+          262.8,
+          null
         ],
         [
           "T6",
           52.1,
           53,
           52,
+          null,
           314.3,
           321.5,
-          314.8
+          314.8,
+          null
         ],
         [
           "T7",
           52,
           52.8,
           51.8,
+          null,
           366.3,
           374.3,
-          366.6
+          366.6,
+          null
         ],
         [
           "T8",
           null,
           55,
           51.5,
+          51.5,
           null,
           429.3,
-          418.1
+          418.1,
+          51.5
         ],
         [
           "T9",
           null,
           54.5,
           51.2,
+          51.2,
           null,
           483.8,
-          469.3
+          469.3,
+          102.7
         ],
         [
           "T10",
@@ -133,8 +162,10 @@
           54,
           51,
           null,
+          null,
           537.8,
-          520.3
+          520.3,
+          null
         ],
         [
           "T11",
@@ -142,8 +173,10 @@
           53.5,
           50.8,
           null,
+          null,
           591.3,
-          571.1
+          571.1,
+          null
         ],
         [
           "T12",
@@ -151,8 +184,10 @@
           53,
           50.5,
           null,
+          null,
           644.3,
-          621.6
+          621.6,
+          null
         ]
       ]
     },
@@ -176,9 +211,15 @@
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
           }
         ]
       }
-    ]
+    ],
+    "aspectRatio": 1.8
   }
 }

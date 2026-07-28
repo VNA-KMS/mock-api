@@ -26,6 +26,12 @@
           "colorToken": "series.target"
         },
         {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
           "id": "th_lk",
           "type": "number",
           "label": "TH 2026",
@@ -42,13 +48,59 @@
           "type": "number",
           "label": "KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
-        ["Q1", 408, 428, 480, 408, 428, 480],
-        ["Q2", 428, 449, 503, 836, 877, 983],
-        ["Q3", 150, 418, 465, 986, 1295, 1448],
-        ["Q4", null, 420, 457, null, 1715, 1905]
+        [
+          "Q1",
+          10.2,
+          10.7,
+          12,
+          null,
+          10.2,
+          10.7,
+          12,
+          null
+        ],
+        [
+          "Q2",
+          10.7,
+          11.25,
+          11.85,
+          null,
+          20.9,
+          21.95,
+          23.85,
+          null
+        ],
+        [
+          "Q3",
+          12,
+          11.85,
+          12.15,
+          null,
+          32.9,
+          33.8,
+          36,
+          null
+        ],
+        [
+          "Q4",
+          null,
+          10,
+          11.25,
+          11.25,
+          null,
+          43.8,
+          47.25,
+          11.25
+        ]
       ]
     },
     "views": [
@@ -66,15 +118,20 @@
           {
             "field": "ck",
             "chartType": "bar",
-            "isBlur": true
+            "isBlur": false
           },
           {
             "field": "db",
             "chartType": "line",
             "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
           }
         ],
-        "tooltipUnit": "Nghìn lượt"
+        "tooltipUnit": "Triệu khách"
       }
     ]
   }
