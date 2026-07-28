@@ -1,59 +1,75 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         {
-          "id": "month",
+          "id": "fleet",
           "type": "string"
         },
         {
-          "id": "th",
+          "id": "t7_2025",
           "type": "number",
-          "label": "2026",
+          "label": "T7.2025",
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "7t_2025",
+          "type": "number",
+          "label": "7T.2025",
+          "colorToken": "data.olive-green"
+        },
+        {
+          "id": "t6_2026",
+          "type": "number",
+          "label": "T6.2026",
+          "colorToken": "data.plum"
+        },
+        {
+          "id": "t7_2026",
+          "type": "number",
+          "label": "T7.2026",
           "colorToken": "series.actual"
         },
         {
-          "id": "ck",
+          "id": "7t_2026",
           "type": "number",
-          "label": "2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "target",
-          "type": "number",
-          "label": "MT 2026",
-          "lineDash": [
-            5,
-            5
-          ],
-          "colorToken": "data.brick"
+          "label": "7T.2026",
+          "colorToken": "series.target"
         }
       ],
       "rows": [
         [
-          "Q1",
+          "A321",
+          99.2,
+          99.4,
+          99.4,
+          99.4,
+          99.72
+        ],
+        [
+          "A350",
+          99.0,
+          99.2,
+          99.3,
+          99.2,
+          99.48
+        ],
+        [
+          "B787",
+          98.5,
+          98.7,
+          98.7,
+          98.6,
+          99.54
+        ],
+        [
+          "ATR72",
+          99.3,
           99.5,
-          99.35,
-          99.7
-        ],
-        [
-          "Q2",
-          99.22,
-          99.22,
-          99.7
-        ],
-        [
-          "Q3",
-          99.1,
-          99.28,
-          99.7
-        ],
-        [
-          "Q4",
-          null,
-          99.45,
-          99.7
+          99.5,
+          99.5,
+          99.78
         ]
       ]
     },
@@ -61,29 +77,30 @@
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "month",
-        "yMin": 90,
+        "xField": "fleet",
+        "yMin": 98.0,
         "yMax": 100,
-        "yInterval": 2,
         "series": [
           {
-            "field": "th",
-            "chartType": "bar",
-            "barMaxWidth": 32,
-            "showSymbol": true,
-            "areaStyle": {},
-            "showLabel": "end"
+            "field": "t7_2025",
+            "chartType": "bar"
           },
           {
-            "field": "ck",
-            "chartType": "bar",
-            "barMaxWidth": 32
+            "field": "7t_2025",
+            "chartType": "bar"
           },
           {
-            "field": "target",
-            "chartType": "line",
-            "showSymbol": true,
-            "showLabel": "end"
+            "field": "t6_2026",
+            "chartType": "bar"
+          },
+          {
+            "field": "t7_2026",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "7t_2026",
+            "chartType": "bar"
           }
         ]
       }
