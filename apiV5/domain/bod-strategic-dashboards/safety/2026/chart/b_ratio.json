@@ -1,0 +1,51 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "field",
+          "type": "string"
+        },
+        {
+          "id": "ratio",
+          "type": "number",
+          "label": "Tỷ lệ",
+          "unit": "%",
+          "color": [
+            "data.deep-teal",
+            "series.target",
+            "data.sea-blue"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Khai thác bay",
+          60
+        ],
+        [
+          "Kỹ thuật",
+          30
+        ],
+        [
+          "Khai thác mặt đất",
+          10
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "field",
+        "showCenterValue": false,
+        "series": [
+          {
+            "field": "ratio"
+          }
+        ]
+      }
+    ]
+  }
+}

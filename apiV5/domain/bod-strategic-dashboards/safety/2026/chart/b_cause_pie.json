@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "cause",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Tỷ lệ",
+          "unit": "vụ",
+          "color": [
+            "series.actual",
+            "series.target",
+            "data.terracotta",
+            "data.sea-blue",
+            "data.plum"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Do con người",
+          1.12
+        ],
+        [
+          "Do hệ thống kỹ thuật tàu bay",
+          7.88
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cause",
+        "series": [
+          {
+            "field": "value"
+          }
+        ],
+        "showCenterValue": false
+      }
+    ]
+  }
+}
