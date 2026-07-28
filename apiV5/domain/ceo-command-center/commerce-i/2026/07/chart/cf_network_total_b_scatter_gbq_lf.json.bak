@@ -1,7 +1,7 @@
 {
   "autoChart": {
     "chartType": "scatter",
-    "aspectRatio": 1.35,
+    "aspectRatio": 2.2,
     "dataset": {
       "columns": [
         {
@@ -9,18 +9,18 @@
           "type": "string"
         },
         {
-          "id": "segment",
+          "id": "area",
           "type": "string"
         },
         {
-          "id": "Cask",
+          "id": "LF",
           "type": "number",
-          "label": "CASK (VND/ghế.km)"
+          "label": "LF (%)"
         },
         {
-          "id": "rask",
+          "id": "GBQ",
           "type": "number",
-          "label": "RASK (VND/ghế.km)"
+          "label": "GBQ (triệu VNĐ)"
         },
         {
           "id": "ask",
@@ -32,43 +32,43 @@
         [
           "NEA",
           "NEA",
-          4200,
-          2850,
+          79.1,
+          5383,
           720000
         ],
         [
           "SEA",
           "SEA",
-          3900,
-          3100,
+          85,
+          3262,
           350000
         ],
         [
           "CLMV",
           "CLMV",
-          2800,
-          2900,
+          53.7,
+          2849,
           45000
         ],
         [
           "EUR",
           "EUR",
-          4500,
-          3200,
+          79.8,
+          13651,
           180000
         ],
         [
           "NOA",
           "NOA",
-          3800,
-          2700,
+          81.9,
+          20869,
           35000
         ],
         [
           "SWP",
           "SWP",
-          3400,
-          2800,
+          83.1,
+          10039,
           95000
         ]
       ]
@@ -77,22 +77,16 @@
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "Cask",
-        "yField": "rask",
+        "xField": "LF",
+        "yField": "GBQ",
         "sizeField": "ask",
-        "colorBy": "segment",
+        "colorBy": "area",
         "series": [
           {
-            "field": "Cask",
+            "field": "LF",
             "chartType": "scatter"
           }
-        ],
-        "breakEven": {
-          "mode": "diagonal",
-          "offset": 638,
-          "label": "Hoà vốn tổng CP  (RASK = CASK)",
-          "offsetLabel": "Bù chi phí biến đổi  (RASK = VCASK)"
-        }
+        ]
       }
     ]
   }

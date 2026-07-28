@@ -1,7 +1,7 @@
 {
   "autoChart": {
     "chartType": "scatter",
-    "aspectRatio": 2.2,
+    "aspectRatio": 1.35,
     "dataset": {
       "columns": [
         {
@@ -15,22 +15,93 @@
         {
           "id": "LF",
           "type": "number",
-          "label": "LF (%)"
+          "label": "LF thực tế (%)"
+        },
+        {
+          "id": "BELF",
+          "type": "number",
+          "label": "LF hoà vốn — BELF (%)"
+        },
+        {
+          "id": "paxRev",
+          "type": "number",
+          "label": "Doanh thu khách (triệu VNĐ)"
+        },
+        {
+          "id": "BELFvar",
+          "type": "number",
+          "label": "LF hoà vốn chi phí biến đổi (%)"
         },
         {
           "id": "GBQ",
           "type": "number",
-          "label": "GBQ (triệu VNĐ)"
+          "label": "Giá bình quân (nghìn VNĐ)"
         }
       ],
       "rows": [
-        ["NEA", "NEA", 79.1, 5383],
-        ["SEA", "SEA", 85.0, 3262],
-        ["CLMV", "CLMV", 53.7, 2849],
-        ["EUR", "EUR", 79.8, 13651],
-        ["NOA", "NOA", 81.9, 20869],
-        ["SWP", "SWP", 83.1, 10039],
-        ["DOM", "DOM", 78.4, 1836]
+        [
+          "NEA",
+          "NEA",
+          81.6,
+          89.6,
+          429505,
+          57.0,
+          5349
+        ],
+        [
+          "SEA",
+          "SEA",
+          84.1,
+          83.2,
+          138483,
+          55.7,
+          3177
+        ],
+        [
+          "CLMV",
+          "CLMV",
+          56.9,
+          63.3,
+          22960,
+          44.5,
+          2995
+        ],
+        [
+          "SAS",
+          "SAS",
+          92.5,
+          104.0,
+          50825,
+          58.0,
+          4930
+        ],
+        [
+          "EUR",
+          "EUR",
+          82.8,
+          104.2,
+          272450,
+          61.1,
+          13974
+        ],
+        [
+          "NOA",
+          "NOA",
+          81.9,
+          99.5,
+          30010,
+          63.9,
+          20869
+        ],
+        [
+          "SWP",
+          "SWP",
+          84.5,
+          110.0,
+          112207,
+          66.9,
+          10340
+        ]
       ]
     },
     "views": [
@@ -38,14 +109,22 @@
         "id": "main",
         "chartType": "auto",
         "xField": "LF",
-        "yField": "GBQ",
+        "yField": "BELF",
+        "sizeField": "paxRev",
         "colorBy": "area",
         "series": [
           {
             "field": "LF",
             "chartType": "scatter"
           }
-        ]
+        ],
+        "breakEven": {
+          "mode": "diagonal",
+          "invert": true,
+          "label": "Hoà vốn  (BELF = LF)",
+          "ceiling": 100,
+          "ceilingLabel": "LF 100% — không thể lấp thêm"
+        }
       }
     ]
   }
