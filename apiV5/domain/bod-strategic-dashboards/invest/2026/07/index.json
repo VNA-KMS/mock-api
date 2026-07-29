@@ -309,31 +309,42 @@
           "title": "Doanh thu & LNST các công ty thành viên",
           "subTitle": "Đơn vị: tỷ VNĐ",
           "table": {
+            "type": "grouped",
+            "headerGroups": [
+              { "label": "Doanh thu", "colspan": 6 },
+              { "label": "LNST", "colspan": 6 }
+            ],
             "columns": [
               { "id": "company", "type": "string", "label": "Công ty" },
-              { "id": "doanh_thu_kh", "type": "number", "label": "Doanh thu KH", "align": "right" },
-              { "id": "doanh_thu_th", "type": "number", "label": "Doanh thu TH", "align": "right" },
-              { "id": "lnst_kh", "type": "number", "label": "LNST KH", "align": "right" },
-              { "id": "lnst_th", "type": "number", "label": "LNST TH", "align": "right" },
-              { "id": "pct_doanh_thu", "type": "chip", "label": "% Doanh thu", "align": "center", "variant": "square" },
-              { "id": "pct_lnst", "type": "chip", "label": "% LNST", "align": "center", "variant": "square" }
+              { "id": "dt_t7_kh", "type": "number", "label": "T7.2026 KH", "align": "right" },
+              { "id": "dt_t7_th", "type": "number", "label": "T7.2026 TH", "align": "right" },
+              { "id": "dt_t7_pct", "type": "chip", "label": "%KH", "align": "center", "variant": "square" },
+              { "id": "dt_7t_kh", "type": "number", "label": "7T.2026 KH", "align": "right" },
+              { "id": "dt_7t_th", "type": "number", "label": "7T.2026 TH", "align": "right" },
+              { "id": "dt_7t_pct", "type": "chip", "label": "%KH", "align": "center", "variant": "square" },
+              { "id": "lnst_t7_kh", "type": "number", "label": "T7.2026 KH", "align": "right" },
+              { "id": "lnst_t7_th", "type": "number", "label": "T7.2026 TH", "align": "right" },
+              { "id": "lnst_t7_pct", "type": "chip", "label": "%KH", "align": "center", "variant": "square" },
+              { "id": "lnst_7t_kh", "type": "number", "label": "7T.2026 KH", "align": "right" },
+              { "id": "lnst_7t_th", "type": "number", "label": "7T.2026 TH", "align": "right" },
+              { "id": "lnst_7t_pct", "type": "chip", "label": "%KH", "align": "center", "variant": "square" }
             ],
             "rows": [
-              { "cells": { "company": "VAECO — Cty TNHH MTV Kỹ thuật máy bay", "doanh_thu_kh": 2850, "doanh_thu_th": 2760, "lnst_kh": 180, "lnst_th": 172, "pct_doanh_thu": { "label": "96,8%", "color": "green" }, "pct_lnst": { "label": "95,6%", "color": "green" } } },
-              { "cells": { "company": "SKYPEC — Cty TNHH MTV Nhiên liệu HK VN", "doanh_thu_kh": 32500, "doanh_thu_th": 33900, "lnst_kh": 620, "lnst_th": 655, "pct_doanh_thu": { "label": "104,3%", "color": "green" }, "pct_lnst": { "label": "105,6%", "color": "green" } } },
-              { "cells": { "company": "VACS — Cty TNHH Suất ăn hàng không VN", "doanh_thu_kh": 1450, "doanh_thu_th": 1390, "lnst_kh": 95, "lnst_th": 88, "pct_doanh_thu": { "label": "95,9%", "color": "green" }, "pct_lnst": { "label": "92,6%", "color": "green" } } },
-              { "cells": { "company": "VIAGS — Cty TNHH MTV Dịch vụ mặt đất SB", "doanh_thu_kh": 2100, "doanh_thu_th": 2185, "lnst_kh": 150, "lnst_th": 161, "pct_doanh_thu": { "label": "104%", "color": "green" }, "pct_lnst": { "label": "107,3%", "color": "green" } } },
-              { "cells": { "company": "TECS — Cty TNHH DV giao nhận hàng hoá TSN", "doanh_thu_kh": 520, "doanh_thu_th": 498, "lnst_kh": 42, "lnst_th": 39, "pct_doanh_thu": { "label": "95,8%", "color": "green" }, "pct_lnst": { "label": "92,9%", "color": "green" } } },
-              { "cells": { "company": "TCS — Cty CP dịch vụ hàng hoá TSN", "doanh_thu_kh": 1180, "doanh_thu_th": 1250, "lnst_kh": 410, "lnst_th": 452, "pct_doanh_thu": { "label": "105,9%", "color": "green" }, "pct_lnst": { "label": "110,2%", "color": "green" } } },
-              { "cells": { "company": "Sabre VN — Cty CP Sabre Việt Nam", "doanh_thu_kh": 340, "doanh_thu_th": 328, "lnst_kh": 60, "lnst_th": 57, "pct_doanh_thu": { "label": "96,5%", "color": "green" }, "pct_lnst": { "label": "95%", "color": "green" } } },
-              { "cells": { "company": "VINAKO — Cty TNHH giao nhận hàng hoá", "doanh_thu_kh": 210, "doanh_thu_th": 196, "lnst_kh": 18, "lnst_th": 16, "pct_doanh_thu": { "label": "93,3%", "color": "green" }, "pct_lnst": { "label": "88,9%", "color": "yellow" } } },
-              { "cells": { "company": "NCS — Cty CP Suất ăn hàng không Nội Bài", "doanh_thu_kh": 980, "doanh_thu_th": 1015, "lnst_kh": 70, "lnst_th": 74, "pct_doanh_thu": { "label": "103,6%", "color": "green" }, "pct_lnst": { "label": "105,7%", "color": "green" } } },
-              { "cells": { "company": "NCTS — Cty CP Dịch vụ hàng hoá Nội Bài", "doanh_thu_kh": 860, "doanh_thu_th": 840, "lnst_kh": 190, "lnst_th": 181, "pct_doanh_thu": { "label": "97,7%", "color": "green" }, "pct_lnst": { "label": "95,3%", "color": "green" } } },
-              { "cells": { "company": "ALSIMEXCO — Cty CP Cung ứng & XNK lao động HK", "doanh_thu_kh": 150, "doanh_thu_th": 143, "lnst_kh": 12, "lnst_th": 10.5, "pct_doanh_thu": { "label": "95,3%", "color": "green" }, "pct_lnst": { "label": "87,5%", "color": "yellow" } } },
-              { "cells": { "company": "NASCO — Cty CP Dịch vụ HK sân bay Nội Bài", "doanh_thu_kh": 1320, "doanh_thu_th": 1298, "lnst_kh": 88, "lnst_th": 82, "pct_doanh_thu": { "label": "98,3%", "color": "green" }, "pct_lnst": { "label": "93,2%", "color": "green" } } },
-              { "cells": { "company": "PA — Cty CP hàng không Pacific Airlines", "doanh_thu_kh": 9600, "doanh_thu_th": 8850, "lnst_kh": -320, "lnst_th": -410, "pct_doanh_thu": { "label": "92,2%", "color": "yellow" }, "pct_lnst": { "label": "—", "color": "red" } } },
-              { "cells": { "company": "VFT — Cty CP Đào tạo Bay Việt", "doanh_thu_kh": 230, "doanh_thu_th": 238, "lnst_kh": 35, "lnst_th": 37.5, "pct_doanh_thu": { "label": "103,5%", "color": "green" }, "pct_lnst": { "label": "107,1%", "color": "green" } } },
-              { "cells": { "company": "AITS — Cty CP Tin học - Viễn thông HK", "doanh_thu_kh": 410, "doanh_thu_th": 401, "lnst_kh": 48, "lnst_th": 45, "pct_doanh_thu": { "label": "97,8%", "color": "green" }, "pct_lnst": { "label": "93,8%", "color": "green" } } }
+              { "cells": { "company": "VAECO", "dt_t7_kh": 240, "dt_t7_th": 232, "dt_t7_pct": { "label": "96,7%", "color": "green" }, "dt_7t_kh": 1660, "dt_7t_th": 1610, "dt_7t_pct": { "label": "97%", "color": "green" }, "lnst_t7_kh": 15, "lnst_t7_th": 14.2, "lnst_t7_pct": { "label": "94,7%", "color": "green" }, "lnst_7t_kh": 105, "lnst_7t_th": 100, "lnst_7t_pct": { "label": "95,2%", "color": "green" } } },
+              { "cells": { "company": "SKYPEC", "dt_t7_kh": 2710, "dt_t7_th": 2825, "dt_t7_pct": { "label": "104,2%", "color": "green" }, "dt_7t_kh": 18960, "dt_7t_th": 19780, "dt_7t_pct": { "label": "104,3%", "color": "green" }, "lnst_t7_kh": 52, "lnst_t7_th": 54.5, "lnst_t7_pct": { "label": "104,8%", "color": "green" }, "lnst_7t_kh": 362, "lnst_7t_th": 382, "lnst_7t_pct": { "label": "105,5%", "color": "green" } } },
+              { "cells": { "company": "VACS", "dt_t7_kh": 121, "dt_t7_th": 116, "dt_t7_pct": { "label": "95,9%", "color": "green" }, "dt_7t_kh": 846, "dt_7t_th": 811, "dt_7t_pct": { "label": "95,9%", "color": "green" }, "lnst_t7_kh": 7.9, "lnst_t7_th": 7.3, "lnst_t7_pct": { "label": "92,4%", "color": "green" }, "lnst_7t_kh": 55, "lnst_7t_th": 51, "lnst_7t_pct": { "label": "92,7%", "color": "green" } } },
+              { "cells": { "company": "VIAGS", "dt_t7_kh": 175, "dt_t7_th": 182, "dt_t7_pct": { "label": "104%", "color": "green" }, "dt_7t_kh": 1225, "dt_7t_th": 1275, "dt_7t_pct": { "label": "104,1%", "color": "green" }, "lnst_t7_kh": 12.5, "lnst_t7_th": 13.4, "lnst_t7_pct": { "label": "107,2%", "color": "green" }, "lnst_7t_kh": 87, "lnst_7t_th": 94, "lnst_7t_pct": { "label": "108%", "color": "green" } } },
+              { "cells": { "company": "TECS", "dt_t7_kh": 43, "dt_t7_th": 41.5, "dt_t7_pct": { "label": "96,5%", "color": "green" }, "dt_7t_kh": 303, "dt_7t_th": 291, "dt_7t_pct": { "label": "96%", "color": "green" }, "lnst_t7_kh": 3.5, "lnst_t7_th": 3.2, "lnst_t7_pct": { "label": "91,4%", "color": "green" }, "lnst_7t_kh": 24.5, "lnst_7t_th": 22.6, "lnst_7t_pct": { "label": "92,2%", "color": "yellow" } } },
+              { "cells": { "company": "TCS", "dt_t7_kh": 98, "dt_t7_th": 104, "dt_t7_pct": { "label": "106,1%", "color": "green" }, "dt_7t_kh": 688, "dt_7t_th": 729, "dt_7t_pct": { "label": "106%", "color": "green" }, "lnst_t7_kh": 34, "lnst_t7_th": 37.5, "lnst_t7_pct": { "label": "110,3%", "color": "green" }, "lnst_7t_kh": 239, "lnst_7t_th": 264, "lnst_7t_pct": { "label": "110,5%", "color": "green" } } },
+              { "cells": { "company": "Sabre VN", "dt_t7_kh": 28, "dt_t7_th": 27, "dt_t7_pct": { "label": "96,4%", "color": "green" }, "dt_7t_kh": 198, "dt_7t_th": 191, "dt_7t_pct": { "label": "96,5%", "color": "green" }, "lnst_t7_kh": 5, "lnst_t7_th": 4.7, "lnst_t7_pct": { "label": "94%", "color": "green" }, "lnst_7t_kh": 35, "lnst_7t_th": 33, "lnst_7t_pct": { "label": "94,3%", "color": "green" } } },
+              { "cells": { "company": "VINAKO", "dt_t7_kh": 17.5, "dt_t7_th": 16.3, "dt_t7_pct": { "label": "93,1%", "color": "green" }, "dt_7t_kh": 122, "dt_7t_th": 114, "dt_7t_pct": { "label": "93,4%", "color": "green" }, "lnst_t7_kh": 1.5, "lnst_t7_th": 1.3, "lnst_t7_pct": { "label": "86,7%", "color": "yellow" }, "lnst_7t_kh": 10.5, "lnst_7t_th": 9.3, "lnst_7t_pct": { "label": "88,6%", "color": "yellow" } } },
+              { "cells": { "company": "NCS", "dt_t7_kh": 82, "dt_t7_th": 85, "dt_t7_pct": { "label": "103,7%", "color": "green" }, "dt_7t_kh": 572, "dt_7t_th": 592, "dt_7t_pct": { "label": "103,5%", "color": "green" }, "lnst_t7_kh": 5.8, "lnst_t7_th": 6.2, "lnst_t7_pct": { "label": "106,9%", "color": "green" }, "lnst_7t_kh": 41, "lnst_7t_th": 43, "lnst_7t_pct": { "label": "104,9%", "color": "green" } } },
+              { "cells": { "company": "NCTS", "dt_t7_kh": 72, "dt_t7_th": 70, "dt_t7_pct": { "label": "97,2%", "color": "green" }, "dt_7t_kh": 502, "dt_7t_th": 490, "dt_7t_pct": { "label": "97,6%", "color": "green" }, "lnst_t7_kh": 15.8, "lnst_t7_th": 15.1, "lnst_t7_pct": { "label": "95,6%", "color": "green" }, "lnst_7t_kh": 111, "lnst_7t_th": 106, "lnst_7t_pct": { "label": "95,5%", "color": "green" } } },
+              { "cells": { "company": "ALSIMEXCO", "dt_t7_kh": 12.5, "dt_t7_th": 11.9, "dt_t7_pct": { "label": "95,2%", "color": "green" }, "dt_7t_kh": 88, "dt_7t_th": 83, "dt_7t_pct": { "label": "94,3%", "color": "green" }, "lnst_t7_kh": 1, "lnst_t7_th": 0.85, "lnst_t7_pct": { "label": "85%", "color": "yellow" }, "lnst_7t_kh": 7, "lnst_7t_th": 6.1, "lnst_7t_pct": { "label": "87,1%", "color": "yellow" } } },
+              { "cells": { "company": "NASCO", "dt_t7_kh": 110, "dt_t7_th": 108, "dt_t7_pct": { "label": "98,2%", "color": "green" }, "dt_7t_kh": 770, "dt_7t_th": 757, "dt_7t_pct": { "label": "98,3%", "color": "green" }, "lnst_t7_kh": 7.3, "lnst_t7_th": 6.8, "lnst_t7_pct": { "label": "93,2%", "color": "green" }, "lnst_7t_kh": 51, "lnst_7t_th": 48, "lnst_7t_pct": { "label": "94,1%", "color": "green" } } },
+              { "cells": { "company": "Pacific Airlines", "dt_t7_kh": 800, "dt_t7_th": 738, "dt_t7_pct": { "label": "92,3%", "color": "yellow" }, "dt_7t_kh": 5600, "dt_7t_th": 5163, "dt_7t_pct": { "label": "92,2%", "color": "yellow" }, "lnst_t7_kh": -27, "lnst_t7_th": -34, "lnst_t7_pct": { "label": "—", "color": "red" }, "lnst_7t_kh": -187, "lnst_7t_th": -239, "lnst_7t_pct": { "label": "—", "color": "red" } } },
+              { "cells": { "company": "VFT", "dt_t7_kh": 19, "dt_t7_th": 19.8, "dt_t7_pct": { "label": "104,2%", "color": "green" }, "dt_7t_kh": 134, "dt_7t_th": 139, "dt_7t_pct": { "label": "103,7%", "color": "green" }, "lnst_t7_kh": 2.9, "lnst_t7_th": 3.1, "lnst_t7_pct": { "label": "106,9%", "color": "green" }, "lnst_7t_kh": 20, "lnst_7t_th": 21.8, "lnst_7t_pct": { "label": "109%", "color": "green" } } },
+              { "cells": { "company": "AITS", "dt_t7_kh": 34, "dt_t7_th": 33.4, "dt_t7_pct": { "label": "98,2%", "color": "green" }, "dt_7t_kh": 239, "dt_7t_th": 234, "dt_7t_pct": { "label": "97,9%", "color": "green" }, "lnst_t7_kh": 4, "lnst_t7_th": 3.7, "lnst_t7_pct": { "label": "92,5%", "color": "green" }, "lnst_7t_kh": 28, "lnst_7t_th": 26, "lnst_7t_pct": { "label": "92,9%", "color": "green" } } }
             ]
           }
         }
