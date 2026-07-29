@@ -7,51 +7,10 @@
   "metricCards": {
     "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 3,
+      "columns": 4,
       "gap": 12
     },
     "items": [
-      {
-        "id": "t_tot",
-        "status": "compact",
-        "title": "Khách tổng thị trường",
-        "value": "2.3",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "flat",
-            "label": "94.6% vs dự báo",
-            "type": "plan",
-            "value": "94.6%",
-            "tone": "negative"
-          },
-          {
-            "direction": "up",
-            "label": "4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "4%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            2,
-            2,
-            2.1,
-            2.1,
-            2.2,
-            2.2,
-            2.3,
-            2.3
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        }
-      },
       {
         "id": "t_int",
         "status": "compact",
@@ -63,7 +22,7 @@
           {
             "direction": "flat",
             "label": "91.0% vs dự báo",
-            "type": "plan",
+            "type": "forecast",
             "value": "91.0%",
             "tone": "negative"
           },
@@ -94,88 +53,6 @@
         }
       },
       {
-        "id": "t_dom",
-        "status": "compact",
-        "title": "Khách tổng thị trường - Nội địa",
-        "value": "1.2",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "flat",
-            "label": "94.2% vs dự báo",
-            "type": "plan",
-            "value": "94.2%",
-            "tone": "negative"
-          },
-          {
-            "direction": "up",
-            "label": "2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "2%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            1.4,
-            1.4,
-            1.3,
-            1.3,
-            1.3,
-            1.3,
-            1.2,
-            1.2
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        }
-      },
-      {
-        "id": "s_tot",
-        "status": "compact",
-        "title": "Thị phần VNA group",
-        "value": "38.4",
-        "unit": "%",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "flat",
-            "label": "94.3% vs dự báo",
-            "type": "plan",
-            "value": "94.3%",
-            "tone": "negative"
-          },
-          {
-            "direction": "down",
-            "label": "0.4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "0.4%",
-            "status": 0,
-            "tone": "negative"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.negative"
-        }
-      },
-      {
         "id": "s_int",
         "status": "compact",
         "title": "Thị phần VNA group - Quốc tế",
@@ -186,7 +63,7 @@
           {
             "direction": "flat",
             "label": "93.9% vs dự báo",
-            "type": "plan",
+            "type": "forecast",
             "value": "93.9%",
             "tone": "negative"
           },
@@ -217,6 +94,47 @@
         }
       },
       {
+        "id": "t_dom",
+        "status": "compact",
+        "title": "Khách tổng thị trường - Nội địa",
+        "value": "1.2",
+        "unit": "triệu khách",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "94.2% vs dự báo",
+            "type": "forecast",
+            "value": "94.2%",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "2%",
+            "status": 0,
+            "tone": "positive"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            1.4,
+            1.4,
+            1.3,
+            1.3,
+            1.3,
+            1.3,
+            1.2,
+            1.2
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
         "id": "s_dom",
         "status": "compact",
         "title": "Thị phần VNA group - Nội địa",
@@ -227,7 +145,7 @@
           {
             "direction": "flat",
             "label": "90.5% vs dự báo",
-            "type": "plan",
+            "type": "forecast",
             "value": "90.5%",
             "tone": "negative"
           },
@@ -349,32 +267,22 @@
             "title": "Khách tổng thị trường",
             "items": [
               {
-                "id": "b_pax_total",
-                "title": "Khách tổng thị trường",
+                "id": "b_pax_int",
+                "title": "Khách tổng thị trường - Quốc tế",
                 "subTitle": "ĐVT: triệu khách",
                 "col": 1,
-                "colSpan": 36,
+                "colSpan": 30,
                 "row": 1,
-                "rowSpan": 2,
+                "rowSpan": 1,
                 "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_total.json"
-              },
-              {
-                "id": "b_pax_int",
-                "title": "Khách tổng thị trường - Quốc tế",
-                "subTitle": "ĐVT: triệu khách",
-                "col": 37,
-                "colSpan": 24,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 200,
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
+                "aiInsight": {
+                  "text": "Khách quốc tế tháng 7 đạt 1,1 triệu khách. Bằng 91,0% dự báo. Tăng 6% so cùng kỳ 2025.",
+                  "severity": "info",
+                  "status": 1
                 },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_int.json"
               },
@@ -382,14 +290,19 @@
                 "id": "b_pax_dom",
                 "title": "Khách tổng thị trường - Nội địa",
                 "subTitle": "ĐVT: triệu khách",
-                "col": 37,
-                "colSpan": 24,
-                "row": 2,
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 200,
+                "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khách nội địa tháng 7 đạt 1,2 triệu khách. Bằng 94,2% dự báo. Tăng 2% so cùng kỳ 2025.",
+                  "severity": "info",
+                  "status": 1
                 },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_pax_dom.json"
               }
@@ -399,36 +312,43 @@
             "title": "Thị phần VNA group",
             "items": [
               {
-                "id": "b_share_total",
-                "title": "Thị phần VNA group",
-                "subTitle": "Đơn vị: %",
-                "col": 1,
-                "colSpan": 36,
-                "row": 1,
-                "rowSpan": 2,
-                "height": 260,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_total.json"
-              },
-              {
                 "id": "b_share_int",
                 "title": "Thị phần VNA group - Quốc tế",
                 "subTitle": "Đơn vị: %",
-                "col": 37,
-                "colSpan": 24,
+                "col": 1,
+                "colSpan": 30,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 200,
+                "height": 260,
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Thị phần quốc tế VNA Group tháng 7 đạt 28,2%. Đạt 93,9% dự báo. Giảm 0,5% so cùng kỳ.",
+                  "severity": "info",
+                  "status": 1
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_int.json"
               },
               {
                 "id": "b_share_dom",
                 "title": "Thị phần VNA group - Nội địa",
                 "subTitle": "Đơn vị: %",
-                "col": 37,
-                "colSpan": 24,
-                "row": 2,
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 200,
+                "height": 260,
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Thị phần nội địa VNA Group tháng 7 đạt 45,4%. Đạt 90,5% dự báo. Giảm 0,6% so cùng kỳ.",
+                  "severity": "info",
+                  "status": 1
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_share_dom.json"
               }
             ]
@@ -443,6 +363,11 @@
                 "colSpan": 60,
                 "row": 1,
                 "height": 350,
+                "aiInsight": {
+                  "text": "Cơ cấu thị trường tháng 7: nội địa chiếm 52%, quốc tế chiếm 48% tổng thị trường.",
+                  "severity": "info",
+                  "status": 1
+                },
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure.json"
               }
             ]
@@ -792,10 +717,12 @@
   "timeFrameHiddenModes": [
     "day",
     "week",
+    "quarter",
     "year",
     "custom"
   ],
   "insightCards": {
+    "title": "Nhận định & Đánh giá",
     "insight": {
       "title": "Nhận định",
       "items": [
