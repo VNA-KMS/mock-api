@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 1.35,
+    "dataset": {
+      "columns": [
+        { "id": "name", "type": "string" },
+        { "id": "area", "type": "string" },
+        { "id": "cost_pax", "type": "number", "label": "CASK (VNĐ/ghế.km)" },
+        { "id": "rev_pax", "type": "number", "label": "RASK (VNĐ/ghế.km)" },
+        { "id": "paxRev", "type": "number", "label": "DT khách (trđ)" },
+        { "id": "fc_pax", "type": "number", "label": "CP cố định / khách (nghìn VNĐ)" },
+        { "id": "vc_pax", "type": "number", "label": "CP biến đổi / khách (nghìn VNĐ)" }
+      ],
+      "rows": [
+        ["SEA",     "SEA", 3350, 3384, 138483, 1037, 2312],
+        ["NEA",     "NEA", 6646, 6123, 429505, 2133, 4513],
+        ["CLMV",    "CLMV", 3385, 3049, 22960, 990, 2395],
+        ["SAS",     "SAS", 6747, 6134, 50825, 2450, 4297],
+        ["EUR",     "EUR", 21781, 18178, 272450, 7272, 14509],
+        ["NOA",     "NOA", 27441, 22968, 30010, 9049, 18391],
+        ["SWP",     "SWP", 14810, 11686, 112207, 5281, 9529]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cost_pax",
+        "yField": "rev_pax",
+        "sizeField": "paxRev",
+        "colorBy": "area",
+        "series": [
+          { "field": "rev_pax", "chartType": "scatter" }
+        ],
+        "breakEven": {
+          "mode": "diagonal",
+          "label": "Hoà vốn tổng CP (RASK = CASK)",
+          "offset": 638,
+          "offsetLabel": "Bù chi phí biến đổi — FCASK INT P638"
+        },
+        "tooltipFields": [
+          "fc_pax",
+          "vc_pax"
+        ]
+      }
+    ]
+  }
+}
