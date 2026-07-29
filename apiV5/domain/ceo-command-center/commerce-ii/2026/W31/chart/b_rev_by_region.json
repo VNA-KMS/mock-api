@@ -1,0 +1,61 @@
+{
+  "chartType": "matrix-mini-bar-geo",
+  "dataset": {
+    "columns": [
+      { "id": "region", "type": "string", "label": "Khu vực" },
+      { "id": "revenueType", "type": "string", "label": "Loại doanh thu" },
+      { "id": "val2025", "type": "number", "label": "2025", "color": "#16A34A" },
+      { "id": "val2024", "type": "number", "label": "2024", "color": "#DC2626" }
+    ],
+    "rows": [
+      ["Miền Bắc",   "Doanh thu khách",  4850, 4210],
+      ["Miền Bắc",   "Doanh thu hàng hoá", 820, 710],
+      ["Miền Bắc",   "Doanh thu khác",    310, 270],
+      ["Miền Trung", "Doanh thu khách",  2140, 1930],
+      ["Miền Trung", "Doanh thu hàng hoá", 380, 320],
+      ["Miền Trung", "Doanh thu khác",    140, 115],
+      ["Miền Nam",   "Doanh thu khách",  5620, 5010],
+      ["Miền Nam",   "Doanh thu hàng hoá", 960, 840],
+      ["Miền Nam",   "Doanh thu khác",    370, 310],
+      ["APAC",       "Doanh thu khách",  3210, 2890],
+      ["APAC",       "Doanh thu hàng hoá", 540, 470],
+      ["APAC",       "Doanh thu khác",    195, 160],
+      ["Châu Âu",    "Doanh thu khách",  2850, 2540],
+      ["Châu Âu",    "Doanh thu hàng hoá", 490, 420],
+      ["Châu Âu",    "Doanh thu khác",    175, 145],
+      ["Đông Bắc Á", "Doanh thu khách",  3680, 3290],
+      ["Đông Bắc Á", "Doanh thu hàng hoá", 620, 540],
+      ["Đông Bắc Á", "Doanh thu khác",    225, 185],
+      ["Đông Nam Á", "Doanh thu khách",  4120, 3710],
+      ["Đông Nam Á", "Doanh thu hàng hoá", 695, 605],
+      ["Đông Nam Á", "Doanh thu khác",    250, 210],
+      ["Nội địa ngắn","Doanh thu khách", 1850, 1650],
+      ["Nội địa ngắn","Doanh thu hàng hoá",315, 270],
+      ["Nội địa ngắn","Doanh thu khác",   115, 95],
+      ["Nội địa dài","Doanh thu khách",  2310, 2080],
+      ["Nội địa dài","Doanh thu hàng hoá", 390, 340],
+      ["Nội địa dài","Doanh thu khác",    145, 120]
+    ]
+  },
+  "views": [
+    {
+      "chartType": "matrix-mini-bar-geo",
+      "xField": "region",
+      "series": [
+        { "field": "val2025" },
+        { "field": "val2024" }
+      ],
+      "showLegend": true,
+      "matrixConfig": {
+        "columnTitles": {
+          "Doanh thu khách": "Doanh thu khách",
+          "Doanh thu hàng hoá": "Doanh thu hàng hóa",
+          "Doanh thu khác": "Doanh thu khác"
+        },
+        "barSize": "l",
+        "labelPosition": "inside",
+        "legendPosition": "top-right"
+      }
+    }
+  ]
+}
