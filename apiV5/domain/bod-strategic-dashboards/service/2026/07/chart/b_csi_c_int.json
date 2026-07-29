@@ -1,0 +1,66 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [5, 5],
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        ["T1", 3.62, 3.65],
+        ["T2", 3.64, 3.65],
+        ["T3", 3.66, 3.65],
+        ["T4", 3.68, 3.65],
+        ["T5", 3.68, 3.65],
+        ["T6", 3.7, 3.65],
+        ["T7", 3.58, 3.65],
+        ["T8", null, 3.65],
+        ["T9", null, 3.65],
+        ["T10", null, 3.65],
+        ["T11", null, 3.65],
+        ["T12", null, 3.65]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 3,
+        "yMax": 4,
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line",
+            "showSymbol": true,
+            "areaStyle": {}
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}

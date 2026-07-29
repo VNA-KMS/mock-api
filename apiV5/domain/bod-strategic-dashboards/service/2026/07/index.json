@@ -289,7 +289,8 @@
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "ĐVT: %"
         },
         {
           "id": "b_nps_dom",
@@ -305,7 +306,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_nps_dom.json",
-          "subTitle": "Đơn vị: điểm"
+          "subTitle": "ĐVT: %"
         },
         {
           "id": "b_nps_int",
@@ -321,7 +322,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_nps_int.json",
-          "subTitle": "Đơn vị: điểm"
+          "subTitle": "ĐVT: %"
         }
       ]
     },
@@ -345,7 +346,8 @@
           "headerAction": {
             "type": "cumulative",
             "defaultChecked": false
-          }
+          },
+          "subTitle": "ĐVT: điểm"
         },
         {
           "id": "b_csi_dom",
@@ -361,7 +363,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_dom.json",
-          "subTitle": "Đơn vị: điểm"
+          "subTitle": "ĐVT: điểm"
         },
         {
           "id": "b_csi_int",
@@ -377,7 +379,225 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_int.json",
-          "subTitle": "Đơn vị: điểm"
+          "subTitle": "ĐVT: điểm"
+        }
+      ]
+    },
+    {
+      "title": "CSI hạng C",
+      "items": [
+        {
+          "id": "b_csi_c_total",
+          "title": "CSI hạng C",
+          "height": 280,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_total.json",
+          "subTitle": "ĐVT: điểm"
+        },
+        {
+          "id": "b_csi_c_int",
+          "title": "CSI hạng C INT",
+          "height": 280,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_int.json",
+          "subTitle": "ĐVT: điểm"
+        },
+        {
+          "id": "b_csi_c_dom",
+          "title": "CSI hạng C DOM",
+          "height": 280,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_dom.json",
+          "subTitle": "ĐVT: điểm"
+        }
+      ]
+    },
+    {
+      "title": "CSI hạng Y",
+      "items": [
+        {
+          "id": "b_csi_y_total",
+          "title": "CSI hạng Y",
+          "height": 280,
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_total.json",
+          "subTitle": "ĐVT: điểm"
+        },
+        {
+          "id": "b_csi_y_int",
+          "title": "CSI hạng Y INT",
+          "height": 280,
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_int.json",
+          "subTitle": "ĐVT: điểm"
+        },
+        {
+          "id": "b_csi_y_dom",
+          "title": "CSI hạng Y DOM",
+          "height": 280,
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_dom.json",
+          "subTitle": "ĐVT: điểm"
+        }
+      ]
+    },
+    {
+      "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+      "items": [
+        {
+          "id": "b_kpi_comparison_table",
+          "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+          "subTitle": "ĐVT: điểm / %",
+          "height": 280,
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "table": {
+            "type": "grouped",
+            "density": "compact",
+            "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+            "headerGroups": [
+              {
+                "label": "KPI",
+                "rowspan": 2
+              },
+              {
+                "label": "ALL",
+                "colspan": 1
+              },
+              {
+                "label": "DOM",
+                "colspan": 3
+              },
+              {
+                "label": "INT",
+                "colspan": 3
+              }
+            ],
+            "columns": [
+              {
+                "id": "kpi",
+                "type": "string",
+                "label": "KPI",
+                "align": "left"
+              },
+              {
+                "id": "all_t7",
+                "type": "number",
+                "label": "T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "dom_mt",
+                "type": "number",
+                "label": "MT T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "dom_t7",
+                "type": "number",
+                "label": "T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "dom_gap",
+                "type": "number",
+                "label": "Gap",
+                "align": "center"
+              },
+              {
+                "id": "int_mt",
+                "type": "number",
+                "label": "MT T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "int_t7",
+                "type": "number",
+                "label": "T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "int_gap",
+                "type": "number",
+                "label": "Gap",
+                "align": "center"
+              }
+            ],
+            "rows": [
+              {
+                "id": "nps",
+                "cells": {
+                  "kpi": "NPS - Thiện cảm khách hàng",
+                  "all_t7": 68,
+                  "dom_mt": 66,
+                  "dom_t7": 64,
+                  "dom_gap": -2,
+                  "int_mt": 74,
+                  "int_t7": 72,
+                  "int_gap": -2
+                }
+              },
+              {
+                "id": "csi",
+                "cells": {
+                  "kpi": "CSI - Hài lòng tổng thể",
+                  "all_t7": 4.0,
+                  "dom_mt": 3.95,
+                  "dom_t7": 3.86,
+                  "dom_gap": -0.09,
+                  "int_mt": 4.2,
+                  "int_t7": 4.16,
+                  "int_gap": -0.04
+                }
+              },
+              {
+                "id": "csi_c",
+                "cells": {
+                  "kpi": "CSI hạng C",
+                  "all_t7": 3.55,
+                  "dom_mt": 3.5,
+                  "dom_t7": 3.42,
+                  "dom_gap": -0.08,
+                  "int_mt": 3.7,
+                  "int_t7": 3.65,
+                  "int_gap": -0.05
+                }
+              },
+              {
+                "id": "csi_y",
+                "cells": {
+                  "kpi": "CSI hạng Y",
+                  "all_t7": 3.95,
+                  "dom_mt": 3.9,
+                  "dom_t7": 3.82,
+                  "dom_gap": -0.08,
+                  "int_mt": 4.1,
+                  "int_t7": 4.05,
+                  "int_gap": -0.05
+                }
+              }
+            ]
+          }
         }
       ]
     }
@@ -427,7 +647,8 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_ov.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_ov.json",
+                "subTitle": "ĐVT: %"
               },
               {
                 "id": "b_nps_dom",
@@ -442,7 +663,8 @@
                   "severity": "warn",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_dom.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_dom.json",
+                "subTitle": "ĐVT: %"
               },
               {
                 "id": "b_nps_int",
@@ -457,7 +679,8 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_int.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_nps_int.json",
+                "subTitle": "ĐVT: %"
               }
             ]
           },
@@ -477,7 +700,8 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_ov.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_ov.json",
+                "subTitle": "ĐVT: điểm"
               },
               {
                 "id": "b_csi_dom",
@@ -492,7 +716,8 @@
                   "severity": "warn",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_dom.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_dom.json",
+                "subTitle": "ĐVT: điểm"
               },
               {
                 "id": "b_csi_int",
@@ -507,7 +732,226 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_int.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_int.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng C",
+            "items": [
+              {
+                "id": "b_csi_c_total",
+                "title": "CSI hạng C",
+                "height": 280,
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_total.json",
+                "subTitle": "ĐVT: điểm"
+              },
+              {
+                "id": "b_csi_c_int",
+                "title": "CSI hạng C INT",
+                "height": 280,
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_int.json",
+                "subTitle": "ĐVT: điểm"
+              },
+              {
+                "id": "b_csi_c_dom",
+                "title": "CSI hạng C DOM",
+                "height": 280,
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_dom.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng Y",
+            "items": [
+              {
+                "id": "b_csi_y_total",
+                "title": "CSI hạng Y",
+                "height": 280,
+                "col": 1,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_total.json",
+                "subTitle": "ĐVT: điểm"
+              },
+              {
+                "id": "b_csi_y_int",
+                "title": "CSI hạng Y INT",
+                "height": 280,
+                "col": 21,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_int.json",
+                "subTitle": "ĐVT: điểm"
+              },
+              {
+                "id": "b_csi_y_dom",
+                "title": "CSI hạng Y DOM",
+                "height": 280,
+                "col": 41,
+                "colSpan": 20,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_dom.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+            "items": [
+              {
+                "id": "b_kpi_comparison_table",
+                "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                "subTitle": "ĐVT: điểm / %",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "table": {
+                  "type": "grouped",
+                  "density": "compact",
+                  "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                  "headerGroups": [
+                    {
+                      "label": "KPI",
+                      "rowspan": 2
+                    },
+                    {
+                      "label": "ALL",
+                      "colspan": 1
+                    },
+                    {
+                      "label": "DOM",
+                      "colspan": 3
+                    },
+                    {
+                      "label": "INT",
+                      "colspan": 3
+                    }
+                  ],
+                  "columns": [
+                    {
+                      "id": "kpi",
+                      "type": "string",
+                      "label": "KPI",
+                      "align": "left"
+                    },
+                    {
+                      "id": "all_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "id": "nps",
+                      "cells": {
+                        "kpi": "NPS - Thiện cảm khách hàng",
+                        "all_t7": 68,
+                        "dom_mt": 66,
+                        "dom_t7": 64,
+                        "dom_gap": -2,
+                        "int_mt": 74,
+                        "int_t7": 72,
+                        "int_gap": -2
+                      }
+                    },
+                    {
+                      "id": "csi",
+                      "cells": {
+                        "kpi": "CSI - Hài lòng tổng thể",
+                        "all_t7": 4.0,
+                        "dom_mt": 3.95,
+                        "dom_t7": 3.86,
+                        "dom_gap": -0.09,
+                        "int_mt": 4.2,
+                        "int_t7": 4.16,
+                        "int_gap": -0.04
+                      }
+                    },
+                    {
+                      "id": "csi_c",
+                      "cells": {
+                        "kpi": "CSI hạng C",
+                        "all_t7": 3.55,
+                        "dom_mt": 3.5,
+                        "dom_t7": 3.42,
+                        "dom_gap": -0.08,
+                        "int_mt": 3.7,
+                        "int_t7": 3.65,
+                        "int_gap": -0.05
+                      }
+                    },
+                    {
+                      "id": "csi_y",
+                      "cells": {
+                        "kpi": "CSI hạng Y",
+                        "all_t7": 3.95,
+                        "dom_mt": 3.9,
+                        "dom_t7": 3.82,
+                        "dom_gap": -0.08,
+                        "int_mt": 4.1,
+                        "int_t7": 4.05,
+                        "int_gap": -0.05
+                      }
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -795,7 +1239,8 @@
                   "severity": "warn",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_dom_b_nps_dom.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_dom_b_nps_dom.json",
+                "subTitle": "ĐVT: %"
               }
             ]
           },
@@ -815,7 +1260,182 @@
                   "severity": "warn",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_dom_b_csi_dom.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_dom_b_csi_dom.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng C",
+            "items": [
+              {
+                "id": "b_csi_c_dom",
+                "title": "CSI hạng C DOM",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_dom.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng Y",
+            "items": [
+              {
+                "id": "b_csi_y_dom",
+                "title": "CSI hạng Y DOM",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_dom.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+            "items": [
+              {
+                "id": "b_kpi_comparison_table",
+                "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                "subTitle": "ĐVT: điểm / %",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "table": {
+                  "type": "grouped",
+                  "density": "compact",
+                  "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                  "headerGroups": [
+                    {
+                      "label": "KPI",
+                      "rowspan": 2
+                    },
+                    {
+                      "label": "ALL",
+                      "colspan": 1
+                    },
+                    {
+                      "label": "DOM",
+                      "colspan": 3
+                    },
+                    {
+                      "label": "INT",
+                      "colspan": 3
+                    }
+                  ],
+                  "columns": [
+                    {
+                      "id": "kpi",
+                      "type": "string",
+                      "label": "KPI",
+                      "align": "left"
+                    },
+                    {
+                      "id": "all_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "id": "nps",
+                      "cells": {
+                        "kpi": "NPS - Thiện cảm khách hàng",
+                        "all_t7": 68,
+                        "dom_mt": 66,
+                        "dom_t7": 64,
+                        "dom_gap": -2,
+                        "int_mt": 74,
+                        "int_t7": 72,
+                        "int_gap": -2
+                      }
+                    },
+                    {
+                      "id": "csi",
+                      "cells": {
+                        "kpi": "CSI - Hài lòng tổng thể",
+                        "all_t7": 4.0,
+                        "dom_mt": 3.95,
+                        "dom_t7": 3.86,
+                        "dom_gap": -0.09,
+                        "int_mt": 4.2,
+                        "int_t7": 4.16,
+                        "int_gap": -0.04
+                      }
+                    },
+                    {
+                      "id": "csi_c",
+                      "cells": {
+                        "kpi": "CSI hạng C",
+                        "all_t7": 3.55,
+                        "dom_mt": 3.5,
+                        "dom_t7": 3.42,
+                        "dom_gap": -0.08,
+                        "int_mt": 3.7,
+                        "int_t7": 3.65,
+                        "int_gap": -0.05
+                      }
+                    },
+                    {
+                      "id": "csi_y",
+                      "cells": {
+                        "kpi": "CSI hạng Y",
+                        "all_t7": 3.95,
+                        "dom_mt": 3.9,
+                        "dom_t7": 3.82,
+                        "dom_gap": -0.08,
+                        "int_mt": 4.1,
+                        "int_t7": 4.05,
+                        "int_gap": -0.05
+                      }
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -937,7 +1557,8 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_int_b_nps_int.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_int_b_nps_int.json",
+                "subTitle": "ĐVT: %"
               }
             ]
           },
@@ -957,7 +1578,182 @@
                   "severity": "good",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_int_b_csi_int.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_int_b_csi_int.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng C",
+            "items": [
+              {
+                "id": "b_csi_c_int",
+                "title": "CSI hạng C INT",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_c_int.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "CSI hạng Y",
+            "items": [
+              {
+                "id": "b_csi_y_int",
+                "title": "CSI hạng Y INT",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/b_csi_y_int.json",
+                "subTitle": "ĐVT: điểm"
+              }
+            ]
+          },
+          {
+            "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+            "items": [
+              {
+                "id": "b_kpi_comparison_table",
+                "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                "subTitle": "ĐVT: điểm / %",
+                "height": 280,
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "table": {
+                  "type": "grouped",
+                  "density": "compact",
+                  "title": "Bảng so sánh KPI theo phạm vi mạng bay",
+                  "headerGroups": [
+                    {
+                      "label": "KPI",
+                      "rowspan": 2
+                    },
+                    {
+                      "label": "ALL",
+                      "colspan": 1
+                    },
+                    {
+                      "label": "DOM",
+                      "colspan": 3
+                    },
+                    {
+                      "label": "INT",
+                      "colspan": 3
+                    }
+                  ],
+                  "columns": [
+                    {
+                      "id": "kpi",
+                      "type": "string",
+                      "label": "KPI",
+                      "align": "left"
+                    },
+                    {
+                      "id": "all_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "dom_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_mt",
+                      "type": "number",
+                      "label": "MT T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_t7",
+                      "type": "number",
+                      "label": "T7.2026",
+                      "align": "center"
+                    },
+                    {
+                      "id": "int_gap",
+                      "type": "number",
+                      "label": "Gap",
+                      "align": "center"
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "id": "nps",
+                      "cells": {
+                        "kpi": "NPS - Thiện cảm khách hàng",
+                        "all_t7": 68,
+                        "dom_mt": 66,
+                        "dom_t7": 64,
+                        "dom_gap": -2,
+                        "int_mt": 74,
+                        "int_t7": 72,
+                        "int_gap": -2
+                      }
+                    },
+                    {
+                      "id": "csi",
+                      "cells": {
+                        "kpi": "CSI - Hài lòng tổng thể",
+                        "all_t7": 4.0,
+                        "dom_mt": 3.95,
+                        "dom_t7": 3.86,
+                        "dom_gap": -0.09,
+                        "int_mt": 4.2,
+                        "int_t7": 4.16,
+                        "int_gap": -0.04
+                      }
+                    },
+                    {
+                      "id": "csi_c",
+                      "cells": {
+                        "kpi": "CSI hạng C",
+                        "all_t7": 3.55,
+                        "dom_mt": 3.5,
+                        "dom_t7": 3.42,
+                        "dom_gap": -0.08,
+                        "int_mt": 3.7,
+                        "int_t7": 3.65,
+                        "int_gap": -0.05
+                      }
+                    },
+                    {
+                      "id": "csi_y",
+                      "cells": {
+                        "kpi": "CSI hạng Y",
+                        "all_t7": 3.95,
+                        "dom_mt": 3.9,
+                        "dom_t7": 3.82,
+                        "dom_gap": -0.08,
+                        "int_mt": 4.1,
+                        "int_t7": 4.05,
+                        "int_gap": -0.05
+                      }
+                    }
+                  ]
+                }
               }
             ]
           }
