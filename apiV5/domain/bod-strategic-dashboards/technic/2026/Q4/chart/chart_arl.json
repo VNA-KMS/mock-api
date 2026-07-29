@@ -8,16 +8,16 @@
           "type": "string"
         },
         {
-          "id": "th",
-          "type": "number",
-          "label": "2026",
-          "colorToken": "series.actual"
-        },
-        {
           "id": "ck",
           "type": "number",
           "label": "2025",
           "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
         },
         {
           "id": "db",
@@ -39,29 +39,29 @@
       "rows": [
         [
           "Q1",
-          95.27,
           94.7,
+          95.27,
           95.03,
           95.5
         ],
         [
           "Q2",
-          95.47,
           94.87,
+          95.47,
           95.8,
           95.5
         ],
         [
           "Q3",
-          94.87,
           94.37,
+          94.87,
           95.97,
           95.5
         ],
         [
           "Q4",
-          null,
           95.27,
+          null,
           95.03,
           95.5
         ]
@@ -74,18 +74,17 @@
         "xField": "month",
         "yMin": 94,
         "yMax": 97,
-        "yInterval": 1,
         "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
           {
             "field": "th",
             "chartType": "bar",
             "showSymbol": true,
             "areaStyle": {},
             "showLabel": "end"
-          },
-          {
-            "field": "ck",
-            "chartType": "bar"
           },
           {
             "field": "target",
@@ -98,7 +97,8 @@
             "chartType": "line",
             "lineStyle": "dashed"
           }
-        ]
+        ],
+        "yInterval": 1
       }
     ]
   }
