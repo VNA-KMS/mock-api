@@ -403,9 +403,9 @@
           "colSpan": 20,
           "row": 2,
           "rowSpan": 1,
-          "title": "Bảng phân loại sự cố, vụ việc (theo quý)",
+          "title": "Bảng phân loại sự cố, vụ việc (theo tháng)",
           "aiInsight": {
-            "text": "Quý 3/2026: 13 vụ (MOR), giảm 23 vụ so với cùng kỳ Q3/2025 (36 vụ) và giảm 8 vụ so với quý trước Q2/2026 (21 vụ). Chủ yếu mức D (2 vụ) và E (11 vụ), không có A/B/C.",
+            "text": "Tháng này không ghi nhận sự cố mức A (rất nặng) và B (nặng). Chủ yếu là mức D (nhẹ, 2 vụ) và E (khác, 11 vụ). Lũy kế 7 tháng: 1 vụ B, 2 vụ C, 7 vụ D, 33 vụ E — tình hình an toàn được kiểm soát tốt.",
             "severity": "good",
             "status": 1
           },
@@ -415,19 +415,19 @@
               "dataset": {
                 "columns": [
                   { "id": "cat", "type": "string", "label": "Phân loại", "align": "center" },
-                  { "id": "q3_2025", "type": "number", "label": "Q3.2025", "align": "center" },
-                  { "id": "q2_2026", "type": "number", "label": "Q2.2026", "align": "center" },
-                  { "id": "q3_2026", "type": "number", "label": "Q3.2026", "align": "center" },
-                  { "id": "diff_ck", "type": "number", "label": "+/- CK", "align": "center" },
-                  { "id": "diff_quy_truoc", "type": "number", "label": "+/- quý trước", "align": "center" }
+                  { "id": "cung_ky", "type": "number", "label": "T7.2025", "align": "center" },
+                  { "id": "thang_truoc", "type": "number", "label": "T6.2026", "align": "center" },
+                  { "id": "thang_nay", "type": "number", "label": "T7.2026", "align": "center" },
+                  { "id": "diff_cung_ky", "type": "number", "label": "+/- CK", "align": "center" },
+                  { "id": "diff_thang_truoc", "type": "number", "label": "+/- tháng trước", "align": "center" }
                 ],
                 "rows": [
                   ["A", 0, 0, 0, 0, 0],
                   ["B", 0, 1, 0, 0, -1],
-                  ["C", 2, 2, 0, -2, -2],
-                  ["D", 9, 3, 2, -7, -1],
-                  ["E", 25, 15, 11, -14, -4],
-                  ["Tổng cộng", 36, 21, 13, -23, -8]
+                  ["C", 1, 1, 0, -1, -1],
+                  ["D", 3, 2, 2, -1, 0],
+                  ["E", 9, 10, 11, 2, 1],
+                  ["Tổng cộng", 13, 14, 13, 0, -1]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
                 "headerStyle": {
@@ -506,7 +506,7 @@
                   {
                     "id": "diff_cung_ky",
                     "type": "number",
-                    "label": "+/- cùng kỳ",
+                    "label": "+/- CK",
                     "align": "center"
                   }
                 ],
