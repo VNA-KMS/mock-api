@@ -22,13 +22,13 @@
             "value": "3.5",
             "tone": "positive"
           },
-        {
-          "direction": "up",
-          "label": "1.2 so với tháng trước",
-          "type": "lastMonth",
-          "value": "1.2",
-          "tone": "positive"
-        }
+          {
+            "direction": "up",
+            "label": "1.2 so với tháng trước",
+            "type": "lastMonth",
+            "value": "1.2",
+            "tone": "positive"
+          }
         ],
         "position": {
           "col": 1,
@@ -55,18 +55,25 @@
         "trend": [
           {
             "direction": "up",
+            "label": "0.5 so với tháng trước",
+            "type": "lastMonth",
+            "value": "0.5",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
             "label": "2.1 so với cùng kỳ",
             "type": "samePeriod",
             "value": "2.1",
             "tone": "positive"
           },
-        {
-          "direction": "down",
-          "label": "0.5 so với tháng trước",
-          "type": "lastMonth",
-          "value": "0.5",
-          "tone": "negative"
-        }
+          {
+            "direction": "down",
+            "label": "2.0 so với mục tiêu",
+            "type": "target",
+            "value": "2.0",
+            "tone": "negative"
+          }
         ],
         "position": {
           "col": 2,
@@ -92,19 +99,26 @@
         "backgroundStatus": 1,
         "trend": [
           {
+            "direction": "down",
+            "label": "2.0 so với tháng trước",
+            "type": "lastMonth",
+            "value": "2.0",
+            "tone": "negative"
+          },
+          {
             "direction": "up",
             "label": "4.8 so với cùng kỳ",
             "type": "samePeriod",
             "value": "4.8",
             "tone": "positive"
           },
-        {
-          "direction": "up",
-          "label": "2.0 so với tháng trước",
-          "type": "lastMonth",
-          "value": "2.0",
-          "tone": "positive"
-        }
+          {
+            "direction": "down",
+            "label": "2.0 so với mục tiêu",
+            "type": "target",
+            "value": "2.0",
+            "tone": "negative"
+          }
         ],
         "position": {
           "col": 3,
@@ -169,6 +183,13 @@
         "trend": [
           {
             "direction": "up",
+            "label": "0.03 so với tháng trước",
+            "type": "lastMonth",
+            "value": "0.03",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
             "label": "0.08 so với cùng kỳ",
             "type": "samePeriod",
             "value": "0.08",
@@ -176,9 +197,9 @@
           },
           {
             "direction": "down",
-            "label": "0.03 so với tháng trước",
-            "type": "lastMonth",
-            "value": "0.03",
+            "label": "0.02 so với mục tiêu",
+            "type": "target",
+            "value": "0.02",
             "tone": "negative"
           }
         ],
@@ -206,6 +227,13 @@
         "backgroundStatus": 1,
         "trend": [
           {
+            "direction": "down",
+            "label": "0.08 so với tháng trước",
+            "type": "lastMonth",
+            "value": "0.08",
+            "tone": "negative"
+          },
+          {
             "direction": "up",
             "label": "0.15 so với cùng kỳ",
             "type": "samePeriod",
@@ -213,11 +241,11 @@
             "tone": "positive"
           },
           {
-            "direction": "up",
-            "label": "0.08 so với tháng trước",
-            "type": "lastMonth",
-            "value": "0.08",
-            "tone": "positive"
+            "direction": "down",
+            "label": "0.02 so với mục tiêu",
+            "type": "target",
+            "value": "0.02",
+            "tone": "negative"
           }
         ],
         "position": {
@@ -352,141 +380,6 @@
           "subTitle": "Đơn vị: điểm"
         }
       ]
-    },
-    {
-      "title": "",
-      "items": [
-        {
-          "id": "b_ap",
-          "title": "Sân bay có CSI thấp nhất",
-          "col": 1,
-          "colSpan": 30,
-          "row": 1,
-          "rowSpan": 1,
-          "aiInsight": {
-            "text": "Vinh (3,65, -0,12), Cát Bi (3,72, -0,08) và Cần Thơ (3,78, -0,05) là 3 sân bay có CSI thấp nhất toàn mạng. Cả 3 đều ghi nhận mức giảm so với kỳ trước, cần có kế hoạch cải thiện ngay.",
-            "severity": "crit",
-            "status": 1
-          },
-          "extraComponent": {
-            "type": "table",
-            "position": "top",
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "ap",
-                    "type": "string",
-                    "label": "Sân bay"
-                  },
-                  {
-                    "id": "csi",
-                    "type": "number",
-                    "label": "CSI"
-                  },
-                  {
-                    "id": "chg",
-                    "type": "string",
-                    "label": "Thay đổi"
-                  }
-                ],
-                "rows": [
-                  [
-                    "Vinh",
-                    3.65,
-                    "-0.12"
-                  ],
-                  [
-                    "Cat Bi",
-                    3.72,
-                    "-0.08"
-                  ],
-                  [
-                    "Can Tho",
-                    3.78,
-                    "-0.05"
-                  ],
-                  [
-                    "Phu Quoc",
-                    3.82,
-                    "-0.03"
-                  ],
-                  [
-                    "Da Lat",
-                    3.88,
-                    "-0.01"
-                  ]
-                ]
-              }
-            }
-          }
-        },
-        {
-          "id": "b_route",
-          "title": "Đường bay có CSI thấp nhất",
-          "col": 31,
-          "colSpan": 30,
-          "row": 1,
-          "rowSpan": 1,
-          "aiInsight": {
-            "text": "HAN-VVI (3,52, -0,15) và SGN-VCS (3,58, -0,10) là 2 đường bay có CSI thấp nhất. Mức giảm mạnh so với kỳ trước cho thấy chất lượng dịch vụ đang suy giảm đáng báo động trên các chặng này.",
-            "severity": "crit",
-            "status": 1
-          },
-          "extraComponent": {
-            "type": "table",
-            "position": "top",
-            "config": {
-              "dataset": {
-                "columns": [
-                  {
-                    "id": "route",
-                    "type": "string",
-                    "label": "Đường bay"
-                  },
-                  {
-                    "id": "csi",
-                    "type": "number",
-                    "label": "CSI"
-                  },
-                  {
-                    "id": "chg",
-                    "type": "string",
-                    "label": "Thay đổi"
-                  }
-                ],
-                "rows": [
-                  [
-                    "HAN-VVI",
-                    3.52,
-                    "-0.15"
-                  ],
-                  [
-                    "SGN-VCS",
-                    3.58,
-                    "-0.10"
-                  ],
-                  [
-                    "HAN-DIN",
-                    3.65,
-                    "-0.08"
-                  ],
-                  [
-                    "DAD-CXR",
-                    3.72,
-                    "-0.05"
-                  ],
-                  [
-                    "SGN-PQC",
-                    3.78,
-                    "-0.03"
-                  ]
-                ]
-              }
-            }
-          }
-        }
-      ]
     }
   ],
   "filters": [
@@ -617,141 +510,6 @@
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_total_b_csi_int.json"
               }
             ]
-          },
-          {
-            "title": "",
-            "items": [
-              {
-                "id": "b_ap",
-                "title": "Sân bay có CSI thấp nhất",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "ap",
-                          "type": "string",
-                          "label": "Sân bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "Vinh",
-                          3.65,
-                          "-0.12"
-                        ],
-                        [
-                          "Cat Bi",
-                          3.72,
-                          "-0.08"
-                        ],
-                        [
-                          "Can Tho",
-                          3.78,
-                          "-0.05"
-                        ],
-                        [
-                          "Phu Quoc",
-                          3.82,
-                          "-0.03"
-                        ],
-                        [
-                          "Da Lat",
-                          3.88,
-                          "-0.01"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "Vinh (3,65, -0,12), Cát Bi (3,72, -0,08) và Cần Thơ (3,78, -0,05) là 3 sân bay có CSI thấp nhất toàn mạng. Cả 3 đều ghi nhận mức giảm so với kỳ trước, cần có kế hoạch cải thiện ngay.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_route",
-                "title": "Đường bay có CSI thấp nhất",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "route",
-                          "type": "string",
-                          "label": "Đường bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "HAN-VVI",
-                          3.52,
-                          "-0.15"
-                        ],
-                        [
-                          "SGN-VCS",
-                          3.58,
-                          "-0.10"
-                        ],
-                        [
-                          "HAN-DIN",
-                          3.65,
-                          "-0.08"
-                        ],
-                        [
-                          "DAD-CXR",
-                          3.72,
-                          "-0.05"
-                        ],
-                        [
-                          "SGN-PQC",
-                          3.78,
-                          "-0.03"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "HAN-VVI (3,52, -0,15) và SGN-VCS (3,58, -0,10) là 2 đường bay có CSI thấp nhất. Mức giảm mạnh so với kỳ trước cho thấy chất lượng dịch vụ đang suy giảm đáng báo động trên các chặng này.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              }
-            ]
           }
         ],
         "metricCards": {
@@ -807,6 +565,13 @@
               "backgroundStatus": 1,
               "trend": [
                 {
+                  "direction": "down",
+                  "label": "0.5 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.5",
+                  "tone": "negative"
+                },
+                {
                   "direction": "up",
                   "label": "2.1 so với cùng kỳ",
                   "type": "samePeriod",
@@ -815,9 +580,9 @@
                 },
                 {
                   "direction": "down",
-                  "label": "0.5 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.5",
+                  "label": "2.0 so với mục tiêu",
+                  "type": "target",
+                  "value": "2.0",
                   "tone": "negative"
                 }
               ],
@@ -846,17 +611,24 @@
               "trend": [
                 {
                   "direction": "up",
+                  "label": "2.0 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "2.0",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
                   "label": "4.8 so với cùng kỳ",
                   "type": "samePeriod",
                   "value": "4.8",
                   "tone": "positive"
                 },
                 {
-                  "direction": "up",
-                  "label": "2.0 so với tháng trước",
-                  "type": "lastMonth",
+                  "direction": "down",
+                  "label": "2.0 so với mục tiêu",
+                  "type": "target",
                   "value": "2.0",
-                  "tone": "positive"
+                  "tone": "negative"
                 }
               ],
               "position": {
@@ -921,6 +693,13 @@
               "backgroundStatus": 1,
               "trend": [
                 {
+                  "direction": "down",
+                  "label": "0.03 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.03",
+                  "tone": "negative"
+                },
+                {
                   "direction": "up",
                   "label": "0.08 so với cùng kỳ",
                   "type": "samePeriod",
@@ -929,9 +708,9 @@
                 },
                 {
                   "direction": "down",
-                  "label": "0.03 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.03",
+                  "label": "0.02 so với mục tiêu",
+                  "type": "target",
+                  "value": "0.02",
                   "tone": "negative"
                 }
               ],
@@ -960,17 +739,24 @@
               "trend": [
                 {
                   "direction": "up",
+                  "label": "0.08 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.08",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
                   "label": "0.15 so với cùng kỳ",
                   "type": "samePeriod",
                   "value": "0.15",
                   "tone": "positive"
                 },
                 {
-                  "direction": "up",
-                  "label": "0.08 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.08",
-                  "tone": "positive"
+                  "direction": "down",
+                  "label": "0.02 so với mục tiêu",
+                  "type": "target",
+                  "value": "0.02",
+                  "tone": "negative"
                 }
               ],
               "position": {
@@ -1032,141 +818,6 @@
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_dom_b_csi_dom.json"
               }
             ]
-          },
-          {
-            "title": "",
-            "items": [
-              {
-                "id": "b_ap",
-                "title": "Sân bay có CSI thấp nhất",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "ap",
-                          "type": "string",
-                          "label": "Sân bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "Vinh",
-                          3.65,
-                          "-0.12"
-                        ],
-                        [
-                          "Cat Bi",
-                          3.72,
-                          "-0.08"
-                        ],
-                        [
-                          "Can Tho",
-                          3.78,
-                          "-0.05"
-                        ],
-                        [
-                          "Phu Quoc",
-                          3.82,
-                          "-0.03"
-                        ],
-                        [
-                          "Da Lat",
-                          3.88,
-                          "-0.01"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "Vinh (3,65, -0,12), Cát Bi (3,72, -0,08) và Cần Thơ (3,78, -0,05) là 3 sân bay có CSI thấp nhất toàn mạng. Cả 3 đều ghi nhận mức giảm so với kỳ trước, cần có kế hoạch cải thiện ngay.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_route",
-                "title": "Đường bay có CSI thấp nhất",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "route",
-                          "type": "string",
-                          "label": "Đường bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "HAN-VVI",
-                          3.52,
-                          "-0.15"
-                        ],
-                        [
-                          "SGN-VCS",
-                          3.58,
-                          "-0.10"
-                        ],
-                        [
-                          "HAN-DIN",
-                          3.65,
-                          "-0.08"
-                        ],
-                        [
-                          "DAD-CXR",
-                          3.72,
-                          "-0.05"
-                        ],
-                        [
-                          "SGN-PQC",
-                          3.78,
-                          "-0.03"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "HAN-VVI (3,52, -0,15) và SGN-VCS (3,58, -0,10) là 2 đường bay có CSI thấp nhất. Mức giảm mạnh so với kỳ trước cho thấy chất lượng dịch vụ đang suy giảm đáng báo động trên các chặng này.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              }
-            ]
           }
         ],
         "metricCards": {
@@ -1184,6 +835,13 @@
               "backgroundStatus": 1,
               "trend": [
                 {
+                  "direction": "down",
+                  "label": "0.5 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.5",
+                  "tone": "negative"
+                },
+                {
                   "direction": "up",
                   "label": "2.1 so với cùng kỳ",
                   "type": "samePeriod",
@@ -1192,9 +850,9 @@
                 },
                 {
                   "direction": "down",
-                  "label": "0.5 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.5",
+                  "label": "2.0 so với mục tiêu",
+                  "type": "target",
+                  "value": "2.0",
                   "tone": "negative"
                 }
               ],
@@ -1222,6 +880,13 @@
               "backgroundStatus": 1,
               "trend": [
                 {
+                  "direction": "down",
+                  "label": "0.03 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.03",
+                  "tone": "negative"
+                },
+                {
                   "direction": "up",
                   "label": "0.08 so với cùng kỳ",
                   "type": "samePeriod",
@@ -1230,9 +895,9 @@
                 },
                 {
                   "direction": "down",
-                  "label": "0.03 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.03",
+                  "label": "0.02 so với mục tiêu",
+                  "type": "target",
+                  "value": "0.02",
                   "tone": "negative"
                 }
               ],
@@ -1295,141 +960,6 @@
                 "chartPath": "apiV5/domain/bod-strategic-dashboards/service/2026/07/chart/cf_network_int_b_csi_int.json"
               }
             ]
-          },
-          {
-            "title": "",
-            "items": [
-              {
-                "id": "b_ap",
-                "title": "Sân bay có CSI thấp nhất",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "ap",
-                          "type": "string",
-                          "label": "Sân bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "Vinh",
-                          3.65,
-                          "-0.12"
-                        ],
-                        [
-                          "Cat Bi",
-                          3.72,
-                          "-0.08"
-                        ],
-                        [
-                          "Can Tho",
-                          3.78,
-                          "-0.05"
-                        ],
-                        [
-                          "Phu Quoc",
-                          3.82,
-                          "-0.03"
-                        ],
-                        [
-                          "Da Lat",
-                          3.88,
-                          "-0.01"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "Vinh (3,65, -0,12), Cát Bi (3,72, -0,08) và Cần Thơ (3,78, -0,05) là 3 sân bay có CSI thấp nhất toàn mạng. Cả 3 đều ghi nhận mức giảm so với kỳ trước, cần có kế hoạch cải thiện ngay.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_route",
-                "title": "Đường bay có CSI thấp nhất",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "table",
-                  "position": "top",
-                  "config": {
-                    "dataset": {
-                      "columns": [
-                        {
-                          "id": "route",
-                          "type": "string",
-                          "label": "Đường bay"
-                        },
-                        {
-                          "id": "csi",
-                          "type": "number",
-                          "label": "CSI"
-                        },
-                        {
-                          "id": "chg",
-                          "type": "string",
-                          "label": "Thay đổi"
-                        }
-                      ],
-                      "rows": [
-                        [
-                          "HAN-VVI",
-                          3.52,
-                          "-0.15"
-                        ],
-                        [
-                          "SGN-VCS",
-                          3.58,
-                          "-0.10"
-                        ],
-                        [
-                          "HAN-DIN",
-                          3.65,
-                          "-0.08"
-                        ],
-                        [
-                          "DAD-CXR",
-                          3.72,
-                          "-0.05"
-                        ],
-                        [
-                          "SGN-PQC",
-                          3.78,
-                          "-0.03"
-                        ]
-                      ]
-                    }
-                  }
-                },
-                "aiInsight": {
-                  "text": "HAN-VVI (3,52, -0,15) và SGN-VCS (3,58, -0,10) là 2 đường bay có CSI thấp nhất. Mức giảm mạnh so với kỳ trước cho thấy chất lượng dịch vụ đang suy giảm đáng báo động trên các chặng này.",
-                  "severity": "crit",
-                  "status": 1
-                }
-              }
-            ]
           }
         ],
         "metricCards": {
@@ -1448,17 +978,24 @@
               "trend": [
                 {
                   "direction": "up",
+                  "label": "2.0 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "2.0",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
                   "label": "4.8 so với cùng kỳ",
                   "type": "samePeriod",
                   "value": "4.8",
                   "tone": "positive"
                 },
                 {
-                  "direction": "up",
-                  "label": "2.0 so với tháng trước",
-                  "type": "lastMonth",
+                  "direction": "down",
+                  "label": "2.0 so với mục tiêu",
+                  "type": "target",
                   "value": "2.0",
-                  "tone": "positive"
+                  "tone": "negative"
                 }
               ],
               "position": {
@@ -1486,17 +1023,24 @@
               "trend": [
                 {
                   "direction": "up",
+                  "label": "0.08 so với tháng trước",
+                  "type": "lastMonth",
+                  "value": "0.08",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
                   "label": "0.15 so với cùng kỳ",
                   "type": "samePeriod",
                   "value": "0.15",
                   "tone": "positive"
                 },
                 {
-                  "direction": "up",
-                  "label": "0.08 so với tháng trước",
-                  "type": "lastMonth",
-                  "value": "0.08",
-                  "tone": "positive"
+                  "direction": "down",
+                  "label": "0.02 so với mục tiêu",
+                  "type": "target",
+                  "value": "0.02",
+                  "tone": "negative"
                 }
               ],
               "position": {

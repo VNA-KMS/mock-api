@@ -30,6 +30,16 @@
           "type": "number",
           "label": "Luỹ kế 2026",
           "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            5,
+            5
+          ],
+          "colorToken": "data.brick"
         }
       ],
       "rows": [
@@ -38,91 +48,103 @@
           74,
           76,
           74,
-          76
+          76,
+          73
         ],
         [
           "T2",
           75,
           76,
           149,
-          152
+          152,
+          73
         ],
         [
           "T3",
           75,
           77,
           224,
-          229
+          229,
+          73
         ],
         [
           "T4",
           76,
           78,
           300,
-          307
+          307,
+          73
         ],
         [
           "T5",
           77,
           78,
           377,
-          385
+          385,
+          73
         ],
         [
           "T6",
           77,
           79,
           454,
-          464
+          464,
+          73
         ],
         [
           "T7",
           70,
           72,
           524,
-          536
+          536,
+          73
         ],
         [
           "T8",
           71,
           null,
           595,
-          null
+          null,
+          73
         ],
         [
           "T9",
           72,
           null,
           667,
-          null
+          null,
+          73
         ],
         [
           "T10",
           73,
           null,
           740,
-          null
+          null,
+          73
         ],
         [
           "T11",
           74,
           null,
           814,
-          null
+          null,
+          73
         ],
         [
           "T12",
           75,
           null,
           889,
-          null
+          null,
+          73
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
@@ -132,6 +154,12 @@
           {
             "field": "th",
             "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
             "showSymbol": true,
             "showLabel": "end"
           }
