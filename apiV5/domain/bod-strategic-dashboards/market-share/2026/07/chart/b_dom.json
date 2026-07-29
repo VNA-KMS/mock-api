@@ -9,12 +9,6 @@
           "type": "string"
         },
         {
-          "id": "th",
-          "type": "number",
-          "label": "2026",
-          "colorToken": "series.actual"
-        },
-        {
           "id": "ck",
           "type": "number",
           "label": "2025",
@@ -27,10 +21,16 @@
           "colorToken": "series.target"
         },
         {
-          "id": "th_lk",
+          "id": "th",
           "type": "number",
-          "label": "Luỹ kế 2026",
+          "label": "2026",
           "colorToken": "series.actual"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
         },
         {
           "id": "ck_lk",
@@ -43,116 +43,152 @@
           "type": "number",
           "label": "Luỹ kế KH 2026",
           "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Luỹ kế Dự báo 2026",
+          "color": "#8B5CF6"
         }
       ],
       "rows": [
         [
           "T1",
-          422,
           410,
           420,
           422,
+          null,
           410,
-          420
+          420,
+          422,
+          null
         ],
         [
           "T2",
-          428,
           415,
           426,
-          850,
+          428,
+          null,
           825,
-          846
+          846,
+          850,
+          null
         ],
         [
           "T3",
-          434,
           420,
           432,
-          1284,
+          434,
+          null,
           1245,
-          1278
+          1278,
+          1284,
+          null
         ],
         [
           "T4",
-          440,
           425,
           438,
-          1724,
+          440,
+          null,
           1670,
-          1716
+          1716,
+          1724,
+          null
         ],
         [
           "T5",
-          444,
           430,
           445,
-          2168,
+          444,
+          null,
           2100,
-          2161
+          2161,
+          2168,
+          null
         ],
         [
           "T6",
-          450,
           440,
           452,
-          2618,
+          450,
+          null,
           2540,
-          2613
+          2613,
+          2618,
+          null
         ],
         [
           "T7",
-          456,
           445,
           458,
-          3074,
+          456,
+          null,
           2985,
-          3071
+          3071,
+          3074,
+          null
         ],
         [
           "T8",
-          null,
           390,
           462,
           null,
+          440.56,
           3375,
-          3533
+          3533,
+          null,
+          3514.56
         ],
         [
           "T9",
-          null,
           395,
           468,
           null,
+          445.99,
           3770,
-          4001
+          4001,
+          null,
+          3960.55
         ],
         [
           "T10",
-          null,
           400,
           474,
           null,
+          null,
           4170,
-          4475
+          4475,
+          null,
+          null
         ],
         [
           "T11",
-          null,
           405,
           480,
           null,
+          null,
           4575,
-          4955
+          4955,
+          null,
+          null
         ],
         [
           "T12",
-          null,
           410,
           486,
           null,
+          null,
           4985,
-          5441
+          5441,
+          null,
+          null
         ]
       ]
     },
@@ -167,14 +203,19 @@
             "chartType": "bar"
           },
           {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
             "field": "th",
             "chartType": "bar",
             "showSymbol": true,
             "showLabel": "end"
           },
           {
-            "field": "db",
-            "chartType": "line",
+            "field": "fct",
+            "chartType": "bar",
             "lineStyle": "dashed"
           }
         ]

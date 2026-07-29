@@ -11,7 +11,7 @@
         {
           "id": "vna",
           "type": "number",
-          "label": "VNA",
+          "label": "VNA Group",
           "colorToken": "carrier.vna"
         },
         {
@@ -27,85 +27,73 @@
           "colorToken": "carrier.qh"
         },
         {
-          "id": "bl",
+          "id": "g9",
           "type": "number",
-          "label": "BL",
-          "colorToken": "carrier.bl"
+          "label": "9G",
+          "colorToken": "carrier.9g"
         },
         {
           "id": "vu",
           "type": "number",
           "label": "VU",
           "colorToken": "carrier.vu"
-        },
-        {
-          "id": "g9",
-          "type": "number",
-          "label": "9G",
-          "colorToken": "carrier.9g"
         }
       ],
       "rows": [
         [
           "HANSGN",
-          32,
-          20,
-          8,
-          10,
-          5,
-          5
+          52,
+          30,
+          12,
+          2,
+          4
         ],
         [
           "HANDAD",
-          35,
-          22,
-          7,
-          9,
-          4,
-          4
+          50,
+          32,
+          10,
+          3,
+          5
         ],
         [
           "SGNDAD",
-          30,
-          18,
-          10,
-          12,
-          6,
-          5
-        ],
-        [
-          "Local Trunk",
-          28,
-          25,
-          8,
-          8,
-          5,
+          49,
+          33,
+          11,
+          3,
           4
         ],
         [
-          "Tour",
-          25,
-          20,
-          12,
-          10,
-          8,
+          "Trục lẻ",
+          48,
+          29,
+          14,
+          3,
           6
         ],
         [
-          "Local",
-          22,
+          "Du lịch",
+          46,
+          31,
           15,
-          10,
-          8,
-          5,
+          3,
           5
+        ],
+        [
+          "Địa phương",
+          49,
+          28,
+          13,
+          3,
+          7
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "auto",
+        "chartType": "bar-h-stacked",
         "xField": "route",
         "stack": "total",
         "labelInside": true,
@@ -124,15 +112,11 @@
             "chartType": "bar"
           },
           {
-            "field": "bl",
+            "field": "g9",
             "chartType": "bar"
           },
           {
             "field": "vu",
-            "chartType": "bar"
-          },
-          {
-            "field": "g9",
             "chartType": "bar"
           }
         ],

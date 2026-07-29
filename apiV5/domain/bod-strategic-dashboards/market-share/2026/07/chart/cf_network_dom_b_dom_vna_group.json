@@ -1,17 +1,11 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "line",
     "dataset": {
       "columns": [
         {
           "id": "month",
           "type": "string"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "2026",
-          "colorToken": "carrier.vna"
         },
         {
           "id": "ck",
@@ -20,139 +14,25 @@
           "colorToken": "series.previous"
         },
         {
-          "id": "db",
+          "id": "vna",
           "type": "number",
-          "label": "KH 2026",
-          "colorToken": "series.target"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế 2026",
+          "label": "2026",
           "colorToken": "carrier.vna"
-        },
-        {
-          "id": "ck_lk",
-          "type": "number",
-          "label": "Luỹ kế 2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "db_lk",
-          "type": "number",
-          "label": "Luỹ kế KH 2026",
-          "colorToken": "series.target"
         }
       ],
       "rows": [
-        [
-          "T1",
-          24.2,
-          24.8,
-          31.5,
-          24.2,
-          24.8,
-          31.5
-        ],
-        [
-          "T2",
-          18.4,
-          18.9,
-          23.9,
-          42.6,
-          43.7,
-          55.4
-        ],
-        [
-          "T3",
-          23.4,
-          23.9,
-          30.4,
-          66,
-          67.6,
-          85.8
-        ],
-        [
-          "T4",
-          23.8,
-          24.3,
-          30.9,
-          89.8,
-          91.9,
-          116.7
-        ],
-        [
-          "T5",
-          23.4,
-          23.9,
-          30.4,
-          113.2,
-          115.8,
-          147.1
-        ],
-        [
-          "T6",
-          26.2,
-          26.8,
-          34.1,
-          139.4,
-          142.6,
-          181.2
-        ],
-        [
-          "T7",
-          26.2,
-          26.7,
-          34.1,
-          165.6,
-          169.3,
-          215.3
-        ],
-        [
-          "T8",
-          null,
-          18.5,
-          null,
-          165.6,
-          187.8,
-          215.3
-        ],
-        [
-          "T9",
-          null,
-          19.3,
-          null,
-          165.6,
-          207.1,
-          215.3
-        ],
-        [
-          "T10",
-          null,
-          19.9,
-          null,
-          165.6,
-          227,
-          215.3
-        ],
-        [
-          "T11",
-          null,
-          23.3,
-          null,
-          165.6,
-          250.3,
-          215.3
-        ],
-        [
-          "T12",
-          null,
-          22.5,
-          null,
-          165.6,
-          272.8,
-          215.3
-        ]
+        ["T1", 22.0, 24.2],
+        ["T2", 17.0, 18.4],
+        ["T3", 22.0, 23.4],
+        ["T4", 22.5, 23.8],
+        ["T5", 22.0, 23.4],
+        ["T6", 25.0, 26.2],
+        ["T7", 25.0, 26.2],
+        ["T8", 24.0, null],
+        ["T9", 23.0, null],
+        ["T10", 22.0, null],
+        ["T11", 21.0, null],
+        ["T12", 20.0, null]
       ]
     },
     "views": [
@@ -163,18 +43,12 @@
         "series": [
           {
             "field": "ck",
-            "chartType": "bar"
+            "chartType": "line"
           },
           {
-            "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "end"
-          },
-          {
-            "field": "db",
+            "field": "vna",
             "chartType": "line",
-            "lineStyle": "dashed"
+            "showLabel": "end"
           }
         ]
       }
