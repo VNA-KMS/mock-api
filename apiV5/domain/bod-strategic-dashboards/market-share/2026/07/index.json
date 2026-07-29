@@ -20,11 +20,11 @@
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "flat",
-            "label": "91.0% vs dự báo",
+            "direction": "up",
+            "label": "+4.50% so với dự báo",
             "type": "forecast",
-            "value": "91.0%",
-            "tone": "negative"
+            "value": "+4.50%",
+            "tone": "positive"
           },
           {
             "direction": "up",
@@ -61,11 +61,11 @@
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "flat",
-            "label": "93.9% vs dự báo",
+            "direction": "up",
+            "label": "+6.10% so với dự báo",
             "type": "forecast",
-            "value": "93.9%",
-            "tone": "negative"
+            "value": "+6.10%",
+            "tone": "positive"
           },
           {
             "direction": "down",
@@ -102,10 +102,10 @@
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "flat",
-            "label": "94.2% vs dự báo",
+            "direction": "down",
+            "label": "-4.20% so với dự báo",
             "type": "forecast",
-            "value": "94.2%",
+            "value": "-4.20%",
             "tone": "negative"
           },
           {
@@ -143,10 +143,10 @@
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "flat",
-            "label": "90.5% vs dự báo",
+            "direction": "down",
+            "label": "-6.50% so với dự báo",
             "type": "forecast",
-            "value": "90.5%",
+            "value": "-6.50%",
             "tone": "negative"
           },
           {
@@ -280,7 +280,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khách quốc tế tháng 7 đạt 1,1 triệu khách. Bằng 91,0% dự báo. Tăng 6% so cùng kỳ 2025.",
+                  "text": "Khách quốc tế tháng 7 đạt 1,10 triệu khách, tăng 7,8% so với cùng kỳ 2025, thấp hơn dự báo 4,5%.",
                   "severity": "info",
                   "status": 1
                 },
@@ -300,7 +300,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khách nội địa tháng 7 đạt 1,2 triệu khách. Bằng 94,2% dự báo. Tăng 2% so cùng kỳ 2025.",
+                  "text": "Khách nội địa tháng 7 đạt 1,20 triệu khách, tăng 10,1% so với cùng kỳ 2025, thấp hơn dự báo 4,2%.",
                   "severity": "info",
                   "status": 1
                 },
@@ -325,7 +325,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Thị phần quốc tế VNA Group tháng 7 đạt 28,2%. Đạt 93,9% dự báo. Giảm 0,5% so cùng kỳ.",
+                  "text": "Thị phần VNA group quốc tế tháng 7 đạt 25,8%, giảm 0,7% so với cùng kỳ 2025, thấp hơn dự báo 6,1%.",
                   "severity": "info",
                   "status": 1
                 },
@@ -345,7 +345,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Thị phần nội địa VNA Group tháng 7 đạt 45,4%. Đạt 90,5% dự báo. Giảm 0,6% so cùng kỳ.",
+                  "text": "Thị phần VNA group nội địa tháng 7 đạt 42,5%, giảm 0,5% so với cùng kỳ 2025, thấp hơn dự báo 6,5%.",
                   "severity": "info",
                   "status": 1
                 },
@@ -356,19 +356,34 @@
           {
             "items": [
               {
-                "id": "b_market_structure",
-                "title": "Cơ cấu thị trường",
+                "id": "b_market_structure_int",
+                "title": "Cơ cấu thị trường quốc tế",
                 "subTitle": "Đơn vị: %",
                 "col": 1,
-                "colSpan": 60,
+                "colSpan": 30,
                 "row": 1,
                 "height": 350,
                 "aiInsight": {
-                  "text": "Cơ cấu thị trường tháng 7: nội địa chiếm 52%, quốc tế chiếm 48% tổng thị trường.",
+                  "text": "NEA dẫn đầu (35%), SEA (25%), EUR (15%), CLMV (10%), SWP (8%), MID (4%), NOA (3%).",
                   "severity": "info",
                   "status": 1
                 },
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure_int.json"
+              },
+              {
+                "id": "b_market_structure_dom",
+                "title": "Cơ cấu thị trường nội địa",
+                "subTitle": "Đơn vị: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "height": 350,
+                "aiInsight": {
+                  "text": "HANSGN dẫn đầu (28%), trục lẻ (22%), HANDAD (18%), SGNDAD (16%), du lịch (13%), địa phương (9%).",
+                  "severity": "info",
+                  "status": 1
+                },
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/market-share/2026/07/chart/cf_network_total_b_market_structure_dom.json"
               }
             ]
           }
@@ -726,9 +741,8 @@
     "insight": {
       "title": "Nhận định",
       "items": [
-        "<strong>Tháng 7:</strong> Thực hiện <strong>1,1</strong> triệu khách; so với CK tăng <strong>4%</strong>; so với dự báo đạt <strong>94,6%</strong>.",
-        "<strong>Luỹ kế T7:</strong> Thực hiện <strong>7,9</strong> triệu khách; so với CK tăng <strong>7,3%</strong>; so với dự báo đạt <strong>97,4%</strong>.",
-        "<strong>Quý 3:</strong> Thực hiện <strong>3,3</strong> triệu khách; so với CK tăng <strong>6,8%</strong>; so với dự báo đạt <strong>95,1%</strong>."
+        "<strong>Quốc tế:</strong> Khách tổng thị trường đạt <strong>1,1</strong> triệu khách; so với cùng kỳ tăng <strong>6%</strong>; so với dự báo đạt <strong>91,0%</strong>.",
+        "<strong>Nội địa:</strong> Khách tổng thị trường đạt <strong>1,2</strong> triệu khách; so với cùng kỳ tăng <strong>2%</strong>; so với dự báo đạt <strong>94,2%</strong>."
       ],
       "variant": "info",
       "showAiBadge": true,
@@ -737,8 +751,8 @@
     "risk": {
       "title": "Điểm sáng / Cảnh báo / Rủi ro",
       "items": [
-        "Khách quốc tế tăng mạnh: NEA (+12,1%), SWP (+5,2%), SEA (+4,8%). Giảm: EU (-2,3%), US (-1,5%).",
-        "Khách nội địa tăng mạnh: HANSGN (+6,2%), HANDAD (+4,5%), Tour (+3,8%). Giảm: SGNDAD (-0,5%)."
+        "<strong>Quốc tế:</strong> Giảm ở CLMV (<strong>-12,2%</strong>), NEA (<strong>-4,5%</strong>), MID (<strong>-2,4%</strong>), NOA (<strong>-2,1%</strong>); tăng ở SWP (<strong>+17,6%</strong>), SEA (<strong>+2,3%</strong>), EUR (<strong>+1,0%</strong>), SAS (<strong>+0,4%</strong>).",
+        "<strong>Nội địa:</strong> Trong đó HANSGN tăng <strong>5,2%</strong>, HANDAD tăng <strong>10,3%</strong>, SGNDAD tăng <strong>4,8%</strong>, trục lẻ tăng <strong>12,6%</strong>, du lịch tăng <strong>7,5%</strong>, địa phương tăng <strong>4,5%</strong>."
       ],
       "variant": "warning"
     }
