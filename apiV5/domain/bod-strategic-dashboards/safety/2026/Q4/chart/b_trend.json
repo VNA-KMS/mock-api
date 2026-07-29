@@ -3,138 +3,27 @@
     "chartType": "combo",
     "dataset": {
       "columns": [
-        {
-          "id": "month",
-          "type": "string"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "2025",
-          "colorToken": "series.previous"
-        },
-        {
-          "id": "th_lk",
-          "type": "number",
-          "label": "Luỹ kế 2026",
-          "colorToken": "series.actual"
-        },
-        {
-          "id": "ck_lk",
-          "type": "number",
-          "label": "Luỹ kế 2025",
-          "colorToken": "series.previous"
-        }
+        { "id": "quarter", "type": "string" },
+        { "id": "th", "type": "number", "label": "2026", "colorToken": "series.actual" },
+        { "id": "ck", "type": "number", "label": "2025", "colorToken": "series.previous" },
+        { "id": "th_lk", "type": "number", "label": "Luỹ kế 2026", "colorToken": "series.actual" },
+        { "id": "ck_lk", "type": "number", "label": "Luỹ kế 2025", "colorToken": "series.previous" }
       ],
       "rows": [
-        [
-          "T1",
-          37,
-          40,
-          37,
-          40
-        ],
-        [
-          "T2",
-          36,
-          39,
-          73,
-          79
-        ],
-        [
-          "T3",
-          35,
-          38,
-          108,
-          117
-        ],
-        [
-          "T4",
-          34,
-          37,
-          142,
-          154
-        ],
-        [
-          "T5",
-          33,
-          36,
-          175,
-          190
-        ],
-        [
-          "T6",
-          32,
-          35,
-          207,
-          225
-        ],
-        [
-          "T7",
-          42,
-          47,
-          249,
-          272
-        ],
-        [
-          "T8",
-          null,
-          42,
-          null,
-          314
-        ],
-        [
-          "T9",
-          null,
-          40,
-          null,
-          354
-        ],
-        [
-          "T10",
-          null,
-          38,
-          null,
-          392
-        ],
-        [
-          "T11",
-          null,
-          41,
-          null,
-          433
-        ],
-        [
-          "T12",
-          null,
-          39,
-          null,
-          472
-        ]
+        ["Q1", 108, 117, 108, 117],
+        ["Q2", 99, 108, 207, 225],
+        ["Q3", 42, 129, 249, 354],
+        ["Q4", null, 118, null, 472]
       ]
     },
     "views": [
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "month",
+        "xField": "quarter",
         "series": [
-          {
-            "field": "th",
-            "chartType": "bar",
-            "showSymbol": true,
-            "showLabel": "all"
-          },
-          {
-            "field": "ck",
-            "chartType": "bar"
-          }
+          { "field": "th", "chartType": "bar", "showSymbol": true, "showLabel": "all" },
+          { "field": "ck", "chartType": "bar" }
         ]
       }
     ]

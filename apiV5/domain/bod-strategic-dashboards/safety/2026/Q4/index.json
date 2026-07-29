@@ -355,7 +355,7 @@
         {
           "id": "b_trend",
           "col": 1,
-          "colSpan": 40,
+          "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
           "title": "Số lượng sự cố, vụ việc",
@@ -373,7 +373,7 @@
         },
         {
           "id": "b_ratio",
-          "col": 41,
+          "col": 21,
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
@@ -388,12 +388,22 @@
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_ratio.json"
         },
         {
-          "id": "b_class",
+          "id": "b_class_bar",
           "col": 1,
-          "colSpan": 40,
+          "colSpan": 20,
           "row": 2,
           "rowSpan": 1,
-          "title": "Bảng phân loại sự cố, vụ việc",
+          "title": "Phân loại sự cố, vụ việc",
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_class_bar.json"
+        },
+        {
+          "id": "b_class_t1",
+          "col": 21,
+          "colSpan": 20,
+          "row": 2,
+          "rowSpan": 1,
+          "title": "Bảng phân loại sự cố, vụ việc (theo tháng)",
           "aiInsight": {
             "text": "Tháng này không ghi nhận sự cố mức A (rất nặng) và B (nặng). Chủ yếu là mức D (nhẹ, 2 vụ) và E (khác, 11 vụ). Lũy kế 7 tháng: 1 vụ B, 2 vụ C, 7 vụ D, 33 vụ E — tình hình an toàn được kiểm soát tốt.",
             "severity": "good",
@@ -404,92 +414,20 @@
             "config": {
               "dataset": {
                 "columns": [
-                  {
-                    "id": "cat",
-                    "type": "string",
-                    "label": "Phân loại sự cố",
-                    "align": "center"
-                  },
-                  {
-                    "id": "thang_nay",
-                    "type": "number",
-                    "label": "T7.2026",
-                    "align": "center"
-                  },
-                  {
-                    "id": "thang_truoc",
-                    "type": "number",
-                    "label": "T6.2026",
-                    "align": "center"
-                  },
-                  {
-                    "id": "cung_ky",
-                    "type": "number",
-                    "label": "2025",
-                    "align": "center"
-                  },
-                  {
-                    "id": "luy_ke",
-                    "type": "number",
-                    "label": "7T.2026",
-                    "align": "center"
-                  },
-                  {
-                    "id": "cung_ky_luy_ke",
-                    "type": "number",
-                    "label": "7T.2025",
-                    "align": "center"
-                  }
+                  { "id": "cat", "type": "string", "label": "Phân loại", "align": "center" },
+                  { "id": "cung_ky", "type": "number", "label": "T7.2025", "align": "center" },
+                  { "id": "thang_truoc", "type": "number", "label": "T6.2026", "align": "center" },
+                  { "id": "thang_nay", "type": "number", "label": "T7.2026", "align": "center" },
+                  { "id": "diff_cung_ky", "type": "number", "label": "+/- cùng kỳ", "align": "center" },
+                  { "id": "diff_thang_truoc", "type": "number", "label": "+/- tháng trước", "align": "center" }
                 ],
                 "rows": [
-                  [
-                    "A",
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                  ],
-                  [
-                    "B",
-                    0,
-                    1,
-                    0,
-                    1,
-                    0
-                  ],
-                  [
-                    "C",
-                    0,
-                    1,
-                    1,
-                    2,
-                    1
-                  ],
-                  [
-                    "D",
-                    2,
-                    2,
-                    3,
-                    7,
-                    6
-                  ],
-                  [
-                    "E",
-                    11,
-                    10,
-                    9,
-                    33,
-                    28
-                  ],
-                  [
-                    "Tổng cộng",
-                    13,
-                    14,
-                    13,
-                    43,
-                    35
-                  ]
+                  ["A", 0, 0, 0, 0, 0],
+                  ["B", 0, 1, 0, 0, -1],
+                  ["C", 1, 1, 0, -1, -1],
+                  ["D", 3, 2, 2, -1, 0],
+                  ["E", 9, 10, 11, 2, 1],
+                  ["Tổng cộng", 13, 14, 13, 0, -1]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
                 "headerStyle": {
@@ -497,40 +435,57 @@
                   "textColor": "var(--color-safety-table-header-text)"
                 },
                 "rowStyle": {
-                  "A": {
-                    "backgroundColor": "var(--color-safety-row-a-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "B": {
-                    "backgroundColor": "var(--color-safety-row-b-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "C": {
-                    "backgroundColor": "var(--color-safety-row-c-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "D": {
-                    "backgroundColor": "var(--color-safety-row-d-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "E": {
-                    "backgroundColor": "var(--color-safety-row-e-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "Tổng cộng": {
-                    "backgroundColor": "var(--color-safety-row-total-bg)",
-                    "textColor": "var(--color-safety-row-total-text)",
-                    "fontWeight": "700"
-                  }
+                  "A": { "backgroundColor": "var(--color-safety-row-a-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "B": { "backgroundColor": "var(--color-safety-row-b-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "C": { "backgroundColor": "var(--color-safety-row-c-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "D": { "backgroundColor": "var(--color-safety-row-d-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "E": { "backgroundColor": "var(--color-safety-row-e-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "Tổng cộng": { "backgroundColor": "var(--color-safety-row-total-bg)", "textColor": "var(--color-safety-row-total-text)", "fontWeight": "700" }
                 },
-                "rowTone": {
-                  "A": "critical",
-                  "B": "high",
-                  "C": "medium",
-                  "D": "low",
-                  "E": "other",
-                  "Tổng cộng": "total"
-                }
+                "rowTone": { "A": "critical", "B": "high", "C": "medium", "D": "low", "E": "other", "Tổng cộng": "total" }
+              }
+            }
+          }
+        },
+        {
+          "id": "b_class_t2",
+          "col": 41,
+          "colSpan": 20,
+          "row": 2,
+          "rowSpan": 1,
+          "title": "Bảng phân loại sự cố, vụ việc (lũy kế)",
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  { "id": "cat", "type": "string", "label": "Phân loại", "align": "center" },
+                  { "id": "cung_ky_luy_ke", "type": "number", "label": "7T.2025", "align": "center" },
+                  { "id": "luy_ke", "type": "number", "label": "7T.2026", "align": "center" },
+                  { "id": "diff_cung_ky", "type": "number", "label": "+/- cùng kỳ", "align": "center" }
+                ],
+                "rows": [
+                  ["A", 0, 0, 0],
+                  ["B", 0, 1, 1],
+                  ["C", 1, 2, 1],
+                  ["D", 6, 7, 1],
+                  ["E", 28, 33, 5],
+                  ["Tổng cộng", 35, 43, 8]
+                ],
+                "headerClass": "bg-alabaster text-heron-blue",
+                "headerStyle": {
+                  "backgroundColor": "var(--color-safety-table-header-bg)",
+                  "textColor": "var(--color-safety-table-header-text)"
+                },
+                "rowStyle": {
+                  "A": { "backgroundColor": "var(--color-safety-row-a-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "B": { "backgroundColor": "var(--color-safety-row-b-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "C": { "backgroundColor": "var(--color-safety-row-c-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "D": { "backgroundColor": "var(--color-safety-row-d-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "E": { "backgroundColor": "var(--color-safety-row-e-bg)", "textColor": "var(--color-safety-row-text)" },
+                  "Tổng cộng": { "backgroundColor": "var(--color-safety-row-total-bg)", "textColor": "var(--color-safety-row-total-text)", "fontWeight": "700" }
+                },
+                "rowTone": { "A": "critical", "B": "high", "C": "medium", "D": "low", "E": "other", "Tổng cộng": "total" }
               }
             }
           }
@@ -540,7 +495,7 @@
           "title": "Tỷ lệ sự cố, vụ việc theo nguyên nhân",
           "col": 41,
           "colSpan": 20,
-          "row": 2,
+          "row": 1,
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_cause_pie.json"
         },

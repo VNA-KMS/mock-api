@@ -3,7 +3,7 @@
     "chartType": "combo",
     "dataset": {
       "columns": [
-        { "id": "month", "type": "string" },
+        { "id": "quarter", "type": "string" },
         { "id": "a", "type": "number", "label": "A", "color": "#C62828" },
         { "id": "b", "type": "number", "label": "B", "color": "#E65100" },
         { "id": "c", "type": "number", "label": "C", "color": "#B28704" },
@@ -11,25 +11,17 @@
         { "id": "e", "type": "number", "label": "E", "color": "#00558F" }
       ],
       "rows": [
-        ["T1", 0, 0, 0, 1, 2],
-        ["T2", 0, 0, 0, 0, 3],
-        ["T3", 0, 0, 0, 1, 2],
-        ["T4", 0, 0, 1, 0, 3],
-        ["T5", 0, 0, 0, 1, 2],
-        ["T6", 0, 1, 1, 2, 10],
-        ["T7", 0, 0, 0, 2, 11],
-        ["T8", null, null, null, null, null],
-        ["T9", null, null, null, null, null],
-        ["T10", null, null, null, null, null],
-        ["T11", null, null, null, null, null],
-        ["T12", null, null, null, null, null]
+        ["Q1", 0, 0, 0, 2, 7],
+        ["Q2", 0, 1, 2, 3, 15],
+        ["Q3", 0, 0, 0, 2, 11],
+        ["Q4", null, null, null, null, null]
       ]
     },
     "views": [
       {
         "id": "main",
         "chartType": "auto",
-        "xField": "month",
+        "xField": "quarter",
         "series": [
           { "field": "a", "chartType": "bar" },
           { "field": "b", "chartType": "bar" },
