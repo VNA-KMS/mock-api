@@ -2,8 +2,8 @@
   "meta": {
     "title": "ChartV2 — all engines",
     "description": "Catalog ChartEngine + style + Luỹ kế + Segment header (góc phải).",
-    "engineCount": 29,
-    "itemCount": 41
+    "engineCount": 30,
+    "itemCount": 45
   },
   "charts": {
     "bar": {
@@ -512,6 +512,111 @@
               "field": "plan",
               "chartType": "area"
             }
+          ]
+        }
+      ]
+    },
+    "stacked-area": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email" },
+            { "field": "unionAds" },
+            { "field": "videoAds" },
+            { "field": "direct" },
+            { "field": "searchEngine" }
+          ]
+        }
+      ]
+    },
+    "stacked-area-filled": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email",        "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "unionAds",     "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "videoAds",     "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "direct",       "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "searchEngine", "symbolFilled": true,  "symbolSize": 4 }
+          ]
+        }
+      ]
+    },
+    "stacked-area-no-dots": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email",        "showSymbol": false },
+            { "field": "unionAds",     "showSymbol": false },
+            { "field": "videoAds",     "showSymbol": false },
+            { "field": "direct",       "showSymbol": false },
+            { "field": "searchEngine", "showSymbol": false }
           ]
         }
       ]
@@ -3671,6 +3776,36 @@
       "note": "Area fill",
       "height": 280,
       "autoChart": "area"
+    },
+    {
+      "id": "catalog-stacked-area",
+      "title": "stacked-area",
+      "subTitle": "Stacked area (ECharts area-stack)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "Stack 5 series · symbol trắng viền màu · size 5",
+      "height": 280,
+      "autoChart": "stacked-area"
+    },
+    {
+      "id": "catalog-stacked-area-filled",
+      "title": "stacked-area",
+      "subTitle": "Chấm đặc theo màu series (symbolFilled=true, size=4)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "BE: symbolFilled=true · symbolSize=4",
+      "height": 280,
+      "autoChart": "stacked-area-filled"
+    },
+    {
+      "id": "catalog-stacked-area-no-dots",
+      "title": "stacked-area",
+      "subTitle": "Ẩn chấm — chỉ vẽ line/area (showSymbol=false)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "BE: showSymbol=false",
+      "height": 280,
+      "autoChart": "stacked-area-no-dots"
     },
     {
       "id": "catalog-combo",
