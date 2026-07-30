@@ -62,7 +62,6 @@
     },
     {
       "title": "Hiệu quả đường bay",
-      "subTitle": "Liên quan đến doanh thu",
       "items": [
         {
           "id": "b_rev_pax",
@@ -100,8 +99,6 @@
       ]
     },
     {
-      "title": "Hiệu quả đường bay",
-      "subTitle": "Hiệu quả",
       "items": [
         {
           "id": "b_pl",
@@ -128,24 +125,36 @@
       ]
     },
     {
-      "title": "Doanh thu vận tải hàng không theo khu vực",
-      "subTitle": "Liên quan đến doanh thu",
       "items": [
         {
-          "id": "b_rev_by_region",
-          "title": "Doanh thu vận tải hàng không theo khu vực",
+          "id": "b_rev_by_region_int",
+          "title": "Doanh thu vận tải hàng không — Quốc tế",
           "col": 1,
-          "colSpan": 30,
+          "colSpan": 60,
           "row": 1,
           "rowSpan": 1,
-          "height": 560,
-          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_rev_by_region.json",
+          "height": 500,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_rev_by_region_int.json",
           "subTitle": "Đơn vị: tỷ VND"
         }
       ]
     },
     {
-      "title": "Hiệu quả theo khu vực",
+      "items": [
+        {
+          "id": "b_rev_by_region_dom",
+          "title": "Doanh thu vận tải hàng không — Nội địa",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 500,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_rev_by_region_dom.json",
+          "subTitle": "Đơn vị: tỷ VND"
+        }
+      ]
+    },
+    {
       "items": [
         {
           "id": "b_pl_by_region",
@@ -160,31 +169,24 @@
       ]
     },
     {
-      "title": "Tương quan CASK & RASK",
       "items": [
         {
           "id": "b_scatter_rask_cask",
           "title": "RASK vs CASK theo khu vực",
           "col": 1,
-          "colSpan": 60,
+          "colSpan": 30,
           "row": 1,
-          "rowSpan": 1,
-          "height": 520,
+          "rowSpan": 2,
           "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_scatter_rask_cask.json"
-        }
-      ]
-    },
-    {
-      "title": "Top 5 chặng bay P&L VAR",
-      "items": [
+        },
         {
           "id": "b_top5_plvar_best",
           "title": "Top 5 chặng bay P&L VAR tốt nhất",
-          "col": 1,
+          "col": 31,
           "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
-          "height": 280,
+          "height": 260,
           "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_top5_plvar_best.json"
         },
         {
@@ -192,9 +194,9 @@
           "title": "Bottom 5 chặng bay P&L VAR thấp nhất",
           "col": 31,
           "colSpan": 30,
-          "row": 1,
+          "row": 2,
           "rowSpan": 1,
-          "height": 280,
+          "height": 260,
           "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/W31/chart/b_top5_plvar_worst.json"
         }
       ]
@@ -304,15 +306,15 @@
   },
   "groups": [
     {
-      "label": "Khai thác",
       "accentClassName": "bg-regal-blue",
       "accentColor": "#1677ff",
       "layout": {
-        "columns": 3
+        "columns": 6
       },
       "items": [
         {
           "id": "fls",
+          "borderColor": "#3730a3",
           "status": "compact",
           "title": "FLS",
           "value": "3.121",
@@ -320,18 +322,18 @@
           "backgroundStatus": 2,
           "trend": [
             {
-              "direction": "down",
-              "label": "-15,6% với KH",
+              "direction": "flat",
+              "label": "15,6% với KH",
               "type": "plan",
-              "value": "-15,6%",
+              "value": "15,6%",
               "status": 0,
               "tone": "negative"
             },
             {
               "direction": "down",
-              "label": "-6,1% với CK",
+              "label": "6,1% với CK",
               "type": "samePeriod",
-              "value": "-6,1%",
+              "value": "6,1%",
               "tone": "negative"
             }
           ],
@@ -341,6 +343,7 @@
         },
         {
           "id": "m_bh",
+          "borderColor": "#3730a3",
           "status": "compact",
           "title": "Tổng giờ bay",
           "value": "11,2",
@@ -369,6 +372,7 @@
         },
         {
           "id": "m_bh_daily",
+          "borderColor": "#3730a3",
           "status": "compact",
           "title": "Giờ bay TB/tàu/ngày",
           "value": "13,2",
@@ -394,19 +398,10 @@
           "colorTokens": {
             "visualization": "semantic.positive"
           }
-        }
-      ]
-    },
-    {
-      "label": "Thương mại",
-      "accentClassName": "bg-regal-blue",
-      "accentColor": "#1677ff",
-      "layout": {
-        "columns": 5
-      },
-      "items": [
+        },
         {
           "id": "pax",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "PAX",
           "value": "985",
@@ -436,6 +431,7 @@
         },
         {
           "id": "ask",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "ASK",
           "value": "2.150",
@@ -464,6 +460,7 @@
         },
         {
           "id": "lf",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "LF",
           "value": "82,5",
@@ -492,6 +489,7 @@
         },
         {
           "id": "rtf",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "RTF",
           "value": "1.280",
@@ -520,6 +518,7 @@
         },
         {
           "id": "dt_pax",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "PAX REV",
           "value": "4.433",
@@ -548,9 +547,10 @@
         },
         {
           "id": "dt_vthk",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "Doanh thu VTHK",
-          "value": "+4.850",
+          "value": "+28.500",
           "unit": "tỷ VND",
           "backgroundStatus": 2,
           "trend": [
@@ -576,9 +576,10 @@
         },
         {
           "id": "hq_vthk",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "P&L",
-          "value": "+185",
+          "value": "+850",
           "unit": "tỷ VND",
           "backgroundStatus": 2,
           "trend": [
@@ -604,6 +605,7 @@
         },
         {
           "id": "hq_so_cpbd",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "P&L VAR",
           "value": "+320",
@@ -632,6 +634,7 @@
         },
         {
           "id": "raskpax",
+          "borderColor": "#005f6e",
           "status": "compact",
           "title": "RASK",
           "value": "2.850",
