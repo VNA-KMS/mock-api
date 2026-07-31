@@ -33,20 +33,13 @@
             "value": "3,8%",
             "status": 0,
             "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "Thực hiện 1.245",
-            "type": "plan",
-            "value": "Thực hiện",
-            "tone": "positive"
           }
         ]
       },
       {
         "id": "hr_headcount",
         "status": "compact",
-        "title": "Số lượng lao động",
+        "title": "Số lượng lao động sử dụng",
         "period": "Tháng 07/2026",
         "value": "7.612",
         "unit": "người",
@@ -73,37 +66,247 @@
   },
   "chartBoard": [
     {
-      "title": "Lao động sử dụng",
+      "title": "Kết quả thực hiện KPIs",
       "items": [
         {
-          "id": "chart_labor_monthly",
-          "title": "Lao động qua các tháng",
+          "id": "kpi_results_table",
+          "title": "Kết quả thực hiện KPIs",
           "col": 1,
-          "colSpan": 40,
+          "colSpan": 60,
           "row": 1,
-          "height": 360,
-          "unit": "người",
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_monthly.json",
-          "aiInsight": {
-            "text": "TH T1–T7 thấp hơn KH khoảng 50–240 người. T7 thực hiện 7.612 vs KH 7.850. KH bình quân năm 7.764,25. Cần đẩy tiến độ tuyển dụng T8–T12.",
-            "severity": "warn",
-            "status": 1
-          },
-          "subTitle": "Đơn vị: người"
-        },
-        {
-          "id": "chart_labor_by_block",
-          "title": "Tỷ trọng lao động sử dụng theo khối",
-          "subTitle": "Đơn vị: người",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "height": 360,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_by_block.json",
-          "aiInsight": {
-            "text": "Khối mặt đất chiếm 55% tổng lao động. Phi công 20%, Tiếp viên 25%.",
-            "severity": "good",
-            "status": 1
+          "table": {
+            "columns": [
+              {
+                "id": "stt",
+                "type": "text",
+                "label": "STT",
+                "align": "center",
+                "width": 48
+              },
+              {
+                "id": "kpi",
+                "type": "text-stack",
+                "label": "Chỉ số KPI",
+                "width": 260
+              },
+              {
+                "id": "th2019",
+                "type": "number",
+                "label": "TH 7T 2019",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
+              },
+              {
+                "id": "th2025",
+                "type": "number",
+                "label": "TH 7T 2025",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
+              },
+              {
+                "id": "kh2026",
+                "type": "number",
+                "label": "KH 7T 2026 (Tạm giao)",
+                "align": "right",
+                "decimals": 0,
+                "width": 120
+              },
+              {
+                "id": "uth2026",
+                "type": "number",
+                "label": "UTH 7T 2026",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
+              },
+              {
+                "id": "uth_vs_kh",
+                "type": "threshold",
+                "label": "UTH 7T / KH26",
+                "align": "right",
+                "width": 100,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
+              },
+              {
+                "id": "uth_vs_th2025",
+                "type": "threshold",
+                "label": "UTH 7T 26 / TH 7T 25",
+                "align": "right",
+                "width": 120,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
+              },
+              {
+                "id": "uth_vs_th2019",
+                "type": "threshold",
+                "label": "UTH 7T 26 / TH 7T 19",
+                "align": "right",
+                "width": 120,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "id": "r_1",
+                "tone": "total",
+                "cells": {
+                  "stt": "1",
+                  "kpi": "Sản lượng"
+                }
+              },
+              {
+                "id": "r_rtk",
+                "cells": {
+                  "stt": "",
+                  "kpi": {
+                    "title": "Tải luân chuyển (RTK)",
+                    "subtitle": "Triệu tấn.km"
+                  },
+                  "th2019": 2593,
+                  "th2025": 2789,
+                  "kh2026": 3310,
+                  "uth2026": 3246,
+                  "uth_vs_kh": "98%",
+                  "uth_vs_th2025": "116%",
+                  "uth_vs_th2019": "125%"
+                }
+              },
+              {
+                "id": "r_2",
+                "tone": "total",
+                "cells": {
+                  "stt": "2",
+                  "kpi": "Lao động"
+                }
+              },
+              {
+                "id": "r_2_1",
+                "tone": "total",
+                "cells": {
+                  "stt": "2.1",
+                  "kpi": "Lao động (VNA + TV ALS)"
+                }
+              },
+              {
+                "id": "r_ld31",
+                "cells": {
+                  "stt": "",
+                  "kpi": "Thời điểm 31/7",
+                  "th2019": 8231,
+                  "th2025": 7602,
+                  "kh2026": 8760,
+                  "uth2026": 7928,
+                  "uth_vs_kh": "91%",
+                  "uth_vs_th2025": "104%",
+                  "uth_vs_th2019": "96%"
+                }
+              },
+              {
+                "id": "r_ldbq",
+                "cells": {
+                  "stt": "",
+                  "kpi": "Sử dụng bình quân",
+                  "th2019": 8177,
+                  "th2025": 7643,
+                  "kh2026": 8215,
+                  "uth2026": 7920,
+                  "uth_vs_kh": "96%",
+                  "uth_vs_th2025": "104%",
+                  "uth_vs_th2019": "97%"
+                }
+              },
+              {
+                "id": "r_2_2",
+                "tone": "total",
+                "cells": {
+                  "stt": "2.2",
+                  "kpi": "Lao động (VNA)"
+                }
+              },
+              {
+                "id": "r_ld31_vna",
+                "cells": {
+                  "stt": "",
+                  "kpi": "Thời điểm 31/7",
+                  "th2019": 6758,
+                  "th2025": 5750,
+                  "kh2026": 6230,
+                  "uth2026": 5731,
+                  "uth_vs_kh": "92%",
+                  "uth_vs_th2025": "100%",
+                  "uth_vs_th2019": "85%"
+                }
+              },
+              {
+                "id": "r_ldbq_vna",
+                "cells": {
+                  "stt": "",
+                  "kpi": "Sử dụng bình quân",
+                  "th2019": 6790,
+                  "th2025": 5812,
+                  "kh2026": 5920,
+                  "uth2026": 5735,
+                  "uth_vs_kh": "97%",
+                  "uth_vs_th2025": "99%",
+                  "uth_vs_th2019": "84%"
+                }
+              },
+              {
+                "id": "r_3",
+                "tone": "total",
+                "cells": {
+                  "stt": "3",
+                  "kpi": {
+                    "title": "Năng suất lao động theo RTK",
+                    "subtitle": "Nghìn tấn.km/LĐ"
+                  }
+                }
+              },
+              {
+                "id": "r_3_1",
+                "tone": "total",
+                "cells": {
+                  "stt": "3.1",
+                  "kpi": "Lao động (VNA + TV ALS)",
+                  "th2019": 315,
+                  "th2025": 365,
+                  "kh2026": 402,
+                  "uth2026": 397,
+                  "uth_vs_kh": "99%",
+                  "uth_vs_th2025": "109%",
+                  "uth_vs_th2019": "126%"
+                }
+              },
+              {
+                "id": "r_3_2",
+                "tone": "total",
+                "cells": {
+                  "stt": "3.2",
+                  "kpi": "Lao động (VNA)",
+                  "th2019": 382,
+                  "th2025": 480,
+                  "kh2026": 559,
+                  "uth2026": 544,
+                  "uth_vs_kh": "97%",
+                  "uth_vs_th2025": "113%",
+                  "uth_vs_th2019": "142%"
+                }
+              }
+            ],
+            "density": "compact"
           }
         }
       ]
@@ -121,7 +324,7 @@
           "unit": "triệu VNĐ/người",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_productivity.json",
           "aiInsight": {
-            "text": "NSLĐ T7 đạt 1.245 — cao hơn cùng kỳ 3,8% nhưng thấp hơn kế hoạch 2,1%. Xu hướng tăng dần từ đầu năm.",
+            "text": "NSLĐ LĐ VNA T7 đạt 1.245 triệu VNĐ/người, cao hơn cùng kỳ 3,8% nhưng thấp hơn KH 2,1%.",
             "severity": "warn"
           },
           "subTitle": "Đơn vị: triệu VNĐ/người"
@@ -136,7 +339,7 @@
           "unit": "triệu VNĐ/người",
           "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_productivity_vna_als.json",
           "aiInsight": {
-            "text": "NSLĐ (VNA+PC, TV ALS) T7 đạt 1.158 — cao hơn cùng kỳ 3,6% nhưng thấp hơn kế hoạch 2,3%. Bao gồm phi công & tiếp viên ALS.",
+            "text": "NSLĐ VNA+PC/TV ALS T7 đạt 1.158 triệu VNĐ/người, cao hơn cùng kỳ 3,6% nhưng thấp hơn KH 2,3%.",
             "severity": "warn"
           },
           "subTitle": "Đơn vị: triệu VNĐ/người"
@@ -144,173 +347,437 @@
       ]
     },
     {
-      "title": "Kết quả thực hiện KPIs",
+      "title": "Lao động sử dụng",
       "items": [
         {
-          "id": "kpi_results_table",
-          "title": "Kết quả thực hiện KPIs",
+          "id": "chart_labor_monthly",
+          "title": "Lao động qua các tháng",
+          "col": 1,
+          "colSpan": 40,
+          "row": 1,
+          "height": 360,
+          "unit": "người",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_monthly.json",
+          "aiInsight": {
+            "text": "Lao động T7 đạt 7.612 người, tăng so với cùng kỳ 2025 và thấp hơn KH 2026.",
+            "severity": "warn"
+          },
+          "subTitle": "Đơn vị: người"
+        },
+        {
+          "id": "chart_labor_by_block",
+          "title": "Tiếp viên 25%",
+          "subTitle": "Đơn vị: %",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "height": 360,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_by_block.json",
+          "aiInsight": {
+            "text": "Tiếp viên 25% tổng lao động sử dụng. Khối mặt đất 55%, Phi công 20%.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "chart_labor_ground",
+          "title": "Khối mặt đất",
+          "col": 1,
+          "colSpan": 20,
+          "row": 2,
+          "height": 360,
+          "unit": "người",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_ground.json",
+          "aiInsight": {
+            "text": "Khối mặt đất T7 đạt 4.187 người, chiếm tỷ trọng lớn nhất.",
+            "severity": "good"
+          },
+          "subTitle": "Đơn vị: người"
+        },
+        {
+          "id": "chart_labor_pilot",
+          "title": "Phi công",
+          "col": 21,
+          "colSpan": 20,
+          "row": 2,
+          "height": 360,
+          "unit": "người",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_pilot.json",
+          "aiInsight": {
+            "text": "Phi công T7 đạt 1.522 người, tăng nhẹ so với cùng kỳ.",
+            "severity": "good"
+          },
+          "subTitle": "Đơn vị: người"
+        },
+        {
+          "id": "chart_labor_fa",
+          "title": "Tiếp viên",
+          "col": 41,
+          "colSpan": 20,
+          "row": 2,
+          "height": 360,
+          "unit": "người",
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/human-resources/2026/07/chart/chart_labor_fa.json",
+          "aiInsight": {
+            "text": "Tiếp viên T7 đạt 1.903 người, tăng so với cùng kỳ 2025.",
+            "severity": "good"
+          },
+          "subTitle": "Đơn vị: người"
+        },
+        {
+          "id": "table_labor_by_block",
+          "title": "Lao động qua các khối",
           "col": 1,
           "colSpan": 60,
-          "row": 1,
+          "row": 3,
           "table": {
             "columns": [
               {
-                "id": "stt",
-                "type": "text",
-                "label": "STT",
-                "align": "center",
-                "width": 56
+                "id": "category",
+                "type": "text-stack",
+                "label": "T7/2026",
+                "width": 260
               },
               {
-                "id": "kpi",
-                "type": "text",
-                "label": "Chỉ số KPI"
+                "id": "uth_20250430",
+                "type": "number",
+                "label": "UTH 31/07/2026",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
               },
               {
-                "id": "th2026",
-                "type": "tone-value",
-                "label": "UTH 7T 2026",
-                "align": "right"
+                "id": "kh_20251231",
+                "type": "number",
+                "label": "KH 31/12/2026",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
               },
               {
-                "id": "vs_kh",
-                "type": "text",
-                "label": "UTH /KH2026",
-                "align": "center"
+                "id": "th_20240430",
+                "type": "number",
+                "label": "TH 31/07/2025",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
               },
               {
-                "id": "vs_ck",
-                "type": "text",
-                "label": "So CK 2025",
-                "align": "center"
+                "id": "pct_kh",
+                "type": "threshold",
+                "label": "% so KH",
+                "align": "right",
+                "width": 90,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
               },
               {
-                "id": "vs_ck19",
-                "type": "text",
-                "label": "So CK 2019",
-                "align": "center"
+                "id": "pct_ck",
+                "type": "threshold",
+                "label": "% so cùng kỳ",
+                "align": "right",
+                "width": 90,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
+              },
+              {
+                "id": "th_20190430",
+                "type": "number",
+                "label": "TH 31/07/2019",
+                "align": "right",
+                "decimals": 0,
+                "width": 100
+              },
+              {
+                "id": "pct_ck2019",
+                "type": "threshold",
+                "label": "% so cùng kỳ 2019",
+                "align": "right",
+                "width": 90,
+                "thresholds": {
+                  "good": 100,
+                  "warn": 100,
+                  "suffix": "%"
+                }
               }
             ],
             "rows": [
               {
-                "cells": {
-                  "stt": "1",
-                  "kpi": "Lao động",
-                  "th2026": "",
-                  "vs_kh": "",
-                  "vs_ck": "",
-                  "vs_ck19": ""
+                "id": "grp_labor_blocks",
+                "kind": "group",
+                "group": {
+                  "title": "Lao động các khối",
+                  "defaultExpanded": true,
+                  "cells": {
+                    "uth_20250430": 2895,
+                    "kh_20251231": 3082,
+                    "th_20240430": 2884,
+                    "pct_kh": "94%",
+                    "pct_ck": "100%",
+                    "th_20190430": 3542,
+                    "pct_ck2019": "82%"
+                  }
                 }
               },
               {
+                "id": "r_Khối_Tham_mưu___Tổng_hợp",
                 "cells": {
-                  "stt": "1.1",
-                  "kpi": "Lao động (VNA + TV ALS)",
-                  "th2026": "",
-                  "vs_kh": "",
-                  "vs_ck": "",
-                  "vs_ck19": ""
+                  "category": "\u00A0\u00A0\u00A0\u00A0Khối Tham mưu - Tổng hợp",
+                  "uth_20250430": 515,
+                  "kh_20251231": 556,
+                  "th_20240430": 524,
+                  "pct_kh": "93%",
+                  "pct_ck": "98%",
+                  "th_20190430": 574,
+                  "pct_ck2019": "90%"
+                },
+                "groupId": "grp_labor_blocks"
+              },
+              {
+                "id": "r_Khối_Thương_mại",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Khối Thương mại",
+                  "uth_20250430": 1481,
+                  "kh_20251231": 1582,
+                  "th_20240430": 1472,
+                  "pct_kh": "94%",
+                  "pct_ck": "101%",
+                  "th_20190430": 1827,
+                  "pct_ck2019": "81%"
+                },
+                "groupId": "grp_labor_blocks"
+              },
+              {
+                "id": "r_Khối_Dịch_vụ",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Khối Dịch vụ",
+                  "uth_20250430": 461,
+                  "kh_20251231": 481,
+                  "th_20240430": 455,
+                  "pct_kh": "96%",
+                  "pct_ck": "101%",
+                  "th_20190430": 637,
+                  "pct_ck2019": "72%"
+                },
+                "groupId": "grp_labor_blocks"
+              },
+              {
+                "id": "r_Khối_Kỹ_thuật",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Khối Kỹ thuật",
+                  "uth_20250430": 116,
+                  "kh_20251231": 123,
+                  "th_20240430": 115,
+                  "pct_kh": "94%",
+                  "pct_ck": "101%",
+                  "th_20190430": 126,
+                  "pct_ck2019": "92%"
+                },
+                "groupId": "grp_labor_blocks"
+              },
+              {
+                "id": "r_Khối_Khai_thác_bay",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Khối Khai thác bay",
+                  "uth_20250430": 322,
+                  "kh_20251231": 340,
+                  "th_20240430": 318,
+                  "pct_kh": "95%",
+                  "pct_ck": "101%",
+                  "th_20190430": 378,
+                  "pct_ck2019": "85%"
+                },
+                "groupId": "grp_labor_blocks"
+              },
+              {
+                "id": "grp_pilots",
+                "kind": "group",
+                "group": {
+                  "title": "Phi công",
+                  "defaultExpanded": true,
+                  "cells": {
+                    "uth_20250430": 1076,
+                    "kh_20251231": 1135,
+                    "th_20240430": 1045,
+                    "pct_kh": "95%",
+                    "pct_ck": "103%",
+                    "th_20190430": 1088,
+                    "pct_ck2019": "99%"
+                  }
                 }
               },
               {
+                "id": "r_Phi_công_Việt_Nam",
                 "cells": {
-                  "stt": "",
-                  "kpi": "- Thời điểm 31/7",
-                  "th2026": {
-                    "value": "7.498",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "99%",
-                  "vs_ck": "105%",
-                  "vs_ck19": "96%"
+                  "category": "\u00A0\u00A0\u00A0\u00A0Phi công Việt Nam",
+                  "uth_20250430": 955,
+                  "kh_20251231": 944,
+                  "th_20240430": 923,
+                  "pct_kh": "101%",
+                  "pct_ck": "103%",
+                  "th_20190430": 813,
+                  "pct_ck2019": "117%"
+                },
+                "groupId": "grp_pilots"
+              },
+              {
+                "id": "r_Phi_công_ALS",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Phi công ALS",
+                  "uth_20250430": 15,
+                  "kh_20251231": 56,
+                  "th_20240430": 0,
+                  "pct_kh": "27%",
+                  "pct_ck": "—",
+                  "th_20190430": 0,
+                  "pct_ck2019": "—"
+                },
+                "groupId": "grp_pilots"
+              },
+              {
+                "id": "r_Phi_công_nước_ngoài",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Phi công nước ngoài",
+                  "uth_20250430": 106,
+                  "kh_20251231": 135,
+                  "th_20240430": 122,
+                  "pct_kh": "79%",
+                  "pct_ck": "87%",
+                  "th_20190430": 275,
+                  "pct_ck2019": "39%"
+                },
+                "groupId": "grp_pilots"
+              },
+              {
+                "id": "grp_fas",
+                "kind": "group",
+                "group": {
+                  "title": "Tiếp viên",
+                  "defaultExpanded": true,
+                  "cells": {
+                    "uth_20250430": 2998,
+                    "kh_20251231": 3216,
+                    "th_20240430": 3049,
+                    "pct_kh": "93%",
+                    "pct_ck": "98%",
+                    "th_20190430": 2972,
+                    "pct_ck2019": "101%"
+                  }
                 }
               },
               {
+                "id": "r_Tiếp_viên_Việt_Nam",
                 "cells": {
-                  "stt": "",
-                  "kpi": "- Sử dụng bình quân",
-                  "th2026": {
-                    "value": "7.468",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "99%",
-                  "vs_ck": "104%",
-                  "vs_ck19": "96%"
+                  "category": "\u00A0\u00A0\u00A0\u00A0Tiếp viên Việt Nam",
+                  "uth_20250430": 1106,
+                  "kh_20251231": 1145,
+                  "th_20240430": 1149,
+                  "pct_kh": "97%",
+                  "pct_ck": "96%",
+                  "th_20190430": 1582,
+                  "pct_ck2019": "70%"
+                },
+                "groupId": "grp_fas"
+              },
+              {
+                "id": "r_Tiếp_viên_ALS",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Tiếp viên ALS",
+                  "uth_20250430": 1879,
+                  "kh_20251231": 2055,
+                  "th_20240430": 1883,
+                  "pct_kh": "91%",
+                  "pct_ck": "100%",
+                  "th_20190430": 1338,
+                  "pct_ck2019": "140%"
+                },
+                "groupId": "grp_fas"
+              },
+              {
+                "id": "r_Tiếp_viên_nước_ngoài",
+                "cells": {
+                  "category": "\u00A0\u00A0\u00A0\u00A0Tiếp viên nước ngoài",
+                  "uth_20250430": 13,
+                  "kh_20251231": 16,
+                  "th_20240430": 17,
+                  "pct_kh": "81%",
+                  "pct_ck": "76%",
+                  "th_20190430": 52,
+                  "pct_ck2019": "25%"
+                },
+                "groupId": "grp_fas"
+              },
+              {
+                "id": "grp_vasco",
+                "kind": "group",
+                "group": {
+                  "title": "VASCO (LĐ mặt đất)",
+                  "defaultExpanded": true,
+                  "cells": {
+                    "uth_20250430": 122,
+                    "kh_20251231": 128,
+                    "th_20240430": 129,
+                    "pct_kh": "95%",
+                    "pct_ck": "95%",
+                    "th_20190430": 176,
+                    "pct_ck2019": "69%"
+                  }
                 }
               },
               {
-                "cells": {
-                  "stt": "1.2",
-                  "kpi": "Lao động (VNA)",
-                  "th2026": "",
-                  "vs_kh": "",
-                  "vs_ck": "",
-                  "vs_ck19": ""
+                "id": "grp_total",
+                "kind": "group",
+                "group": {
+                  "title": "TỔNG LĐSD",
+                  "defaultExpanded": true,
+                  "cells": {
+                    "uth_20250430": 7091,
+                    "kh_20251231": 7561,
+                    "th_20240430": 7107,
+                    "pct_kh": "94%",
+                    "pct_ck": "100%",
+                    "th_20190430": 7778,
+                    "pct_ck2019": "91%"
+                  }
                 }
               },
               {
+                "id": "r_Lao_động_VNA",
                 "cells": {
-                  "stt": "",
-                  "kpi": "- Thời điểm 31/7",
-                  "th2026": {
-                    "value": "5.258",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "100%",
-                  "vs_ck": "101%",
-                  "vs_ck19": "82%"
-                }
+                  "category": "\u00A0\u00A0\u00A0\u00A0Lao động VNA",
+                  "uth_20250430": 5197,
+                  "kh_20251231": 5450,
+                  "th_20240430": 5224,
+                  "pct_kh": "95%",
+                  "pct_ck": "99%",
+                  "th_20190430": 6440,
+                  "pct_ck2019": "81%"
+                },
+                "groupId": "grp_total"
               },
               {
+                "id": "r_Lao_động_VNA_NSLĐ",
                 "cells": {
-                  "stt": "",
-                  "kpi": "- Sử dụng bình quân",
-                  "th2026": {
-                    "value": "5.233",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "99%",
-                  "vs_ck": "100%",
-                  "vs_ck19": "82%"
-                }
-              },
-              {
-                "cells": {
-                  "stt": "2",
-                  "kpi": "Năng suất lao động theo RTK (Nghìn tấn.km/LĐ)",
-                  "th2026": "",
-                  "vs_kh": "",
-                  "vs_ck": "",
-                  "vs_ck19": ""
-                }
-              },
-              {
-                "cells": {
-                  "stt": "2.1",
-                  "kpi": "VNA + TV ALS",
-                  "th2026": {
-                    "value": "180",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "98%",
-                  "vs_ck": "112%",
-                  "vs_ck19": "125%"
-                }
-              },
-              {
-                "cells": {
-                  "stt": "2.2",
-                  "kpi": "VNA",
-                  "th2026": {
-                    "value": "256",
-                    "tone": "neutral"
-                  },
-                  "vs_kh": "97%",
-                  "vs_ck": "116%",
-                  "vs_ck19": "147%"
-                }
+                  "category": "\u00A0\u00A0\u00A0\u00A0Lao động VNA (NSLĐ)",
+                  "uth_20250430": 5185,
+                  "kh_20251231": 5438,
+                  "th_20240430": 5211,
+                  "pct_kh": "95%",
+                  "pct_ck": "100%",
+                  "th_20190430": 6373,
+                  "pct_ck2019": "81%"
+                },
+                "groupId": "grp_total"
               }
-            ]
+            ],
+            "density": "compact",
+            "type": "grouped"
           }
         }
       ]

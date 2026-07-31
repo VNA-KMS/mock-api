@@ -1,0 +1,86 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th2025",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "kh2026",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "th2026",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          1495,
+          1550,
+          1522
+        ],
+        [
+          "Q2",
+          1495,
+          1550,
+          1522
+        ],
+        [
+          "Q3",
+          1495,
+          1550,
+          1522
+        ],
+        [
+          "Q4",
+          1495,
+          1550,
+          null
+        ],
+        [
+          "TB",
+          1495,
+          1550,
+          1522
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th2025",
+            "chartType": "bar"
+          },
+          {
+            "field": "kh2026",
+            "chartType": "line",
+            "showSymbol": true
+          },
+          {
+            "field": "th2026",
+            "chartType": "bar",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

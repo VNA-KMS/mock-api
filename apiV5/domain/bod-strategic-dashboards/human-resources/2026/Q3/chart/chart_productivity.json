@@ -1,0 +1,119 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          1199,
+          1260,
+          1245,
+          1199,
+          1260,
+          1245
+        ],
+        [
+          "Q2",
+          1199,
+          1260,
+          1245,
+          2398,
+          2520,
+          2490
+        ],
+        [
+          "Q3",
+          1199,
+          1260,
+          1245,
+          3597,
+          3780,
+          3735
+        ],
+        [
+          "Q4",
+          1199,
+          1260,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "TB",
+          1199,
+          1260,
+          1245,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "showSymbol": true
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

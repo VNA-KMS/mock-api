@@ -5,66 +5,26 @@
     "description": "Vị thế thị trường & thị phần theo khu vực đang biến động ra sao?"
   },
   "metricCards": {
-    "accentClassName": "bg-primary",
+    "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 3
+      "columns": 4,
+      "gap": 12
     },
     "items": [
       {
-        "status": "compact",
-        "id": "t_tot",
-        "title": "Khách tổng thị trường",
-        "value": "2.3",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "4.3% vs dự báo",
-            "type": "plan",
-            "value": "4.3%",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "4%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            2,
-            2,
-            2.1,
-            2.1,
-            2.2,
-            2.2,
-            2.3,
-            2.3
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        }
-      },
-      {
-        "status": "compact",
         "id": "t_int",
+        "status": "compact",
         "title": "Khách tổng thị trường - Quốc tế",
         "value": "1.1",
         "unit": "triệu khách",
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "down",
-            "label": "4.1% vs dự báo",
-            "type": "plan",
-            "value": "4.1%",
-            "tone": "negative"
+            "direction": "up",
+            "label": "4.5% so với dự báo",
+            "type": "forecast",
+            "value": "4.5%",
+            "tone": "positive"
           },
           {
             "direction": "up",
@@ -93,8 +53,49 @@
         }
       },
       {
+        "id": "s_int",
         "status": "compact",
+        "title": "Thị phần VNA group - Quốc tế",
+        "value": "28.2",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "6.1 điểm so với dự báo",
+            "type": "forecast",
+            "value": "6.1 điểm",
+            "tone": "positive"
+          },
+          {
+            "direction": "down",
+            "label": "0.5 điểm với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "0.5 điểm",
+            "status": 0,
+            "tone": "negative"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.negative"
+        }
+      },
+      {
         "id": "t_dom",
+        "status": "compact",
         "title": "Khách tổng thị trường - Nội địa",
         "value": "1.2",
         "unit": "triệu khách",
@@ -102,9 +103,9 @@
         "trend": [
           {
             "direction": "down",
-            "label": "1.5% vs dự báo",
-            "type": "plan",
-            "value": "1.5%",
+            "label": "4.2% so với dự báo",
+            "type": "forecast",
+            "value": "4.2%",
             "tone": "negative"
           },
           {
@@ -131,6 +132,47 @@
         },
         "colorTokens": {
           "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "s_dom",
+        "status": "compact",
+        "title": "Thị phần VNA group - Nội địa",
+        "value": "45.4",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "6.5 điểm so với dự báo",
+            "type": "forecast",
+            "value": "6.5 điểm",
+            "tone": "negative"
+          },
+          {
+            "direction": "down",
+            "label": "0.6 điểm với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "0.6 điểm",
+            "status": 0,
+            "tone": "negative"
+          }
+        ],
+        "visualization": {
+          "type": "sparkline",
+          "data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "colorTokens": {
+          "visualization": "semantic.negative"
         }
       }
     ]
@@ -216,174 +258,325 @@
       "key": "network",
       "col": 1,
       "colSpan": 8,
-      "label": "Network",
+      "label": "Phạm vi mạng bay",
       "showInfo": true,
       "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
       "size": "sm",
       "options": [
         {
           "value": "total",
-          "label": "TOTAL"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
-          "label": "INT"
+          "label": "Quốc tế"
         },
         {
           "value": "dom",
-          "label": "DOM"
+          "label": "Nội địa"
         }
       ]
     }
   ],
+  "filterColumns": 60,
   "contentFilter": {
     "network": {
       "total": {
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 4,
+            "gap": 12
+          },
+          "items": [
+            {
+              "id": "t_int",
+              "status": "compact",
+              "title": "Khách tổng thị trường - Quốc tế",
+              "value": "1.1",
+              "unit": "triệu khách",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "4.5% so với dự báo",
+                  "type": "forecast",
+                  "value": "4.5%",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "6% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "6%",
+                  "status": 0,
+                  "tone": "positive"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  1.3,
+                  1.3,
+                  1.2,
+                  1.2,
+                  1.2,
+                  1.2,
+                  1.1,
+                  1.1
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "s_int",
+              "status": "compact",
+              "title": "Thị phần VNA group - Quốc tế",
+              "value": "28.2",
+              "unit": "%",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "6.1 điểm so với dự báo",
+                  "type": "forecast",
+                  "value": "6.1 điểm",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.5 điểm với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "0.5 điểm",
+                  "status": 0,
+                  "tone": "negative"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.negative"
+              }
+            },
+            {
+              "id": "t_dom",
+              "status": "compact",
+              "title": "Khách tổng thị trường - Nội địa",
+              "value": "1.2",
+              "unit": "triệu khách",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "4.2% so với dự báo",
+                  "type": "forecast",
+                  "value": "4.2%",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "2%",
+                  "status": 0,
+                  "tone": "positive"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  1.4,
+                  1.4,
+                  1.3,
+                  1.3,
+                  1.3,
+                  1.3,
+                  1.2,
+                  1.2
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "s_dom",
+              "status": "compact",
+              "title": "Thị phần VNA group - Nội địa",
+              "value": "45.4",
+              "unit": "%",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "6.5 điểm so với dự báo",
+                  "type": "forecast",
+                  "value": "6.5 điểm",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.6 điểm với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "0.6 điểm",
+                  "status": 0,
+                  "tone": "negative"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.negative"
+              }
+            }
+          ]
+        },
         "chartBoard": [
           {
-            "title": "Khách tổng thị trường Overtime",
+            "title": "Khách tổng thị trường",
             "items": [
               {
-                "id": "b_pax_total",
-                "title": "Toàn thị trường",
-                "subTitle": "ĐVT: Triệu khách",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_pax_total.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Toàn thị trường: Thực hiện 2,30 triệu; so với CK tăng 103,5%; so với dự báo vượt 72,9%.",
-                  "tone": "info",
-                  "status": 1
-                }
-              },
-              {
                 "id": "b_pax_int",
-                "title": "Quốc tế",
-                "subTitle": "ĐVT: Triệu khách",
+                "title": "Khách tổng thị trường - Quốc tế",
+                "subTitle": "ĐVT: triệu khách",
                 "col": 1,
                 "colSpan": 30,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_pax_int.json",
+                "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Quốc tế: Thực hiện 1,10 triệu; so với CK tăng 7,8%; so với dự báo đạt 90,2%.",
-                  "tone": "info",
+                  "text": "Khách quốc tế tháng 7 đạt 1,10 triệu khách, tăng 7,8% so với cùng kỳ 2025, so với dự báo tăng 4.5%.",
+                  "severity": "info",
                   "status": 1
-                }
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_pax_int.json"
               },
               {
                 "id": "b_pax_dom",
-                "title": "Nội địa",
-                "subTitle": "ĐVT: Triệu khách",
+                "title": "Khách tổng thị trường - Nội địa",
+                "subTitle": "ĐVT: triệu khách",
                 "col": 31,
                 "colSpan": 30,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_pax_dom.json",
+                "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Nội địa: Thực hiện 1,20 triệu; so với CK tăng 10,1%; so với dự báo đạt 95,2%.",
-                  "tone": "info",
+                  "text": "Khách nội địa tháng 7 đạt 1,20 triệu khách, tăng 10,1% so với cùng kỳ 2025, so với dự báo giảm 4.2%.",
+                  "severity": "info",
                   "status": 1
-                }
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_pax_dom.json"
               }
             ]
           },
           {
-            "title": "Cơ cấu thị trường theo khu vực",
-            "items": [
-              {
-                "id": "b_total_int_structure_pie",
-                "title": "Quốc tế",
-                "subTitle": "ĐVT: %",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_int_structure_pie.json",
-                "aiInsight": {
-                  "text": "Khách quốc tế tăng mạnh: NEA (+12,1%), SWP (+5,2%), SEA (+4,8%). Giảm: EU (-2,3%), US (-1,5%).",
-                  "tone": "info",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_total_dom_structure_pie",
-                "title": "Nội địa",
-                "subTitle": "ĐVT: %",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_dom_structure_pie.json",
-                "aiInsight": {
-                  "text": "Khách nội địa tăng mạnh: HANSGN (+6,2%), HANDAD (+4,5%), Tour (+3,8%). Giảm: SGNDAD (-0,5%).",
-                  "tone": "info",
-                  "status": 1
-                }
-              }
-            ]
-          },
-          {
-            "title": "Thị phần VNA Group",
+            "title": "Thị phần VNA group",
             "items": [
               {
                 "id": "b_share_int",
-                "title": "Thị phần VNA Group - Quốc tế",
-                "subTitle": "ĐVT: %",
+                "title": "Thị phần VNA group - Quốc tế",
+                "subTitle": "Đơn vị: %",
                 "col": 1,
                 "colSpan": 30,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_share_int.json",
+                "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Thị phần VNA Group - Quốc tế: Thực hiện 28,2%; so với CK giảm 0,5 điểm %; so với KH thấp hơn 1,0 điểm %.",
-                  "tone": "info",
+                  "text": "Thị phần VNA group quốc tế tháng 7 đạt 25,8%, giảm 0,7% so với cùng kỳ 2025, so với dự báo giảm 6,1%.",
+                  "severity": "info",
                   "status": 1
-                }
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_share_int.json"
               },
               {
                 "id": "b_share_dom",
-                "title": "Thị phần VNA Group - Nội địa",
-                "subTitle": "ĐVT: %",
+                "title": "Thị phần VNA group - Nội địa",
+                "subTitle": "Đơn vị: %",
                 "col": 31,
                 "colSpan": 30,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_share_dom.json",
+                "height": 260,
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Thị phần VNA Group - Nội địa: Thực hiện 45,4%; so với CK giảm 0,6 điểm %; so với KH thấp hơn 0,4 điểm %.",
-                  "tone": "info",
+                  "text": "Thị phần VNA group nội địa tháng 7 đạt 42,5%, giảm 0,5% so với cùng kỳ 2025, so với dự báo giảm 6,5%.",
+                  "severity": "info",
                   "status": 1
-                }
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_share_dom.json"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_market_structure_int",
+                "title": "Cơ cấu thị trường quốc tế",
+                "subTitle": "Đơn vị: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "height": 350,
+                "aiInsight": {
+                  "text": "NEA dẫn đầu (35%), SEA (25%), EUR (15%), CLMV (10%), SWP (8%), MID (4%), NOA (3%).",
+                  "severity": "info",
+                  "status": 1
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_market_structure_int.json"
+              },
+              {
+                "id": "b_market_structure_dom",
+                "title": "Cơ cấu thị trường nội địa",
+                "subTitle": "Đơn vị: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "height": 350,
+                "aiInsight": {
+                  "text": "HANSGN dẫn đầu (28%), trục lẻ (22%), HANDAD (18%), SGNDAD (16%), du lịch (13%), địa phương (9%).",
+                  "severity": "info",
+                  "status": 1
+                },
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_total_b_market_structure_dom.json"
               }
             ]
           }
@@ -392,9 +585,8 @@
           "insight": {
             "title": "Nhận định",
             "items": [
-              "<strong>Tháng 7:</strong> Thực hiện <strong>1,1</strong> triệu khách; so với CK tăng <strong>4%</strong>; so với dự báo đạt <strong>94,6%</strong>.",
-              "<strong>Luỹ kế T7:</strong> Thực hiện <strong>7,9</strong> triệu khách; so với CK tăng <strong>7,3%</strong>; so với dự báo đạt <strong>97,4%</strong>.",
-              "<strong>Quý 3:</strong> Thực hiện <strong>3,3</strong> triệu khách; so với CK tăng <strong>6,8%</strong>; so với dự báo đạt <strong>95,1%</strong>."
+              "<strong>Quốc tế:</strong> Khách tổng thị trường đạt <strong>1,1</strong> triệu khách; so với cùng kỳ tăng <strong>6%</strong>; so với dự báo tăng <strong>4.5%</strong>.",
+              "<strong>Nội địa:</strong> Khách tổng thị trường đạt <strong>1,2</strong> triệu khách; so với cùng kỳ tăng <strong>2%</strong>; so với dự báo giảm <strong>4.2%</strong>."
             ],
             "variant": "info",
             "showAiBadge": true,
@@ -403,21 +595,113 @@
           "risk": {
             "title": "Điểm sáng / Cảnh báo / Rủi ro",
             "items": [
-              "Khách quốc tế tăng mạnh: NEA (+12,1%), SWP (+5,2%), SEA (+4,8%). Giảm: EU (-2,3%), US (-1,5%).",
-              "Khách nội địa tăng mạnh: HANSGN (+6,2%), HANDAD (+4,5%), Tour (+3,8%). Giảm: SGNDAD (-0,5%)."
+              "<strong>Quốc tế:</strong> Giảm ở CLMV (<strong>-12,2%</strong>), NEA (<strong>-4,5%</strong>), MID (<strong>-2,4%</strong>), NOA (<strong>-2,1%</strong>); tăng ở SWP (<strong>+17,6%</strong>), SEA (<strong>+2,3%</strong>), EUR (<strong>+1,0%</strong>), SAS (<strong>+0,4%</strong>).",
+              "<strong>Nội địa:</strong> Trong đó HANSGN tăng <strong>5,2%</strong>, HANDAD tăng <strong>10,3%</strong>, SGNDAD tăng <strong>4,8%</strong>, trục lẻ tăng <strong>12,6%</strong>, du lịch tăng <strong>7,5%</strong>, địa phương tăng <strong>4,5%</strong>."
             ],
             "variant": "warning"
           }
         }
       },
       "int": {
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 4,
+            "gap": 12
+          },
+          "items": [
+            {
+              "id": "t_int",
+              "status": "compact",
+              "title": "Khách tổng thị trường - Quốc tế",
+              "value": "1.1",
+              "unit": "triệu khách",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "4.5% so với dự báo",
+                  "type": "forecast",
+                  "value": "4.5%",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "up",
+                  "label": "6% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "6%",
+                  "status": 0,
+                  "tone": "positive"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  1.3,
+                  1.3,
+                  1.2,
+                  1.2,
+                  1.2,
+                  1.2,
+                  1.1,
+                  1.1
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "s_int",
+              "status": "compact",
+              "title": "Thị phần VNA group - Quốc tế",
+              "value": "28.2",
+              "unit": "%",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "up",
+                  "label": "6.1 điểm so với dự báo",
+                  "type": "forecast",
+                  "value": "6.1 điểm",
+                  "tone": "positive"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.5 điểm với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "0.5 điểm",
+                  "status": 0,
+                  "tone": "negative"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.negative"
+              }
+            }
+          ]
+        },
         "chartBoard": [
           {
-            "title": "Khách tổng thị trường Overtime",
+            "title": "Khách tổng thị trường",
             "items": [
               {
                 "id": "b_int_eu",
-                "title": "EU",
+                "title": "EUR",
+                "subTitle": "ĐVT: triệu khách",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
@@ -429,58 +713,18 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực EU: Số thực hiện T7: 95.2K, tăng 8.3% so với CK, dự báo T8: 95.8K.",
+                  "text": "Khách EUR tháng 7 đạt 0,18 triệu khách; so với cùng kỳ giảm 5,3%; so với dự báo giảm 28,0%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
-              },
-              {
-                "id": "b_int_au_us",
-                "title": "SWP",
-                "col": 21,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_au_us.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Khu vực SWP: Số thực hiện T7: 45.8K, tăng 5.2% so với CK, dự báo T8: 46.2K.",
-                  "tone": "info",
-                  "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
-              },
-              {
-                "id": "b_int_us",
-                "title": "US",
-                "col": 41,
-                "colSpan": 20,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_us.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Khu vực US: Số thực hiện T7: 6.7K, giảm 9.7% so với CK, dự báo T8: 5.0K.",
-                  "tone": "info",
-                  "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               },
               {
                 "id": "b_int_nea",
                 "title": "NEA",
-                "col": 1,
+                "subTitle": "ĐVT: triệu khách",
+                "col": 21,
                 "colSpan": 20,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_nea.json",
@@ -489,18 +733,18 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực NEA: Số thực hiện T7: 128.5K, tăng 12.1% so với CK, dự báo T8: 130.2K.",
+                  "text": "Khách NEA tháng 7 đạt 0,22 triệu khách; so với cùng kỳ giảm 4,3%; so với dự báo giảm 8,3%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               },
               {
                 "id": "b_int_sea",
                 "title": "SEA",
-                "col": 21,
+                "subTitle": "ĐVT: triệu khách",
+                "col": 41,
                 "colSpan": 20,
-                "row": 2,
+                "row": 1,
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_sea.json",
@@ -509,15 +753,55 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực SEA: Số thực hiện T7: 156.8K, tăng 15.4% so với CK, dự báo T8: 158.5K.",
+                  "text": "Khách SEA tháng 7 đạt 0,25 triệu khách; so với cùng kỳ tăng 8,7%; so với dự báo giảm 44,4%.",
                   "tone": "info",
                   "status": 1
+                }
+              },
+              {
+                "id": "b_int_noa",
+                "title": "NOA",
+                "subTitle": "ĐVT: triệu khách",
+                "col": 1,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_noa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
                 },
-                "subTitle": "ĐVT: triệu khách"
+                "aiInsight": {
+                  "text": "Khách NOA tháng 7 đạt 0,01 triệu khách; so với cùng kỳ giảm 9,7%; so với dự báo giảm 53,7%.",
+                  "tone": "info",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_int_au_us",
+                "title": "SWP",
+                "subTitle": "ĐVT: triệu khách",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_au_us.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khách SWP tháng 7 đạt 0,15 triệu khách; so với cùng kỳ giảm 6,3%; so với dự báo giảm 16,7%.",
+                  "tone": "info",
+                  "status": 1
+                }
               },
               {
                 "id": "b_int_clmv",
                 "title": "CLMV",
+                "subTitle": "ĐVT: triệu khách",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
@@ -529,45 +813,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực CLMV: Số thực hiện T7: 38.2K, tăng 6.8% so với CK, dự báo T8: 38.9K.",
-                  "tone": "info",
-                  "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
-              }
-            ]
-          },
-          {
-            "title": "Thị phần khách theo khu vực",
-            "items": [
-              {
-                "id": "b_int_route_share",
-                "title": "Thị phần khách theo khu vực",
-                "subTitle": "ĐVT: %",
-                "col": 1,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 400,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_route_treemap.json",
-                "aiInsight": {
-                  "text": "Thị phần route quốc tế: SWP chiếm tỷ trọng lớn nhất, tiếp theo là CLMV và NEA.",
-                  "tone": "info",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_int_country_share",
-                "title": "Thị phần khách theo quốc gia",
-                "subTitle": "ĐVT: %",
-                "col": 31,
-                "colSpan": 30,
-                "row": 1,
-                "rowSpan": 1,
-                "height": 400,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_country_share.json",
-                "aiInsight": {
-                  "text": "Thị phần khách theo quốc gia: Úc và Nhật Bản chiếm tỷ trọng lớn nhất trong các đường bay quốc tế.",
+                  "text": "Khách CLMV tháng 7 đạt 0,20 triệu khách; so với cùng kỳ tăng 5,3%; so với dự báo giảm 28,6%.",
                   "tone": "info",
                   "status": 1
                 }
@@ -575,7 +821,7 @@
             ]
           },
           {
-            "title": "Thị phần các hãng trên đường bay QT",
+            "title": "Thị phần khách theo hãng bay",
             "items": [
               {
                 "id": "b_qt_vn",
@@ -587,8 +833,12 @@
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_qt_vn.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "aiInsight": {
-                  "text": "TTT bao gồm cả thương lệ và thuê chuyến",
+                  "text": "Thị phần VN trên đường bay quốc tế T7 đạt 20,3%, tăng so với cùng kỳ. TTT bao gồm cả thương lệ và thuê chuyến.",
                   "tone": "info",
                   "status": 1
                 }
@@ -603,8 +853,12 @@
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_qt_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "aiInsight": {
-                  "text": "TTT bao gồm cả thương lệ và thuê chuyến",
+                  "text": "Thị phần VJ trên đường bay quốc tế T7 đạt 18,7%, duy trì ổn định. TTT bao gồm cả thương lệ và thuê chuyến.",
                   "tone": "info",
                   "status": 1
                 }
@@ -619,11 +873,43 @@
                 "rowSpan": 1,
                 "height": 280,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_qt_oal.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
                 "aiInsight": {
-                  "text": "TTT bao gồm cả thương lệ và thuê chuyến",
+                  "text": "Thị phần các hãng khác trên đường bay quốc tế T7 đạt 61%, chiếm tỷ trọng lớn nhất. TTT bao gồm cả thương lệ và thuê chuyến.",
                   "tone": "info",
                   "status": 1
                 }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_int_treemap",
+                "title": "Cơ cấu thị trường quốc tế",
+                "subTitle": "Đơn vị: %",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_treemap.json"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_int_treemap_country",
+                "title": "Cơ cấu thị trường theo country",
+                "subTitle": "Đơn vị: %",
+                "col": 1,
+                "colSpan": 60,
+                "row": 2,
+                "height": 350,
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_int_b_int_country.json"
               }
             ]
           }
@@ -632,9 +918,8 @@
           "insight": {
             "title": "Nhận định",
             "items": [
-              "<strong>Tháng 7:</strong> Thực hiện <strong>0,5</strong> triệu khách; so với CK tăng <strong>10%</strong>; so với dự báo đạt <strong>92%</strong>.",
-              "<strong>Luỹ kế T7:</strong> Thực hiện <strong>2,7</strong> triệu khách; so với CK tăng <strong>14,6%</strong>; so với dự báo vượt <strong>5%</strong>.",
-              "<strong>Quý 3:</strong> Thực hiện <strong>1,4</strong> triệu khách; so với CK tăng <strong>11,5%</strong>; so với dự báo đạt <strong>93,8%</strong>."
+              "<strong>Quốc tế:</strong> Khách tổng thị trường đạt <strong>1,1</strong> triệu khách; so với cùng kỳ tăng <strong>6%</strong>; so với dự báo tăng <strong>4.5%</strong>.",
+              "<strong>Nội địa:</strong> Khách tổng thị trường đạt <strong>1,2</strong> triệu khách; so với cùng kỳ tăng <strong>2%</strong>; so với dự báo giảm <strong>4.2%</strong>."
             ],
             "variant": "info",
             "showAiBadge": true,
@@ -643,14 +928,105 @@
           "risk": {
             "title": "Điểm sáng / Cảnh báo / Rủi ro",
             "items": [
-              "Khách quốc tế tăng mạnh: khu vực NEA (+12,1%), SWP (+5,2%), SEA (+4,8%). Giảm mạnh: EU (-2,3%), US (-1,5%).",
-              "Thị phần VNA Group quốc tế T7 đạt 28,2%, thấp hơn 0,8 điểm % so với KH."
+              "<strong>Quốc tế:</strong> Giảm ở CLMV (<strong>-12,2%</strong>), NEA (<strong>-4,5%</strong>), MID (<strong>-2,4%</strong>), NOA (<strong>-2,1%</strong>); tăng ở SWP (<strong>+17,6%</strong>), SEA (<strong>+2,3%</strong>), EUR (<strong>+1,0%</strong>), SAS (<strong>+0,4%</strong>).",
+              "<strong>Nội địa:</strong> Trong đó HANSGN tăng <strong>5,2%</strong>, HANDAD tăng <strong>10,3%</strong>, SGNDAD tăng <strong>4,8%</strong>, trục lẻ tăng <strong>12,6%</strong>, du lịch tăng <strong>7,5%</strong>, địa phương tăng <strong>4,5%</strong>."
             ],
             "variant": "warning"
           }
         }
       },
       "dom": {
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "layout": {
+            "columns": 4,
+            "gap": 12
+          },
+          "items": [
+            {
+              "id": "t_dom",
+              "status": "compact",
+              "title": "Khách tổng thị trường - Nội địa",
+              "value": "1.2",
+              "unit": "triệu khách",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "4.2% so với dự báo",
+                  "type": "forecast",
+                  "value": "4.2%",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "2%",
+                  "status": 0,
+                  "tone": "positive"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  1.4,
+                  1.4,
+                  1.3,
+                  1.3,
+                  1.3,
+                  1.3,
+                  1.2,
+                  1.2
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "s_dom",
+              "status": "compact",
+              "title": "Thị phần VNA group - Nội địa",
+              "value": "45.4",
+              "unit": "%",
+              "backgroundStatus": 2,
+              "trend": [
+                {
+                  "direction": "down",
+                  "label": "6.5 điểm so với dự báo",
+                  "type": "forecast",
+                  "value": "6.5 điểm",
+                  "tone": "negative"
+                },
+                {
+                  "direction": "down",
+                  "label": "0.6 điểm với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "0.6 điểm",
+                  "status": 0,
+                  "tone": "negative"
+                }
+              ],
+              "visualization": {
+                "type": "sparkline",
+                "data": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "colorTokens": {
+                "visualization": "semantic.negative"
+              }
+            }
+          ]
+        },
         "chartBoard": [
           {
             "title": "Khách tổng thị trường nội địa",
@@ -663,17 +1039,17 @@
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
+                "subTitle": "ĐVT: triệu khách",
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_hansgn.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực HANSGN: Số thực hiện T7: 182.5K, tăng 6.2% so với CK, dự báo T8: 184.0K",
+                  "text": "Khách HANSGN tháng 7 đạt 2,025 triệu khách; so với cùng kỳ giảm 4,7%; so với dự báo giảm 17,3%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               },
               {
                 "id": "b_dom_handad",
@@ -683,17 +1059,17 @@
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
+                "subTitle": "ĐVT: triệu khách",
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_handad.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực HANDAD: Số thực hiện T7: 95.8K, tăng 4.5% so với CK, dự báo T8: 96.5K",
+                  "text": "Khách HANDAD tháng 7 đạt 3,75 triệu khách; so với cùng kỳ giảm 5,1%; so với dự báo giảm 12,8%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               },
               {
                 "id": "b_dom_sgndad",
@@ -703,77 +1079,77 @@
                 "row": 1,
                 "rowSpan": 1,
                 "height": 280,
+                "subTitle": "ĐVT: triệu khách",
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_sgndad.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực SGNDAD: Số thực hiện T7: 88.3K, tăng 3.8% so với CK, dự báo T8: 89.1K",
+                  "text": "Khách SGNDAD tháng 7 đạt 1,8 triệu khách; so với cùng kỳ giảm 5,3%; so với dự báo giảm 18,2%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               },
               {
-                "id": "b_dom_trucle",
-                "title": "Local Trunk",
+                "id": "b_dom_dulich",
+                "title": "Du lịch",
                 "col": 1,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_trucle.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "Khu vực Local Trunk: Số thực hiện T7: 42.6K, tăng 2.1% so với CK, dự báo T8: 43.0K",
-                  "tone": "info",
-                  "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
-              },
-              {
-                "id": "b_dom_dulich",
-                "title": "Tour",
-                "col": 21,
-                "colSpan": 20,
-                "row": 2,
-                "rowSpan": 1,
-                "height": 280,
+                "subTitle": "ĐVT: triệu khách",
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_dulich.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực Tour: Số thực hiện T7: 28.4K, tăng 7.5% so với CK, dự báo T8: 28.9K",
+                  "text": "Khách Du lịch tháng 7 đạt 2,75 triệu khách; so với cùng kỳ giảm 4,3%; so với dự báo giảm 15,4%.",
                   "tone": "info",
                   "status": 1
+                }
+              },
+              {
+                "id": "b_dom_trucle",
+                "title": "Trục lẻ",
+                "col": 21,
+                "colSpan": 20,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "ĐVT: triệu khách",
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_trucle.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
                 },
-                "subTitle": "ĐVT: triệu khách"
+                "aiInsight": {
+                  "text": "Khách Trục lẻ tháng 7 đạt 4,4 triệu khách; so với cùng kỳ giảm 4,9%; so với dự báo giảm 13,7%.",
+                  "tone": "info",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_diaphuong",
-                "title": "Local",
+                "title": "Địa phương",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
+                "subTitle": "ĐVT: triệu khách",
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_diaphuong.json",
                 "headerAction": {
                   "type": "cumulative",
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "Khu vực Local: Số thực hiện T7: 35.1K, tăng 1.8% so với CK, dự báo T8: 35.5K",
+                  "text": "Khách Địa phương tháng 7 đạt 1,225 triệu khách; so với cùng kỳ tăng 20,3%; so với dự báo tăng 2,1%.",
                   "tone": "info",
                   "status": 1
-                },
-                "subTitle": "ĐVT: triệu khách"
+                }
               }
             ]
           },
@@ -790,7 +1166,7 @@
                 "height": 400,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_carrier_share.json",
                 "aiInsight": {
-                  "text": "Thị phần các hãng theo khu vực: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần các hãng theo khu vực: VNA Group dẫn đầu, tiếp theo là VJ và QH.",
                   "tone": "info",
                   "status": 1
                 }
@@ -805,7 +1181,7 @@
                 "height": 400,
                 "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_share_pie.json",
                 "aiInsight": {
-                  "text": "Thị phần các hãng T7: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần các hãng nội địa T7: VNA Group dẫn đầu 50,9%, tiếp theo là VJ 28,3% và QH 12,1%.",
                   "tone": "info",
                   "status": 1
                 }
@@ -814,7 +1190,7 @@
                 "id": "b_dom_vna_group",
                 "title": "VNA Group",
                 "col": 1,
-                "colSpan": 30,
+                "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
@@ -825,7 +1201,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "VNA Group: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần VNA Group nội địa T7 đạt 26,2%, dẫn đầu thị trường nội địa.",
                   "tone": "info",
                   "status": 1
                 }
@@ -833,8 +1209,8 @@
               {
                 "id": "b_dom_vj",
                 "title": "VJ",
-                "col": 31,
-                "colSpan": 30,
+                "col": 21,
+                "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
                 "height": 280,
@@ -845,7 +1221,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "VJ: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần VJ nội địa T7 đạt 28,0%, duy trì vị thế cạnh tranh.",
                   "tone": "info",
                   "status": 1
                 }
@@ -853,9 +1229,9 @@
               {
                 "id": "b_dom_pa",
                 "title": "QH",
-                "col": 1,
+                "col": 41,
                 "colSpan": 20,
-                "row": 3,
+                "row": 2,
                 "rowSpan": 1,
                 "height": 280,
                 "subTitle": "Đơn vị: %",
@@ -865,27 +1241,7 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "QH: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
-                  "tone": "info",
-                  "status": 1
-                }
-              },
-              {
-                "id": "b_dom_vu",
-                "title": "VU",
-                "col": 21,
-                "colSpan": 20,
-                "row": 3,
-                "rowSpan": 1,
-                "height": 280,
-                "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_vu.json",
-                "headerAction": {
-                  "type": "cumulative",
-                  "defaultChecked": false
-                },
-                "aiInsight": {
-                  "text": "VU: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần QH nội địa T7 đạt 20,2%, ổn định so với cùng kỳ.",
                   "tone": "info",
                   "status": 1
                 }
@@ -893,8 +1249,8 @@
               {
                 "id": "b_dom_sun",
                 "title": "9G",
-                "col": 41,
-                "colSpan": 20,
+                "col": 1,
+                "colSpan": 30,
                 "row": 3,
                 "rowSpan": 1,
                 "height": 280,
@@ -905,7 +1261,27 @@
                   "defaultChecked": false
                 },
                 "aiInsight": {
-                  "text": "9G: Dữ liệu thị trường được cập nhật theo kỳ báo cáo.",
+                  "text": "Thị phần 9G nội địa T7 đạt 12,4%, tăng trưởng tích cực.",
+                  "tone": "info",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_dom_vu",
+                "title": "VU",
+                "col": 31,
+                "colSpan": 30,
+                "row": 3,
+                "rowSpan": 1,
+                "height": 280,
+                "subTitle": "Đơn vị: %",
+                "chartPath": "apiV5/domain/ceo-command-center/market-share/2026/07/chart/cf_network_dom_b_dom_vu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Thị phần VU nội địa T7 đạt 10,0%, tăng so với cùng kỳ.",
                   "tone": "info",
                   "status": 1
                 }
@@ -977,7 +1353,7 @@
               },
               {
                 "id": "b_dom_ms_trucle",
-                "title": "Local Trunk",
+                "title": "Trục lẻ",
                 "col": 1,
                 "colSpan": 20,
                 "row": 2,
@@ -997,7 +1373,7 @@
               },
               {
                 "id": "b_dom_ms_dulich",
-                "title": "Tour",
+                "title": "Du lịch",
                 "col": 21,
                 "colSpan": 20,
                 "row": 2,
@@ -1017,7 +1393,7 @@
               },
               {
                 "id": "b_dom_ms_diaphuong",
-                "title": "Local",
+                "title": "Địa phương",
                 "col": 41,
                 "colSpan": 20,
                 "row": 2,
@@ -1037,43 +1413,23 @@
               }
             ]
           }
-        ],
-        "insightCards": {
-          "insight": {
-            "title": "Nhận định",
-            "items": [
-              "<strong>Tháng 7:</strong> Thực hiện <strong>0,8</strong> triệu khách; so với CK tăng <strong>8,9%</strong>; so với dự báo đạt <strong>95,8%</strong>.",
-              "<strong>Luỹ kế T7:</strong> Thực hiện <strong>4,8</strong> triệu khách; so với CK tăng <strong>5,4%</strong>; so với dự báo vượt <strong>2%</strong>.",
-              "<strong>Quý 3:</strong> Thực hiện <strong>2,3</strong> triệu khách; so với CK tăng <strong>7,2%</strong>; so với dự báo đạt <strong>96,5%</strong>."
-            ],
-            "variant": "info",
-            "showAiBadge": true,
-            "aiBadgeLabel": "TRỢ LÝ AI"
-          },
-          "risk": {
-            "title": "Điểm sáng / Cảnh báo / Rủi ro",
-            "items": [
-              "Khách nội địa tăng mạnh: HANSGN (+6,2%), HANDAD (+4,5%), Tour (+3,8%). Giảm mạnh: SGNDAD (-0,5%), Local (-0,2%).",
-              "Thị phần VNA Group nội địa T7 đạt 45,4%, thấp hơn 0,6 điểm % so với KH."
-            ],
-            "variant": "warning"
-          }
-        }
+        ]
       }
     }
   },
   "timeFrameHiddenModes": [
     "day",
+    "quarter",
     "year",
     "custom"
   ],
   "insightCards": {
+    "title": "Nhận định & Đánh giá",
     "insight": {
       "title": "Nhận định",
       "items": [
-        "<strong>Tháng 7:</strong> Thực hiện <strong>1,1</strong> triệu khách; so với CK tăng <strong>4%</strong>; so với dự báo đạt <strong>94,6%</strong>.",
-        "<strong>Luỹ kế T7:</strong> Thực hiện <strong>7,9</strong> triệu khách; so với CK tăng <strong>7,3%</strong>; so với dự báo đạt <strong>97,4%</strong>.",
-        "<strong>Quý 3:</strong> Thực hiện <strong>3,3</strong> triệu khách; so với CK tăng <strong>6,8%</strong>; so với dự báo đạt <strong>95,1%</strong>."
+        "<strong>Quốc tế:</strong> Khách tổng thị trường đạt <strong>1,1</strong> triệu khách; so với cùng kỳ tăng <strong>6%</strong>; so với dự báo tăng <strong>4.5%</strong>.",
+        "<strong>Nội địa:</strong> Khách tổng thị trường đạt <strong>1,2</strong> triệu khách; so với cùng kỳ tăng <strong>2%</strong>; so với dự báo giảm <strong>4.2%</strong>."
       ],
       "variant": "info",
       "showAiBadge": true,
@@ -1082,144 +1438,10 @@
     "risk": {
       "title": "Điểm sáng / Cảnh báo / Rủi ro",
       "items": [
-        "Khách quốc tế tăng mạnh: NEA (+12,1%), SWP (+5,2%), SEA (+4,8%). Giảm: EU (-2,3%), US (-1,5%).",
-        "Khách nội địa tăng mạnh: HANSGN (+6,2%), HANDAD (+4,5%), Tour (+3,8%). Giảm: SGNDAD (-0,5%)."
+        "<strong>Quốc tế:</strong> Giảm ở CLMV (<strong>-12,2%</strong>), NEA (<strong>-4,5%</strong>), MID (<strong>-2,4%</strong>), NOA (<strong>-2,1%</strong>); tăng ở SWP (<strong>+17,6%</strong>), SEA (<strong>+2,3%</strong>), EUR (<strong>+1,0%</strong>), SAS (<strong>+0,4%</strong>).",
+        "<strong>Nội địa:</strong> Trong đó HANSGN tăng <strong>5,2%</strong>, HANDAD tăng <strong>10,3%</strong>, SGNDAD tăng <strong>4,8%</strong>, trục lẻ tăng <strong>12,6%</strong>, du lịch tăng <strong>7,5%</strong>, địa phương tăng <strong>4,5%</strong>."
       ],
       "variant": "warning"
     }
-  },
-  "metricCardsCumulative": {
-    "accentClassName": "bg-primary",
-    "layout": {
-      "columns": 3
-    },
-    "items": [
-      {
-        "status": "compact",
-        "id": "t_tot",
-        "title": "Khách tổng thị trường",
-        "value": "14",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "4.3% vs dự báo",
-            "type": "plan",
-            "value": "4.3%",
-            "tone": "positive"
-          },
-          {
-            "direction": "up",
-            "label": "4% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "4%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            13.9,
-            14.2,
-            14.6,
-            14.9,
-            15.3,
-            15.6,
-            16,
-            16.3
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        },
-        "cumulative": true
-      },
-      {
-        "status": "compact",
-        "id": "t_int",
-        "title": "Khách tổng thị trường - Quốc tế",
-        "value": "6.5",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "down",
-            "label": "4.1% vs dự báo",
-            "type": "plan",
-            "value": "4.1%",
-            "tone": "negative"
-          },
-          {
-            "direction": "up",
-            "label": "6% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "6%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            8.7,
-            8.5,
-            8.4,
-            8.2,
-            8.1,
-            7.9,
-            7.8,
-            7.6
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        },
-        "cumulative": true
-      },
-      {
-        "status": "compact",
-        "id": "t_dom",
-        "title": "Khách tổng thị trường - Nội địa",
-        "value": "7.5",
-        "unit": "triệu khách",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "down",
-            "label": "1.5% vs dự báo",
-            "type": "plan",
-            "value": "1.5%",
-            "tone": "negative"
-          },
-          {
-            "direction": "up",
-            "label": "2% với Cùng kỳ",
-            "type": "samePeriod",
-            "value": "2%",
-            "status": 0,
-            "tone": "positive"
-          }
-        ],
-        "visualization": {
-          "type": "sparkline",
-          "data": [
-            10,
-            9.8,
-            9.6,
-            9.4,
-            9.3,
-            9.1,
-            8.9,
-            8.7
-          ]
-        },
-        "colorTokens": {
-          "visualization": "semantic.positive"
-        },
-        "cumulative": true
-      }
-    ]
   }
 }
