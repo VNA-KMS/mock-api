@@ -1,0 +1,852 @@
+{
+  "titleInfo": {
+    "title": "Strategic Overview",
+    "statusLabel": "REAL TIME",
+    "description": "Tổng quan KPIs — tỷ lệ đạt mục tiêu, hiệu suất theo khối và bảng chi tiết"
+  },
+  "chartBoard": [
+    {
+      "items": [
+        {
+          "id": "so_donut_kpi",
+          "title": "TỔNG KPI THÁNG",
+          "titleClassName": "text-[#6F829B]",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "height": 156,
+          "autoChart": {
+            "chartType": "donut-kpi",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "label",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number",
+                  "color": [
+                    "semantic.positive",
+                    "semantic.negative"
+                  ]
+                }
+              ],
+              "rows": [
+                [
+                  "ĐẠT",
+                  48
+                ],
+                [
+                  "KHÔNG ĐẠT",
+                  16
+                ]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "auto",
+                "xField": "label",
+                "series": [
+                  {
+                    "field": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          "extraComponent": {
+            "type": "kpi-summary",
+            "position": "right",
+            "chartSpan": 4,
+            "extraSpan": 8,
+            "config": {
+              "total": 64,
+              "passed": 48,
+              "failed": 16,
+              "totalLabel": "TẤT CẢ CHỈ TIÊU",
+              "passedLabel": "ĐẠT",
+              "failedLabel": "KHÔNG ĐẠT"
+            }
+          }
+        },
+        {
+          "id": "so_bar_by_block",
+          "title": "TỶ LỆ ĐẠT MT THEO KHỐI",
+          "titleClassName": "text-[#6F829B]",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 2,
+          "autoChart": {
+            "chartType": "bar-h-stacked",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "group",
+                  "type": "string",
+                  "label": "Khối"
+                },
+                {
+                  "id": "dat",
+                  "type": "number",
+                  "label": "Đạt",
+                  "colorToken": "semantic.positive"
+                },
+                {
+                  "id": "khongDat",
+                  "type": "number",
+                  "label": "Không đạt",
+                  "colorToken": "semantic.negative"
+                }
+              ],
+              "rows": [
+                [
+                  "Khối thương mại",
+                  124,
+                  57
+                ],
+                [
+                  "Khối kỹ thuật",
+                  109,
+                  71
+                ],
+                [
+                  "Khối khai thác",
+                  97,
+                  87
+                ],
+                [
+                  "Khối tài chính",
+                  90,
+                  83
+                ],
+                [
+                  "Khối dịch vụ",
+                  106,
+                  82
+                ],
+                [
+                  "Khối an toàn",
+                  124,
+                  79
+                ],
+                [
+                  "Khối nhân sự",
+                  117,
+                  87
+                ],
+                [
+                  "Khối CNTT",
+                  133,
+                  73
+                ],
+                [
+                  "Khối pháp chế",
+                  125,
+                  81
+                ],
+                [
+                  "Khối khác",
+                  133,
+                  88
+                ]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "auto",
+                "xField": "group",
+                "stack": "total",
+                "labelInside": true,
+                "series": [
+                  {
+                    "field": "dat",
+                    "chartType": "bar"
+                  },
+                  {
+                    "field": "khongDat",
+                    "chartType": "bar"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "so_kpi_distribution",
+          "title": "PHÂN BỔ KPI THEO KHỐI",
+          "titleClassName": "text-[#6F829B]",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "height": 156,
+          "autoChart": {
+            "chartType": "kpi-distribution",
+            "dataset": {
+              "columns": [
+                {
+                  "id": "label",
+                  "type": "string"
+                },
+                {
+                  "id": "value",
+                  "type": "number"
+                }
+              ],
+              "rows": [
+                [
+                  "Khối thương mại",
+                  11
+                ],
+                [
+                  "Khối kỹ thuật",
+                  9
+                ],
+                [
+                  "Khối khai thác",
+                  8
+                ],
+                [
+                  "Khối tài chính",
+                  7
+                ],
+                [
+                  "Khối dịch vụ",
+                  6
+                ],
+                [
+                  "Khối an toàn",
+                  5
+                ],
+                [
+                  "Khối nhân sự",
+                  4
+                ],
+                [
+                  "Khối CNTT",
+                  3
+                ],
+                [
+                  "Khối pháp chế",
+                  2
+                ],
+                [
+                  "Khối khác",
+                  9
+                ]
+              ]
+            },
+            "views": [
+              {
+                "chartType": "auto",
+                "xField": "label",
+                "series": [
+                  {
+                    "field": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          "extraComponent": {
+            "type": "kpi-distribution",
+            "position": "right",
+            "chartSpan": 4,
+            "extraSpan": 8,
+            "config": {
+              "items": [
+                {
+                  "label": "Khối thương mại",
+                  "colorToken": "data.sea-blue"
+                },
+                {
+                  "label": "Khối kỹ thuật",
+                  "colorToken": "data.plum"
+                },
+                {
+                  "label": "Khối khai thác",
+                  "colorToken": "data.jade-blue"
+                },
+                {
+                  "label": "Khối tài chính",
+                  "colorToken": "data.plum"
+                },
+                {
+                  "label": "Khối dịch vụ",
+                  "colorToken": "data.olive-gold"
+                },
+                {
+                  "label": "Khối an toàn",
+                  "colorToken": "data.coral"
+                },
+                {
+                  "label": "Khối nhân sự",
+                  "colorToken": "semantic.positive"
+                },
+                {
+                  "label": "Khối CNTT",
+                  "colorToken": "data.sea-blue"
+                },
+                {
+                  "label": "Khối pháp chế",
+                  "colorToken": "data.jade-blue"
+                },
+                {
+                  "label": "Khối khác",
+                  "colorToken": "rag.warning"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "so_kpi_table",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "table": {
+            "density": "comfortable",
+            "columns": [
+              {
+                "id": "stt",
+                "label": "STT",
+                "type": "text",
+                "align": "center",
+                "width": 44
+              },
+              {
+                "id": "name",
+                "label": "Tên KPI",
+                "type": "text-stack",
+                "align": "left",
+                "width": 253
+              },
+              {
+                "id": "unit",
+                "label": "Đơn vị đo lường",
+                "type": "text",
+                "align": "left",
+                "width": 154
+              },
+              {
+                "id": "target",
+                "label": "Mục tiêu",
+                "type": "number",
+                "align": "left",
+                "width": 79
+              },
+              {
+                "id": "actual",
+                "label": "Thực hiện",
+                "type": "number",
+                "align": "left",
+                "width": 84
+              },
+              {
+                "id": "vsPrev",
+                "label": "So với kỳ trước",
+                "type": "progress",
+                "align": "left",
+                "width": 173
+              },
+              {
+                "id": "vsCk",
+                "label": "So với CK",
+                "type": "trend",
+                "align": "center",
+                "width": 77
+              },
+              {
+                "id": "eval",
+                "label": "Đánh giá",
+                "type": "status",
+                "align": "center",
+                "width": 78
+              },
+              {
+                "id": "action",
+                "label": "",
+                "type": "action-button",
+                "align": "center",
+                "width": 124
+              }
+            ],
+            "rows": [
+              {
+                "id": "grp-hr-1",
+                "kind": "group",
+                "group": {
+                  "title": "Tổ chức nhân lực",
+                  "icon": "team",
+                  "badges": [
+                    {
+                      "label": "5 ĐẠT",
+                      "tone": "success"
+                    },
+                    {
+                      "label": "2 KHÔNG ĐẠT",
+                      "tone": "danger"
+                    }
+                  ],
+                  "defaultExpanded": true
+                }
+              },
+              {
+                "id": "01",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "01",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": {
+                    "label": "113%",
+                    "fill": 0.95,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "02",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "02",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": {
+                    "label": "108%",
+                    "fill": 0.9,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "03",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "03",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "4",
+                  "target": 16,
+                  "actual": 17,
+                  "vsPrev": {
+                    "label": "103%",
+                    "fill": 0.87,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "04",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "04",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "5",
+                  "target": 18,
+                  "actual": 16,
+                  "vsPrev": {
+                    "label": "87%",
+                    "fill": 0.72,
+                    "tone": "danger"
+                  },
+                  "vsCk": {
+                    "direction": "down",
+                    "label": "2,5%",
+                    "color": "red"
+                  },
+                  "eval": {
+                    "label": "K ĐẠT",
+                    "tone": "danger"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "05",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "05",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "6",
+                  "target": 20,
+                  "actual": 16,
+                  "vsPrev": {
+                    "label": "82%",
+                    "fill": 0.68,
+                    "tone": "danger"
+                  },
+                  "vsCk": {
+                    "direction": "down",
+                    "label": "2,5%",
+                    "color": "red"
+                  },
+                  "eval": {
+                    "label": "K ĐẠT",
+                    "tone": "danger"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "06",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "06",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": {
+                    "label": "113%",
+                    "fill": 0.95,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "07",
+                "groupId": "grp-hr-1",
+                "cells": {
+                  "stt": "07",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": {
+                    "label": "108%",
+                    "fill": 0.9,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "grp-hr-2",
+                "kind": "group",
+                "group": {
+                  "title": "Tổ chức nhân lực",
+                  "icon": "team",
+                  "badges": [
+                    {
+                      "label": "5 ĐẠT",
+                      "tone": "success"
+                    },
+                    {
+                      "label": "2 KHÔNG ĐẠT",
+                      "tone": "danger"
+                    }
+                  ],
+                  "defaultExpanded": true
+                }
+              },
+              {
+                "id": "08",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "01",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": {
+                    "label": "113%",
+                    "fill": 0.95,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "09",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "02",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": {
+                    "label": "108%",
+                    "fill": 0.9,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "10",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "03",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "4",
+                  "target": 16,
+                  "actual": 17,
+                  "vsPrev": {
+                    "label": "103%",
+                    "fill": 0.87,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "11",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "04",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "5",
+                  "target": 18,
+                  "actual": 16,
+                  "vsPrev": {
+                    "label": "87%",
+                    "fill": 0.72,
+                    "tone": "danger"
+                  },
+                  "vsCk": {
+                    "direction": "down",
+                    "label": "2,5%",
+                    "color": "red"
+                  },
+                  "eval": {
+                    "label": "K ĐẠT",
+                    "tone": "danger"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "12",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "05",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "6",
+                  "target": 20,
+                  "actual": 16,
+                  "vsPrev": {
+                    "label": "82%",
+                    "fill": 0.68,
+                    "tone": "danger"
+                  },
+                  "vsCk": {
+                    "direction": "down",
+                    "label": "2,5%",
+                    "color": "red"
+                  },
+                  "eval": {
+                    "label": "K ĐẠT",
+                    "tone": "danger"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "13",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "06",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "2",
+                  "target": 12,
+                  "actual": 13,
+                  "vsPrev": {
+                    "label": "113%",
+                    "fill": 0.95,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              },
+              {
+                "id": "14",
+                "groupId": "grp-hr-2",
+                "cells": {
+                  "stt": "07",
+                  "name": {
+                    "title": "Năng suất lao động",
+                    "subtitle": "Mã KPI"
+                  },
+                  "unit": "3",
+                  "target": 14,
+                  "actual": 15,
+                  "vsPrev": {
+                    "label": "108%",
+                    "fill": 0.9,
+                    "tone": "success"
+                  },
+                  "vsCk": {
+                    "direction": "up",
+                    "label": "13%",
+                    "color": "green"
+                  },
+                  "eval": {
+                    "label": "ĐẠT",
+                    "tone": "success"
+                  },
+                  "action": "Chi tiết"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>OTP/OSP giảm mạnh:</strong> OTP đi -21.7%, OTP đến -30.1%; OSP đi -5.4%, OSP đến -16.6% so với MT",
+        "Thời tiết &amp; ATFM (mưa dông tại CXR, HAN, SGN, PQC) gây ảnh hưởng tổng cộng 174 chuyến bay trên toàn mạng, trong đó VN335 phải divert HPH và VN1835 tiếp cận hụt phải quay lại SGN",
+        "Sự cố kỹ thuật VNA612 (MEL \"stater vlv\") gây đổi tàu, delay VN641/640."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "items": [
+        "<strong>OTP/OSP giảm mạnh:</strong> OTP đi -21.7%, OTP đến -30.1%; OSP đi -5.4%, OSP đến -16.6% so với MT",
+        "Thời tiết &amp; ATFM (mưa dông tại CXR, HAN, SGN, PQC) gây ảnh hưởng tổng cộng 174 chuyến bay trên toàn mạng, trong đó VN335 phải divert HPH và VN1835 tiếp cận hụt phải quay lại SGN",
+        "<strong>Nguyên nhân delay</strong> lớn nhất là ảnh hưởng dây chuyền từ chặng trước, chiếm 34.4% — vượt trội so với traffic (7.6%), thời tiết (1.6%), kỹ thuật (0.2%)"
+      ],
+      "variant": "danger"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "autoChart": {
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Ước thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế Cùng kỳ 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          422,
+          null,
+          410,
+          420,
+          422,
+          410,
+          420
+        ],
+        [
+          "T2",
+          428,
+          null,
+          415,
+          426,
+          850,
+          825,
+          846
+        ],
+        [
+          "T3",
+          434,
+          null,
+          420,
+          432,
+          1284,
+          1245,
+          1278
+        ],
+        [
+          "T4",
+          440,
+          null,
+          425,
+          438,
+          1724,
+          1670,
+          1716
+        ],
+        [
+          "T5",
+          445,
+          null,
+          430,
+          445,
+          2169,
+          2100,
+          2161
+        ],
+        [
+          "T6",
+          450,
+          null,
+          435,
+          452,
+          2619,
+          2535,
+          2613
+        ],
+        [
+          "T7",
+          455,
+          null,
+          440,
+          458,
+          3074,
+          2975,
+          3071
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true
+          },
+          {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ],
+    "chartType": "combo"
+  },
+  "metadata": {
+    "forecastStartIndex": 7
+  }
+}

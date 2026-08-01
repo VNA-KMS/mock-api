@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "pie",
+    "dataset": {
+      "columns": [
+        {
+          "id": "type",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Số chuyến",
+          "color": [
+            "series.actual",
+            "series.target",
+            "data.sea-blue"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Cargo",
+          580
+        ],
+        [
+          "VIP",
+          210
+        ],
+        [
+          "Ferry",
+          1950
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "type",
+        "series": [
+          {
+            "field": "value"
+          }
+        ]
+      }
+    ]
+  }
+}

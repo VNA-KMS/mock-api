@@ -1,0 +1,76 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "cat",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "mt",
+          "type": "number",
+          "label": "Mục tiêu",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "NPS NĐ",
+          68,
+          67,
+          68
+        ],
+        [
+          "NPS QT",
+          76,
+          73,
+          144
+        ],
+        [
+          "CSI NĐ×10",
+          39.8,
+          39.9,
+          183.8
+        ],
+        [
+          "CSI QT×10",
+          42.8,
+          42.7,
+          226.6
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cat",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true
+          },
+          {
+            "field": "mt",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

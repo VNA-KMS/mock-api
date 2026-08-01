@@ -1,0 +1,110 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "count",
+          "type": "number",
+          "label": "Số vụ delay",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            6,
+            4
+          ],
+          "colorToken": "data.olive-gold"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          12,
+          52
+        ],
+        [
+          "T2",
+          9,
+          52
+        ],
+        [
+          "T3",
+          10,
+          52
+        ],
+        [
+          "T4",
+          11,
+          52
+        ],
+        [
+          "T5",
+          10,
+          52
+        ],
+        [
+          "T6",
+          9,
+          52
+        ],
+        [
+          "T7",
+          9.96,
+          52
+        ],
+        [
+          "T8",
+          null,
+          52
+        ],
+        [
+          "T9",
+          null,
+          52
+        ],
+        [
+          "T10",
+          null,
+          52
+        ],
+        [
+          "T11",
+          null,
+          52
+        ],
+        [
+          "T12",
+          null,
+          52
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "count",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

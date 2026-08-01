@@ -1,0 +1,87 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Lái chính",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Lái phụ",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Lái chính",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Lái phụ",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          420,
+          395,
+          420,
+          395
+        ],
+        [
+          "A350",
+          280,
+          260,
+          700,
+          655
+        ],
+        [
+          "B787",
+          198,
+          185,
+          898,
+          840
+        ],
+        [
+          "ATR72",
+          144,
+          130,
+          1042,
+          970
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

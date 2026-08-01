@@ -1,0 +1,57 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "vu",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vu"
+        }
+      ],
+      "rows": [
+        ["T1", 8.5, 9.0],
+        ["T2", 9.5, 10.0],
+        ["T3", 8.7, 9.2],
+        ["T4", 9.5, 10.0],
+        ["T5", 8.8, 9.3],
+        ["T6", 8.3, 8.8],
+        ["T7", 9.5, 10.0],
+        ["T8", 9.0, null],
+        ["T9", 8.8, null],
+        ["T10", 8.5, null],
+        ["T11", 8.3, null],
+        ["T12", 8.0, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "vu",
+            "chartType": "line",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

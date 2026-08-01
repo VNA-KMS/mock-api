@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "half-donut",
+    "aspectRatio": 1.3,
+    "dataset": {
+      "columns": [
+        {
+          "id": "l",
+          "type": "string"
+        },
+        {
+          "id": "v",
+          "type": "number",
+          "color": [
+            "series.actual",
+            "data.terracotta",
+            "semantic.positive"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Nội địa",
+          1048
+        ],
+        [
+          "Quốc tế",
+          735
+        ],
+        [
+          "Transit",
+          580
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "m",
+        "chartType": "auto",
+        "xField": "l",
+        "series": [
+          {
+            "field": "v"
+          }
+        ]
+      }
+    ]
+  }
+}

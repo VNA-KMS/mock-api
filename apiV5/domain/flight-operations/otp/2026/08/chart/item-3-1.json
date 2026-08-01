@@ -1,0 +1,47 @@
+{
+  "autoChart": {
+    "chartType": "pie-simple",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "color": [
+            "series.actual",
+            "data.terracotta",
+            "semantic.positive",
+            "data.olive-gold"
+          ],
+          "label": "Tỷ trọng"
+        }
+      ],
+      "rows": [
+        [
+          "Kỹ thuật",
+          65
+        ],
+        [
+          "Phi kỹ thuật",
+          35
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "label",
+        "series": [
+          {
+            "field": "value"
+          }
+        ]
+      }
+    ]
+  }
+}

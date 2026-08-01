@@ -1,0 +1,177 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "yoy",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.forecast"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "MT 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế MT 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          79,
+          77,
+          84,
+          79,
+          84
+        ],
+        [
+          "T2",
+          81,
+          78,
+          85,
+          160,
+          169
+        ],
+        [
+          "T3",
+          84,
+          80,
+          85,
+          244,
+          254
+        ],
+        [
+          "T4",
+          86,
+          82,
+          86,
+          330,
+          340
+        ],
+        [
+          "T5",
+          85,
+          83,
+          87,
+          415,
+          427
+        ],
+        [
+          "T6",
+          83,
+          84,
+          88,
+          498,
+          515
+        ],
+        [
+          "T7",
+          85,
+          85,
+          89,
+          583,
+          604
+        ],
+        [
+          "T8",
+          null,
+          84,
+          88,
+          null,
+          692
+        ],
+        [
+          "T9",
+          null,
+          82,
+          88,
+          null,
+          780
+        ],
+        [
+          "T10",
+          null,
+          81,
+          87,
+          null,
+          867
+        ],
+        [
+          "T11",
+          null,
+          83,
+          86,
+          null,
+          953
+        ],
+        [
+          "T12",
+          null,
+          84,
+          86,
+          null,
+          1039
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 70,
+        "yMax": 100,
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end",
+            "symbolFilled": true,
+            "areaStyle": {}
+          },
+          {
+            "field": "yoy",
+            "chartType": "line",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "showSymbol": true,
+            "lineStyle": "dashed",
+            "symbolFilled": true
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}

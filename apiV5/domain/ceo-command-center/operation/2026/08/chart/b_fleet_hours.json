@@ -1,0 +1,61 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Nghìn BH",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Nghìn BH",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          24.8,
+          24.8
+        ],
+        [
+          "B787",
+          10.2,
+          35
+        ],
+        [
+          "A350",
+          8.1,
+          43.1
+        ],
+        [
+          "ATR72",
+          3.2,
+          46.3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

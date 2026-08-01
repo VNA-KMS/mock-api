@@ -1,0 +1,146 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          4,
+          4.1,
+          4,
+          4.1
+        ],
+        [
+          "T2",
+          4.02,
+          4.1,
+          8.02,
+          8.2
+        ],
+        [
+          "T3",
+          4.03,
+          4.13,
+          12.05,
+          12.33
+        ],
+        [
+          "T4",
+          4.06,
+          4.16,
+          16.11,
+          16.49
+        ],
+        [
+          "T5",
+          4.08,
+          4.16,
+          20.19,
+          20.65
+        ],
+        [
+          "T6",
+          4.1,
+          4.18,
+          24.29,
+          24.83
+        ],
+        [
+          "T7",
+          3.86,
+          4,
+          28.15,
+          28.83
+        ],
+        [
+          "T8",
+          3.88,
+          null,
+          32.03,
+          null
+        ],
+        [
+          "T9",
+          3.92,
+          null,
+          35.95,
+          null
+        ],
+        [
+          "T10",
+          3.95,
+          null,
+          39.9,
+          null
+        ],
+        [
+          "T11",
+          3.98,
+          null,
+          43.88,
+          null
+        ],
+        [
+          "T12",
+          4,
+          null,
+          47.88,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ],
+        "label": "Theo T12"
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}

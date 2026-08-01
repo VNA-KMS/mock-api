@@ -1,0 +1,93 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "segment",
+          "type": "string"
+        },
+        {
+          "id": "Cask",
+          "type": "number",
+          "label": "CASK (VND/ghế.km)"
+        },
+        {
+          "id": "rask",
+          "type": "number",
+          "label": "RASK (VND/ghế.km)"
+        },
+        {
+          "id": "ask",
+          "type": "number",
+          "label": "ASK (nghìn ghế.km)"
+        }
+      ],
+      "rows": [
+        [
+          "NEA",
+          "NEA",
+          4200,
+          2850,
+          720000
+        ],
+        [
+          "SEA",
+          "SEA",
+          3900,
+          3100,
+          350000
+        ],
+        [
+          "CLMV",
+          "CLMV",
+          2800,
+          2900,
+          45000
+        ],
+        [
+          "EUR",
+          "EUR",
+          4500,
+          3200,
+          180000
+        ],
+        [
+          "NOA",
+          "NOA",
+          3800,
+          2700,
+          35000
+        ],
+        [
+          "SWP",
+          "SWP",
+          3400,
+          2800,
+          95000
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "Cask",
+        "yField": "rask",
+        "sizeField": "ask",
+        "colorBy": "segment",
+        "series": [
+          {
+            "field": "Cask",
+            "chartType": "scatter"
+          }
+        ]
+      }
+    ]
+  }
+}

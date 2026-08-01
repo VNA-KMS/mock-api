@@ -1,0 +1,52 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "United States",
+          100,
+          100
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

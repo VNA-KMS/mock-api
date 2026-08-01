@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "center-donut",
+    "dataset": {
+      "columns": [
+        {
+          "id": "block",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Số lượng",
+          "color": [
+            "series.actual",
+            "data.jade-blue",
+            "data.olive-gold"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Khối mặt đất",
+          4187
+        ],
+        [
+          "Phi công",
+          1522
+        ],
+        [
+          "Tiếp viên",
+          1903
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "block",
+        "series": [
+          {
+            "field": "value"
+          }
+        ]
+      }
+    ]
+  }
+}

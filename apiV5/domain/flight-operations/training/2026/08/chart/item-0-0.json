@@ -1,0 +1,79 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "PC Định kỳ ATKT",
+          "type": "string"
+        },
+        {
+          "id": "series_1",
+          "type": "number",
+          "label": "T06/2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "series_2",
+          "type": "number",
+          "label": "KH T06/2026",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "PC Định kỳ ATKT",
+          96.5,
+          95
+        ],
+        [
+          "TV Định kỳ ATKT",
+          93.2,
+          92
+        ],
+        [
+          "Chuyển loại TV",
+          91.8,
+          90
+        ],
+        [
+          "Chuyển loại PCCB",
+          89.5,
+          88
+        ],
+        [
+          "Chuyển loại PC KT",
+          88,
+          86
+        ],
+        [
+          "NVĐHKT",
+          95.5,
+          94
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "series_1",
+            "chartType": "line"
+          },
+          {
+            "field": "series_2",
+            "chartType": "line"
+          },
+          {
+            "field": "series_3",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

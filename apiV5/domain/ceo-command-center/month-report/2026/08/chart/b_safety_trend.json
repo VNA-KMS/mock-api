@@ -1,0 +1,106 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "Cùng kỳ 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế Cùng kỳ 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          37,
+          40,
+          37,
+          40
+        ],
+        [
+          "T2",
+          36,
+          39,
+          73,
+          79
+        ],
+        [
+          "T3",
+          35,
+          38,
+          108,
+          117
+        ],
+        [
+          "T4",
+          34,
+          37,
+          142,
+          154
+        ],
+        [
+          "T5",
+          33,
+          36,
+          175,
+          190
+        ],
+        [
+          "T6",
+          32,
+          35,
+          207,
+          225
+        ],
+        [
+          "T7",
+          42,
+          47,
+          249,
+          272
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+          "chartType": "line",
+          "areaStyle": {}
+          },
+          {
+            "field": "ck",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

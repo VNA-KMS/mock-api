@@ -1,0 +1,79 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "TVT",
+          "type": "string"
+        },
+        {
+          "id": "series_1",
+          "type": "number",
+          "label": "T06/2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "series_2",
+          "type": "number",
+          "label": "KH T06/2026",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "series_3",
+          "type": "number",
+          "label": "CK T06/2025",
+          "colorToken": "data.coral"
+        }
+      ],
+      "rows": [
+        [
+          "TVT",
+          72.1,
+          73,
+          70.5
+        ],
+        [
+          "TVP",
+          69.4,
+          70.5,
+          68
+        ],
+        [
+          "TVC",
+          66.8,
+          68,
+          65.5
+        ],
+        [
+          "TVY",
+          62.5,
+          64,
+          61.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "series_1",
+            "chartType": "line"
+          },
+          {
+            "field": "series_2",
+            "chartType": "line"
+          },
+          {
+            "field": "series_3",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

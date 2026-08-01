@@ -1,0 +1,40 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Thị phần quốc tế T7",
+          "color": [
+            "carrier.vna",
+            "carrier.vj",
+            "carrier.other"
+          ]
+        }
+      ],
+      "rows": [
+        ["VNA", 20.3],
+        ["VJ", 18.7],
+        ["AOL", 61.0]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "label",
+        "series": [
+          {
+            "field": "value"
+          }
+        ]
+      }
+    ]
+  }
+}

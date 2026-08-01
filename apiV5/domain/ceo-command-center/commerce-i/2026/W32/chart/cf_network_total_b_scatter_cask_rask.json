@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 1.35,
+    "note": "Thu/chi trên 1 khách — báo cáo tuần không tách ASK theo khu vực nên không suy được CASK/RASK ở cấp này. Không vẽ đường bù chi phí biến đổi vì CP cố định/khách chênh 9,1 lần giữa các khu vực (CLMV 990 → NOA 9.049 nghìn); ngưỡng riêng của từng điểm xem trong tooltip.",
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "segment",
+          "type": "string"
+        },
+        {
+          "id": "cost_pax",
+          "type": "number",
+          "label": "Chi phí / khách (nghìn VNĐ)"
+        },
+        {
+          "id": "rev_pax",
+          "type": "number",
+          "label": "Doanh thu / khách (nghìn VNĐ)"
+        },
+        {
+          "id": "paxRev",
+          "type": "number",
+          "label": "DT khách (trđ)"
+        },
+        {
+          "id": "fc_pax",
+          "type": "number",
+          "label": "CP cố định / khách (nghìn VNĐ)"
+        },
+        {
+          "id": "vc_pax",
+          "type": "number",
+          "label": "CP biến đổi / khách (nghìn VNĐ)"
+        }
+      ],
+      "rows": [
+        [
+          "NEA",
+          "NEA",
+          6646,
+          6123,
+          429505,
+          2133,
+          4513
+        ],
+        [
+          "SEA",
+          "SEA",
+          3350,
+          3384,
+          138483,
+          1037,
+          2312
+        ],
+        [
+          "CLMV",
+          "CLMV",
+          3385,
+          3049,
+          22960,
+          990,
+          2395
+        ],
+        [
+          "SAS",
+          "SAS",
+          6747,
+          6134,
+          50825,
+          2450,
+          4297
+        ],
+        [
+          "EUR",
+          "EUR",
+          21781,
+          18178,
+          272450,
+          7272,
+          14509
+        ],
+        [
+          "NOA",
+          "NOA",
+          27441,
+          22968,
+          30010,
+          9049,
+          18391
+        ],
+        [
+          "SWP",
+          "SWP",
+          14810,
+          11686,
+          112207,
+          5281,
+          9529
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cost_pax",
+        "yField": "rev_pax",
+        "sizeField": "paxRev",
+        "colorBy": "segment",
+        "series": [
+          {
+            "field": "rev_pax",
+            "chartType": "scatter"
+          }
+        ],
+        "breakEven": {
+          "mode": "diagonal",
+          "label": "Hoà vốn (thu = chi)"
+        },
+        "tooltipFields": [
+          "fc_pax",
+          "vc_pax"
+        ]
+      }
+    ]
+  }
+}

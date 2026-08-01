@@ -1,0 +1,57 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "vna",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vna"
+        }
+      ],
+      "rows": [
+        ["T1", 22.0, 24.2],
+        ["T2", 17.0, 18.4],
+        ["T3", 22.0, 23.4],
+        ["T4", 22.5, 23.8],
+        ["T5", 22.0, 23.4],
+        ["T6", 25.0, 26.2],
+        ["T7", 25.0, 26.2],
+        ["T8", 24.0, null],
+        ["T9", 23.0, null],
+        ["T10", 22.0, null],
+        ["T11", 21.0, null],
+        ["T12", 20.0, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "vna",
+            "chartType": "line",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

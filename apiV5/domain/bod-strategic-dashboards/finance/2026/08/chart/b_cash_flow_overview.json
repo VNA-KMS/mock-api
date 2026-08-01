@@ -1,0 +1,54 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        { "id": "month", "type": "string" },
+        { "id": "chenh_lech", "type": "number", "label": "Ch\u00eanh l\u1ec7ch trong k\u1ef3", "color": "#004071" },
+        { "id": "du_tien", "type": "number", "label": "D\u01b0 ti\u1ec1n c\u00f9ng k\u1ef3", "color": "#B4901F" },
+        { "id": "du_no", "type": "number", "label": "D\u01b0 n\u1ee3 vay NH c\u00f9ng k\u1ef3", "color": "#0E7490" },
+        { "id": "chenh_lech_cum", "type": "number", "label": "Ch\u00eanh l\u1ec7ch (LK)", "color": "#004071" },
+        { "id": "du_tien_cum", "type": "number", "label": "D\u01b0 ti\u1ec1n (LK)", "color": "#B4901F" },
+        { "id": "du_no_cum", "type": "number", "label": "D\u01b0 n\u1ee3 vay NH (LK)", "color": "#0E7490" }
+      ],
+      "rows": [
+        ["T1", -1346, 12692, 0, -1346, 12692, 0],
+        ["T2", 450, 13142, 0, -896, 25834, 0],
+        ["T3", 3186, 16328, 0, 2290, 42162, 0],
+        ["T4", 128, 16456, 0, 2418, 58618, 0],
+        ["T5", -3037, 13419, 0, -619, 72037, 0],
+        ["T6", 1252, 14670, 600, 633, 86707, 600],
+        ["T7", -143, 14527, 600, 490, 101234, 1200],
+        ["T8", 301, 14828, 600, null, null, null],
+        ["T9", -481, 14347, 600, null, null, null],
+        ["T10", -1606, 12742, 600, null, null, null],
+        ["T11", -783, 11959, 600, null, null, null],
+        ["T12", -1297, 10662, 0, null, null, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "label": "Theo th\u00e1ng",
+        "series": [
+          { "field": "chenh_lech", "chartType": "line", "showSymbol": true, "symbolFilled": true, "areaStyle": {} },
+          { "field": "du_tien", "chartType": "line", "showSymbol": true, "symbolFilled": true },
+          { "field": "du_no", "chartType": "line", "showSymbol": true, "symbolFilled": true }
+        ]
+      },
+      {
+        "id": "main_cum",
+        "chartType": "auto",
+        "xField": "month",
+        "label": "LK",
+        "series": [
+          { "field": "chenh_lech_cum", "chartType": "line", "showSymbol": true, "symbolFilled": true, "areaStyle": {} },
+          { "field": "du_tien_cum", "chartType": "line", "showSymbol": true, "symbolFilled": true },
+          { "field": "du_no_cum", "chartType": "line", "showSymbol": true, "symbolFilled": true }
+        ]
+      }
+    ]
+  }
+}

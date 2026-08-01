@@ -1,0 +1,75 @@
+{
+  "autoChart": {
+    "chartType": "heatmap",
+    "dataset": {
+      "columns": [
+        {
+          "id": "region",
+          "type": "string"
+        },
+        {
+          "id": "level",
+          "type": "string"
+        },
+        {
+          "id": "count",
+          "type": "number"
+        }
+      ],
+      "rows": [
+        [
+          "DOM",
+          "<15 phút",
+          5580
+        ],
+        [
+          "DOM",
+          "15-45 phút",
+          2790
+        ],
+        [
+          "DOM",
+          "45-60 phút",
+          1305
+        ],
+        [
+          "DOM",
+          ">60 phút",
+          522
+        ],
+        [
+          "INT",
+          "<15 phút",
+          2520
+        ],
+        [
+          "INT",
+          "15-45 phút",
+          1485
+        ],
+        [
+          "INT",
+          "45-60 phút",
+          828
+        ],
+        [
+          "INT",
+          ">60 phút",
+          369
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "region",
+        "series": [
+          {
+            "field": "count"
+          }
+        ]
+      }
+    ]
+  }
+}

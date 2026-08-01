@@ -1,0 +1,81 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 2,
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "w25",
+          "type": "number",
+          "label": "W25 · Pax Rev",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "w23",
+          "type": "number",
+          "label": "W23 · Pax Rev",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "DE",
+          94696,
+          109041
+        ],
+        [
+          "FR",
+          85604,
+          82277
+        ],
+        [
+          "GB",
+          36977,
+          38314
+        ],
+        [
+          "IT",
+          14308,
+          15944
+        ],
+        [
+          "RU",
+          18674,
+          21007
+        ],
+        [
+          "DK",
+          17174,
+          11101
+        ],
+        [
+          "NL",
+          5017,
+          0
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "w23",
+            "chartType": "bar",
+            "isBlur": true
+          },
+          {
+            "field": "w25",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

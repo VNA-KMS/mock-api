@@ -1,0 +1,88 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "m",
+          "type": "string"
+        },
+        {
+          "id": "a",
+          "type": "number",
+          "label": "Lượng mưa"
+        },
+        {
+          "id": "b",
+          "type": "number",
+          "label": "Nhiệt độ"
+        },
+        {
+          "id": "c",
+          "type": "number",
+          "label": "Độ ẩm"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          2,
+          7,
+          65
+        ],
+        [
+          "T2",
+          4.9,
+          9,
+          68
+        ],
+        [
+          "T3",
+          7,
+          13,
+          72
+        ],
+        [
+          "T4",
+          23.2,
+          18,
+          75
+        ],
+        [
+          "T5",
+          25.6,
+          23,
+          78
+        ],
+        [
+          "T6",
+          76.7,
+          27,
+          82
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "m",
+        "chartType": "auto",
+        "xField": "m",
+        "series": [
+          {
+            "field": "a",
+            "chartType": "bar"
+          },
+          {
+            "field": "b",
+            "chartType": "line"
+          },
+          {
+            "field": "c",
+            "chartType": "line"
+          }
+        ]
+      }
+    ]
+  }
+}

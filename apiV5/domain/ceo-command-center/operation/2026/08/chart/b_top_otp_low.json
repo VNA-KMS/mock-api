@@ -1,0 +1,54 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "airport",
+          "type": "string"
+        },
+        {
+          "id": "otp",
+          "type": "number",
+          "label": "OTP (%)",
+          "colorToken": "semantic.negative"
+        }
+      ],
+      "rows": [
+        [
+          "SGN (Tân Sơn Nhất)",
+          68.4
+        ],
+        [
+          "HAN (Nội Bài)",
+          71.2
+        ],
+        [
+          "DAD (Đà Nẵng)",
+          73.5
+        ],
+        [
+          "CXR (Cam Ranh)",
+          75.1
+        ],
+        [
+          "PQC (Phú Quốc)",
+          76.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "airport",
+        "series": [
+          {
+            "field": "otp",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

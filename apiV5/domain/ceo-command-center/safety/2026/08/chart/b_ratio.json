@@ -1,0 +1,49 @@
+{
+  "autoChart": {
+    "chartType": "pie-simple",
+    "dataset": {
+      "columns": [
+        {
+          "id": "field",
+          "type": "string"
+        },
+        {
+          "id": "ratio",
+          "type": "number",
+          "label": "Tỷ lệ",
+          "color": [
+            "data.deep-teal",
+            "data.brick",
+            "data.olive-green"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "Khai thác bay",
+          44
+        ],
+        [
+          "Kỹ thuật",
+          33
+        ],
+        [
+          "Dịch vụ mặt đất",
+          22
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "field",
+        "series": [
+          {
+            "field": "ratio"
+          }
+        ]
+      }
+    ]
+  }
+}

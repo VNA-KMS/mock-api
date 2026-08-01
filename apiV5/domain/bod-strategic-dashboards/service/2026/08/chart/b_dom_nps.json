@@ -1,0 +1,90 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "reason",
+          "type": "string"
+        },
+        {
+          "label": "Kế hoạch 2026",
+          "id": "db",
+          "type": "number"
+        },
+        {
+          "label": "Thực hiện 2026",
+          "id": "th",
+          "type": "number"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026"
+        }
+      ],
+      "rows": [
+        [
+          "Thoi gian cho",
+          65,
+          62,
+          65,
+          62
+        ],
+        [
+          "Thai do phuc vu",
+          62,
+          58,
+          127,
+          120
+        ],
+        [
+          "Dich vu an uong",
+          60,
+          55,
+          187,
+          175
+        ],
+        [
+          "Tien nghi san bay",
+          55,
+          50,
+          242,
+          225
+        ],
+        [
+          "Thong tin bay",
+          50,
+          45,
+          292,
+          270
+        ]
+      ]
+    },
+    "views": [
+      {
+        "xField": "reason",
+        "series": [
+          {
+            "chartType": "line",
+            "field": "db",
+            "lineStyle": "dashed"
+          },
+          {
+            "chartType": "bar",
+            "field": "th",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ],
+        "id": "main",
+        "chartType": "bar"
+      }
+    ]
+  }
+}

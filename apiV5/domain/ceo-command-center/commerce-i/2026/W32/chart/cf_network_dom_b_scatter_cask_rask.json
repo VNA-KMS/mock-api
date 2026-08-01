@@ -1,0 +1,293 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        {
+          "id": "route",
+          "type": "string"
+        },
+        {
+          "id": "group",
+          "type": "string"
+        },
+        {
+          "id": "rask",
+          "type": "number",
+          "label": "RASK (VND/ghế.km)"
+        },
+        {
+          "id": "cask",
+          "type": "number",
+          "label": "CASK (VND/ghế.km)"
+        },
+        {
+          "id": "ask",
+          "type": "number",
+          "label": "ASK (nghìn ghế.km)"
+        }
+      ],
+      "rows": [
+        [
+          "HANSGN",
+          "Trục chính",
+          2243,
+          2100,
+          13850
+        ],
+        [
+          "HANDAD",
+          "Trục chính",
+          1909,
+          1850,
+          26500
+        ],
+        [
+          "SGNDAD",
+          "Trục chính",
+          1742,
+          1900,
+          15800
+        ],
+        [
+          "HANCXR",
+          "Trục chính",
+          2595,
+          2400,
+          6100
+        ],
+        [
+          "SGNHPH",
+          "Trục chính",
+          2497,
+          2300,
+          5300
+        ],
+        [
+          "SGNVCS",
+          "Địa phương",
+          1525,
+          1400,
+          4250
+        ],
+        [
+          "HANUIH",
+          "Địa phương",
+          2345,
+          2200,
+          3800
+        ],
+        [
+          "SGNCXR",
+          "Địa phương",
+          1452,
+          1350,
+          5100
+        ],
+        [
+          "HANVCL",
+          "Địa phương",
+          1945,
+          1750,
+          2400
+        ],
+        [
+          "HANDIN",
+          "Địa phương",
+          1476,
+          1300,
+          2100
+        ],
+        [
+          "PQCVCA",
+          "Địa phương",
+          1458,
+          1250,
+          1200
+        ],
+        [
+          "SGNUIH",
+          "Địa phương",
+          1606,
+          1550,
+          3500
+        ],
+        [
+          "DADHPH",
+          "Địa phương",
+          1922,
+          1800,
+          1800
+        ],
+        [
+          "HANVDH",
+          "Địa phương",
+          1536,
+          1450,
+          3000
+        ],
+        [
+          "SGNBMV",
+          "Địa phương",
+          1375,
+          1300,
+          1600
+        ],
+        [
+          "DADCXR",
+          "Địa phương",
+          1825,
+          1750,
+          2200
+        ],
+        [
+          "VCAVCS",
+          "Địa phương",
+          1358,
+          1400,
+          1000
+        ],
+        [
+          "HANVCA",
+          "Du lịch",
+          2397,
+          2500,
+          3200
+        ],
+        [
+          "SGNHUI",
+          "Du lịch",
+          1719,
+          1700,
+          4500
+        ],
+        [
+          "SGNTHD",
+          "Du lịch",
+          2250,
+          2400,
+          2800
+        ],
+        [
+          "HANPQC",
+          "Du lịch",
+          2607,
+          2800,
+          2200
+        ],
+        [
+          "SGNVII",
+          "Du lịch",
+          2000,
+          1950,
+          4800
+        ],
+        [
+          "SGNVDH",
+          "Du lịch",
+          1880,
+          2000,
+          2400
+        ],
+        [
+          "SGNPQC",
+          "Du lịch",
+          1376,
+          1450,
+          5200
+        ],
+        [
+          "SGNVCL",
+          "Du lịch",
+          1656,
+          1750,
+          2600
+        ],
+        [
+          "DADVCA",
+          "Du lịch",
+          1681,
+          1850,
+          1200
+        ],
+        [
+          "HANVII",
+          "Địa phương",
+          1258,
+          1200,
+          2800
+        ],
+        [
+          "HANBMV",
+          "Du lịch",
+          2057,
+          2200,
+          1300
+        ],
+        [
+          "HANPXU",
+          "Địa phương",
+          1858,
+          1950,
+          1600
+        ],
+        [
+          "HANHUI",
+          "Địa phương",
+          1763,
+          1700,
+          3800
+        ],
+        [
+          "SGNPXU",
+          "Địa phương",
+          1317,
+          1250,
+          2000
+        ],
+        [
+          "DADBMV",
+          "Địa phương",
+          1423,
+          1350,
+          1200
+        ],
+        [
+          "HANTBB",
+          "Du lịch",
+          2366,
+          2500,
+          2200
+        ],
+        [
+          "SGNTBB",
+          "Địa phương",
+          1437,
+          1350,
+          2000
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cask",
+        "yField": "rask",
+        "sizeField": "ask",
+        "colorBy": "group",
+        "series": [
+          {
+            "field": "rask",
+            "chartType": "scatter"
+          }
+        ],
+        "breakEven": {
+          "mode": "none"
+        }
+      }
+    ],
+    "note": "Chưa có nguồn: slide 28-29 không có ASK lẫn PAX theo đường bay nội địa nên không suy được CASK/RASK. Đường hoà vốn đã tắt — offset 638 trước đó là FCASK của mạng quốc tế, không áp dụng cho nội địa (FCASK nội địa = 804)."
+  }
+}

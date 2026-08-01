@@ -1,0 +1,71 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "hang",
+          "type": "string"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "vn",
+          "type": "number",
+          "label": "VN",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "ov",
+          "type": "number",
+          "label": "0V",
+          "colorToken": "data.sea-blue"
+        },
+        {
+          "id": "bl",
+          "type": "number",
+          "label": "BL",
+          "colorToken": "data.terracotta"
+        }
+      ],
+      "rows": [
+        [
+          "T7",
+          16420,
+          13957,
+          1149,
+          1314
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "hang",
+        "series": [
+          {
+            "field": "total",
+            "chartType": "bar"
+          },
+          {
+            "field": "vn",
+            "chartType": "bar"
+          },
+          {
+            "field": "ov",
+            "chartType": "bar"
+          },
+          {
+            "field": "bl",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

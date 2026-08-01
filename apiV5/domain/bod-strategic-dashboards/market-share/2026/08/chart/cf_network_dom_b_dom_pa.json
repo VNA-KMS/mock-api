@@ -1,0 +1,57 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "qh",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.qh"
+        }
+      ],
+      "rows": [
+        ["T1", 16.5, 17.5],
+        ["T2", 17.0, 18.0],
+        ["T3", 21.0, 22.0],
+        ["T4", 20.0, 21.0],
+        ["T5", 19.5, 20.5],
+        ["T6", 17.0, 18.0],
+        ["T7", 19.0, 20.2],
+        ["T8", 18.0, null],
+        ["T9", 17.5, null],
+        ["T10", 17.0, null],
+        ["T11", 16.5, null],
+        ["T12", 16.0, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line"
+          },
+          {
+            "field": "qh",
+            "chartType": "line",
+            "showLabel": "end"
+          }
+        ]
+      }
+    ]
+  }
+}

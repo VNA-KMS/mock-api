@@ -1,0 +1,174 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            5,
+            5
+          ],
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          66,
+          68,
+          66,
+          68,
+          65
+        ],
+        [
+          "T2",
+          67,
+          68,
+          133,
+          136,
+          65
+        ],
+        [
+          "T3",
+          67,
+          69,
+          200,
+          205,
+          65
+        ],
+        [
+          "T4",
+          68,
+          70,
+          268,
+          275,
+          65
+        ],
+        [
+          "T5",
+          69,
+          70,
+          337,
+          345,
+          65
+        ],
+        [
+          "T6",
+          69,
+          71,
+          406,
+          416,
+          65
+        ],
+        [
+          "T7",
+          62,
+          64,
+          468,
+          480,
+          65
+        ],
+        [
+          "T8",
+          63,
+          null,
+          531,
+          null,
+          65
+        ],
+        [
+          "T9",
+          64,
+          null,
+          595,
+          null,
+          65
+        ],
+        [
+          "T10",
+          65,
+          null,
+          660,
+          null,
+          65
+        ],
+        [
+          "T11",
+          66,
+          null,
+          726,
+          null,
+          65
+        ],
+        [
+          "T12",
+          67,
+          null,
+          793,
+          null,
+          65
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ],
+        "label": "Theo T12"
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}
