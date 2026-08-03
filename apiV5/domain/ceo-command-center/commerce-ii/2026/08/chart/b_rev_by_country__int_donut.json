@@ -1,79 +1,186 @@
 {
-  "autoChart": {
-    "chartType": "donut-pct",
-    "dataset": {
-      "columns": [
+  "chartType": "matrix-mini-bar-geo",
+  "dataset": {
+    "columns": [
+      {
+        "id": "country",
+        "type": "string",
+        "label": "Quốc gia"
+      },
+      {
+        "id": "type",
+        "type": "string",
+        "label": "Loại"
+      },
+      {
+        "id": "rev_2026",
+        "type": "number",
+        "label": "2026"
+      },
+      {
+        "id": "rev_2025",
+        "type": "number",
+        "label": "2025"
+      }
+    ],
+    "rows": [
+      [
+        "MY",
+        "Tổng doanh thu vận tải hàng không",
+        1270,
+        1249
+      ],
+      [
+        "SG",
+        "Tổng doanh thu vận tải hàng không",
+        2200,
+        2150
+      ],
+      [
+        "TH",
+        "Tổng doanh thu vận tải hàng không",
+        1320,
+        1280
+      ],
+      [
+        "PH",
+        "Tổng doanh thu vận tải hàng không",
+        940,
+        900
+      ],
+      [
+        "LA",
+        "Tổng doanh thu vận tải hàng không",
+        330,
+        309
+      ],
+      [
+        "KH",
+        "Tổng doanh thu vận tải hàng không",
+        250,
+        230
+      ],
+      [
+        "IN",
+        "Tổng doanh thu vận tải hàng không",
+        1120,
+        1080
+      ],
+      [
+        "CN",
+        "Tổng doanh thu vận tải hàng không",
+        1819,
+        1750
+      ],
+      [
+        "JP",
+        "Tổng doanh thu vận tải hàng không",
+        2150,
+        2050
+      ],
+      [
+        "KR",
+        "Tổng doanh thu vận tải hàng không",
+        1980,
+        1890
+      ],
+      [
+        "TW",
+        "Tổng doanh thu vận tải hàng không",
+        1060,
+        1020
+      ],
+      [
+        "HK",
+        "Tổng doanh thu vận tải hàng không",
+        800,
+        770
+      ],
+      [
+        "DE",
+        "Tổng doanh thu vận tải hàng không",
+        1720,
+        1640
+      ],
+      [
+        "FR",
+        "Tổng doanh thu vận tải hàng không",
+        1599,
+        1550
+      ],
+      [
+        "GB",
+        "Tổng doanh thu vận tải hàng không",
+        1680,
+        1720
+      ],
+      [
+        "IT",
+        "Tổng doanh thu vận tải hàng không",
+        991,
+        950
+      ],
+      [
+        "RU",
+        "Tổng doanh thu vận tải hàng không",
+        870,
+        840
+      ],
+      [
+        "DK",
+        "Tổng doanh thu vận tải hàng không",
+        560,
+        530
+      ],
+      [
+        "NL",
+        "Tổng doanh thu vận tải hàng không",
+        700,
+        670
+      ],
+      [
+        "US",
+        "Tổng doanh thu vận tải hàng không",
+        1481,
+        1519
+      ],
+      [
+        "AU",
+        "Tổng doanh thu vận tải hàng không",
+        1519,
+        1490
+      ]
+    ]
+  },
+  "views": [
+    {
+      "chartType": "matrix-mini-bar-geo",
+      "xField": "country",
+      "series": [
         {
-          "id": "label",
-          "type": "string"
+          "field": "rev_2026",
+          "chartType": "bar"
         },
         {
-          "id": "value",
-          "type": "number",
-          "label": "Doanh thu VTHK 2026",
-          "color": [
-            "#1677ff",
-            "#479EB3",
-            "#3D879B",
-            "#5BA8BD",
-            "#C4A83A",
-            "#5E793D",
-            "#7BB5C7",
-            "#9AC3D1",
-            "#7B3FE4",
-            "#9B6FE8",
-            "#B592EC",
-            "#D97543",
-            "#E08F5C",
-            "#E8A87C",
-            "#75985A",
-            "#8AB277",
-            "#3CD0A3",
-            "#5DB8B0",
-            "#A3D5E5",
-            "#F4C628",
-            "#F7A213"
-          ]
+          "field": "rev_2025",
+          "chartType": "bar"
         }
       ],
-      "rows": [
-        ["SG", 2200],
-        ["JP", 2150],
-        ["KR", 1980],
-        ["CN", 1820],
-        ["DE", 1720],
-        ["GB", 1680],
-        ["FR", 1600],
-        ["AU", 1520],
-        ["US", 1480],
-        ["TH", 1320],
-        ["MY", 1270],
-        ["IN", 1120],
-        ["TW", 1060],
-        ["IT", 990],
-        ["PH", 940],
-        ["RU", 870],
-        ["HK", 800],
-        ["NL", 700],
-        ["DK", 560],
-        ["LA", 330],
-        ["KH", 250]
-      ]
-    },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "donut-pct",
-        "xField": "label",
-        "series": [
-          {
-            "field": "value"
-          }
-        ],
-        "showLegend": true,
-        "showCenterValue": true,
-        "tooltipUnit": "tỷ VND"
+      "showLegend": true,
+      "matrixConfig": {
+        "columnTitles": {
+          "Tổng doanh thu vận tải hàng không": "Tổng doanh thu vận tải hàng không"
+        },
+        "groupColors": {
+          "Tổng doanh thu vận tải hàng không": [
+            "#1677FF",
+            "#9AA0A6"
+          ]
+        },
+        "barSize": "m",
+        "labelPosition": "outside",
+        "legendPosition": "top-right"
       }
-    ]
-  }
+    }
+  ]
 }
