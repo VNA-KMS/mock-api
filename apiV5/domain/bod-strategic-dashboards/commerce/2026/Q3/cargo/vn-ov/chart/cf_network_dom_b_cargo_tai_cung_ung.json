@@ -1,0 +1,132 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          127.39999999999999,
+          132.5,
+          141.70000000000002,
+          null,
+          127.4,
+          132.5,
+          141.7
+        ],
+        [
+          "Q2",
+          129.1,
+          127.30000000000001,
+          144.9,
+          null,
+          256.5,
+          259.8,
+          286.6
+        ],
+        [
+          "Q3",
+          43.6,
+          120.5,
+          156.8,
+          94.1,
+          300.1,
+          380.3,
+          443.4
+        ],
+        [
+          "Q4",
+          null,
+          114.30000000000001,
+          159.2,
+          141.60000000000002,
+          null,
+          494.6,
+          602.6
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "description": "dom cargo tai cung ung",
+    "forecastStartIndex": 3
+  }
+}

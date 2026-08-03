@@ -1,0 +1,159 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "FCT 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Lũy kế FCT 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          20,
+          null,
+          20.9,
+          29.7,
+          null,
+          20,
+          null,
+          20.9,
+          29.7
+        ],
+        [
+          "Q2",
+          26.000000000000004,
+          null,
+          27.6,
+          35.1,
+          null,
+          46,
+          null,
+          48.5,
+          64.8
+        ],
+        [
+          "Q3",
+          null,
+          47.4,
+          33.7,
+          45.3,
+          33.7,
+          null,
+          47.4,
+          82.2,
+          110.1
+        ],
+        [
+          "Q4",
+          null,
+          47.9,
+          35.2,
+          46,
+          null,
+          null,
+          95.3,
+          117.4,
+          156.1
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "barOpacity": 0.3,
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "upWave",
+    "unit": "nghìn khách",
+    "description": "PAX - Số lượng Hành khách - nội địa - 9G",
+    "forecastStartIndex": 2
+  }
+}

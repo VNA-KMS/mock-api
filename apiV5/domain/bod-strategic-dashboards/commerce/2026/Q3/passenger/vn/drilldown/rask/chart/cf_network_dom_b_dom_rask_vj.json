@@ -1,0 +1,159 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "FCT 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Lũy kế FCT 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          68.1,
+          null,
+          72.2,
+          83.10000000000001,
+          null,
+          68.1,
+          null,
+          72.2,
+          83.1
+        ],
+        [
+          "Q2",
+          68.3,
+          null,
+          76.69999999999999,
+          93.6,
+          null,
+          136.4,
+          null,
+          148.9,
+          176.7
+        ],
+        [
+          "Q3",
+          24.2,
+          null,
+          79.1,
+          96.8,
+          54.8,
+          160.6,
+          null,
+          228,
+          273.5
+        ],
+        [
+          "Q4",
+          null,
+          109,
+          82.4,
+          108.5,
+          92.3,
+          null,
+          109,
+          310.4,
+          382
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "barOpacity": 0.3,
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "VND/ghế.km",
+    "description": "RASK - Doanh thu trên ghế km - nội địa - VJ",
+    "forecastStartIndex": 3
+  }
+}

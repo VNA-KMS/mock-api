@@ -1,0 +1,88 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "region",
+          "type": "string"
+        },
+        {
+          "id": "positive",
+          "type": "number",
+          "label": "Hiệu quả",
+          "color": "#22C55E"
+        },
+        {
+          "id": "negative",
+          "type": "number",
+          "label": "Hiệu quả",
+          "color": "#EF4444"
+        }
+      ],
+      "rows": [
+        [
+          "Trục lẻ",
+          8.2,
+          null
+        ],
+        [
+          "Du lịch",
+          12.4,
+          null
+        ],
+        [
+          "SGN_DAD",
+          null,
+          -3.1
+        ],
+        [
+          "Địa phương",
+          5.6,
+          null
+        ],
+        [
+          "HAN_SGN",
+          10.8,
+          null
+        ],
+        [
+          "HAN_DAD",
+          null,
+          -6.3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "region",
+        "allowNegativeY": true,
+        "labelColor": "#000000",
+        "labelFontSize": 13,
+        "labelFontWeight": 400,
+        "series": [
+          {
+            "field": "positive",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "negative",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ],
+        "borderRadius": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "barSize": "l",
+        "showLegend": false
+      }
+    ]
+  }
+}

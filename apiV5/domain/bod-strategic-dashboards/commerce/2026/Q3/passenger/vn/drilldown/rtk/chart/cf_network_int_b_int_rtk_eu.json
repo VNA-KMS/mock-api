@@ -1,0 +1,133 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "Dự báo",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          348.3,
+          376,
+          429.70000000000005,
+          null,
+          348.3,
+          376,
+          429.7
+        ],
+        [
+          "Q2",
+          323,
+          362.3,
+          418.2,
+          null,
+          671.3,
+          738.3,
+          847.9
+        ],
+        [
+          "Q3",
+          113,
+          341.20000000000005,
+          415.5,
+          234.8,
+          784.3,
+          1079.5,
+          1263.4
+        ],
+        [
+          "Q4",
+          null,
+          325.59999999999997,
+          394.59999999999997,
+          335.4,
+          null,
+          1405.1,
+          1658
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "chartType": "line",
+    "pattern": "fluctuation",
+    "unit": "tỷ tấn.km",
+    "description": "RTK - Luân chuyển hàng hóa - quốc tế",
+    "forecastStartIndex": 3
+  }
+}

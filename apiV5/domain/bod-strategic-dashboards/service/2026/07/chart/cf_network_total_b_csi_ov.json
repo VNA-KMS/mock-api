@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -8,114 +8,114 @@
           "type": "string"
         },
         {
-          "id": "y2026",
-          "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
-        },
-        {
-          "id": "y2025",
+          "id": "ck",
           "type": "number",
           "label": "2025",
-          "color": "#C76449"
+          "colorToken": "series.previous"
         },
         {
-          "id": "y2024",
+          "id": "th",
           "type": "number",
-          "label": "2024",
-          "color": "#D3AC2B"
+          "label": "2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "uth",
+          "id": "ck_lk",
           "type": "number",
-          "label": "Ước thực hiện 2027",
-          "color": "#006D88"
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
         [
           "T1",
+          4,
           4.1,
           4,
-          3.9,
-          null
+          4.1
         ],
         [
           "T2",
-          4.1,
           4.02,
-          3.92,
-          null
+          4.1,
+          8.02,
+          8.2
         ],
         [
           "T3",
-          4.13,
           4.03,
-          3.93,
-          null
+          4.13,
+          12.05,
+          12.33
         ],
         [
           "T4",
-          4.16,
           4.06,
-          3.96,
-          null
+          4.16,
+          16.11,
+          16.49
         ],
         [
           "T5",
-          4.16,
           4.08,
-          3.96,
-          null
+          4.16,
+          20.19,
+          20.65
         ],
         [
           "T6",
-          4.18,
           4.1,
-          4,
-          null
+          4.18,
+          24.29,
+          24.83
         ],
         [
           "T7",
-          4,
           3.86,
-          3.8,
-          null
+          4,
+          28.15,
+          28.83
         ],
         [
           "T8",
-          null,
           3.88,
-          3.82,
-          4.02
+          null,
+          32.03,
+          null
         ],
         [
           "T9",
-          null,
           3.92,
-          3.85,
-          4.06
+          null,
+          35.95,
+          null
         ],
         [
           "T10",
-          null,
           3.95,
-          3.88,
-          4.09
+          null,
+          39.9,
+          null
         ],
         [
           "T11",
-          null,
           3.98,
-          3.88,
-          4.12
+          null,
+          43.88,
+          null
         ],
         [
           "T12",
-          null,
           4,
-          3.9,
-          4.14
+          null,
+          47.88,
+          null
         ]
       ]
     },
@@ -126,20 +126,14 @@
         "xField": "month",
         "series": [
           {
-            "field": "y2026",
-            "chartType": "line"
-          },
-          {
-            "field": "y2025",
-            "chartType": "line"
-          },
-          {
-            "chartType": "line",
-            "field": "y2024"
-          },
-          {
-            "field": "uth",
+            "field": "ck",
             "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
           }
         ],
         "label": "Theo T12"

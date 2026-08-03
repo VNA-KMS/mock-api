@@ -1,0 +1,129 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "yoy",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          2,
+          3,
+          2
+        ],
+        [
+          "T2",
+          1,
+          2,
+          3
+        ],
+        [
+          "T3",
+          2,
+          3,
+          5
+        ],
+        [
+          "T4",
+          1,
+          2,
+          6
+        ],
+        [
+          "T5",
+          0,
+          2,
+          6
+        ],
+        [
+          "T6",
+          2,
+          3,
+          8
+        ],
+        [
+          "T7",
+          2,
+          3,
+          10
+        ],
+        [
+          "T8",
+          null,
+          2,
+          null
+        ],
+        [
+          "T9",
+          null,
+          2,
+          null
+        ],
+        [
+          "T10",
+          null,
+          1,
+          null
+        ],
+        [
+          "T11",
+          null,
+          2,
+          null
+        ],
+        [
+          "T12",
+          null,
+          2,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 0,
+        "yMax": 5,
+        "labelShow": "all",
+        "series": [
+          {
+            "field": "yoy",
+            "chartType": "line",
+            "showSymbol": true
+          },
+          {
+            "field": "th",
+            "chartType": "line",
+            "showSymbol": true,
+            "areaStyle": {},
+            "showLabel": "all"
+          }
+        ]
+      }
+    ]
+  }
+}

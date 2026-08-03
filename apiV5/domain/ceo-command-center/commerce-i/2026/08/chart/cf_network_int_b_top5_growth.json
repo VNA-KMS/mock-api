@@ -1,0 +1,40 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "area",
+          "type": "string",
+          "label": "Khu vực"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Tăng trưởng (%)",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        ["CLMV", 15.4],
+        ["NEA", 12.1],
+        ["SEA", 4.8],
+        ["SWP", 5.2],
+        ["EU", 8.3]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "area",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "item",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        ["QĐT", 1571429, 1624490],
+        ["DVMN", 334694, 342857],
+        ["BDTX", 1465306, 1518367],
+        ["BDDK", 714286, 746939],
+        ["PTVT", 1922449, 1983674],
+        ["Cảng", 95918, 98776],
+        ["APU", 270204, 275510],
+        ["ĐC", 9342857, 9387755]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "item",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ]
+      }
+    ]
+  }
+}

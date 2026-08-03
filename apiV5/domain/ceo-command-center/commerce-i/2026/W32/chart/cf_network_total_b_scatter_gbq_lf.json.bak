@@ -1,0 +1,93 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "area",
+          "type": "string"
+        },
+        {
+          "id": "LF",
+          "type": "number",
+          "label": "LF (%)"
+        },
+        {
+          "id": "GBQ",
+          "type": "number",
+          "label": "GBQ (triệu VNĐ)"
+        },
+        {
+          "id": "ask",
+          "type": "number",
+          "label": "ASK (nghìn ghế.km)"
+        }
+      ],
+      "rows": [
+        [
+          "NEA",
+          "NEA",
+          79.1,
+          5383,
+          720000
+        ],
+        [
+          "SEA",
+          "SEA",
+          85,
+          3262,
+          350000
+        ],
+        [
+          "CLMV",
+          "CLMV",
+          53.7,
+          2849,
+          45000
+        ],
+        [
+          "EUR",
+          "EUR",
+          79.8,
+          13651,
+          180000
+        ],
+        [
+          "NOA",
+          "NOA",
+          81.9,
+          20869,
+          35000
+        ],
+        [
+          "SWP",
+          "SWP",
+          83.1,
+          10039,
+          95000
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "LF",
+        "yField": "GBQ",
+        "sizeField": "ask",
+        "colorBy": "area",
+        "series": [
+          {
+            "field": "LF",
+            "chartType": "scatter"
+          }
+        ]
+      }
+    ]
+  }
+}

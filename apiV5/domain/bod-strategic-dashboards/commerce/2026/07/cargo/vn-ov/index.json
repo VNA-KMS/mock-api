@@ -10,44 +10,58 @@
       {
         "id": "san_luong",
         "status": "compact",
-        "title": "Sản lượng",
+        "title": "CARGO",
         "value": "54.8",
         "unit": "nghìn tấn",
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "up",
-            "label": "3.2% với Kế hoạch",
-            "tone": "positive",
-            "status": 0
+            "direction": "flat",
+            "label": "98.1% với Kế hoạch",
+            "type": "plan",
+            "value": "98.1%",
+            "status": 0,
+            "tone": "negative"
           },
           {
             "direction": "up",
             "label": "7.1% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "7.1%",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
       },
       {
         "id": "doanh_thu_hh",
         "status": "compact",
-        "title": "Doanh thu",
+        "title": "CARGO REV",
         "value": "2,120",
         "unit": "tỷ VND",
         "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "up",
-            "label": "5.1% với Kế hoạch",
-            "tone": "positive",
-            "status": 0
+            "direction": "flat",
+            "label": "94.6% với Kế hoạch",
+            "type": "plan",
+            "value": "94.6%",
+            "status": 0,
+            "tone": "negative"
           },
           {
             "direction": "up",
             "label": "11.3% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "11.3%",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
       },
       {
         "id": "lf",
@@ -55,22 +69,31 @@
         "title": "LF",
         "value": "68.1",
         "unit": "%",
-        "backgroundStatus": 2,
         "trend": [
           {
-            "direction": "down",
-            "label": "0.5% với Kế hoạch",
-            "tone": "negative",
-            "status": 0
+            "direction": "flat",
+            "label": "98.4% với Kế hoạch",
+            "type": "plan",
+            "value": "98.4%",
+            "status": 0,
+            "tone": "negative"
           },
           {
             "direction": "up",
             "label": "2.1% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "2.1%",
             "tone": "positive"
           }
-        ]
+        ],
+        "colorTokens": {
+          "visualization": "semantic.negative"
+        }
       }
-    ]
+    ],
+    "layout": {
+      "columns": 3
+    }
   },
   "chartBoard": [
     {
@@ -78,25 +101,31 @@
       "items": [
         {
           "id": "b_cargo_van_chuyen",
-          "title": "Sản lượng",
+          "title": "CARGO",
           "col": 1,
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/b_cargo_van_chuyen.json",
-          "rightTitle": "tấn"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_cargo_doanh_thu",
-          "title": "Doanh thu",
+          "title": "CARGO REV",
           "col": 21,
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/b_cargo_doanh_thu.json",
-          "rightTitle": "tỷ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_cargo_tai_cung_ung",
@@ -105,9 +134,13 @@
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/b_cargo_tai_cung_ung.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -116,32 +149,12 @@
       "items": [
         {
           "id": "b_cargo_treemap_total",
-          "title": "Cơ cấu thị trường hàng hoá",
+          "title": "CARGO - AREA",
           "col": 1,
           "colSpan": 60,
           "row": 1,
           "height": 350,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/b_cargo_treemap_total.json"
-        }
-      ]
-    },
-    {
-      "title": "Đánh giá thị trường",
-      "items": [
-        {
-          "id": "b_cargo_ai_insight",
-          "col": 1,
-          "colSpan": 60,
-          "row": 1,
-          "rowSpan": 1,
-          "extraComponent": {
-            "type": "card-html",
-            "config": {
-              "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường hàng hoá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Vận chuyển hàng hoá T7</b> — đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch.</li></ul></div>",
-              "backgroundClassName": "",
-              "borderClassName": ""
-            }
-          }
         }
       ]
     }
@@ -150,8 +163,9 @@
     {
       "key": "dataType",
       "col": 1,
-      "colSpan": 10,
-      "label": "",
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
       "showInfo": true,
       "infoTooltip": "Chọn loại dữ liệu",
       "size": "sm",
@@ -164,21 +178,21 @@
           "value": "cargo",
           "label": "Hàng hoá"
         }
-      ],
-      "row": 1
+      ]
     },
     {
       "key": "network",
-      "col": 1,
-      "colSpan": 12,
-      "label": "Phạm vi mạng bay",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
       "showInfo": true,
       "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
       "size": "sm",
       "options": [
         {
           "value": "total",
-          "label": "Tổng quan"
+          "label": "Toàn mạng"
         },
         {
           "value": "int",
@@ -188,13 +202,13 @@
           "value": "dom",
           "label": "Nội địa"
         }
-      ],
-      "row": 2
+      ]
     },
     {
       "key": "carrier",
-      "col": 13,
-      "colSpan": 12,
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
       "label": "Hãng vận chuyển",
       "showInfo": true,
       "infoTooltip": "Chọn hãng vận chuyển",
@@ -206,10 +220,9 @@
         },
         {
           "value": "vn-ov",
-          "label": "VN & 0V"
+          "label": "VN+0V+BL"
         }
-      ],
-      "row": 2
+      ]
     }
   ],
   "contentFilter": {
@@ -217,27 +230,45 @@
       "total": {
         "chartBoard": [
           {
-            "title": "Vận tải hàng hoá",
+            "title": "CARGO",
             "items": [
               {
                 "id": "b_cargo_van_chuyen",
-                "title": "Sản lượng",
+                "title": "CARGO",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_van_chuyen.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sản lượng hàng hoá vận chuyển đạt 54.8 nghìn tấn (+8.5% CK, 96.2% KH). Hàng hoá xuyên biên giới và thương mại điện tử tăng mạnh.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_doanh_thu",
-                "title": "Doanh thu",
+                "title": "CARGO REV",
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_doanh_thu.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá đạt 2.120 tỷ VND (+12.3% CK, 98.5% KH). Giá cước vận chuyển hàng không tăng nhẹ.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_tai_cung_ung",
@@ -246,41 +277,36 @@
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_tai_cung_ung.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %",
+                "aiInsight": {
+                  "text": "Hệ số sử dụng tải hàng (CLF) đạt 68.1% (+2.3% CK). Năng lực cung ứng tải hàng được tối ưu.",
+                  "severity": "good",
+                  "status": 1
+                }
               }
             ]
           },
           {
-            "title": "Cơ cấu thị trường hàng hoá",
+            "title": "CARGO - AREA",
             "items": [
               {
                 "id": "b_cargo_treemap_total",
-                "title": "Cơ cấu thị trường hàng hoá",
+                "title": "CARGO - AREA",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
                 "height": 350,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_treemap_total.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường hàng hoá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Vận chuyển hàng hoá T7</b> — đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_total_b_cargo_treemap_total.json",
+                "aiInsight": {
+                  "text": "Cơ cấu thị trường hàng hoá: Quốc tế chiếm 72% doanh thu, Nội địa 28%. Các thị trường ĐBA và EU dẫn đầu.",
+                  "severity": "info",
+                  "status": 1
                 }
               }
             ]
@@ -290,27 +316,45 @@
       "dom": {
         "chartBoard": [
           {
-            "title": "Vận tải hàng hoá nội địa",
+            "title": "CARGO - DOM",
             "items": [
               {
                 "id": "b_cargo_van_chuyen",
-                "title": "Sản lượng",
+                "title": "CARGO",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_van_chuyen.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sản lượng hàng hoá vận chuyển đạt 54.8 nghìn tấn (+8.5% CK, 96.2% KH). Hàng hoá xuyên biên giới và thương mại điện tử tăng mạnh.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_doanh_thu",
-                "title": "Doanh thu",
+                "title": "CARGO REV",
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_doanh_thu.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá đạt 2.120 tỷ VND (+12.3% CK, 98.5% KH). Giá cước vận chuyển hàng không tăng nhẹ.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_tai_cung_ung",
@@ -319,13 +363,23 @@
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_tai_cung_ung.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %",
+                "aiInsight": {
+                  "text": "Hệ số sử dụng tải hàng (CLF) đạt 68.1% (+2.3% CK). Năng lực cung ứng tải hàng được tối ưu.",
+                  "severity": "good",
+                  "status": 1
+                }
               }
             ]
           },
           {
-            "title": "Thị phần khách theo hãng bay",
+            "title": "Thị phần hàng hóa vận chuyển theo hãng bay",
             "items": [
               {
                 "id": "b_dom_vna",
@@ -334,9 +388,18 @@
                 "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vna.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vna.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "VNA thị phần 28% (+0.5% CK). Tập trung phân khúc khách hàng doanh nhân và chất lượng dịch vụ.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_pa",
@@ -345,9 +408,18 @@
                 "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_pa.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_pa.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Pacific Airlines (QH) thị phần 8% (-0.3% CK). Hoạt động tập trung vào phân khúc giá rẻ.",
+                  "severity": "warn",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_vna_group",
@@ -356,9 +428,18 @@
                 "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vna_group.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vna_group.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "VNA Group duy trì thị phần 52% (+1% CK), dẫn đầu thị trường nội địa nhờ mạng bay rộng và thương hiệu mạnh.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_vj",
@@ -367,9 +448,18 @@
                 "colSpan": 15,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vj.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vj.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "VietJet (VJ) thị phần 22% (+1.2% CK). Tăng trưởng nhờ mở rộng đội bay và các đường bay du lịch.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_ba",
@@ -378,9 +468,18 @@
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_ba.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_ba.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Bamboo Airways (BA) thị phần 15% (-0.8% CK). Cạnh tranh trên các đường bay du lịch.",
+                  "severity": "warn",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_sun",
@@ -389,9 +488,18 @@
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_sun.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_sun.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sun Air (9G) thị phần 2% (+0.1% CK). Đang trong giai đoạn phát triển, tập trung thị trường ngách.",
+                  "severity": "info",
+                  "status": 1
+                }
               },
               {
                 "id": "b_dom_vu",
@@ -400,42 +508,36 @@
                 "colSpan": 20,
                 "row": 2,
                 "rowSpan": 1,
-                "height": 150,
+                "height": 280,
                 "subTitle": "Đơn vị: %",
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vu.json"
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/passenger/vn/chart/cf_network_dom_b_dom_vu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "VASCO (VU) thị phần 3% (ổn định). Phục vụ tốt các đường bay địa phương và Côn Đảo.",
+                  "severity": "info",
+                  "status": 1
+                }
               }
             ]
           },
           {
-            "title": "Cơ cấu thị trường hàng hoá nội địa",
+            "title": "CARGO - AREA DOM",
             "items": [
               {
                 "id": "b_cargo_treemap_dom",
-                "title": "Cơ cấu thị trường hàng hoá nội địa",
+                "title": "CARGO - AREA DOM",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
                 "height": 350,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_treemap_dom.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường hàng hoá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Vận chuyển hàng hoá T7</b> — đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_dom_b_cargo_treemap_dom.json",
+                "aiInsight": {
+                  "text": "Cơ cấu thị trường hàng hoá nội địa: HAN-SGN chiếm tỷ trọng lớn nhất (35%), tiếp theo là SGN-DAD và HAN-DAD.",
+                  "severity": "info",
+                  "status": 1
                 }
               }
             ]
@@ -445,27 +547,45 @@
       "int": {
         "chartBoard": [
           {
-            "title": "Vận tải hàng hoá quốc tế",
+            "title": "CARGO - INT",
             "items": [
               {
                 "id": "b_cargo_van_chuyen",
-                "title": "Sản lượng",
+                "title": "CARGO",
                 "col": 1,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_van_chuyen.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_van_chuyen.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sản lượng hàng hoá vận chuyển đạt 54.8 nghìn tấn (+8.5% CK, 96.2% KH). Hàng hoá xuyên biên giới và thương mại điện tử tăng mạnh.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_doanh_thu",
-                "title": "Doanh thu",
+                "title": "CARGO REV",
                 "col": 21,
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_doanh_thu.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_doanh_thu.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá đạt 2.120 tỷ VND (+12.3% CK, 98.5% KH). Giá cước vận chuyển hàng không tăng nhẹ.",
+                  "severity": "good",
+                  "status": 1
+                }
               },
               {
                 "id": "b_cargo_tai_cung_ung",
@@ -474,41 +594,36 @@
                 "colSpan": 20,
                 "row": 1,
                 "rowSpan": 1,
-                "height": 150,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_tai_cung_ung.json"
+                "height": 280,
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_tai_cung_ung.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "subTitle": "Đơn vị: %",
+                "aiInsight": {
+                  "text": "Hệ số sử dụng tải hàng (CLF) đạt 68.1% (+2.3% CK). Năng lực cung ứng tải hàng được tối ưu.",
+                  "severity": "good",
+                  "status": 1
+                }
               }
             ]
           },
           {
-            "title": "Cơ cấu thị trường hàng hoá quốc tế",
+            "title": "CARGO - AREA INT",
             "items": [
               {
                 "id": "b_cargo_treemap_int",
-                "title": "Cơ cấu thị trường hàng hoá quốc tế",
+                "title": "CARGO - AREA INT",
                 "col": 1,
                 "colSpan": 60,
                 "row": 1,
                 "height": 350,
-                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_treemap_int.json"
-              }
-            ]
-          },
-          {
-            "title": "Đánh giá thị trường",
-            "items": [
-              {
-                "id": "b_cargo_ai_insight",
-                "col": 1,
-                "colSpan": 60,
-                "row": 1,
-                "rowSpan": 1,
-                "extraComponent": {
-                  "type": "card-html",
-                  "config": {
-                    "html": "<div style=\"padding:12px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:13px;color:#004071;margin-bottom:6px\">📊 AI Insight — Thị trường hàng hoá</div><ul style=\"margin:0;padding:0;list-style:none;font-size:12px;color:#1e293b\"><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#059669\"></span><b>Vận chuyển hàng hoá T7</b> — đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.</li><li style=\"padding:4px 0 4px 16px;position:relative\"><span style=\"position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#00558F\"></span><b>Lũy kế T1–T7</b> — đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch.</li></ul></div>",
-                    "backgroundClassName": "",
-                    "borderClassName": ""
-                  }
+                "chartPath": "apiV5/domain/bod-strategic-dashboards/commerce/2026/07/cargo/vn/chart/cf_network_int_b_cargo_treemap_int.json",
+                "aiInsight": {
+                  "text": "Cơ cấu thị trường hàng hoá quốc tế: NEA dẫn đầu (32%), EU (28%), SEA (18%). Các thị trường châu Á chiếm ưu thế.",
+                  "severity": "info",
+                  "status": 1
                 }
               }
             ]
@@ -520,7 +635,20 @@
   "timeFrameHiddenModes": [
     "day",
     "week",
-    "quarter",
+    "year",
     "custom"
-  ]
+  ],
+  "filterColumns": 60,
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "items": [
+        "<strong>Vận chuyển hàng hoá T7:</strong> đạt 45,2 nghìn tấn, tăng 7,1% so với Cùng kỳ, tăng 3,2% so với T6.",
+        "<strong>Lũy kế T1–T7:</strong> đạt 285,6 nghìn tấn, tăng 5,8% so với Cùng kỳ, vượt 4% so với Kế hoạch."
+      ],
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI"
+    }
+  }
 }

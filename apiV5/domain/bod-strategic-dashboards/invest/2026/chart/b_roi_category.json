@@ -1,0 +1,39 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        { "id": "category", "type": "string" },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "ROI",
+          "color": [
+            "data.deep-teal",
+            "data.jade-blue",
+            "data.olive-gold"
+          ]
+        }
+      ],
+      "rows": [
+        ["Công ty con", 105],
+        ["Công ty liên kết", 102],
+        ["Đầu tư dài hạn khác", 98]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "category",
+        "showLegend": false,
+        "yMin": 90,
+        "yMax": 120,
+        "yInterval": 2,
+        "series": [
+          { "field": "value", "chartType": "bar", "showLabel": "all" }
+        ]
+      }
+    ]
+  }
+}

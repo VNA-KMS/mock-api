@@ -1,0 +1,320 @@
+{
+  "titleInfo": {
+    "title": "Đầu tư",
+    "statusLabel": "REAL TIME",
+    "description": "Tình hình đầu tư năm 2026 — hiệu quả vốn, danh mục dự án, tiến độ giải ngân?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "layout": {
+      "columns": 5
+    },
+    "items": [
+      {
+        "id": "m_total",
+        "status": "compact",
+        "title": "Chuẩn bị đầu tư",
+        "value": "82",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [82, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "12,5 so với kế hoạch",
+            "type": "plan",
+            "value": "12,5%",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "18,8 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "18,8%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human",
+        "status": "compact",
+        "title": "Số dự án đang đầu tư",
+        "value": "32",
+        "unit": "dự án",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "8 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "8%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human_rate",
+        "status": "compact",
+        "title": "Thực hiện đầu tư",
+        "value": "78.50",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [78.50, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "22.5%",
+            "type": "plan",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "16.2%",
+            "type": "samePeriod",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rate",
+        "status": "compact",
+        "title": "Giải ngân",
+        "value": "92.8",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [92.8, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "10,2 so với kế hoạch",
+            "type": "plan",
+            "value": "10,2%",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "6,8 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "6,8%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_roi",
+        "status": "compact",
+        "title": "ROI",
+        "value": "112",
+        "unit": "%",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "12% so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "12%",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "b_trend",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "title": "Thực hiện đầu tư",
+          "height": 280,
+          "aiInsight": {
+            "text": "Tổng vốn đầu tư năm 2026 đạt 78 nghìn tỷ đồng. Giải ngân đạt 92,8% kế hoạch, vượt 10,2 điểm phần trăm.",
+            "severity": "good",
+            "status": 1
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/chart/b_trend.json",
+          "subTitle": "Đơn vị: nghìn tỷ đồng"
+        },
+        {
+          "id": "b_disburse",
+          "title": "Tình hình giải ngân theo loại dự án",
+          "subTitle": "Đơn vị: nghìn tỷ đồng",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "extraComponent": {
+            "type": "grouped-list",
+            "config": {
+              "rows": [
+                {
+                  "id": "aircraft-engine",
+                  "nodeId": "25496:120451",
+                  "title": "Tàu bay, động cơ",
+                  "actual": 32.5,
+                  "target": 38.0,
+                  "description": "Giải ngân 92/96 Dự án",
+                  "tone": "orange",
+                  "iconKey": "airplane"
+                },
+                {
+                  "id": "ttb",
+                  "nodeId": "25496:120467",
+                  "title": "TTB",
+                  "actual": 11.2,
+                  "target": 16.5,
+                  "description": "Giải ngân 58/68 Dự án",
+                  "tone": "green",
+                  "iconKey": "gear"
+                },
+                {
+                  "id": "xdcb",
+                  "nodeId": "25507:120773",
+                  "title": "XDCB",
+                  "actual": 7.8,
+                  "target": 13.5,
+                  "description": "Giải ngân 32/48 Dự án",
+                  "tone": "red",
+                  "iconKey": "trafficCone"
+                },
+                {
+                  "id": "dtrndn",
+                  "nodeId": "25507:120789",
+                  "title": "ĐTRNDN",
+                  "actual": 8.2,
+                  "target": 10.5,
+                  "description": "Giải ngân 48/52 Dự án",
+                  "tone": "cyan",
+                  "iconKey": "house"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b_class",
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "title": "Bảng thực hiện dự án",
+          "aiInsight": {
+            "text": "Danh mục đầu tư năm 2026 tập trung vào hạ tầng sân bay (40%), đội tàu bay (35%) và công nghệ thông tin (15%). Ngành hàng không chiếm 80% tổng vốn, dịch vụ phụ trợ chiếm 20%. Tỷ lệ giải ngân bình quân đạt 92,8%.",
+            "severity": "good",
+            "status": 1
+          },
+          "table": {
+            "columns": [
+              { "id": "type", "type": "string", "label": "Loại dự án" },
+              { "id": "count", "type": "number", "label": "Số dự án", "align": "center" },
+              { "id": "plan", "type": "number", "label": "Tổng mức đầu tư KH", "align": "center" },
+              { "id": "actual", "type": "number", "label": "Giá trị thực hiện", "align": "center" },
+              { "id": "disburse", "type": "number", "label": "Giá trị giải ngân", "align": "center" },
+              { "id": "pct_actual", "type": "chip", "label": "% thực hiện đầu tư", "align": "center", "variant": "square" },
+              { "id": "pct_disburse", "type": "chip", "label": "% giải ngân", "align": "center", "variant": "square" }
+            ],
+            "rows": [
+              { "cells": { "type": "Tàu bay, động cơ", "count": 96, "plan": 38000, "actual": 34200, "disburse": 32500, "pct_actual": { "label": "90%", "color": "green" }, "pct_disburse": { "label": "86%", "color": "green" } } },
+              { "cells": { "type": "TTB", "count": 68, "plan": 16500, "actual": 12800, "disburse": 11200, "pct_actual": { "label": "78%", "color": "yellow" }, "pct_disburse": { "label": "68%", "color": "yellow" } } },
+              { "cells": { "type": "XDCB", "count": 48, "plan": 13500, "actual": 8900, "disburse": 7800, "pct_actual": { "label": "66%", "color": "yellow" }, "pct_disburse": { "label": "58%", "color": "red" } } },
+              { "cells": { "type": "ĐTRNDN", "count": 52, "plan": 10500, "actual": 9100, "disburse": 8200, "pct_actual": { "label": "87%", "color": "green" }, "pct_disburse": { "label": "78%", "color": "yellow" } } }
+            ]
+          }
+        },
+        {
+          "id": "b_prep_list",
+          "title": "SL dự án chuẩn bị đầu tư",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  { "id": "sector", "type": "text", "label": "Loại dự án" },
+                  { "id": "cbdt", "type": "number", "label": "Chuẩn bị đầu tư", "align": "center" },
+                  { "id": "qddt", "type": "number", "label": "Đã có QĐ đầu tư", "align": "center" },
+                  { "id": "total", "type": "number", "label": "Tổng", "align": "center" }
+                ],
+                "rows": [
+                  ["Tàu bay, động cơ", 12, 8, 20],
+                  ["TTB", 8, 18, 26],
+                  ["XDCB", 5, 22, 27],
+                  ["ĐTRNDN", 8, 10, 18]
+                ]
+              },
+              "rowStyle": {
+                "Tàu bay, động cơ": { "backgroundColor": "#E0F2FE", "textColor": "#0369A1" },
+                "TTB": { "backgroundColor": "#DCFCE7", "textColor": "#15803D" },
+                "XDCB": { "backgroundColor": "#FEF3C7", "textColor": "#92400E" },
+                "ĐTRNDN": { "backgroundColor": "#F3E8FF", "textColor": "#7C3AED" }
+              },
+              "maxHeight": 260
+            }
+          }
+        },
+        {
+          "id": "b_roi_trend",
+          "title": "ROI theo năm",
+          "col": 1,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/chart/b_roi_trend.json",
+          "subTitle": "Đơn vị: %"
+        },
+        {
+          "id": "b_roi_category",
+          "title": "ROI 2026 theo loại danh mục",
+          "col": 31,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/chart/b_roi_category.json",
+"subTitle": "Đơn vị: %"
+        },
+        {
+          "id": "b_roi_company",
+          "title": "ROI theo công ty",
+          "subTitle": "Đơn vị: nghìn tỷ VNĐ",
+          "col": 1,
+          "colSpan": 60,
+          "row": 4,
+          "rowSpan": 1,
+          "table": {
+            "columns": [
+              { "id": "category", "type": "string", "label": "Loại danh mục" },
+              { "id": "company", "type": "string", "label": "Tên công ty" },
+              { "id": "charter_capital", "type": "number", "label": "Vốn điều lệ", "align": "right" },
+              { "id": "investment", "type": "number", "label": "Vốn đầu tư CSH", "align": "right" },
+              { "id": "ownership", "type": "chip", "label": "Tỷ lệ góp vốn", "align": "center" },
+              { "id": "dividend", "type": "number", "label": "Cổ tức/lãi", "align": "right" },
+              { "id": "roi", "type": "chip", "label": "ROI", "align": "center", "variant": "square" }
+            ],
+            "rows": [
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Kỹ thuật máy bay (VAECO)", "charter_capital": 1200, "investment": 1200, "ownership": { "label": "100%", "color": "green" }, "dividend": 85, "roi": { "label": "7,1%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Nhiên liệu Hàng không Việt Nam (SKYPEC)", "charter_capital": 800, "investment": 800, "ownership": { "label": "100%", "color": "green" }, "dividend": 120, "roi": { "label": "15%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH Suất ăn hàng không Việt Nam (VACS)", "charter_capital": 500, "investment": 500, "ownership": { "label": "100%", "color": "green" }, "dividend": 45, "roi": { "label": "9%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH MTV Dịch vụ mặt đất sân bay (VIAGS)", "charter_capital": 600, "investment": 600, "ownership": { "label": "100%", "color": "green" }, "dividend": 62, "roi": { "label": "10,3%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty TNHH dịch vụ giao nhận hàng hóa Tân Sơn Nhất (TECS)", "charter_capital": 200, "investment": 102, "ownership": { "label": "51%", "color": "green" }, "dividend": 18, "roi": { "label": "17,6%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY CON", "company": "Công ty CP dịch vụ hàng hoá Tân sơn nhất (TCS)", "charter_capital": 150, "investment": 76.5, "ownership": { "label": "51%", "color": "green" }, "dividend": 12, "roi": { "label": "15,7%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần cho thuê máy bay Việt Nam (VALC)", "charter_capital": 3500, "investment": 1050, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 95, "roi": { "label": "9%", "color": "green" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần XNK hàng không (Airimex)", "charter_capital": 300, "investment": 90, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 8, "roi": { "label": "8,9%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần Nhựa cao cấp hàng không (APLACO)", "charter_capital": 250, "investment": 62.5, "ownership": { "label": "25%", "color": "yellow" }, "dividend": 5, "roi": { "label": "8%", "color": "yellow" } } },
+              { "cells": { "category": "CÔNG TY LIÊN KẾT", "company": "Công ty cổ phần Dịch vụ hàng không SB Đà Nẵng (MASCO)", "charter_capital": 180, "investment": 54, "ownership": { "label": "30%", "color": "yellow" }, "dividend": 7, "roi": { "label": "13%", "color": "green" } } },
+              { "cells": { "category": "ĐẦU TƯ DÀI HẠN KHÁC", "company": "Công ty CP Bưu chính VTSGN (SPT)", "charter_capital": 400, "investment": 60, "ownership": { "label": "15%", "color": "yellow" }, "dividend": 4, "roi": { "label": "6,7%", "color": "yellow" } } },
+              { "cells": { "category": "ĐẦU TƯ DÀI HẠN KHÁC", "company": "Hãng Hàng không Cambodia Angkor Air (K6)", "charter_capital": 600, "investment": 294, "ownership": { "label": "49%", "color": "yellow" }, "dividend": 0, "roi": { "label": "0%", "color": "red" } } }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "timeFrameHiddenModes": ["day", "week", "custom"]
+}

@@ -1,0 +1,136 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          7.45,
+          7.8,
+          9,
+          null,
+          7.45,
+          7.8,
+          9,
+          null
+        ],
+        [
+          "Q2",
+          7.8,
+          8.1,
+          8.85,
+          null,
+          15.25,
+          15.9,
+          17.85,
+          null
+        ],
+        [
+          "Q3",
+          9,
+          8.55,
+          9.15,
+          null,
+          24.25,
+          24.45,
+          27,
+          null
+        ],
+        [
+          "Q4",
+          null,
+          7.35,
+          8.4,
+          8.4,
+          null,
+          31.8,
+          35.4,
+          8.4
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

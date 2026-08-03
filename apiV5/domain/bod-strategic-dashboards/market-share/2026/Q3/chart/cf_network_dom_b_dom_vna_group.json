@@ -1,0 +1,111 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          66,
+          67.6,
+          85.8,
+          66,
+          67.6,
+          85.8
+        ],
+        [
+          "Q2",
+          72.4,
+          74.9,
+          94.1,
+          138.4,
+          142.5,
+          179.9
+        ],
+        [
+          "Q3",
+          26.2,
+          64.5,
+          34.1,
+          164.6,
+          207,
+          214
+        ],
+        [
+          "Q4",
+          null,
+          65.7,
+          null,
+          164.6,
+          272.7,
+          214
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

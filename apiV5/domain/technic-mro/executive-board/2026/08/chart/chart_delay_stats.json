@@ -1,0 +1,61 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "count",
+          "type": "number",
+          "label": "N-DELAY",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [6, 4],
+          "colorToken": "data.olive-gold"
+        }
+      ],
+      "rows": [
+        ["T1", 12, 10],
+        ["T2", 11, 10],
+        ["T3", 10, 10],
+        ["T4", 10, 10],
+        ["T5", 9, 10],
+        ["T6", 9, 10],
+        ["T7", 8.4, 10],
+        ["T8", null, 10],
+        ["T9", null, 10],
+        ["T10", null, 10],
+        ["T11", null, 10],
+        ["T12", null, 10]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "showLegend": false,
+        "nameAxis": "N-DELAY (Đơn vị: Số vụ)",
+        "series": [
+          {
+            "field": "count",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "q3_2025",
+          "type": "number",
+          "label": "Q3.2025",
+          "color": "#CBCFD4"
+        },
+        {
+          "id": "q2_2026",
+          "type": "number",
+          "label": "Q2.2026",
+          "color": "#EFE9D6"
+        },
+        {
+          "id": "q3_2026",
+          "type": "number",
+          "label": "Q3.2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          99.2,
+          99.4,
+          99.3
+        ],
+        [
+          "A350",
+          99.0,
+          99.3,
+          99.2
+        ],
+        [
+          "B787",
+          98.5,
+          98.7,
+          98.6
+        ],
+        [
+          "ATR72",
+          99.3,
+          99.5,
+          99.4
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "fleet",
+        "yMin": 98.0,
+        "yMax": 100,
+        "series": [
+          {
+            "field": "q3_2025",
+            "chartType": "bar"
+          },
+          {
+            "field": "q2_2026",
+            "chartType": "bar"
+          },
+          {
+            "field": "q3_2026",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ]
+      }
+    ]
+  }
+}

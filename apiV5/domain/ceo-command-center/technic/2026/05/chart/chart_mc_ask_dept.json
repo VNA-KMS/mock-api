@@ -3,23 +3,62 @@
     "chartType": "bar",
     "dataset": {
       "columns": [
-        { "id": "dept", "type": "string" },
-        { "id": "kh", "type": "number", "label": "KH2025 2.0", "color": "#1E3A8A" },
-        { "id": "uth", "type": "number", "label": "UTH2025", "color": "#F97316" }
+        {
+          "id": "dept",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH2025 2.0",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "uth",
+          "type": "number",
+          "label": "UTH2025",
+          "colorToken": "series.actual"
+        }
       ],
       "rows": [
-        ["Tổng", 16735, 16911],
-        ["KT", 2569, 2625],
-        ["QLVT", 12230, 12313],
-        ["ĐTMS", 1937, 1972]
+        [
+          "Tổng",
+          16735,
+          16911
+        ],
+        [
+          "KT",
+          2569,
+          2625
+        ],
+        [
+          "QLVT",
+          12230,
+          12313
+        ],
+        [
+          "ĐTMS",
+          1937,
+          1972
+        ]
       ]
     },
-    "views": [{
-      "id": "main", "chartType": "bar", "xField": "dept",
-      "series": [
-        { "field": "kh", "chartType": "bar" },
-        { "field": "uth", "chartType": "bar" }
-      ]
-    }]
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "dept",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar"
+          },
+          {
+            "field": "uth",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
   }
 }

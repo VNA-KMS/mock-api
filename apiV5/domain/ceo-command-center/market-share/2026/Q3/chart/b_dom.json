@@ -1,0 +1,114 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          1245,
+          1278,
+          1284,
+          1245,
+          1278,
+          1284
+        ],
+        [
+          "Q2",
+          1295,
+          1335,
+          1334,
+          2540,
+          2613,
+          2618
+        ],
+        [
+          "Q3",
+          1230,
+          1388,
+          456,
+          3770,
+          4001,
+          3074
+        ],
+        [
+          "Q4",
+          1215,
+          1440,
+          null,
+          4985,
+          5441,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ],
+        "tooltipUnit": "Triệu khách"
+      }
+    ]
+  }
+}

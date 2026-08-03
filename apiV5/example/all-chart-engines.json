@@ -1,0 +1,4091 @@
+{
+  "meta": {
+    "title": "ChartV2 — all engines",
+    "description": "Catalog ChartEngine + style + Luỹ kế + Segment header (góc phải).",
+    "engineCount": 30,
+    "itemCount": 45
+  },
+  "charts": {
+    "bar": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105
+          ],
+          [
+            "T2",
+            117,
+            117
+          ],
+          [
+            "T3",
+            129,
+            129
+          ],
+          [
+            "T4",
+            141,
+            141
+          ],
+          [
+            "T5",
+            153,
+            153
+          ],
+          [
+            "T6",
+            165,
+            165
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "bar"
+            },
+            {
+              "field": "plan",
+              "chartType": "bar"
+            }
+          ],
+          "labelInside": true
+        }
+      ]
+    },
+    "bar-stacked": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "dom",
+            "type": "number",
+            "label": "Nội địa",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "int",
+            "type": "number",
+            "label": "Quốc tế",
+            "colorToken": "series.target"
+          },
+          {
+            "id": "other",
+            "type": "number",
+            "label": "Khác",
+            "colorToken": "series.previous"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105,
+            113
+          ],
+          [
+            "T2",
+            117,
+            117,
+            125
+          ],
+          [
+            "T3",
+            129,
+            129,
+            137
+          ],
+          [
+            "T4",
+            141,
+            141,
+            149
+          ],
+          [
+            "T5",
+            153,
+            153,
+            161
+          ],
+          [
+            "T6",
+            165,
+            165,
+            173
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "dom",
+              "chartType": "bar"
+            },
+            {
+              "field": "int",
+              "chartType": "bar"
+            },
+            {
+              "field": "other",
+              "chartType": "bar"
+            }
+          ],
+          "stack": "total",
+          "labelInside": true
+        }
+      ]
+    },
+    "bar-h": {
+      "chartType": "bar-h",
+      "dataset": {
+        "columns": [
+          {
+            "id": "route",
+            "type": "string",
+            "label": "Route"
+          },
+          {
+            "id": "pax",
+            "type": "number",
+            "label": "Pax",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "HAN-SGN",
+            420
+          ],
+          [
+            "SGN-DAD",
+            310
+          ],
+          [
+            "HAN-DAD",
+            280
+          ],
+          [
+            "SGN-CXR",
+            190
+          ],
+          [
+            "HAN-PQC",
+            150
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "route",
+          "series": [
+            {
+              "field": "pax"
+            }
+          ],
+          "labelInside": true
+        }
+      ]
+    },
+    "bar-h-stacked": {
+      "chartType": "bar-h-stacked",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Khu vực"
+          },
+          {
+            "id": "vna",
+            "type": "number",
+            "label": "VNA",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "vj",
+            "type": "number",
+            "label": "VJ",
+            "colorToken": "series.target"
+          },
+          {
+            "id": "qh",
+            "type": "number",
+            "label": "QH",
+            "colorToken": "series.previous"
+          }
+        ],
+        "rows": [
+          [
+            "HAN",
+            40,
+            35,
+            25
+          ],
+          [
+            "SGN",
+            45,
+            30,
+            25
+          ],
+          [
+            "DAD",
+            50,
+            28,
+            22
+          ],
+          [
+            "CXR",
+            38,
+            40,
+            22
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "region",
+          "series": [
+            {
+              "field": "vna"
+            },
+            {
+              "field": "vj"
+            },
+            {
+              "field": "qh"
+            }
+          ],
+          "stack": "share",
+          "labelInside": true
+        }
+      ]
+    },
+    "horizontal-stacked-bar": {
+      "chartType": "horizontal-stacked-bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Khu vực"
+          },
+          {
+            "id": "vna",
+            "type": "number",
+            "label": "VNA",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "vj",
+            "type": "number",
+            "label": "VJ",
+            "colorToken": "series.target"
+          },
+          {
+            "id": "qh",
+            "type": "number",
+            "label": "QH",
+            "colorToken": "series.previous"
+          }
+        ],
+        "rows": [
+          [
+            "HAN",
+            40,
+            35,
+            25
+          ],
+          [
+            "SGN",
+            45,
+            30,
+            25
+          ],
+          [
+            "DAD",
+            50,
+            28,
+            22
+          ],
+          [
+            "CXR",
+            38,
+            40,
+            22
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "region",
+          "series": [
+            {
+              "field": "vna"
+            },
+            {
+              "field": "vj"
+            },
+            {
+              "field": "qh"
+            }
+          ],
+          "stack": "share",
+          "labelInside": true
+        }
+      ]
+    },
+    "line": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105
+          ],
+          [
+            "T2",
+            117,
+            117
+          ],
+          [
+            "T3",
+            129,
+            129
+          ],
+          [
+            "T4",
+            141,
+            141
+          ],
+          [
+            "T5",
+            153,
+            153
+          ],
+          [
+            "T6",
+            165,
+            165
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "area": {
+      "chartType": "area",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105
+          ],
+          [
+            "T2",
+            117,
+            117
+          ],
+          [
+            "T3",
+            129,
+            129
+          ],
+          [
+            "T4",
+            141,
+            141
+          ],
+          [
+            "T5",
+            153,
+            153
+          ],
+          [
+            "T6",
+            165,
+            165
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "area"
+            },
+            {
+              "field": "plan",
+              "chartType": "area"
+            }
+          ]
+        }
+      ]
+    },
+    "stacked-area": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email" },
+            { "field": "unionAds" },
+            { "field": "videoAds" },
+            { "field": "direct" },
+            { "field": "searchEngine" }
+          ]
+        }
+      ]
+    },
+    "stacked-area-filled": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email",        "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "unionAds",     "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "videoAds",     "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "direct",       "symbolFilled": true,  "symbolSize": 4 },
+            { "field": "searchEngine", "symbolFilled": true,  "symbolSize": 4 }
+          ]
+        }
+      ]
+    },
+    "stacked-area-no-dots": {
+      "chartType": "stacked-area",
+      "dataset": {
+        "columns": [
+          { "id": "day", "type": "string", "label": "Ngày" },
+          { "id": "email", "type": "number", "label": "Email" },
+          { "id": "unionAds", "type": "number", "label": "Union Ads" },
+          { "id": "videoAds", "type": "number", "label": "Video Ads" },
+          { "id": "direct", "type": "number", "label": "Direct" },
+          { "id": "searchEngine", "type": "number", "label": "Search Engine" }
+        ],
+        "rows": [
+          ["Mon", 120, 220, 150, 320, 820],
+          ["Tue", 132, 182, 232, 332, 932],
+          ["Wed", 101, 191, 201, 301, 901],
+          ["Thu", 134, 234, 154, 334, 934],
+          ["Fri",  90, 290, 190, 390, 1290],
+          ["Sat", 230, 330, 330, 330, 1330],
+          ["Sun", 210, 310, 410, 320, 1320]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            { "field": "email",        "showSymbol": false },
+            { "field": "unionAds",     "showSymbol": false },
+            { "field": "videoAds",     "showSymbol": false },
+            { "field": "direct",       "showSymbol": false },
+            { "field": "searchEngine", "showSymbol": false }
+          ]
+        }
+      ]
+    },
+    "combo": {
+      "chartType": "combo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "rev",
+            "type": "number",
+            "label": "Doanh thu",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "load",
+            "type": "number",
+            "label": "LF %",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            420,
+            78
+          ],
+          [
+            "T2",
+            455,
+            81
+          ],
+          [
+            "T3",
+            438,
+            76
+          ],
+          [
+            "T4",
+            502,
+            84
+          ],
+          [
+            "T5",
+            530,
+            87
+          ],
+          [
+            "T6",
+            515,
+            85
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "rev",
+              "chartType": "bar"
+            },
+            {
+              "field": "load",
+              "chartType": "line",
+              "yAxis": "right"
+            }
+          ]
+        }
+      ]
+    },
+    "combo-line-dashed": {
+      "chartType": "combo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện (bar)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch (line dashed)",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            110
+          ],
+          [
+            "T2",
+            132,
+            120
+          ],
+          [
+            "T3",
+            125,
+            128
+          ],
+          [
+            "T4",
+            148,
+            135
+          ],
+          [
+            "T5",
+            160,
+            145
+          ],
+          [
+            "T6",
+            155,
+            150
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "bar"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed",
+              "yAxis": "right"
+            }
+          ]
+        }
+      ]
+    },
+    "combo-bar-dashed": {
+      "chartType": "combo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện (bar solid)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch (bar dashed)",
+            "colorToken": "series.target"
+          },
+          {
+            "id": "lf",
+            "type": "number",
+            "label": "LF % (line)",
+            "colorToken": "series.forecast"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            110,
+            78
+          ],
+          [
+            "T2",
+            132,
+            120,
+            81
+          ],
+          [
+            "T3",
+            125,
+            128,
+            76
+          ],
+          [
+            "T4",
+            148,
+            135,
+            84
+          ],
+          [
+            "T5",
+            160,
+            145,
+            87
+          ],
+          [
+            "T6",
+            155,
+            150,
+            85
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "bar"
+            },
+            {
+              "field": "plan",
+              "chartType": "bar",
+              "lineType": "dashed"
+            },
+            {
+              "field": "lf",
+              "chartType": "line",
+              "yAxis": "right"
+            }
+          ]
+        }
+      ]
+    },
+    "multi-y": {
+      "chartType": "multi-y",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "rev",
+            "type": "number",
+            "label": "Doanh thu",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "cost",
+            "type": "number",
+            "label": "Chi phí",
+            "colorToken": "series.previous"
+          },
+          {
+            "id": "margin",
+            "type": "number",
+            "label": "Margin %",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105,
+            113
+          ],
+          [
+            "T2",
+            117,
+            117,
+            125
+          ],
+          [
+            "T3",
+            129,
+            129,
+            137
+          ],
+          [
+            "T4",
+            141,
+            141,
+            149
+          ],
+          [
+            "T5",
+            153,
+            153,
+            161
+          ],
+          [
+            "T6",
+            165,
+            165,
+            173
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "rev",
+              "chartType": "bar",
+              "yAxis": "left"
+            },
+            {
+              "field": "cost",
+              "chartType": "bar",
+              "yAxis": "left"
+            },
+            {
+              "field": "margin",
+              "chartType": "line",
+              "yAxis": "right"
+            }
+          ]
+        }
+      ]
+    },
+    "scatter-bar": {
+      "chartType": "scatter-bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105
+          ],
+          [
+            "T2",
+            117,
+            117
+          ],
+          [
+            "T3",
+            129,
+            129
+          ],
+          [
+            "T4",
+            141,
+            141
+          ],
+          [
+            "T5",
+            153,
+            153
+          ],
+          [
+            "T6",
+            165,
+            165
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "bar"
+            },
+            {
+              "field": "plan",
+              "chartType": "line"
+            }
+          ]
+        }
+      ]
+    },
+    "difference": {
+      "chartType": "difference",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            105,
+            105
+          ],
+          [
+            "T2",
+            117,
+            117
+          ],
+          [
+            "T3",
+            129,
+            129
+          ],
+          [
+            "T4",
+            141,
+            141
+          ],
+          [
+            "T5",
+            153,
+            153
+          ],
+          [
+            "T6",
+            165,
+            165
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "pie": {
+      "chartType": "pie",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "series.actual",
+              "series.target",
+              "series.previous",
+              "series.forecast"
+            ]
+          }
+        ],
+        "rows": [
+          [
+            "A",
+            42
+          ],
+          [
+            "B",
+            28
+          ],
+          [
+            "C",
+            18
+          ],
+          [
+            "D",
+            12
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "pie-simple": {
+      "chartType": "pie-simple",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "series.actual",
+              "series.target",
+              "series.previous",
+              "series.forecast"
+            ]
+          }
+        ],
+        "rows": [
+          [
+            "A",
+            42
+          ],
+          [
+            "B",
+            28
+          ],
+          [
+            "C",
+            18
+          ],
+          [
+            "D",
+            12
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "half-donut": {
+      "chartType": "half-donut",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "series.actual",
+              "series.target",
+              "series.previous",
+              "series.forecast"
+            ]
+          }
+        ],
+        "rows": [
+          [
+            "A",
+            42
+          ],
+          [
+            "B",
+            28
+          ],
+          [
+            "C",
+            18
+          ],
+          [
+            "D",
+            12
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "center-donut": {
+      "chartType": "center-donut",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "series.actual",
+              "series.target",
+              "series.previous",
+              "series.forecast"
+            ]
+          }
+        ],
+        "rows": [
+          [
+            "A",
+            42
+          ],
+          [
+            "B",
+            28
+          ],
+          [
+            "C",
+            18
+          ],
+          [
+            "D",
+            12
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "donut-pct": {
+      "chartType": "donut-pct",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "semantic.positive",
+              "semantic.negative"
+            ],
+            "unit": "%"
+          }
+        ],
+        "rows": [
+          [
+            "Đạt",
+            72
+          ],
+          [
+            "Chưa đạt",
+            28
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "donut-kpi": {
+      "chartType": "donut-kpi",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị",
+            "color": [
+              "semantic.positive",
+              "semantic.negative"
+            ]
+          }
+        ],
+        "rows": [
+          [
+            "ĐẠT",
+            48
+          ],
+          [
+            "KHÔNG ĐẠT",
+            16
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "kpi-distribution": {
+      "chartType": "kpi-distribution",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string",
+            "label": "Nhãn"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Giá trị"
+          }
+        ],
+        "rows": [
+          [
+            "OTP",
+            22
+          ],
+          [
+            "Load factor",
+            18
+          ],
+          [
+            "CSAT",
+            15
+          ],
+          [
+            "Cost",
+            12
+          ],
+          [
+            "Safety",
+            10
+          ],
+          [
+            "Other",
+            8
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "nested-pie": {
+      "chartType": "nested-pie",
+      "dataset": {
+        "columns": [
+          {
+            "id": "inner",
+            "type": "string",
+            "label": "Nhóm"
+          },
+          {
+            "id": "outer",
+            "type": "string",
+            "label": "Chi tiết"
+          },
+          {
+            "id": "innerVal",
+            "type": "number",
+            "label": "Inner"
+          },
+          {
+            "id": "outerVal",
+            "type": "number",
+            "label": "Outer"
+          }
+        ],
+        "rows": [
+          [
+            "DOM",
+            "HAN",
+            55,
+            30
+          ],
+          [
+            "DOM",
+            "SGN",
+            55,
+            25
+          ],
+          [
+            "INT",
+            "SEA",
+            45,
+            20
+          ],
+          [
+            "INT",
+            "EU",
+            45,
+            15
+          ],
+          [
+            "INT",
+            "NEA",
+            45,
+            10
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "inner",
+          "series": [
+            {
+              "field": "innerVal"
+            },
+            {
+              "field": "outerVal"
+            }
+          ]
+        }
+      ]
+    },
+    "sunburst": {
+      "chartType": "sunburst",
+      "dataset": {
+        "columns": [
+          {
+            "id": "name",
+            "type": "string",
+            "label": "Name"
+          },
+          {
+            "id": "parent",
+            "type": "string",
+            "label": "Parent"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Value"
+          }
+        ],
+        "rows": [
+          [
+            "VNA",
+            "",
+            100
+          ],
+          [
+            "DOM",
+            "VNA",
+            55
+          ],
+          [
+            "INT",
+            "VNA",
+            45
+          ],
+          [
+            "HAN",
+            "DOM",
+            30
+          ],
+          [
+            "SGN",
+            "DOM",
+            25
+          ],
+          [
+            "SEA",
+            "INT",
+            20
+          ],
+          [
+            "EU",
+            "INT",
+            15
+          ],
+          [
+            "NEA",
+            "INT",
+            10
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "name",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "scatter": {
+      "chartType": "scatter",
+      "dataset": {
+        "columns": [
+          {
+            "id": "name",
+            "type": "string",
+            "label": "Route"
+          },
+          {
+            "id": "segment",
+            "type": "string",
+            "label": "Segment"
+          },
+          {
+            "id": "x",
+            "type": "number",
+            "label": "ASK"
+          },
+          {
+            "id": "y",
+            "type": "number",
+            "label": "RPK"
+          }
+        ],
+        "rows": [
+          [
+            "HAN-SGN",
+            "DOM",
+            120,
+            95
+          ],
+          [
+            "SGN-DAD",
+            "DOM",
+            80,
+            70
+          ],
+          [
+            "HAN-BKK",
+            "INT",
+            150,
+            110
+          ],
+          [
+            "SGN-SIN",
+            "INT",
+            140,
+            125
+          ],
+          [
+            "HAN-ICN",
+            "INT",
+            160,
+            100
+          ],
+          [
+            "SGN-NRT",
+            "INT",
+            170,
+            130
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "name",
+          "series": [
+            {
+              "field": "x"
+            },
+            {
+              "field": "y"
+            }
+          ]
+        }
+      ]
+    },
+    "radar": {
+      "chartType": "radar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "metric",
+            "type": "string",
+            "label": "Chỉ số"
+          },
+          {
+            "id": "score",
+            "type": "number",
+            "label": "Điểm",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "OTP",
+            88
+          ],
+          [
+            "Safety",
+            92
+          ],
+          [
+            "Cost",
+            75
+          ],
+          [
+            "CSAT",
+            81
+          ],
+          [
+            "LF",
+            86
+          ],
+          [
+            "NPS",
+            70
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "metric",
+          "series": [
+            {
+              "field": "score"
+            }
+          ]
+        }
+      ]
+    },
+    "heatmap": {
+      "chartType": "heatmap",
+      "dataset": {
+        "columns": [
+          {
+            "id": "day",
+            "type": "string",
+            "label": "Ngày"
+          },
+          {
+            "id": "hour",
+            "type": "string",
+            "label": "Giờ"
+          },
+          {
+            "id": "delay",
+            "type": "number",
+            "label": "Chậm"
+          }
+        ],
+        "rows": [
+          [
+            "T2",
+            "06h",
+            2
+          ],
+          [
+            "T2",
+            "12h",
+            5
+          ],
+          [
+            "T2",
+            "18h",
+            8
+          ],
+          [
+            "T4",
+            "06h",
+            1
+          ],
+          [
+            "T4",
+            "12h",
+            4
+          ],
+          [
+            "T4",
+            "18h",
+            6
+          ],
+          [
+            "T6",
+            "06h",
+            3
+          ],
+          [
+            "T6",
+            "12h",
+            7
+          ],
+          [
+            "T6",
+            "18h",
+            9
+          ],
+          [
+            "CN",
+            "06h",
+            4
+          ],
+          [
+            "CN",
+            "12h",
+            8
+          ],
+          [
+            "CN",
+            "18h",
+            11
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "day",
+          "series": [
+            {
+              "field": "delay"
+            }
+          ]
+        }
+      ]
+    },
+    "gauge": {
+      "chartType": "gauge",
+      "dataset": {
+        "columns": [
+          {
+            "id": "label",
+            "type": "string"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "OTP"
+          }
+        ],
+        "rows": [
+          [
+            "OTP",
+            86
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "label",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "waterfall": {
+      "chartType": "waterfall",
+      "dataset": {
+        "columns": [
+          {
+            "id": "item",
+            "type": "string",
+            "label": "Hạng mục"
+          },
+          {
+            "id": "delta",
+            "type": "number",
+            "label": "Giá trị",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "Gross revenue",
+            1200
+          ],
+          [
+            "Fuel",
+            -180
+          ],
+          [
+            "Staff",
+            -220
+          ],
+          [
+            "Other cost",
+            -150
+          ],
+          [
+            "EBITDAR",
+            650
+          ],
+          [
+            "Lease",
+            -80
+          ],
+          [
+            "EBITDA",
+            570
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "item",
+          "series": [
+            {
+              "field": "delta"
+            }
+          ],
+          "showLegend": false
+        }
+      ]
+    },
+    "sankey": {
+      "chartType": "sankey",
+      "dataset": {
+        "columns": [
+          {
+            "id": "source",
+            "type": "string",
+            "label": "From"
+          },
+          {
+            "id": "target",
+            "type": "string",
+            "label": "To"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Value"
+          }
+        ],
+        "rows": [
+          [
+            "Revenue",
+            "Fuel",
+            180
+          ],
+          [
+            "Revenue",
+            "Staff",
+            220
+          ],
+          [
+            "Revenue",
+            "Other",
+            150
+          ],
+          [
+            "Revenue",
+            "Profit",
+            250
+          ],
+          [
+            "Other",
+            "MRO",
+            90
+          ],
+          [
+            "Other",
+            "IT",
+            60
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "source",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "treemap": {
+      "chartType": "treemap",
+      "dataset": {
+        "columns": [
+          {
+            "id": "name",
+            "type": "string",
+            "label": "Name"
+          },
+          {
+            "id": "parent",
+            "type": "string",
+            "label": "Parent"
+          },
+          {
+            "id": "value",
+            "type": "number",
+            "label": "Value"
+          },
+          {
+            "id": "color",
+            "type": "string",
+            "label": "Color"
+          }
+        ],
+        "rows": [
+          [
+            "DOM",
+            "",
+            55,
+            "#1D4857"
+          ],
+          [
+            "INT",
+            "",
+            45,
+            "#C4A83A"
+          ],
+          [
+            "HAN",
+            "DOM",
+            30,
+            "#479EB3"
+          ],
+          [
+            "SGN",
+            "DOM",
+            25,
+            "#71aebd"
+          ],
+          [
+            "SEA",
+            "INT",
+            20,
+            "#E6B441"
+          ],
+          [
+            "EU",
+            "INT",
+            15,
+            "#E9BC56"
+          ],
+          [
+            "NEA",
+            "INT",
+            10,
+            "#ECC56B"
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "name",
+          "series": [
+            {
+              "field": "value"
+            }
+          ]
+        }
+      ]
+    },
+    "parallel": {
+      "chartType": "parallel",
+      "dataset": {
+        "columns": [
+          {
+            "id": "name",
+            "type": "string",
+            "label": "Fleet"
+          },
+          {
+            "id": "otp",
+            "type": "number",
+            "label": "OTP"
+          },
+          {
+            "id": "lf",
+            "type": "number",
+            "label": "LF"
+          },
+          {
+            "id": "cost",
+            "type": "number",
+            "label": "Cost"
+          },
+          {
+            "id": "csat",
+            "type": "number",
+            "label": "CSAT"
+          }
+        ],
+        "rows": [
+          [
+            "A321",
+            88,
+            82,
+            70,
+            85
+          ],
+          [
+            "B787",
+            90,
+            86,
+            65,
+            88
+          ],
+          [
+            "A350",
+            91,
+            84,
+            68,
+            90
+          ],
+          [
+            "ATR",
+            85,
+            75,
+            80,
+            78
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "name",
+          "series": [
+            {
+              "field": "otp"
+            }
+          ]
+        }
+      ]
+    },
+    "line-solid-to-dashed": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện (nét liền)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "forecast",
+            "type": "number",
+            "label": "Dự báo (nét đứt)",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            null
+          ],
+          [
+            "T2",
+            132,
+            null
+          ],
+          [
+            "T3",
+            125,
+            125
+          ],
+          [
+            "T4",
+            null,
+            148
+          ],
+          [
+            "T5",
+            null,
+            160
+          ],
+          [
+            "T6",
+            null,
+            155
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line",
+              "lineType": "solid",
+              "showSymbol": true
+            },
+            {
+              "field": "forecast",
+              "chartType": "line",
+              "lineType": "dashed",
+              "showSymbol": true
+            }
+          ]
+        }
+      ]
+    },
+    "bar-solid-to-dashed-y": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "upto",
+            "type": "number",
+            "label": "≤ ngưỡng Y (nét liền)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "over",
+            "type": "number",
+            "label": "> ngưỡng Y (nét đứt)",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            80,
+            0
+          ],
+          [
+            "T2",
+            95,
+            0
+          ],
+          [
+            "T3",
+            100,
+            10
+          ],
+          [
+            "T4",
+            100,
+            30
+          ],
+          [
+            "T5",
+            100,
+            50
+          ],
+          [
+            "T6",
+            100,
+            45
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "stack": "y-threshold",
+          "series": [
+            {
+              "field": "upto",
+              "chartType": "bar",
+              "lineType": "solid"
+            },
+            {
+              "field": "over",
+              "chartType": "bar",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "bar-solid-beside-dashed": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện (nét liền)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch (nét đứt)",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            110
+          ],
+          [
+            "T2",
+            132,
+            120
+          ],
+          [
+            "T3",
+            125,
+            128
+          ],
+          [
+            "T4",
+            148,
+            135
+          ],
+          [
+            "T5",
+            160,
+            145
+          ],
+          [
+            "T6",
+            155,
+            150
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "labelInside": true,
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "bar",
+              "lineType": "solid"
+            },
+            {
+              "field": "plan",
+              "chartType": "bar",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "bar-two-tone-halves": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "h1",
+            "type": "number",
+            "label": "Nửa đầu (màu A)",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "h2",
+            "type": "number",
+            "label": "Nửa sau (màu B)",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            null
+          ],
+          [
+            "T2",
+            132,
+            null
+          ],
+          [
+            "T3",
+            125,
+            null
+          ],
+          [
+            "T4",
+            null,
+            148
+          ],
+          [
+            "T5",
+            null,
+            160
+          ],
+          [
+            "T6",
+            null,
+            155
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "labelInside": true,
+          "series": [
+            {
+              "field": "h1",
+              "chartType": "bar"
+            },
+            {
+              "field": "h2",
+              "chartType": "bar"
+            }
+          ]
+        }
+      ]
+    },
+    "cumulative-default": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          },
+          {
+            "id": "actual_lk",
+            "type": "number",
+            "label": "TH luỹ kế",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan_lk",
+            "type": "number",
+            "label": "KH luỹ kế",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            110,
+            118,
+            110
+          ],
+          [
+            "T2",
+            132,
+            120,
+            250,
+            230
+          ],
+          [
+            "T3",
+            125,
+            128,
+            375,
+            358
+          ],
+          [
+            "T4",
+            148,
+            135,
+            523,
+            493
+          ],
+          [
+            "T5",
+            160,
+            145,
+            683,
+            638
+          ],
+          [
+            "T6",
+            155,
+            150,
+            838,
+            788
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "cumulative-percent": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "TH tháng (%)",
+            "colorToken": "series.actual",
+            "unit": "%"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "KH tháng (%)",
+            "colorToken": "series.target",
+            "unit": "%"
+          },
+          {
+            "id": "actual_lk",
+            "type": "number",
+            "label": "TH luỹ kế (%)",
+            "colorToken": "series.actual",
+            "unit": "%"
+          },
+          {
+            "id": "plan_lk",
+            "type": "number",
+            "label": "KH luỹ kế (%)",
+            "colorToken": "series.target",
+            "unit": "%"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            14.1,
+            14.0,
+            14.1,
+            14.0
+          ],
+          [
+            "T2",
+            15.8,
+            15.2,
+            29.8,
+            29.2
+          ],
+          [
+            "T3",
+            14.9,
+            16.2,
+            44.7,
+            45.4
+          ],
+          [
+            "T4",
+            17.7,
+            17.1,
+            62.4,
+            62.6
+          ],
+          [
+            "T5",
+            19.1,
+            18.4,
+            81.5,
+            81.0
+          ],
+          [
+            "T6",
+            18.5,
+            19.0,
+            100.0,
+            100.0
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "segmentArea": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            118,
+            110
+          ],
+          [
+            "T2",
+            132,
+            120
+          ],
+          [
+            "T3",
+            125,
+            128
+          ],
+          [
+            "T4",
+            148,
+            135
+          ],
+          [
+            "T5",
+            160,
+            145
+          ],
+          [
+            "T6",
+            155,
+            150
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "segmentCountry": {
+      "chartType": "line",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "actual",
+            "type": "number",
+            "label": "Thực hiện",
+            "colorToken": "series.actual"
+          },
+          {
+            "id": "plan",
+            "type": "number",
+            "label": "Kế hoạch",
+            "colorToken": "series.target"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            90,
+            100
+          ],
+          [
+            "T2",
+            105,
+            110
+          ],
+          [
+            "T3",
+            98,
+            115
+          ],
+          [
+            "T4",
+            120,
+            120
+          ],
+          [
+            "T5",
+            135,
+            130
+          ],
+          [
+            "T6",
+            128,
+            140
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "actual",
+              "chartType": "line"
+            },
+            {
+              "field": "plan",
+              "chartType": "line",
+              "lineType": "dashed"
+            }
+          ]
+        }
+      ]
+    },
+    "segmentRoute": {
+      "chartType": "bar",
+      "dataset": {
+        "columns": [
+          {
+            "id": "month",
+            "type": "string",
+            "label": "Tháng"
+          },
+          {
+            "id": "pax",
+            "type": "number",
+            "label": "Hành khách",
+            "colorToken": "series.actual"
+          }
+        ],
+        "rows": [
+          [
+            "T1",
+            420
+          ],
+          [
+            "T2",
+            480
+          ],
+          [
+            "T3",
+            455
+          ],
+          [
+            "T4",
+            510
+          ],
+          [
+            "T5",
+            560
+          ],
+          [
+            "T6",
+            530
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "auto",
+          "xField": "month",
+          "series": [
+            {
+              "field": "pax",
+              "chartType": "bar"
+            }
+          ]
+        }
+      ]
+    },
+    "matrix-mini-bar-geo": {
+      "chartType": "matrix-mini-bar-geo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Vùng / Thời gian"
+          },
+          {
+            "id": "dataGroup",
+            "type": "string",
+            "label": "Nhóm"
+          },
+          {
+            "id": "val2025",
+            "type": "number",
+            "label": "2025",
+            "color": "#F5A623"
+          },
+          {
+            "id": "val2024",
+            "type": "number",
+            "label": "2024",
+            "color": "#1890FF"
+          }
+        ],
+        "rows": [
+          [
+            "Miền Bắc",
+            "Chuyến bay",
+            1212,
+            1010
+          ],
+          [
+            "Miền Bắc",
+            "Hành khách",
+            2321,
+            2221
+          ],
+          [
+            "Miền Trung",
+            "Chuyến bay",
+            7181,
+            7040
+          ],
+          [
+            "Miền Trung",
+            "Hành khách",
+            2114,
+            1810
+          ],
+          [
+            "Miền Nam",
+            "Chuyến bay",
+            2763,
+            2313
+          ],
+          [
+            "Miền Nam",
+            "Hành khách",
+            4212,
+            4011
+          ],
+          [
+            "Tây Nguyên",
+            "Chuyến bay",
+            6122,
+            6011
+          ],
+          [
+            "Tây Nguyên",
+            "Hành khách",
+            2942,
+            2749
+          ],
+          [
+            "APAC",
+            "Chuyến bay",
+            4221,
+            3329
+          ],
+          [
+            "APAC",
+            "Hành khách",
+            3411,
+            3015
+          ],
+          [
+            "Châu Âu",
+            "Chuyến bay",
+            7221,
+            7116
+          ],
+          [
+            "Châu Âu",
+            "Hành khách",
+            5121,
+            4822
+          ],
+          [
+            "Đông Bắc Á",
+            "Chuyến bay",
+            5121,
+            4968
+          ],
+          [
+            "Đông Bắc Á",
+            "Hành khách",
+            4121,
+            3820
+          ],
+          [
+            "Đông Nam Á",
+            "Chuyến bay",
+            6121,
+            6027
+          ],
+          [
+            "Đông Nam Á",
+            "Hành khách",
+            3121,
+            2928
+          ],
+          [
+            "Nội địa ngắn",
+            "Chuyến bay",
+            7121,
+            7011
+          ],
+          [
+            "Nội địa ngắn",
+            "Hành khách",
+            2121,
+            1725
+          ],
+          [
+            "Nội địa dài",
+            "Chuyến bay",
+            8121,
+            7311
+          ],
+          [
+            "Nội địa dài",
+            "Hành khách",
+            1121,
+            825
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "matrix-mini-bar-geo",
+          "xField": "dataGroup",
+          "series": [
+            {
+              "field": "val2025"
+            },
+            {
+              "field": "val2024"
+            }
+          ],
+          "matrixConfig": {
+            "columnTitles": {
+              "Chuyến bay": "Số chuyến bay",
+              "Hành khách": "Hành khách"
+            }
+          }
+        }
+      ]
+    },
+    "matrix-mini-bar-geo-lg": {
+      "chartType": "matrix-mini-bar-geo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Vùng / Thời gian"
+          },
+          {
+            "id": "dataGroup",
+            "type": "string",
+            "label": "Nhóm"
+          },
+          {
+            "id": "val2025",
+            "type": "number",
+            "label": "2025",
+            "color": "#F5A623"
+          },
+          {
+            "id": "val2024",
+            "type": "number",
+            "label": "2024",
+            "color": "#1890FF"
+          }
+        ],
+        "rows": [
+          [
+            "Miền Bắc",
+            "Chuyến bay",
+            1212,
+            1010
+          ],
+          [
+            "Miền Bắc",
+            "Hành khách",
+            2321,
+            2221
+          ],
+          [
+            "Miền Trung",
+            "Chuyến bay",
+            7181,
+            7040
+          ],
+          [
+            "Miền Trung",
+            "Hành khách",
+            2114,
+            1810
+          ],
+          [
+            "Miền Nam",
+            "Chuyến bay",
+            2763,
+            2313
+          ],
+          [
+            "Miền Nam",
+            "Hành khách",
+            4212,
+            4011
+          ],
+          [
+            "Tây Nguyên",
+            "Chuyến bay",
+            6122,
+            6011
+          ],
+          [
+            "Tây Nguyên",
+            "Hành khách",
+            2942,
+            2749
+          ],
+          [
+            "APAC",
+            "Chuyến bay",
+            4221,
+            3329
+          ],
+          [
+            "APAC",
+            "Hành khách",
+            3411,
+            3015
+          ],
+          [
+            "Châu Âu",
+            "Chuyến bay",
+            7221,
+            7116
+          ],
+          [
+            "Châu Âu",
+            "Hành khách",
+            5121,
+            4822
+          ],
+          [
+            "Đông Bắc Á",
+            "Chuyến bay",
+            5121,
+            4968
+          ],
+          [
+            "Đông Bắc Á",
+            "Hành khách",
+            4121,
+            3820
+          ],
+          [
+            "Đông Nam Á",
+            "Chuyến bay",
+            6121,
+            6027
+          ],
+          [
+            "Đông Nam Á",
+            "Hành khách",
+            3121,
+            2928
+          ],
+          [
+            "Nội địa ngắn",
+            "Chuyến bay",
+            7121,
+            7011
+          ],
+          [
+            "Nội địa ngắn",
+            "Hành khách",
+            2121,
+            1725
+          ],
+          [
+            "Nội địa dài",
+            "Chuyến bay",
+            8121,
+            7311
+          ],
+          [
+            "Nội địa dài",
+            "Hành khách",
+            1121,
+            825
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "matrix-mini-bar-geo",
+          "xField": "dataGroup",
+          "series": [
+            {
+              "field": "val2025"
+            },
+            {
+              "field": "val2024"
+            }
+          ],
+          "matrixConfig": {
+            "columnTitles": {
+              "Chuyến bay": "Số chuyến bay",
+              "Hành khách": "Hành khách"
+            },
+            "seriesColors": [
+              "#16A34A",
+              "#DC2626"
+            ],
+            "barSize": "l",
+            "labelPosition": "inside"
+          }
+        }
+      ]
+    },
+    "matrix-mini-bar-geo-title-left": {
+      "chartType": "matrix-mini-bar-geo",
+      "dataset": {
+        "columns": [
+          { "id": "region", "type": "string", "label": "Vùng / Thời gian" },
+          { "id": "dataGroup", "type": "string", "label": "Nhóm" },
+          { "id": "val2025", "type": "number", "label": "2025", "color": "#16A34A" },
+          { "id": "val2024", "type": "number", "label": "2024", "color": "#DC2626" }
+        ],
+        "rows": [
+          ["Miền Bắc","Chuyến bay",1212,1010],
+          ["Miền Bắc","Hành khách",2321,2221],
+          ["Miền Trung","Chuyến bay",7181,7040],
+          ["Miền Trung","Hành khách",2114,1810],
+          ["Miền Nam","Chuyến bay",2763,2313],
+          ["Miền Nam","Hành khách",4212,4011],
+          ["Tây Nguyên","Chuyến bay",6122,6011],
+          ["Tây Nguyên","Hành khách",2942,2749],
+          ["APAC","Chuyến bay",4221,3329],
+          ["APAC","Hành khách",3411,3015],
+          ["Châu Âu","Chuyến bay",7221,7116],
+          ["Châu Âu","Hành khách",5121,4822],
+          ["Đông Bắc Á","Chuyến bay",5121,4968],
+          ["Đông Bắc Á","Hành khách",4121,3820],
+          ["Đông Nam Á","Chuyến bay",6121,6027],
+          ["Đông Nam Á","Hành khách",3121,2928],
+          ["Nội địa ngắn","Chuyến bay",7121,7011],
+          ["Nội địa ngắn","Hành khách",2121,1725],
+          ["Nội địa dài","Chuyến bay",8121,7311],
+          ["Nội địa dài","Hành khách",1121,825]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "matrix-mini-bar-geo",
+          "xField": "region",
+          "series": [{ "field": "val2025" }, { "field": "val2024" }],
+          "matrixConfig": {
+            "columnTitles": {
+              "Chuyến bay": "Số chuyến bay",
+              "Hành khách": "Hành khách"
+            },
+            "columnTitleAlign": "left",
+            "barSize": "m",
+            "labelPosition": "outside"
+          }
+        }
+      ]
+    },
+    "matrix-mini-bar-geo-xl": {
+      "chartType": "matrix-mini-bar-geo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Vùng / Thời gian"
+          },
+          {
+            "id": "dataGroup",
+            "type": "string",
+            "label": "Nhóm"
+          },
+          {
+            "id": "val2025",
+            "type": "number",
+            "label": "2025",
+            "color": "#F5A623"
+          },
+          {
+            "id": "val2024",
+            "type": "number",
+            "label": "2024",
+            "color": "#1890FF"
+          }
+        ],
+        "rows": [
+          [
+            "Miền Bắc",
+            "Chuyến bay",
+            1212,
+            1010
+          ],
+          [
+            "Miền Bắc",
+            "Hành khách",
+            2321,
+            2221
+          ],
+          [
+            "Miền Trung",
+            "Chuyến bay",
+            7181,
+            7040
+          ],
+          [
+            "Miền Trung",
+            "Hành khách",
+            2114,
+            1810
+          ],
+          [
+            "Miền Nam",
+            "Chuyến bay",
+            2763,
+            2313
+          ],
+          [
+            "Miền Nam",
+            "Hành khách",
+            4212,
+            4011
+          ],
+          [
+            "Tây Nguyên",
+            "Chuyến bay",
+            6122,
+            6011
+          ],
+          [
+            "Tây Nguyên",
+            "Hành khách",
+            2942,
+            2749
+          ],
+          [
+            "APAC",
+            "Chuyến bay",
+            4221,
+            3329
+          ],
+          [
+            "APAC",
+            "Hành khách",
+            3411,
+            3015
+          ],
+          [
+            "Châu Âu",
+            "Chuyến bay",
+            7221,
+            7116
+          ],
+          [
+            "Châu Âu",
+            "Hành khách",
+            5121,
+            4822
+          ],
+          [
+            "Đông Bắc Á",
+            "Chuyến bay",
+            5121,
+            4968
+          ],
+          [
+            "Đông Bắc Á",
+            "Hành khách",
+            4121,
+            3820
+          ],
+          [
+            "Đông Nam Á",
+            "Chuyến bay",
+            6121,
+            6027
+          ],
+          [
+            "Đông Nam Á",
+            "Hành khách",
+            3121,
+            2928
+          ],
+          [
+            "Nội địa ngắn",
+            "Chuyến bay",
+            7121,
+            7011
+          ],
+          [
+            "Nội địa ngắn",
+            "Hành khách",
+            2121,
+            1725
+          ],
+          [
+            "Nội địa dài",
+            "Chuyến bay",
+            8121,
+            7311
+          ],
+          [
+            "Nội địa dài",
+            "Hành khách",
+            1121,
+            825
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "matrix-mini-bar-geo",
+          "xField": "dataGroup",
+          "series": [
+            {
+              "field": "val2025"
+            },
+            {
+              "field": "val2024"
+            }
+          ],
+          "showLegend": false,
+          "matrixConfig": {
+            "barSize": "xl",
+            "labelPosition": "both",
+            "columnTitles": {
+              "Chuyến bay": "Số chuyến bay",
+              "Hành khách": "Hành khách"
+            }
+          }
+        }
+      ]
+    },
+    "matrix-mini-bar-geo-sm": {
+      "chartType": "matrix-mini-bar-geo",
+      "dataset": {
+        "columns": [
+          {
+            "id": "region",
+            "type": "string",
+            "label": "Vùng / Thời gian"
+          },
+          {
+            "id": "dataGroup",
+            "type": "string",
+            "label": "Nhóm"
+          },
+          {
+            "id": "val2025",
+            "type": "number",
+            "label": "2025",
+            "color": "#F5A623"
+          },
+          {
+            "id": "val2024",
+            "type": "number",
+            "label": "2024",
+            "color": "#1890FF"
+          }
+        ],
+        "rows": [
+          [
+            "Miền Bắc",
+            "Chuyến bay",
+            1212,
+            1010
+          ],
+          [
+            "Miền Bắc",
+            "Hành khách",
+            2321,
+            2221
+          ],
+          [
+            "Miền Trung",
+            "Chuyến bay",
+            7181,
+            7040
+          ],
+          [
+            "Miền Trung",
+            "Hành khách",
+            2114,
+            1810
+          ],
+          [
+            "Miền Nam",
+            "Chuyến bay",
+            2763,
+            2313
+          ],
+          [
+            "Miền Nam",
+            "Hành khách",
+            4212,
+            4011
+          ],
+          [
+            "Tây Nguyên",
+            "Chuyến bay",
+            6122,
+            6011
+          ],
+          [
+            "Tây Nguyên",
+            "Hành khách",
+            2942,
+            2749
+          ],
+          [
+            "APAC",
+            "Chuyến bay",
+            4221,
+            3329
+          ],
+          [
+            "APAC",
+            "Hành khách",
+            3411,
+            3015
+          ],
+          [
+            "Châu Âu",
+            "Chuyến bay",
+            7221,
+            7116
+          ],
+          [
+            "Châu Âu",
+            "Hành khách",
+            5121,
+            4822
+          ],
+          [
+            "Đông Bắc Á",
+            "Chuyến bay",
+            5121,
+            4968
+          ],
+          [
+            "Đông Bắc Á",
+            "Hành khách",
+            4121,
+            3820
+          ],
+          [
+            "Đông Nam Á",
+            "Chuyến bay",
+            6121,
+            6027
+          ],
+          [
+            "Đông Nam Á",
+            "Hành khách",
+            3121,
+            2928
+          ],
+          [
+            "Nội địa ngắn",
+            "Chuyến bay",
+            7121,
+            7011
+          ],
+          [
+            "Nội địa ngắn",
+            "Hành khách",
+            2121,
+            1725
+          ],
+          [
+            "Nội địa dài",
+            "Chuyến bay",
+            8121,
+            7311
+          ],
+          [
+            "Nội địa dài",
+            "Hành khách",
+            1121,
+            825
+          ]
+        ]
+      },
+      "views": [
+        {
+          "chartType": "matrix-mini-bar-geo",
+          "xField": "dataGroup",
+          "series": [
+            {
+              "field": "val2025"
+            },
+            {
+              "field": "val2024"
+            }
+          ],
+          "matrixConfig": {
+            "barSize": "s",
+            "labelPosition": "none",
+            "columnTitles": {
+              "Chuyến bay": "Số chuyến bay",
+              "Hành khách": "Hành khách"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "catalog-line-solid-to-dashed",
+      "title": "line — solid → dashed",
+      "subTitle": "Nét liền đến điểm giữa (T3), sau đó nét đứt",
+      "family": "Style (nét / màu)",
+      "engine": "line",
+      "note": "Nét liền đến điểm giữa, rồi nét đứt",
+      "height": 280,
+      "autoChart": "line-solid-to-dashed"
+    },
+    {
+      "id": "catalog-bar-solid-to-dashed-y",
+      "title": "bar — solid → dashed (Y)",
+      "subTitle": "Cột đặc đến ngưỡng Y=100, phần vượt là nét đứt (stack)",
+      "family": "Style (nét / màu)",
+      "engine": "bar",
+      "note": "Cột đặc đến ngưỡng Y, phần trên nét đứt",
+      "height": 280,
+      "autoChart": "bar-solid-to-dashed-y"
+    },
+    {
+      "id": "catalog-bar-solid-beside-dashed",
+      "title": "bar — solid cạnh dashed",
+      "subTitle": "Bar nét liền đứng cạnh bar nét đứt (grouped)",
+      "family": "Style (nét / màu)",
+      "engine": "bar",
+      "note": "Bar nét liền cạnh bar nét đứt",
+      "height": 280,
+      "autoChart": "bar-solid-beside-dashed"
+    },
+    {
+      "id": "catalog-bar-two-tone-halves",
+      "title": "bar — 2 màu theo nửa",
+      "subTitle": "1 nửa bar màu A, 1 nửa bar màu B (2 luồng, cắt giữa T3/T4)",
+      "family": "Style (nét / màu)",
+      "engine": "bar",
+      "note": "Nửa đầu màu A · nửa sau màu B",
+      "height": 280,
+      "autoChart": "bar-two-tone-halves"
+    },
+    {
+      "id": "catalog-cumulative-default",
+      "title": "Luỹ kế — default",
+      "subTitle": "mode: default · cột *_lk = cộng dồn tuyệt đối. Bật toggle để xem.",
+      "family": "Luỹ kế",
+      "engine": "line",
+      "note": "headerAction.mode = default (cộng dồn)",
+      "height": 280,
+      "autoChart": "cumulative-default",
+      "headerAction": {
+        "type": "cumulative",
+        "mode": "default",
+        "defaultChecked": true,
+        "label": "Luỹ kế"
+      }
+    },
+    {
+      "id": "catalog-cumulative-percent",
+      "title": "Luỹ kế — percent",
+      "subTitle": "mode: percent · cột *_lk = % tích luỹ / năm. Bật toggle để xem.",
+      "family": "Luỹ kế",
+      "engine": "line",
+      "note": "headerAction.mode = percent (% tích luỹ)",
+      "height": 280,
+      "autoChart": "cumulative-percent",
+      "headerAction": {
+        "type": "cumulative",
+        "mode": "percent",
+        "defaultChecked": true,
+        "label": "Luỹ kế %"
+      }
+    },
+    {
+      "id": "catalog-header-segment",
+      "title": "Segment — góc phải header",
+      "subTitle": "headerAction.type = segment · Area / Country / Route",
+      "family": "Header (segment)",
+      "engine": "segment",
+      "note": "Segment control góc phải — đổi tab đổi chart",
+      "height": 280,
+      "headerAction": {
+        "type": "segment",
+        "defaultValue": "area",
+        "options": [
+          {
+            "id": "area",
+            "label": "Area"
+          },
+          {
+            "id": "country",
+            "label": "Country"
+          },
+          {
+            "id": "route",
+            "label": "Route"
+          }
+        ]
+      },
+      "views": [
+        {
+          "id": "area",
+          "label": "Area",
+          "autoChart": "segmentArea",
+          "aiInsight": {
+            "text": "View Area — doanh thu theo khu vực.",
+            "tone": "info",
+            "status": 1
+          }
+        },
+        {
+          "id": "country",
+          "label": "Country",
+          "autoChart": "segmentCountry",
+          "aiInsight": {
+            "text": "View Country — thực hiện dưới kế hoạch T6.",
+            "tone": "warning",
+            "status": 1
+          }
+        },
+        {
+          "id": "route",
+          "label": "Route",
+          "autoChart": "segmentRoute",
+          "aiInsight": {
+            "text": "View Route — sản lượng T5 cao nhất.",
+            "tone": "success",
+            "status": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "catalog-bar",
+      "title": "bar",
+      "subTitle": "Cột dọc (grouped)",
+      "family": "Bar",
+      "engine": "bar",
+      "note": "Cột dọc (grouped)",
+      "height": 280,
+      "autoChart": "bar"
+    },
+    {
+      "id": "catalog-bar-stacked",
+      "title": "bar",
+      "subTitle": "Cùng engine `bar` + view.stack",
+      "family": "Bar",
+      "engine": "bar",
+      "note": "Cùng engine `bar` + view.stack",
+      "height": 280,
+      "autoChart": "bar-stacked"
+    },
+    {
+      "id": "catalog-bar-h",
+      "title": "bar-h",
+      "subTitle": "Cột ngang",
+      "family": "Bar",
+      "engine": "bar-h",
+      "note": "Cột ngang",
+      "height": 280,
+      "autoChart": "bar-h"
+    },
+    {
+      "id": "catalog-bar-h-stacked",
+      "title": "bar-h-stacked",
+      "subTitle": "Cột ngang xếp chồng",
+      "family": "Bar",
+      "engine": "bar-h-stacked",
+      "note": "Cột ngang xếp chồng",
+      "height": 280,
+      "autoChart": "bar-h-stacked"
+    },
+    {
+      "id": "catalog-horizontal-stacked-bar",
+      "title": "horizontal-stacked-bar",
+      "subTitle": "Alias của bar-h-stacked",
+      "family": "Bar",
+      "engine": "horizontal-stacked-bar",
+      "note": "Alias của bar-h-stacked",
+      "height": 280,
+      "autoChart": "horizontal-stacked-bar"
+    },
+    {
+      "id": "catalog-line",
+      "title": "line",
+      "subTitle": "Đường (± dashed)",
+      "family": "Line / Area",
+      "engine": "line",
+      "note": "Đường (± dashed)",
+      "height": 280,
+      "autoChart": "line"
+    },
+    {
+      "id": "catalog-area",
+      "title": "area",
+      "subTitle": "Area fill",
+      "family": "Line / Area",
+      "engine": "area",
+      "note": "Area fill",
+      "height": 280,
+      "autoChart": "area"
+    },
+    {
+      "id": "catalog-stacked-area",
+      "title": "stacked-area",
+      "subTitle": "Stacked area (ECharts area-stack)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "Stack 5 series · symbol trắng viền màu · size 5",
+      "height": 280,
+      "autoChart": "stacked-area"
+    },
+    {
+      "id": "catalog-stacked-area-filled",
+      "title": "stacked-area",
+      "subTitle": "Chấm đặc theo màu series (symbolFilled=true, size=4)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "BE: symbolFilled=true · symbolSize=4",
+      "height": 280,
+      "autoChart": "stacked-area-filled"
+    },
+    {
+      "id": "catalog-stacked-area-no-dots",
+      "title": "stacked-area",
+      "subTitle": "Ẩn chấm — chỉ vẽ line/area (showSymbol=false)",
+      "family": "Line / Area",
+      "engine": "stacked-area",
+      "note": "BE: showSymbol=false",
+      "height": 280,
+      "autoChart": "stacked-area-no-dots"
+    },
+    {
+      "id": "catalog-combo",
+      "title": "combo",
+      "subTitle": "Bar solid + line solid, dual Y (Doanh thu vs LF%)",
+      "family": "Combo",
+      "engine": "combo",
+      "note": "Bar solid + line solid, dual Y",
+      "height": 280,
+      "autoChart": "combo"
+    },
+    {
+      "id": "catalog-combo-line-dashed",
+      "title": "combo",
+      "subTitle": "Bar solid + line dashed (lineType)",
+      "family": "Combo",
+      "engine": "combo",
+      "note": "Bar solid + line dashed",
+      "height": 280,
+      "autoChart": "combo-line-dashed"
+    },
+    {
+      "id": "catalog-combo-bar-dashed",
+      "title": "combo",
+      "subTitle": "Bar solid cạnh bar dashed + line",
+      "family": "Combo",
+      "engine": "combo",
+      "note": "Bar solid cạnh bar dashed + line",
+      "height": 280,
+      "autoChart": "combo-bar-dashed"
+    },
+    {
+      "id": "catalog-multi-y",
+      "title": "multi-y",
+      "subTitle": "Nhiều series / 2 trục Y",
+      "family": "Line / Area",
+      "engine": "multi-y",
+      "note": "Nhiều series / 2 trục Y",
+      "height": 280,
+      "autoChart": "multi-y"
+    },
+    {
+      "id": "catalog-scatter-bar",
+      "title": "scatter-bar",
+      "subTitle": "Bar + line lai",
+      "family": "Line / Area",
+      "engine": "scatter-bar",
+      "note": "Bar + line lai",
+      "height": 280,
+      "autoChart": "scatter-bar"
+    },
+    {
+      "id": "catalog-difference",
+      "title": "difference",
+      "subTitle": "Chênh lệch 2 series",
+      "family": "Line / Area",
+      "engine": "difference",
+      "note": "Chênh lệch 2 series",
+      "height": 280,
+      "autoChart": "difference"
+    },
+    {
+      "id": "catalog-pie",
+      "title": "pie",
+      "subTitle": "Pie đầy",
+      "family": "Pie / Donut",
+      "engine": "pie",
+      "note": "Pie đầy",
+      "height": 280,
+      "autoChart": "pie"
+    },
+    {
+      "id": "catalog-pie-simple",
+      "title": "pie-simple",
+      "subTitle": "Ring / solid pie",
+      "family": "Pie / Donut",
+      "engine": "pie-simple",
+      "note": "Ring / solid pie",
+      "height": 280,
+      "autoChart": "pie-simple"
+    },
+    {
+      "id": "catalog-half-donut",
+      "title": "half-donut",
+      "subTitle": "Nửa vòng",
+      "family": "Pie / Donut",
+      "engine": "half-donut",
+      "note": "Nửa vòng",
+      "height": 280,
+      "autoChart": "half-donut"
+    },
+    {
+      "id": "catalog-center-donut",
+      "title": "center-donut",
+      "subTitle": "Donut + số giữa",
+      "family": "Pie / Donut",
+      "engine": "center-donut",
+      "note": "Donut + số giữa",
+      "height": 280,
+      "autoChart": "center-donut"
+    },
+    {
+      "id": "catalog-donut-pct",
+      "title": "donut-pct",
+      "subTitle": "Donut % + unit",
+      "family": "Pie / Donut",
+      "engine": "donut-pct",
+      "note": "Donut % + unit",
+      "height": 280,
+      "autoChart": "donut-pct"
+    },
+    {
+      "id": "catalog-donut-kpi",
+      "title": "donut-kpi",
+      "subTitle": "Donut KPI đạt/không đạt",
+      "family": "Pie / Donut",
+      "engine": "donut-kpi",
+      "note": "Donut KPI đạt/không đạt",
+      "height": 280,
+      "autoChart": "donut-kpi"
+    },
+    {
+      "id": "catalog-kpi-distribution",
+      "title": "kpi-distribution",
+      "subTitle": "Phân bố KPI",
+      "family": "Pie / Donut",
+      "engine": "kpi-distribution",
+      "note": "Phân bố KPI",
+      "height": 280,
+      "autoChart": "kpi-distribution"
+    },
+    {
+      "id": "catalog-nested-pie",
+      "title": "nested-pie",
+      "subTitle": "Pie lồng 2 vòng",
+      "family": "Pie / Donut",
+      "engine": "nested-pie",
+      "note": "Pie lồng 2 vòng",
+      "height": 280,
+      "autoChart": "nested-pie"
+    },
+    {
+      "id": "catalog-sunburst",
+      "title": "sunburst",
+      "subTitle": "Sunburst hierarchy",
+      "family": "Pie / Donut",
+      "engine": "sunburst",
+      "note": "Sunburst hierarchy",
+      "height": 280,
+      "autoChart": "sunburst"
+    },
+    {
+      "id": "catalog-scatter",
+      "title": "scatter",
+      "subTitle": "Scatter / bubble",
+      "family": "Khác",
+      "engine": "scatter",
+      "note": "Scatter / bubble",
+      "height": 280,
+      "autoChart": "scatter"
+    },
+    {
+      "id": "catalog-radar",
+      "title": "radar",
+      "subTitle": "Radar",
+      "family": "Khác",
+      "engine": "radar",
+      "note": "Radar",
+      "height": 280,
+      "autoChart": "radar"
+    },
+    {
+      "id": "catalog-heatmap",
+      "title": "heatmap",
+      "subTitle": "Heatmap category",
+      "family": "Khác",
+      "engine": "heatmap",
+      "note": "Heatmap category",
+      "height": 280,
+      "autoChart": "heatmap"
+    },
+    {
+      "id": "catalog-gauge",
+      "title": "gauge",
+      "subTitle": "Gauge 0–100",
+      "family": "Khác",
+      "engine": "gauge",
+      "note": "Gauge 0–100",
+      "height": 280,
+      "autoChart": "gauge"
+    },
+    {
+      "id": "catalog-waterfall",
+      "title": "waterfall",
+      "subTitle": "Bridge P&L",
+      "family": "Khác",
+      "engine": "waterfall",
+      "note": "Bridge P&L",
+      "height": 280,
+      "autoChart": "waterfall"
+    },
+    {
+      "id": "catalog-sankey",
+      "title": "sankey",
+      "subTitle": "Sankey flow",
+      "family": "Khác",
+      "engine": "sankey",
+      "note": "Sankey flow",
+      "height": 280,
+      "autoChart": "sankey"
+    },
+    {
+      "id": "catalog-treemap",
+      "title": "treemap",
+      "subTitle": "Treemap hierarchy",
+      "family": "Khác",
+      "engine": "treemap",
+      "note": "Treemap hierarchy",
+      "height": 280,
+      "autoChart": "treemap"
+    },
+    {
+      "id": "catalog-parallel",
+      "title": "parallel",
+      "subTitle": "Parallel coordinates",
+      "family": "Khác",
+      "engine": "parallel",
+      "note": "Parallel coordinates",
+      "height": 280,
+      "autoChart": "parallel"
+    },
+    {
+      "id": "catalog-matrix-mini-bar-geo",
+      "title": "Matrix Mini Bar — Geo",
+      "subTitle": "Ma trận mini bar theo vùng",
+      "family": "Khác",
+      "engine": "matrix-mini-bar-geo",
+      "note": "default — size m, label outside",
+      "height": 520,
+      "autoChart": "matrix-mini-bar-geo"
+    },
+    {
+      "id": "catalog-matrix-mini-bar-geo-title-left",
+      "title": "Matrix Mini Bar — Geo",
+      "subTitle": "Ma trận mini bar theo vùng",
+      "family": "Khác",
+      "engine": "matrix-mini-bar-geo",
+      "note": "columnTitleAlign: left — tiêu đề căn trái đầu cột",
+      "height": 520,
+      "autoChart": "matrix-mini-bar-geo-title-left"
+    },
+    {
+      "id": "catalog-matrix-mini-bar-geo-lg",
+      "title": "Matrix Mini Bar — Geo",
+      "subTitle": "Ma trận mini bar theo vùng",
+      "family": "Khác",
+      "engine": "matrix-mini-bar-geo",
+      "note": "size l, label inside, custom titles/colors",
+      "height": 560,
+      "autoChart": "matrix-mini-bar-geo-lg"
+    },
+    {
+      "id": "catalog-matrix-mini-bar-geo-xl",
+      "title": "Matrix Mini Bar — Geo",
+      "subTitle": "Ma trận mini bar theo vùng",
+      "family": "Khác",
+      "engine": "matrix-mini-bar-geo",
+      "note": "size xl, label both, no legend",
+      "height": 600,
+      "autoChart": "matrix-mini-bar-geo-xl"
+    },
+    {
+      "id": "catalog-matrix-mini-bar-geo-sm",
+      "title": "Matrix Mini Bar — Geo",
+      "subTitle": "Ma trận mini bar theo vùng",
+      "family": "Khác",
+      "engine": "matrix-mini-bar-geo",
+      "note": "size s, label none",
+      "height": 440,
+      "autoChart": "matrix-mini-bar-geo-sm"
+    }
+  ]
+}

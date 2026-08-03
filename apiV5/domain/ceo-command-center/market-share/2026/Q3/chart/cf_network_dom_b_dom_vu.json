@@ -1,0 +1,88 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "carrier.vu"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Lũy kế TH 2026",
+          "colorToken": "carrier.vu"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          24,
+          23,
+          24,
+          23
+        ],
+        [
+          "Q2",
+          25,
+          24,
+          24.5,
+          23.5
+        ],
+        [
+          "Q3",
+          22,
+          8,
+          23.7,
+          18.3
+        ],
+        [
+          "Q4",
+          21,
+          null,
+          23,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line",
+            "isBlur": false
+          },
+          {
+            "field": "th",
+            "chartType": "line",
+            "showLabel": "end",
+            "colorToken": "carrier.vu"
+          }
+        ],
+        "tooltipUnit": "Triệu khách"
+      }
+    ]
+  }
+}

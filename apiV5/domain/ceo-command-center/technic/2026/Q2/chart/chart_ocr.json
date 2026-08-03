@@ -1,0 +1,112 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          1.05,
+          1,
+          1.05,
+          3.15,
+          3,
+          3.15
+        ],
+        [
+          "Q2",
+          1.18,
+          1,
+          1.11,
+          6.68,
+          6,
+          6.47
+        ],
+        [
+          "Q3",
+          1.2,
+          1,
+          1.05,
+          7.88,
+          9,
+          9.62
+        ],
+        [
+          "Q4",
+          null,
+          1,
+          0.9,
+          null,
+          12,
+          12.32
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "areaStyle": {},
+            "showLabel": "end"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

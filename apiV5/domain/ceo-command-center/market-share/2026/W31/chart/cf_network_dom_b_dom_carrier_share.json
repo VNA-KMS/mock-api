@@ -1,0 +1,127 @@
+{
+  "autoChart": {
+    "chartType": "bar-h-stacked",
+    "dataset": {
+      "columns": [
+        {
+          "id": "route",
+          "type": "string",
+          "label": "Nhóm ngành"
+        },
+        {
+          "id": "vna",
+          "type": "number",
+          "label": "VNA Group",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "vj",
+          "type": "number",
+          "label": "VJ",
+          "colorToken": "carrier.vj"
+        },
+        {
+          "id": "qh",
+          "type": "number",
+          "label": "QH",
+          "colorToken": "carrier.qh"
+        },
+        {
+          "id": "g9",
+          "type": "number",
+          "label": "9G",
+          "colorToken": "carrier.9g"
+        },
+        {
+          "id": "vu",
+          "type": "number",
+          "label": "VU",
+          "colorToken": "carrier.vu"
+        }
+      ],
+      "rows": [
+        [
+          "HANSGN",
+          52,
+          30,
+          12,
+          2,
+          4
+        ],
+        [
+          "HANDAD",
+          50,
+          32,
+          10,
+          3,
+          5
+        ],
+        [
+          "SGNDAD",
+          49,
+          33,
+          11,
+          3,
+          4
+        ],
+        [
+          "Trục lẻ",
+          48,
+          29,
+          14,
+          3,
+          6
+        ],
+        [
+          "Du lịch",
+          46,
+          31,
+          15,
+          3,
+          5
+        ],
+        [
+          "Địa phương",
+          49,
+          28,
+          13,
+          3,
+          7
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar-h-stacked",
+        "xField": "route",
+        "stack": "total",
+        "labelInside": true,
+        "labelFormatter": "{c}%",
+        "series": [
+          {
+            "field": "vna",
+            "chartType": "bar"
+          },
+          {
+            "field": "vj",
+            "chartType": "bar"
+          },
+          {
+            "field": "qh",
+            "chartType": "bar"
+          },
+          {
+            "field": "g9",
+            "chartType": "bar"
+          },
+          {
+            "field": "vu",
+            "chartType": "bar"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "fct_lk",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          3.51,
+          3.45,
+          3.92,
+          3.44,
+          3.51,
+          3.45,
+          3.92,
+          3.44
+        ],
+        [
+          "Q2",
+          2.92,
+          3.08,
+          3.3,
+          2.86,
+          6.43,
+          6.53,
+          7.22,
+          6.3
+        ],
+        [
+          "Q3",
+          1.3,
+          3.34,
+          3.83,
+          1.32,
+          7.73,
+          9.87,
+          11.05,
+          7.62
+        ],
+        [
+          "Q4",
+          null,
+          3.01,
+          3.19,
+          3.16,
+          null,
+          12.88,
+          14.24,
+          10.78
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "fct",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          }
+        ],
+        "tooltipUnit": "Triệu khách"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -10,50 +10,44 @@
         {
           "id": "th",
           "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
+          "label": "2026",
+          "colorToken": "series.actual"
         },
         {
           "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ 2026",
-          "color": "#9AA0A6"
+          "label": "2025",
+          "colorToken": "series.previous"
         },
         {
           "id": "db",
           "type": "number",
-          "label": "Kế hoạch 2027",
-          "color": "#D3AC2B"
+          "label": "KH 2026",
+          "colorToken": "series.target"
         },
         {
           "id": "uth",
           "type": "number",
           "label": "Dự báo",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
-          "id": "ck_cum",
+          "id": "th_lk",
           "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "color": "#9AA0A6"
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "db_cum",
+          "id": "ck_lk",
           "type": "number",
-          "label": "Kế hoạch (LK)",
-          "color": "#D3AC2B"
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
         },
         {
-          "id": "th_cum",
+          "id": "db_lk",
           "type": "number",
-          "label": "Thực hiện (LK)",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth_cum",
-          "type": "number",
-          "label": "Dự báo (LK)",
-          "color": "#006D88"
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "series.target"
         }
       ],
       "rows": [
@@ -63,10 +57,9 @@
           120.4,
           143,
           null,
-          120.4,
-          143,
           105.2,
-          null
+          120.4,
+          143
         ],
         [
           "T2",
@@ -74,10 +67,9 @@
           114.8,
           137.5,
           null,
-          235.2,
-          280.5,
           208.2,
-          null
+          235.2,
+          280.5
         ],
         [
           "T3",
@@ -85,10 +77,9 @@
           112.6,
           133.2,
           null,
-          347.8,
-          413.7,
           312,
-          null
+          347.8,
+          413.7
         ],
         [
           "T4",
@@ -96,10 +87,9 @@
           106.7,
           126.1,
           null,
-          454.5,
-          539.8,
           406.2,
-          null
+          454.5,
+          539.8
         ],
         [
           "T5",
@@ -107,10 +97,9 @@
           96.5,
           118.5,
           null,
-          551,
-          658.3,
           498.1,
-          null
+          551,
+          658.3
         ],
         [
           "T6",
@@ -118,10 +107,9 @@
           95.3,
           110.2,
           null,
-          646.3,
-          768.5,
           586.6,
-          null
+          646.3,
+          768.5
         ],
         [
           "T7",
@@ -129,21 +117,19 @@
           91.2,
           103.7,
           null,
-          737.5,
-          872.2,
           671.7,
-          null
+          737.5,
+          872.2
         ],
         [
           "T8",
           null,
           85.5,
           96.5,
-          82.0,
-          823,
-          968.7,
+          82,
           null,
-          753.7
+          823,
+          968.7
         ],
         [
           "T9",
@@ -151,43 +137,39 @@
           78.8,
           90.3,
           76.8,
-          901.8,
-          1059,
           null,
-          830.5
+          901.8,
+          1059
         ],
         [
           "T10",
           null,
           73.2,
           83.1,
-          70.6,
-          975,
-          1142.1,
           null,
-          901.1
+          null,
+          975,
+          1142.1
         ],
         [
           "T11",
           null,
           70.2,
           74.1,
-          63.0,
-          1045.2,
-          1216.2,
           null,
-          964.1
+          null,
+          1045.2,
+          1216.2
         ],
         [
           "T12",
           null,
           66.6,
           67,
-          56.9,
-          1111.8,
-          1283.2,
           null,
-          1021.0
+          null,
+          1111.8,
+          1283.2
         ]
       ]
     },
@@ -199,11 +181,13 @@
         "series": [
           {
             "field": "th",
-            "chartType": "line"
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
           },
           {
             "field": "ck",
-            "chartType": "line"
+            "chartType": "bar"
           },
           {
             "field": "db",
@@ -212,35 +196,10 @@
           },
           {
             "field": "uth",
-            "chartType": "bar"
-          }
-        ],
-        "label": "Theo T12"
-      },
-      {
-        "id": "main_cum",
-        "chartType": "auto",
-        "xField": "month",
-        "series": [
-          {
-            "field": "ck_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "db_cum",
-            "chartType": "line",
+            "chartType": "bar",
             "lineStyle": "dashed"
-          },
-          {
-            "field": "th_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "uth_cum",
-            "chartType": "bar"
           }
-        ],
-        "label": "LK: 1.111,8"
+        ]
       }
     ]
   },

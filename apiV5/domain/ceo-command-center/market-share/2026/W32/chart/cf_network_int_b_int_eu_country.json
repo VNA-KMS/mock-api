@@ -1,0 +1,67 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "France",
+          32,
+          35
+        ],
+        [
+          "Germany",
+          28,
+          26
+        ],
+        [
+          "UK",
+          22,
+          20
+        ],
+        [
+          "Others",
+          18,
+          19
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

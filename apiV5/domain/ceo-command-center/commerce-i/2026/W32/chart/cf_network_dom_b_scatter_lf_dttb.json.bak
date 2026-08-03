@@ -1,0 +1,62 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 2.2,
+    "dataset": {
+      "columns": [
+        { "id": "route", "type": "string" },
+        { "id": "group", "type": "string" },
+        { "id": "lf", "type": "number", "label": "LF (%)" },
+        { "id": "dttb", "type": "number", "label": "DTTB (Triệu VNĐ)" }
+      ],
+      "rows": [
+        ["HANSGN", "Trục chính", 85.7, 2713],
+        ["HANDAD", "Trục chính", 83.8, 1909],
+        ["SGNDAD", "Trục chính", 82.5, 1742],
+        ["HANCXR", "Trục chính", 81.2, 2595],
+        ["SGNHPH", "Trục chính", 85.2, 2497],
+        ["SGNVCS", "Địa phương", 84.2, 1525],
+        ["HANUIH", "Địa phương", 80.8, 2345],
+        ["SGNCXR", "Địa phương", 83.3, 1452],
+        ["HANVCL", "Địa phương", 88.9, 1945],
+        ["HANDIN", "Địa phương", 93.2, 1476],
+        ["PQCVCA", "Địa phương", 94.3, 1458],
+        ["SGNUIH", "Địa phương", 78.2, 1606],
+        ["DADHPH", "Địa phương", 82.1, 1922],
+        ["HANVDH", "Địa phương", 81.8, 1536],
+        ["SGNBMV", "Địa phương", 80.2, 1375],
+        ["DADCXR", "Địa phương", 75.0, 1825],
+        ["VCAVCS", "Địa phương", 67.4, 1358],
+        ["HANVCA", "Du lịch", 75.7, 2397],
+        ["SGNHUI", "Du lịch", 79.0, 1719],
+        ["SGNTHD", "Du lịch", 69.2, 2250],
+        ["HANPQC", "Du lịch", 73.8, 2607],
+        ["SGNVII", "Du lịch", 78.2, 2000],
+        ["SGNVDH", "Du lịch", 67.1, 1880],
+        ["SGNPQC", "Du lịch", 76.5, 1376],
+        ["SGNVCL", "Du lịch", 69.8, 1656],
+        ["DADVCA", "Du lịch", 63.0, 1681],
+        ["HANVII", "Địa phương", 71.6, 1258],
+        ["HANBMV", "Du lịch", 63.7, 2057],
+        ["HANPXU", "Địa phương", 67.9, 1858],
+        ["HANHUI", "Địa phương", 72.9, 1763],
+        ["SGNPXU", "Địa phương", 78.3, 1317],
+        ["DADBMV", "Địa phương", 82.7, 1423],
+        ["HANTBB", "Du lịch", 74.5, 2366],
+        ["SGNTBB", "Địa phương", 80.6, 1437]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "lf",
+        "yField": "dttb",
+        "colorBy": "group",
+        "series": [
+          { "field": "lf", "chartType": "scatter" }
+        ]
+      }
+    ]
+  }
+}

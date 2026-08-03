@@ -1,11 +1,11 @@
 {
   "titleInfo": {
-    "title": "Month Report",
+    "title": "Report",
     "statusLabel": "REAL TIME",
     "description": "Báo cáo tổng hợp tháng — tổng quan tài chính, vận hành, an toàn, dịch vụ, kỹ thuật, thị trường"
   },
   "metricCards": {
-    "accentClassName": "bg-regal-blue",
+    "accentClassName": "bg-primary",
     "layout": {
       "columns": 6,
       "gap": 12
@@ -22,11 +22,15 @@
           {
             "direction": "down",
             "label": "4% vs KH",
+            "type": "plan",
+            "value": "4%",
             "tone": "negative"
           },
           {
             "direction": "up",
             "label": "7% vs CK",
+            "type": "samePeriod",
+            "value": "7%",
             "tone": "positive"
           }
         ]
@@ -42,11 +46,15 @@
           {
             "direction": "up",
             "label": "1,2% vs KH",
+            "type": "plan",
+            "value": "1,2%",
             "tone": "positive"
           },
           {
             "direction": "up",
             "label": "9% vs CK",
+            "type": "samePeriod",
+            "value": "9%",
             "tone": "positive"
           }
         ]
@@ -62,6 +70,8 @@
           {
             "direction": "down",
             "label": "2% vs KH",
+            "type": "plan",
+            "value": "2%",
             "tone": "negative"
           }
         ]
@@ -76,12 +86,16 @@
         "trend": [
           {
             "direction": "up",
-            "label": "2 vs mục tiêu",
+            "label": "3,5 vs CK",
+            "type": "samePeriod",
+            "value": "3,5",
             "tone": "positive"
           },
           {
             "direction": "up",
-            "label": "3,5 vs CK",
+            "label": "2 vs mục tiêu",
+            "type": "plan",
+            "value": "2",
             "tone": "positive"
           }
         ]
@@ -97,6 +111,8 @@
           {
             "direction": "down",
             "label": "1,4% vs KH",
+            "type": "plan",
+            "value": "1,4%",
             "tone": "negative"
           }
         ]
@@ -112,6 +128,8 @@
           {
             "direction": "down",
             "label": "97,7% MT (8,12)",
+            "type": "plan",
+            "value": "97,7%",
             "tone": "positive"
           }
         ]
@@ -137,7 +155,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_pax_total.json",
-          "rightTitle": "nghìn"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_pax_int",
@@ -148,7 +169,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_pax_int.json",
-          "rightTitle": "nghìn"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_pax_dom",
@@ -159,7 +183,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_pax_dom.json",
-          "rightTitle": "nghìn"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_jet_fx",
@@ -176,7 +203,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_jet_fx.json",
-          "rightTitle": "USD/bbl"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_fuel",
@@ -187,7 +217,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_fuel.json",
-          "rightTitle": "Tỷ VND"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_fx_rate",
@@ -198,7 +231,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_fx_rate.json",
-          "rightTitle": "VND/USD"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -220,7 +256,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_safety_trend.json",
-          "rightTitle": "vụ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_safety_class",
@@ -236,7 +275,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_safety_class.json",
-          "rightTitle": "%"
+          "subTitle": "Đơn vị: %"
         },
         {
           "id": "b_fleet_risk",
@@ -268,7 +307,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_flight.json",
-          "rightTitle": "chuyến"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_otp",
@@ -285,7 +327,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_otp.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_hours",
@@ -296,7 +341,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_hours.json",
-          "rightTitle": "Giờ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_top_otp_high",
@@ -307,7 +355,7 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_top_otp_high.json",
-          "rightTitle": "%"
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -323,7 +371,7 @@
           "row": 1,
           "rowSpan": 1,
           "chartPath": "apiV5/domain/ceo-command-center/operation/2026/07/chart/b_delay_heatmap.json",
-          "rightTitle": "%"
+          "subTitle": "Đơn vị: %"
         },
         {
           "id": "b_otp_reasons",
@@ -339,7 +387,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_otp_reasons.json",
-          "rightTitle": "%"
+          "subTitle": "Đơn vị: %"
         }
       ]
     },
@@ -354,14 +402,17 @@
           "colSpan": 20,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 280,
           "aiInsight": {
             "text": "Doanh thu hợp nhất T4 đạt 9.696 tỷ (104,6% KH), tăng 4,6% so với kế hoạch. TCT đạt 7.796 tỷ (107,6% KH). Xu hướng tăng trưởng ổn định 12 tháng, đặc biệt T4 vượt mạnh nhờ cao điểm Lễ 30/4.",
             "severity": "good",
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_revenue.json",
-          "rightTitle": "tỷ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_carrier",
@@ -372,7 +423,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_carrier.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_int",
@@ -383,7 +437,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_int.json",
-          "rightTitle": "Nghìn khách"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -406,7 +463,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_arl.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_ocr",
@@ -422,7 +482,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_ocr.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_dr",
@@ -439,7 +502,10 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_dr.json",
-          "rightTitle": "%"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -462,7 +528,7 @@
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_nps_services.json",
-          "rightTitle": "điểm"
+          "subTitle": "Đơn vị: điểm"
         },
         {
           "id": "b_nps_ov",
@@ -473,7 +539,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_nps_ov.json",
-          "rightTitle": "Điểm"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
           "id": "b_csi_ov",
@@ -484,7 +553,10 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_csi_ov.json",
-          "rightTitle": "Điểm"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         }
       ]
     },
@@ -499,41 +571,47 @@
           "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 280,
           "aiInsight": {
             "text": "LNTT hợp nhất T4 đạt 980 tỷ (+933 tỷ so KH), vượt kế hoạch 18,7 lần. TCT đạt 779 tỷ (+908 tỷ so KH). Lợi nhuận HĐKD TCT 891 tỷ (+870 tỷ so KH). Kết quả vượt trội nhờ giá dầu thấp hơn KH 14,8 USD/thùng và sản lượng khách vượt.",
             "severity": "good",
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_lntt.json",
-          "rightTitle": "tỷ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
-          "id": "b_cash",
+          "id": "b_Cask",
           "title": "Dòng tiền",
           "col": 31,
           "colSpan": 30,
           "row": 1,
           "rowSpan": 1,
-          "height": 150,
+          "height": 300,
           "aiInsight": {
             "text": "Dòng tiền cải thiện rõ nét. Dư tiền đến 30/4 đạt 3.169 tỷ, dư nợ vay NH 3.010 tỷ. Biến động tỷ giá có lợi +74 tỷ (thu +80 tỷ, chi +6 tỷ). TCT sử dụng linh hoạt hạn mức tín dụng, đảm bảo cân đối thanh toán.",
             "severity": "good",
             "status": 1
           },
           "chartPath": "apiV5/domain/ceo-command-center/month-report/2026/07/chart/b_cash.json",
-          "rightTitle": "tỷ"
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
         },
         {
-          "id": "b_cash_balance",
+          "id": "b_Cask_balance",
           "title": "Số dư tiền",
           "col": 1,
           "colSpan": 30,
           "row": 2,
           "rowSpan": 1,
-          "aspectRatio": 1.8,
+          "height": 300,
           "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_cash_balance.json",
-          "rightTitle": "Tỷ"
+          "subTitle": "Đơn vị: Tỷ"
         },
         {
           "id": "b_profit_bridge_uth",
@@ -544,13 +622,13 @@
           "rowSpan": 1,
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/finance/2026/07/chart/b_profit_bridge_uth.json",
-          "rightTitle": "Tỷ"
+          "subTitle": "Đơn vị: Tỷ"
         }
       ]
     }
   ],
   "timeFrameHiddenModes": [
-    "quarter",
+    "year",
     "custom"
   ]
 }

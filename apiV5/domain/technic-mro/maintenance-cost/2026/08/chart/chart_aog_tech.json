@@ -1,0 +1,50 @@
+{
+  "autoChart": {
+    "chartType": "line",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "N-AOG",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        ["T1", 7],
+        ["T2", 6],
+        ["T3", 5],
+        ["T4", 6],
+        ["T5", 6],
+        ["T6", 5],
+        ["T7", 4],
+        ["T8", null],
+        ["T9", null],
+        ["T10", null],
+        ["T11", null],
+        ["T12", null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "showLegend": false,
+        "xField": "month",
+        "nameAxis": "N-AOG (Đơn vị: Số chuyến)",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "area",
+            "areaStyle": {},
+            "showLabel": "all"
+          }
+        ]
+      }
+    ]
+  }
+}

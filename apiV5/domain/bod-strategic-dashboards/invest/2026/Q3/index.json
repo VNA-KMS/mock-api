@@ -1,0 +1,270 @@
+{
+  "titleInfo": {
+    "title": "Đầu tư",
+    "statusLabel": "REAL TIME",
+    "description": "Tình hình đầu tư quý III — hiệu quả vốn, danh mục dự án, tiến độ giải ngân?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+"layout": {
+      "columns": 4
+    },
+    "items": [
+      {
+        "id": "m_total",
+        "status": "compact",
+        "title": "Chuẩn bị đầu tư",
+        "value": "75",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [75, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "8,5 so với kế hoạch",
+            "type": "plan",
+            "value": "8,5%",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "15,2 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "15,2%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human",
+        "status": "compact",
+        "title": "Số dự án đang đầu tư",
+        "value": "28",
+        "unit": "dự án",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "5 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "5%",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_human_rate",
+        "status": "compact",
+        "title": "Thực hiện đầu tư",
+        "value": "62.35",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [62.35, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "18.5%",
+            "type": "plan",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "12.8%",
+            "type": "samePeriod",
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "m_rate",
+        "status": "compact",
+        "title": "Giải ngân",
+        "value": "85.2",
+        "unit": "%",
+        "visualization": { "type": "gauge", "data": [85.2, 100] },
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "7,8 so với kế hoạch",
+            "type": "plan",
+            "value": "7,8%",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "4,5 so với cùng kỳ",
+            "type": "samePeriod",
+            "value": "4,5%",
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "",
+      "items": [
+        {
+          "id": "b_trend",
+          "col": 21,
+          "colSpan": 20,
+          "row": 1,
+          "rowSpan": 1,
+          "title": "Thực hiện đầu tư",
+          "height": 280,
+          "aiInsight": {
+            "text": "Tổng vốn đầu tư quý III đạt 38.500 tỷ đồng, tăng 12,5% so với quý trước và 18,3% so với cùng kỳ. Giải ngân đạt 85,2% kế hoạch, cao hơn 7,8 điểm phần trăm so với cùng kỳ 2025.",
+            "severity": "good",
+            "status": 1
+          },
+          "chartPath": "apiV5/domain/bod-strategic-dashboards/invest/2026/Q3/chart/b_trend.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "subTitle": "Đơn vị: tỷ đồng"
+        },
+        {
+          "id": "b_disburse",
+          "title": "Tình hình giải ngân theo loại dự án",
+          "subTitle": "Đơn vị: tỷ đồng",
+          "col": 41,
+          "colSpan": 20,
+          "row": 1,
+          "extraComponent": {
+            "type": "grouped-list",
+            "config": {
+              "rows": [
+                {
+                  "id": "aircraft-engine",
+                  "nodeId": "25496:120451",
+                  "title": "Tàu bay, động cơ",
+                  "actual": 7850,
+                  "target": 9200,
+                  "description": "Giải ngân 22/24 Dự án",
+                  "tone": "orange",
+                  "iconKey": "airplane"
+                },
+                {
+                  "id": "ttb",
+                  "nodeId": "25496:120467",
+                  "title": "TTB",
+                  "actual": 2680,
+                  "target": 4100,
+                  "description": "Giải ngân 14/18 Dự án",
+                  "tone": "green",
+                  "iconKey": "gear"
+                },
+                {
+                  "id": "xdcb",
+                  "nodeId": "25507:120773",
+                  "title": "XDCB",
+                  "actual": 1820,
+                  "target": 3200,
+                  "description": "Giải ngân 8/15 Dự án",
+                  "tone": "red",
+                  "iconKey": "trafficCone"
+                },
+                {
+                  "id": "dtrndn",
+                  "nodeId": "25507:120789",
+                  "title": "ĐTRNDN",
+                  "actual": 1950,
+                  "target": 2600,
+                  "description": "Giải ngân 12/15 Dự án",
+                  "tone": "cyan",
+                  "iconKey": "house"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b_class",
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "title": "Bảng thực hiện dự án",
+          "aiInsight": {
+            "text": "Danh mục đầu tư quý III tập trung vào hạ tầng sân bay (38%), đội tàu bay (32%) và công nghệ thông tin (18%). Ngành hàng không chiếm 78% tổng vốn, dịch vụ phụ trợ chiếm 22%.",
+            "severity": "good",
+            "status": 1
+          },
+          "table": {
+            "columns": [
+              { "id": "type", "type": "string", "label": "Loại dự án" },
+              { "id": "count", "type": "number", "label": "Số dự án", "align": "center" },
+              { "id": "plan", "type": "number", "label": "Tổng mức đầu tư KH", "align": "center" },
+              { "id": "actual", "type": "number", "label": "Giá trị thực hiện", "align": "center" },
+              { "id": "disburse", "type": "number", "label": "Giá trị giải ngân", "align": "center" },
+              { "id": "pct_actual", "type": "chip", "label": "% thực hiện đầu tư", "align": "center", "variant": "square" },
+              { "id": "pct_disburse", "type": "chip", "label": "% giải ngân", "align": "center", "variant": "square" }
+            ],
+            "rows": [
+              { "cells": { "type": "Tàu bay, động cơ", "count": 24, "plan": 9200, "actual": 8150, "disburse": 7850, "pct_actual": { "label": "88%", "color": "green" }, "pct_disburse": { "label": "85%", "color": "green" } } },
+              { "cells": { "type": "TTB", "count": 18, "plan": 4100, "actual": 3050, "disburse": 2680, "pct_actual": { "label": "74%", "color": "yellow" }, "pct_disburse": { "label": "65%", "color": "yellow" } } },
+              { "cells": { "type": "XDCB", "count": 15, "plan": 3200, "actual": 1950, "disburse": 1820, "pct_actual": { "label": "61%", "color": "yellow" }, "pct_disburse": { "label": "57%", "color": "red" } } },
+              { "cells": { "type": "ĐTRNDN", "count": 15, "plan": 2600, "actual": 2180, "disburse": 1950, "pct_actual": { "label": "84%", "color": "green" }, "pct_disburse": { "label": "75%", "color": "yellow" } } }
+            ]
+          }
+        },
+        {
+          "id": "b_prep_list",
+          "title": "SL dự án chuẩn bị đầu tư",
+          "col": 1,
+          "colSpan": 20,
+          "row": 1,
+          "extraComponent": {
+            "type": "table",
+            "config": {
+              "dataset": {
+                "columns": [
+                  {
+                    "id": "sector",
+                    "type": "text",
+                    "label": "Loại dự án"
+                  },
+                  {
+                    "id": "cbdt",
+                    "type": "number",
+                    "label": "Chuẩn bị đầu tư",
+                    "align": "center"
+                  },
+                  {
+                    "id": "qddt",
+                    "type": "number",
+                    "label": "Đã có QĐ đầu tư",
+                    "align": "center"
+                  },
+                  {
+                    "id": "total",
+                    "type": "number",
+                    "label": "Tổng",
+                    "align": "center"
+                  }
+                ],
+                "rows": [
+                  ["Tàu bay, động cơ", 5, 3, 8],
+                  ["TTB", 3, 8, 11],
+                  ["XDCB", 2, 10, 12],
+                  ["ĐTRNDN", 4, 4, 8]
+                ]
+              },
+              "rowStyle": {
+                "Tàu bay, động cơ": { "backgroundColor": "#E0F2FE", "textColor": "#0369A1" },
+                "TTB": { "backgroundColor": "#DCFCE7", "textColor": "#15803D" },
+                "XDCB": { "backgroundColor": "#FEF3C7", "textColor": "#92400E" },
+                "ĐTRNDN": { "backgroundColor": "#F3E8FF", "textColor": "#7C3AED" }
+              },
+              "maxHeight": 260
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "timeFrameHiddenModes": ["day", "week", "custom"]
+}

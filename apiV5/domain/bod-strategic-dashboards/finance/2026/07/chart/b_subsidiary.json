@@ -1,137 +1,26 @@
 {
-  "autoChart": {
-    "chartType": "bar",
-    "dataset": {
-      "columns": [
-        {
-          "id": "company",
-          "type": "string"
-        },
-        {
-          "id": "th",
-          "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
-        },
-        {
-          "id": "uth",
-          "type": "number",
-          "label": "Ước thực hiện 2027",
-          "color": "#006D88"
-        },
-        {
-          "id": "ck",
-          "type": "number",
-          "label": "Cùng kỳ 2026",
-          "color": "#9AA0A6"
-        },
-        {
-          "id": "kh",
-          "type": "number",
-          "label": "Kế hoạch 2027",
-          "color": "#D3AC2B"
-        }
-      ],
-      "rows": [
-        [
-          "SKYPEC",
-          1200,
-          null,
-          1100,
-          1150
-        ],
-        [
-          "NCTS",
-          950,
-          null,
-          880,
-          920
-        ],
-        [
-          "TCS",
-          850,
-          null,
-          800,
-          830
-        ],
-        [
-          "VAECO",
-          1500,
-          null,
-          1400,
-          1450
-        ],
-        [
-          "VIAGS",
-          700,
-          null,
-          650,
-          680
-        ],
-        [
-          "VACS",
-          450,
-          null,
-          400,
-          430
-        ],
-        [
-          "TECS",
-          350,
-          null,
-          320,
-          340
-        ],
-        [
-          "NCS",
-          280,
-          null,
-          250,
-          270
-        ],
-        [
-          "VINAKO",
-          200,
-          null,
-          180,
-          190
-        ],
-        [
-          "PA",
-          150,
-          null,
-          140,
-          145
-        ]
-      ]
-    },
-    "views": [
-      {
-        "id": "main",
-        "chartType": "bar",
-        "xField": "company",
-        "series": [
-          {
-            "field": "th",
-            "chartType": "bar"
-          },
-          {
-            "field": "uth",
-            "chartType": "bar"
-          },
-          {
-            "field": "ck",
-            "chartType": "bar"
-          },
-          {
-            "field": "kh",
-            "chartType": "bar"
-          }
-        ]
-      }
+  "table": {
+    "density": "compact",
+    "columns": [
+      { "id": "company", "type": "text", "label": "Đ\u01a1n v\u1ecb" },
+      { "id": "t7_lntt", "type": "number", "label": "T7 LNTT (t\u1ef7)", "align": "center" },
+      { "id": "t7_pct", "type": "tone-value", "label": "T7 % KH", "align": "center" },
+      { "id": "t7_ck", "type": "number", "label": "T7.2025 (t\u1ef7)", "align": "center" },
+      { "id": "cum_lntt", "type": "number", "label": "7T LNTT (t\u1ef7)", "align": "center" },
+      { "id": "cum_pct", "type": "tone-value", "label": "7T % KH", "align": "center" },
+      { "id": "cum_ck", "type": "number", "label": "7T.2025 (t\u1ef7)", "align": "center" }
+    ],
+    "rows": [
+      { "cells": { "company": "VAECO", "t7_lntt": 209, "t7_pct": { "value": 110.1, "tone": "positive" }, "t7_ck": 195, "cum_lntt": 1500, "cum_pct": { "value": 103.4, "tone": "positive" }, "cum_ck": 1420 } },
+      { "cells": { "company": "SKYPEC", "t7_lntt": 288, "t7_pct": { "value": 52.9, "tone": "negative" }, "t7_ck": 310, "cum_lntt": 1200, "cum_pct": { "value": 104.3, "tone": "positive" }, "cum_ck": 1150 }, "tone": "warning" },
+      { "cells": { "company": "VIAGS", "t7_lntt": 189, "t7_pct": { "value": 116.2, "tone": "positive" }, "t7_ck": 172, "cum_lntt": 700, "cum_pct": { "value": 102.9, "tone": "positive" }, "cum_ck": 680 } },
+      { "cells": { "company": "TCS", "t7_lntt": 212, "t7_pct": { "value": 164.1, "tone": "positive" }, "t7_ck": 98, "cum_lntt": 850, "cum_pct": { "value": 102.4, "tone": "positive" }, "cum_ck": 830 } },
+      { "cells": { "company": "NCTS", "t7_lntt": 158, "t7_pct": { "value": 113.2, "tone": "positive" }, "t7_ck": 145, "cum_lntt": 950, "cum_pct": { "value": 103.3, "tone": "positive" }, "cum_ck": 920 } },
+      { "cells": { "company": "VACS", "t7_lntt": 110, "t7_pct": { "value": 154.6, "tone": "positive" }, "t7_ck": 82, "cum_lntt": 450, "cum_pct": { "value": 104.7, "tone": "positive" }, "cum_ck": 430 } },
+      { "cells": { "company": "TECS", "t7_lntt": 37, "t7_pct": { "value": 107.4, "tone": "positive" }, "t7_ck": 34, "cum_lntt": 350, "cum_pct": { "value": 102.9, "tone": "positive" }, "cum_ck": 340 } },
+      { "cells": { "company": "NCS", "t7_lntt": 34, "t7_pct": { "value": 104.0, "tone": "positive" }, "t7_ck": 32, "cum_lntt": 280, "cum_pct": { "value": 103.7, "tone": "positive" }, "cum_ck": 270 } },
+      { "cells": { "company": "VINAKO", "t7_lntt": 25, "t7_pct": { "value": 101.2, "tone": "positive" }, "t7_ck": 23, "cum_lntt": 200, "cum_pct": { "value": 105.3, "tone": "positive" }, "cum_ck": 190 } },
+      { "cells": { "company": "PA", "t7_lntt": -138, "t7_pct": { "value": 0, "tone": "negative" }, "t7_ck": -95, "cum_lntt": 150, "cum_pct": { "value": 103.4, "tone": "positive" }, "cum_ck": 145 }, "tone": "critical" }
     ]
-  },
-  "metadata": {
-    "forecastStartIndex": 8
   }
 }

@@ -1,0 +1,72 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "Thailand",
+          30,
+          32
+        ],
+        [
+          "Singapore",
+          25,
+          24
+        ],
+        [
+          "Malaysia",
+          20,
+          18
+        ],
+        [
+          "Indonesia",
+          15,
+          16
+        ],
+        [
+          "Philippines",
+          10,
+          10
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

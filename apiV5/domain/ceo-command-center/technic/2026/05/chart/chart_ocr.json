@@ -8,52 +8,46 @@
           "type": "string"
         },
         {
-          "id": "actual",
+          "id": "th",
           "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
         },
         {
           "id": "uth",
           "type": "number",
-          "label": "Ước thực hiện 2027",
-          "color": "#006D88"
+          "label": "Ước thực hiện 2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "plan",
+          "id": "db",
           "type": "number",
-          "label": "Kế hoạch 2027",
-          "color": "#D3AC2B"
+          "label": "Kế hoạch 2026",
+          "colorToken": "series.target"
         },
         {
-          "id": "samePeriod",
+          "id": "ck",
           "type": "number",
-          "label": "Cùng kỳ 2026",
-          "color": "#9AA0A6"
+          "label": "Cùng kỳ 2025",
+          "colorToken": "series.previous"
         },
         {
-          "id": "actual_cum",
+          "id": "th_lk",
           "type": "number",
-          "label": "Thực hiện (LK)",
-          "color": "#006D88"
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "uth_cum",
+          "id": "db_lk",
           "type": "number",
-          "label": "Ước thực hiện (LK)",
-          "color": "#006D88"
+          "label": "Luỹ kế Kế hoạch 2026",
+          "colorToken": "series.target"
         },
         {
-          "id": "plan_cum",
+          "id": "ck_lk",
           "type": "number",
-          "label": "Kế hoạch (LK)",
-          "color": "#D3AC2B"
-        },
-        {
-          "id": "samePeriod_cum",
-          "type": "number",
-          "label": "Cùng kỳ (LK)",
-          "color": "#9AA0A6"
+          "label": "Luỹ kế Cùng kỳ 2025",
+          "colorToken": "series.previous"
         }
       ],
       "rows": [
@@ -64,7 +58,6 @@
           1,
           1,
           1,
-          null,
           1,
           1
         ],
@@ -75,7 +68,6 @@
           1,
           1.05,
           2.05,
-          null,
           2,
           2.05
         ],
@@ -86,7 +78,6 @@
           1,
           1.1,
           3.15,
-          null,
           3,
           3.15
         ],
@@ -97,7 +88,6 @@
           1,
           1.12,
           4.3,
-          null,
           4,
           4.27
         ],
@@ -108,7 +98,6 @@
           1,
           1.1,
           5.48,
-          null,
           5,
           5.37
         ],
@@ -119,7 +108,6 @@
           1,
           1.1,
           6.68,
-          null,
           6,
           6.47
         ],
@@ -130,7 +118,6 @@
           1,
           1.1,
           7.88,
-          null,
           7,
           7.57
         ],
@@ -141,7 +128,6 @@
           1,
           1.05,
           null,
-          9.0,
           8,
           8.62
         ],
@@ -152,7 +138,6 @@
           1,
           1,
           null,
-          10.1,
           9,
           9.62
         ],
@@ -163,7 +148,6 @@
           1,
           0.95,
           null,
-          11.2,
           10,
           10.57
         ],
@@ -174,7 +158,6 @@
           1,
           0.9,
           null,
-          12.3,
           11,
           11.47
         ],
@@ -185,7 +168,6 @@
           1,
           0.85,
           null,
-          13.4,
           12,
           12.32
         ]
@@ -194,51 +176,28 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
-            "field": "actual",
-            "chartType": "line"
+            "field": "th",
+            "chartType": "line",
+            "showLabel": "end"
           },
           {
             "field": "uth",
             "chartType": "bar"
           },
           {
-            "field": "plan",
-            "chartType": "line"
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
           },
           {
-            "field": "samePeriod",
+            "field": "ck",
             "chartType": "line"
           }
-        ],
-        "label": "Theo T12"
-      },
-      {
-        "id": "main_cum",
-        "chartType": "line",
-        "xField": "month",
-        "series": [
-          {
-            "field": "actual_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "uth_cum",
-            "chartType": "bar"
-          },
-          {
-            "field": "plan_cum",
-            "chartType": "line"
-          },
-          {
-            "field": "samePeriod_cum",
-            "chartType": "line"
-          }
-        ],
-        "label": "LK: 7,9"
+        ]
       }
     ]
   },

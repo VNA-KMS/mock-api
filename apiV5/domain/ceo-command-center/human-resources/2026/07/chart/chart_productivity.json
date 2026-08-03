@@ -8,57 +8,172 @@
           "type": "string"
         },
         {
-          "id": "actual",
+          "id": "ck",
           "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
+          "label": "2025",
+          "colorToken": "series.previous"
         },
         {
-          "id": "samePeriod",
+          "id": "db",
           "type": "number",
-          "label": "Cùng kỳ 2026",
-          "color": "#C8CDD2"
+          "label": "KH 2026",
+          "colorToken": "data.brick"
         },
         {
-          "id": "plan",
+          "id": "th",
           "type": "number",
-          "label": "Kế hoạch 2027",
-          "lineDash": [6, 4],
-          "color": "#D3AC2B"
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế KH 2026",
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
         }
       ],
       "rows": [
-        ["T1", 1180, 1120, 1200],
-        ["T2", 1195, 1135, 1215],
-        ["T3", 1210, 1150, 1230],
-        ["T4", 1220, 1165, 1245],
-        ["T5", 1228, 1175, 1255],
-        ["T6", 1235, 1185, 1265],
-        ["T7", 1245, 1199, 1272],
-        ["T8", null, 1210, 1280],
-        ["T9", null, 1220, 1290],
-        ["T10", null, 1235, 1300],
-        ["T11", null, 1245, 1310],
-        ["T12", null, 1260, 1320]
+        [
+          "T1",
+          1120,
+          1260,
+          1180,
+          1120,
+          1260,
+          1180
+        ],
+        [
+          "T2",
+          1135,
+          1260,
+          1195,
+          2255,
+          2520,
+          2375
+        ],
+        [
+          "T3",
+          1150,
+          1260,
+          1210,
+          3405,
+          3780,
+          3585
+        ],
+        [
+          "T4",
+          1165,
+          1260,
+          1220,
+          4570,
+          5040,
+          4805
+        ],
+        [
+          "T5",
+          1175,
+          1260,
+          1228,
+          5745,
+          6300,
+          6033
+        ],
+        [
+          "T6",
+          1185,
+          1260,
+          1235,
+          6930,
+          7560,
+          7268
+        ],
+        [
+          "T7",
+          1199,
+          1260,
+          1245,
+          8129,
+          8820,
+          8513
+        ],
+        [
+          "T8",
+          1210,
+          1260,
+          null,
+          9339,
+          10080,
+          null
+        ],
+        [
+          "T9",
+          1220,
+          1260,
+          null,
+          10559,
+          11340,
+          null
+        ],
+        [
+          "T10",
+          1235,
+          1260,
+          null,
+          11794,
+          12600,
+          null
+        ],
+        [
+          "T11",
+          1245,
+          1260,
+          null,
+          13039,
+          13860,
+          null
+        ],
+        [
+          "T12",
+          1260,
+          1260,
+          null,
+          14299,
+          15120,
+          null
+        ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "combo",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
-            "field": "actual",
+            "field": "ck",
             "chartType": "bar"
           },
           {
-            "field": "samePeriod",
-            "chartType": "bar"
+            "field": "db",
+            "chartType": "line",
+            "showSymbol": true
           },
           {
-            "field": "plan",
-            "chartType": "line"
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
           }
         ]
       }

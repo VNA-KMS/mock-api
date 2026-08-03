@@ -1,0 +1,41 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "month", "type": "string" },
+        { "id": "rev_th", "type": "number", "label": "Doanh thu TH", "color": "#004071" },
+        { "id": "rev_kh", "type": "number", "label": "Doanh thu KH", "color": "#B4901F" },
+        { "id": "pbt_th", "type": "number", "label": "LNTT TH", "color": "#0E7490" },
+        { "id": "pbt_kh", "type": "number", "label": "LNTT KH", "color": "#EA580C" }
+      ],
+      "rows": [
+        ["T1", 6200, 6000, 380, 350],
+        ["T2", 5800, 5900, 320, 340],
+        ["T3", 7500, 7200, 520, 480],
+        ["T4", 6800, 6600, 450, 420],
+        ["T5", 7200, 7000, 490, 460],
+        ["T6", 7900, 7600, 560, 520],
+        ["T7", 7100, 6900, 480, 450],
+        ["T8", null, 7100, null, 460],
+        ["T9", null, 7300, null, 480],
+        ["T10", null, 6900, null, 440],
+        ["T11", null, 7200, null, 460],
+        ["T12", null, 7600, null, 500]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "month",
+        "series": [
+          { "field": "rev_th", "chartType": "bar" },
+          { "field": "rev_kh", "chartType": "bar" },
+          { "field": "pbt_th", "chartType": "line", "yAxis": "right" },
+          { "field": "pbt_kh", "chartType": "line", "yAxis": "right" }
+        ]
+      }
+    ]
+  }
+}

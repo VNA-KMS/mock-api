@@ -1,0 +1,40 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "area",
+          "type": "string",
+          "label": "Khu vực"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "PAX (nghìn)",
+          "color": "#C9A227"
+        }
+      ],
+      "rows": [
+        ["US", 6.7],
+        ["SAS", 8.2],
+        ["MID", 10.5],
+        ["NOA", 12.3],
+        ["EU", 95.2]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "area",
+        "series": [
+          {
+            "field": "value",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "b787",
+          "type": "number",
+          "label": "B787",
+          "colorToken": "data.deep-teal"
+        },
+        {
+          "id": "a350",
+          "type": "number",
+          "label": "A350",
+          "colorToken": "data.jade-blue"
+        },
+        {
+          "id": "a321",
+          "type": "number",
+          "label": "A321",
+          "colorToken": "data.olive-gold"
+        },
+        {
+          "id": "atr72",
+          "type": "number",
+          "label": "ATR72",
+          "colorToken": "data.moss-green"
+        }
+      ],
+      "rows": [
+        ["2025", 1.14, 1.06, 1.47, 1.31],
+        ["2026", 1.18, 1.09, 1.52, 1.35]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "b787",
+            "chartType": "bar",
+            "stack": "total",
+            "showLabel": "all"
+          },
+          {
+            "field": "a350",
+            "chartType": "bar",
+            "stack": "total"
+          },
+          {
+            "field": "a321",
+            "chartType": "bar",
+            "stack": "total"
+          },
+          {
+            "field": "atr72",
+            "chartType": "bar",
+            "stack": "total"
+          }
+        ]
+      }
+    ]
+  }
+}

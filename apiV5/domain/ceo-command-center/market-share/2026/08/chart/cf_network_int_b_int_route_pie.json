@@ -1,0 +1,66 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Thị phần",
+          "color": [
+            "data.deep-teal",
+            "data.jade-blue",
+            "data.olive-gold",
+            "data.olive-green",
+            "data.moss-green",
+            "data.brick"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "SWP",
+          44
+        ],
+        [
+          "CLMV",
+          31
+        ],
+        [
+          "NEA",
+          11
+        ],
+        [
+          "SEA",
+          6
+        ],
+        [
+          "US",
+          5
+        ],
+        [
+          "EU",
+          3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "label",
+        "showCenterValue": true,
+        "series": [
+          {
+            "field": "value"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

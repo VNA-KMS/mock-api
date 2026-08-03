@@ -1,0 +1,111 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "th_2025",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_2026",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          60.3,
+          61.0
+        ],
+        [
+          "T2",
+          60.5,
+          62.5
+        ],
+        [
+          "T3",
+          59.0,
+          62.5
+        ],
+        [
+          "T4",
+          57.2,
+          63.0
+        ],
+        [
+          "T5",
+          56.0,
+          63.5
+        ],
+        [
+          "T6",
+          55.0,
+          63.5
+        ],
+        [
+          "T7",
+          56.9,
+          61.0
+        ],
+        [
+          "T8",
+          57.1,
+          null
+        ],
+        [
+          "T9",
+          56.8,
+          null
+        ],
+        [
+          "T10",
+          57.7,
+          null
+        ],
+        [
+          "T11",
+          57.5,
+          null
+        ],
+        [
+          "T12",
+          57.5,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "th_2025",
+            "chartType": "line"
+          },
+          {
+            "field": "th_2026",
+            "chartType": "line",
+            "showLabel": "end"
+          }
+        ],
+        "tooltipUnit": "%",
+        "yAxis": {
+          "min": 30,
+          "max": 70,
+          "interval": 5
+        }
+      }
+    ]
+  }
+}

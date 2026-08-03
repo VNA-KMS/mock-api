@@ -1,0 +1,165 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "data.olive-gold"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            6,
+            4
+          ],
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          94.3,
+          94.9,
+          92.5,
+          95.5
+        ],
+        [
+          "T2",
+          94.8,
+          95.3,
+          96.8,
+          95.5
+        ],
+        [
+          "T3",
+          95,
+          95.6,
+          93.2,
+          95.5
+        ],
+        [
+          "T4",
+          95.3,
+          95.9,
+          97.8,
+          95.5
+        ],
+        [
+          "T5",
+          94.8,
+          95.4,
+          94.0,
+          95.5
+        ],
+        [
+          "T6",
+          94.5,
+          95.1,
+          98.5,
+          95.5
+        ],
+        [
+          "T7",
+          94.2,
+          94.87,
+          92.0,
+          95.5
+        ],
+        [
+          "T8",
+          94.6,
+          null,
+          97.2,
+          95.5
+        ],
+        [
+          "T9",
+          94.3,
+          null,
+          93.5,
+          95.5
+        ],
+        [
+          "T10",
+          95,
+          null,
+          96.5,
+          95.5
+        ],
+        [
+          "T11",
+          95.6,
+          null,
+          91.8,
+          95.5
+        ],
+        [
+          "T12",
+          95.2,
+          null,
+          95.5,
+          95.5
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 80,
+        "yMax": 100,
+        "yInterval": 2,
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "areaStyle": {},
+            "showLabel": "all"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed",
+            "showSymbol": true
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "forecastStartIndex": 8
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "data.olive-gold"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            6,
+            4
+          ],
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          94.7,
+          95.27,
+          95.03,
+          95.5
+        ],
+        [
+          "Q2",
+          94.87,
+          95.47,
+          95.8,
+          95.5
+        ],
+        [
+          "Q3",
+          94.37,
+          94.87,
+          95.97,
+          95.5
+        ],
+        [
+          "Q4",
+          95.27,
+          null,
+          95.03,
+          95.5
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "yMin": 94,
+        "yMax": 97,
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "areaStyle": {},
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ],
+        "yInterval": 1
+      }
+    ]
+  }
+}

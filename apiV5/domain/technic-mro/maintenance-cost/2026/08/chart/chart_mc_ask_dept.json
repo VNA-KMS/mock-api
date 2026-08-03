@@ -1,0 +1,50 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "dept",
+          "type": "string"
+        },
+        {
+          "id": "kh",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        ["QĐT", 4.2, 4.1],
+        ["DVMN", 0.92, 0.9],
+        ["BDTX", 4.0, 3.9],
+        ["BDDK", 1.95, 1.9]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "dept",
+        "series": [
+          {
+            "field": "kh",
+            "chartType": "bar",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ]
+      }
+    ]
+  }
+}

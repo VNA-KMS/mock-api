@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -10,31 +10,49 @@
         {
           "id": "th",
           "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "kh",
+          "id": "db",
           "type": "number",
-          "label": "Kế hoạch 2027",
-          "color": "#D3AC2B"
+          "label": "Kế hoạch 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "colorToken": "series.target"
         }
       ],
       "rows": [
         [
           "Hành khách",
           50631.1,
+          44318.8,
+          50631.1,
           44318.8
         ],
         [
           "Hàng hoá, bưu kiện",
           5371.5,
-          4083
+          4083,
+          56002.6,
+          48401.8
         ],
         [
           "Hoạt động gia tăng",
           2172.3,
-          2308.9
+          2308.9,
+          58174.9,
+          50710.7
         ]
       ]
     },
@@ -47,11 +65,13 @@
         "series": [
           {
             "field": "th",
-            "chartType": "bar"
+            "chartType": "bar",
+            "showSymbol": true
           },
           {
-            "field": "kh",
-            "chartType": "bar"
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
           }
         ]
       }

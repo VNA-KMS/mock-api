@@ -11,43 +11,53 @@
           "id": "count",
           "type": "number",
           "label": "Số vụ delay",
-          "color": "#1D4857"
+          "colorToken": "series.actual"
         },
         {
           "id": "avg",
           "type": "number",
           "label": "TB delay (phút)",
-          "color": "#479EB3"
+          "colorToken": "data.brick"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "Mục tiêu cả năm",
+          "lineDash": [
+            6,
+            4
+          ],
+          "colorToken": "data.olive-gold"
         }
       ],
       "rows": [
         [
           "T8",
-          9,
+          null,
           48,
           52
         ],
         [
           "T9",
-          11,
+          null,
           50,
           52
         ],
         [
           "T10",
-          8,
+          null,
           46,
           52
         ],
         [
           "T11",
-          10,
+          null,
           52,
           52
         ],
         [
           "T12",
-          13,
+          null,
           58,
           52
         ],
@@ -98,13 +108,14 @@
     "views": [
       {
         "id": "main",
-        "chartType": "combo",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
             "field": "count",
             "chartType": "bar",
-            "yAxis": "left"
+            "yAxis": "left",
+            "showLabel": "end"
           },
           {
             "field": "avg",
@@ -114,7 +125,8 @@
           {
             "field": "target",
             "chartType": "line",
-            "yAxis": "right"
+            "yAxis": "right",
+            "lineType": "dashed"
           }
         ]
       }

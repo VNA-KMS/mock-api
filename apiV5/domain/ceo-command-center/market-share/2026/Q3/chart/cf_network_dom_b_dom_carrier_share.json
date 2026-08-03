@@ -1,0 +1,143 @@
+{
+  "autoChart": {
+    "chartType": "bar-h-stacked",
+    "dataset": {
+      "columns": [
+        {
+          "id": "route",
+          "type": "string",
+          "label": "Nhóm ngành"
+        },
+        {
+          "id": "vna",
+          "type": "number",
+          "label": "VNA",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "vj",
+          "type": "number",
+          "label": "VJ",
+          "colorToken": "carrier.vj"
+        },
+        {
+          "id": "qh",
+          "type": "number",
+          "label": "QH",
+          "colorToken": "carrier.qh"
+        },
+        {
+          "id": "bl",
+          "type": "number",
+          "label": "BL",
+          "colorToken": "carrier.bl"
+        },
+        {
+          "id": "vu",
+          "type": "number",
+          "label": "VU",
+          "colorToken": "carrier.vu"
+        },
+        {
+          "id": "g9",
+          "type": "number",
+          "label": "9G",
+          "colorToken": "carrier.9g"
+        }
+      ],
+      "rows": [
+        [
+          "HANSGN",
+          44,
+          31,
+          11,
+          8,
+          4,
+          2
+        ],
+        [
+          "HANDAD",
+          41,
+          33,
+          10,
+          8,
+          5,
+          3
+        ],
+        [
+          "SGNDAD",
+          39,
+          34,
+          11,
+          9,
+          4,
+          3
+        ],
+        [
+          "Local Trunk",
+          37,
+          30,
+          14,
+          10,
+          6,
+          3
+        ],
+        [
+          "Tour",
+          34,
+          32,
+          15,
+          11,
+          5,
+          3
+        ],
+        [
+          "Local",
+          36,
+          29,
+          13,
+          12,
+          7,
+          3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "route",
+        "stack": "total",
+        "labelInside": true,
+        "labelFormatter": "{c}%",
+        "series": [
+          {
+            "field": "vna",
+            "chartType": "bar"
+          },
+          {
+            "field": "vj",
+            "chartType": "bar"
+          },
+          {
+            "field": "qh",
+            "chartType": "bar"
+          },
+          {
+            "field": "bl",
+            "chartType": "bar"
+          },
+          {
+            "field": "vu",
+            "chartType": "bar"
+          },
+          {
+            "field": "g9",
+            "chartType": "bar"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

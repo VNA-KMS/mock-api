@@ -1,0 +1,76 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "fleet",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        }
+      ],
+      "rows": [
+        [
+          "A321",
+          99.4,
+          99.5,
+          99.4
+        ],
+        [
+          "A350",
+          99.2,
+          99.5,
+          198.6
+        ],
+        [
+          "B787",
+          98.6,
+          99.5,
+          297.2
+        ],
+        [
+          "ATR72",
+          99.5,
+          99.5,
+          396.7
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "fleet",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "line",
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "lineType": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

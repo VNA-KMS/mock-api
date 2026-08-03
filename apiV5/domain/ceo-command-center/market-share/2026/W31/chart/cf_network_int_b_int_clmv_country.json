@@ -1,0 +1,67 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "country",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "TH 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "TH 2025",
+          "colorToken": "series.previous"
+        }
+      ],
+      "rows": [
+        [
+          "Cambodia",
+          40,
+          38
+        ],
+        [
+          "Laos",
+          30,
+          32
+        ],
+        [
+          "Myanmar",
+          20,
+          18
+        ],
+        [
+          "Others",
+          10,
+          12
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "country",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showLabel": "end"
+          },
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

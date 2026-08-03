@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "auto",
+    "chartType": "line",
     "dataset": {
       "columns": [
         {
@@ -11,13 +11,13 @@
           "id": "otp_den",
           "type": "number",
           "label": "OTP đến",
-          "color": "#006D88"
+          "colorToken": "series.actual"
         },
         {
           "id": "otp_mt",
           "type": "number",
           "label": "Mục tiêu",
-          "color": "#D3AC2B"
+          "colorToken": "series.target"
         }
       ],
       "rows": [
@@ -86,12 +86,12 @@
     "views": [
       {
         "id": "main",
-        "chartType": "line",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
             "field": "otp_den",
-            "chartType": "area"
+            "chartType": "AREA"
           },
           {
             "field": "otp_mt",

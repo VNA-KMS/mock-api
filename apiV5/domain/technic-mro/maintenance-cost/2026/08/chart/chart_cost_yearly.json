@@ -1,0 +1,63 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "b787",
+          "type": "number",
+          "label": "B787",
+          "colorToken": "data.deep-teal"
+        },
+        {
+          "id": "a350",
+          "type": "number",
+          "label": "A350",
+          "colorToken": "data.jade-blue"
+        },
+        {
+          "id": "a321",
+          "type": "number",
+          "label": "A321",
+          "colorToken": "data.olive-gold"
+        }
+      ],
+      "rows": [
+        ["2020", 4200, 3100, 6800],
+        ["2021", 4400, 3200, 7000],
+        ["2022", 4600, 3400, 7200],
+        ["2023", 4800, 3500, 7400],
+        ["2024", 5000, 3600, 7600],
+        ["2025", 5200, 3700, 7800],
+        ["2026", 5400, 3800, 8000]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "stack": "total",
+        "series": [
+          {
+            "field": "b787",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "a350",
+            "chartType": "bar"
+          },
+          {
+            "field": "a321",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}

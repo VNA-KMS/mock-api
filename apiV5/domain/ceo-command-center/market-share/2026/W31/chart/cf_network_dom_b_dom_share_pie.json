@@ -1,0 +1,60 @@
+{
+  "autoChart": {
+    "chartType": "donut-pct",
+    "dataset": {
+      "columns": [
+        {
+          "id": "label",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Thị phần T7",
+          "color": [
+            "carrier.vna",
+            "carrier.vj",
+            "carrier.qh",
+            "carrier.9g",
+            "carrier.vu"
+          ]
+        }
+      ],
+      "rows": [
+        [
+          "VNA Group",
+          50.9
+        ],
+        [
+          "VJ",
+          28.3
+        ],
+        [
+          "QH",
+          12.1
+        ],
+        [
+          "9G",
+          2.9
+        ],
+        [
+          "VU",
+          5.8
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "donut-pct",
+        "xField": "label",
+        "series": [
+          {
+            "field": "value"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

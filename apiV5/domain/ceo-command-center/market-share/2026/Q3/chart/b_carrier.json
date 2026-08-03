@@ -1,0 +1,114 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "aspectRatio": 1.8,
+    "dataset": {
+      "columns": [
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "carrier.vna"
+        },
+        {
+          "id": "ck_lk",
+          "type": "number",
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "carrier.vna"
+        }
+      ],
+      "rows": [
+        [
+          "Q1",
+          161.8,
+          158.3,
+          157.7,
+          161.8,
+          158.3,
+          157.7
+        ],
+        [
+          "Q2",
+          159.7,
+          156.5,
+          156.6,
+          321.5,
+          314.8,
+          314.3
+        ],
+        [
+          "Q3",
+          162.3,
+          154.5,
+          52,
+          483.8,
+          469.3,
+          366.3
+        ],
+        [
+          "Q4",
+          160.5,
+          152.3,
+          null,
+          644.3,
+          621.6,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "bar",
+            "isBlur": false
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          }
+        ],
+        "tooltipUnit": "%"
+      }
+    ]
+  }
+}

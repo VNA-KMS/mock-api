@@ -1,0 +1,48 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        { "id": "country", "type": "string" },
+        { "id": "positive", "type": "number", "label": "P/L Cost (Triệu VNĐ)", "color": "#00707F" },
+        { "id": "negative", "type": "number", "label": "P/L Cost (Triệu VNĐ)", "color": "#C9A227" }
+      ],
+      "rows": [
+        ["SG", 5533, null],
+        ["LA", 2068, null],
+        ["DOM", 1963, null],
+        ["CN", 2126, null],
+        ["ID", 666, null],
+        ["TH", null, -794],
+        ["MY", null, -1619],
+        ["PH", null, -2277],
+        ["HK", null, -2657],
+        ["RU", null, -2679],
+        ["NL", null, -2714],
+        ["TW", null, -4095],
+        ["GB", null, -4347],
+        ["KH", null, -4646],
+        ["IN", null, -6326],
+        ["US", null, -6432],
+        ["JP", null, -7316],
+        ["IT", null, -8542],
+        ["DK", null, -12213],
+        ["DE", null, -17777],
+        ["FR", null, -21981],
+        ["KR", null, -30084],
+        ["AU", null, -33900]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "country",
+        "series": [
+          { "field": "positive", "chartType": "bar" },
+          { "field": "negative", "chartType": "bar" }
+        ]
+      }
+    ]
+  }
+}

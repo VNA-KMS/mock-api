@@ -6,13 +6,15 @@ const app = express();
 
 app.use(express.json());
 
-app.use((_req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
+app.use((req, res, next) => {
+    const origin = req.headers.origin || req.headers.host;
+    res.header("Access-Control-Allow-Origin", origin);
     res.header("Access-Control-Allow-Credentials", "true");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, Channel, Platform");
-    res.header("Access-Control-Allow-Credentials", "true");
-    if (_req.method === "OPTIONS") return res.sendStatus(204);
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, Channel, Platform, X-Requested-With, Accept");
+    res.header("Access-Control-Expose-Headers", "Content-Type, Content-Length, X-Total-Count");
+    res.header("Vary", "Origin");
+    if (req.method === "OPTIONS") return res.sendStatus(204);
     next();
 });
 

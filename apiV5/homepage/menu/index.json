@@ -97,15 +97,6 @@
         "path-api": "domain/bod-strategic-dashboards/safety"
       },
       {
-        "id": "operation",
-        "title": "Operation",
-        "description": "Chuyến bay, giờ bay, OTP đi/đến, top sân bay",
-        "color": "text-black",
-        "bg": "bg-polar",
-        "path": "/bod-strategic-dashboards/operation",
-        "path-api": "domain/bod-strategic-dashboards/operation"
-      },
-      {
         "id": "commerce",
         "title": "Commerce",
         "description": "Tab Hành khách | Hàng hóa (Pax/RASK/CASK/LF/P/L)",
@@ -115,13 +106,40 @@
         "path-api": "domain/bod-strategic-dashboards/commerce"
       },
       {
+        "id": "operation",
+        "title": "Operation",
+        "description": "Chuyến bay, giờ bay, OTP đi/đến, top sân bay",
+        "color": "text-black",
+        "bg": "bg-polar",
+        "path": "/bod-strategic-dashboards/operation",
+        "path-api": "domain/bod-strategic-dashboards/operation"
+      },
+      {
         "id": "technic",
         "title": "Technic",
-        "description": "ARL, OCR, DR, phân loại theo đội tàu",
+        "description": "ARL, DR, MC",
         "color": "text-black",
         "bg": "bg-polar",
         "path": "/bod-strategic-dashboards/technic",
         "path-api": "domain/bod-strategic-dashboards/technic"
+      },
+      {
+        "id": "service",
+        "title": "Service",
+        "description": "NPS/CSI Overall|DOM|INT, CSI thấp nhất",
+        "color": "text-black",
+        "bg": "bg-polar",
+        "path": "/bod-strategic-dashboards/service",
+        "path-api": "domain/bod-strategic-dashboards/service"
+      },
+      {
+        "id": "finance",
+        "title": "Finance",
+        "description": "Doanh thu, lợi nhuận, dòng tiền",
+        "color": "text-black",
+        "bg": "bg-polar",
+        "path": "/bod-strategic-dashboards/finance",
+        "path-api": "domain/bod-strategic-dashboards/finance"
       },
       {
         "id": "human-resources",
@@ -133,27 +151,17 @@
         "path-api": "domain/bod-strategic-dashboards/human-resources"
       },
       {
-        "id": "service",
-        "title": "Service",
-        "description": "NPS/CSI Overall|DOM|INT, CSI thấp nhất",
+        "id": "invest",
+        "title": "Invest",
+        "description": "Đầu tư, capex, ROI, dự án trọng điểm",
         "color": "text-black",
         "bg": "bg-polar",
-        "path": "/bod-strategic-dashboards/service",
-        "path-api": "domain/bod-strategic-dashboards/service"
-      },
-      
-      {
-        "id": "finance",
-        "title": "Finance",
-        "description": "Doanh thu, lợi nhuận, dòng tiền",
-        "color": "text-black",
-        "bg": "bg-polar",
-        "path": "/bod-strategic-dashboards/finance",
-        "path-api": "domain/bod-strategic-dashboards/finance"
+        "path": "/bod-strategic-dashboards/invest",
+        "path-api": "domain/bod-strategic-dashboards/invest"
       },
       {
         "id": "month-report",
-        "title": "Month Report",
+        "title": "Report",
         "description": "Báo cáo tổng hợp tháng — tài chính, vận hành, an toàn, dịch vụ, kỹ thuật, thị trường",
         "color": "text-black",
         "bg": "bg-polar",
@@ -172,8 +180,8 @@
     "items": [
       {
         "id": "strategic-overview",
-        "title": "Strategic Overview",
-        "description": "KPIs Overall — 5 KPI mỗi khối + đánh giá % đạt",
+        "title": "KPIs Overview",
+        "description": "Overall KPIs • 5 KPIs per Business Unit • Target Achievement (%)",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/strategic-overview",
@@ -182,7 +190,7 @@
       {
         "id": "market-share",
         "title": "Market Share",
-        "description": "Vị thế, share theo khu vực, cạnh tranh",
+        "description": "Market share by region • Competitive position • Ranking",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/market-share",
@@ -190,8 +198,8 @@
       },
       {
         "id": "exchange-rate-fuel",
-        "title": "Exchange Rate & Fuel",
-        "description": "Jet A1, Fuel Cost, FX 6 đồng, dòng tiền",
+        "title": "Fuel & Foreign Exchange",
+        "description": "Jet A1 price | Fuel cost • FX rates • Currency trends",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/exchange-rate-fuel",
@@ -199,71 +207,98 @@
       },
       {
         "id": "safety",
-        "title": "Safety",
-        "description": "Sự cố Cục HK, phân loại A–E, sự cố điển hình",
+        "title": "Safety & Security",
+        "description": "Safety events • A–E classifications • Security",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/safety",
         "path-api": "domain/ceo-command-center/safety"
       },
       {
+        "id": "commerce-i",
+        "title": "Commerce I",
+        "description": "Phân tích thương mại chi tiết",
+        "color": "text-primary",
+        "bg": "bg-frost",
+        "path": "/ceo-command-center/commerce-i",
+        "path-api": "domain/ceo-command-center/commerce-i"
+      },
+      {
         "id": "operation",
         "title": "Operation",
-        "description": "Chuyến bay, giờ bay, OTP đi/đến, top sân bay",
+        "description": "Flights • BH • OTP/OSP",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/operation",
         "path-api": "domain/ceo-command-center/operation"
       },
       {
-        "id": "commerce",
-        "title": "Commerce",
-        "description": "Tab Hành khách | Hàng hóa (Pax/RASK/CASK/LF/P/L)",
+        "id": "commerce-ii",
+        "title": "Commerce II",
+        "description": "Phân tích thương mại theo Lĩnh vực, Mạng bay, Hãng vận chuyển",
         "color": "text-primary",
         "bg": "bg-frost",
-        "path": "/ceo-command-center/commerce",
-        "path-api": "domain/ceo-command-center/commerce"
+        "path": "/ceo-command-center/commerce-ii",
+        "path-api": "domain/ceo-command-center/commerce-ii"
       },
       {
         "id": "technic",
         "title": "Technic",
-        "description": "ARL, OCR, DR, phân loại theo đội tàu",
+        "description": "Aircraft reliability | Dispatch reliability | Fleet performance",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/technic",
         "path-api": "domain/ceo-command-center/technic"
       },
       {
-        "id": "human-resources",
-        "title": "Human Resources",
-        "description": "Năng suất lao động, số lượng lao động theo khối",
-        "color": "text-primary",
-        "bg": "bg-frost",
-        "path": "/ceo-command-center/human-resources",
-        "path-api": "domain/ceo-command-center/human-resources"
-      },
-      {
         "id": "service",
         "title": "Service",
-        "description": "NPS/CSI Overall|DOM|INT, CSI thấp nhất",
+        "description": "Overall NPS | Overall CSI | Network perfomance",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/service",
         "path-api": "domain/ceo-command-center/service"
       },
       {
+        "id": "communication",
+        "title": "Communication",
+        "description": "Advertising | Internal Communication | Social Media",
+        "color": "text-primary",
+        "bg": "bg-frost",
+        "path": "/ceo-command-center/communication",
+        "path-api": "domain/ceo-command-center/communication"
+      },
+      {
         "id": "finance",
         "title": "Finance",
-        "description": "Doanh thu, lợi nhuận, dòng tiền",
+        "description": "Revenue | Profit | Cash Flow",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/finance",
         "path-api": "domain/ceo-command-center/finance"
       },
       {
+        "id": "procurement",
+        "title": "Procurement",
+        "description": "Investment projects • Procurement progress • Budget utilization",
+        "color": "text-primary",
+        "bg": "bg-frost",
+        "path": "/ceo-command-center/procurement",
+        "path-api": "domain/ceo-command-center/procurement"
+      },
+      {
+        "id": "human-resources",
+        "title": "Human Resource",
+        "description": "Workforce | Productivity",
+        "color": "text-primary",
+        "bg": "bg-frost",
+        "path": "/ceo-command-center/human-resources",
+        "path-api": "domain/ceo-command-center/human-resources"
+      },
+      {
         "id": "month-report",
-        "title": "Month Report",
-        "description": "Báo cáo tổng hợp tháng — tài chính, vận hành, an toàn, dịch vụ, kỹ thuật, thị trường",
+        "title": "Report",
+        "description": "Daily Report | Weekly Report | Monthly Report | Quarterly Report",
         "color": "text-primary",
         "bg": "bg-frost",
         "path": "/ceo-command-center/month-report",
@@ -389,6 +424,15 @@
         "bg": "bg-linen-light",
         "path": "/technic-mro/executive-board",
         "path-api": "domain/technic-mro/executive-board"
+      },
+      {
+        "id": "maintenance-cost",
+        "title": "Maintenance Cost",
+        "description": "Chi phí bảo dưỡng theo đội tàu, CQDV và chỉ số ASK/BH",
+        "color": "text-ecstasy",
+        "bg": "bg-linen-light",
+        "path": "/technic-mro/maintenance-cost",
+        "path-api": "domain/technic-mro/maintenance-cost"
       },
       {
         "id": "command-center",

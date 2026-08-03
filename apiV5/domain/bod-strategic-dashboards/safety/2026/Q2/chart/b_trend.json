@@ -1,0 +1,31 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "quarter", "type": "string" },
+        { "id": "ck", "type": "number", "label": "2025", "colorToken": "series.previous" },
+        { "id": "th", "type": "number", "label": "2026", "colorToken": "series.actual" },
+        { "id": "ck_lk", "type": "number", "label": "Luỹ kế 2025", "colorToken": "series.previous" },
+        { "id": "th_lk", "type": "number", "label": "Luỹ kế 2026", "colorToken": "series.actual" }
+      ],
+      "rows": [
+        ["Q1", 117, 108, 117, 108],
+        ["Q2", 108, 99, 225, 207],
+        ["Q3", 129, null, 354, null],
+        ["Q4", 118, null, 472, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "quarter",
+        "series": [
+          { "field": "ck", "chartType": "bar" },
+          { "field": "th", "chartType": "bar", "showSymbol": true, "showLabel": "all" }
+        ]
+      }
+    ]
+  }
+}

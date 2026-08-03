@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -8,138 +8,160 @@
           "type": "string"
         },
         {
-          "id": "y2026",
-          "type": "number",
-          "label": "Thực hiện 2027",
-          "color": "#006D88"
-        },
-        {
-          "id": "y2025",
+          "id": "ck",
           "type": "number",
           "label": "2025",
-          "color": "#C76449"
+          "colorToken": "series.previous"
         },
         {
-          "id": "y2024",
+          "id": "th",
           "type": "number",
-          "label": "2024",
-          "color": "#D3AC2B"
+          "label": "2026",
+          "colorToken": "series.actual"
         },
         {
-          "id": "uth",
+          "id": "ck_lk",
           "type": "number",
-          "label": "Ước thực hiện 2027",
-          "color": "#006D88"
+          "label": "Luỹ kế 2025",
+          "colorToken": "series.previous"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "target",
+          "type": "number",
+          "label": "MT 2026",
+          "lineDash": [
+            5,
+            5
+          ],
+          "colorToken": "data.brick"
         }
       ],
       "rows": [
         [
           "T1",
+          3.88,
           3.94,
           3.88,
-          3.8,
-          null
+          3.94,
+          3.9
         ],
         [
           "T2",
-          3.94,
           3.9,
-          3.82,
-          null
+          3.94,
+          7.78,
+          7.88,
+          3.9
         ],
         [
           "T3",
-          3.96,
           3.92,
-          3.84,
-          null
+          3.96,
+          11.7,
+          11.84,
+          3.9
         ],
         [
           "T4",
-          3.98,
           3.94,
-          3.86,
-          null
+          3.98,
+          15.64,
+          15.82,
+          3.9
         ],
         [
           "T5",
-          3.98,
           3.94,
-          3.86,
-          null
+          3.98,
+          19.58,
+          19.8,
+          3.9
         ],
         [
           "T6",
-          4,
           3.96,
-          3.88,
-          null
+          4,
+          23.54,
+          23.8,
+          3.9
         ],
         [
           "T7",
-          3.86,
           3.74,
-          3.7,
-          null
+          3.86,
+          27.28,
+          27.66,
+          3.9
         ],
         [
           "T8",
-          null,
           3.76,
-          3.72,
-          3.88
+          null,
+          31.04,
+          null,
+          3.9
         ],
         [
           "T9",
-          null,
           3.78,
-          3.74,
+          null,
+          34.82,
+          null,
           3.9
         ],
         [
           "T10",
-          null,
           3.82,
-          3.76,
-          3.94
+          null,
+          38.64,
+          null,
+          3.9
         ],
         [
           "T11",
-          null,
           3.84,
-          3.78,
-          3.96
+          null,
+          42.48,
+          null,
+          3.9
         ],
         [
           "T12",
-          null,
           3.86,
-          3.78,
-          3.98
+          null,
+          46.34,
+          null,
+          3.9
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "bar",
+        "chartType": "auto",
         "xField": "month",
         "series": [
           {
-            "field": "y2026",
-            "chartType": "line"
-          },
-          {
-            "field": "y2025",
-            "chartType": "line"
-          },
-          {
-            "chartType": "line",
-            "field": "y2024"
-          },
-          {
-            "field": "uth",
+            "field": "ck",
             "chartType": "bar"
+          },
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true,
+            "showLabel": "end"
+          },
+          {
+            "field": "target",
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
           }
         ],
         "label": "Theo T12"

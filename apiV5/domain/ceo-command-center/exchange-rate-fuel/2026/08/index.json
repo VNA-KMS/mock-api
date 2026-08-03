@@ -1,0 +1,277 @@
+{
+  "titleInfo": {
+    "title": "Exchange Rate & Fuel",
+    "statusLabel": "REAL TIME",
+    "description": "Giá nhiên liệu & tỷ giá biến động thế nào và ảnh hưởng dòng tiền ra sao?"
+  },
+  "metricCards": {
+    "accentClassName": "bg-primary",
+    "items": [
+      {
+        "id": "t_jet",
+        "status": "compact",
+        "title": "Jet A1",
+        "value": "95.9",
+        "unit": "USD/bbl",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "93.6% với Kế hoạch",
+            "type": "plan",
+            "value": "93.6%",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "6.6% với TB năm ngoái",
+            "type": "samePeriod",
+            "value": "6.6%",
+            "status": 0,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_fuel",
+        "status": "compact",
+        "title": "Fuel Cost",
+        "value": "6800",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.4% với Kế hoạch",
+            "type": "plan",
+            "value": "98.4%",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "8% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "8%",
+            "status": 0,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_fx",
+        "status": "compact",
+        "title": "VND/USD FX",
+        "value": "25400",
+        "unit": "đ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "94.6% với Kế hoạch",
+            "type": "plan",
+            "value": "94.6%",
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "3% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "3%",
+            "status": 0,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "t_Cask",
+        "status": "compact",
+        "title": "Dòng tiền",
+        "value": "4250",
+        "unit": "tỷ",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "102.5% với Kế hoạch",
+            "type": "plan",
+            "value": "102.5%",
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "5.5% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "5.5%",
+            "status": 0,
+            "tone": "positive"
+          }
+        ]
+      }
+    ]
+  },
+  "chartBoard": [
+    {
+      "title": "Tỷ giá & Chi phí nhiên liệu - Xu hướng & rủi ro",
+      "items": [
+        {
+          "id": "b_jet",
+          "title": "Jet A1 theo tháng",
+          "col": 1,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "subTitle": "Đơn vị: USD/bbl",
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_jet.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_fuel",
+          "title": "Fuel Cost theo tháng",
+          "col": 31,
+          "row": 1,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "subTitle": "Đơn vị: Tỷ VND",
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fuel.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_fx_rate",
+          "title": "VND/USD FX",
+          "subTitle": "Đơn vị: VND/USD",
+          "col": 1,
+          "row": 2,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_rate.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_Cask_flow",
+          "title": "Dòng tiền",
+          "subTitle": "Đơn vị: tỷ VND",
+          "col": 31,
+          "row": 2,
+          "colSpan": 30,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_cash_flow.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "title": "Biến động tỉ giá của một số đồng tiền chính",
+      "items": [
+        {
+          "id": "b_fx_usd_vnd",
+          "title": "USD/VND",
+          "col": 1,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_vnd.json"
+        },
+        {
+          "id": "b_fx_usd_cny",
+          "title": "USD/CNY",
+          "col": 21,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_cny.json"
+        },
+        {
+          "id": "b_fx_usd_eur",
+          "title": "USD/EUR",
+          "col": 41,
+          "row": 1,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_eur.json"
+        },
+        {
+          "id": "b_fx_usd_jpy",
+          "title": "USD/JPY",
+          "col": 1,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_jpy.json"
+        },
+        {
+          "id": "b_fx_usd_aud",
+          "title": "USD/AUD",
+          "col": 21,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_aud.json"
+        },
+        {
+          "id": "b_fx_usd_krw",
+          "title": "USD/KRW",
+          "col": 41,
+          "row": 2,
+          "colSpan": 20,
+          "rowSpan": 1,
+          "aspectRatio": 1.8,
+          "chartPath": "apiV5/domain/ceo-command-center/exchange-rate-fuel/2026/08/chart/b_fx_usd_krw.json"
+        }
+      ]
+    }
+  ],
+  "insightCards": {
+    "insight": {
+      "title": "Nhận định",
+      "variant": "info",
+      "showAiBadge": true,
+      "aiBadgeLabel": "TRỢ LÝ AI",
+      "items": [
+        "So với <strong>TGKH T3/2026</strong>, các đồng tiền chính đều tăng giá so với USD, trừ JPY.",
+        "<strong>VND:</strong> +2,00% so với TGKH",
+        "<strong>EURO:</strong> +0,91% so với TGKH",
+        "<strong>JPY:</strong> -0,69% so với TGKH",
+        "<strong>CNY:</strong> +3,77% · <strong>AUD:</strong> +7,12% · <strong>KRW:</strong> +1,16% so với TGKH"
+      ]
+    },
+    "risk": {
+      "title": "Cảnh báo / Rủi ro",
+      "variant": "danger",
+      "items": [
+        "<strong>VND:</strong> +2,00% — ảnh hưởng <b style=\"color:#DC2626;\">-45 tỷ VND</b> dòng tiền chi",
+        "<strong>EURO:</strong> +0,91% — ảnh hưởng <b style=\"color:#2B87A8;\">+12 tỷ VND</b> dòng tiền thu",
+        "<strong>JPY:</strong> -0,69% — ảnh hưởng <b style=\"color:#2B87A8;\">+4 tỷ VND</b> dòng tiền thu",
+        "<strong>CNY:</strong> +3,77% — ảnh hưởng <b style=\"color:#2B87A8;\">+4 tỷ VND</b> dòng tiền thu",
+        "<strong>AUD:</strong> +7,12% — ảnh hưởng <b style=\"color:#2B87A8;\">+48 tỷ VND</b> dòng tiền thu",
+        "<strong>KRW:</strong> +1,16% — ảnh hưởng <b style=\"color:#2B87A8;\">+7 tỷ VND</b> dòng tiền thu"
+      ]
+    }
+  },
+  "timeFrameHiddenModes": [
+    "day",
+    "week",
+    "year",
+    "custom"
+  ]
+}
