@@ -46,7 +46,7 @@
         "status": "compact",
         "title": "Thực hiện đầu tư",
         "value": "2033",
-        "unit": "tỷ đồng",
+        "unit": "tỷ VND",
         "backgroundStatus": 2,
         "trend": [
           {
@@ -62,7 +62,7 @@
         "status": "compact",
         "title": "Thực hiện đầu tư lũy kế",
         "value": "14450",
-        "unit": "tỷ đồng",
+        "unit": "tỷ VND",
         "visualization": {
           "type": "gauge",
           "data": [
@@ -245,19 +245,14 @@
               {
                 "id": "plan",
                 "type": "number",
-                "label": "Tổng mức đầu tư KH",
-                "align": "center"
+                "label": "Kế hoạch thực hiện năm",
+                "align": "center",
+                "bold": true
               },
               {
                 "id": "actual",
                 "type": "number",
-                "label": "Giá trị thực hiện",
-                "align": "center"
-              },
-              {
-                "id": "disburse",
-                "type": "number",
-                "label": "Giá trị giải ngân",
+                "label": "Giá trị thực hiện đầu tư",
                 "align": "center"
               },
               {
@@ -266,6 +261,19 @@
                 "label": "% thực hiện đầu tư",
                 "align": "center",
                 "variant": "square"
+              },
+              {
+                "id": "plan_disburse",
+                "type": "number",
+                "label": "Kế hoạch giải ngân năm",
+                "align": "center",
+                "bold": true
+              },
+              {
+                "id": "disburse",
+                "type": "number",
+                "label": "Giá trị giải ngân",
+                "align": "center"
               },
               {
                 "id": "pct_disburse",
@@ -281,6 +289,7 @@
                   "type": "Tàu bay, động cơ",
                   "count": 8,
                   "plan": 3200,
+                  "plan_disburse": 3200,
                   "actual": 2816,
                   "disburse": 2508,
                   "pct_actual": {
@@ -298,6 +307,7 @@
                   "type": "TTB",
                   "count": 6,
                   "plan": 1450,
+                  "plan_disburse": 1440,
                   "actual": 1044,
                   "disburse": 864,
                   "pct_actual": {
@@ -315,6 +325,7 @@
                   "type": "XDCB",
                   "count": 5,
                   "plan": 1100,
+                  "plan_disburse": 1090,
                   "actual": 638,
                   "disburse": 568,
                   "pct_actual": {
@@ -332,6 +343,7 @@
                   "type": "ĐTRNDN",
                   "count": 5,
                   "plan": 850,
+                  "plan_disburse": 855,
                   "actual": 722,
                   "disburse": 616,
                   "pct_actual": {
@@ -1284,6 +1296,7 @@
   "timeFrameHiddenModes": [
     "day",
     "week",
+    "quarter",
     "custom"
   ]
 }

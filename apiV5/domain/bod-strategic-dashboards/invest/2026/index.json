@@ -7,13 +7,13 @@
   "metricCards": {
     "accentClassName": "bg-regal-blue",
     "layout": {
-      "columns": 5
+      "columns": 4
     },
     "items": [
       {
         "id": "m_total",
         "status": "compact",
-        "title": "Chuẩn bị đầu tư",
+        "title": "Tỷ lệ dự án hoàn thành chuẩn bị đầu tư",
         "value": "82",
         "unit": "%",
         "visualization": { "type": "gauge", "data": [82, 100] },
@@ -36,26 +36,9 @@
         ]
       },
       {
-        "id": "m_human",
-        "status": "compact",
-        "title": "Số dự án đang đầu tư",
-        "value": "32",
-        "unit": "dự án",
-        "backgroundStatus": 2,
-        "trend": [
-          {
-            "direction": "up",
-            "label": "8 so với cùng kỳ",
-            "type": "samePeriod",
-            "value": "8%",
-            "tone": "positive"
-          }
-        ]
-      },
-      {
         "id": "m_human_rate",
         "status": "compact",
-        "title": "Thực hiện đầu tư",
+        "title": "Thực hiện đầu tư lũy kế",
         "value": "78.50",
         "unit": "%",
         "visualization": { "type": "gauge", "data": [78.50, 100] },
@@ -78,7 +61,7 @@
       {
         "id": "m_rate",
         "status": "compact",
-        "title": "Giải ngân",
+        "title": "Giải ngân lũy kế",
         "value": "92.8",
         "unit": "%",
         "visualization": { "type": "gauge", "data": [92.8, 100] },
@@ -210,17 +193,18 @@
             "columns": [
               { "id": "type", "type": "string", "label": "Loại dự án" },
               { "id": "count", "type": "number", "label": "Số dự án", "align": "center" },
-              { "id": "plan", "type": "number", "label": "Tổng mức đầu tư KH", "align": "center" },
-              { "id": "actual", "type": "number", "label": "Giá trị thực hiện", "align": "center" },
-              { "id": "disburse", "type": "number", "label": "Giá trị giải ngân", "align": "center" },
+              { "id": "plan", "type": "number", "label": "Kế hoạch thực hiện năm", "align": "center", "bold": true },
+              { "id": "actual", "type": "number", "label": "Giá trị thực hiện đầu tư", "align": "center" },
               { "id": "pct_actual", "type": "chip", "label": "% thực hiện đầu tư", "align": "center", "variant": "square" },
+              { "id": "plan_disburse", "type": "number", "label": "Kế hoạch giải ngân năm", "align": "center", "bold": true },
+              { "id": "disburse", "type": "number", "label": "Giá trị giải ngân", "align": "center" },
               { "id": "pct_disburse", "type": "chip", "label": "% giải ngân", "align": "center", "variant": "square" }
             ],
             "rows": [
-              { "cells": { "type": "Tàu bay, động cơ", "count": 96, "plan": 38000, "actual": 34200, "disburse": 32500, "pct_actual": { "label": "90%", "color": "green" }, "pct_disburse": { "label": "86%", "color": "green" } } },
-              { "cells": { "type": "TTB", "count": 68, "plan": 16500, "actual": 12800, "disburse": 11200, "pct_actual": { "label": "78%", "color": "yellow" }, "pct_disburse": { "label": "68%", "color": "yellow" } } },
-              { "cells": { "type": "XDCB", "count": 48, "plan": 13500, "actual": 8900, "disburse": 7800, "pct_actual": { "label": "66%", "color": "yellow" }, "pct_disburse": { "label": "58%", "color": "red" } } },
-              { "cells": { "type": "ĐTRNDN", "count": 52, "plan": 10500, "actual": 9100, "disburse": 8200, "pct_actual": { "label": "87%", "color": "green" }, "pct_disburse": { "label": "78%", "color": "yellow" } } }
+              { "cells": { "type": "Tàu bay, động cơ", "count": 96, "plan": 38000, "plan_disburse": 37800, "actual": 34200, "disburse": 32500, "pct_actual": { "label": "90%", "color": "green" }, "pct_disburse": { "label": "86%", "color": "green" } } },
+              { "cells": { "type": "TTB", "count": 68, "plan": 16500, "plan_disburse": 16500, "actual": 12800, "disburse": 11200, "pct_actual": { "label": "78%", "color": "yellow" }, "pct_disburse": { "label": "68%", "color": "yellow" } } },
+              { "cells": { "type": "XDCB", "count": 48, "plan": 13500, "plan_disburse": 13400, "actual": 8900, "disburse": 7800, "pct_actual": { "label": "66%", "color": "yellow" }, "pct_disburse": { "label": "58%", "color": "red" } } },
+              { "cells": { "type": "ĐTRNDN", "count": 52, "plan": 10500, "plan_disburse": 10500, "actual": 9100, "disburse": 8200, "pct_actual": { "label": "87%", "color": "green" }, "pct_disburse": { "label": "78%", "color": "yellow" } } }
             ]
           }
         },
@@ -244,14 +228,16 @@
                   ["Tàu bay, động cơ", 12, 8, 20],
                   ["TTB", 8, 18, 26],
                   ["XDCB", 5, 22, 27],
-                  ["ĐTRNDN", 8, 10, 18]
+                  ["ĐTRNDN", 8, 10, 18],
+                  ["Tổng", 33, 58, 91]
                 ]
               },
               "rowStyle": {
-                "Tàu bay, động cơ": { "backgroundColor": "#E0F2FE", "textColor": "#0369A1" },
-                "TTB": { "backgroundColor": "#DCFCE7", "textColor": "#15803D" },
-                "XDCB": { "backgroundColor": "#FEF3C7", "textColor": "#92400E" },
-                "ĐTRNDN": { "backgroundColor": "#F3E8FF", "textColor": "#7C3AED" }
+                "Tàu bay, động cơ": { "backgroundColor": "#ffedd5", "textColor": "#ea580c" },
+                "TTB": { "backgroundColor": "#d1fae5", "textColor": "#0e9f6e" },
+                "XDCB": { "backgroundColor": "#ffe4e8", "textColor": "#e11d48" },
+                "ĐTRNDN": { "backgroundColor": "#cffafe", "textColor": "#0891b2" },
+                "Tổng": { "backgroundColor": "#f1f5f9", "textColor": "#0f172a", "fontWeight": "600" }
               },
               "maxHeight": 260
             }
@@ -316,5 +302,5 @@
       ]
     }
   ],
-  "timeFrameHiddenModes": ["day", "week", "custom"]
+  "timeFrameHiddenModes": ["day", "week", "quarter", "custom"]
 }
