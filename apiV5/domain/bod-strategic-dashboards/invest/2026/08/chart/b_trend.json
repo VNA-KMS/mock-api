@@ -53,10 +53,10 @@
         ["T6", 11000, 47500, 12600, 19000, 47500, 19000],
         ["T7", 6500, 54000, 12000, 21000, 54000, 21000],
         ["T8", 12000, 66000, 13900, 22000, 66000, 22000],
-        ["T9", 7000, 73000, 13300, 23000, 73000, 23000],
-        ["T10", 13500, 86500, 15300, 23500, 86500, 23500],
-        ["T11", 8000, 94500, 14700, 24000, 94500, 24000],
-        ["T12", 15000, 109500, 22000, 24500, 109500, 24500]
+        ["T9", null, null, null, null, null, null],
+        ["T10", null, null, null, null, null, null],
+        ["T11", null, null, null, null, null, null],
+        ["T12", null, null, null, null, null, null]
       ]
     },
     "views": [
@@ -65,24 +65,12 @@
         "chartType": "combo",
         "xField": "month",
         "label": "Theo th\u00e1ng 2026",
-        "yMin": 0,
-        "yMax": 16000,
-        "yInterval": 5000,
         "series": [
           {
             "field": "actual",
             "chartType": "bar",
             "yAxis": "left",
             "showLabel": "all"
-          },
-          {
-            "field": "plan",
-            "chartType": "line",
-            "yAxis": "left",
-            "lineType": "dashed",
-            "showSymbol": true,
-            "symbolFilled": false,
-            "showLabel": "end"
           }
         ]
       },
@@ -90,25 +78,13 @@
         "id": "main_cum",
         "chartType": "combo",
         "xField": "month",
-        "label": "LK: 54.000",
-        "yMin": 0,
-        "yMax": 120000,
-        "yInterval": 20000,
+        "label": "LK: 66.000",
         "series": [
           {
             "field": "actual_cum",
             "chartType": "bar",
             "yAxis": "left",
             "showLabel": "all"
-          },
-          {
-            "field": "plan_cum",
-            "chartType": "line",
-            "yAxis": "left",
-            "lineType": "dashed",
-            "showSymbol": true,
-            "symbolFilled": false,
-            "showLabel": "end"
           }
         ]
       }
