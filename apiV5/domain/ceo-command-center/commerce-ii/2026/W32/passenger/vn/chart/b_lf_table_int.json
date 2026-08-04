@@ -3,23 +3,292 @@
     "density": "compact",
     "maxHeight": 320,
     "columns": [
-      { "id": "rt", "label": "Chặng bay", "type": "text", "align": "left" },
-      { "id": "lf", "label": "LF", "type": "lf-band", "align": "center", "decimals": 1 },
-      { "id": "ssLw", "label": "SS LW", "type": "progress", "align": "left", "width": 150 },
-      { "id": "ssKh", "label": "SS KH", "type": "trend", "align": "center", "width": 90 }
+      {
+        "id": "rt",
+        "label": "Khu vực",
+        "type": "text",
+        "align": "left"
+      },
+      {
+        "id": "lf",
+        "label": "LF",
+        "type": "lf-band",
+        "align": "center",
+        "decimals": 1
+      },
+      {
+        "id": "soKyTruoc",
+        "label": "Số kỳ trước",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssKyTruoc",
+        "label": "So sánh kỳ trước",
+        "type": "trend",
+        "align": "center",
+        "width": 90
+      },
+      {
+        "id": "cungKy",
+        "label": "cùng kỳ",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssCungKy",
+        "label": "So sánh cùng kỳ",
+        "type": "trend",
+        "align": "center",
+        "width": 90
+      },
+      {
+        "id": "keHoach",
+        "label": "Kế hoạch",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssKeHoach",
+        "label": "So sánh với kế hoạch",
+        "type": "trend",
+        "align": "center",
+        "width": 110
+      }
     ],
     "rows": [
-      { "id": "1", "cells": { "rt": "HANCAN", "lf": 65.5, "ssLw": { "label": "98%", "fill": 0.98, "tone": "success" }, "ssKh": { "direction": "down", "label": "-3,2%", "color": "red" } } },
-      { "id": "2", "cells": { "rt": "HANPVG", "lf": 79.6, "ssLw": { "label": "101%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+2,1%", "color": "green" } } },
-      { "id": "3", "cells": { "rt": "HANPEK", "lf": 63.0, "ssLw": { "label": "96%", "fill": 0.96, "tone": "warning" }, "ssKh": { "direction": "down", "label": "-4,5%", "color": "red" } } },
-      { "id": "4", "cells": { "rt": "HANKIX", "lf": 85.3, "ssLw": { "label": "102%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+5,8%", "color": "green" } } },
-      { "id": "5", "cells": { "rt": "HANNGO", "lf": 83.1, "ssLw": { "label": "100%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+3,4%", "color": "green" } } },
-      { "id": "6", "cells": { "rt": "HANICN", "lf": 81.2, "ssLw": { "label": "99%", "fill": 0.99, "tone": "success" }, "ssKh": { "direction": "up", "label": "+2,7%", "color": "green" } } },
-      { "id": "7", "cells": { "rt": "HANPUS", "lf": 90.9, "ssLw": { "label": "103%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+6,2%", "color": "green" } } },
-      { "id": "8", "cells": { "rt": "CXRICN", "lf": 91.8, "ssLw": { "label": "104%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+8,0%", "color": "green" } } },
-      { "id": "9", "cells": { "rt": "HANTPE", "lf": 91.0, "ssLw": { "label": "102%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+7,1%", "color": "green" } } },
-      { "id": "10", "cells": { "rt": "HANHKG", "lf": 69.9, "ssLw": { "label": "97%", "fill": 0.97, "tone": "warning" }, "ssKh": { "direction": "down", "label": "-1,8%", "color": "red" } } },
-      { "id": "total", "tone": "total", "cells": { "rt": "Tổng", "lf": 80.1, "ssLw": { "label": "100%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+2,5%", "color": "green" } } }
+      {
+        "id": "1",
+        "cells": {
+          "rt": "EU",
+          "lf": 91.8,
+          "soKyTruoc": 90.5,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "1,3",
+            "color": "green"
+          },
+          "cungKy": 89.2,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "2,6",
+            "color": "green"
+          },
+          "keHoach": 92,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,2",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "2",
+        "cells": {
+          "rt": "NEA",
+          "lf": 90.9,
+          "soKyTruoc": 88.7,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "2,2",
+            "color": "green"
+          },
+          "cungKy": 86.5,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "4,4",
+            "color": "green"
+          },
+          "keHoach": 91,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,1",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "3",
+        "cells": {
+          "rt": "SAS",
+          "lf": 88.5,
+          "soKyTruoc": 86,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "2,5",
+            "color": "green"
+          },
+          "cungKy": 84.3,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "4,2",
+            "color": "green"
+          },
+          "keHoach": 88,
+          "ssKeHoach": {
+            "direction": "up",
+            "label": "0,5",
+            "color": "green"
+          }
+        }
+      },
+      {
+        "id": "4",
+        "cells": {
+          "rt": "SEA",
+          "lf": 85.3,
+          "soKyTruoc": 83.1,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "2,2",
+            "color": "green"
+          },
+          "cungKy": 81.5,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "3,8",
+            "color": "green"
+          },
+          "keHoach": 86,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,7",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "5",
+        "cells": {
+          "rt": "NOA",
+          "lf": 81.2,
+          "soKyTruoc": 79.5,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "1,7",
+            "color": "green"
+          },
+          "cungKy": 78,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "3,2",
+            "color": "green"
+          },
+          "keHoach": 82,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,8",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "6",
+        "cells": {
+          "rt": "SWP",
+          "lf": 79.6,
+          "soKyTruoc": 77.2,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "2,4",
+            "color": "green"
+          },
+          "cungKy": 75.8,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "3,8",
+            "color": "green"
+          },
+          "keHoach": 80,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,4",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "7",
+        "cells": {
+          "rt": "MID",
+          "lf": 74.3,
+          "soKyTruoc": 72.5,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "1,8",
+            "color": "green"
+          },
+          "cungKy": 70.1,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "4,2",
+            "color": "green"
+          },
+          "keHoach": 75,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,7",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "8",
+        "cells": {
+          "rt": "CLMV",
+          "lf": 69.9,
+          "soKyTruoc": 68,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "1,9",
+            "color": "green"
+          },
+          "cungKy": 65.5,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "4,4",
+            "color": "green"
+          },
+          "keHoach": 70,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,1",
+            "color": "red"
+          }
+        }
+      },
+      {
+        "id": "total",
+        "tone": "total",
+        "cells": {
+          "rt": "Tổng",
+          "lf": 80.1,
+          "soKyTruoc": 78.2,
+          "ssKyTruoc": {
+            "direction": "up",
+            "label": "1,9",
+            "color": "green"
+          },
+          "cungKy": 76,
+          "ssCungKy": {
+            "direction": "up",
+            "label": "4,1",
+            "color": "green"
+          },
+          "keHoach": 80.5,
+          "ssKeHoach": {
+            "direction": "down",
+            "label": "0,4",
+            "color": "red"
+          }
+        }
+      }
     ]
   }
 }

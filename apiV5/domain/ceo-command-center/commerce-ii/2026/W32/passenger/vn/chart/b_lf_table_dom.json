@@ -3,23 +3,158 @@
     "density": "compact",
     "maxHeight": 320,
     "columns": [
-      { "id": "rt", "label": "Chặng bay", "type": "text", "align": "left" },
-      { "id": "lf", "label": "LF", "type": "lf-band", "align": "center", "decimals": 1 },
-      { "id": "ssLw", "label": "SS LW", "type": "progress", "align": "left", "width": 150 },
-      { "id": "ssKh", "label": "SS KH", "type": "trend", "align": "center", "width": 90 }
+      {
+        "id": "rt",
+        "label": "Khu vực",
+        "type": "text",
+        "align": "left"
+      },
+      {
+        "id": "lf",
+        "label": "LF",
+        "type": "lf-band",
+        "align": "center",
+        "decimals": 1
+      },
+      {
+        "id": "soKyTruoc",
+        "label": "Số kỳ trước",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssKyTruoc",
+        "label": "So sánh kỳ trước",
+        "type": "trend",
+        "align": "center",
+        "width": 90
+      },
+      {
+        "id": "cungKy",
+        "label": "cùng kỳ",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssCungKy",
+        "label": "So sánh cùng kỳ",
+        "type": "trend",
+        "align": "center",
+        "width": 90
+      },
+      {
+        "id": "keHoach",
+        "label": "Kế hoạch",
+        "type": "number",
+        "align": "center",
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "id": "ssKeHoach",
+        "label": "So sánh với kế hoạch",
+        "type": "trend",
+        "align": "center",
+        "width": 110
+      }
     ],
     "rows": [
-      { "id": "1", "cells": { "rt": "HANSGN", "lf": 88.2, "ssLw": { "label": "100%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+4,5%", "color": "green" } } },
-      { "id": "2", "cells": { "rt": "HANDAD", "lf": 84.6, "ssLw": { "label": "101%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+3,2%", "color": "green" } } },
-      { "id": "3", "cells": { "rt": "DADSGN", "lf": 81.3, "ssLw": { "label": "99%", "fill": 0.99, "tone": "success" }, "ssKh": { "direction": "up", "label": "+2,8%", "color": "green" } } },
-      { "id": "4", "cells": { "rt": "SGNPQC", "lf": 90.5, "ssLw": { "label": "103%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+7,1%", "color": "green" } } },
-      { "id": "5", "cells": { "rt": "HANCXR", "lf": 79.4, "ssLw": { "label": "97%", "fill": 0.97, "tone": "warning" }, "ssKh": { "direction": "up", "label": "+1,5%", "color": "green" } } },
-      { "id": "6", "cells": { "rt": "HANHPH", "lf": 76.8, "ssLw": { "label": "98%", "fill": 0.98, "tone": "success" }, "ssKh": { "direction": "down", "label": "-0,8%", "color": "red" } } },
-      { "id": "7", "cells": { "rt": "HANVDO", "lf": 72.1, "ssLw": { "label": "95%", "fill": 0.95, "tone": "warning" }, "ssKh": { "direction": "down", "label": "-3,4%", "color": "red" } } },
-      { "id": "8", "cells": { "rt": "DADPQC", "lf": 86.7, "ssLw": { "label": "102%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+5,0%", "color": "green" } } },
-      { "id": "9", "cells": { "rt": "SGNVCA", "lf": 82.9, "ssLw": { "label": "100%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+2,2%", "color": "green" } } },
-      { "id": "10", "cells": { "rt": "HANPQC", "lf": 91.4, "ssLw": { "label": "104%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+8,3%", "color": "green" } } },
-      { "id": "total", "tone": "total", "cells": { "rt": "Tổng", "lf": 83.4, "ssLw": { "label": "100%", "fill": 1, "tone": "success" }, "ssKh": { "direction": "up", "label": "+3,1%", "color": "green" } } }
+      {
+        "id": "1",
+        "cells": {
+          "rt": "HANSGN",
+          "lf": 91.4,
+          "soKyTruoc": 89.5,
+          "ssKyTruoc": { "direction": "up", "label": "1,9", "color": "green" },
+          "cungKy": 87.2,
+          "ssCungKy": { "direction": "up", "label": "4,2", "color": "green" },
+          "keHoach": 92,
+          "ssKeHoach": { "direction": "down", "label": "0,6", "color": "red" }
+        }
+      },
+      {
+        "id": "2",
+        "cells": {
+          "rt": "HANDAD",
+          "lf": 84.6,
+          "soKyTruoc": 82.5,
+          "ssKyTruoc": { "direction": "up", "label": "2,1", "color": "green" },
+          "cungKy": 80,
+          "ssCungKy": { "direction": "up", "label": "4,6", "color": "green" },
+          "keHoach": 85,
+          "ssKeHoach": { "direction": "down", "label": "0,4", "color": "red" }
+        }
+      },
+      {
+        "id": "3",
+        "cells": {
+          "rt": "SGNDAD",
+          "lf": 86.3,
+          "soKyTruoc": 84.0,
+          "ssKyTruoc": { "direction": "up", "label": "2,3", "color": "green" },
+          "cungKy": 81.5,
+          "ssCungKy": { "direction": "up", "label": "4,8", "color": "green" },
+          "keHoach": 86,
+          "ssKeHoach": { "direction": "up", "label": "0,3", "color": "green" }
+        }
+      },
+      {
+        "id": "4",
+        "cells": {
+          "rt": "Trục lẻ",
+          "lf": 79.4,
+          "soKyTruoc": 77.5,
+          "ssKyTruoc": { "direction": "up", "label": "1,9", "color": "green" },
+          "cungKy": 75,
+          "ssCungKy": { "direction": "up", "label": "4,4", "color": "green" },
+          "keHoach": 80,
+          "ssKeHoach": { "direction": "down", "label": "0,6", "color": "red" }
+        }
+      },
+      {
+        "id": "5",
+        "cells": {
+          "rt": "Du lịch",
+          "lf": 88.2,
+          "soKyTruoc": 86,
+          "ssKyTruoc": { "direction": "up", "label": "2,2", "color": "green" },
+          "cungKy": 84,
+          "ssCungKy": { "direction": "up", "label": "4,2", "color": "green" },
+          "keHoach": 88.5,
+          "ssKeHoach": { "direction": "down", "label": "0,3", "color": "red" }
+        }
+      },
+      {
+        "id": "6",
+        "cells": {
+          "rt": "Địa phương",
+          "lf": 72.1,
+          "soKyTruoc": 70.5,
+          "ssKyTruoc": { "direction": "up", "label": "1,6", "color": "green" },
+          "cungKy": 68,
+          "ssCungKy": { "direction": "up", "label": "4,1", "color": "green" },
+          "keHoach": 73,
+          "ssKeHoach": { "direction": "down", "label": "0,9", "color": "red" }
+        }
+      },
+      {
+        "id": "total",
+        "tone": "total",
+        "cells": {
+          "rt": "Tổng",
+          "lf": 83.4,
+          "soKyTruoc": 81.5,
+          "ssKyTruoc": { "direction": "up", "label": "1,9", "color": "green" },
+          "cungKy": 79,
+          "ssCungKy": { "direction": "up", "label": "4,4", "color": "green" },
+          "keHoach": 83.5,
+          "ssKeHoach": { "direction": "down", "label": "0,1", "color": "red" }
+        }
+      }
     ]
   }
 }
