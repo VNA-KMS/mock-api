@@ -1,0 +1,47 @@
+{
+  "chartType": "matrix-mini-bar-geo",
+  "dataset": {
+    "columns": [
+      { "id": "country", "type": "string", "label": "Quốc gia" },
+      { "id": "revenueType", "type": "string", "label": "Loại" },
+      { "id": "val2025", "type": "number", "label": "2025", "color": "#9AA0A6" },
+      { "id": "valPlan2026", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+      { "id": "val2026", "type": "number", "label": "2026", "color": "#1677FF" }
+    ],
+    "rows": [
+      ["SG", "Doanh thu khách", 1.75, 2.10, 1.91],
+      ["TH", "Doanh thu khách", 1.04, 1.25, 1.14],
+      ["CN", "Doanh thu khách", 1.18, 1.40, 1.28],
+      ["JP", "Doanh thu khách", 0.92, 1.10, 1.00],
+      ["KR", "Doanh thu khách", 0.85, 1.00, 0.92],
+      ["MY", "Doanh thu khách", 0.76, 0.90, 0.82],
+      ["FR", "Doanh thu khách", 0.55, 0.65, 0.60],
+      ["AU", "Doanh thu khách", 0.48, 0.58, 0.52],
+      ["US", "Doanh thu khách", 0.40, 0.48, 0.44],
+      ["GB", "Doanh thu khách", 0.33, 0.40, 0.36]
+    ]
+  },
+  "views": [
+    {
+      "chartType": "matrix-mini-bar-geo",
+      "xField": "country",
+      "series": [
+        { "field": "val2025" },
+        { "field": "valPlan2026" },
+        { "field": "val2026" }
+      ],
+      "showLegend": true,
+      "matrixConfig": {
+        "columnTitles": {
+          "Doanh thu khách": "Doanh thu khách"
+        },
+        "groupColors": {
+          "Doanh thu khách": ["#9AA0A6", "#F5A623", "#1677FF"]
+        },
+        "barSize": "m",
+        "labelPosition": "outside",
+        "legendPosition": "top-right"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "chartType": "matrix-mini-bar-geo",
+  "dataset": {
+    "columns": [
+      { "id": "country", "type": "string", "label": "Quốc gia" },
+      { "id": "revenueType", "type": "string", "label": "Loại" },
+      { "id": "val2025", "type": "number", "label": "2025", "color": "#9AA0A6" },
+      { "id": "valPlan2026", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+      { "id": "val2026", "type": "number", "label": "2026", "color": "#1677FF" }
+    ],
+    "rows": [
+      ["JP", "LF", 85.2, 90.0, 88.5],
+      ["KR", "LF", 83.1, 88.0, 86.2],
+      ["SG", "LF", 81.5, 87.0, 84.8],
+      ["TH", "LF", 78.9, 84.0, 82.1],
+      ["CN", "LF", 77.3, 82.0, 80.5],
+      ["MY", "LF", 75.1, 80.0, 78.3],
+      ["VTE", "LF", 72.8, 78.0, 75.6],
+      ["LPQ", "LF", 69.5, 75.0, 72.4],
+      ["BKK", "LF", 67.2, 73.0, 70.1],
+      ["KTI", "LF", 66.0, 71.0, 68.9]
+    ]
+  },
+  "views": [
+    {
+      "chartType": "matrix-mini-bar-geo",
+      "xField": "country",
+      "series": [
+        { "field": "val2025" },
+        { "field": "valPlan2026" },
+        { "field": "val2026" }
+      ],
+      "showLegend": true,
+      "matrixConfig": {
+        "columnTitles": {
+          "LF": "LF"
+        },
+        "groupColors": {
+          "LF": ["#9AA0A6", "#F5A623", "#1677FF"]
+        },
+        "barSize": "m",
+        "labelPosition": "outside",
+        "legendPosition": "top-right"
+      }
+    }
+  ]
+}
