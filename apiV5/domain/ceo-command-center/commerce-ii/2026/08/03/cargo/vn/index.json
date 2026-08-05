@@ -1,0 +1,1451 @@
+{
+  "titleInfo": {
+    "title": "Commerce II",
+    "statusLabel": "REAL TIME",
+    "description": "Phân tích thương mại theo Lĩnh vực, Mạng bay, Hãng vận chuyển — Hàng hoá"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "cargo_volume",
+        "status": "compact",
+        "title": "Sản lượng hàng hóa",
+        "value": "128",
+        "unit": "Tấn",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "97.1% với Kế hoạch",
+            "type": "plan",
+            "value": "97.1%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "5.4% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "5.4%",
+            "tone": "positive"
+          }
+        ],
+        "defaultSelected": true,
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "cargo_revenue",
+        "status": "compact",
+        "title": "Doanh thu hàng hóa",
+        "value": "856",
+        "unit": "tỷ VNĐ",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "96.2% với Kế hoạch",
+            "type": "plan",
+            "value": "96.2%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "10.5% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "10.5%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "clf",
+        "status": "compact",
+        "title": "CLF",
+        "value": "72.8",
+        "unit": "%",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.4% với Kế hoạch",
+            "type": "plan",
+            "value": "98.4%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "3.8% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "3.8%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "cargo_market_share",
+        "status": "compact",
+        "title": "Thị phần hàng hóa",
+        "value": "35.2",
+        "unit": "%",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "99.1% với Kế hoạch",
+            "type": "plan",
+            "value": "99.1%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "2.1% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "2.1%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      }
+    ],
+    "layout": {
+      "columns": 4
+    }
+  },
+  "chartBoard": [
+    {
+      "title": "Sản lượng",
+      "items": [
+        {
+          "id": "b_pax_total",
+          "title": "Tổng sản lượng",
+          "subTitle": "ĐVT: Tấn",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "aiInsight": {
+            "text": "Sản lượng hàng hóa toàn mạng đạt 985 tấn (97.1% KH, +5.4% CK). Sản lượng phục hồi tốt nhờ cao điểm Hè.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_pax_int",
+          "title": "Sản lượng quốc tế",
+          "subTitle": "ĐVT: Tấn",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_dom",
+          "title": "Sản lượng nội địa",
+          "subTitle": "ĐVT: Tấn",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "b_pax_area_int_donut",
+          "title": "Sản lượng theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: Tấn",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_int_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_int_bar",
+          "title": "Sản lượng theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: Tấn",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_int_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_dom_donut",
+          "title": "Sản lượng theo khu vực - Nội địa",
+          "subTitle": "ĐVT: Tấn",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_dom_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_dom_bar",
+          "title": "Sản lượng theo khu vực - Nội địa",
+          "subTitle": "ĐVT: Tấn",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_dom_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "title": "Doanh thu hàng hoá",
+      "items": [
+        {
+          "id": "b_pax_rev_total",
+          "title": "Tổng doanh thu sản lượng",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "aiInsight": {
+            "text": "Doanh thu hàng hóa toàn mạng đạt 4.433 tỷ VND (96.2% KH, +10.5% CK). Tăng trưởng tích cực nhờ sản lượng cao.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_pax_rev_int",
+          "title": "Doanh thu hàng hoá quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_dom",
+          "title": "Doanh thu hàng hoá nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "b_pax_rev_area_int_donut",
+          "title": "Doanh thu hàng hoá theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_int_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_int_bar",
+          "title": "Doanh thu hàng hoá theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_int_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_dom_donut",
+          "title": "Doanh thu hàng hoá theo khu vực - Nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_dom_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_dom_bar",
+          "title": "Doanh thu hàng hoá theo khu vực - Nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_dom_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "title": "CLF",
+      "items": [
+        {
+          "id": "b_lf_total",
+          "title": "CLF",
+          "subTitle": "ĐVT: %",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_int",
+          "title": "CLF - Quốc tế",
+          "subTitle": "ĐVT: %",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_dom",
+          "title": "CLF - Nội địa",
+          "subTitle": "ĐVT: %",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_hbar_int",
+          "title": "CLF theo khu vực - Quốc tế",
+          "col": 1,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_hbar_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_table_int",
+          "title": "CLF theo khu vực - Quốc tế",
+          "col": 31,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_table_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_hbar_dom",
+          "title": "CLF theo khu vực - Nội địa",
+          "col": 1,
+          "colSpan": 30,
+          "row": 4,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_hbar_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_table_dom",
+          "title": "CLF theo khu vực - Nội địa",
+          "col": 31,
+          "colSpan": 30,
+          "row": 4,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_table_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "key": "dataType",
+      "col": 1,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
+      "showInfo": true,
+      "infoTooltip": "Chọn loại dữ liệu",
+      "size": "sm",
+      "options": [
+        {
+          "value": "overview",
+          "label": "Tổng quan"
+        },
+        {
+          "value": "passenger",
+          "label": "Hành khách"
+        },
+        {
+          "value": "cargo",
+          "label": "Hàng hoá"
+        }
+      ]
+    },
+    {
+      "key": "network",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
+      "showInfo": true,
+      "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
+      "size": "sm",
+      "options": [
+        {
+          "value": "total",
+          "label": "Toàn mạng"
+        },
+        {
+          "value": "int",
+          "label": "Quốc tế"
+        },
+        {
+          "value": "dom",
+          "label": "Nội địa"
+        }
+      ]
+    },
+    {
+      "key": "carrier",
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Hãng vận chuyển",
+      "showInfo": true,
+      "infoTooltip": "Chọn hãng vận chuyển",
+      "size": "sm",
+      "options": [
+        {
+          "value": "vn",
+          "label": "VN"
+        },
+        {
+          "value": "vn-ov",
+          "label": "VN+0V+BL"
+        }
+      ]
+    }
+  ],
+  "filterColumns": 60,
+  "timeFrameModes": [
+    "day",
+    "week",
+    "month"
+  ],
+  "timeFrameHiddenModes": [
+    "quarter",
+    "6m",
+    "9m",
+    "year",
+    "custom"
+  ],
+  "contentFilter": {
+    "network": {
+      "int": {
+        "chartBoard": [
+          {
+            "title": "Sản lượng",
+            "items": [
+              {
+                "id": "b_pax_int",
+                "title": "Sản lượng quốc tế",
+                "subTitle": "ĐVT: Tấn",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_area_int_bar",
+                "title": "Sản lượng theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: Tấn",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_pax_by_country_int",
+                "title": "Sản lượng theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: Tấn",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_by_country_int.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_best_int",
+                "title": "Top 5 đường bay quốc tế có sản lượng cao nhất",
+                "subTitle": "ĐVT: Tấn",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_best_int.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_worst_int",
+                "title": "Top 5 đường bay quốc tế có sản lượng thấp nhất",
+                "subTitle": "ĐVT: Tấn",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_worst_int.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Doanh thu hàng hoá",
+            "items": [
+              {
+                "id": "b_pax_rev_int",
+                "title": "Doanh thu hàng hoá quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_rev_area_int_bar",
+                "title": "Doanh thu hàng hoá theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_pax_rev_by_country_int",
+                "title": "Doanh thu hàng hoá theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_by_country_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_best_int",
+                "title": "Top 5 đường bay quốc tế có doanh thu cao nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_rev_best_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_worst_int",
+                "title": "Top 5 đường bay quốc tế có doanh thu thấp nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_rev_worst_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "CLF",
+            "items": [
+              {
+                "id": "b_lf_int",
+                "title": "CLF - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_lf_area_int_bar",
+                "title": "CLF theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_lf_by_country_int",
+                "title": "CLF theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_by_country_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_best_int",
+                "title": "Top 5 đường bay quốc tế có CLF cao nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_lf_best_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_worst_int",
+                "title": "Top 5 đường bay quốc tế có CLF thấp nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_lf_worst_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Chi tiết theo đường bay",
+            "items": [
+              {
+                "id": "b_int_route_table",
+                "title": "Chi tiết theo đường bay - Quốc tế",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 800,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_int_route_table.json"
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "cargo_volume",
+              "status": "compact",
+              "title": "Sản lượng hàng hóa",
+              "value": "65",
+              "unit": "Tấn",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "95.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "95.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "8.2%",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "cargo_revenue",
+              "status": "compact",
+              "title": "Doanh thu hàng hóa",
+              "value": "520",
+              "unit": "tỷ VNĐ",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "94.8% với Kế hoạch",
+                  "type": "plan",
+                  "value": "94.8%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "12.3% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "12.3%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "clf",
+              "status": "compact",
+              "title": "CLF",
+              "value": "68.5",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.5% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.5%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "4.2%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "cargo_market_share",
+              "status": "compact",
+              "title": "Thị phần hàng hóa",
+              "value": "33.1",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "98.7% với Kế hoạch",
+                  "type": "plan",
+                  "value": "98.7%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "1.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "1.8%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
+      },
+      "dom": {
+        "chartBoard": [
+          {
+            "title": "Sản lượng",
+            "items": [
+              {
+                "id": "b_pax_dom",
+                "title": "Sản lượng nội địa",
+                "subTitle": "ĐVT: Tấn",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_dom.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_area_dom_bar",
+                "title": "Sản lượng theo khu vực - Nội địa",
+                "subTitle": "ĐVT: Tấn",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_area_dom_bar.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_pax_best_dom",
+                "title": "Top 5 đường bay nội địa có sản lượng cao nhất",
+                "subTitle": "ĐVT: Tấn",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_best_dom.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_worst_dom",
+                "title": "Top 5 đường bay nội địa có sản lượng thấp nhất",
+                "subTitle": "ĐVT: Tấn",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_worst_dom.json",
+                "aiInsight": {
+                  "text": "Sản lượng hàng hóa nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Doanh thu hàng hoá",
+            "items": [
+              {
+                "id": "b_pax_rev_dom",
+                "title": "Doanh thu hàng hoá nội địa",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_dom.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_rev_area_dom_bar",
+                "title": "Doanh thu hàng hoá theo khu vực - Nội địa",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_pax_rev_area_dom_bar.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_pax_rev_best_dom",
+                "title": "Top 5 đường bay nội địa có doanh thu cao nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_rev_best_dom.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_worst_dom",
+                "title": "Top 5 đường bay nội địa có doanh thu thấp nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_pax_rev_worst_dom.json",
+                "aiInsight": {
+                  "text": "Doanh thu hàng hoá nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "CLF",
+            "items": [
+              {
+                "id": "b_lf_int",
+                "title": "CLF - Nội địa",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_lf_area_int_bar",
+                "title": "CLF theo khu vực - Nội địa",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_lf_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_lf_best_int",
+                "title": "Top 5 đường bay quốc tế có CLF cao nhất",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_lf_best_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_worst_int",
+                "title": "Top 5 đường bay quốc tế có CLF thấp nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_top5_lf_worst_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Chi tiết theo đường bay",
+            "items": [
+              {
+                "id": "b_dom_route_table",
+                "title": "Chi tiết theo đường bay - Nội địa",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 800,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce-ii/2026/08/03/cargo/vn/chart/b_dom_route_table.json"
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "cargo_volume",
+              "status": "compact",
+              "title": "Sản lượng hàng hóa",
+              "value": "63",
+              "unit": "Tấn",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "98.3% với Kế hoạch",
+                  "type": "plan",
+                  "value": "98.3%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.8%",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "cargo_revenue",
+              "status": "compact",
+              "title": "Doanh thu hàng hóa",
+              "value": "336",
+              "unit": "tỷ VNĐ",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "97.5% với Kế hoạch",
+                  "type": "plan",
+                  "value": "97.5%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "7.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "7.8%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "clf",
+              "status": "compact",
+              "title": "CLF",
+              "value": "76.2",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "99.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "99.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "3.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.5%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "cargo_market_share",
+              "status": "compact",
+              "title": "Thị phần hàng hóa",
+              "value": "37.4",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "99.5% với Kế hoạch",
+                  "type": "plan",
+                  "value": "99.5%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "2.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "2.5%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 4
+          }
+        }
+      }
+    }
+  },
+  "insightCards": {
+    "title": "Nhận định & Đánh giá",
+    "insight": {
+      "title": "Nhận định",
+      "variant": "info",
+      "showAiBadge": true,
+      "columns": [
+        {
+          "label": "Quốc tế",
+          "items": [
+            "<strong>Sản lượng hàng hóa</strong> (Tháng 08): đạt <strong>65</strong> Tấn, tăng <strong>13,5%</strong> vs KT, giảm <strong>95.2%</strong> vs KH, tăng <strong>8.2%</strong> vs CK",
+            "<strong>Doanh thu hàng hóa</strong> (Tháng 08): đạt <strong>520</strong> tỷ VNĐ, tăng <strong>8,5%</strong> vs KT, giảm <strong>94.8%</strong> vs KH, tăng <strong>12.3%</strong> vs CK",
+            "<strong>CLF</strong> (Tháng 08): đạt <strong>68.5</strong> %, giảm <strong>6,4%</strong> vs KT, giảm <strong>96.5%</strong> vs KH, tăng <strong>4.2%</strong> vs CK",
+            "<strong>Thị phần hàng hóa</strong> (Tháng 08): đạt <strong>33.1</strong> %, tăng <strong>0,8%</strong> vs KT, giảm <strong>98.7%</strong> vs KH, tăng <strong>1.8%</strong> vs CK"
+          ]
+        },
+        {
+          "label": "Nội địa",
+          "items": [
+            "<strong>Sản lượng hàng hóa</strong> (Tháng 08): đạt <strong>63</strong> Tấn, tăng <strong>10,7%</strong> vs KT, giảm <strong>98.3%</strong> vs KH, tăng <strong>3.8%</strong> vs CK",
+            "<strong>Doanh thu hàng hóa</strong> (Tháng 08): đạt <strong>336</strong> tỷ VNĐ, tăng <strong>16,2%</strong> vs KT, giảm <strong>97.5%</strong> vs KH, tăng <strong>7.8%</strong> vs CK",
+            "<strong>CLF</strong> (Tháng 08): đạt <strong>76.2</strong> %, giảm <strong>5,3%</strong> vs KT, giảm <strong>99.2%</strong> vs KH, tăng <strong>3.5%</strong> vs CK",
+            "<strong>Thị phần hàng hóa</strong> (Tháng 08): đạt <strong>37.4</strong> %, tăng <strong>0,6%</strong> vs KT, giảm <strong>99.5%</strong> vs KH, tăng <strong>2.5%</strong> vs CK"
+          ]
+        }
+      ]
+    }
+  }
+}
