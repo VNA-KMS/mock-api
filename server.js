@@ -18,16 +18,12 @@ app.use((req, res, next) => {
     next();
 });
 
-const USERS = [
-  { username: "admin", password: "admin@123", fullName: "Quản Trị Viên", roles: ["ADMIN"] },
-  { username: "hdqt", password: "hdqt@123", fullName: "Nguyễn Văn An", roles: ["HDQT"] },
-  { username: "bgd", password: "bgd@123", fullName: "Trần Thị Bích", roles: ["BGD"] },
-  { username: "vptc", password: "vptc@123", fullName: "Lê Văn Cường", roles: ["VPTC", "MANAGER"] },
-  { username: "ktm", password: "ktm@123", fullName: "Phạm Thị Dung", roles: ["KHOI_THUONG_MAI", "MANAGER"] },
-  { username: "kkth", password: "kkth@123", fullName: "Phan Văn Ơn", roles: ["KHOI_KY_THUAT", "MANAGER"] },
-  { username: "bkt", password: "bkt@123", fullName: "Cao Thị Phúc", roles: ["BAN_KY_THUAT", "USER"] },
-  { username: "cqdv", password: "cqdv@123", fullName: "Lê Văn Quân", roles: ["CQDV", "MANAGER"] },
-]
+const LOGIN_FIXTURE_PATH = path.join(__dirname, "apiV5", "auth", "login", "index.json")
+const LOGIN_FIXTURE = JSON.parse(fs.readFileSync(LOGIN_FIXTURE_PATH, "utf-8"))
+
+const USERS = LOGIN_FIXTURE.map(function(entry) {
+  return { username: entry.username, password: entry.password, data: entry.data }
+})
 
 function findUserFromAuth(req) {
   const auth = req.headers.authorization || ""
@@ -38,21 +34,23 @@ function findUserFromAuth(req) {
 }
 
 function userProfile(user) {
+  var u = user.data && user.data.user ? user.data.user : {}
+  var roles = u.roles || []
   return {
-    id: "usr_" + user.username,
-    username: user.username,
-    email: user.username + "@vietnamairlines.com.vn",
-    fullName: user.fullName,
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=" + user.username,
-    phone: "+84901" + user.username,
-    status: "ACTIVE",
-    emailVerified: true,
-    phoneVerified: true,
+    id: u.id || "usr_" + user.username,
+    username: u.username || user.username,
+    email: u.email || user.username + "@vietnamairlines.com.vn",
+    fullName: u.fullName || "",
+    avatar: u.avatar || "https://api.dicebear.com/7.x/initials/svg?seed=" + user.username,
+    phone: u.phone || "",
+    status: u.status || "ACTIVE",
+    emailVerified: u.emailVerified !== undefined ? u.emailVerified : true,
+    phoneVerified: u.phoneVerified !== undefined ? u.phoneVerified : true,
     lastLoginAt: new Date().toISOString(),
-    createdAt: "2024-01-10T08:00:00Z",
-    roles: user.roles[0] || "",
-    permissions: ["dashboard.view", "kpi.view", "reports.view", "reports.create", "tcnl.view", "cmdv.view"],
-    profile: { gender: "MALE", birthday: "1990-01-01", language: "vi", timezone: "Asia/Ho_Chi_Minh", country: "VN" },
+    createdAt: u.createdAt || "2024-01-10T08:00:00Z",
+    roles: Array.isArray(roles) ? (roles[0] || "") : (roles || ""),
+    permissions: u.permissions || ["dashboard.view", "kpi.view", "reports.view", "reports.create", "tcnl.view", "cmdv.view"],
+    profile: u.profile || { gender: "MALE", birthday: "1990-01-01", language: "vi", timezone: "Asia/Ho_Chi_Minh", country: "VN" },
   }
 }
 
