@@ -1,0 +1,291 @@
+{
+  "views": [
+    {
+      "id": "pcvn",
+      "label": "PCVN",
+      "autoChart": {
+        "chartType": "matrix-mini-bar-geo",
+        "dataset": {
+          "columns": [
+            { "id": "cd", "type": "string", "label": "CD" },
+            { "id": "fleet", "type": "string", "label": "Tàu bay" },
+            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+          ],
+          "rows": [
+            ["DPE", "B787", 74.5, 90.2, 63.2],
+            ["DPE", "A350", 61.6, 92.9, 77.1],
+            ["DPE", "A321", 59.7, 71.9, 64.0],
+            ["DPE", "ATR72", 55.9, 44.6, 26.7],
+            ["CAPT", "B787", 82.6, 90.2, 90.0],
+            ["CAPT", "A350", 69.9, 92.9, 95.6],
+            ["CAPT", "A321", 69.0, 71.9, 68.8],
+            ["CAPT", "ATR72", 56.0, 44.6, 60.2],
+            ["FO", "B787", 85.2, 89.7, 87.5],
+            ["FO", "A350", 69.9, 88.3, 94.2],
+            ["FO", "A321", 59.2, 67.6, 52.5],
+            ["FO", "ATR72", 41.5, 55.0, 62.5]
+          ]
+        },
+        "views": [
+          {
+            "chartType": "matrix-mini-bar-geo",
+            "xField": "fleet",
+            "series": [
+              { "field": "ck" },
+              { "field": "db" },
+              { "field": "th" }
+            ],
+            "showLegend": true,
+            "matrixConfig": {
+              "columnTitles": { "B787": "B787", "A350": "A350", "A321": "A321", "ATR72": "ATR72" },
+              "groupColors": {
+                "B787": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "A350": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "A321": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "ATR72": ["#9AA0A6", "#F5A623", "#1677FF"]
+              },
+              "barSize": "m",
+              "labelPosition": "outside"
+            }
+          }
+        ]
+      },
+      "table": {
+        "columns": [
+          { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
+          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
+          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+        ],
+        "rows": [
+          { "fleet": "B787", "cd": "DPE", "ck": 74.5, "db": 90.2, "th": 63.2, "ss_kh": "70%", "ss_ck": "85%" },
+          { "fleet": "B787", "cd": "CAPT", "ck": 82.6, "db": 90.2, "th": 90.0, "ss_kh": "100%", "ss_ck": "109%" },
+          { "fleet": "B787", "cd": "FO", "ck": 85.2, "db": 89.7, "th": 87.5, "ss_kh": "98%", "ss_ck": "103%" },
+          { "fleet": "A350", "cd": "DPE", "ck": 61.6, "db": 92.9, "th": 77.1, "ss_kh": "83%", "ss_ck": "125%" },
+          { "fleet": "A350", "cd": "CAPT", "ck": 69.9, "db": 92.9, "th": 95.6, "ss_kh": "103%", "ss_ck": "137%" },
+          { "fleet": "A350", "cd": "FO", "ck": 69.9, "db": 88.3, "th": 94.2, "ss_kh": "107%", "ss_ck": "135%" },
+          { "fleet": "A321", "cd": "DPE", "ck": 59.7, "db": 71.9, "th": 64.0, "ss_kh": "89%", "ss_ck": "107%" },
+          { "fleet": "A321", "cd": "CAPT", "ck": 69.0, "db": 71.9, "th": 68.8, "ss_kh": "96%", "ss_ck": "100%" },
+          { "fleet": "A321", "cd": "FO", "ck": 59.2, "db": 67.6, "th": 52.5, "ss_kh": "78%", "ss_ck": "89%" },
+          { "fleet": "ATR72", "cd": "DPE", "ck": 55.9, "db": 44.6, "th": 26.7, "ss_kh": "60%", "ss_ck": "48%" },
+          { "fleet": "ATR72", "cd": "CAPT", "ck": 56.0, "db": 44.6, "th": 60.2, "ss_kh": "135%", "ss_ck": "108%" },
+          { "fleet": "ATR72", "cd": "FO", "ck": 41.5, "db": 55.0, "th": 62.5, "ss_kh": "114%", "ss_ck": "151%" }
+        ],
+        "density": "compact"
+      }
+    },
+    {
+      "id": "pcnn",
+      "label": "PCNN",
+      "autoChart": {
+        "chartType": "matrix-mini-bar-geo",
+        "dataset": {
+          "columns": [
+            { "id": "cd", "type": "string", "label": "CD" },
+            { "id": "fleet", "type": "string", "label": "Tàu bay" },
+            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+          ],
+          "rows": [
+            ["CAPT", "B787", 80.1, 90.2, 86.1],
+            ["CAPT", "A350", 62.7, 92.9, 95.2],
+            ["CAPT", "A321", 58.8, 71.9, 61.4],
+            ["CAPT", "ATR72", 64.7, 44.6, 52.7],
+            ["FO", "B787", 55.2, 89.7, 62.7],
+            ["FO", "A350", 63.1, 88.3, 79.0],
+            ["FO", "A321", 47.6, 67.6, 46.0],
+            ["DPE", "A321", 61.9, 71.9, 53.0]
+          ]
+        },
+        "views": [
+          {
+            "chartType": "matrix-mini-bar-geo",
+            "xField": "fleet",
+            "series": [
+              { "field": "ck" },
+              { "field": "db" },
+              { "field": "th" }
+            ],
+            "showLegend": true,
+            "matrixConfig": {
+              "columnTitles": { "B787": "B787", "A350": "A350", "A321": "A321", "ATR72": "ATR72" },
+              "groupColors": {
+                "B787": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "A350": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "A321": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "ATR72": ["#9AA0A6", "#F5A623", "#1677FF"]
+              },
+              "barSize": "m",
+              "labelPosition": "outside"
+            }
+          }
+        ]
+      },
+      "table": {
+        "columns": [
+          { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
+          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
+          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+        ],
+        "rows": [
+          { "fleet": "B787", "cd": "CAPT", "ck": 80.1, "db": 90.2, "th": 86.1, "ss_kh": "95%", "ss_ck": "104%" },
+          { "fleet": "B787", "cd": "FO", "ck": 55.2, "db": 89.7, "th": 62.7, "ss_kh": "90%", "ss_ck": "118%" },
+          { "fleet": "A350", "cd": "CAPT", "ck": 62.7, "db": 92.9, "th": 95.2, "ss_kh": "95%", "ss_ck": "130%" },
+          { "fleet": "A350", "cd": "FO", "ck": 63.1, "db": 88.3, "th": 79.0, "ss_kh": "92%", "ss_ck": "122%" },
+          { "fleet": "A321", "cd": "DPE", "ck": 61.9, "db": 71.9, "th": 53.0, "ss_kh": "100%", "ss_ck": "110%" },
+          { "fleet": "A321", "cd": "CAPT", "ck": 58.8, "db": 71.9, "th": 61.4, "ss_kh": "92%", "ss_ck": "116%" },
+          { "fleet": "A321", "cd": "FO", "ck": 47.6, "db": 67.6, "th": 46.0, "ss_kh": "80%", "ss_ck": "105%" },
+          { "fleet": "ATR72", "cd": "CAPT", "ck": 64.7, "db": 44.6, "th": 52.7, "ss_kh": "115%", "ss_ck": "79%" }
+        ],
+        "density": "compact"
+      }
+    },
+    {
+      "id": "tvhk",
+      "label": "TVHK",
+      "autoChart": {
+        "chartType": "matrix-mini-bar-geo",
+        "dataset": {
+          "columns": [
+            { "id": "fleet", "type": "string", "label": "Tàu bay" },
+            { "id": "cd", "type": "string", "label": "CD" },
+            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+          ],
+          "rows": [
+            ["TVCH", "TVT-2", 68.7, 77.0, 73.6],
+            ["TVCH", "TVT-1", 73.7, 77.0, 73.2],
+            ["TVCH", "TVC", 78.3, 77.0, 80.4],
+            ["TVCH", "TVY", 79.1, 77.0, 79.6],
+            ["TV-ALS", "TVT-2", 71.7, 77.0, 73.6],
+            ["TV-ALS", "TVT-1", 72.8, 77.0, 71.6],
+            ["TV-ALS", "TVC", 75.1, 77.0, 77.8],
+            ["TV-ALS", "TVY", 78.2, 77.0, 76.6],
+            ["TVNN", "TVT-1", 53.6, 77.0, 76.6],
+            ["TVNN", "TVC", 57.2, 77.0, 72.0],
+            ["TVNN", "TVY", 44.1, 77.0, 73.2]
+          ]
+        },
+        "views": [
+          {
+            "chartType": "matrix-mini-bar-geo",
+            "xField": "cd",
+            "series": [
+              { "field": "ck" },
+              { "field": "db" },
+              { "field": "th" }
+            ],
+            "showLegend": true,
+            "matrixConfig": {
+              "columnTitles": { "TVT-2": "TVT-2", "TVT-1": "TVT-1", "TVC": "TVC", "TVY": "TVY" },
+              "groupColors": {
+                "TVT-2": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "TVT-1": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "TVC": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "TVY": ["#9AA0A6", "#F5A623", "#1677FF"]
+              },
+              "barSize": "m",
+              "labelPosition": "outside"
+            }
+          }
+        ]
+      },
+      "table": {
+        "columns": [
+          { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
+          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
+          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+        ],
+        "rows": [
+          { "fleet": "TVCH", "cd": "TVT-2", "ck": 68.7, "db": 77.0, "th": 73.6, "ss_kh": "101%", "ss_ck": "114%" },
+          { "fleet": "TVCH", "cd": "TVT-1", "ck": 73.7, "db": 77.0, "th": 73.2, "ss_kh": "101%", "ss_ck": "109%" },
+          { "fleet": "TVCH", "cd": "TVC", "ck": 78.3, "db": 77.0, "th": 80.4, "ss_kh": "108%", "ss_ck": "110%" },
+          { "fleet": "TVCH", "cd": "TVY", "ck": 79.1, "db": 77.0, "th": 79.6, "ss_kh": "104%", "ss_ck": "106%" },
+          { "fleet": "TV-ALS", "cd": "TVT-2", "ck": 71.7, "db": 77.0, "th": 73.6, "ss_kh": "100%", "ss_ck": "113%" },
+          { "fleet": "TV-ALS", "cd": "TVT-1", "ck": 72.8, "db": 77.0, "th": 71.6, "ss_kh": "101%", "ss_ck": "108%" },
+          { "fleet": "TV-ALS", "cd": "TVC", "ck": 75.1, "db": 77.0, "th": 77.8, "ss_kh": "105%", "ss_ck": "109%" },
+          { "fleet": "TV-ALS", "cd": "TVY", "ck": 78.2, "db": 77.0, "th": 76.6, "ss_kh": "102%", "ss_ck": "104%" },
+          { "fleet": "TVNN", "cd": "TVT-1", "ck": 53.6, "db": 77.0, "th": 76.6, "ss_kh": "93%", "ss_ck": "118%" },
+          { "fleet": "TVNN", "cd": "TVC", "ck": 57.2, "db": 77.0, "th": 72.0, "ss_kh": "93%", "ss_ck": "112%" },
+          { "fleet": "TVNN", "cd": "TVY", "ck": 44.1, "db": 77.0, "th": 73.2, "ss_kh": "84%", "ss_ck": "107%" }
+        ],
+        "density": "compact"
+      }
+    },
+    {
+      "id": "ldmd",
+      "label": "LĐMĐ",
+      "autoChart": {
+        "chartType": "bar",
+        "dataset": {
+          "columns": [
+            { "id": "position", "type": "string" },
+            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+          ],
+          "rows": [
+            ["Trưởng ban", 79.8, 88.0, 78.2],
+            ["Phó ban", 65.6, 72.0, 65.4],
+            ["Trưởng phòng", 48.6, 58.0, 53.3],
+            ["Phó phòng", 41.8, 51.0, 46.1],
+            ["CV5", 31.4, 39.0, 35.8],
+            ["CV4", 23.3, 30.0, 27.3],
+            ["CV3", 19.6, 25.0, 22.9],
+            ["Cán sự", 14.6, 18.5, 16.8],
+            ["Nhân viên", 13.8, 17.5, 16.0]
+          ]
+        },
+        "views": [
+          {
+            "id": "main",
+            "chartType": "auto",
+            "xField": "position",
+            "series": [
+              { "field": "ck", "chartType": "bar" },
+              { "field": "db", "chartType": "bar" },
+              { "field": "th", "chartType": "bar" }
+            ]
+          }
+        ]
+      },
+      "table": {
+        "columns": [
+          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 130 },
+          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
+          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+        ],
+        "rows": [
+          { "cd": "Trưởng ban", "ck": 79.8, "db": 88.0, "th": 78.2, "ss_kh": "89%", "ss_ck": "134%" },
+          { "cd": "Phó ban", "ck": 65.6, "db": 72.0, "th": 65.4, "ss_kh": "91%", "ss_ck": "131%" },
+          { "cd": "Trưởng phòng", "ck": 48.6, "db": 58.0, "th": 53.3, "ss_kh": "92%", "ss_ck": "134%" },
+          { "cd": "Phó phòng", "ck": 41.8, "db": 51.0, "th": 46.1, "ss_kh": "90%", "ss_ck": "134%" },
+          { "cd": "CV5", "ck": 31.4, "db": 39.0, "th": 35.8, "ss_kh": "92%", "ss_ck": "135%" },
+          { "cd": "CV4", "ck": 23.3, "db": 30.0, "th": 27.3, "ss_kh": "91%", "ss_ck": "136%" },
+          { "cd": "CV3", "ck": 19.6, "db": 25.0, "th": 22.9, "ss_kh": "92%", "ss_ck": "135%" },
+          { "cd": "Cán sự", "ck": 14.6, "db": 18.5, "th": 16.8, "ss_kh": "91%", "ss_ck": "134%" },
+          { "cd": "Nhân viên", "ck": 13.8, "db": 17.5, "th": 16.0, "ss_kh": "91%", "ss_ck": "134%" }
+        ],
+        "density": "compact"
+      }
+    }
+  ]
+}
