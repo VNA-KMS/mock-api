@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "donut-pct",
+    "chartType": "donut-labeled",
     "dataset": {
       "columns": [
         {
@@ -11,7 +11,6 @@
           "id": "ratio",
           "type": "number",
           "label": "Tỷ lệ",
-          "unit": "%",
           "color": [
             "data.deep-teal",
             "series.target",
@@ -37,9 +36,10 @@
     "views": [
       {
         "id": "main",
-        "chartType": "auto",
+        "chartType": "donut-labeled",
         "xField": "field",
-        "showCenterValue": false,
+        "showCenterValue": true,
+        "showLegend": true,
         "series": [
           {
             "field": "ratio"

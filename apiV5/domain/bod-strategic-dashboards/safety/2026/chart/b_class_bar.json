@@ -5,22 +5,23 @@
       "columns": [
         { "id": "month", "type": "string" },
         { "id": "aoc01", "type": "number", "label": "AOC01", "color": "#C62828" },
-        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#E65100" },
-        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#00558F" }
+        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#FBC02D" },
+        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#2E7D32" },
+        { "id": "vor", "type": "number", "label": "VOR", "colorToken": "series.actual" }
       ],
       "rows": [
-        ["T1", 0, 0, 3],
-        ["T2", 0, 0, 3],
-        ["T3", 0, 0, 3],
-        ["T4", 0, 0, 4],
-        ["T5", 0, 0, 3],
-        ["T6", 0, 1, 13],
-        ["T7", 0, 0, 13],
-        ["T8", null, null, null],
-        ["T9", null, null, null],
-        ["T10", null, null, null],
-        ["T11", null, null, null],
-        ["T12", null, null, null]
+        ["T1", 0, 0, 3, 0],
+        ["T2", 0, 0, 3, 0],
+        ["T3", 0, 0, 3, 0],
+        ["T4", 0, 0, 4, 0],
+        ["T5", 0, 0, 3, 0],
+        ["T6", 0, 1, 13, 1],
+        ["T7", 0, 0, 13, 0],
+        ["T8", null, null, null, null],
+        ["T9", null, null, null, null],
+        ["T10", null, null, null, null],
+        ["T11", null, null, null, null],
+        ["T12", null, null, null, null]
       ]
     },
     "views": [
@@ -28,11 +29,12 @@
         "id": "main",
         "chartType": "auto",
         "xField": "month",
-        "stack": "total",
+        "labelInside": true,
         "series": [
-          { "field": "aoc01", "chartType": "bar" },
-          { "field": "aoc02", "chartType": "bar" },
-          { "field": "aoc03", "chartType": "bar" }
+          { "field": "aoc01", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "aoc02", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "aoc03", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "vor", "chartType": "bar", "showLabel": "all" }
         ]
       }
     ]

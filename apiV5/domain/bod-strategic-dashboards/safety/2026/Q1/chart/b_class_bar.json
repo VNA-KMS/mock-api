@@ -5,14 +5,15 @@
       "columns": [
         { "id": "quarter", "type": "string" },
         { "id": "aoc01", "type": "number", "label": "AOC01", "color": "#C62828" },
-        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#E65100" },
-        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#00558F" }
+        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#FBC02D" },
+        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#2E7D32" },
+        { "id": "vor", "type": "number", "label": "VOR", "colorToken": "series.actual" }
       ],
       "rows": [
-        ["Q1", 0, 0, 9],
-        ["Q2", null, null, null],
-        ["Q3", null, null, null],
-        ["Q4", null, null, null]
+        ["Q1", 0, 0, 9, 0],
+        ["Q2", null, null, null, null],
+        ["Q3", null, null, null, null],
+        ["Q4", null, null, null, null]
       ]
     },
     "views": [
@@ -20,11 +21,12 @@
         "id": "main",
         "chartType": "auto",
         "xField": "quarter",
-        "stack": "total",
+        "labelInside": true,
         "series": [
-          { "field": "aoc01", "chartType": "bar" },
-          { "field": "aoc02", "chartType": "bar" },
-          { "field": "aoc03", "chartType": "bar" }
+          { "field": "aoc01", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "aoc02", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "aoc03", "chartType": "bar", "stack": "total", "showLabel": "all" },
+          { "field": "vor", "chartType": "bar", "showLabel": "all" }
         ]
       }
     ]

@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "donut-pct",
+    "chartType": "donut-labeled",
     "dataset": {
       "columns": [
         {
@@ -11,7 +11,6 @@
           "id": "value",
           "type": "number",
           "label": "Tỷ lệ",
-          "unit": "vụ",
           "color": [
             "series.actual",
             "series.target",
@@ -27,7 +26,7 @@
           1.12
         ],
         [
-          "Do hệ thống kỹ thuật tàu bay",
+          "Nguyên nhân khác",
           7.88
         ]
       ]
@@ -35,14 +34,15 @@
     "views": [
       {
         "id": "main",
-        "chartType": "auto",
+        "chartType": "donut-labeled",
         "xField": "cause",
         "series": [
           {
             "field": "value"
           }
         ],
-        "showCenterValue": false
+        "showLegend": true,
+        "showCenterValue": true
       }
     ]
   }

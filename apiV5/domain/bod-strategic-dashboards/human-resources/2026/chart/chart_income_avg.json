@@ -7,11 +7,11 @@
         "chartType": "matrix-mini-bar-geo",
         "dataset": {
           "columns": [
-            { "id": "cd", "type": "string", "label": "CD" },
+            { "id": "cd", "type": "string", "label": "Chức danh" },
             { "id": "fleet", "type": "string", "label": "Tàu bay" },
-            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "ck", "type": "number", "label": "TH 2025", "color": "#9AA0A6" },
             { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
-            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+            { "id": "th", "type": "number", "label": "TH 2026", "color": "#1677FF" }
           ],
           "rows": [
             ["DPE", "B787", 74.5, 90.2, 63.2],
@@ -55,12 +55,12 @@
       "table": {
         "columns": [
           { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
-          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
-          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "cd", "type": "text", "label": "Chức danh", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "TH 2025", "align": "center", "decimals": 1, "width": 90 },
           { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
-          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
-          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
-          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+          { "id": "th", "type": "number", "label": "TH 2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "TH 2026 / KH 2026", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "TH 2026 / TH 2025", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
         ],
         "rows": [
           { "fleet": "B787", "cd": "DPE", "ck": 74.5, "db": 90.2, "th": 63.2, "ss_kh": "70%", "ss_ck": "85%" },
@@ -76,7 +76,8 @@
           { "fleet": "ATR72", "cd": "CAPT", "ck": 56.0, "db": 44.6, "th": 60.2, "ss_kh": "135%", "ss_ck": "108%" },
           { "fleet": "ATR72", "cd": "FO", "ck": 41.5, "db": 55.0, "th": 62.5, "ss_kh": "114%", "ss_ck": "151%" }
         ],
-        "density": "compact"
+        "density": "comfortable",
+        "mergeRepeatedColumns": ["fleet"]
       }
     },
     {
@@ -86,11 +87,11 @@
         "chartType": "matrix-mini-bar-geo",
         "dataset": {
           "columns": [
-            { "id": "cd", "type": "string", "label": "CD" },
+            { "id": "cd", "type": "string", "label": "Chức danh" },
             { "id": "fleet", "type": "string", "label": "Tàu bay" },
-            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "ck", "type": "number", "label": "TH 2025", "color": "#9AA0A6" },
             { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
-            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+            { "id": "th", "type": "number", "label": "TH 2026", "color": "#1677FF" }
           ],
           "rows": [
             ["CAPT", "B787", 80.1, 90.2, 86.1],
@@ -130,12 +131,12 @@
       "table": {
         "columns": [
           { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
-          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
-          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "cd", "type": "text", "label": "Chức danh", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "TH 2025", "align": "center", "decimals": 1, "width": 90 },
           { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
-          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
-          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
-          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+          { "id": "th", "type": "number", "label": "TH 2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "TH 2026 / KH 2026", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "TH 2026 / TH 2025", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
         ],
         "rows": [
           { "fleet": "B787", "cd": "CAPT", "ck": 80.1, "db": 90.2, "th": 86.1, "ss_kh": "95%", "ss_ck": "104%" },
@@ -147,7 +148,8 @@
           { "fleet": "A321", "cd": "FO", "ck": 47.6, "db": 67.6, "th": 46.0, "ss_kh": "80%", "ss_ck": "105%" },
           { "fleet": "ATR72", "cd": "CAPT", "ck": 64.7, "db": 44.6, "th": 52.7, "ss_kh": "115%", "ss_ck": "79%" }
         ],
-        "density": "compact"
+        "density": "comfortable",
+        "mergeRepeatedColumns": ["fleet"]
       }
     },
     {
@@ -157,30 +159,30 @@
         "chartType": "matrix-mini-bar-geo",
         "dataset": {
           "columns": [
+            { "id": "cd", "type": "string", "label": "Chức danh" },
             { "id": "fleet", "type": "string", "label": "Tàu bay" },
-            { "id": "cd", "type": "string", "label": "CD" },
-            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "ck", "type": "number", "label": "TH 2025", "color": "#9AA0A6" },
             { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
-            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+            { "id": "th", "type": "number", "label": "TH 2026", "color": "#1677FF" }
           ],
           "rows": [
-            ["TVCH", "TVT-2", 68.7, 77.0, 73.6],
-            ["TVCH", "TVT-1", 73.7, 77.0, 73.2],
-            ["TVCH", "TVC", 78.3, 77.0, 80.4],
-            ["TVCH", "TVY", 79.1, 77.0, 79.6],
-            ["TV-ALS", "TVT-2", 71.7, 77.0, 73.6],
-            ["TV-ALS", "TVT-1", 72.8, 77.0, 71.6],
-            ["TV-ALS", "TVC", 75.1, 77.0, 77.8],
-            ["TV-ALS", "TVY", 78.2, 77.0, 76.6],
-            ["TVNN", "TVT-1", 53.6, 77.0, 76.6],
-            ["TVNN", "TVC", 57.2, 77.0, 72.0],
-            ["TVNN", "TVY", 44.1, 77.0, 73.2]
+            ["TVT-2", "TVCH", 68.7, 77.0, 73.6],
+            ["TVT-1", "TVCH", 73.7, 77.0, 73.2],
+            ["TVC", "TVCH", 78.3, 77.0, 80.4],
+            ["TVY", "TVCH", 79.1, 77.0, 79.6],
+            ["TVT-2", "TV-ALS", 71.7, 77.0, 73.6],
+            ["TVT-1", "TV-ALS", 72.8, 77.0, 71.6],
+            ["TVC", "TV-ALS", 75.1, 77.0, 77.8],
+            ["TVY", "TV-ALS", 78.2, 77.0, 76.6],
+            ["TVT-1", "TVNN", 53.6, 77.0, 76.6],
+            ["TVC", "TVNN", 57.2, 77.0, 72.0],
+            ["TVY", "TVNN", 44.1, 77.0, 73.2]
           ]
         },
         "views": [
           {
             "chartType": "matrix-mini-bar-geo",
-            "xField": "cd",
+            "xField": "fleet",
             "series": [
               { "field": "ck" },
               { "field": "db" },
@@ -188,12 +190,11 @@
             ],
             "showLegend": true,
             "matrixConfig": {
-              "columnTitles": { "TVT-2": "TVT-2", "TVT-1": "TVT-1", "TVC": "TVC", "TVY": "TVY" },
+              "columnTitles": { "TVCH": "TVCH", "TV-ALS": "TV-ALS", "TVNN": "TVNN" },
               "groupColors": {
-                "TVT-2": ["#9AA0A6", "#F5A623", "#1677FF"],
-                "TVT-1": ["#9AA0A6", "#F5A623", "#1677FF"],
-                "TVC": ["#9AA0A6", "#F5A623", "#1677FF"],
-                "TVY": ["#9AA0A6", "#F5A623", "#1677FF"]
+                "TVCH": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "TV-ALS": ["#9AA0A6", "#F5A623", "#1677FF"],
+                "TVNN": ["#9AA0A6", "#F5A623", "#1677FF"]
               },
               "barSize": "m",
               "labelPosition": "outside"
@@ -203,13 +204,13 @@
       },
       "table": {
         "columns": [
-          { "id": "fleet", "type": "text", "label": "Tàu bay", "align": "center", "width": 100 },
-          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 80 },
-          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "fleet", "type": "text", "label": "Đối tượng", "align": "center", "width": 100 },
+          { "id": "cd", "type": "text", "label": "Chức danh", "align": "center", "width": 80 },
+          { "id": "ck", "type": "number", "label": "TH 2025", "align": "center", "decimals": 1, "width": 90 },
           { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
-          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
-          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
-          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+          { "id": "th", "type": "number", "label": "TH 2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "TH 2026 / KH 2026", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "TH 2026 / TH 2025", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
         ],
         "rows": [
           { "fleet": "TVCH", "cd": "TVT-2", "ck": 68.7, "db": 77.0, "th": 73.6, "ss_kh": "101%", "ss_ck": "114%" },
@@ -224,7 +225,8 @@
           { "fleet": "TVNN", "cd": "TVC", "ck": 57.2, "db": 77.0, "th": 72.0, "ss_kh": "93%", "ss_ck": "112%" },
           { "fleet": "TVNN", "cd": "TVY", "ck": 44.1, "db": 77.0, "th": 73.2, "ss_kh": "84%", "ss_ck": "107%" }
         ],
-        "density": "compact"
+        "density": "comfortable",
+        "mergeRepeatedColumns": ["fleet"]
       }
     },
     {
@@ -235,9 +237,9 @@
         "dataset": {
           "columns": [
             { "id": "position", "type": "string" },
-            { "id": "ck", "type": "number", "label": "2025", "color": "#9AA0A6" },
+            { "id": "ck", "type": "number", "label": "TH 2025", "color": "#9AA0A6" },
             { "id": "db", "type": "number", "label": "KH 2026", "color": "#F5A623" },
-            { "id": "th", "type": "number", "label": "2026", "color": "#1677FF" }
+            { "id": "th", "type": "number", "label": "TH 2026", "color": "#1677FF" }
           ],
           "rows": [
             ["Trưởng ban", 79.8, 88.0, 78.2],
@@ -266,12 +268,12 @@
       },
       "table": {
         "columns": [
-          { "id": "cd", "type": "text", "label": "CD", "align": "center", "width": 130 },
-          { "id": "ck", "type": "number", "label": "2025", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "cd", "type": "text", "label": "Chức danh", "align": "center", "width": 130 },
+          { "id": "ck", "type": "number", "label": "TH 2025", "align": "center", "decimals": 1, "width": 90 },
           { "id": "db", "type": "number", "label": "KH 2026", "align": "center", "decimals": 1, "width": 100 },
-          { "id": "th", "type": "number", "label": "2026", "align": "center", "decimals": 1, "width": 90 },
-          { "id": "ss_kh", "type": "threshold", "label": "SS KH", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
-          { "id": "ss_ck", "type": "threshold", "label": "SS CK", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
+          { "id": "th", "type": "number", "label": "TH 2026", "align": "center", "decimals": 1, "width": 90 },
+          { "id": "ss_kh", "type": "threshold", "label": "TH 2026 / KH 2026", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } },
+          { "id": "ss_ck", "type": "threshold", "label": "TH 2026 / TH 2025", "align": "center", "width": 90, "thresholds": { "good": 100, "warn": 100, "suffix": "%" } }
         ],
         "rows": [
           { "cd": "Trưởng ban", "ck": 79.8, "db": 88.0, "th": 78.2, "ss_kh": "89%", "ss_ck": "134%" },
@@ -284,7 +286,8 @@
           { "cd": "Cán sự", "ck": 14.6, "db": 18.5, "th": 16.8, "ss_kh": "91%", "ss_ck": "134%" },
           { "cd": "Nhân viên", "ck": 13.8, "db": 17.5, "th": 16.0, "ss_kh": "91%", "ss_ck": "134%" }
         ],
-        "density": "compact"
+        "density": "comfortable",
+        "mergeRepeatedColumns": ["fleet"]
       }
     }
   ]
