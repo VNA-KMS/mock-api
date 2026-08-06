@@ -1,0 +1,87 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "carrier",
+          "type": "string",
+          "label": "Hãng"
+        },
+        {
+          "id": "positive",
+          "type": "number",
+          "label": "Tích cực",
+          "colorToken": "semantic.positive"
+        },
+        {
+          "id": "neutral",
+          "type": "number",
+          "label": "Trung lập",
+          "colorToken": "semantic.reference"
+        },
+        {
+          "id": "negative",
+          "type": "number",
+          "label": "Tiêu cực",
+          "colorToken": "semantic.negative"
+        }
+      ],
+      "rows": [
+        [
+          "VNA",
+          1250,
+          640,
+          18
+        ],
+        [
+          "VJ",
+          820,
+          430,
+          25
+        ],
+        [
+          "QH",
+          540,
+          310,
+          12
+        ],
+        [
+          "9G",
+          210,
+          140,
+          6
+        ],
+        [
+          "VU",
+          95,
+          60,
+          3
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "carrier",
+        "stack": "total",
+        "labelInside": true,
+        "series": [
+          {
+            "field": "positive",
+            "chartType": "bar"
+          },
+          {
+            "field": "neutral",
+            "chartType": "bar"
+          },
+          {
+            "field": "negative",
+            "chartType": "bar"
+          }
+        ]
+      }
+    ]
+  }
+}
