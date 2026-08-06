@@ -3,19 +3,19 @@
  *
  * For ceo-command-center/commerce-ii day mode:
  * - Source: month chart files at  .../YYYY/MM/chart/*.json  (x-axis = "month", labels T1..T12)
- * - Target: day chart files at    .../YYYY/MM/DD/chart/*.json  (x-axis = "day", labels N{a}..N{T-1})
+ * - Target: day chart files at    .../YYYY/MM/DD/chart/*.json  (x-axis = "day", labels DD/MM)
  *
  * Rule (calendar window, 15 points):
  *   Today = DD (T)
  *   End   = T - 1  (yesterday, current month day)
  *   Start = calendar day of (T-1 minus 14 days). If that crosses month boundary,
  *           use previous-month day number = a.
- *   X-axis labels: N{a} .. N{T-1}  (day-of-month numbers, wrapping across months)
+ *   X-axis labels: {DD}/{MM}  (day/month, padded to 2 digits, crossing months)
  *
- *   Example: today = 8 (Aug):
- *     end = 7 (Aug 7)
- *     7 - 14 days → Jul 24 (a = 24) when prev month has 31 days
- *     labels: N24..N31, N1..N7
+ *   Example: today = 6 (Aug):
+ *     end = 5 (Aug 5)
+ *     5 - 14 days → Jul 22 (a = 22) when prev month has 31 days
+ *     labels: 22/07..31/07, 01/08..05/08
  *
  * Day mode series (only):
  *   ck = cùng kỳ, db = kế hoạch, th = thực hiện
@@ -54,18 +54,19 @@ function writeJson(filePath, obj) {
  * endDay   = DD - 1  (T-1)
  * startDay = calendar day of (endDay - 14 days), rolling into previous month if needed.
  *
- * Labels use day-of-month numbers only: N{dom} (e.g. N24..N31,N1..N7).
+ * Labels use DD/MM format (e.g. 22/07..31/07,01/08..05/08).
  *
  * @returns {{ labels: string[], prevSlotCount: number, startDom: number }}
  */
-function buildDayLabels(dd, prevMonthDays) {
+function buildDayLabels(dd, currentMm, prevMm, prevMonthDays) {
+  const pad = (n) => String(n).padStart(2, '0')
   const endDay = dd - 1 // T-1
   if (endDay < 1) {
     // Edge: DD=1 → yesterday is last day of prev month; window entirely in prev month
     const endDom = prevMonthDays
     const startDom = endDom - 14
     const labels = []
-    for (let d = startDom; d <= endDom; d++) labels.push(`N${d}`)
+    for (let d = startDom; d <= endDom; d++) labels.push(`${pad(d)}/${prevMm}`)
     return { labels, prevSlotCount: 15, startDom }
   }
 
@@ -77,14 +78,14 @@ function buildDayLabels(dd, prevMonthDays) {
   if (prevSlotCount > 0) {
     // Crosses into previous month: a = prevMonthDays - prevSlotCount + 1
     const startDom = prevMonthDays - prevSlotCount + 1
-    for (let d = startDom; d <= prevMonthDays; d++) labels.push(`N${d}`)
-    for (let d = 1; d <= endDay; d++) labels.push(`N${d}`)
+    for (let d = startDom; d <= prevMonthDays; d++) labels.push(`${pad(d)}/${prevMm}`)
+    for (let d = 1; d <= endDay; d++) labels.push(`${pad(d)}/${currentMm}`)
     return { labels, prevSlotCount, startDom }
   }
 
-  // Entire window in current month: N{endDay-14} .. N{endDay}
+  // Entire window in current month: DD/MM format
   const startDom = endDay - 14
-  for (let d = startDom; d <= endDay; d++) labels.push(`N${d}`)
+  for (let d = startDom; d <= endDay; d++) labels.push(`${pad(d)}/${currentMm}`)
   return { labels, prevSlotCount: 0, startDom }
 }
 
@@ -96,9 +97,11 @@ function buildDayLabels(dd, prevMonthDays) {
  *   - th  = thực hiện
  * (drops fct/uth/*_lk and any other series)
  *
+ * X-axis labels are now DD/MM format (e.g. 22/07..05/08).
+ *
  * Returns transformed clone, or null if chart should be copied as-is.
  */
-function transformChartForDay(chartJson, dd, prevChartJson, prevMonthDays) {
+function transformChartForDay(chartJson, dd, currentMm, prevMm, prevChartJson, prevMonthDays) {
   // Find the chart container (may be wrapped in autoChart)
   let container = null
   let isWrapped = false
@@ -129,7 +132,7 @@ function transformChartForDay(chartJson, dd, prevChartJson, prevMonthDays) {
 
   const clone = JSON.parse(JSON.stringify(chartJson))
   const cloneContainer = isWrapped ? clone.autoChart : clone
-  const { labels } = buildDayLabels(dd, prevMonthDays)
+  const { labels } = buildDayLabels(dd, currentMm, prevMm, prevMonthDays)
 
   // Build reduced columns: day + ck + db + th (preserve original column metadata)
   const dayCol = { ...cols[0], id: 'day' }
@@ -305,7 +308,7 @@ function main() {
           if (!srcJson) continue
 
           const prevJson = needsPrevMonth ? (prevChartCache[file] || null) : null
-          const transformed = transformChartForDay(srcJson, d, prevJson, prevDays)
+          const transformed = transformChartForDay(srcJson, d, mm, prevMm, prevJson, prevDays)
           writeJson(dstPath, transformed !== null ? transformed : srcJson)
         }
       }
