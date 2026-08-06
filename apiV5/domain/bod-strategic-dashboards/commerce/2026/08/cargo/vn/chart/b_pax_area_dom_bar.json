@@ -1,0 +1,37 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        { "id": "region", "type": "string", "label": "Khu vực" },
+        { "id": "val2025", "type": "number", "label": "2025", "color": "#9AA0A6" },
+        { "id": "valPlan2026", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+        { "id": "val2026", "type": "number", "label": "2026", "color": "#1677FF" }
+      ],
+      "rows": [
+        ["HANSGN", 220.1, 268.0, 245.5],
+        ["HANDAD", 154.2, 188.5, 172.0],
+        ["Du lịch", 105.6, 129.0, 117.8],
+        ["SGNDAD", 87.4, 106.8, 97.5],
+        ["Trục lẻ", 78.1, 95.5, 87.2],
+        ["Địa phương", 57.8, 70.5, 64.5]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "region",
+        "series": [
+          { "field": "val2025", "chartType": "bar" },
+          { "field": "valPlan2026", "chartType": "bar" },
+          { "field": "val2026", "chartType": "bar" }
+        ],
+        "showLegend": true,
+        "barSize": "m",
+        "labelPosition": "outside",
+        "tooltipUnit": "nghìn khách"
+      }
+    ]
+  }
+}

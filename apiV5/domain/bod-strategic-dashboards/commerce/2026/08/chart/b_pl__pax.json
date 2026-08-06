@@ -1,0 +1,177 @@
+{
+  "autoChart": {
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "ck",
+          "type": "number",
+          "label": "2025",
+          "color": "#C5C9CC"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "fct",
+          "type": "number",
+          "label": "Dự báo 2026",
+          "color": "#8B5CF6"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          0.92,
+          1.28,
+          1.2,
+          null
+        ],
+        [
+          "T2",
+          1.02,
+          1.37,
+          1.3,
+          null
+        ],
+        [
+          "T3",
+          1.25,
+          1.63,
+          1.53,
+          null
+        ],
+        [
+          "T4",
+          1.44,
+          1.88,
+          1.78,
+          null
+        ],
+        [
+          "T5",
+          0.64,
+          1.03,
+          0.93,
+          null
+        ],
+        [
+          "T6",
+          0.9,
+          1.26,
+          1.19,
+          null
+        ],
+        [
+          "T7",
+          0.94,
+          1.3,
+          1.21,
+          null
+        ],
+        [
+          "T8",
+          0.77,
+          1.03,
+          0.88,
+          0.88
+        ],
+        [
+          "T9",
+          0.86,
+          1.11,
+          null,
+          0.85
+        ],
+        [
+          "T10",
+          0.93,
+          1.21,
+          null,
+          0.88
+        ],
+        [
+          "T11",
+          1.09,
+          1.42,
+          null,
+          null
+        ],
+        [
+          "T12",
+          1.1,
+          1.42,
+          null,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "ck",
+            "chartType": "line",
+            "showSymbol": false
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "showSymbol": false,
+            "lineStyle": "dashed"
+          },
+          {
+            "field": "th",
+            "chartType": "line",
+            "showSymbol": true,
+            "symbolFilled": true,
+            "symbolSize": 3,
+            "showLabel": "end"
+          },
+          {
+            "field": "fct",
+            "chartType": "line",
+            "showSymbol": false,
+            "areaStyle": {},
+            "lineStyle": "dashed"
+          }
+        ],
+        "xAxis": {
+          "data": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5",
+            "T6",
+            "T7",
+            "T8",
+            "T9",
+            "T10",
+            "T11",
+            "T12"
+          ],
+          "axisLabel": {
+            "interval": 0
+          }
+        }
+      }
+    ],
+    "chartType": "line"
+  }
+}
