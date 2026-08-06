@@ -1,0 +1,124 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 1.35,
+    "note": "Tương quan CASK và RASK theo khu vực — 4 ô phân vùng tại trung điểm range. Ô trên-trái (CASK thấp, RASK cao) = lợi nhuận tốt; ô dưới-phải = cảnh báo lỗ.",
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "area",
+          "type": "string"
+        },
+        {
+          "id": "cost_pax",
+          "type": "number",
+          "label": "CASK (VNĐ/ghế.km)"
+        },
+        {
+          "id": "rev_pax",
+          "type": "number",
+          "label": "RASK (VNĐ/ghế.km)"
+        },
+        {
+          "id": "paxRev",
+          "type": "number",
+          "label": "DT khách (trđ)"
+        },
+        {
+          "id": "fc_pax",
+          "type": "number",
+          "label": "CP cố định / khách (nghìn VNĐ)"
+        },
+        {
+          "id": "vc_pax",
+          "type": "number",
+          "label": "CP biến đổi / khách (nghìn VNĐ)"
+        }
+      ],
+      "rows": [
+        [
+          "Trục lẻ",
+          "Trục lẻ",
+          2600,
+          2900,
+          2540000,
+          900,
+          1700
+        ],
+        [
+          "Du lịch",
+          "Du lịch",
+          2800,
+          3200,
+          3430000,
+          950,
+          1850
+        ],
+        [
+          "SGN_DAD",
+          "SGN_DAD",
+          3000,
+          2750,
+          2840000,
+          1050,
+          1950
+        ],
+        [
+          "Địa phương",
+          "Địa phương",
+          2500,
+          2800,
+          1880000,
+          850,
+          1650
+        ],
+        [
+          "HAN_SGN",
+          "HAN_SGN",
+          3100,
+          3300,
+          7140000,
+          1000,
+          2100
+        ],
+        [
+          "HAN_DAD",
+          "HAN_DAD",
+          3300,
+          2900,
+          5010000,
+          1200,
+          2100
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cost_pax",
+        "yField": "rev_pax",
+        "sizeField": "__none__",
+        "colorBy": "area",
+        "series": [
+          {
+            "field": "rev_pax",
+            "chartType": "scatter"
+          }
+        ],
+        "breakEven": {
+          "mode": "quadrant"
+        },
+        "tooltipFields": [
+          "fc_pax",
+          "vc_pax"
+        ],
+        "sizeScale": 1.5
+      }
+    ]
+  }
+}
