@@ -1,0 +1,1368 @@
+{
+  "titleInfo": {
+    "title": "Commerce II",
+    "statusLabel": "REAL TIME",
+    "description": "Phân tích thương mại theo Lĩnh vực, Mạng bay, Hãng vận chuyển — Hành khách"
+  },
+  "metricCards": {
+    "accentClassName": "bg-regal-blue",
+    "items": [
+      {
+        "id": "pax",
+        "status": "compact",
+        "title": "PAX",
+        "value": "985",
+        "unit": "nghìn khách",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "97.1% với Kế hoạch",
+            "type": "plan",
+            "value": "97.1%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "5.4% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "5.4%",
+            "tone": "positive"
+          }
+        ],
+        "defaultSelected": true,
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "pax_rev",
+        "status": "compact",
+        "title": "PAX REV",
+        "value": "4,433",
+        "unit": "tỷ VND",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "96.2% với Kế hoạch",
+            "type": "plan",
+            "value": "96.2%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "10.5% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "10.5%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      },
+      {
+        "id": "lf",
+        "status": "compact",
+        "title": "LF",
+        "value": "82.5",
+        "unit": "%",
+        "trend": [
+          {
+            "direction": "flat",
+            "label": "98.4% với Kế hoạch",
+            "type": "plan",
+            "value": "98.4%",
+            "status": 0,
+            "tone": "negative"
+          },
+          {
+            "direction": "up",
+            "label": "3.8% với Cùng kỳ",
+            "type": "samePeriod",
+            "value": "3.8%",
+            "tone": "positive"
+          }
+        ],
+        "colorTokens": {
+          "visualization": "semantic.positive"
+        }
+      }
+    ],
+    "layout": {
+      "columns": 3
+    }
+  },
+  "chartBoard": [
+    {
+      "title": "Số lượng khách",
+      "items": [
+        {
+          "id": "b_pax_total",
+          "title": "Tổng số lượng khách",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "aiInsight": {
+            "text": "Khách vận chuyển toàn mạng đạt 985 nghìn khách (97.1% KH, +5.4% CK). Sản lượng phục hồi tốt nhờ cao điểm Hè.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_pax_int",
+          "title": "Số lượng khách quốc tế",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_dom",
+          "title": "Số lượng khách nội địa",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "b_pax_area_int_donut",
+          "title": "Số lượng khách theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_int_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_int_bar",
+          "title": "Số lượng khách theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_int_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_dom_donut",
+          "title": "Số lượng khách theo khu vực - Nội địa",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_dom_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_area_dom_bar",
+          "title": "Số lượng khách theo khu vực - Nội địa",
+          "subTitle": "ĐVT: Nghìn khách",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_dom_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "title": "Doanh thu khách",
+      "items": [
+        {
+          "id": "b_pax_rev_total",
+          "title": "Tổng doanh thu khách",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "aiInsight": {
+            "text": "Doanh thu khách toàn mạng đạt 4.433 tỷ VND (96.2% KH, +10.5% CK). Tăng trưởng tích cực nhờ sản lượng cao.",
+            "severity": "good",
+            "status": 1
+          }
+        },
+        {
+          "id": "b_pax_rev_int",
+          "title": "Doanh thu khách quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_dom",
+          "title": "Doanh thu khách nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "b_pax_rev_area_int_donut",
+          "title": "Doanh thu khách theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_int_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_int_bar",
+          "title": "Doanh thu khách theo khu vực - Quốc tế",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_int_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_dom_donut",
+          "title": "Doanh thu khách theo khu vực - Nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_dom_donut.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_pax_rev_area_dom_bar",
+          "title": "Doanh thu khách theo khu vực - Nội địa",
+          "subTitle": "ĐVT: tỷ VND",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 350,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_dom_bar.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    },
+    {
+      "title": "LF",
+      "items": [
+        {
+          "id": "b_lf_total",
+          "title": "LF",
+          "subTitle": "ĐVT: %",
+          "col": 1,
+          "colSpan": 60,
+          "row": 1,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_total.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_int",
+          "title": "LF - Quốc tế",
+          "subTitle": "ĐVT: %",
+          "col": 1,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_dom",
+          "title": "LF - Nội địa",
+          "subTitle": "ĐVT: %",
+          "col": 31,
+          "colSpan": 30,
+          "row": 2,
+          "rowSpan": 1,
+          "height": 280,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_hbar_int",
+          "title": "LF theo khu vực - Quốc tế",
+          "col": 1,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_hbar_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_table_int",
+          "title": "LF theo khu vực - Quốc tế",
+          "col": 31,
+          "colSpan": 30,
+          "row": 3,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_table_int.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_hbar_dom",
+          "title": "LF theo khu vực - Nội địa",
+          "col": 1,
+          "colSpan": 30,
+          "row": 4,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_hbar_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        },
+        {
+          "id": "b_lf_table_dom",
+          "title": "LF theo khu vực - Nội địa",
+          "col": 31,
+          "colSpan": 30,
+          "row": 4,
+          "rowSpan": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_table_dom.json",
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          }
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "key": "dataType",
+      "col": 1,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Lĩnh vực",
+      "showInfo": true,
+      "infoTooltip": "Chọn loại dữ liệu",
+      "size": "sm",
+      "options": [
+        {
+          "value": "overview",
+          "label": "Tổng quan"
+        },
+        {
+          "value": "passenger",
+          "label": "Hành khách"
+        },
+        {
+          "value": "cargo",
+          "label": "Hàng hoá"
+        }
+      ]
+    },
+    {
+      "key": "network",
+      "col": 9,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Mạng bay",
+      "showInfo": true,
+      "infoTooltip": "Chọn phạm vi mạng bay muốn xem",
+      "size": "sm",
+      "options": [
+        {
+          "value": "total",
+          "label": "Toàn mạng"
+        },
+        {
+          "value": "int",
+          "label": "Quốc tế"
+        },
+        {
+          "value": "dom",
+          "label": "Nội địa"
+        }
+      ]
+    },
+    {
+      "key": "carrier",
+      "col": 17,
+      "colSpan": 8,
+      "row": 1,
+      "label": "Hãng vận chuyển",
+      "showInfo": true,
+      "infoTooltip": "Chọn hãng vận chuyển",
+      "size": "sm",
+      "options": [
+        {
+          "value": "vn",
+          "label": "VN"
+        },
+        {
+          "value": "vn-ov",
+          "label": "VN+0V+BL"
+        }
+      ]
+    }
+  ],
+  "filterColumns": 60,
+  "timeFrameModes": [
+    "day",
+    "week",
+    "month"
+  ],
+  "timeFrameHiddenModes": [
+    "quarter",
+    "6m",
+    "9m",
+    "year",
+    "custom"
+  ],
+  "contentFilter": {
+    "network": {
+      "int": {
+        "chartBoard": [
+          {
+            "title": "Số lượng khách",
+            "items": [
+              {
+                "id": "b_pax_int",
+                "title": "Số lượng khách quốc tế",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khách quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_area_int_bar",
+                "title": "Số lượng khách theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Khách quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_pax_by_country_int",
+                "title": "Số lượng khách theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_by_country_int.json",
+                "aiInsight": {
+                  "text": "Khách quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_best_int",
+                "title": "Top 5 đường bay quốc tế có số lượng khách cao nhất",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_best_int.json",
+                "aiInsight": {
+                  "text": "Khách quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_worst_int",
+                "title": "Top 5 đường bay quốc tế có số lượng khách thấp nhất",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_worst_int.json",
+                "aiInsight": {
+                  "text": "Khách quốc tế đạt 343 nghìn (95.2% KH, +8.2% CK). Khu vực CLMV và SAS tăng trưởng tích cực.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Doanh thu khách",
+            "items": [
+              {
+                "id": "b_pax_rev_int",
+                "title": "Doanh thu khách quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu khách quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_rev_area_int_bar",
+                "title": "Doanh thu khách theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_pax_rev_by_country_int",
+                "title": "Doanh thu khách theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_by_country_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_best_int",
+                "title": "Top 5 đường bay quốc tế có doanh thu cao nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_rev_best_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_worst_int",
+                "title": "Top 5 đường bay quốc tế có doanh thu thấp nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_rev_worst_int.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách quốc tế đạt 2.650 tỷ VND, tăng 12.3% CK nhờ giá vé cao.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "LF",
+            "items": [
+              {
+                "id": "b_lf_int",
+                "title": "LF - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_lf_area_int_bar",
+                "title": "LF theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_lf_by_country_int",
+                "title": "LF theo quốc gia - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 2,
+                "height": 480,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_by_country_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_best_int",
+                "title": "Top 5 đường bay quốc tế có LF cao nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_lf_best_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_worst_int",
+                "title": "Top 5 đường bay quốc tế có LF thấp nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 2,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_lf_worst_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Chi tiết theo đường bay",
+            "items": [
+              {
+                "id": "b_int_route_table",
+                "title": "Chi tiết theo đường bay - Quốc tế",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 800,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_int_route_table.json"
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "PAX",
+              "value": "343",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "95.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "95.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "8.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "8.2%",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "pax_rev",
+              "status": "compact",
+              "title": "PAX REV",
+              "value": "2,650",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "94.8% với Kế hoạch",
+                  "type": "plan",
+                  "value": "94.8%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "12.3% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "12.3%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "LF",
+              "value": "80.0",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "96.5% với Kế hoạch",
+                  "type": "plan",
+                  "value": "96.5%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "4.2% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "4.2%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 3
+          }
+        }
+      },
+      "dom": {
+        "chartBoard": [
+          {
+            "title": "Số lượng khách",
+            "items": [
+              {
+                "id": "b_pax_dom",
+                "title": "Số lượng khách nội địa",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_dom.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Khách nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_area_dom_bar",
+                "title": "Số lượng khách theo khu vực - Nội địa",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_area_dom_bar.json",
+                "aiInsight": {
+                  "text": "Khách nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_pax_best_dom",
+                "title": "Top 5 đường bay nội địa có số lượng khách cao nhất",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_best_dom.json",
+                "aiInsight": {
+                  "text": "Khách nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_worst_dom",
+                "title": "Top 5 đường bay nội địa có số lượng khách thấp nhất",
+                "subTitle": "ĐVT: Nghìn khách",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_worst_dom.json",
+                "aiInsight": {
+                  "text": "Khách nội địa đạt 642 nghìn (98.3% KH, +3.8% CK). Thị trường nội địa duy trì tăng trưởng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Doanh thu khách",
+            "items": [
+              {
+                "id": "b_pax_rev_dom",
+                "title": "Doanh thu khách nội địa",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_dom.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Doanh thu khách nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_pax_rev_area_dom_bar",
+                "title": "Doanh thu khách theo khu vực - Nội địa",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_pax_rev_area_dom_bar.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_pax_rev_best_dom",
+                "title": "Top 5 đường bay nội địa có doanh thu cao nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_rev_best_dom.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_pax_rev_worst_dom",
+                "title": "Top 5 đường bay nội địa có doanh thu thấp nhất",
+                "subTitle": "ĐVT: tỷ VND",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_pax_rev_worst_dom.json",
+                "aiInsight": {
+                  "text": "Doanh thu khách nội địa đạt 1.783 tỷ VND, tăng 7.8% CK nhờ sản lượng ổn định.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "LF",
+            "items": [
+              {
+                "id": "b_lf_int",
+                "title": "LF - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_int.json",
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                },
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                }
+              },
+              {
+                "id": "b_lf_area_int_bar",
+                "title": "LF theo khu vực - Quốc tế",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 280,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_lf_area_int_bar.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "id": "b_top5_lf_best_int",
+                "title": "Top 5 đường bay quốc tế có LF cao nhất",
+                "subTitle": "ĐVT: %",
+                "col": 1,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_lf_best_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              },
+              {
+                "id": "b_top5_lf_worst_int",
+                "title": "Top 5 đường bay quốc tế có LF thấp nhất",
+                "subTitle": "ĐVT: %",
+                "col": 31,
+                "colSpan": 30,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 240,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_top5_lf_worst_int.json",
+                "aiInsight": {
+                  "text": "Hệ số tải quốc tế đạt 80.0%, cải thiện vs CK nhờ nhu cầu đi lại tăng.",
+                  "severity": "good",
+                  "status": 1
+                },
+                "headerAction": {
+                  "type": "cumulative",
+                  "defaultChecked": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "Chi tiết theo đường bay",
+            "items": [
+              {
+                "id": "b_dom_route_table",
+                "title": "Chi tiết theo đường bay - Nội địa",
+                "col": 1,
+                "colSpan": 60,
+                "row": 1,
+                "rowSpan": 1,
+                "height": 800,
+                "chartPath": "apiV5/domain/ceo-command-center/commerce/2026/08/14/passenger/vn/chart/b_dom_route_table.json"
+              }
+            ]
+          }
+        ],
+        "metricCards": {
+          "accentClassName": "bg-regal-blue",
+          "items": [
+            {
+              "id": "pax",
+              "status": "compact",
+              "title": "PAX",
+              "value": "642",
+              "unit": "nghìn khách",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "98.3% với Kế hoạch",
+                  "type": "plan",
+                  "value": "98.3%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "3.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.8%",
+                  "tone": "positive"
+                }
+              ],
+              "defaultSelected": true,
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "pax_rev",
+              "status": "compact",
+              "title": "PAX REV",
+              "value": "1,783",
+              "unit": "tỷ VND",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "97.5% với Kế hoạch",
+                  "type": "plan",
+                  "value": "97.5%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "7.8% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "7.8%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            },
+            {
+              "id": "lf",
+              "status": "compact",
+              "title": "LF",
+              "value": "84.0",
+              "unit": "%",
+              "trend": [
+                {
+                  "direction": "flat",
+                  "label": "99.2% với Kế hoạch",
+                  "type": "plan",
+                  "value": "99.2%",
+                  "status": 0,
+                  "tone": "negative"
+                },
+                {
+                  "direction": "up",
+                  "label": "3.5% với Cùng kỳ",
+                  "type": "samePeriod",
+                  "value": "3.5%",
+                  "tone": "positive"
+                }
+              ],
+              "colorTokens": {
+                "visualization": "semantic.positive"
+              }
+            }
+          ],
+          "layout": {
+            "columns": 3
+          }
+        }
+      }
+    }
+  },
+  "insightCards": {
+    "title": "Nhận định & Đánh giá",
+    "insight": {
+      "title": "Nhận định",
+      "variant": "info",
+      "showAiBadge": true,
+      "columns": [
+        {
+          "label": "Quốc tế",
+          "items": [
+            "<strong>PAX</strong> (Tháng 08): đạt <strong>343</strong> nghìn khách, tăng <strong>13,5%</strong> vs KT, giảm <strong>95.2%</strong> vs KH, tăng <strong>8.2%</strong> vs CK",
+            "<strong>PAX REV</strong> (Tháng 08): đạt <strong>2,650</strong> tỷ VND, tăng <strong>8,5%</strong> vs KT, giảm <strong>94.8%</strong> vs KH, tăng <strong>12.3%</strong> vs CK",
+            "<strong>LF</strong> (Tháng 08): đạt <strong>80.0</strong> %, giảm <strong>6,4%</strong> vs KT, giảm <strong>96.5%</strong> vs KH, tăng <strong>4.2%</strong> vs CK"
+          ]
+        },
+        {
+          "label": "Nội địa",
+          "items": [
+            "<strong>PAX</strong> (Tháng 08): đạt <strong>642</strong> nghìn khách, tăng <strong>10,7%</strong> vs KT, giảm <strong>98.3%</strong> vs KH, tăng <strong>3.8%</strong> vs CK",
+            "<strong>PAX REV</strong> (Tháng 08): đạt <strong>1,783</strong> tỷ VND, tăng <strong>16,2%</strong> vs KT, giảm <strong>97.5%</strong> vs KH, tăng <strong>7.8%</strong> vs CK",
+            "<strong>LF</strong> (Tháng 08): đạt <strong>84.0</strong> %, giảm <strong>5,3%</strong> vs KT, giảm <strong>99.2%</strong> vs KH, tăng <strong>3.5%</strong> vs CK"
+          ]
+        }
+      ]
+    }
+  }
+}

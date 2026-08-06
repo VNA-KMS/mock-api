@@ -22,7 +22,7 @@ const TARGET_MONTH = process.argv[2] || '07';
 
 const CHART_DIR = path.join(
   __dirname, '..',
-  'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026', TARGET_MONTH, 'chart'
+  'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026', TARGET_MONTH, 'chart'
 );
 
 // Weeks per month (cumulative week boundaries)

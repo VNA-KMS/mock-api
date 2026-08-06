@@ -14,7 +14,7 @@
  * - hq_so_cpbd
  *
  * Scope:
- * - ONLY root `commerce-ii/.../<MM>/<DD>/index.json`
+ * - ONLY root `commerce/.../<MM>/<DD>/index.json`
  * - Do NOT touch passenger/cargo day indices.
  */
 
@@ -38,7 +38,7 @@ function filterMetricCards(json) {
 }
 
 function main() {
-  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026')
+  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026')
 
   const months = ['07', '08']
   const days = 31

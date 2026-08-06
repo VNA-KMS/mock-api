@@ -25,7 +25,7 @@ if (!TARGET_MONTH || !/^\d{2}$/.test(TARGET_MONTH)) {
 
 // ── Paths ──────────────────────────────────────────────────────────────────────
 
-const BASE_DIR = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026');
+const BASE_DIR = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026');
 const W32_DIR = path.join(BASE_DIR, 'W32');
 const W32_CHART_DIR = path.join(W32_DIR, 'chart');
 const W32_INDEX = path.join(W32_DIR, 'index.json');

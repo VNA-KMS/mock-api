@@ -2,10 +2,10 @@
  * Duplicate Commerce II month `index.json` -> day `index.json` (mock).
  *
  * Fix for 404 when FE calls:
- *   .../commerce-ii/2026/MM/DD/index.json   (mode `day`)
+ *   .../commerce/2026/MM/DD/index.json   (mode `day`)
  *
  * Current mock-api typically has only:
- *   .../commerce-ii/2026/MM/index.json      (mode `month`)
+ *   .../commerce/2026/MM/index.json      (mode `month`)
  *
  * Implementation (lightweight):
  * - Copy `index.json` files only.
@@ -37,7 +37,7 @@ function safeWriteJson(filePath, obj) {
 }
 
 function main() {
-  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026')
+  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026')
 
   const months = [
     { mm: '07', days: 31 },

@@ -1,7 +1,7 @@
 /**
  * generate_commerce_ii_day_charts.js
  *
- * For ceo-command-center/commerce-ii day mode:
+ * For ceo-command-center/commerce day mode:
  * - Source: month chart files at  .../YYYY/MM/chart/*.json  (x-axis = "month", labels T1..T12)
  * - Target: day chart files at    .../YYYY/MM/DD/chart/*.json  (x-axis = "day", labels DD/MM)
  *
@@ -24,7 +24,7 @@
  * Also updates each DD/index.json to redirect chartPath from
  *   .../YYYY/MM/chart/xxx.json  →  .../YYYY/MM/DD/chart/xxx.json
  *
- * Scope: ONLY commerce-ii months 07 and 08 (all days 01-31).
+ * Scope: ONLY commerce months 07 and 08 (all days 01-31).
  */
 
 'use strict'
@@ -220,13 +220,13 @@ function rewriteChartPaths(obj, mm, dd2) {
   const keys = Array.isArray(obj) ? [...obj.keys()] : Object.keys(obj)
   for (const k of keys) {
     if (typeof obj[k] === 'string') {
-      const base = `/commerce-ii/2026/${mm}/`
+      const base = `/commerce/2026/${mm}/`
       if (obj[k].includes(base) && obj[k].includes('/chart/')) {
         // Replace the MM segment with MM/DD while keeping sub-paths intact
         // e.g. .../2026/08/passenger/vn/chart/xxx → .../2026/08/05/passenger/vn/chart/xxx
         obj[k] = obj[k].replace(
-          new RegExp(`/commerce-ii/2026/${mm}/(?!${dd2}/)`),
-          `/commerce-ii/2026/${mm}/${dd2}/`
+          new RegExp(`/commerce/2026/${mm}/(?!${dd2}/)`),
+          `/commerce/2026/${mm}/${dd2}/`
         )
       }
     } else {
@@ -256,7 +256,7 @@ const SUB_CHART_DIRS = [
 ]
 
 function main() {
-  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026')
+  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026')
 
   const months = [
     { mm: '07', days: 31 },

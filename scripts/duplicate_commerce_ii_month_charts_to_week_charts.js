@@ -1,7 +1,7 @@
 /**
  * Duplicate Commerce II month charts -> week charts.
  *
- * Requirement (for `ceo-command-center/commerce-ii`):
+ * Requirement (for `ceo-command-center/commerce`):
  * - Month chart has 12 points with x-axis id `month` and labels `T1..T12`.
  * - Week chart needs 15 points with x-axis id `week` and labels `N15..N29`.
  * - Mapping: T1..T12 -> N15..N26
@@ -105,7 +105,7 @@ function copyAndTransformDir({ srcDir, dstDir }) {
 }
 
 function main() {
-  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026')
+  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026')
 
   const pairs = [
     { src: path.join(BASE, '07'), dst: path.join(BASE, 'W31') },

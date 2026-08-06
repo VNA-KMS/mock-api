@@ -1,0 +1,187 @@
+{
+  "autoChart": {
+    "chartType": "scatter",
+    "aspectRatio": 1.35,
+    "note": "Tương quan CASK và RASK theo khu vực — 4 ô phân vùng tại trung điểm range. Ô trên-trái (CASK thấp, RASK cao) = lợi nhuận tốt; ô dưới-phải = cảnh báo lỗ.",
+    "dataset": {
+      "columns": [
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "area",
+          "type": "string"
+        },
+        {
+          "id": "cost_pax",
+          "type": "number",
+          "label": "CASK (VNĐ/ghế.km)"
+        },
+        {
+          "id": "rev_pax",
+          "type": "number",
+          "label": "RASK (VNĐ/ghế.km)"
+        },
+        {
+          "id": "paxRev",
+          "type": "number",
+          "label": "DT khách (trđ)"
+        },
+        {
+          "id": "fc_pax",
+          "type": "number",
+          "label": "CP cố định / khách (nghìn VNĐ)"
+        },
+        {
+          "id": "vc_pax",
+          "type": "number",
+          "label": "CP biến đổi / khách (nghìn VNĐ)"
+        }
+      ],
+      "rows": [
+        [
+          "EU",
+          "EU",
+          2800,
+          2500,
+          1362250,
+          900,
+          1900
+        ],
+        [
+          "SWP",
+          "SWP",
+          3250,
+          2700,
+          561035,
+          1050,
+          2200
+        ],
+        [
+          "CLMV-HAN",
+          "CLMV",
+          2500,
+          3400,
+          62500,
+          800,
+          1700
+        ],
+        [
+          "CLMV-SGN",
+          "CLMV",
+          4600,
+          2400,
+          52300,
+          1500,
+          3100
+        ],
+        [
+          "SEA-HAN",
+          "SEA",
+          3950,
+          3300,
+          392415,
+          1100,
+          2850
+        ],
+        [
+          "SEA-SGN",
+          "SEA",
+          3500,
+          2900,
+          300000,
+          1000,
+          2500
+        ],
+        [
+          "MID",
+          "MID",
+          2600,
+          3200,
+          190000,
+          850,
+          1750
+        ],
+        [
+          "NOA",
+          "NOA",
+          3500,
+          2700,
+          150050,
+          1200,
+          2300
+        ],
+        [
+          "NEA-HAN",
+          "NEA",
+          3250,
+          3100,
+          1100000,
+          1050,
+          2200
+        ],
+        [
+          "NEA-SGN",
+          "NEA",
+          4150,
+          2500,
+          1047525,
+          1400,
+          2750
+        ],
+        [
+          "SAS",
+          "SAS",
+          2600,
+          3200,
+          254125,
+          800,
+          1800
+        ],
+        [
+          "HANSGN",
+          "HANSGN",
+          4000,
+          3200,
+          225000,
+          1200,
+          2800
+        ],
+        [
+          "HAN",
+          "HAN",
+          3200,
+          2700,
+          325000,
+          1000,
+          2200
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "cost_pax",
+        "yField": "rev_pax",
+        "sizeField": "__none__",
+        "colorBy": "area",
+        "series": [
+          {
+            "field": "rev_pax",
+            "chartType": "scatter"
+          }
+        ],
+        "breakEven": {
+          "mode": "quadrant"
+        },
+        "tooltipFields": [
+          "fc_pax",
+          "vc_pax"
+        ],
+        "sizeScale": 1.5
+      }
+    ]
+  }
+}

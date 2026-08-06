@@ -8,7 +8,7 @@
  * This script only:
  * 1) Remove `year` from `timeFrameModes` (keep `week`).
  *
- * Scope: root overview `commerce-ii/.../index.json` for 07/08/W31/W32.
+ * Scope: root overview `commerce/.../index.json` for 07/08/W31/W32.
  */
 
 'use strict'
@@ -34,7 +34,7 @@ function ensureYearHidden(root) {
 }
 
 function main() {
-  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce-ii', '2026')
+  const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center', 'commerce', '2026')
 
   const indexFiles = [
     path.join(BASE, '07', 'index.json'),
@@ -59,10 +59,10 @@ function main() {
     // Day-only removal is handled on .../MM/DD/index.json separately.
 
     fs.writeFileSync(indexPath, JSON.stringify(json, null, 2), 'utf-8')
-    console.log(`[update-commerce-ii-overview] Updated: ${indexPath}`)
+    console.log(`[update-commerce-overview] Updated: ${indexPath}`)
   }
 
-  console.log('[update-commerce-ii-overview] Done')
+  console.log('[update-commerce-overview] Done')
 }
 
 main()

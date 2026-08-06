@@ -4,8 +4,8 @@ const path = require('path')
 const BASE = path.join(__dirname, '..', 'apiV5', 'domain', 'ceo-command-center')
 const SRC_MONTH = path.join(BASE, 'commerce-i', '2026', '07')
 const SRC_WEEK = path.join(BASE, 'commerce-i', '2026', 'W31')
-const DST_MONTH = path.join(BASE, 'commerce-ii', '2026', '07')
-const DST_WEEK = path.join(BASE, 'commerce-ii', '2026', 'W31')
+const DST_MONTH = path.join(BASE, 'commerce', '2026', '07')
+const DST_WEEK = path.join(BASE, 'commerce', '2026', 'W31')
 
 // Read, modify data (shift by random factor), and write chart files
 function processChartFiles(srcDir, dstDir, seed) {
@@ -94,7 +94,7 @@ function createWeekIndex() {
   console.log(`  Created ${dstPath}`)
 }
 
-// Update month index.json chart paths from commerce-i to commerce-ii
+// Update month index.json chart paths from commerce-i to commerce
 function updateMonthIndexPaths() {
   const indexPath = path.join(DST_MONTH, 'index.json')
   const data = JSON.parse(fs.readFileSync(indexPath, 'utf-8'))
@@ -103,7 +103,7 @@ function updateMonthIndexPaths() {
     if (!obj || typeof obj !== 'object') return
     for (const key of Object.keys(obj)) {
       if (typeof obj[key] === 'string') {
-        obj[key] = obj[key].replace(/\/commerce-i\//g, '/commerce-ii/')
+        obj[key] = obj[key].replace(/\/commerce-i\//g, '/commerce/')
       } else {
         updatePaths(obj[key])
       }
