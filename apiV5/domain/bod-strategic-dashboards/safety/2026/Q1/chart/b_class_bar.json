@@ -1,20 +1,18 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         { "id": "quarter", "type": "string" },
-        { "id": "a", "type": "number", "label": "A", "color": "#C62828" },
-        { "id": "b", "type": "number", "label": "B", "color": "#E65100" },
-        { "id": "c", "type": "number", "label": "C", "color": "#B28704" },
-        { "id": "d", "type": "number", "label": "D", "color": "#2E7D32" },
-        { "id": "e", "type": "number", "label": "E", "color": "#00558F" }
+        { "id": "aoc01", "type": "number", "label": "AOC01", "color": "#C62828" },
+        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#E65100" },
+        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#00558F" }
       ],
       "rows": [
-        ["Q1", 0, 0, 0, 2, 7],
-        ["Q2", null, null, null, null, null],
-        ["Q3", null, null, null, null, null],
-        ["Q4", null, null, null, null, null]
+        ["Q1", 0, 0, 9],
+        ["Q2", null, null, null],
+        ["Q3", null, null, null],
+        ["Q4", null, null, null]
       ]
     },
     "views": [
@@ -22,12 +20,11 @@
         "id": "main",
         "chartType": "auto",
         "xField": "quarter",
+        "stack": "total",
         "series": [
-          { "field": "a", "chartType": "bar" },
-          { "field": "b", "chartType": "bar" },
-          { "field": "c", "chartType": "bar" },
-          { "field": "d", "chartType": "bar" },
-          { "field": "e", "chartType": "bar" }
+          { "field": "aoc01", "chartType": "bar" },
+          { "field": "aoc02", "chartType": "bar" },
+          { "field": "aoc03", "chartType": "bar" }
         ]
       }
     ]

@@ -359,7 +359,6 @@
           "row": 1,
           "rowSpan": 1,
           "title": "Số lượng sự cố, vụ việc",
-          "subTitle": "Đơn vị: Sự cố, vụ việc",
           "height": 280,
           "aiInsight": {
             "text": "Tổng số vụ việc tháng 7 là 42 vụ, giảm 2 vụ so với tháng trước và 5 vụ so với cùng kỳ. Xu hướng 6 tháng đầu năm cải thiện rõ rệt (từ 37 xuống 32), tuy nhiên T7 tăng đột biến theo mùa, thấp hơn đáng kể so với mức 47 vụ cùng kỳ 2025.",
@@ -379,7 +378,6 @@
           "row": 1,
           "rowSpan": 1,
           "title": "Tỷ lệ sự cố, vụ việc theo lĩnh vực",
-          "subTitle": "Đơn vị: %",
           "height": 280,
           "aiInsight": {
             "text": "Khai thác bay chiếm 60% tổng số sự cố, chủ yếu liên quan đến approach hạ cánh và cảnh báo TCAS. Kỹ thuật chiếm 30% với các sự cố động cơ và hệ thống. Cần tập trung giảng bình approach và bảo dưỡng phòng ngừa.",
@@ -395,7 +393,6 @@
           "row": 2,
           "rowSpan": 1,
           "title": "Phân loại sự cố, vụ việc",
-          "subTitle": "Đơn vị: Sự cố, vụ việc",
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/07/chart/b_class_bar.json"
         },
@@ -406,7 +403,6 @@
           "row": 2,
           "rowSpan": 1,
           "title": "Bảng phân loại sự cố, vụ việc (theo tháng)",
-          "subTitle": "Đơn vị: Sự cố, vụ việc",
           "aiInsight": {
             "text": "Tháng này không ghi nhận sự cố mức A (rất nặng) và B (nặng). Chủ yếu là mức D (nhẹ, 2 vụ) và E (khác, 11 vụ). Lũy kế 7 tháng: 1 vụ B, 2 vụ C, 7 vụ D, 33 vụ E — tình hình an toàn được kiểm soát tốt.",
             "severity": "good",
@@ -425,11 +421,9 @@
                   { "id": "diff_thang_truoc", "type": "number", "label": "+/- tháng trước", "align": "center" }
                 ],
                 "rows": [
-                  ["A", 0, 0, 0, 0, 0],
-                  ["B", 0, 1, 0, 0, -1],
-                  ["C", 1, 1, 0, -1, -1],
-                  ["D", 3, 2, 2, -1, 0],
-                  ["E", 9, 10, 11, 2, 1],
+                  ["AOC01", 0, 0, 0, 0, 0],
+                  ["AOC02", 0, 1, 0, 0, -1],
+                  ["AOC03", 13, 13, 13, 0, 0],
                   ["Tổng cộng", 13, 14, 13, 0, -1]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
@@ -438,25 +432,17 @@
                   "textColor": "var(--color-safety-table-header-text)"
                 },
                 "rowStyle": {
-                  "A": {
-                    "backgroundColor": "var(--color-safety-row-a-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC01": {
+                    "backgroundColor": "#C62828",
+                    "textColor": "#FFFFFF"
                   },
-                  "B": {
-                    "backgroundColor": "var(--color-safety-row-b-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC02": {
+                    "backgroundColor": "#E65100",
+                    "textColor": "#FFFFFF"
                   },
-                  "C": {
-                    "backgroundColor": "var(--color-safety-row-c-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "D": {
-                    "backgroundColor": "var(--color-safety-row-d-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "E": {
-                    "backgroundColor": "var(--color-safety-row-e-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC03": {
+                    "backgroundColor": "#00558F",
+                    "textColor": "#FFFFFF"
                   },
                   "Tổng cộng": {
                     "backgroundColor": "var(--color-safety-row-total-bg)",
@@ -465,11 +451,9 @@
                   }
                 },
                 "rowTone": {
-                  "A": "critical",
-                  "B": "high",
-                  "C": "medium",
-                  "D": "low",
-                  "E": "other",
+                  "AOC01": "critical",
+                  "AOC02": "high",
+                  "AOC03": "medium",
                   "Tổng cộng": "total"
                 }
               }
@@ -483,7 +467,6 @@
           "row": 2,
           "rowSpan": 1,
           "title": "Bảng phân loại sự cố, vụ việc (lũy kế)",
-          "subTitle": "Đơn vị: Sự cố, vụ việc",
           "extraComponent": {
             "type": "table",
             "config": {
@@ -515,11 +498,9 @@
                   }
                 ],
                 "rows": [
-                  ["A", 0, 0, 0],
-                  ["B", 0, 1, 1],
-                  ["C", 1, 2, 1],
-                  ["D", 6, 7, 1],
-                  ["E", 28, 33, 5],
+                  ["AOC01", 0, 0, 0],
+                  ["AOC02", 0, 1, 1],
+                  ["AOC03", 35, 42, 7],
                   ["Tổng cộng", 35, 43, 8]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
@@ -528,25 +509,17 @@
                   "textColor": "var(--color-safety-table-header-text)"
                 },
                 "rowStyle": {
-                  "A": {
-                    "backgroundColor": "var(--color-safety-row-a-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC01": {
+                    "backgroundColor": "#C62828",
+                    "textColor": "#FFFFFF"
                   },
-                  "B": {
-                    "backgroundColor": "var(--color-safety-row-b-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC02": {
+                    "backgroundColor": "#E65100",
+                    "textColor": "#FFFFFF"
                   },
-                  "C": {
-                    "backgroundColor": "var(--color-safety-row-c-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "D": {
-                    "backgroundColor": "var(--color-safety-row-d-bg)",
-                    "textColor": "var(--color-safety-row-text)"
-                  },
-                  "E": {
-                    "backgroundColor": "var(--color-safety-row-e-bg)",
-                    "textColor": "var(--color-safety-row-text)"
+                  "AOC03": {
+                    "backgroundColor": "#00558F",
+                    "textColor": "#FFFFFF"
                   },
                   "Tổng cộng": {
                     "backgroundColor": "var(--color-safety-row-total-bg)",
@@ -555,11 +528,9 @@
                   }
                 },
                 "rowTone": {
-                  "A": "critical",
-                  "B": "high",
-                  "C": "medium",
-                  "D": "low",
-                  "E": "other",
+                  "AOC01": "critical",
+                  "AOC02": "high",
+                  "AOC03": "medium",
                   "Tổng cộng": "total"
                 }
               }
@@ -569,7 +540,6 @@
         {
           "id": "b_cause_pie",
           "title": "Tỷ lệ sự cố, vụ việc theo nguyên nhân",
-          "subTitle": "Đơn vị: %",
           "col": 41,
           "colSpan": 20,
           "row": 1,
@@ -676,10 +646,6 @@
                 "rowspan": 2
               },
               {
-                "label": "Viết tắt",
-                "rowspan": 2
-              },
-              {
                 "label": "Đơn vị tính",
                 "rowspan": 2
               },
@@ -712,12 +678,6 @@
                 "id": "name",
                 "type": "legend",
                 "label": "Tên KPI",
-                "align": "left"
-              },
-              {
-                "id": "abbr",
-                "type": "text",
-                "label": "Viết tắt",
                 "align": "left"
               },
               {
@@ -771,15 +731,14 @@
             ],
             "rows": [
               {
-                "id": "SQD-001",
+                "id": "AOC-01",
                 "cells": {
-                  "code": "SQD-001",
+                  "code": "AOC-01",
                   "name": {
-                    "text": "Sự cố bắt buộc phải báo cáo",
+                    "text": "Chỉ số tai nạn máy bay",
                     "dot": "#C62828"
                   },
-                  "abbr": "MOR",
-                  "unit": "Số vụ việc/10.000 CB",
+                  "unit": "Số vụ/1000 CB",
                   "mt": "0",
                   "t7_26_so_vu": "0",
                   "t7_26_ty_le": "0",
@@ -796,41 +755,15 @@
                 }
               },
               {
-                "id": "SQD-002",
+                "id": "AOC-02",
                 "cells": {
-                  "code": "SQD-002",
+                  "code": "AOC-02",
                   "name": {
-                    "text": "Tai nạn mức A",
-                    "dot": "#C62828"
-                  },
-                  "abbr": "MOR (A)",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "0",
-                  "t7_26_so_vu": "0",
-                  "t7_26_ty_le": "0",
-                  "cum_26_so_vu": "0",
-                  "cum_26_ty_le": "0",
-                  "eval_t7_26": {
-                    "label": "Đạt",
-                    "tone": "success"
-                  },
-                  "eval_cum_26": {
-                    "label": "Đạt",
-                    "tone": "success"
-                  }
-                }
-              },
-              {
-                "id": "SQD-003",
-                "cells": {
-                  "code": "SQD-003",
-                  "name": {
-                    "text": "Sự cố mức B",
+                    "text": "Chỉ số các sự cố nghiêm trọng",
                     "dot": "#E65100"
                   },
-                  "abbr": "MOR (B)",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "0",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
                   "t7_26_so_vu": "0",
                   "t7_26_ty_le": "0",
                   "cum_26_so_vu": "1",
@@ -846,45 +779,115 @@
                 }
               },
               {
-                "id": "SQD-004",
+                "id": "AOC-03",
                 "cells": {
-                  "code": "SQD-004",
+                  "code": "AOC-03",
                   "name": {
-                    "text": "Sự cố mức C",
+                    "text": "Chỉ số các sự cố bắt buộc phải báo cáo",
                     "dot": "#B28704"
                   },
-                  "abbr": "MOR (C)",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "1",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "55",
+                  "t7_26_so_vu": "13",
+                  "t7_26_ty_le": "13",
+                  "cum_26_so_vu": "43",
+                  "cum_26_ty_le": "43",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-04",
+                "cells": {
+                  "code": "AOC-04",
+                  "name": {
+                    "text": "Chỉ số tiếp cận không ổn định",
+                    "dot": "#2E7D32"
+                  },
+                  "unit": "Số vụ/1000 CB phân tích",
+                  "mt": "50",
+                  "t7_26_so_vu": "6",
+                  "t7_26_ty_le": "6",
+                  "cum_26_so_vu": "48",
+                  "cum_26_ty_le": "48",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-05",
+                "cells": {
+                  "code": "AOC-05",
+                  "name": {
+                    "text": "Chỉ số xông ra ngoài đường cất hạ cánh",
+                    "dot": "#00558F"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "2",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "0",
+                  "cum_26_ty_le": "0",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-06",
+                "cells": {
+                  "code": "AOC-06",
+                  "name": {
+                    "text": "Chỉ số hạ cánh vượt quá vùng tiếp đất được phép",
+                    "dot": "#6A1B9A"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "3",
                   "t7_26_so_vu": "1",
                   "t7_26_ty_le": "1",
                   "cum_26_so_vu": "2",
                   "cum_26_ty_le": "2",
                   "eval_t7_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
                   },
                   "eval_cum_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
                   }
                 }
               },
               {
-                "id": "SQD-005",
+                "id": "AOC-07",
                 "cells": {
-                  "code": "SQD-005",
+                  "code": "AOC-07",
                   "name": {
-                    "text": "Sự cố mức D",
-                    "dot": "#2E7D32"
+                    "text": "Chỉ số tắt động cơ trên không",
+                    "dot": "#00838F"
                   },
-                  "abbr": "MOR (D)",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "5",
-                  "t7_26_so_vu": "6",
-                  "t7_26_ty_le": "6",
-                  "cum_26_so_vu": "7",
-                  "cum_26_ty_le": "7",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
                   "eval_t7_26": {
                     "label": "Đạt",
                     "tone": "success"
@@ -896,41 +899,15 @@
                 }
               },
               {
-                "id": "SQD-006",
+                "id": "AOC-08",
                 "cells": {
-                  "code": "SQD-006",
+                  "code": "AOC-08",
                   "name": {
-                    "text": "Vụ việc mức E",
-                    "dot": "#00558F"
+                    "text": "Chỉ số va chạm bất thường đối với bề mặt đường cất hạ cánh",
+                    "dot": "#AD1457"
                   },
-                  "abbr": "MOR (E)",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "25",
-                  "t7_26_so_vu": "28",
-                  "t7_26_ty_le": "28",
-                  "cum_26_so_vu": "33",
-                  "cum_26_ty_le": "33",
-                  "eval_t7_26": {
-                    "label": "Đạt",
-                    "tone": "success"
-                  },
-                  "eval_cum_26": {
-                    "label": "Đạt",
-                    "tone": "success"
-                  }
-                }
-              },
-              {
-                "id": "SQD-007",
-                "cells": {
-                  "code": "SQD-007",
-                  "name": {
-                    "text": "Sự cố tắt động cơ trên không",
-                    "dot": "#C62828"
-                  },
-                  "abbr": "IFSD",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "0",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
                   "t7_26_so_vu": "0",
                   "t7_26_ty_le": "0",
                   "cum_26_so_vu": "0",
@@ -946,16 +923,15 @@
                 }
               },
               {
-                "id": "SQD-008",
+                "id": "AOC-09",
                 "cells": {
-                  "code": "SQD-008",
+                  "code": "AOC-09",
                   "name": {
-                    "text": "Sự cố tàu bay va chạm với phương tiện mặt đất",
-                    "dot": "#E65100"
+                    "text": "Chỉ số hủy cất cánh ở tốc độ cao",
+                    "dot": "#F9A825"
                   },
-                  "abbr": "GCOL",
-                  "unit": "Số vụ việc/10.000 CB",
-                  "mt": "0",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
                   "t7_26_so_vu": "0",
                   "t7_26_ty_le": "0",
                   "cum_26_so_vu": "0",
@@ -971,23 +947,94 @@
                 }
               },
               {
-                "id": "SQD-009",
+                "id": "AOC-10",
                 "cells": {
-                  "code": "SQD-009",
+                  "code": "AOC-10",
                   "name": {
-                    "text": "Nhân viên bị thương khi làm nhiệm vụ",
-                    "dot": "#B28704"
+                    "text": "Chỉ số lăn nhầm đường lăn",
+                    "dot": "#7B1FA2"
                   },
-                  "abbr": "OI",
-                  "unit": "Số NV/100 NV/năm",
+                  "unit": "Số vụ/1000 CB",
                   "mt": "2",
-                  "t7_26_so_vu": "3",
-                  "t7_26_ty_le": "3",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-11",
+                "cells": {
+                  "code": "AOC-11",
+                  "name": {
+                    "text": "Chỉ số xâm nhập đường cất hạ cánh",
+                    "dot": "#0277BD"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "2",
+                  "t7_26_so_vu": "1",
+                  "t7_26_ty_le": "1",
                   "cum_26_so_vu": "2",
                   "cum_26_ty_le": "2",
                   "eval_t7_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-12",
+                "cells": {
+                  "code": "AOC-12",
+                  "name": {
+                    "text": "Chỉ số nguy cơ va chạm trên không",
+                    "dot": "#388E3C"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "3",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-13",
+                "cells": {
+                  "code": "AOC-13",
+                  "name": {
+                    "text": "Chỉ số sai lệch mực bay",
+                    "dot": "#E64A19"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "2",
+                  "t7_26_so_vu": "1",
+                  "t7_26_ty_le": "1",
+                  "cum_26_so_vu": "3",
+                  "cum_26_ty_le": "3",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
                   },
                   "eval_cum_26": {
                     "label": "Chưa đạt",
@@ -996,15 +1043,38 @@
                 }
               },
               {
-                "id": "SQD-010",
+                "id": "AOC-14",
                 "cells": {
-                  "code": "SQD-010",
+                  "code": "AOC-14",
                   "name": {
-                    "text": "Số vụ việc vi phạm an ninh hàng không",
-                    "dot": "#2E7D32"
+                    "text": "Chỉ số vi phạm không phận",
+                    "dot": "#5D4037"
                   },
-                  "abbr": "AVSEC",
-                  "unit": "Số vụ việc/10.000 CB",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "2",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-15",
+                "cells": {
+                  "code": "AOC-15",
+                  "name": {
+                    "text": "Chỉ số mất kiểm soát trong chuyến bay",
+                    "dot": "#1565C0"
+                  },
+                  "unit": "Số vụ/1000 CB",
                   "mt": "0",
                   "t7_26_so_vu": "0",
                   "t7_26_ty_le": "0",
@@ -1021,23 +1091,166 @@
                 }
               },
               {
-                "id": "SQD-011",
+                "id": "AOC-16",
                 "cells": {
-                  "code": "SQD-011",
+                  "code": "AOC-16",
                   "name": {
-                    "text": "Tiếp cận không ổn định",
-                    "dot": "#00558F"
+                    "text": "Chỉ số va chạm vào địa hình",
+                    "dot": "#8E24AA"
                   },
-                  "abbr": "UA",
-                  "unit": "Số vụ việc/10.000 CB phân tích",
-                  "mt": "42",
-                  "t7_26_so_vu": "52",
-                  "t7_26_ty_le": "52",
-                  "cum_26_so_vu": "48",
-                  "cum_26_ty_le": "48",
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "0",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "0",
+                  "cum_26_ty_le": "0",
                   "eval_t7_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-17",
+                "cells": {
+                  "code": "AOC-17",
+                  "name": {
+                    "text": "Chỉ số nguy cơ va chạm địa hình",
+                    "dot": "#00695C"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "0",
+                  "cum_26_ty_le": "0",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-18",
+                "cells": {
+                  "code": "AOC-18",
+                  "name": {
+                    "text": "Chỉ số mất khả năng thực hiện nhiệm vụ",
+                    "dot": "#9E9D24"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "2",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-19",
+                "cells": {
+                  "code": "AOC-19",
+                  "name": {
+                    "text": "Chỉ số tỷ lệ chuyến bay gián đoạn",
+                    "dot": "#D81B60"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1,5",
+                  "t7_26_so_vu": "1,2",
+                  "t7_26_ty_le": "1,2",
+                  "cum_26_so_vu": "1,4",
+                  "cum_26_ty_le": "1,4",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "AOC-20",
+                "cells": {
+                  "code": "AOC-20",
+                  "name": {
+                    "text": "Chỉ số hỏng hóc phải trì hoãn",
+                    "dot": "#546E7A"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "3,0",
+                  "t7_26_so_vu": "2,4",
+                  "t7_26_ty_le": "2,4",
+                  "cum_26_so_vu": "2,6",
+                  "cum_26_ty_le": "2,6",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "GEN-01",
+                "cells": {
+                  "code": "GEN-01",
+                  "name": {
+                    "text": "Chỉ số phát hiện vi phạm nồng độ cồn, chất kích thích",
+                    "dot": "#FB8C00"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "0,1",
+                  "t7_26_so_vu": "0,05",
+                  "t7_26_ty_le": "0,05",
+                  "cum_26_so_vu": "0,08",
+                  "cum_26_ty_le": "0,08",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "GEN-02",
+                "cells": {
+                  "code": "GEN-02",
+                  "name": {
+                    "text": "Chỉ số khắc phục đúng hạn các nội dung không tuân thủ",
+                    "dot": "#43A047"
+                  },
+                  "unit": "%",
+                  "mt": "95",
+                  "t7_26_so_vu": "96",
+                  "t7_26_ty_le": "96",
+                  "cum_26_so_vu": "93",
+                  "cum_26_ty_le": "93",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
                   },
                   "eval_cum_26": {
                     "label": "Chưa đạt",
@@ -1046,27 +1259,74 @@
                 }
               },
               {
-                "id": "SQD-012",
+                "id": "GEN-03",
                 "cells": {
-                  "code": "SQD-012",
+                  "code": "GEN-03",
                   "name": {
-                    "text": "Chỉ số các điểm không phù hợp",
-                    "dot": "#B28704"
+                    "text": "Chỉ số các điểm không tuân thủ",
+                    "dot": "#3949AB"
                   },
-                  "abbr": "NC",
-                  "unit": "Số finding/tổng số cuộc ĐG",
-                  "mt": "15",
-                  "t7_26_so_vu": "22",
-                  "t7_26_ty_le": "22",
+                  "unit": "Số findings",
+                  "mt": "20",
+                  "t7_26_so_vu": "15",
+                  "t7_26_ty_le": "15",
                   "cum_26_so_vu": "18",
                   "cum_26_ty_le": "18",
                   "eval_t7_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
                   },
                   "eval_cum_26": {
-                    "label": "Chưa đạt",
-                    "tone": "danger"
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "GEN-04",
+                "cells": {
+                  "code": "GEN-04",
+                  "name": {
+                    "text": "Chỉ số báo cáo an toàn tự nguyện",
+                    "dot": "#EC407A"
+                  },
+                  "unit": "Số báo cáo",
+                  "mt": "200",
+                  "t7_26_so_vu": "128",
+                  "t7_26_ty_le": "128",
+                  "cum_26_so_vu": "156",
+                  "cum_26_ty_le": "156",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  }
+                }
+              },
+              {
+                "id": "GEN-05",
+                "cells": {
+                  "code": "GEN-05",
+                  "name": {
+                    "text": "Chỉ số nhân viên bị thương trong quá trình làm nhiệm vụ",
+                    "dot": "#00ACC1"
+                  },
+                  "unit": "Số vụ/1000 CB",
+                  "mt": "1",
+                  "t7_26_so_vu": "0",
+                  "t7_26_ty_le": "0",
+                  "cum_26_so_vu": "1",
+                  "cum_26_ty_le": "1",
+                  "eval_t7_26": {
+                    "label": "Đạt",
+                    "tone": "success"
+                  },
+                  "eval_cum_26": {
+                    "label": "Đạt",
+                    "tone": "success"
                   }
                 }
               }

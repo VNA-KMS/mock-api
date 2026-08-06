@@ -1,28 +1,26 @@
 {
   "autoChart": {
-    "chartType": "combo",
+    "chartType": "bar",
     "dataset": {
       "columns": [
         { "id": "month", "type": "string" },
-        { "id": "a", "type": "number", "label": "A", "color": "#C62828" },
-        { "id": "b", "type": "number", "label": "B", "color": "#E65100" },
-        { "id": "c", "type": "number", "label": "C", "color": "#B28704" },
-        { "id": "d", "type": "number", "label": "D", "color": "#2E7D32" },
-        { "id": "e", "type": "number", "label": "E", "color": "#00558F" }
+        { "id": "aoc01", "type": "number", "label": "AOC01", "color": "#C62828" },
+        { "id": "aoc02", "type": "number", "label": "AOC02", "color": "#E65100" },
+        { "id": "aoc03", "type": "number", "label": "AOC03", "color": "#00558F" }
       ],
       "rows": [
-        ["T1", 0, 0, 0, 1, 2],
-        ["T2", 0, 0, 0, 0, 3],
-        ["T3", 0, 0, 0, 1, 2],
-        ["T4", 0, 0, 1, 0, 3],
-        ["T5", 0, 0, 0, 1, 2],
-        ["T6", 0, 1, 1, 2, 10],
-        ["T7", 0, 0, 0, 2, 11],
-        ["T8", null, null, null, null, null],
-        ["T9", null, null, null, null, null],
-        ["T10", null, null, null, null, null],
-        ["T11", null, null, null, null, null],
-        ["T12", null, null, null, null, null]
+        ["T1", 0, 0, 3],
+        ["T2", 0, 0, 3],
+        ["T3", 0, 0, 3],
+        ["T4", 0, 0, 4],
+        ["T5", 0, 0, 3],
+        ["T6", 0, 1, 13],
+        ["T7", 0, 0, 13],
+        ["T8", null, null, null],
+        ["T9", null, null, null],
+        ["T10", null, null, null],
+        ["T11", null, null, null],
+        ["T12", null, null, null]
       ]
     },
     "views": [
@@ -30,12 +28,11 @@
         "id": "main",
         "chartType": "auto",
         "xField": "month",
+        "stack": "total",
         "series": [
-          { "field": "a", "chartType": "bar" },
-          { "field": "b", "chartType": "bar" },
-          { "field": "c", "chartType": "bar" },
-          { "field": "d", "chartType": "bar" },
-          { "field": "e", "chartType": "bar" }
+          { "field": "aoc01", "chartType": "bar" },
+          { "field": "aoc02", "chartType": "bar" },
+          { "field": "aoc03", "chartType": "bar" }
         ]
       }
     ]
