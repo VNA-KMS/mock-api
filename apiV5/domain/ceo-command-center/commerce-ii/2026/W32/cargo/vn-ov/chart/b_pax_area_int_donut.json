@@ -1,0 +1,37 @@
+{
+  "autoChart": {
+    "chartType": "donut-labeled",
+    "dataset": {
+      "columns": [
+        { "id": "label", "type": "string" },
+        {
+          "id": "value",
+          "type": "number",
+          "label": "PAX INT 2026",
+          "color": ["#1677ff", "#479EB3", "#3D879B", "#5BA8BD", "#C4A83A", "#5E793D", "#7BB5C7", "#9AC3D1"]
+        }
+      ],
+      "rows": [
+        ["SEA", 91.5],
+        ["EUR", 58.4],
+        ["NEA", 71.6],
+        ["CLMV", 41.1],
+        ["MID", 24.1],
+        ["SAS", 16.7],
+        ["NOA", 10.0],
+        ["SWP", 7.7]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "donut-labeled",
+        "xField": "label",
+        "series": [{ "field": "value" }],
+        "showLegend": true,
+        "showCenterValue": true,
+        "tooltipUnit": "nghìn khách"
+      }
+    ]
+  }
+}
