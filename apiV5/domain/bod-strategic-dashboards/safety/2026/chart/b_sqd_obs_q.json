@@ -1,0 +1,28 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        { "id": "year", "type": "string" },
+        { "id": "th", "type": "number", "label": "TH", "colorToken": "series.actual" }
+      ],
+      "rows": [
+        ["2022", 84],
+        ["2023", 92],
+        ["2024", 102],
+        ["2025", 116],
+        ["2026", 132]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "year",
+        "series": [
+          { "field": "th", "chartType": "bar", "showLabel": "all" }
+        ]
+      }
+    ]
+  }
+}

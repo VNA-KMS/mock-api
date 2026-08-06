@@ -1,0 +1,26 @@
+{
+  "autoChart": {
+    "chartType": "donut-labeled",
+    "dataset": {
+      "columns": [
+        { "id": "field", "type": "string" },
+        { "id": "value", "type": "number", "label": "Số observation", "color": ["data.deep-teal", "series.target", "data.sea-blue"] }
+      ],
+      "rows": [
+        ["Khai thác mặt đất", 20],
+        ["Kỹ thuật", 30],
+        ["Khai thác bay", 49]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "donut-labeled",
+        "xField": "field",
+        "showCenterValue": true,
+        "showLegend": true,
+        "series": [{ "field": "value" }]
+      }
+    ]
+  }
+}
