@@ -1,0 +1,29 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        { "id": "rt", "type": "string" },
+        { "id": "lf", "type": "number", "label": "LF (%)", "color": "#22C55E" }
+      ],
+      "rows": [
+        ["HANBKK", 80.5],
+        ["HANSYD", 82.1],
+        ["HANNRT", 84.8],
+        ["HANICN", 86.2],
+        ["HANSIN", 88.5]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "rt",
+        "labelColor": "#000000", "labelFontSize": 13, "labelFontWeight": 400,
+        "barSize": "l", "borderRadius": 4,
+        "series": [{ "field": "lf", "chartType": "bar", "showLabel": "all" }],
+        "showLegend": false
+      }
+    ]
+  }
+}

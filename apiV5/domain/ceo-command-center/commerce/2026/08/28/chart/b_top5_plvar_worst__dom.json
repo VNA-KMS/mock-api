@@ -1,0 +1,83 @@
+{
+  "autoChart": {
+    "chartType": "bar-h",
+    "dataset": {
+      "columns": [
+        {
+          "id": "area",
+          "type": "string"
+        },
+        {
+          "id": "negative",
+          "type": "number",
+          "label": "P&L VAR (tỷ VND)",
+          "color": "#EF4444"
+        },
+        {
+          "id": "positive",
+          "type": "number",
+          "label": "P&L VAR (tỷ VND)",
+          "color": "#22C55E"
+        }
+      ],
+      "rows": [
+        [
+          "HUICXR",
+          -5.4,
+          null
+        ],
+        [
+          "CXRPQC",
+          -8.5,
+          null
+        ],
+        [
+          "SGNVCAVCS",
+          -11.2,
+          null
+        ],
+        [
+          "CXRUIH",
+          -14.6,
+          null
+        ],
+        [
+          "VIIDLI",
+          -18.3,
+          null
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "area",
+        "labelColor": "#000000",
+        "labelFontSize": 13,
+        "labelFontWeight": 400,
+        "barSize": "l",
+        "borderRadius": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "showLegend": false,
+        "series": [
+          {
+            "field": "negative",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "positive",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ]
+      }
+    ],
+    "note": "Bottom 5 chặng bay có P&L VAR thấp nhất"
+  }
+}

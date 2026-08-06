@@ -1,0 +1,39 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        { "id": "region", "type": "string", "label": "Khu vực" },
+        { "id": "val2025", "type": "number", "label": "2025", "color": "#9AA0A6" },
+        { "id": "valPlan2026", "type": "number", "label": "KH 2026", "color": "#F5A623" },
+        { "id": "val2026", "type": "number", "label": "2026", "color": "#1677FF" }
+      ],
+      "rows": [
+        ["SEA", 2.56, 3.06, 2.85],
+        ["EUR", 1.64, 1.95, 1.82],
+        ["NEA", 2.01, 2.40, 2.23],
+        ["CLMV", 1.15, 1.43, 1.28],
+        ["MID", 0.68, 0.86, 0.75],
+        ["SAS", 0.47, 0.58, 0.52],
+        ["NOA", 0.28, 0.36, 0.31],
+        ["SWP", 0.22, 0.28, 0.24]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "region",
+        "series": [
+          { "field": "val2025", "chartType": "bar" },
+          { "field": "valPlan2026", "chartType": "bar" },
+          { "field": "val2026", "chartType": "bar" }
+        ],
+        "showLegend": true,
+        "barSize": "m",
+        "labelPosition": "outside",
+        "tooltipUnit": "tỷ VND"
+      }
+    ]
+  }
+}

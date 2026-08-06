@@ -1,0 +1,74 @@
+{
+  "autoChart": {
+    "chartType": "bar",
+    "dataset": {
+      "columns": [
+        {
+          "id": "region",
+          "type": "string"
+        },
+        {
+          "id": "positive",
+          "type": "number",
+          "label": "Hiệu quả",
+          "color": "#22C55E"
+        },
+        {
+          "id": "negative",
+          "type": "number",
+          "label": "Hiệu quả",
+          "color": "#EF4444"
+        }
+      ],
+      "rows": [
+        ["MY", 8.2, null],
+        ["SG", 14.5, null],
+        ["TH", null, -2.1],
+        ["PH", 5.8, null],
+        ["LA", null, -4.5],
+        ["KH", 3.2, null],
+        ["IN", null, -1.8],
+        ["CN", 12.3, null],
+        ["JP", 9.7, null],
+        ["KR", 11.5, null],
+        ["TW", null, -6.4],
+        ["HK", 7.8, null],
+        ["DE", 13.2, null],
+        ["FR", null, -3.6],
+        ["GB", 8.9, null],
+        ["IT", 4.5, null],
+        ["RU", null, -7.8],
+        ["DK", 6.3, null],
+        ["NL", 2.7, null],
+        ["US", null, -5.2],
+        ["AU", 10.1, null]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "region",
+        "allowNegativeY": true,
+        "labelColor": "#000000",
+        "labelFontSize": 13,
+        "labelFontWeight": 400,
+        "series": [
+          {
+            "field": "positive",
+            "chartType": "bar",
+            "showLabel": "all"
+          },
+          {
+            "field": "negative",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
+        ],
+        "borderRadius": [0, 0, 0, 0],
+        "barSize": "l",
+        "showLegend": false
+      }
+    ]
+  }
+}
