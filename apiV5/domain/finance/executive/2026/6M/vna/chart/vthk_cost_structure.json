@@ -1,0 +1,129 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "nhom",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Nhiên liệu",
+          18806.3,
+          9433.6,
+          18806.3,
+          9433.6
+        ],
+        [
+          "Thiết bị bay",
+          5350,
+          5668.3,
+          24156.3,
+          15101.9
+        ],
+        [
+          "DV chuyến bay",
+          3429.6,
+          3695.3,
+          27585.9,
+          18797.2
+        ],
+        [
+          "DV hành khách",
+          1495.1,
+          1563.9,
+          29081,
+          20361.1
+        ],
+        [
+          "Khấu hao",
+          1328,
+          1328.9,
+          30409,
+          21690
+        ],
+        [
+          "Bảo dưỡng",
+          5746.9,
+          5942.2,
+          36155.9,
+          27632.2
+        ],
+        [
+          "Nhân công",
+          2091.6,
+          2461.4,
+          38247.5,
+          30093.6
+        ],
+        [
+          "Marketing",
+          1912.4,
+          1946.8,
+          40159.9,
+          32040.4
+        ],
+        [
+          "Quản lý chung",
+          483.9,
+          581.6,
+          40643.8,
+          32622
+        ],
+        [
+          "Khác",
+          70.5,
+          89,
+          40714.3,
+          32711
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar-h",
+        "xField": "nhom",
+        "label": "KH vs TH",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

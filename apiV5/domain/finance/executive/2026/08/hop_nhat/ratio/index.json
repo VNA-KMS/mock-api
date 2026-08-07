@@ -1,0 +1,201 @@
+{
+  "titleInfo": {
+    "title": "Tài chính & Kế toán",
+    "statusLabel": "REAL TIME",
+    "description": "Chỉ số tài chính · Hợp nhất · T7/2026"
+  },
+  "metricCards": {
+    "accentClassName": "bg-primary",
+    "layout": {
+      "columns": 4
+    },
+    "items": [
+      {
+        "id": "ros",
+        "status": "compact",
+        "title": "ROS",
+        "value": "15,6",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+2.8pp YoY",
+            "type": "samePeriod",
+            "value": "+2.8",
+            "status": 0,
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 104.2%",
+            "type": "plan",
+            "value": "104.2%",
+            "status": 1,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "roe",
+        "status": "compact",
+        "title": "ROE (ước)",
+        "value": "46,1",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+5.4pp YoY",
+            "type": "samePeriod",
+            "value": "+5.4",
+            "status": 0,
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "LNST / VCSH BQ",
+            "type": "plan",
+            "value": "LNST / VCSH BQ",
+            "status": 1,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "ebitda_margin",
+        "status": "compact",
+        "title": "EBITDA margin",
+        "value": "21,1",
+        "unit": "%",
+        "backgroundStatus": 1,
+        "trend": [
+          {
+            "direction": "up",
+            "label": "+1.9pp YoY",
+            "type": "samePeriod",
+            "value": "+1.9",
+            "status": 0,
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "Budget: 101.5%",
+            "type": "plan",
+            "value": "101.5%",
+            "status": 1,
+            "tone": "positive"
+          }
+        ]
+      },
+      {
+        "id": "debt_equity",
+        "status": "compact",
+        "title": "Nợ / VCSH",
+        "value": "3,56",
+        "unit": "lần",
+        "backgroundStatus": 2,
+        "trend": [
+          {
+            "direction": "down",
+            "label": "-0.2 lần YoY",
+            "type": "plan",
+            "value": "-0.2",
+            "status": 0,
+            "tone": "positive"
+          },
+          {
+            "direction": "up",
+            "label": "Target: ≤3.5",
+            "type": "plan",
+            "value": "Target: ≤3.5",
+            "status": 1,
+            "tone": "negative"
+          }
+        ]
+      }
+    ]
+  },
+  "filters": [
+    {
+      "key": "unit",
+      "col": 1,
+      "colSpan": 14,
+      "row": 1,
+      "label": "Đơn vị",
+      "showInfo": true,
+      "infoTooltip": "Chọn đơn vị báo cáo tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "hop_nhat",
+          "label": "Hợp nhất"
+        },
+        {
+          "value": "vna",
+          "label": "Cty mẹ VNA"
+        },
+        {
+          "value": "vasco",
+          "label": "Vasco"
+        }
+      ]
+    },
+    {
+      "key": "view",
+      "col": 1,
+      "colSpan": 17,
+      "row": 2,
+      "label": "View",
+      "showInfo": true,
+      "infoTooltip": "Chọn góc nhìn tài chính",
+      "size": "sm",
+      "options": [
+        {
+          "value": "revenue",
+          "label": "Doanh thu - Chi phí - LNTT"
+        },
+        {
+          "value": "cost_margin",
+          "label": "Tài sản - VCSH"
+        },
+        {
+          "value": "ratio",
+          "label": "Chỉ số tài chính"
+        }
+      ]
+    }
+  ],
+  "chartBoard": [
+    {
+      "title": "Chỉ số tài chính",
+      "items": [
+        {
+          "id": "ratio_trend",
+          "title": "ROS · ROE · EBITDA theo tháng",
+          "subTitle": "Biến động chỉ số tài chính (% )",
+          "col": 1,
+          "colSpan": 35,
+          "row": 1,
+          "height": 320,
+          "chartPath": "apiV5/domain/finance/executive/2026/08/hop_nhat/chart/ratio_trend.json"
+        },
+        {
+          "id": "ratio_table",
+          "title": "Chỉ số tài chính các đơn vị",
+          "subTitle": "ROS / ROE / EBITDA / Nợ-VCSH",
+          "col": 36,
+          "colSpan": 25,
+          "row": 1,
+          "chartPath": "apiV5/domain/finance/executive/2026/08/hop_nhat/chart/ratio_table.json"
+        }
+      ]
+    }
+  ],
+  "timeFrameModes": [
+    "month",
+    "6m",
+    "9m",
+    "year"
+  ]
+}

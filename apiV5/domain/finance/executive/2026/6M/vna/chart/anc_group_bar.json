@@ -1,0 +1,94 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "nhom",
+          "type": "string"
+        },
+        {
+          "id": "th",
+          "type": "number",
+          "label": "Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db",
+          "type": "number",
+          "label": "Kế hoạch 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "th_lk",
+          "type": "number",
+          "label": "Luỹ kế Thực hiện 2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "db_lk",
+          "type": "number",
+          "label": "Luỹ kế Kế hoạch 2026",
+          "colorToken": "series.target"
+        }
+      ],
+      "rows": [
+        [
+          "Alacarte & SP hợp tác",
+          460.4,
+          404.4,
+          460.4,
+          404.4
+        ],
+        [
+          "Bán trên tàu bay",
+          2,
+          2.4,
+          462.4,
+          406.8
+        ],
+        [
+          "Quảng cáo",
+          48.8,
+          48,
+          511.2,
+          454.8
+        ],
+        [
+          "Doanh thu KHTX (*)",
+          344.4,
+          311.6,
+          855.6,
+          766.4
+        ],
+        [
+          "Vé hết hạn, phí xuất/hoàn/đổi",
+          681.2,
+          764.8,
+          1536.8,
+          1531.2
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "bar",
+        "xField": "nhom",
+        "label": "KH vs TH",
+        "series": [
+          {
+            "field": "th",
+            "chartType": "bar",
+            "showSymbol": true
+          },
+          {
+            "field": "db",
+            "chartType": "line",
+            "lineStyle": "dashed"
+          }
+        ]
+      }
+    ]
+  }
+}

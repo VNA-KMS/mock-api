@@ -1,0 +1,150 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        {
+          "id": "month",
+          "type": "string"
+        },
+        {
+          "id": "transport",
+          "type": "number",
+          "label": "DT vận tải",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "other",
+          "type": "number",
+          "label": "DT khác",
+          "colorToken": "data.jade-blue"
+        },
+        {
+          "id": "rask",
+          "type": "number",
+          "label": "RASK",
+          "colorToken": "data.olive-gold"
+        },
+        {
+          "id": "yield",
+          "type": "number",
+          "label": "Yield",
+          "colorToken": "data.brick"
+        }
+      ],
+      "rows": [
+        [
+          "T1",
+          3.2,
+          0.8,
+          3.4,
+          4.6
+        ],
+        [
+          "T2",
+          3.5,
+          0.9,
+          3.5,
+          4.7
+        ],
+        [
+          "T3",
+          3.8,
+          1,
+          3.6,
+          4.8
+        ],
+        [
+          "T4",
+          4,
+          1.1,
+          3.6,
+          4.9
+        ],
+        [
+          "T5",
+          4.3,
+          1.2,
+          3.7,
+          5
+        ],
+        [
+          "T6",
+          4.1,
+          1.1,
+          3.8,
+          5.1
+        ],
+        [
+          "T7",
+          4.5,
+          1.3,
+          3.8,
+          5.1
+        ],
+        [
+          "T8",
+          4.4,
+          1.2,
+          3.9,
+          5.2
+        ],
+        [
+          "T9",
+          4.2,
+          1.1,
+          3.9,
+          5.1
+        ],
+        [
+          "T10",
+          4.6,
+          1.3,
+          3.9,
+          5
+        ],
+        [
+          "T11",
+          4.3,
+          1.2,
+          3.8,
+          5
+        ],
+        [
+          "T12",
+          4.5,
+          1.2,
+          3.8,
+          5.1
+        ]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "auto",
+        "xField": "month",
+        "series": [
+          {
+            "field": "transport",
+            "chartType": "bar"
+          },
+          {
+            "field": "other",
+            "chartType": "bar"
+          },
+          {
+            "field": "rask",
+            "chartType": "line",
+            "yAxis": "right"
+          },
+          {
+            "field": "yield",
+            "chartType": "line",
+            "yAxis": "right"
+          }
+        ]
+      }
+    ]
+  }
+}
