@@ -1,0 +1,32 @@
+{
+  "autoChart": {
+    "chartType": "combo",
+    "dataset": {
+      "columns": [
+        { "id": "year", "type": "string" },
+        { "id": "actual", "type": "number", "label": "TH", "colorToken": "series.actual" },
+        { "id": "plan", "type": "number", "label": "KH", "colorToken": "series.target" }
+      ],
+      "rows": [
+        ["2022", 62, 65],
+        ["2023", 75, 72],
+        ["2024", 68, 70],
+        ["2025", 82, 80],
+        ["2026", 78, 80]
+      ]
+    },
+    "views": [
+      {
+        "id": "main",
+        "chartType": "combo",
+        "xField": "year",
+        "label": "Theo năm",
+        "yAxis": { "min": 0, "max": 100, "interval": 10 },
+        "series": [
+          { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
+          { "field": "plan", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
+        ]
+      }
+    ]
+  }
+}
