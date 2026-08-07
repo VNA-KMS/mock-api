@@ -358,7 +358,7 @@
         "id": "m_sqd_finding",
         "position": { "col": 2, "row": 3 },
         "status": "compact",
-        "title": "Số điểm không phù hợp theo chương trình ATCL",
+        "title": "Số điểm không phù hợp theo chương trình ĐG ATCL",
         "value": "62",
         "unit": "số lượng",
         "backgroundStatus": 2,
@@ -383,7 +383,7 @@
         "id": "m_sqd_obs",
         "position": { "col": 3, "row": 3 },
         "status": "compact",
-        "title": "Số khuyến nghị theo chương trình ATCL",
+        "title": "Số khuyến nghị theo chương trình ĐG ATCL",
         "value": "99",
         "unit": "số lượng",
         "backgroundStatus": 2,
@@ -482,6 +482,7 @@
                   ["AOC01", 0, 0, 0, 0, 0],
                   ["AOC02", 0, 1, 0, 0, -1],
                   ["AOC03", 13, 13, 13, 0, 0],
+                  ["VOR", 1, 2, 1, 0, -1],
                   ["Tổng cộng", 13, 14, 13, 0, -1]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
@@ -490,9 +491,10 @@
                   "textColor": "var(--color-safety-table-header-text)"
                 },
                 "rowStyle": {
-                  "AOC01": { "backgroundColor": "#EB6667", "textColor": "#FFFFFF" },
+                  "AOC01": { "backgroundColor": "#C62828", "textColor": "#FFFFFF" },
                   "AOC02": { "backgroundColor": "#D19C28", "textColor": "#FFFFFF" },
                   "AOC03": { "backgroundColor": "#FFFF00", "textColor": "#212121" },
+                  "VOR": { "backgroundColor": "#006D88", "textColor": "#FFFFFF" },
                   "Tổng cộng": { "backgroundColor": "var(--color-safety-row-total-bg)", "textColor": "var(--color-safety-row-total-text)", "fontWeight": "700" }
                 },
                 "rowTone": { "AOC01": "critical", "AOC02": "high", "AOC03": "medium", "Tổng cộng": "total" }
@@ -521,6 +523,7 @@
                   ["AOC01", 0, 0, 0],
                   ["AOC02", 0, 1, 1],
                   ["AOC03", 35, 42, 7],
+                  ["VOR", 4, 6, 2],
                   ["Tổng cộng", 35, 43, 8]
                 ],
                 "headerClass": "bg-alabaster text-heron-blue",
@@ -529,9 +532,10 @@
                   "textColor": "var(--color-safety-table-header-text)"
                 },
                 "rowStyle": {
-                  "AOC01": { "backgroundColor": "#EB6667", "textColor": "#FFFFFF" },
+                  "AOC01": { "backgroundColor": "#C62828", "textColor": "#FFFFFF" },
                   "AOC02": { "backgroundColor": "#D19C28", "textColor": "#FFFFFF" },
                   "AOC03": { "backgroundColor": "#FFFF00", "textColor": "#212121" },
+                  "VOR": { "backgroundColor": "#006D88", "textColor": "#FFFFFF" },
                   "Tổng cộng": { "backgroundColor": "var(--color-safety-row-total-bg)", "textColor": "var(--color-safety-row-total-text)", "fontWeight": "700" }
                 },
                 "rowTone": { "AOC01": "critical", "AOC02": "high", "AOC03": "medium", "Tổng cộng": "total" }
@@ -559,7 +563,7 @@
           "colSpan": 30,
           "row": 3,
           "rowSpan": 1,
-          "title": "Số điểm không phù hợp theo chương trình ATCL theo lĩnh vực",
+          "title": "Số điểm không phù hợp theo chương trình ĐG ATCL theo lĩnh vực",
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_sqd_finding_lv.json"
         },
@@ -569,7 +573,7 @@
           "colSpan": 30,
           "row": 3,
           "rowSpan": 1,
-          "title": "Số điểm không phù hợp theo chương trình ATCL các quý",
+          "title": "Số điểm không phù hợp theo chương trình ĐG ATCL",
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_sqd_finding_q.json"
         },
@@ -579,7 +583,7 @@
           "colSpan": 30,
           "row": 4,
           "rowSpan": 1,
-          "title": "Số khuyến nghị theo chương trình ATCL theo lĩnh vực",
+          "title": "Số khuyến nghị theo chương trình ĐG ATCL theo lĩnh vực",
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_sqd_obs_lv.json"
         },
@@ -589,7 +593,7 @@
           "colSpan": 30,
           "row": 4,
           "rowSpan": 1,
-          "title": "Số khuyến nghị theo chương trình ATCL các quý",
+          "title": "Số khuyến nghị theo chương trình ĐG ATCL",
           "height": 280,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/safety/2026/Q4/chart/b_sqd_obs_q.json"
         },
@@ -678,6 +682,10 @@
             "text": "SQD-001…005,007 có số liệu tham chiếu; các chỉ số còn lại chưa đủ nguồn. Catalog SSP tách biệt SAG1 (index2).",
             "viewpoint": "neutral",
             "status": 1
+          },
+          "headerAction": {
+            "type": "text",
+            "label": "Đạt: 23/25, Chưa Đạt: 2"
           },
           "table": {
             "type": "grouped",
@@ -1085,7 +1093,11 @@
                   },
                   "eval_cum_26": {
                     "label": "Chưa đạt",
-                    "tone": "danger"
+                    "tone": "danger",
+                    "detail": [
+                      { "cause": "Sai lệch mực bay do không tuân thủ hướng dẫn ATC", "count": 2 },
+                      { "cause": "Sai lệch mực bay do lỗi quy trình khai thác", "count": 1 }
+                    ]
                   }
                 }
               },
@@ -1301,7 +1313,11 @@
                   },
                   "eval_cum_26": {
                     "label": "Chưa đạt",
-                    "tone": "danger"
+                    "tone": "danger",
+                    "detail": [
+                      { "cause": "Chậm khắc phục điểm không tuân thủ từ thanh tra", "count": 5 },
+                      { "cause": "Chưa cập nhật hồ sơ khắc phục đúng hạn", "count": 2 }
+                    ]
                   }
                 }
               },
@@ -1385,21 +1401,12 @@
   ],
   "insightCards": {
     "insight": {
-      "title": "Nhận định",
+      "title": "Đánh giá",
       "variant": "info",
       "items": [
         "Tổng số vụ việc tháng 7: <strong>13 vụ</strong>, giảm <strong>1 vụ (7,1%)</strong> so với tháng trước và giảm <strong>2 vụ (13,3%)</strong> so với cùng kỳ 2025. Lũy kế 7 tháng: <strong>43 vụ</strong>, tăng <strong>8 vụ (22,9%)</strong> so với cùng kỳ 35 vụ.",
         "Phân loại mức độ: <strong>0 vụ mức A và B</strong> (rất nặng & nặng), <strong>2 vụ mức D</strong> (nhẹ), <strong>11 vụ mức E</strong> (khác). Không ghi nhận sự cố nghiêm trọng trong tháng.",
         "Sự cố liên quan yếu tố con người: <strong>8 vụ</strong>, giảm <strong>2 vụ (20%)</strong> so với CK. Tỷ lệ sự cố con người/10.000 chuyến bay đạt <strong>1,71</strong>, đạt <strong>85,5%</strong> so với mục tiêu."
-      ]
-    },
-    "risk": {
-      "title": "Cảnh báo / Rủi ro",
-      "variant": "danger",
-      "items": [
-        "Khai thác bay chiếm <b style=\"color:#DC2626;\">10/17 vụ (59%)</b> tổng sự cố, chủ yếu liên quan approach hạ cánh và cảnh báo TCAS — cần tăng cường giảng bình và mô phỏng tình huống.",
-        "Sự cố do hệ thống kỹ thuật tàu bay chiếm <b style=\"color:#DC2626;\">15/17 vụ</b> (88,2%) — tập trung bảo dưỡng phòng ngừa động cơ và hệ thống điện tử hàng không.",
-        "Tỷ lệ sự cố/10.000 chuyến bay đạt <strong>59/10.000cb</strong>, chỉ đạt <strong>97,7%</strong> mục tiêu — cần theo dõi sát diễn biến các tháng cuối năm."
       ]
     }
   },
