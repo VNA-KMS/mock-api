@@ -317,7 +317,7 @@
           "title": "Xếp hạng đóng góp LNTT T7.2026",
           "subTitle": "Đơn vị: tỷ VND",
           "col": 1,
-          "colSpan": 20,
+          "colSpan": 30,
           "row": 1,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_subsidiary_rank_t7.json"
         },
@@ -325,37 +325,845 @@
           "id": "b_subsidiary_rank_cum",
           "title": "Xếp hạng đóng góp LNTT 7T.2026",
           "subTitle": "Đơn vị: tỷ VND",
-          "col": 21,
-          "colSpan": 20,
+          "col": 31,
+          "colSpan": 30,
           "row": 1,
           "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_subsidiary_rank_cum.json"
-        },
-        {
-          "id": "b_subsidiary",
-          "title": "Kết quả sxkd các doanh nghiệp vốn góp",
-          "col": 41,
-          "colSpan": 20,
-          "row": 1,
-          "chartPath": "apiV5/domain/bod-strategic-dashboards/finance/2026/07/chart/b_subsidiary.json"
         }
       ]
     },
     {
-      "title": "Đánh giá chung",
+      "title": "Các đơn vị góp vốn",
       "items": [
         {
-          "id": "b_ai_insight",
+          "id": "b_top5_lntt",
           "col": 1,
           "colSpan": 60,
           "row": 1,
           "rowSpan": 1,
-          "extraComponent": {
-            "type": "card-html",
-            "config": {
-              "html": "<div style=\"padding:16px;border-radius:12px;background:#f0f7ff;border:1px solid #d0e1f9\"><div style=\"font-weight:700;font-size:14px;color:#004071;margin-bottom:8px\">Đánh giá chung</div><p style=\"font-size:12.5px;color:#1e293b;line-height:1.6;margin:0\">Trong tháng hiện tại, tình hình SXKD của TCT duy trì ổn định. Tổng doanh thu và thu nhập đạt <b>21.500 tỉ</b>, vượt 1.2% so với Kế hoạch và tăng 9% so với Cùng kỳ. Doanh thu HĐKD đạt <b>20.100 tỉ</b>, vượt 0.8% so với Kế hoạch. Lợi nhuận trước thuế đạt <b>1.820 tỉ</b>, giảm 4% so với Kế hoạch nhưng tăng 7% so với Cùng kỳ. Dòng tiền đạt <b>4.250 tỉ</b>, vượt 2.1% so với Kế hoạch và tăng 15% so với Cùng kỳ, cho thấy dòng tiền ổn định và khả quan.</p></div>",
-              "backgroundClassName": "",
-              "borderClassName": ""
-            }
+          "title": "LNTT các công ty thành viên nổi bật",
+          "subTitle": "ĐVT: tỷ VND",
+          "aiInsight": {
+            "text": "TCS và SKYPEC dẫn đầu về lợi nhuận, vượt kế hoạch tháng. VAECO cần cải thiện để đạt chỉ tiêu.",
+            "tone": "info",
+            "status": "approved"
+          },
+          "table": {
+            "type": "default",
+            "columns": [
+              {
+                "id": "company",
+                "type": "company-info",
+                "label": "Công ty"
+              },
+              {
+                "id": "lntt_t7",
+                "type": "number",
+                "label": "LNTT T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "kh_t7",
+                "type": "number",
+                "label": "KH T7.2026",
+                "align": "center"
+              },
+              {
+                "id": "pct",
+                "type": "chip",
+                "label": "%KH",
+                "align": "center",
+                "variant": "square"
+              },
+              {
+                "id": "trend",
+                "type": "option-chart",
+                "label": "Xu hướng"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "company": {
+                    "name": "SKYPEC",
+                    "description": "Công ty TNHH MTV Nhiên liệu Hàng không Việt Nam",
+                    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNto-YtBiqiclafLhELcDC31bdURxS7hOoNnBOvHwWrF1E-swrSq0aXW8&s=10"
+                  },
+                  "lntt_t7": 54.5,
+                  "kh_t7": 52,
+                  "pct": {
+                    "label": "104,8%",
+                    "color": "green"
+                  },
+                  "trend": {
+                    "kind": "sparkline",
+                    "series": [
+                      48,
+                      49,
+                      50,
+                      51,
+                      52,
+                      53,
+                      52,
+                      54,
+                      53.5,
+                      54,
+                      54.5,
+                      54.5
+                    ],
+                    "trend": "up"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": {
+                    "name": "NCTS",
+                    "description": "Công ty Cổ phần Dịch vụ Hàng hóa Nội Bài",
+                    "logoUrl": "https://ncts.vn/assets/logo_ncts-RQI0LCh3.jpg"
+                  },
+                  "lntt_t7": 15.1,
+                  "kh_t7": 15.8,
+                  "pct": {
+                    "label": "95,6%",
+                    "color": "green"
+                  },
+                  "trend": {
+                    "kind": "sparkline",
+                    "series": [
+                      14,
+                      14.5,
+                      15,
+                      14.8,
+                      15.2,
+                      15.5,
+                      15.3,
+                      15,
+                      15.1,
+                      15.2,
+                      15.1,
+                      15.1
+                    ],
+                    "trend": "flat"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": {
+                    "name": "TCS",
+                    "description": "Công ty CP Dịch vụ Hàng hóa Tân Sơn Nhất",
+                    "logoUrl": "https://bhk.vn/wp-content/uploads/2022/06/logotcs_new_2015.jpg"
+                  },
+                  "lntt_t7": 37.5,
+                  "kh_t7": 34,
+                  "pct": {
+                    "label": "110,3%",
+                    "color": "green"
+                  },
+                  "trend": {
+                    "kind": "sparkline",
+                    "series": [
+                      28,
+                      30,
+                      32,
+                      31,
+                      33,
+                      35,
+                      34,
+                      36,
+                      37,
+                      37.5,
+                      38,
+                      37.5
+                    ],
+                    "trend": "up"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": {
+                    "name": "VAECO",
+                    "description": "Công ty TNHH MTV Kỹ thuật máy bay",
+                    "logoUrl": "https://hungviet.com.vn/wp-content/uploads/2023/09/logo-vaeco.jpg"
+                  },
+                  "lntt_t7": 14.2,
+                  "kh_t7": 15,
+                  "pct": {
+                    "label": "94,7%",
+                    "color": "green"
+                  },
+                  "trend": {
+                    "kind": "sparkline",
+                    "series": [
+                      15,
+                      14.8,
+                      14.5,
+                      14.3,
+                      14,
+                      13.8,
+                      14.2,
+                      14.5,
+                      14.2,
+                      14,
+                      14.2,
+                      14.2
+                    ],
+                    "trend": "down"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": {
+                    "name": "VIAGS",
+                    "description": "Công ty TNHH MTV Dịch vụ mặt đất sân bay",
+                    "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiul7e32qGC8R8ifbcPTXgwTiD5AxeC1X-wy_nW4JRew&s=10"
+                  },
+                  "lntt_t7": 13.4,
+                  "kh_t7": 12.5,
+                  "pct": {
+                    "label": "107,2%",
+                    "color": "green"
+                  },
+                  "trend": {
+                    "kind": "sparkline",
+                    "series": [
+                      11,
+                      11.5,
+                      12,
+                      12.2,
+                      12.5,
+                      12.8,
+                      13,
+                      13.2,
+                      13.4,
+                      13.5,
+                      13.4,
+                      13.4
+                    ],
+                    "trend": "up"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "b_subsidiaries",
+          "col": 1,
+          "colSpan": 60,
+          "row": 2,
+          "rowSpan": 1,
+          "title": "Doanh thu & LNTT các công ty thành viên",
+          "subTitle": "ĐVT: tỷ VND",
+          "table": {
+            "type": "grouped",
+            "headerRows": [
+              [
+                {
+                  "label": "Công ty",
+                  "rowspan": 3
+                },
+                {
+                  "label": "Doanh thu",
+                  "colspan": 6,
+                  "groupStart": true
+                },
+                {
+                  "label": "LNTT",
+                  "colspan": 6,
+                  "groupStart": true
+                }
+              ],
+              [
+                {
+                  "label": "T7.2026",
+                  "colspan": 3
+                },
+                {
+                  "label": "7T.2026",
+                  "colspan": 3,
+                  "groupStart": true
+                },
+                {
+                  "label": "T7.2026",
+                  "colspan": 3,
+                  "groupStart": true
+                },
+                {
+                  "label": "7T.2026",
+                  "colspan": 3,
+                  "groupStart": true
+                }
+              ],
+              [
+                {
+                  "label": "Thực hiện"
+                },
+                {
+                  "label": "Kế hoạch"
+                },
+                {
+                  "label": "%KH"
+                },
+                {
+                  "label": "Thực hiện",
+                  "groupStart": true
+                },
+                {
+                  "label": "Kế hoạch"
+                },
+                {
+                  "label": "%KH"
+                },
+                {
+                  "label": "Thực hiện",
+                  "groupStart": true
+                },
+                {
+                  "label": "Kế hoạch"
+                },
+                {
+                  "label": "%KH"
+                },
+                {
+                  "label": "Thực hiện",
+                  "groupStart": true
+                },
+                {
+                  "label": "Kế hoạch"
+                },
+                {
+                  "label": "%KH"
+                }
+              ]
+            ],
+            "columns": [
+              {
+                "id": "company",
+                "type": "string",
+                "label": "Công ty"
+              },
+              {
+                "id": "dt_t7_th",
+                "type": "number",
+                "label": "Thực hiện",
+                "align": "center",
+                "groupStart": true
+              },
+              {
+                "id": "dt_t7_kh",
+                "type": "number",
+                "label": "Kế hoạch",
+                "align": "center"
+              },
+              {
+                "id": "dt_t7_pct",
+                "type": "chip",
+                "label": "%KH",
+                "align": "center",
+                "variant": "square"
+              },
+              {
+                "id": "dt_7t_th",
+                "type": "number",
+                "label": "Thực hiện",
+                "align": "center",
+                "groupStart": true
+              },
+              {
+                "id": "dt_7t_kh",
+                "type": "number",
+                "label": "Kế hoạch",
+                "align": "center"
+              },
+              {
+                "id": "dt_7t_pct",
+                "type": "chip",
+                "label": "%KH",
+                "align": "center",
+                "variant": "square"
+              },
+              {
+                "id": "lntt_t7_th",
+                "type": "number",
+                "label": "Thực hiện",
+                "align": "center",
+                "groupStart": true
+              },
+              {
+                "id": "lntt_t7_kh",
+                "type": "number",
+                "label": "Kế hoạch",
+                "align": "center"
+              },
+              {
+                "id": "lntt_t7_pct",
+                "type": "chip",
+                "label": "%KH",
+                "align": "center",
+                "variant": "square"
+              },
+              {
+                "id": "lntt_7t_th",
+                "type": "number",
+                "label": "Thực hiện",
+                "align": "center",
+                "groupStart": true
+              },
+              {
+                "id": "lntt_7t_kh",
+                "type": "number",
+                "label": "Kế hoạch",
+                "align": "center"
+              },
+              {
+                "id": "lntt_7t_pct",
+                "type": "chip",
+                "label": "%KH",
+                "align": "center",
+                "variant": "square"
+              }
+            ],
+            "rows": [
+              {
+                "cells": {
+                  "company": "VAECO",
+                  "dt_t7_kh": 240,
+                  "dt_t7_th": 232,
+                  "dt_t7_pct": {
+                    "label": "96,7%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 1660,
+                  "dt_7t_th": 1610,
+                  "dt_7t_pct": {
+                    "label": "97%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 15,
+                  "lntt_t7_th": 14.2,
+                  "lntt_t7_pct": {
+                    "label": "94,7%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 105,
+                  "lntt_7t_th": 100,
+                  "lntt_7t_pct": {
+                    "label": "95,2%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "SKYPEC",
+                  "dt_t7_kh": 2710,
+                  "dt_t7_th": 2825,
+                  "dt_t7_pct": {
+                    "label": "104,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 18960,
+                  "dt_7t_th": 19780,
+                  "dt_7t_pct": {
+                    "label": "104,3%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 52,
+                  "lntt_t7_th": 54.5,
+                  "lntt_t7_pct": {
+                    "label": "104,8%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 362,
+                  "lntt_7t_th": 382,
+                  "lntt_7t_pct": {
+                    "label": "105,5%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "VACS",
+                  "dt_t7_kh": 121,
+                  "dt_t7_th": 116,
+                  "dt_t7_pct": {
+                    "label": "95,9%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 846,
+                  "dt_7t_th": 811,
+                  "dt_7t_pct": {
+                    "label": "95,9%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 7.9,
+                  "lntt_t7_th": 7.3,
+                  "lntt_t7_pct": {
+                    "label": "92,4%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 55,
+                  "lntt_7t_th": 51,
+                  "lntt_7t_pct": {
+                    "label": "92,7%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "VIAGS",
+                  "dt_t7_kh": 175,
+                  "dt_t7_th": 182,
+                  "dt_t7_pct": {
+                    "label": "104%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 1225,
+                  "dt_7t_th": 1275,
+                  "dt_7t_pct": {
+                    "label": "104,1%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 12.5,
+                  "lntt_t7_th": 13.4,
+                  "lntt_t7_pct": {
+                    "label": "107,2%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 87,
+                  "lntt_7t_th": 94,
+                  "lntt_7t_pct": {
+                    "label": "108%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "TECS",
+                  "dt_t7_kh": 43,
+                  "dt_t7_th": 41.5,
+                  "dt_t7_pct": {
+                    "label": "96,5%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 303,
+                  "dt_7t_th": 291,
+                  "dt_7t_pct": {
+                    "label": "96%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 3.5,
+                  "lntt_t7_th": 3.2,
+                  "lntt_t7_pct": {
+                    "label": "91,4%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 24.5,
+                  "lntt_7t_th": 22.6,
+                  "lntt_7t_pct": {
+                    "label": "92,2%",
+                    "color": "yellow"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "TCS",
+                  "dt_t7_kh": 98,
+                  "dt_t7_th": 104,
+                  "dt_t7_pct": {
+                    "label": "106,1%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 688,
+                  "dt_7t_th": 729,
+                  "dt_7t_pct": {
+                    "label": "106%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 34,
+                  "lntt_t7_th": 37.5,
+                  "lntt_t7_pct": {
+                    "label": "110,3%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 239,
+                  "lntt_7t_th": 264,
+                  "lntt_7t_pct": {
+                    "label": "110,5%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "Sabre VN",
+                  "dt_t7_kh": 28,
+                  "dt_t7_th": 27,
+                  "dt_t7_pct": {
+                    "label": "96,4%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 198,
+                  "dt_7t_th": 191,
+                  "dt_7t_pct": {
+                    "label": "96,5%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 5,
+                  "lntt_t7_th": 4.7,
+                  "lntt_t7_pct": {
+                    "label": "94%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 35,
+                  "lntt_7t_th": 33,
+                  "lntt_7t_pct": {
+                    "label": "94,3%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "VINAKO",
+                  "dt_t7_kh": 17.5,
+                  "dt_t7_th": 16.3,
+                  "dt_t7_pct": {
+                    "label": "93,1%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 122,
+                  "dt_7t_th": 114,
+                  "dt_7t_pct": {
+                    "label": "93,4%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 1.5,
+                  "lntt_t7_th": 1.3,
+                  "lntt_t7_pct": {
+                    "label": "86,7%",
+                    "color": "yellow"
+                  },
+                  "lntt_7t_kh": 10.5,
+                  "lntt_7t_th": 9.3,
+                  "lntt_7t_pct": {
+                    "label": "88,6%",
+                    "color": "yellow"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "NCS",
+                  "dt_t7_kh": 82,
+                  "dt_t7_th": 85,
+                  "dt_t7_pct": {
+                    "label": "103,7%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 572,
+                  "dt_7t_th": 592,
+                  "dt_7t_pct": {
+                    "label": "103,5%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 5.8,
+                  "lntt_t7_th": 6.2,
+                  "lntt_t7_pct": {
+                    "label": "106,9%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 41,
+                  "lntt_7t_th": 43,
+                  "lntt_7t_pct": {
+                    "label": "104,9%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "NCTS",
+                  "dt_t7_kh": 72,
+                  "dt_t7_th": 70,
+                  "dt_t7_pct": {
+                    "label": "97,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 502,
+                  "dt_7t_th": 490,
+                  "dt_7t_pct": {
+                    "label": "97,6%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 15.8,
+                  "lntt_t7_th": 15.1,
+                  "lntt_t7_pct": {
+                    "label": "95,6%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 111,
+                  "lntt_7t_th": 106,
+                  "lntt_7t_pct": {
+                    "label": "95,5%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "ALSIMEXCO",
+                  "dt_t7_kh": 12.5,
+                  "dt_t7_th": 11.9,
+                  "dt_t7_pct": {
+                    "label": "95,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 88,
+                  "dt_7t_th": 83,
+                  "dt_7t_pct": {
+                    "label": "94,3%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 1,
+                  "lntt_t7_th": 0.85,
+                  "lntt_t7_pct": {
+                    "label": "85%",
+                    "color": "yellow"
+                  },
+                  "lntt_7t_kh": 7,
+                  "lntt_7t_th": 6.1,
+                  "lntt_7t_pct": {
+                    "label": "87,1%",
+                    "color": "yellow"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "NASCO",
+                  "dt_t7_kh": 110,
+                  "dt_t7_th": 108,
+                  "dt_t7_pct": {
+                    "label": "98,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 770,
+                  "dt_7t_th": 757,
+                  "dt_7t_pct": {
+                    "label": "98,3%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 7.3,
+                  "lntt_t7_th": 6.8,
+                  "lntt_t7_pct": {
+                    "label": "93,2%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 51,
+                  "lntt_7t_th": 48,
+                  "lntt_7t_pct": {
+                    "label": "94,1%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "Pacific Airlines",
+                  "dt_t7_kh": 800,
+                  "dt_t7_th": 738,
+                  "dt_t7_pct": {
+                    "label": "92,3%",
+                    "color": "yellow"
+                  },
+                  "dt_7t_kh": 5600,
+                  "dt_7t_th": 5163,
+                  "dt_7t_pct": {
+                    "label": "92,2%",
+                    "color": "yellow"
+                  },
+                  "lntt_t7_kh": -27,
+                  "lntt_t7_th": -34,
+                  "lntt_t7_pct": {
+                    "label": "—",
+                    "color": "red"
+                  },
+                  "lntt_7t_kh": -187,
+                  "lntt_7t_th": -239,
+                  "lntt_7t_pct": {
+                    "label": "—",
+                    "color": "red"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "VFT",
+                  "dt_t7_kh": 19,
+                  "dt_t7_th": 19.8,
+                  "dt_t7_pct": {
+                    "label": "104,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 134,
+                  "dt_7t_th": 139,
+                  "dt_7t_pct": {
+                    "label": "103,7%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 2.9,
+                  "lntt_t7_th": 3.1,
+                  "lntt_t7_pct": {
+                    "label": "106,9%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 20,
+                  "lntt_7t_th": 21.8,
+                  "lntt_7t_pct": {
+                    "label": "109%",
+                    "color": "green"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "company": "AITS",
+                  "dt_t7_kh": 34,
+                  "dt_t7_th": 33.4,
+                  "dt_t7_pct": {
+                    "label": "98,2%",
+                    "color": "green"
+                  },
+                  "dt_7t_kh": 239,
+                  "dt_7t_th": 234,
+                  "dt_7t_pct": {
+                    "label": "97,9%",
+                    "color": "green"
+                  },
+                  "lntt_t7_kh": 4,
+                  "lntt_t7_th": 3.7,
+                  "lntt_t7_pct": {
+                    "label": "92,5%",
+                    "color": "green"
+                  },
+                  "lntt_7t_kh": 28,
+                  "lntt_7t_th": 26,
+                  "lntt_7t_pct": {
+                    "label": "92,9%",
+                    "color": "green"
+                  }
+                }
+              }
+            ]
           }
         }
       ]
