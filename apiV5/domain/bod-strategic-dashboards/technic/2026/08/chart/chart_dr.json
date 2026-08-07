@@ -1,6 +1,6 @@
 {
   "autoChart": {
-    "chartType": "bar",
+    "chartType": "combo",
     "dataset": {
       "columns": [
         {
@@ -29,7 +29,8 @@
           "id": "mt_2026",
           "type": "number",
           "label": "MT 2026",
-          "colorToken": "series.target"
+          "colorToken": "data.brick",
+          "lineDash": [6, 4]
         }
       ],
       "rows": [
@@ -38,35 +39,35 @@
           99.2,
           99.4,
           99.4,
-          99.63
+          99.5
         ],
         [
           "A350",
           99.0,
           99.3,
           99.2,
-          99.44
+          99.5
         ],
         [
           "B787",
           98.5,
           98.7,
           98.6,
-          99.36
+          99.5
         ],
         [
           "ATR72",
           99.3,
           99.5,
           99.5,
-          99.65
+          99.5
         ]
       ]
     },
     "views": [
       {
         "id": "main",
-        "chartType": "auto",
+        "chartType": "combo",
         "xField": "fleet",
         "yMin": 98.0,
         "yMax": 100,
@@ -86,7 +87,9 @@
           },
           {
             "field": "mt_2026",
-            "chartType": "bar"
+            "chartType": "line",
+            "showSymbol": true,
+            "showLabel": "end"
           }
         ]
       }
