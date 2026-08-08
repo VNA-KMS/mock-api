@@ -432,18 +432,18 @@
                 "cells": {
                   "fleet": {
                     "label": "All Fleet (total)",
-                    "color": "slate"
+                    "color": "data.blue-grey"
                   },
                   "t7_2025": 94.55,
                   "mt_2026": 95.1,
                   "kh_t7_2026": 94.9,
                   "t7_2026": 94.9,
                   "ss_kh_t7": {
-                    "value": 0.0,
+                    "value": 0,
                     "tone": "neutral"
                   },
                   "7t_2025": 94.75,
-                  "kh_7t_2026": 95.0,
+                  "kh_7t_2026": 95,
                   "7t_2026": 94.7,
                   "ss_kh_7t": {
                     "value": -0.3,
@@ -455,11 +455,11 @@
                 "cells": {
                   "fleet": {
                     "label": "B787",
-                    "color": "blue"
+                    "color": "data.jade-blue"
                   },
                   "t7_2025": 94.6,
                   "mt_2026": 95.5,
-                  "kh_t7_2026": 95.0,
+                  "kh_t7_2026": 95,
                   "t7_2026": 94.9,
                   "ss_kh_t7": {
                     "value": -0.1,
@@ -478,10 +478,10 @@
                 "cells": {
                   "fleet": {
                     "label": "A350",
-                    "color": "purple"
+                    "color": "data.plum"
                   },
                   "t7_2025": 95.7,
-                  "mt_2026": 96.0,
+                  "mt_2026": 96,
                   "kh_t7_2026": 96.1,
                   "t7_2026": 96.2,
                   "ss_kh_t7": {
@@ -490,7 +490,7 @@
                   },
                   "7t_2025": 95.9,
                   "kh_7t_2026": 96.2,
-                  "7t_2026": 96.0,
+                  "7t_2026": 96,
                   "ss_kh_7t": {
                     "value": -0.2,
                     "tone": "negative"
@@ -501,10 +501,10 @@
                 "cells": {
                   "fleet": {
                     "label": "A321",
-                    "color": "orange"
+                    "color": "data.brick"
                   },
                   "t7_2025": 94.2,
-                  "mt_2026": 95.0,
+                  "mt_2026": 95,
                   "kh_t7_2026": 94.7,
                   "t7_2026": 94.6,
                   "ss_kh_t7": {
@@ -524,18 +524,18 @@
                 "cells": {
                   "fleet": {
                     "label": "ATR72",
-                    "color": "teal"
+                    "color": "data.sea-blue"
                   },
                   "t7_2025": 93.7,
-                  "mt_2026": 94.0,
+                  "mt_2026": 94,
                   "kh_t7_2026": 93.8,
                   "t7_2026": 93.8,
                   "ss_kh_t7": {
-                    "value": 0.0,
+                    "value": 0,
                     "tone": "neutral"
                   },
                   "7t_2025": 93.9,
-                  "kh_7t_2026": 94.0,
+                  "kh_7t_2026": 94,
                   "7t_2026": 93.9,
                   "ss_kh_7t": {
                     "value": -0.1,
@@ -686,7 +686,7 @@
                 "cells": {
                   "fleet": {
                     "label": "B787",
-                    "color": "blue"
+                    "color": "data.jade-blue"
                   },
                   "t7_2025": 98.5,
                   "mt_2026": 99.36,
@@ -707,9 +707,9 @@
                 "cells": {
                   "fleet": {
                     "label": "A350",
-                    "color": "purple"
+                    "color": "data.plum"
                   },
-                  "t7_2025": 99.0,
+                  "t7_2025": 99,
                   "mt_2026": 99.44,
                   "t7_2026": 99.2,
                   "vs_mt_2026": {
@@ -728,7 +728,7 @@
                 "cells": {
                   "fleet": {
                     "label": "A321",
-                    "color": "orange"
+                    "color": "data.brick"
                   },
                   "t7_2025": 99.2,
                   "mt_2026": 99.63,
@@ -749,7 +749,7 @@
                 "cells": {
                   "fleet": {
                     "label": "ATR72",
-                    "color": "teal"
+                    "color": "data.sea-blue"
                   },
                   "t7_2025": 99.3,
                   "mt_2026": 99.65,
@@ -850,8 +850,15 @@
           "aspectRatio": 1.8,
           "chartPath": "apiV5/domain/ceo-command-center/technic/2026/Q3/chart/chart_cost_monthly.json",
           "subTitle": "Đơn vị: tỷ VND",
-          "headerAction": { "type": "cumulative", "defaultChecked": false },
-          "aiInsight": { "text": "Chi phí bảo dưỡng tháng 7 đạt 1.420 tỷ VND, tăng 5,2% so với cùng kỳ 2025.", "severity": "good", "status": 1 }
+          "headerAction": {
+            "type": "cumulative",
+            "defaultChecked": false
+          },
+          "aiInsight": {
+            "text": "Chi phí bảo dưỡng tháng 7 đạt 1.420 tỷ VND, tăng 5,2% so với cùng kỳ 2025.",
+            "severity": "good",
+            "status": 1
+          }
         },
         {
           "id": "cost_summary_table",
@@ -861,23 +868,118 @@
           "row": 1,
           "table": {
             "columns": [
-              { "id": "metric", "type": "legend", "label": "Chỉ tiêu" },
-              { "id": "value", "type": "tone-value", "label": "Giá trị", "align": "right" }
+              {
+                "id": "metric",
+                "type": "legend",
+                "label": "Chỉ tiêu"
+              },
+              {
+                "id": "value",
+                "type": "tone-value",
+                "label": "Giá trị",
+                "align": "right"
+              }
             ],
             "rows": [
-              { "cells": { "metric": { "text": "KH 2026", "dot": "#006D88" }, "value": "" } },
-              { "cells": { "metric": "   KH 2026", "value": "16.030 tỷ VND" } },
-              { "cells": { "metric": { "text": "Q3.2026", "dot": "#D3AC2B" }, "value": "" } },
-              { "cells": { "metric": "   KH Q3.2026", "value": "1.400 tỷ VND" } },
-              { "cells": { "metric": "   Q3.2026", "value": "1.420 tỷ VND" } },
-              { "cells": { "metric": "   %KH Q3.2026", "value": { "value": "101,4%", "tone": "positive" } } },
-              { "cells": { "metric": { "text": "Q3.2026", "dot": "#479EB3" }, "value": "" } },
-              { "cells": { "metric": "   KH Q3.2026", "value": "9.410 tỷ VND" } },
-              { "cells": { "metric": "   Q3.2026", "value": "9.400 tỷ VND" } },
-              { "cells": { "metric": "   %KH Q3.2026", "value": { "value": "99,9%", "tone": "negative" } } },
-              { "cells": { "metric": { "text": "UTH", "dot": "#C76449" }, "value": "" } },
-              { "cells": { "metric": "   UTH 2026", "value": "16.190 tỷ VND" } },
-              { "cells": { "metric": "   % UTH / KH 2026", "value": { "value": "101,0%", "tone": "positive" } } }
+              {
+                "cells": {
+                  "metric": {
+                    "text": "KH 2026",
+                    "dot": "data.deep-teal"
+                  },
+                  "value": ""
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   KH 2026",
+                  "value": "16.030 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": {
+                    "text": "Q3.2026",
+                    "dot": "#D3AC2B"
+                  },
+                  "value": ""
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   KH Q3.2026",
+                  "value": "1.400 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   Q3.2026",
+                  "value": "1.420 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   %KH Q3.2026",
+                  "value": {
+                    "value": "101,4%",
+                    "tone": "positive"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "metric": {
+                    "text": "Q3.2026",
+                    "dot": "#479EB3"
+                  },
+                  "value": ""
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   KH Q3.2026",
+                  "value": "9.410 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   Q3.2026",
+                  "value": "9.400 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   %KH Q3.2026",
+                  "value": {
+                    "value": "99,9%",
+                    "tone": "negative"
+                  }
+                }
+              },
+              {
+                "cells": {
+                  "metric": {
+                    "text": "UTH",
+                    "dot": "#C76449"
+                  },
+                  "value": ""
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   UTH 2026",
+                  "value": "16.190 tỷ VND"
+                }
+              },
+              {
+                "cells": {
+                  "metric": "   % UTH / KH 2026",
+                  "value": {
+                    "value": "101,0%",
+                    "tone": "positive"
+                  }
+                }
+              }
             ],
             "density": "compact"
           },

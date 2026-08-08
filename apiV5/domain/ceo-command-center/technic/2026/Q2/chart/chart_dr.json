@@ -11,13 +11,13 @@
           "id": "t7_2025",
           "type": "number",
           "label": "Q2.2025",
-          "color": "#CBCFD4"
+          "color": "semantic.reference"
         },
         {
           "id": "t6_2026",
           "type": "number",
           "label": "T6.2026",
-          "color": "#E6B441"
+          "color": "semantic.target"
         },
         {
           "id": "t7_2026",
@@ -27,10 +27,30 @@
         }
       ],
       "rows": [
-        ["A321", 99.2, 99.4, 99.4],
-        ["A350", 99.0, 99.3, 99.2],
-        ["B787", 98.5, 98.7, 98.6],
-        ["ATR72", 99.3, 99.5, 99.5]
+        [
+          "A321",
+          99.2,
+          99.4,
+          99.4
+        ],
+        [
+          "A350",
+          99,
+          99.3,
+          99.2
+        ],
+        [
+          "B787",
+          98.5,
+          98.7,
+          98.6
+        ],
+        [
+          "ATR72",
+          99.3,
+          99.5,
+          99.5
+        ]
       ]
     },
     "views": [
@@ -38,12 +58,22 @@
         "id": "main",
         "chartType": "auto",
         "xField": "fleet",
-        "yMin": 98.0,
+        "yMin": 98,
         "yMax": 100,
         "series": [
-          { "field": "t7_2025", "chartType": "bar" },
-          { "field": "t6_2026", "chartType": "bar" },
-          { "field": "t7_2026", "chartType": "bar", "showLabel": "all" }
+          {
+            "field": "t7_2025",
+            "chartType": "bar"
+          },
+          {
+            "field": "t6_2026",
+            "chartType": "bar"
+          },
+          {
+            "field": "t7_2026",
+            "chartType": "bar",
+            "showLabel": "all"
+          }
         ]
       }
     ]

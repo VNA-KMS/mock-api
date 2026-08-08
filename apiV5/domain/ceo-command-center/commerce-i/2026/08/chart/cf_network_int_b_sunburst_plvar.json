@@ -3,71 +3,378 @@
     "chartType": "sunburst",
     "dataset": {
       "columns": [
-        { "id": "name", "type": "string" },
-        { "id": "value", "type": "number" },
-        { "id": "parent", "type": "string" },
-        { "id": "color", "type": "string" }
+        {
+          "id": "name",
+          "type": "string"
+        },
+        {
+          "id": "value",
+          "type": "number"
+        },
+        {
+          "id": "parent",
+          "type": "string"
+        },
+        {
+          "id": "color",
+          "type": "string"
+        }
       ],
       "rows": [
-        ["Toàn mạng INT", 431582, "", "#004071"],
-        ["NEA", 156057, "Toàn mạng INT", "#1c7d95"],
-        ["JP", 56296, "NEA", "#6a3d9a"],
-        ["DADNRT", 11830, "JP", "#33a02c"],
-        ["SGNNRT", 13132, "JP", "#1f78b4"],
-        ["HANNRT", 12751, "JP", "#b2df8a"],
-        ["HANKIX", 8737, "JP", "#33a02c"],
-        ["KR", 41215, "NEA", "#6a3d9a"],
-        ["HANICN", 9111, "KR", "#1f78b4"],
-        ["HANPUS", 9309, "KR", "#33a02c"],
-        ["SGNICN", 3752, "KR", "#1f78b4"],
-        ["CN", 22298, "NEA", "#6a3d9a"],
-        ["SGNPVG", 9566, "CN", "#33a02c"],
-        ["HANPVG", 5384, "CN", "#1f78b4"],
-        ["SGNCAN", 3607, "CN", "#b2df8a"],
-        ["TW", 12854, "NEA", "#6a3d9a"],
-        ["SGNKHH", 5395, "TW", "#33a02c"],
-        ["HANTPE", 5250, "TW", "#1f78b4"],
-        ["HK", 2083, "NEA", "#e31a1c"],
-        ["SGNHKG", 1464, "HK", "#ff7f00"],
-        ["SEA", 34640, "Toàn mạng INT", "#398da2"],
-        ["ID", 6747, "SEA", "#6a3d9a"],
-        ["SGNCGK", 6537, "ID", "#33a02c"],
-        ["SG", 16328, "SEA", "#6a3d9a"],
-        ["SGNSIN", 8756, "SG", "#33a02c"],
-        ["HANSIN", 7272, "SG", "#1f78b4"],
-        ["TH", 12858, "SEA", "#6a3d9a"],
-        ["SGNBKK", 10099, "TH", "#33a02c"],
-        ["HANBKK", 4120, "TH", "#1f78b4"],
-        ["MY", 2512, "SEA", "#6a3d9a"],
-        ["SGNKUL", 2576, "MY", "#33a02c"],
-        ["SAS", 20501, "Toàn mạng INT", "#559eb0"],
-        ["IN", 20501, "SAS", "#6a3d9a"],
-        ["HANDEL", 6259, "IN", "#33a02c"],
-        ["SGNDEL", 1925, "IN", "#1f78b4"],
-        ["SGNBOM", 1909, "IN", "#b2df8a"],
-        ["CLMV", 5912, "Toàn mạng INT", "#71aebd"],
-        ["LA", 4063, "CLMV", "#6a3d9a"],
-        ["SGNKTI", 3312, "LA", "#33a02c"],
-        ["HANVTE", 1025, "LA", "#1f78b4"],
-        ["EUR", 89714, "Toàn mạng INT", "#abc3d5"],
-        ["DE", 22604, "EUR", "#6a3d9a"],
-        ["HANFRA", 15036, "DE", "#33a02c"],
-        ["HANMUC", 2434, "DE", "#1f78b4"],
-        ["SGNFRA", 4510, "DE", "#b2df8a"],
-        ["FR", 24529, "EUR", "#6a3d9a"],
-        ["HANCDG", 10895, "FR", "#1f78b4"],
-        ["SGNCDG", 5809, "FR", "#33a02c"],
-        ["GB", 10373, "EUR", "#6a3d9a"],
-        ["HANLHR", 7306, "GB", "#33a02c"],
-        ["SGNLHR", 1498, "GB", "#1f78b4"],
-        ["SWP", 64914, "Toàn mạng INT", "#8ebeca"],
-        ["AU", 64914, "SWP", "#6a3d9a"],
-        ["SGNMEL", 9960, "AU", "#33a02c"],
-        ["SGNSYD", 5598, "AU", "#1f78b4"],
-        ["HANMEL", 6043, "AU", "#b2df8a"],
-        ["NOA", 6581, "Toàn mạng INT", "#8ebeca"],
-        ["US", 6581, "NOA", "#6a3d9a"],
-        ["SGNSFO", 6581, "US", "#33a02c"]
+        [
+          "Toàn mạng INT",
+          431582,
+          "",
+          "#004071"
+        ],
+        [
+          "NEA",
+          156057,
+          "Toàn mạng INT",
+          "#1c7d95"
+        ],
+        [
+          "JP",
+          56296,
+          "NEA",
+          "#6a3d9a"
+        ],
+        [
+          "DADNRT",
+          11830,
+          "JP",
+          "#33a02c"
+        ],
+        [
+          "SGNNRT",
+          13132,
+          "JP",
+          "#1f78b4"
+        ],
+        [
+          "HANNRT",
+          12751,
+          "JP",
+          "#b2df8a"
+        ],
+        [
+          "HANKIX",
+          8737,
+          "JP",
+          "#33a02c"
+        ],
+        [
+          "KR",
+          41215,
+          "NEA",
+          "#6a3d9a"
+        ],
+        [
+          "HANICN",
+          9111,
+          "KR",
+          "#1f78b4"
+        ],
+        [
+          "HANPUS",
+          9309,
+          "KR",
+          "#33a02c"
+        ],
+        [
+          "SGNICN",
+          3752,
+          "KR",
+          "#1f78b4"
+        ],
+        [
+          "CN",
+          22298,
+          "NEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNPVG",
+          9566,
+          "CN",
+          "#33a02c"
+        ],
+        [
+          "HANPVG",
+          5384,
+          "CN",
+          "#1f78b4"
+        ],
+        [
+          "SGNCAN",
+          3607,
+          "CN",
+          "#b2df8a"
+        ],
+        [
+          "TW",
+          12854,
+          "NEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNKHH",
+          5395,
+          "TW",
+          "#33a02c"
+        ],
+        [
+          "HANTPE",
+          5250,
+          "TW",
+          "#1f78b4"
+        ],
+        [
+          "HK",
+          2083,
+          "NEA",
+          "#e31a1c"
+        ],
+        [
+          "SGNHKG",
+          1464,
+          "HK",
+          "#ff7f00"
+        ],
+        [
+          "SEA",
+          34640,
+          "Toàn mạng INT",
+          "#398da2"
+        ],
+        [
+          "ID",
+          6747,
+          "SEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNCGK",
+          6537,
+          "ID",
+          "#33a02c"
+        ],
+        [
+          "SG",
+          16328,
+          "SEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNSIN",
+          8756,
+          "SG",
+          "#33a02c"
+        ],
+        [
+          "HANSIN",
+          7272,
+          "SG",
+          "#1f78b4"
+        ],
+        [
+          "TH",
+          12858,
+          "SEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNBKK",
+          10099,
+          "TH",
+          "#33a02c"
+        ],
+        [
+          "HANBKK",
+          4120,
+          "TH",
+          "#1f78b4"
+        ],
+        [
+          "MY",
+          2512,
+          "SEA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNKUL",
+          2576,
+          "MY",
+          "#33a02c"
+        ],
+        [
+          "SAS",
+          20501,
+          "Toàn mạng INT",
+          "#559eb0"
+        ],
+        [
+          "IN",
+          20501,
+          "SAS",
+          "#6a3d9a"
+        ],
+        [
+          "HANDEL",
+          6259,
+          "IN",
+          "#33a02c"
+        ],
+        [
+          "SGNDEL",
+          1925,
+          "IN",
+          "#1f78b4"
+        ],
+        [
+          "SGNBOM",
+          1909,
+          "IN",
+          "#b2df8a"
+        ],
+        [
+          "CLMV",
+          5912,
+          "Toàn mạng INT",
+          "#71aebd"
+        ],
+        [
+          "LA",
+          4063,
+          "CLMV",
+          "#6a3d9a"
+        ],
+        [
+          "SGNKTI",
+          3312,
+          "LA",
+          "#33a02c"
+        ],
+        [
+          "HANVTE",
+          1025,
+          "LA",
+          "#1f78b4"
+        ],
+        [
+          "EUR",
+          89714,
+          "Toàn mạng INT",
+          "#abc3d5"
+        ],
+        [
+          "DE",
+          22604,
+          "EUR",
+          "#6a3d9a"
+        ],
+        [
+          "HANFRA",
+          15036,
+          "DE",
+          "#33a02c"
+        ],
+        [
+          "HANMUC",
+          2434,
+          "DE",
+          "#1f78b4"
+        ],
+        [
+          "SGNFRA",
+          4510,
+          "DE",
+          "#b2df8a"
+        ],
+        [
+          "FR",
+          24529,
+          "EUR",
+          "#6a3d9a"
+        ],
+        [
+          "HANCDG",
+          10895,
+          "FR",
+          "#1f78b4"
+        ],
+        [
+          "SGNCDG",
+          5809,
+          "FR",
+          "#33a02c"
+        ],
+        [
+          "GB",
+          10373,
+          "EUR",
+          "#6a3d9a"
+        ],
+        [
+          "HANLHR",
+          7306,
+          "GB",
+          "#33a02c"
+        ],
+        [
+          "SGNLHR",
+          1498,
+          "GB",
+          "#1f78b4"
+        ],
+        [
+          "SWP",
+          64914,
+          "Toàn mạng INT",
+          "#8ebeca"
+        ],
+        [
+          "AU",
+          64914,
+          "SWP",
+          "#6a3d9a"
+        ],
+        [
+          "SGNMEL",
+          9960,
+          "AU",
+          "#33a02c"
+        ],
+        [
+          "SGNSYD",
+          5598,
+          "AU",
+          "#1f78b4"
+        ],
+        [
+          "HANMEL",
+          6043,
+          "AU",
+          "#b2df8a"
+        ],
+        [
+          "NOA",
+          6581,
+          "Toàn mạng INT",
+          "#8ebeca"
+        ],
+        [
+          "US",
+          6581,
+          "NOA",
+          "#6a3d9a"
+        ],
+        [
+          "SGNSFO",
+          6581,
+          "US",
+          "#33a02c"
+        ]
       ]
     },
     "views": [
@@ -75,7 +382,9 @@
         "id": "main",
         "chartType": "auto",
         "series": [
-          { "field": "value" }
+          {
+            "field": "value"
+          }
         ]
       }
     ]

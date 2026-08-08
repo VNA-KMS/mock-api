@@ -3,16 +3,49 @@
     "chartType": "combo",
     "dataset": {
       "columns": [
-        { "id": "year", "type": "string" },
-        { "id": "actual", "type": "number", "label": "2025", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "KH 2025", "colorToken": "series.target" }
+        {
+          "id": "year",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "2025",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "KH 2025",
+          "colorToken": "series.target"
+        }
       ],
       "rows": [
-        ["2021", 52, 55],
-        ["2022", 58, 60],
-        ["2023", 68, 65],
-        ["2024", 62, 70],
-        ["2025", 78, 75]
+        [
+          "2021",
+          52,
+          55
+        ],
+        [
+          "2022",
+          58,
+          60
+        ],
+        [
+          "2023",
+          68,
+          65
+        ],
+        [
+          "2024",
+          62,
+          70
+        ],
+        [
+          "2025",
+          78,
+          75
+        ]
       ]
     },
     "views": [
@@ -21,10 +54,27 @@
         "chartType": "combo",
         "xField": "year",
         "label": "Theo năm",
-        "yAxis": { "min": 0, "max": 100, "interval": 10 },
+        "yAxis": {
+          "min": 0,
+          "max": 100,
+          "interval": 10
+        },
         "series": [
-          { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
-          { "field": "plan", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
+          {
+            "field": "actual",
+            "chartType": "bar",
+            "yAxis": "left",
+            "showLabel": "all"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "yAxis": "left",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": false,
+            "showLabel": "end"
+          }
         ]
       }
     ]

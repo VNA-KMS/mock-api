@@ -3,18 +3,75 @@
     "chartType": "combo",
     "dataset": {
       "columns": [
-        { "id": "quarter", "type": "string" },
-        { "id": "actual", "type": "number", "label": "2026", "colorToken": "series.actual" },
-        { "id": "actual_lk", "type": "number", "label": "2026 (LK)", "colorToken": "series.actual" },
-        { "id": "plan", "type": "number", "label": "KH 2026", "colorToken": "series.target" },
-        { "id": "plan_lk", "type": "number", "label": "KH 2026 (LK)", "colorToken": "series.target" },
-        { "id": "actual_cum", "type": "number", "label": "2026 (LK)", "colorToken": "series.actual" },
-        { "id": "plan_cum", "type": "number", "label": "KH 2026 (LK)", "colorToken": "series.target" }
+        {
+          "id": "quarter",
+          "type": "string"
+        },
+        {
+          "id": "actual",
+          "type": "number",
+          "label": "2026",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "actual_lk",
+          "type": "number",
+          "label": "2026 (LK)",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan",
+          "type": "number",
+          "label": "KH 2026",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "plan_lk",
+          "type": "number",
+          "label": "KH 2026 (LK)",
+          "colorToken": "series.target"
+        },
+        {
+          "id": "actual_cum",
+          "type": "number",
+          "label": "2026 (LK)",
+          "colorToken": "series.actual"
+        },
+        {
+          "id": "plan_cum",
+          "type": "number",
+          "label": "KH 2026 (LK)",
+          "colorToken": "series.target"
+        }
       ],
       "rows": [
-        ["Q1", 22, 22, 20, 20, 22, 20],
-        ["Q2", 25.5, 47.5, 24, 44, 47.5, 44],
-        ["Q3", 25.5, 73, 26, 70, 73, 70]
+        [
+          "Q1",
+          22,
+          22,
+          20,
+          20,
+          22,
+          20
+        ],
+        [
+          "Q2",
+          25.5,
+          47.5,
+          24,
+          44,
+          47.5,
+          44
+        ],
+        [
+          "Q3",
+          25.5,
+          73,
+          26,
+          70,
+          73,
+          70
+        ]
       ]
     },
     "views": [
@@ -23,10 +80,27 @@
         "chartType": "combo",
         "xField": "quarter",
         "label": "Theo quý 2026",
-        "yAxis": { "min": 0, "max": 30, "interval": 5 },
+        "yAxis": {
+          "min": 0,
+          "max": 30,
+          "interval": 5
+        },
         "series": [
-          { "field": "actual", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
-          { "field": "plan", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
+          {
+            "field": "actual",
+            "chartType": "bar",
+            "yAxis": "left",
+            "showLabel": "all"
+          },
+          {
+            "field": "plan",
+            "chartType": "line",
+            "yAxis": "left",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": false,
+            "showLabel": "end"
+          }
         ]
       },
       {
@@ -34,10 +108,27 @@
         "chartType": "combo",
         "xField": "quarter",
         "label": "LK: 73",
-        "yAxis": { "min": 0, "max": 80, "interval": 10 },
+        "yAxis": {
+          "min": 0,
+          "max": 80,
+          "interval": 10
+        },
         "series": [
-          { "field": "actual_cum", "chartType": "bar", "yAxis": "left", "showLabel": "all" },
-          { "field": "plan_cum", "chartType": "line", "yAxis": "left", "lineType": "dashed", "showSymbol": true, "symbolFilled": false, "showLabel": "end" }
+          {
+            "field": "actual_cum",
+            "chartType": "bar",
+            "yAxis": "left",
+            "showLabel": "all"
+          },
+          {
+            "field": "plan_cum",
+            "chartType": "line",
+            "yAxis": "left",
+            "lineType": "dashed",
+            "showSymbol": true,
+            "symbolFilled": false,
+            "showLabel": "end"
+          }
         ]
       }
     ]
